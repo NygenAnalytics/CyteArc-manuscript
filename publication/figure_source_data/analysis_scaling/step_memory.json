@@ -1,0 +1,32 @@
+{
+ "scales": [
+  {
+   "label": "1M",
+   "csrGiB": 19.07241277769208,
+   "cells": 1000000,
+   "streamedPeakGiB": 4.616208394368489,
+   "graphPeakGiB": 3.7904446919759116,
+   "markersPeakGiB": 6.4601491292317705
+  },
+  {
+   "label": "10M",
+   "csrGiB": 190.63427725061774,
+   "cells": 10000000,
+   "streamedPeakGiB": 6.940086364746094,
+   "graphPeakGiB": 15.773019154866537,
+   "markersPeakGiB": 21.959330240885418
+  },
+  {
+   "label": "95.6M",
+   "csrGiB": 1560.4,
+   "cells": 95624334,
+   "streamedPeakGiB": 16.386756896972656,
+   "graphPeakGiB": 77.88248062133789,
+   "markersPeakGiB": 55.720741271972656
+  }
+ ],
+ "source": [
+  ".build/derived/benchmarks/toolkit_step_measurements.csv",
+  "experiments/benchmarks/records/tahoe_rna_scaling_results.json"
+ ]
+}

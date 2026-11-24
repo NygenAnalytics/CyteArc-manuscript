@@ -1,0 +1,53 @@
+{
+  "description": "Harmony on Kang control and interferon-stimulated PBMCs: condition mixing (iLISI) and cell-type separation (cLISI) before and after correction.",
+  "dataset": {
+    "name": "kang_29K_ctrl-ifnb_pbmc_rnaseq",
+    "cells": 18598,
+    "batchColumn": "sample_id",
+    "batches": [
+      "ctrl",
+      "stim"
+    ],
+    "labelColumn": "orig_cluster_labels",
+    "labels": 13
+  },
+  "parameters": {
+    "hvg": 2000,
+    "dims": 30,
+    "k": 15
+  },
+  "uncorrected": {
+    "iLISI": 0.0,
+    "cLISI": 1.0
+  },
+  "cytearcHarmony": {
+    "iLISI": 0.30277294857666526,
+    "cLISI": 1.0,
+    "seconds": 10.158188053
+  },
+  "harmonypy": {
+    "available": true,
+    "harmonypyVersion": "2.0.2",
+    "settings": {
+      "theta": 2.0,
+      "sigma": 0.1,
+      "tau": 0.0,
+      "alpha": 0.2,
+      "batch_prop_cutoff": 1e-05,
+      "block_size": 0.05,
+      "max_iter_kmeans": 200,
+      "max_iter_harmony": 40,
+      "epsilon_cluster": 1e-05,
+      "epsilon_harmony": 0.0001,
+      "nclust": 100,
+      "lamb": null,
+      "ncores": 1,
+      "verbose": false,
+      "random_state": 0
+    },
+    "iLISI": 0.29990305416126395,
+    "cLISI": 1.0,
+    "perDimensionPearsonMin": 0.9968520341595083,
+    "knnOverlapK15": 0.9794447133050134
+  }
+}

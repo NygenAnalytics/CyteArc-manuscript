@@ -1,0 +1,35 @@
+{
+ "study": "yoshida",
+ "mappingRule": {
+  "savedNeighbors": 30,
+  "voteThreshold": 0.0,
+  "missingFeaturePolicy": "reference_mean"
+ },
+ "eligibility": "Primary cells (is_primary_data) with tissue 'blood' and a recorded donor",
+ "referenceOpening": {
+  "seconds": 109.95829067599999,
+  "countReadBytes": 0,
+  "transferredBytes": 2653757063,
+  "referenceCells": 4292870,
+  "referenceFeatures": 2000
+ },
+ "referenceReadsIncludingOpening": {
+  "countReadBytes": 0,
+  "transferredBytes": 4111151617
+ },
+ "peakContainerBytes": 11260698624,
+ "containerMemoryBytes": 68719476736,
+ "stores": [
+  {
+   "store": "yoshida_2022_pbmc_2a498ace",
+   "storeCells": 422220,
+   "eligibleCells": 339597,
+   "donors": 69,
+   "referenceFeaturesMissing": [],
+   "mappingPeakContainerBytes": 5353316352,
+   "mappingSeconds": 522.2853365569999,
+   "typedCells": 336723,
+   "agreeingCells": 321329
+  }
+ ]
+}

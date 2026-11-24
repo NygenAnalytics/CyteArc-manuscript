@@ -1,0 +1,10 @@
+# Python tools for the comparison image. Compile the lock with:
+#   uv pip compile python-tools.in --python-version 3.12 \
+#     --python-platform x86_64-manylinux_2_28 -o python-tools.txt
+scanpy==1.12.4
+anndata
+dask[array]
+igraph
+leidenalg
+h5py
+boto3

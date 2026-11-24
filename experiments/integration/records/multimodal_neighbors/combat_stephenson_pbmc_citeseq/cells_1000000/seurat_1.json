@@ -1,0 +1,96 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "comparator_stopped",
+    "dataset": "combat_stephenson_pbmc_citeseq",
+    "cells": 1000000,
+    "cellSelectionSha256": "21191887fab843520f4f4cac19cbede71b3afb12ff3174bba9d2306a5fa46461",
+    "outcome": "time_limit",
+    "stages": [
+      {
+        "stage": "seurat.workflow.process",
+        "wallSeconds": 36001.735412917995,
+        "operationPeakBytes": 127602544640,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 137438953472
+      }
+    ],
+    "stageWindows": [
+      {
+        "stage": "input_setup",
+        "wallSeconds": 913.0569999217987,
+        "sampledPeakBytes": 60172636160
+      },
+      {
+        "stage": "initial:RNA.normalization",
+        "wallSeconds": 81.86400008201599,
+        "sampledPeakBytes": 89039982592
+      },
+      {
+        "stage": "initial:RNA.features",
+        "wallSeconds": 118.36699986457825,
+        "sampledPeakBytes": 107511443456
+      },
+      {
+        "stage": "initial:RNA.scaling",
+        "wallSeconds": 47.132999897003174,
+        "sampledPeakBytes": 81263710208
+      },
+      {
+        "stage": "initial:RNA.reduction",
+        "wallSeconds": 182.2039999961853,
+        "sampledPeakBytes": 117624918016
+      },
+      {
+        "stage": "initial:RNA.neighbors",
+        "wallSeconds": 404.2170000076294,
+        "sampledPeakBytes": 85406515200
+      },
+      {
+        "stage": "initial:RNA.clustering",
+        "wallSeconds": 686.9509999752045,
+        "sampledPeakBytes": 119402319872
+      },
+      {
+        "stage": "initial:ADT.normalization",
+        "wallSeconds": 28.998000144958496,
+        "sampledPeakBytes": 119937990656
+      },
+      {
+        "stage": "initial:ADT.scaling",
+        "wallSeconds": 13.029000043869019,
+        "sampledPeakBytes": 127468306432
+      },
+      {
+        "stage": "initial:ADT.reduction",
+        "wallSeconds": 12.717000007629395,
+        "sampledPeakBytes": 125969801216
+      },
+      {
+        "stage": "initial:ADT.neighbors",
+        "wallSeconds": 384.0169999599457,
+        "sampledPeakBytes": 125970440192
+      },
+      {
+        "stage": "initial:ADT.clustering",
+        "wallSeconds": 359.13499999046326,
+        "sampledPeakBytes": 121760346112
+      },
+      {
+        "stage": "initial:WNN.integration",
+        "wallSeconds": 4143.670000076294,
+        "sampledPeakBytes": 127602532352
+      },
+      {
+        "stage": "initial:WNN.clustering",
+        "wallSeconds": null,
+        "sampledPeakBytes": 122979299328,
+        "unfinished": true
+      }
+    ],
+    "containerMemoryLimitBytes": 137438953472,
+    "memoryLimitGiB": 120,
+    "timeLimitSeconds": 36000,
+    "lastStage": "initial:WNN.clustering"
+  }
+}

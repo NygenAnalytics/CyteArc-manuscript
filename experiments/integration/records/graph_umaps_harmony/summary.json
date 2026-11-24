@@ -1,0 +1,101 @@
+{
+  "source": "graph_umaps.npz",
+  "sourceSha256": "8c31fd5c2d52b2ff4db959daa1698f5848016f6409d176d2197cfdaa00bf752b",
+  "job": "result.json",
+  "graphsIdentical": true,
+  "laidOut": "harmony",
+  "harmony": {
+    "batchColumn": "study",
+    "batchCells": {
+      "combat": 810161,
+      "stephenson": 647366
+    },
+    "correctionSeconds": 2527.0478803349997,
+    "biologicalAgreement": {
+      "RNA": {
+        "ari": 0.41398302338982274,
+        "nmi": 0.6539383915732094,
+        "clusters": 35,
+        "annotatedCells": 1361729,
+        "unannotatedCells": 95798
+      },
+      "ADT": {
+        "ari": 0.19679304742494905,
+        "nmi": 0.4441678811464907,
+        "clusters": 63,
+        "annotatedCells": 1361729,
+        "unannotatedCells": 95798
+      },
+      "wnn": {
+        "ari": 0.4430775327101343,
+        "nmi": 0.5936295741733775,
+        "clusters": 24,
+        "annotatedCells": 1361729,
+        "unannotatedCells": 95798
+      }
+    }
+  },
+  "cells": 1457527,
+  "bins": 300,
+  "grids": {
+    "RNA": {
+      "origin": [
+        -33.31864421844483,
+        -33.56214492797852
+      ],
+      "span": 60.77879081726075
+    },
+    "ADT": {
+      "origin": [
+        -51.10256114959717,
+        -37.721717033386234
+      ],
+      "span": 76.22143775939942
+    },
+    "WNN": {
+      "origin": [
+        -29.82799478530884,
+        -25.584794006347657
+      ],
+      "span": 44.88396255493164
+    }
+  },
+  "rowsAre": "UMAP 2, lowest first; columns are UMAP 1, lowest first",
+  "labelsNote": "the empty label marks cells that no rule of the atlas configuration labels",
+  "cellsPerLabel": {
+    "": 95798,
+    "B memory": 21044,
+    "B naive": 65415,
+    "CD14 Mono": 328042,
+    "CD16 Mono": 53938,
+    "CD4 Memory": 205817,
+    "CD4 Naive": 181420,
+    "CD8 Memory": 139775,
+    "CD8 Naive": 56270,
+    "HSPC": 5165,
+    "MAIT": 15261,
+    "NK": 141153,
+    "NK_CD56bright": 16956,
+    "Plasmablast": 20106,
+    "Platelet": 17410,
+    "Proliferating lymphocyte": 21097,
+    "Treg": 27463,
+    "cDC": 13552,
+    "gdT": 24860,
+    "pDC": 6985
+  },
+  "cellsPerStudy": {
+    "combat": 810161,
+    "stephenson": 647366
+  },
+  "modalityWeightMean": {
+    "RNA": 0.2607811958742146,
+    "ADT": 0.7392188042168095
+  },
+  "proteinWeightShares": {
+    "one": 0.5873681928362219,
+    "zero": 0.06723786248899677,
+    "half": 0.15593193127811697,
+    "nearHalfNotHalf": 4.047952456455352e-05
+  }
+}

@@ -1,0 +1,85 @@
+{
+ "jobs": [
+  {
+   "name": "Wells",
+   "cells": 111324,
+   "openingSeconds": 106.763446498,
+   "mappingSeconds": [
+    544.889344718
+   ]
+  },
+  {
+   "name": "Yoshida",
+   "cells": 339597,
+   "openingSeconds": 109.95829067599999,
+   "mappingSeconds": [
+    522.2853365569999
+   ]
+  },
+  {
+   "name": "van der Wijst",
+   "cells": 600929,
+   "openingSeconds": 120.526908754,
+   "mappingSeconds": [
+    525.724186128
+   ]
+  },
+  {
+   "name": "Perez",
+   "cells": 1263676,
+   "openingSeconds": 106.878661124,
+   "mappingSeconds": [
+    428.722987362
+   ]
+  },
+  {
+   "name": "Ren",
+   "cells": 1399186,
+   "openingSeconds": 137.145499458,
+   "mappingSeconds": [
+    944.497267187
+   ]
+  },
+  {
+   "name": "Gong",
+   "cells": 3758514,
+   "openingSeconds": 105.18630093600001,
+   "mappingSeconds": [
+    615.226465186
+   ]
+  },
+  {
+   "name": "Sound Life, CMV+",
+   "cells": 6359167,
+   "openingSeconds": 116.575749345,
+   "mappingSeconds": [
+    428.212559936,
+    646.5651364070001,
+    977.4904483480002,
+    414.4077897500001
+   ]
+  },
+  {
+   "name": "Sound Life, CMV\u2212",
+   "cells": 7430381,
+   "openingSeconds": 125.99799998999998,
+   "mappingSeconds": [
+    1239.6978613370002,
+    551.4836563950003,
+    714.3699279910002,
+    695.7888590490002
+   ]
+  }
+ ],
+ "source": [
+  "experiments/mapping/records/blood_store_annotation/gong_all_cells.json",
+  "experiments/mapping/records/blood_store_annotation/perez.json",
+  "experiments/mapping/records/blood_store_annotation/ren.json",
+  "experiments/mapping/records/blood_store_annotation/sound_life.json",
+  "experiments/mapping/records/blood_store_annotation/sound_life_cmv_positive.json",
+  "experiments/mapping/records/blood_store_annotation/van_der_wijst.json",
+  "experiments/mapping/records/blood_store_annotation/wells.json",
+  "experiments/mapping/records/blood_store_annotation/yoshida.json",
+  ".build/derived/mapping/blood_store_annotation.json"
+ ]
+}

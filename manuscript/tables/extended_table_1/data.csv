@@ -1,0 +1,43 @@
+tool,dataset,actual_tool,cells,scaled_pca,status,mean_minutes,runs,memory_gib,ladder_start_gib,fastest,failed_step
+cytearc,embryo_1000000,cytearc,1000000,False,completed,6.076688734690348,3,32.0,32.0,True,
+cytearc,brain_1306127,cytearc,1306127,False,completed,7.524200589127011,3,32.0,32.0,True,
+cytearc,tabula_sapiens,cytearc,1136218,False,completed,10.855625519487592,3,32.0,32.0,True,
+cytearc,hbca_neurons,cytearc,2480956,False,completed,11.377672592798868,3,32.0,32.0,True,
+cytearc,mssm_cohort,cytearc,4140453,False,completed,16.722940611839295,3,32.0,32.0,True,
+cytearc,embryo_10000000,cytearc,10000000,False,completed,48.000120582845476,3,32.0,32.0,True,
+bpcells_cached,embryo_1000000,bpcells_cached,1000000,False,completed,9.410822888215383,3,32.0,32.0,False,
+bpcells_cached,brain_1306127,bpcells_cached,1306127,False,completed,12.12605566713545,3,32.0,32.0,False,
+bpcells_cached,tabula_sapiens,bpcells_cached,1136218,False,completed,13.554416222042507,3,32.0,32.0,False,
+bpcells_cached,hbca_neurons,bpcells_cached_spca,2480956,True,completed,36.296001554860005,3,32.0,32.0,False,
+bpcells_cached,mssm_cohort,bpcells_cached_spca,4140453,True,completed,47.82113599909676,3,32.0,32.0,False,
+bpcells_cached,embryo_10000000,bpcells_cached,10000000,False,completed,137.07486239009432,3,64.0,32.0,False,
+seurat_bpcells,embryo_1000000,seurat_bpcells,1000000,False,completed,53.668243833382924,3,32.0,32.0,False,
+seurat_bpcells,brain_1306127,seurat_bpcells,1306127,False,completed,70.30319188833236,3,32.0,32.0,False,
+seurat_bpcells,tabula_sapiens,seurat_bpcells,1136218,False,completed,73.03468883434931,1,32.0,32.0,False,
+seurat_bpcells,hbca_neurons,seurat_bpcells,2480956,False,completed,261.91385611163247,3,64.0,64.0,False,
+seurat_bpcells,mssm_cohort,seurat_bpcells_spca,4140453,True,TL,,,64.0,,False,runLeiden
+seurat_bpcells,embryo_10000000,seurat_bpcells,10000000,False,TL,,,128.0,,False,runLeiden
+seurat,embryo_1000000,seurat,1000000,False,completed,293.46330688926906,3,336.0,32.0,False,
+seurat,brain_1306127,seurat,1306127,False,matrix limit,,,,,False,
+seurat,tabula_sapiens,seurat,1136218,False,matrix limit,,,,,False,
+seurat,hbca_neurons,seurat,2480956,False,matrix limit,,,,,False,
+seurat,mssm_cohort,seurat,4140453,False,matrix limit,,,,,False,
+seurat,embryo_10000000,seurat,10000000,False,matrix limit,,,,,False,
+scanpy,embryo_1000000,scanpy,1000000,False,completed,119.14160508844587,3,64.0,32.0,False,
+scanpy,brain_1306127,scanpy,1306127,False,completed,206.6170611143112,3,128.0,32.0,False,
+scanpy,tabula_sapiens,scanpy,1136218,False,completed,895.8801124850909,1,128.0,32.0,False,
+scanpy,hbca_neurons,scanpy,2480956,False,OOM,,,336.0,,False,filterCells
+scanpy,mssm_cohort,scanpy,4140453,False,OOM,,,336.0,,False,filterCells
+scanpy,embryo_10000000,scanpy,10000000,False,OOM,,,336.0,,False,filterCells
+scanpy_dask_covariance_csc,embryo_1000000,scanpy_dask_covariance_csc,1000000,False,completed,37.116872750388254,3,64.0,64.0,False,
+scanpy_dask_covariance_csc,brain_1306127,scanpy_dask_covariance_csc,1306127,False,completed,43.496040880680084,3,128.0,128.0,False,
+scanpy_dask_covariance_csc,tabula_sapiens,scanpy_dask_covariance_csc,1136218,False,completed,194.16918141444523,1,128.0,128.0,False,
+scanpy_dask_covariance_csc,hbca_neurons,scanpy_dask_covariance_csc,2480956,False,completed,76.65653345982234,3,256.0,64.0,False,
+scanpy_dask_covariance_csc,mssm_cohort,scanpy_dask_covariance_csc,4140453,False,completed,199.75246045456993,3,256.0,256.0,False,
+scanpy_dask_covariance_csc,embryo_10000000,scanpy_dask_covariance_csc,10000000,False,TL,,,336.0,,False,findMarkers
+census_scanpy,embryo_1000000,census_scanpy,1000000,False,completed,150.21231880320443,3,64.0,32.0,False,
+census_scanpy,brain_1306127,census_scanpy,1306127,False,not run,,,,,False,
+census_scanpy,tabula_sapiens,census_scanpy,1136218,False,not run,,,,,False,
+census_scanpy,hbca_neurons,census_scanpy,2480956,False,not run,,,,,False,
+census_scanpy,mssm_cohort,census_scanpy,4140453,False,not run,,,,,False,
+census_scanpy,embryo_10000000,census_scanpy,10000000,False,OOM,,,336.0,,False,read

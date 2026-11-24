@@ -1,0 +1,176 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "cells": 7299,
+    "modalities": [
+      "RNA",
+      "ADT"
+    ],
+    "modalityDimensions": {
+      "RNA": 30,
+      "ADT": 13
+    },
+    "threads": 8,
+    "inputsSha256": "dd4e5acbf252d0560d32c825cb12f9e5da68ead03c7f9360db1cf2f32d305238",
+    "settings": {
+      "neighborCount": 20,
+      "seuratCandidateBreadths": [
+        50,
+        200
+      ],
+      "hvgCount": 2000,
+      "rnaDimensions": 30,
+      "adtDimensions": 15,
+      "atacDimensions": 30,
+      "peakCount": 25000,
+      "resolution": 1.0,
+      "seed": 4466,
+      "l2Normalize": true,
+      "annParallel": false,
+      "tolerances": {
+        "matchedKernelMaxAbs": 1e-06,
+        "candidateWeightMaxAbs": 1e-12,
+        "candidateMeanNeighborOverlapMin": 0.9,
+        "candidateBiologicalAriDecreaseMax": 0.05
+      }
+    },
+    "stages": [
+      {
+        "stage": "load_counts",
+        "wallSeconds": 0.16123816999999985,
+        "operationBaselineBytes": 591822848,
+        "operationPeakBytes": 633286656,
+        "operationIncrementalPeakBytes": 41463808,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 627798016,
+        "processTreeRssPeakBytes": 668315648,
+        "processTreeRssIncrementalPeakBytes": 40517632,
+        "processTreeRssAfterBytes": 668315648,
+        "cgroupMemoryCurrentBaselineBytes": 591822848,
+        "cgroupMemoryCurrentPeakBytes": 633286656,
+        "cgroupMemoryCurrentAfterBytes": 633286656,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "load_reductions_and_neighbors",
+        "wallSeconds": 0.16304499400000072,
+        "operationBaselineBytes": 633294848,
+        "operationPeakBytes": 633298944,
+        "operationIncrementalPeakBytes": 4096,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 668332032,
+        "processTreeRssPeakBytes": 668332032,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 668315648,
+        "cgroupMemoryCurrentBaselineBytes": 633294848,
+        "cgroupMemoryCurrentPeakBytes": 633298944,
+        "cgroupMemoryCurrentAfterBytes": 633298944,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "first_call.wnn",
+        "wallSeconds": 5.426390701999999,
+        "operationBaselineBytes": 633303040,
+        "operationPeakBytes": 721436672,
+        "operationIncrementalPeakBytes": 88133632,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 668332032,
+        "processTreeRssPeakBytes": 778809344,
+        "processTreeRssIncrementalPeakBytes": 110477312,
+        "processTreeRssAfterBytes": 778805248,
+        "cgroupMemoryCurrentBaselineBytes": 633303040,
+        "cgroupMemoryCurrentPeakBytes": 721436672,
+        "cgroupMemoryCurrentAfterBytes": 721436672,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "first_call.clustering",
+        "wallSeconds": 29.091700580999998,
+        "operationBaselineBytes": 721440768,
+        "operationPeakBytes": 992055296,
+        "operationIncrementalPeakBytes": 270614528,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 778821632,
+        "processTreeRssPeakBytes": 1049956352,
+        "processTreeRssIncrementalPeakBytes": 271134720,
+        "processTreeRssAfterBytes": 1049956352,
+        "cgroupMemoryCurrentBaselineBytes": 721440768,
+        "cgroupMemoryCurrentPeakBytes": 992055296,
+        "cgroupMemoryCurrentAfterBytes": 992055296,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "warm.wnn",
+        "wallSeconds": 0.04144557199999355,
+        "operationBaselineBytes": 992071680,
+        "operationPeakBytes": 994222080,
+        "operationIncrementalPeakBytes": 2150400,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 1049972736,
+        "processTreeRssPeakBytes": 1052110848,
+        "processTreeRssIncrementalPeakBytes": 2138112,
+        "processTreeRssAfterBytes": 1052110848,
+        "cgroupMemoryCurrentBaselineBytes": 992071680,
+        "cgroupMemoryCurrentPeakBytes": 994222080,
+        "cgroupMemoryCurrentAfterBytes": 994222080,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "warm.clustering",
+        "wallSeconds": 0.08629424499999772,
+        "operationBaselineBytes": 994226176,
+        "operationPeakBytes": 997769216,
+        "operationIncrementalPeakBytes": 3543040,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 1052127232,
+        "processTreeRssPeakBytes": 1055666176,
+        "processTreeRssIncrementalPeakBytes": 3538944,
+        "processTreeRssAfterBytes": 1055666176,
+        "cgroupMemoryCurrentBaselineBytes": 994226176,
+        "cgroupMemoryCurrentPeakBytes": 997769216,
+        "cgroupMemoryCurrentAfterBytes": 997769216,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      }
+    ],
+    "validation": {
+      "first_call": {
+        "neighborsIdentical": true,
+        "weightsIdentical": true,
+        "clustersIdentical": true
+      },
+      "warm": {
+        "neighborsIdentical": true,
+        "weightsIdentical": true,
+        "clustersIdentical": true
+      }
+    },
+    "residentCountBytes": 25151360,
+    "residentInputs": "The same selected count matrices and reductions supplied to Seurat are loaded; CyteArc additionally consumes its saved modality neighbor rows, while Seurat computes neighbors from reductions.",
+    "timingBoundary": "Joint WNN integration and clustering from prepared modality artifacts; input loading, output validation and persistence are separate. First-call and warm execution are both retained."
+  }
+}

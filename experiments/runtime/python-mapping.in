@@ -1,0 +1,10 @@
+# Python environment for the mapping comparison (scANVI with scArches, CellTypist).
+# The checked-in lock was compiled with:
+#   uv pip compile python-mapping.in --python-version 3.12 \
+#     --python-platform x86_64-manylinux_2_28 -o python-mapping.txt
+scanpy==1.12.4
+scvi-tools==1.5.1
+celltypist==1.7.1
+scikit-misc
+h5py
+boto3

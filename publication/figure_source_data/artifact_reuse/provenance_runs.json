@@ -1,0 +1,140 @@
+{
+ "atlasCells": 10000000,
+ "clusteredCells": 8894085,
+ "chain": [
+  {
+   "alias": "C1",
+   "digest": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+   "operation": "auto_filter_cells",
+   "seconds": 50.75459432699995
+  },
+  {
+   "alias": "V1",
+   "digest": "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd",
+   "operation": "select_hvgs",
+   "seconds": 385.9553631069998
+  },
+  {
+   "alias": "N1",
+   "digest": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+   "operation": "run_normalization",
+   "seconds": 343.9906902980001
+  },
+  {
+   "alias": "P1",
+   "digest": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+   "operation": "run_pca",
+   "seconds": 187.17550757399977
+  },
+  {
+   "alias": "I1",
+   "digest": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+   "operation": "build_ann_index",
+   "seconds": 334.000945367
+  }
+ ],
+ "branches": [
+  {
+   "k": 11,
+   "published": true,
+   "neighbors": {
+    "alias": "K1",
+    "digest": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2",
+    "seconds": 286.0139514279999
+   },
+   "graph": {
+    "alias": "G1",
+    "digest": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+    "seconds": 82.22751504300004
+   },
+   "leaves": [
+    {
+     "resolution": 1.0,
+     "digest": "103c659e429379f495eeeb4c38f856e6623dd2fd75ab8c84060f986e1b51d30c",
+     "seconds": 111.368066473,
+     "step": null,
+     "published": true,
+     "alias": "L1",
+     "run": "A",
+     "runSeconds": 1781.4866336169996
+    },
+    {
+     "resolution": 0.5,
+     "digest": "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f",
+     "seconds": 199.01093588100002,
+     "step": "reuse.leiden.r0.5",
+     "published": false,
+     "alias": "L2",
+     "run": "B",
+     "runSeconds": 199.01093588100002
+    },
+    {
+     "resolution": 2.0,
+     "digest": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5",
+     "seconds": 140.83956753899975,
+     "step": "reuse.leiden.r2",
+     "published": false,
+     "alias": "L3",
+     "run": "C",
+     "runSeconds": 140.83956753899975
+    }
+   ]
+  },
+  {
+   "k": 21,
+   "published": false,
+   "neighbors": {
+    "alias": "K2",
+    "digest": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67",
+    "seconds": 538.7481702960004
+   },
+   "graph": {
+    "alias": "G2",
+    "digest": "320879bd090250acb16a63b57000b72b887c025601a1ac6d20b96db36d2c3cee",
+    "seconds": 32.39862957000014
+   },
+   "leaves": [
+    {
+     "resolution": 1.0,
+     "digest": "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26",
+     "seconds": 128.6612240229997,
+     "step": "reuse.leiden.k21_r1",
+     "published": false,
+     "alias": "L4",
+     "run": "D",
+     "runSeconds": 699.8080238890002
+    }
+   ]
+  }
+ ],
+ "record": {
+  "alias": "K2",
+  "digest": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67",
+  "operation": "query_neighbors",
+  "parameters": {
+   "k": 21
+  },
+  "inputs": [
+   {
+    "alias": "P1",
+    "digest": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032"
+   },
+   {
+    "alias": "I1",
+    "digest": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f"
+   }
+  ]
+ },
+ "seconds": {
+  "shared": 1301.8771006729996
+ },
+ "runs": 4,
+ "cpus": {
+  "published": 16,
+  "reuse": 8
+ },
+ "source": [
+  "experiments/reuse/records/embryo_endothelial_reanalysis.json",
+  "experiments/benchmarks/records/raw/rna_scaling_runs.json"
+ ]
+}

@@ -1,0 +1,130 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "dataset": "hao_pbmc_citeseq",
+    "cells": 161764,
+    "inputsSha256": "a9c78598142766faceaa9e66f943849ff83d23772e58371565b77980f6cafdf4",
+    "cellSelectionSha256": "28aec45f9849f41fd9ec70c2e739384fcd3dc88763812461d060f4b0dd5ca3cc",
+    "nativeWorkflow": {
+      "Seurat": "5.5.1",
+      "SeuratObject": "5.4.0",
+      "R": "R version 4.6.1 (2026-06-24)",
+      "cells": 161764,
+      "modalities": [
+        "RNA",
+        "ADT"
+      ],
+      "threads": 8,
+      "rawFeatures": {
+        "RNA": 33538,
+        "ADT": 228
+      },
+      "actualDimensions": {
+        "RNA": 30,
+        "ADT": 15
+      },
+      "settings": {
+        "rnaNormalization": "LogNormalize",
+        "scaleFactor": 10000,
+        "variableGenes": 2000,
+        "variableGeneMethod": "vst",
+        "adtNormalization": "CLR",
+        "adtMargin": 1,
+        "scaleFeatures": true,
+        "rnaPcs": 30,
+        "adtPcsMaximum": 15,
+        "kNn": 20,
+        "knnRange": 200,
+        "seed": 4466,
+        "initialResolution": 1,
+        "revisedResolution": 1.2
+      },
+      "inputSetupSeconds": 163.19799999999998,
+      "initialStages": {
+        "RNA.normalization": 17.217000000000013,
+        "RNA.features": 15.024000000000001,
+        "RNA.scaling": 8.949999999999989,
+        "RNA.reduction": 30.905,
+        "RNA.neighbors": 47.67399999999998,
+        "RNA.clustering": 44.485000000000014,
+        "ADT.normalization": 6.295000000000016,
+        "ADT.scaling": 1.7200000000000273,
+        "ADT.reduction": 1.5499999999999545,
+        "ADT.neighbors": 44.17100000000005,
+        "ADT.clustering": 42.974999999999966,
+        "WNN.integration": 517.941,
+        "WNN.clustering": 82.45000000000005
+      },
+      "initialSeconds": 861.3570000000001,
+      "initialWallSeconds": 861.3679999999999,
+      "freshRevisionStages": {
+        "RNA.normalization": 16.939000000000078,
+        "RNA.features": 14.153999999999996,
+        "RNA.scaling": 8.025000000000091,
+        "RNA.reduction": 20.011999999999944,
+        "RNA.neighbors": 47.184999999999945,
+        "RNA.clustering": 48.830000000000155,
+        "ADT.normalization": 4.292999999999893,
+        "ADT.scaling": 1.5420000000001437,
+        "ADT.reduction": 1.4579999999998563,
+        "ADT.neighbors": 44.21400000000017,
+        "ADT.clustering": 45.095999999999776,
+        "WNN.integration": 508.4759999999999,
+        "WNN.clustering": 85.42399999999998
+      },
+      "freshRevisionWallSeconds": 845.6550000000002,
+      "freshRevisedSeconds": 845.6479999999999,
+      "reusedRevisionSeconds": 84.44100000000003
+    },
+    "stages": [
+      {
+        "stage": "seurat.workflow.process",
+        "wallSeconds": 1959.648813811,
+        "operationBaselineBytes": 470659072,
+        "operationPeakBytes": 29640384512,
+        "operationIncrementalPeakBytes": 29169725440,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 499974144,
+        "processTreeRssPeakBytes": 263268261888,
+        "processTreeRssIncrementalPeakBytes": 262768287744,
+        "processTreeRssAfterBytes": 501841920,
+        "cgroupMemoryCurrentBaselineBytes": 470659072,
+        "cgroupMemoryCurrentPeakBytes": 29640384512,
+        "cgroupMemoryCurrentAfterBytes": 26366291968,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      }
+    ],
+    "biologicalAgreement": {
+      "RNA": {
+        "ari": 0.39755275882067703,
+        "nmi": 0.717636776571716,
+        "clusters": 32,
+        "annotatedCells": 161764,
+        "unannotatedCells": 0
+      },
+      "ADT": {
+        "ari": 0.4307546608425776,
+        "nmi": 0.6894058694566368,
+        "clusters": 36,
+        "annotatedCells": 161764,
+        "unannotatedCells": 0
+      },
+      "WNN": {
+        "ari": 0.3550581999529097,
+        "nmi": 0.701035691949441,
+        "clusters": 44,
+        "annotatedCells": 161764,
+        "unannotatedCells": 0
+      }
+    },
+    "reuseValidation": {
+      "clusterLabelsIdentical": true,
+      "clusterAri": 1.0
+    }
+  }
+}

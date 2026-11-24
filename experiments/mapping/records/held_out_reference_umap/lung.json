@@ -1,0 +1,34 @@
+{
+  "cells": 546358,
+  "matchesBenchmark": {
+    "cytearcVersion": true,
+    "configuration": true,
+    "cells": true
+  },
+  "cellsPerType": {
+    "AT1": 7843,
+    "AT2": 59402,
+    "B cell lineage": 4924,
+    "Basal": 84700,
+    "Dendritic cells": 8647,
+    "EC arterial": 7220,
+    "EC capillary": 22993,
+    "EC venous": 12467,
+    "Fibroblasts": 17683,
+    "Innate lymphoid cell NK": 10246,
+    "Lymphatic EC differentiating": 556,
+    "Lymphatic EC mature": 3864,
+    "Lymphatic EC proliferating": 28,
+    "Macrophages": 108327,
+    "Mast cells": 4320,
+    "Monocytes": 23696,
+    "Multiciliated lineage": 40987,
+    "Myofibroblasts": 643,
+    "Rare": 885,
+    "SM activated stress response": 420,
+    "Secretory": 80263,
+    "Smooth muscle FAM83D+": 298,
+    "Submucosal Secretory": 4700,
+    "T cell lineage": 41246
+  }
+}

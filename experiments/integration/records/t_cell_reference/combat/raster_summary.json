@@ -1,0 +1,25 @@
+{
+  "source": "t_cell_reference.npz",
+  "sourceSha256": "662ec109c94234475f5f56b01f6cf3c1f8f11c754b52fa27bf17956839da6808",
+  "job": "result.json",
+  "cells": 371747,
+  "bins": 300,
+  "grid": {
+    "origin": [
+      -18.650444355010986,
+      -9.145816531181335
+    ],
+    "span": 36.60478084564209
+  },
+  "rowsAre": "UMAP 2, lowest first; columns are UMAP 1, lowest first",
+  "cellsPerSubtype": {
+    "CD4 central memory": 119030,
+    "CD4 naive": 120555,
+    "CD8 effector": 71468,
+    "CD8 naive": 23951,
+    "MAIT": 4976,
+    "Treg": 22026,
+    "V\u03b42 \u03b3\u03b4 T": 6262,
+    "unlabelled": 3479
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "dataset": "hao_pbmc_citeseq",
+    "cells": 161764,
+    "rnaFeatures": 33538,
+    "adtFeatures": 228,
+    "donors": 8,
+    "sourceRecords": [
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE164nnn/GSE164378/suppl/GSE164378_sc.meta.data_3P.csv.gz",
+        "bytes": 3119866,
+        "sha256": "eaf9acf53cf24c86ebf6228ebef4f0bf682c5ea8c7018a3aa42a386a28f232ab",
+        "downloadSeconds": 3.9614722359999996
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5008nnn/GSM5008737/suppl/GSM5008737_RNA_3P-barcodes.tsv.gz",
+        "bytes": 683095,
+        "sha256": "aae8e3ab848d9b80a3c52bde969e81c6696db2c778e9747603d0c24e6a86cee2",
+        "downloadSeconds": 3.6002380810000005
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5008nnn/GSM5008737/suppl/GSM5008737_RNA_3P-features.tsv.gz",
+        "bytes": 233354,
+        "sha256": "9f3a435942cab5fa1bf41aac342d17ec4818d8c20139b5bcb3713cdedfdee7d1",
+        "downloadSeconds": 0.15937968399999924
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5008nnn/GSM5008737/suppl/GSM5008737_RNA_3P-matrix.mtx.gz",
+        "bytes": 1125353463,
+        "sha256": "0ecba0d5463c9ecf53b1f191a4c1629cee02c99741d5e442ef3a2154b3ab0af4",
+        "downloadSeconds": 133.31483226
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5008nnn/GSM5008738/suppl/GSM5008738_ADT_3P-barcodes.tsv.gz",
+        "bytes": 683095,
+        "sha256": "aae8e3ab848d9b80a3c52bde969e81c6696db2c778e9747603d0c24e6a86cee2",
+        "downloadSeconds": 0.19186338800000158
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5008nnn/GSM5008738/suppl/GSM5008738_ADT_3P-features.tsv.gz",
+        "bytes": 1373,
+        "sha256": "9b45aa53f6db161838ff2e3b8fe012fa6d62c87f8b8df44a1035fe1fa281939b",
+        "downloadSeconds": 2.6410645530000068
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5008nnn/GSM5008738/suppl/GSM5008738_ADT_3P-matrix.mtx.gz",
+        "bytes": 104745344,
+        "sha256": "56cf1f5332fe1857a46c95f1a35a0fa1870551dde3c1430f29b796f7272893b7",
+        "downloadSeconds": 2.4961483120000025
+      }
+    ],
+    "stages": [
+      {
+        "stage": "RNA.read_sparse",
+        "wallSeconds": 19.669299776000003,
+        "operationBaselineBytes": 542142464,
+        "operationPeakBytes": 10465337344,
+        "operationIncrementalPeakBytes": 9923194880,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 563707904,
+        "processTreeRssPeakBytes": 10488066048,
+        "processTreeRssIncrementalPeakBytes": 9924358144,
+        "processTreeRssAfterBytes": 4817842176,
+        "cgroupMemoryCurrentBaselineBytes": 542142464,
+        "cgroupMemoryCurrentPeakBytes": 10465337344,
+        "cgroupMemoryCurrentAfterBytes": 9930006528,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 68719476736,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "ADT.read_sparse",
+        "wallSeconds": 1.745894686999975,
+        "operationBaselineBytes": 4805435392,
+        "operationPeakBytes": 5370142720,
+        "operationIncrementalPeakBytes": 564707328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 4828344320,
+        "processTreeRssPeakBytes": 5387296768,
+        "processTreeRssIncrementalPeakBytes": 558952448,
+        "processTreeRssAfterBytes": 5231529984,
+        "cgroupMemoryCurrentBaselineBytes": 4805435392,
+        "cgroupMemoryCurrentPeakBytes": 5370142720,
+        "cgroupMemoryCurrentAfterBytes": 5351243776,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 68719476736,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "combine_sparse_counts",
+        "wallSeconds": 2.0332712530000094,
+        "operationBaselineBytes": 5208641536,
+        "operationPeakBytes": 14091558912,
+        "operationIncrementalPeakBytes": 8882917376,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 5231546368,
+        "processTreeRssPeakBytes": 14034604032,
+        "processTreeRssIncrementalPeakBytes": 8803057664,
+        "processTreeRssAfterBytes": 9886593024,
+        "cgroupMemoryCurrentBaselineBytes": 5208641536,
+        "cgroupMemoryCurrentPeakBytes": 14091558912,
+        "cgroupMemoryCurrentAfterBytes": 14091558912,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 68719476736,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "conversion",
+        "wallSeconds": 76.388210515,
+        "operationBaselineBytes": 959598592,
+        "operationPeakBytes": 23770308608,
+        "operationIncrementalPeakBytes": 22810710016,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 982827008,
+        "processTreeRssPeakBytes": 23832133632,
+        "processTreeRssIncrementalPeakBytes": 22849306624,
+        "processTreeRssAfterBytes": 1941741568,
+        "cgroupMemoryCurrentBaselineBytes": 959598592,
+        "cgroupMemoryCurrentPeakBytes": 23770308608,
+        "cgroupMemoryCurrentAfterBytes": 1886658560,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 68719476736,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      }
+    ],
+    "archiveBytes": 1001726069
+  }
+}

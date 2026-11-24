@@ -1,0 +1,139 @@
+{
+  "record": {
+    "tool": "seurat_bpcells_spca",
+    "dataset": "mssm_cohort",
+    "replicate": 1,
+    "container": {
+      "cpu": 16.0,
+      "memoryMb": 65536,
+      "workers": 16,
+      "preemptible": true
+    },
+    "restarts": 0,
+    "interruptions": [],
+    "startedAt": 1790389822.5446637,
+    "status": "attempting",
+    "currentStep": "runLeiden",
+    "completedSteps": [
+      "uncompressInput",
+      "convertMatrix",
+      "transposeMatrix",
+      "createObject",
+      "filterCells",
+      "runNormalization",
+      "markHvgs",
+      "runPca",
+      "queryNeighbors",
+      "runUmap"
+    ],
+    "steps": {
+      "uncompressInput": {
+        "start": 1790390945.41508,
+        "end": 1790390946.95425,
+        "seconds": 1.5391700267791748,
+        "peakRssBytes": 938946560,
+        "peakCgroupBytes": 909369344,
+        "peakAnonBytes": 0
+      },
+      "convertMatrix": {
+        "start": 1790390946.96191,
+        "end": 1790392047.20595,
+        "seconds": 1100.2440400123596,
+        "peakRssBytes": 2402369536,
+        "peakCgroupBytes": 2355953664,
+        "peakAnonBytes": 0
+      },
+      "transposeMatrix": {
+        "start": 1790392049.353,
+        "end": 1790392969.35871,
+        "seconds": 920.0057101249695,
+        "peakRssBytes": 2845786112,
+        "peakCgroupBytes": 2801446912,
+        "peakAnonBytes": 0
+      },
+      "createObject": {
+        "start": 1790392971.26633,
+        "end": 1790393231.93604,
+        "seconds": 260.6697099208832,
+        "peakRssBytes": 2594795520,
+        "peakCgroupBytes": 2550554624,
+        "peakAnonBytes": 0
+      },
+      "filterCells": {
+        "start": 1790393231.93697,
+        "end": 1790393551.00881,
+        "seconds": 319.0718400478363,
+        "peakRssBytes": 3991449600,
+        "peakCgroupBytes": 3948527616,
+        "peakAnonBytes": 0
+      },
+      "runNormalization": {
+        "start": 1790393551.0099,
+        "end": 1790393867.66191,
+        "seconds": 316.65200996398926,
+        "peakRssBytes": 3755560960,
+        "peakCgroupBytes": 3711246336,
+        "peakAnonBytes": 0
+      },
+      "markHvgs": {
+        "start": 1790393867.66296,
+        "end": 1790394173.17907,
+        "seconds": 305.5161099433899,
+        "peakRssBytes": 3567374336,
+        "peakCgroupBytes": 3523059712,
+        "peakAnonBytes": 0
+      },
+      "runPca": {
+        "start": 1790394173.18017,
+        "end": 1790403020.59737,
+        "seconds": 8847.417199850082,
+        "peakRssBytes": 5617999872,
+        "peakCgroupBytes": 5422317568,
+        "peakAnonBytes": 0
+      },
+      "queryNeighbors": {
+        "start": 1790403020.59857,
+        "end": 1790404475.18185,
+        "seconds": 1454.5832798480988,
+        "peakRssBytes": 24834039808,
+        "peakCgroupBytes": 24789729280,
+        "peakAnonBytes": 0
+      },
+      "runUmap": {
+        "start": 1790404475.18309,
+        "end": 1790407472.63757,
+        "seconds": 2997.454479932785,
+        "peakRssBytes": 16160968704,
+        "peakCgroupBytes": 16115867648,
+        "peakAnonBytes": 0
+      },
+      "runLeiden": {
+        "start": 1790407472.63851,
+        "peakRssBytes": 21937475584,
+        "peakCgroupBytes": 21892497408,
+        "peakAnonBytes": 0
+      }
+    },
+    "stepOrder": [
+      "uncompressInput",
+      "convertMatrix",
+      "transposeMatrix",
+      "createObject",
+      "filterCells",
+      "runNormalization",
+      "markHvgs",
+      "runPca",
+      "queryNeighbors",
+      "runUmap",
+      "runLeiden"
+    ],
+    "peakRssBytes": 24834039808,
+    "peakCgroupBytes": 24789729280,
+    "peakAnonBytes": 0,
+    "elapsedSeconds": 56193.43422293663,
+    "download": {
+      "seconds": 1114.9850814342499,
+      "bytes": 187498395672
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "module": "reuse.blood_cohort_analysis",
+  "function": "run",
+  "status": "completed",
+  "result": {
+    "settings": {
+      "sources": {
+        "combat": "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff",
+        "yazar": "yazar_2022_single_cell_eqtl_mapping_control_autoimmune_disease_3faad104",
+        "aida": "kock_2025_aida_phase_1_data_freeze_v2_south_korea_thailand_india_c838aec3",
+        "covid_atlas": "cambridge_2021_single_cell_multi_omics_immune_response_covid_19_c7775e88",
+        "hao": "hao_2021_nygc_multimodal_pbmc_ed5d841d",
+        "jdm": "rabadam_2024_citeseq_jdm_pbmcs_a199ca73",
+        "arthritis": "binvignat_2024_single_cell_rna_seq_arthritis_disease_activity_d18736c3",
+        "lee": "lee_2020_immunophenotyping_covid_19_development_severe_covid_19_de2c780c",
+        "schulte_schrepping": "jin_2021_individual_single_cell_rna_seq_data_schulte_schrepping_et_al_5e717147",
+        "ivanova": "ivanova_2023_circulating_immune_cells_cv19_infection_vaccination_hc_242c6e7f"
+      },
+      "memBudget": "24G",
+      "nthreads": 16,
+      "hvgCount": 2000,
+      "pcaDims": 30,
+      "neighborsK": 30
+    },
+    "timingBoundary": "Composite creation, an unintegrated analysis through native Leiden, then a Harmony2 analysis reusing its upstream artifacts with UMAP and native Leiden; pseudobulk sums are timed separately",
+    "sourceCellCounts": {
+      "combat": 836148,
+      "yazar": 1248980,
+      "aida": 1265624,
+      "covid_atlas": 647366,
+      "hao": 161764,
+      "jdm": 105827,
+      "arthritis": 108717,
+      "lee": 59572,
+      "schulte_schrepping": 90957,
+      "ivanova": 189902
+    },
+    "cells": 4714857,
+    "genesShared": 18446,
+    "localStoreAfterCreateBytes": 1090583039,
+    "creation": {
+      "elapsedSeconds": 1462.1467034099999,
+      "io": {
+        "readBytes": 13674972269,
+        "requests": 7155,
+        "httpResponseStatusCounts": {
+          "200": 969,
+          "302": 2804,
+          "206": 2730,
+          "429": 1
+        }
+      }
+    },
+    "unintegrated": {
+      "elapsedSeconds": 2991.923168539,
+      "io": {
+        "readBytes": 26764830368,
+        "requests": 632,
+        "httpResponseStatusCounts": {
+          "302": 632,
+          "206": 632
+        }
+      },
+      "resources": {
+        "operationBaselineBytes": 6189584384,
+        "operationPeakBytes": 16883068928,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 137438953472
+      }
+    },
+    "pseudobulk": {
+      "groups": 14040,
+      "features": 18446
+    },
+    "pseudobulkMeasurement": {
+      "elapsedSeconds": 13253.649600292,
+      "io": {
+        "readBytes": 1273058448643,
+        "requests": 121448,
+        "httpResponseStatusCounts": {
+          "200": 51,
+          "302": 121448,
+          "206": 121448,
+          "429": 516
+        }
+      }
+    }
+  }
+}

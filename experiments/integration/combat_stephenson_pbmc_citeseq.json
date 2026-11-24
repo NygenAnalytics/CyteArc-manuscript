@@ -1,0 +1,1516 @@
+{
+  "dataset": "combat_stephenson_pbmc_citeseq",
+  "labelColumn": "cell_type",
+  "proteinDefinedTypes": [
+    "CD4 Naive",
+    "CD4 Memory",
+    "Treg",
+    "CD8 Naive",
+    "CD8 Memory",
+    "MAIT",
+    "gdT",
+    "NK_CD56bright",
+    "CD14 Mono",
+    "CD16 Mono"
+  ],
+  "sources": [
+    {
+      "study": "combat",
+      "citation": "COMBAT Consortium. A blood atlas of COVID-19 defines hallmarks of disease severity and specificity. Cell (2022). doi:10.1016/j.cell.2022.01.012",
+      "record": "https://doi.org/10.5281/zenodo.6120249",
+      "license": "CC BY 4.0",
+      "url": "https://zenodo.org/records/6120249/files/COMBAT-CITESeq-DATA.h5ad?download=1",
+      "bytes": 6409089483,
+      "md5": "87c6b1a733ea1adc37c808d9a357de74",
+      "countsMatrix": "layers/raw",
+      "proteinPrefix": "AB_",
+      "donorColumn": "COMBAT_ID",
+      "sampleColumn": "scRNASeq_sample_ID",
+      "conditionColumn": "Source",
+      "authorLabelColumn": "Annotation_minor_subset",
+      "excludeCells": {
+        "GEX_region": [
+          "E: Doublets"
+        ]
+      },
+      "labelRules": [
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "CD4.NAIVE"
+          ],
+          "label": "CD4 Naive"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "CD4.TCM",
+            "CD4.TEM/TEMRA",
+            "CD4.TEFF"
+          ],
+          "label": "CD4 Memory"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "CD4.TREG"
+          ],
+          "label": "Treg"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "CD8.NAIVE"
+          ],
+          "label": "CD8 Naive"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "CD8.TCM",
+            "CD8.TCM.CCL5",
+            "CD8.TEM",
+            "CD8.TEMRA",
+            "CD8.TEFF"
+          ],
+          "label": "CD8 Memory"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "MAIT"
+          ],
+          "label": "MAIT"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "GDT.VD2",
+            "GDT.VD2neg"
+          ],
+          "label": "gdT"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "NK.CD56hi.CD16int.XCL1/2"
+          ],
+          "label": "NK_CD56bright"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "NK.CD16hi"
+          ],
+          "label": "NK"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "CD4.TEFF.prolif",
+            "CD8.TEFF.prolif",
+            "NK.cyc"
+          ],
+          "label": "Proliferating lymphocyte"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "B.NAIVE"
+          ],
+          "label": "B naive"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "B.MEM"
+          ],
+          "label": "B memory"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "PB"
+          ],
+          "label": "Plasmablast"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "cMono"
+          ],
+          "label": "CD14 Mono"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "ncMono"
+          ],
+          "label": "CD16 Mono"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "cDC"
+          ],
+          "label": "cDC"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "pDC"
+          ],
+          "label": "pDC"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "PLT"
+          ],
+          "label": "Platelet"
+        },
+        {
+          "column": "Annotation_minor_subset",
+          "values": [
+            "HSC"
+          ],
+          "label": "HSPC"
+        }
+      ]
+    },
+    {
+      "study": "stephenson",
+      "citation": "Stephenson et al. Single-cell multi-omics analysis of the immune response in COVID-19. Nature Medicine (2021). doi:10.1038/s41591-021-01329-2",
+      "record": "https://www.covid19cellatlas.org/index.patient.html",
+      "license": "No data licence stated on the portal; the article is CC BY 4.0",
+      "url": "https://covid19.cog.sanger.ac.uk/submissions/release1/haniffa21.processed.h5ad",
+      "bytes": 7187322881,
+      "md5": "add2501947c585ea6b6ef7429e4bd9f2",
+      "countsMatrix": "layers/raw",
+      "proteinPrefix": "AB_",
+      "donorColumn": "patient_id",
+      "sampleColumn": "sample_id",
+      "conditionColumn": "Status",
+      "authorLabelColumn": "full_clustering",
+      "excludeCells": {},
+      "labelRules": [
+        {
+          "column": "initial_clustering",
+          "values": [
+            "Treg"
+          ],
+          "label": "Treg"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "CD4.Naive"
+          ],
+          "label": "CD4 Naive"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "CD4.CM",
+            "CD4.EM",
+            "CD4.Tfh",
+            "CD4.Th1",
+            "CD4.Th2",
+            "CD4.Th17",
+            "CD4.IL22"
+          ],
+          "label": "CD4 Memory"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "Treg"
+          ],
+          "label": "Treg"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "CD8.Naive"
+          ],
+          "label": "CD8 Naive"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "CD8.EM",
+            "CD8.TE"
+          ],
+          "label": "CD8 Memory"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "MAIT"
+          ],
+          "label": "MAIT"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "gdT"
+          ],
+          "label": "gdT"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "NK_56hi"
+          ],
+          "label": "NK_CD56bright"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "NK_16hi"
+          ],
+          "label": "NK"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "CD4.Prolif",
+            "CD8.Prolif",
+            "NK_prolif"
+          ],
+          "label": "Proliferating lymphocyte"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "B_naive"
+          ],
+          "label": "B naive"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "B_switched_memory",
+            "B_non-switched_memory"
+          ],
+          "label": "B memory"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "Plasmablast",
+            "Plasma_cell_IgG",
+            "Plasma_cell_IgA",
+            "Plasma_cell_IgM"
+          ],
+          "label": "Plasmablast"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "CD14_mono",
+            "CD83_CD14_mono"
+          ],
+          "label": "CD14 Mono"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "CD16_mono",
+            "C1_CD16_mono"
+          ],
+          "label": "CD16 Mono"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "DC1",
+            "DC2",
+            "DC3"
+          ],
+          "label": "cDC"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "pDC"
+          ],
+          "label": "pDC"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "Platelets"
+          ],
+          "label": "Platelet"
+        },
+        {
+          "column": "full_clustering",
+          "values": [
+            "HSC_CD38pos",
+            "HSC_CD38neg",
+            "HSC_prolif",
+            "HSC_erythroid",
+            "HSC_myeloid",
+            "HSC_MK"
+          ],
+          "label": "HSPC"
+        }
+      ]
+    }
+  ],
+  "proteinPanel": [
+    {
+      "feature": "CD80",
+      "clone": "2D10",
+      "combat": "AB_CD80",
+      "stephenson": "AB_CD80"
+    },
+    {
+      "feature": "CD86",
+      "clone": "IT2.2",
+      "combat": "AB_CD86",
+      "stephenson": "AB_CD86"
+    },
+    {
+      "feature": "CD274",
+      "clone": "29E.2A3",
+      "combat": "AB_CD274_B7_H1_PD_L1",
+      "stephenson": "AB_CD274"
+    },
+    {
+      "feature": "CD273",
+      "clone": "24F.10C12",
+      "combat": "AB_CD273_B7_DC_PD_L2",
+      "stephenson": "AB_PDCD1LG2"
+    },
+    {
+      "feature": "CD275",
+      "clone": "2D3",
+      "combat": "AB_CD275_B7_H2_ICOSL",
+      "stephenson": "AB_ICOSLG"
+    },
+    {
+      "feature": "CD11b",
+      "clone": "M1/70",
+      "combat": "AB_humanCD11b",
+      "stephenson": "AB_ITGAM"
+    },
+    {
+      "feature": "CD252",
+      "clone": "11C3.1",
+      "combat": "AB_CD252_OX40L",
+      "stephenson": "AB_OX40L"
+    },
+    {
+      "feature": "CD137L",
+      "clone": "5F4",
+      "combat": "AB_CD137L_4_1BBLigand",
+      "stephenson": "AB_TNFSF9"
+    },
+    {
+      "feature": "CD155",
+      "clone": "SKII.4",
+      "combat": "AB_CD155_PVR",
+      "stephenson": "AB_PVR"
+    },
+    {
+      "feature": "CD112",
+      "clone": "TX31",
+      "combat": "AB_CD112_Nectin_2",
+      "stephenson": "AB_NECTIN2"
+    },
+    {
+      "feature": "CD47",
+      "clone": "CC2C6",
+      "combat": "AB_CD47",
+      "stephenson": "AB_CD47"
+    },
+    {
+      "feature": "CD70",
+      "clone": "113-16",
+      "combat": "AB_CD70",
+      "stephenson": "AB_CD70"
+    },
+    {
+      "feature": "CD30",
+      "clone": "BY88",
+      "combat": "AB_CD30",
+      "stephenson": "AB_TNFRSF8"
+    },
+    {
+      "feature": "CD40",
+      "clone": "5C3",
+      "combat": "AB_CD40",
+      "stephenson": "AB_CD40"
+    },
+    {
+      "feature": "CD154",
+      "clone": "24-31",
+      "combat": "AB_CD154",
+      "stephenson": "AB_CD40LG"
+    },
+    {
+      "feature": "CD52",
+      "clone": "HI186",
+      "combat": "AB_CD52",
+      "stephenson": "AB_CD52"
+    },
+    {
+      "feature": "CD3",
+      "clone": "UCHT1",
+      "combat": "AB_CD3",
+      "stephenson": "AB_CD3"
+    },
+    {
+      "feature": "CD8",
+      "clone": "SK1",
+      "combat": "AB_CD8",
+      "stephenson": "AB_CD8"
+    },
+    {
+      "feature": "CD56",
+      "clone": "5.1H11",
+      "combat": "AB_CD56_NCAM",
+      "stephenson": "AB_CD56"
+    },
+    {
+      "feature": "CD19",
+      "clone": "HIB19",
+      "combat": "AB_CD19",
+      "stephenson": "AB_CD19"
+    },
+    {
+      "feature": "CD33",
+      "clone": "P67.6",
+      "combat": "AB_CD33",
+      "stephenson": "AB_CD33"
+    },
+    {
+      "feature": "CD11c",
+      "clone": "S-HCL-3",
+      "combat": "AB_CD11c",
+      "stephenson": "AB_ITGAX"
+    },
+    {
+      "feature": "CD34",
+      "clone": "581",
+      "combat": "AB_CD34",
+      "stephenson": "AB_CD34"
+    },
+    {
+      "feature": "CD269",
+      "clone": "19F2",
+      "combat": "AB_CD269_BCMA",
+      "stephenson": "AB_TNFRSF17"
+    },
+    {
+      "feature": "HLA-ABC",
+      "clone": "W6/32",
+      "combat": "AB_HLA_A_B_C",
+      "stephenson": "AB_HLA-ABC"
+    },
+    {
+      "feature": "CD90",
+      "clone": "5E10",
+      "combat": "AB_CD90_Thy1",
+      "stephenson": "AB_THY1"
+    },
+    {
+      "feature": "CD117",
+      "clone": "104D2",
+      "combat": "AB_CD117_c_kit",
+      "stephenson": "AB_KIT"
+    },
+    {
+      "feature": "CD10",
+      "clone": "HI10a",
+      "combat": "AB_CD10",
+      "stephenson": "AB_MME"
+    },
+    {
+      "feature": "CD45RA",
+      "clone": "HI100",
+      "combat": "AB_CD45RA",
+      "stephenson": "AB_CD45RA"
+    },
+    {
+      "feature": "CD123",
+      "clone": "6H6",
+      "combat": "AB_CD123",
+      "stephenson": "AB_CD123"
+    },
+    {
+      "feature": "CD7",
+      "clone": "CD7-6B7",
+      "combat": "AB_CD7",
+      "stephenson": "AB_CD7"
+    },
+    {
+      "feature": "CD49f",
+      "clone": "GoH3",
+      "combat": "AB_mouseCD49f",
+      "stephenson": "AB_ITGA6"
+    },
+    {
+      "feature": "CD194",
+      "clone": "L291H4",
+      "combat": "AB_CD194_CCR4",
+      "stephenson": "AB_CCR4"
+    },
+    {
+      "feature": "CD4",
+      "clone": "RPA-T4",
+      "combat": "AB_CD4",
+      "stephenson": "AB_CD4"
+    },
+    {
+      "feature": "CD44",
+      "clone": "IM7",
+      "combat": "AB_humanCD44",
+      "stephenson": "AB_CD44"
+    },
+    {
+      "feature": "CD14",
+      "clone": "M5E2",
+      "combat": "AB_CD14",
+      "stephenson": "AB_CD14"
+    },
+    {
+      "feature": "CD16",
+      "clone": "3G8",
+      "combat": "AB_CD16",
+      "stephenson": "AB_CD16"
+    },
+    {
+      "feature": "CD25",
+      "clone": "BC96",
+      "combat": "AB_CD25",
+      "stephenson": "AB_CD25"
+    },
+    {
+      "feature": "CD45RO",
+      "clone": "UCHL1",
+      "combat": "AB_CD45RO",
+      "stephenson": "AB_CD45RO"
+    },
+    {
+      "feature": "CD279",
+      "clone": "EH12.2H7",
+      "combat": "AB_CD279_PD_1",
+      "stephenson": "AB_PD1"
+    },
+    {
+      "feature": "TIGIT",
+      "clone": "A15153G",
+      "combat": "AB_TIGIT_VSTM3",
+      "stephenson": "AB_TIGIT"
+    },
+    {
+      "feature": "Mouse_IgG1_MOPC-21_isotype_control",
+      "clone": "MOPC-21",
+      "combat": "AB_IgG1isotypctrl",
+      "stephenson": "AB_Mouse IgG1_K_Iso"
+    },
+    {
+      "feature": "Mouse_IgG2a_MOPC-173_isotype_control",
+      "clone": "MOPC-173",
+      "combat": "AB_IgG2aisotypectrl",
+      "stephenson": "AB_Mouse_IgG2a_K_Iso"
+    },
+    {
+      "feature": "Mouse_IgG2b_MPC-11_isotype_control",
+      "clone": "MPC-11",
+      "combat": "AB_IgG2bisotypectrl_mouse",
+      "stephenson": "AB_Mouse_IgG2b_K_Iso"
+    },
+    {
+      "feature": "Rat_IgG2b_RTK4530_isotype_control",
+      "clone": "RTK4530",
+      "combat": "AB_IgG2bisotypectrl_rat",
+      "stephenson": "AB_Rat_IgG2b_K_Iso"
+    },
+    {
+      "feature": "CD20",
+      "clone": "2H7",
+      "combat": "AB_CD20",
+      "stephenson": "AB_CD20"
+    },
+    {
+      "feature": "CD335",
+      "clone": "9E2",
+      "combat": "AB_CD335_NKp46",
+      "stephenson": "AB_NCR1"
+    },
+    {
+      "feature": "CD294",
+      "clone": "BM16",
+      "combat": "AB_CD294_CRTH2",
+      "stephenson": "AB_PTGDR2"
+    },
+    {
+      "feature": "CD326",
+      "clone": "9C4",
+      "combat": "AB_CD326_Ep_CAM",
+      "stephenson": "AB_EPCAM"
+    },
+    {
+      "feature": "CD31",
+      "clone": "WM59",
+      "combat": "AB_CD31",
+      "stephenson": "AB_PECAM1"
+    },
+    {
+      "feature": "Podoplanin",
+      "clone": "NC-08",
+      "combat": "AB_Podoplanin",
+      "stephenson": "AB_podoplanin"
+    },
+    {
+      "feature": "CD146",
+      "clone": "P1H12",
+      "combat": "AB_CD146",
+      "stephenson": "AB_MCAM"
+    },
+    {
+      "feature": "CD324",
+      "clone": "67A4",
+      "combat": "AB_CD324_E_Cadherin",
+      "stephenson": "AB_CDH1"
+    },
+    {
+      "feature": "IgM",
+      "clone": "MHM-88",
+      "combat": "AB_IgM",
+      "stephenson": "AB_IgM"
+    },
+    {
+      "feature": "CD5",
+      "clone": "UCHT2",
+      "combat": "AB_CD5",
+      "stephenson": "AB_CD5"
+    },
+    {
+      "feature": "TCRgd",
+      "clone": "B1",
+      "combat": "AB_gdTCR",
+      "stephenson": "AB_TCRg_d"
+    },
+    {
+      "feature": "CD183",
+      "clone": "G025H7",
+      "combat": "AB_CD183_CXCR3",
+      "stephenson": "AB_CXCR3"
+    },
+    {
+      "feature": "CD195",
+      "clone": "J418F1",
+      "combat": "AB_CD195_CCR5",
+      "stephenson": "AB_CCR5"
+    },
+    {
+      "feature": "CD32",
+      "clone": "FUN-2",
+      "combat": "AB_CD32",
+      "stephenson": "AB_FCGR2A"
+    },
+    {
+      "feature": "CD196",
+      "clone": "G034E3",
+      "combat": "AB_CD196_CCR6",
+      "stephenson": "AB_CCR6"
+    },
+    {
+      "feature": "CD185",
+      "clone": "J252D4",
+      "combat": "AB_CD185_CXCR5",
+      "stephenson": "AB_CXCR5"
+    },
+    {
+      "feature": "CD103",
+      "clone": "Ber-ACT8",
+      "combat": "AB_CD103",
+      "stephenson": "AB_ITGAE"
+    },
+    {
+      "feature": "CD69",
+      "clone": "FN50",
+      "combat": "AB_CD69",
+      "stephenson": "AB_CD69"
+    },
+    {
+      "feature": "CD62L",
+      "clone": "DREG-56",
+      "combat": "AB_CD62L",
+      "stephenson": "AB_CD62L"
+    },
+    {
+      "feature": "CD197",
+      "clone": "G043H7",
+      "combat": "AB_CD197_CCR7",
+      "stephenson": "AB_CCR7"
+    },
+    {
+      "feature": "CD161",
+      "clone": "HP-3G10",
+      "combat": "AB_CD161",
+      "stephenson": "AB_CD161"
+    },
+    {
+      "feature": "CD152",
+      "clone": "BNI3",
+      "combat": "AB_CD152_CTLA_4",
+      "stephenson": "AB_CTLA4"
+    },
+    {
+      "feature": "CD223",
+      "clone": "11C3C65",
+      "combat": "AB_CD223_LAG_3",
+      "stephenson": "AB_LAG3"
+    },
+    {
+      "feature": "KLRG1",
+      "clone": "SA231A2",
+      "combat": "AB_KLRG1_MAFA",
+      "stephenson": "AB_KLRG1"
+    },
+    {
+      "feature": "CD27",
+      "clone": "O323",
+      "combat": "AB_CD27",
+      "stephenson": "AB_CD27"
+    },
+    {
+      "feature": "CD107a",
+      "clone": "H4A3",
+      "combat": "AB_CD107a_LAMP_1",
+      "stephenson": "AB_LAMP1"
+    },
+    {
+      "feature": "CD95",
+      "clone": "DX2",
+      "combat": "AB_CD95_Fas",
+      "stephenson": "AB_FAS"
+    },
+    {
+      "feature": "HLA-DR",
+      "clone": "L243",
+      "combat": "AB_HLA_DR",
+      "stephenson": "AB_HLA-DR"
+    },
+    {
+      "feature": "CD1c",
+      "clone": "L161",
+      "combat": "AB_CD1c",
+      "stephenson": "AB_CD1C"
+    },
+    {
+      "feature": "CD64",
+      "clone": "10.1",
+      "combat": "AB_CD64",
+      "stephenson": "AB_CD64"
+    },
+    {
+      "feature": "CD141",
+      "clone": "M80",
+      "combat": "AB_CD141_Thrombomodulin",
+      "stephenson": "AB_CD141"
+    },
+    {
+      "feature": "CD1d",
+      "clone": "51.1",
+      "combat": "AB_CD1d",
+      "stephenson": "AB_CD1d"
+    },
+    {
+      "feature": "CD314",
+      "clone": "1D11",
+      "combat": "AB_CD314_NKG2D",
+      "stephenson": "AB_KLRK1"
+    },
+    {
+      "feature": "CD66b",
+      "clone": "6/40c",
+      "combat": "AB_CD66b",
+      "stephenson": "AB_CEACAM8"
+    },
+    {
+      "feature": "CD35",
+      "clone": "E11",
+      "combat": "AB_CD35",
+      "stephenson": "AB_CR1"
+    },
+    {
+      "feature": "CD57",
+      "clone": "QA17A04",
+      "combat": "AB_CD57Recombinant",
+      "stephenson": "AB_B3GAT1"
+    },
+    {
+      "feature": "CD366",
+      "clone": "F38-2E2",
+      "combat": "AB_CD366_Tim_3",
+      "stephenson": "AB_HAVCR2"
+    },
+    {
+      "feature": "CD272",
+      "clone": "MIH26",
+      "combat": "AB_CD272_BTLA",
+      "stephenson": "AB_BTLA"
+    },
+    {
+      "feature": "CD278",
+      "clone": "C398.4A",
+      "combat": "AB_CD278_ICOS",
+      "stephenson": "AB_ICOS"
+    },
+    {
+      "feature": "CD58",
+      "clone": "TS2/9",
+      "combat": "AB_CD58_LFA_3",
+      "stephenson": "AB_CD58"
+    },
+    {
+      "feature": "CD96",
+      "clone": "NK92.39",
+      "combat": "AB_CD96_TACTILE",
+      "stephenson": "AB_CD96"
+    },
+    {
+      "feature": "CD39",
+      "clone": "A1",
+      "combat": "AB_CD39",
+      "stephenson": "AB_ENTPD1"
+    },
+    {
+      "feature": "CD178",
+      "clone": "NOK-1",
+      "combat": "AB_CD178_Fas_L",
+      "stephenson": "AB_FASLG"
+    },
+    {
+      "feature": "CX3CR1",
+      "clone": "K0124E1",
+      "combat": "AB_CX3CR1",
+      "stephenson": "AB_CX3CR1"
+    },
+    {
+      "feature": "CD24",
+      "clone": "ML5",
+      "combat": "AB_CD24",
+      "stephenson": "AB_CD24"
+    },
+    {
+      "feature": "CD21",
+      "clone": "Bu32",
+      "combat": "AB_CD21",
+      "stephenson": "AB_CD21"
+    },
+    {
+      "feature": "CD11a",
+      "clone": "TS2/4",
+      "combat": "AB_CD11a",
+      "stephenson": "AB_ITGAL"
+    },
+    {
+      "feature": "IgA",
+      "clone": "HP6123",
+      "combat": "AB_IgA",
+      "stephenson": "AB_IgA"
+    },
+    {
+      "feature": "CD79b",
+      "clone": "CB3-1",
+      "combat": "AB_CD79b_Ig_beta",
+      "stephenson": "AB_CD79b"
+    },
+    {
+      "feature": "CD66ace",
+      "clone": "ASL-32",
+      "combat": "AB_CD66a_c_e",
+      "stephenson": "AB_CEACAM1/5/6"
+    },
+    {
+      "feature": "CD244",
+      "clone": "C1.7",
+      "combat": "AB_CD244_2B4",
+      "stephenson": "AB_CD244"
+    },
+    {
+      "feature": "CD235ab",
+      "clone": "HIR2",
+      "combat": "AB_CD235ab",
+      "stephenson": "AB_CD235ab"
+    },
+    {
+      "feature": "CD206",
+      "clone": "15-2",
+      "combat": "AB_CD206_MMR",
+      "stephenson": "AB_MMR"
+    },
+    {
+      "feature": "CD169",
+      "clone": "7-239",
+      "combat": "AB_CD169_Sialoadhesin_Siglec_1",
+      "stephenson": "AB_SIGLEC1"
+    },
+    {
+      "feature": "CD370",
+      "clone": "8F9",
+      "combat": "AB_CD370_CLEC9A_DNGR1",
+      "stephenson": "AB_CLEC9A"
+    },
+    {
+      "feature": "XCR1",
+      "clone": "S15046E",
+      "combat": "AB_XCR1",
+      "stephenson": "AB_XCR1"
+    },
+    {
+      "feature": "Integrin-b7",
+      "clone": "FIB504",
+      "combat": "AB_Integrin_b7",
+      "stephenson": "AB_ITGB7"
+    },
+    {
+      "feature": "CD268",
+      "clone": "11C1",
+      "combat": "AB_CD268_BAFF_R",
+      "stephenson": "AB_BAFFR"
+    },
+    {
+      "feature": "CD54",
+      "clone": "HA58",
+      "combat": "AB_CD54",
+      "stephenson": "AB_ICAM1"
+    },
+    {
+      "feature": "CD62P",
+      "clone": "AK4",
+      "combat": "AB_CD62P_P_Selectin",
+      "stephenson": "AB_SELP"
+    },
+    {
+      "feature": "TCRab",
+      "clone": "IP26",
+      "combat": "AB_abTCR",
+      "stephenson": "AB_TCR"
+    },
+    {
+      "feature": "CD106",
+      "clone": "STA",
+      "combat": "AB_CD106",
+      "stephenson": "AB_VCAM1"
+    },
+    {
+      "feature": "CD122",
+      "clone": "TU27",
+      "combat": "AB_CD122_IL_2RB",
+      "stephenson": "AB_IL2RB"
+    },
+    {
+      "feature": "CD267",
+      "clone": "1A1",
+      "combat": "AB_CD267_TACI",
+      "stephenson": "AB_TACI"
+    },
+    {
+      "feature": "FcERIa",
+      "clone": "AER-37 (CRA-1)",
+      "combat": "AB_FcERIa",
+      "stephenson": "AB_FcERIa"
+    },
+    {
+      "feature": "CD41",
+      "clone": "HIP8",
+      "combat": "AB_CD41",
+      "stephenson": "AB_ITGA2B"
+    },
+    {
+      "feature": "CD137",
+      "clone": "4B4-1",
+      "combat": "AB_CD137_4_1BB",
+      "stephenson": "AB_TNFRSF9"
+    },
+    {
+      "feature": "CD254",
+      "clone": "MIH24",
+      "combat": "AB_CD254_TRANCE_RANKL",
+      "stephenson": "AB_RANKL"
+    },
+    {
+      "feature": "CD163",
+      "clone": "GHI/61",
+      "combat": "AB_CD163",
+      "stephenson": "AB_CD163"
+    },
+    {
+      "feature": "CD83",
+      "clone": "HB15e",
+      "combat": "AB_CD83",
+      "stephenson": "AB_CD83"
+    },
+    {
+      "feature": "CD357",
+      "clone": "108-17",
+      "combat": "AB_CD357_GITR",
+      "stephenson": "AB_GITR"
+    },
+    {
+      "feature": "CD309",
+      "clone": "7D4-6",
+      "combat": "AB_CD309_VEGFR2",
+      "stephenson": "AB_KDR"
+    },
+    {
+      "feature": "CD124",
+      "clone": "G077F6",
+      "combat": "AB_CD124",
+      "stephenson": "AB_IL4R"
+    },
+    {
+      "feature": "CD184",
+      "clone": "12G5",
+      "combat": "AB_CD184_CXCR4",
+      "stephenson": "AB_CXCR4"
+    },
+    {
+      "feature": "CD2",
+      "clone": "TS1/8",
+      "combat": "AB_CD2",
+      "stephenson": "AB_CD2"
+    },
+    {
+      "feature": "CD226",
+      "clone": "11A8",
+      "combat": "AB_CD226_DNAM_1",
+      "stephenson": "AB_CD226"
+    },
+    {
+      "feature": "CD29",
+      "clone": "TS2/16",
+      "combat": "AB_CD29",
+      "stephenson": "AB_ITGB1"
+    },
+    {
+      "feature": "CD303",
+      "clone": "201A",
+      "combat": "AB_CD303_BDCA_2",
+      "stephenson": "AB_CD303"
+    },
+    {
+      "feature": "CD49b",
+      "clone": "P1E6-C5",
+      "combat": "AB_CD49b",
+      "stephenson": "AB_ITGA2"
+    },
+    {
+      "feature": "CD81",
+      "clone": "5A6",
+      "combat": "AB_CD81_TAPA_1",
+      "stephenson": "AB_CD81"
+    },
+    {
+      "feature": "CD98",
+      "clone": "MEM-108",
+      "combat": "AB_CD98",
+      "stephenson": "AB_SLC3A2"
+    },
+    {
+      "feature": "IgG-Fc",
+      "clone": "M1310G05",
+      "combat": "AB_IgGFc",
+      "stephenson": "AB_IgG_Fc"
+    },
+    {
+      "feature": "IgD",
+      "clone": "IA6-2",
+      "combat": "AB_IgD",
+      "stephenson": "AB_IgD"
+    },
+    {
+      "feature": "CD18",
+      "clone": "TS1/18",
+      "combat": "AB_CD18",
+      "stephenson": "AB_ITGB2"
+    },
+    {
+      "feature": "CD28",
+      "clone": "CD28.2",
+      "combat": "AB_CD28",
+      "stephenson": "AB_CD28"
+    },
+    {
+      "feature": "TSLPR",
+      "clone": "1D3",
+      "combat": "AB_TSLPR_TSLP_R",
+      "stephenson": "AB_TSLPR"
+    },
+    {
+      "feature": "CD38",
+      "clone": "HIT2",
+      "combat": "AB_CD38",
+      "stephenson": "AB_CD38"
+    },
+    {
+      "feature": "CD127",
+      "clone": "A019D5",
+      "combat": "AB_CD127_IL_7Ra",
+      "stephenson": "AB_IL7R"
+    },
+    {
+      "feature": "CD45",
+      "clone": "HI30",
+      "combat": "AB_CD45",
+      "stephenson": "AB_CD45"
+    },
+    {
+      "feature": "CD15",
+      "clone": "W6D3",
+      "combat": "AB_CD15_SSEA_1",
+      "stephenson": "AB_CD15"
+    },
+    {
+      "feature": "CD22",
+      "clone": "S-HCL-1",
+      "combat": "AB_CD22",
+      "stephenson": "AB_CD22"
+    },
+    {
+      "feature": "CD71",
+      "clone": "CY1G4",
+      "combat": "AB_CD71",
+      "stephenson": "AB_CD71"
+    },
+    {
+      "feature": "B7-H4",
+      "clone": "MIH43",
+      "combat": "AB_B7_H4",
+      "stephenson": "AB_B7-H4"
+    },
+    {
+      "feature": "CD26",
+      "clone": "BA5b",
+      "combat": "AB_CD26",
+      "stephenson": "AB_DPP4"
+    },
+    {
+      "feature": "CD193",
+      "clone": "5E8",
+      "combat": "AB_CD193_CCR3",
+      "stephenson": "AB_CCR3"
+    },
+    {
+      "feature": "CD204",
+      "clone": "7C9C20",
+      "combat": "AB_CD204",
+      "stephenson": "AB_MSR1"
+    },
+    {
+      "feature": "CD144",
+      "clone": "BV9",
+      "combat": "AB_CD144_VE_Cadherin",
+      "stephenson": "AB_CDH5"
+    },
+    {
+      "feature": "CD1a",
+      "clone": "HI149",
+      "combat": "AB_CD1a",
+      "stephenson": "AB_CD1a"
+    },
+    {
+      "feature": "CD304",
+      "clone": "12C2",
+      "combat": "AB_CD304_Neuropilin_1",
+      "stephenson": "AB_CD304"
+    },
+    {
+      "feature": "CD36",
+      "clone": "5-271",
+      "combat": "AB_CD36",
+      "stephenson": "AB_CD36"
+    },
+    {
+      "feature": "CD158",
+      "clone": "HP-MA4",
+      "combat": "AB_CD158_KIR2DL1_S1_S3_S5",
+      "stephenson": "AB_CD158"
+    },
+    {
+      "feature": "CD207",
+      "clone": "4C7",
+      "combat": "AB_CD207",
+      "stephenson": "AB_langerin"
+    },
+    {
+      "feature": "CD49d",
+      "clone": "9F10",
+      "combat": "AB_CD49d",
+      "stephenson": "AB_ITGA4"
+    },
+    {
+      "feature": "CD73",
+      "clone": "AD2",
+      "combat": "AB_CD73",
+      "stephenson": "AB_NT5E"
+    },
+    {
+      "feature": "TCR-Va7.2",
+      "clone": "3C10",
+      "combat": "AB_TCR_Va7_2",
+      "stephenson": "AB_TCR_Va7.2"
+    },
+    {
+      "feature": "TCR-Vd2",
+      "clone": "B6",
+      "combat": "AB_TCR_Vd2",
+      "stephenson": "AB_TCR_Vg2"
+    },
+    {
+      "feature": "TCR-Vg9",
+      "clone": "B3",
+      "combat": "AB_TCR_Vg9",
+      "stephenson": "AB_TCR_Vg9"
+    },
+    {
+      "feature": "TCR-Va24Ja18",
+      "clone": "6B11",
+      "combat": "AB_TCR_Va24_Ja18",
+      "stephenson": "AB_TCR_Va24-Ja18"
+    },
+    {
+      "feature": "CD305",
+      "clone": "NKTA255",
+      "combat": "AB_CD305_LAIR1",
+      "stephenson": "AB_LAIR1"
+    },
+    {
+      "feature": "LOX-1",
+      "clone": "15C4",
+      "combat": "AB_LOX_1",
+      "stephenson": "AB_OLR1"
+    },
+    {
+      "feature": "CD158b",
+      "clone": "DX27",
+      "combat": "AB_CD158b_KIR2DL2_L3_NKAT2",
+      "stephenson": "AB_CD158b"
+    },
+    {
+      "feature": "CD133",
+      "clone": "S16016B",
+      "combat": "AB_CD133",
+      "stephenson": "AB_PROM1"
+    },
+    {
+      "feature": "CD209",
+      "clone": "9E9A8",
+      "combat": "AB_CD209_DC_SIGN",
+      "stephenson": "AB_CD209"
+    },
+    {
+      "feature": "CD158e1",
+      "clone": "DX9",
+      "combat": "AB_CD158e1_KIR3DL1_NKB1",
+      "stephenson": "AB_KIR3DL1"
+    },
+    {
+      "feature": "CD158f",
+      "clone": "UP-R1",
+      "combat": "AB_CD158f_KIR2DL5",
+      "stephenson": "AB_KIR2DL5A"
+    },
+    {
+      "feature": "CD337",
+      "clone": "P30-15",
+      "combat": "AB_CD337_NKp30",
+      "stephenson": "AB_NCR3"
+    },
+    {
+      "feature": "CD336",
+      "clone": "P44-8",
+      "combat": "AB_CD336_NKp44",
+      "stephenson": "AB_NCR2"
+    },
+    {
+      "feature": "CD307d",
+      "clone": "413D12",
+      "combat": "AB_CD307d_FcRL4",
+      "stephenson": "AB_FCRL4"
+    },
+    {
+      "feature": "CD307e",
+      "clone": "509f6",
+      "combat": "AB_CD307e_FcRL5",
+      "stephenson": "AB_FCRL5"
+    },
+    {
+      "feature": "CD319",
+      "clone": "162.1",
+      "combat": "AB_CD319_CRACC",
+      "stephenson": "AB_SLAMF7"
+    },
+    {
+      "feature": "CD138",
+      "clone": "DL-101",
+      "combat": "AB_CD138_Syndecan_1",
+      "stephenson": "AB_SDC1"
+    },
+    {
+      "feature": "CD99",
+      "clone": "3B2/TA8",
+      "combat": "AB_CD99",
+      "stephenson": "AB_CD99"
+    },
+    {
+      "feature": "CLEC12A",
+      "clone": "50C1",
+      "combat": "AB_CLEC12A",
+      "stephenson": "AB_CLEC12A"
+    },
+    {
+      "feature": "pTau",
+      "clone": "M7004D06",
+      "combat": "AB_TauPhospho_Thr181",
+      "stephenson": "AB_phosphoTau"
+    },
+    {
+      "feature": "CD257",
+      "clone": "1D6",
+      "combat": "AB_CD257_BAFF_BLYS",
+      "stephenson": "AB_BAFF"
+    },
+    {
+      "feature": "CD94",
+      "clone": "DX22",
+      "combat": "AB_CD94",
+      "stephenson": "AB_KLRD1"
+    },
+    {
+      "feature": "CD150",
+      "clone": "A12 (7D4)",
+      "combat": "AB_CD150_SLAM",
+      "stephenson": "AB_SLAMF1"
+    },
+    {
+      "feature": "Igkappa",
+      "clone": "MHK-49",
+      "combat": "AB_Iglightchaink",
+      "stephenson": "AB_Igkappa"
+    },
+    {
+      "feature": "Galectin-3",
+      "clone": "M3/38",
+      "combat": "AB_humanMac_2_Galectin_3",
+      "stephenson": "AB_LGALS3"
+    },
+    {
+      "feature": "CD85j",
+      "clone": "GHI/75",
+      "combat": "AB_CD85j_ILT2",
+      "stephenson": "AB_LILRB1"
+    },
+    {
+      "feature": "CD23",
+      "clone": "EBVCS-5",
+      "combat": "AB_CD23",
+      "stephenson": "AB_FCER2"
+    },
+    {
+      "feature": "Iglambda",
+      "clone": "MHL-38",
+      "combat": "AB_Iglightchainl",
+      "stephenson": "AB_Iglambda"
+    },
+    {
+      "feature": "HLA-A2",
+      "clone": "BB7.2",
+      "combat": "AB_HLA_A2",
+      "stephenson": "AB_HLA-A_2"
+    },
+    {
+      "feature": "GARP",
+      "clone": "7B11",
+      "combat": "AB_GARP_LRRC32",
+      "stephenson": "AB_LRRC32"
+    },
+    {
+      "feature": "CD328",
+      "clone": "6-434",
+      "combat": "AB_CD328_Siglec_7",
+      "stephenson": "AB_SIGLEC7"
+    },
+    {
+      "feature": "TCR-Vb13.1",
+      "clone": "H131",
+      "combat": "AB_TCR_Vb13_1",
+      "stephenson": "AB_TCR_VB_13_1"
+    },
+    {
+      "feature": "CD82",
+      "clone": "ASL-24",
+      "combat": "AB_CD82",
+      "stephenson": "AB_CD82"
+    },
+    {
+      "feature": "CD101",
+      "clone": "BB27",
+      "combat": "AB_CD101_BB27",
+      "stephenson": "AB_CD101"
+    },
+    {
+      "feature": "CD360",
+      "clone": "4B2.9",
+      "combat": "AB_CD360_IL_21R",
+      "stephenson": "AB_IL21R"
+    },
+    {
+      "feature": "CD88",
+      "clone": "S5/1",
+      "combat": "AB_CD88_C5aR",
+      "stephenson": "AB_C5AR1"
+    },
+    {
+      "feature": "HLA-F",
+      "clone": "3D11/HLA-F",
+      "combat": "AB_HLA_F",
+      "stephenson": "AB_HLA-F"
+    },
+    {
+      "feature": "NLRP2",
+      "clone": "8F10B51",
+      "combat": "AB_NLRP2",
+      "stephenson": "AB_NLRP2"
+    },
+    {
+      "feature": "Podocalyxin",
+      "clone": "mAb 84",
+      "combat": "AB_Podocalyxin",
+      "stephenson": "AB_Podocalyxin"
+    },
+    {
+      "feature": "CD224",
+      "clone": "KF29",
+      "combat": "AB_CD224",
+      "stephenson": "AB_GGT1"
+    },
+    {
+      "feature": "c-Met",
+      "clone": "12.1",
+      "combat": "AB_c_Met",
+      "stephenson": "AB_c-Met"
+    },
+    {
+      "feature": "CD258",
+      "clone": "T5-39",
+      "combat": "AB_CD258_LIGHT",
+      "stephenson": "AB_LIGHT"
+    },
+    {
+      "feature": "DR3",
+      "clone": "JD3",
+      "combat": "AB_DR3_TRAMP",
+      "stephenson": "AB_DR3"
+    }
+  ]
+}

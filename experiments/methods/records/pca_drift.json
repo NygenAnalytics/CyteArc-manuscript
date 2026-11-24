@@ -1,0 +1,74 @@
+{
+  "status": "ok",
+  "experiment": "pca_drift",
+  "settings": {
+    "cells": 1024,
+    "features": 2000,
+    "dimensions": 21,
+    "seed": 4469,
+    "batchSizes": [
+      128,
+      256,
+      1024
+    ],
+    "maxSubspaceAngleDegrees": 0.05
+  },
+  "dataset": "bastidas-ponce_4K_pancreas-d15_rnaseq",
+  "cellIdsSha256": "27bcd2450fb63f8bd875f481463bdcc826d684d20f27b7d4598af2257aee49a0",
+  "featureIdsSha256": "2c1d9d0f52962b9b5862542395a4da9b9cbad192267dd875e440e3f345d3f83e",
+  "inputSha256": "4c5c05e88d7e5319690d7d89908f700338359f973d78ef9f48dec67d524eac78",
+  "results": [
+    {
+      "method": "gram",
+      "batchSize": 128,
+      "blocks": 8,
+      "maxSubspaceAngleDegrees": 1.2519128231081506e-12,
+      "medianSubspaceAngleDegrees": 1.6260865016724647e-13,
+      "maxRelativeVarianceShareError": 3.0521624517654745e-15
+    },
+    {
+      "method": "incremental",
+      "batchSize": 128,
+      "blocks": 8,
+      "maxSubspaceAngleDegrees": 89.2857751882079,
+      "medianSubspaceAngleDegrees": 22.26166449688145,
+      "maxRelativeVarianceShareError": 0.1567916872805333
+    },
+    {
+      "method": "gram",
+      "batchSize": 256,
+      "blocks": 4,
+      "maxSubspaceAngleDegrees": 1.2560252522476974e-12,
+      "medianSubspaceAngleDegrees": 1.6319863545963376e-13,
+      "maxRelativeVarianceShareError": 3.3950958878269764e-15
+    },
+    {
+      "method": "incremental",
+      "batchSize": 256,
+      "blocks": 4,
+      "maxSubspaceAngleDegrees": 85.10749839307245,
+      "medianSubspaceAngleDegrees": 17.633093573059785,
+      "maxRelativeVarianceShareError": 0.13006469024691683
+    },
+    {
+      "method": "gram",
+      "batchSize": 1024,
+      "blocks": 1,
+      "maxSubspaceAngleDegrees": 1.2407812942451698e-12,
+      "medianSubspaceAngleDegrees": 1.5501709791784826e-13,
+      "maxRelativeVarianceShareError": 3.1966868663975654e-15
+    },
+    {
+      "method": "incremental",
+      "batchSize": 1024,
+      "blocks": 1,
+      "maxSubspaceAngleDegrees": 2.5287962030844577e-12,
+      "medianSubspaceAngleDegrees": 1.4725974446522471e-13,
+      "maxRelativeVarianceShareError": 2.797893437567529e-15
+    }
+  ],
+  "preprocessing": "Counts scaled to 10,000 per cell and log1p transformed; top 2,000 genes by variance and population standardization; identical input for both solvers",
+  "incrementalFitOrder": "First block reserved until the end, as in the superseded multi-block CyteArc fit",
+  "reference": "Dense float64 SVD on the identical matrix",
+  "performanceClaim": false
+}

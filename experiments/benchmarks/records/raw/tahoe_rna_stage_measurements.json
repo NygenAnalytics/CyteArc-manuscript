@@ -1,0 +1,1728 @@
+{
+  "runs": {
+    "test": {
+      "runTag": "tahoe_rna_6011925_cells_scaled_layout_replicate_1",
+      "nRows": 6011925,
+      "countMatrix": {
+        "unitBytes": 2000000000,
+        "chunkBytes": 25500000
+      },
+      "stages": {
+        "createStore": {
+          "stage": "createStore",
+          "status": "ok",
+          "seconds": 1023.2938412929999,
+          "peakCgroupBytes": 110074712064,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "ap"
+          },
+          "details": {}
+        },
+        "writeCountsT": {
+          "stage": "writeCountsT",
+          "status": "ok",
+          "seconds": 265.88306527,
+          "peakCgroupBytes": 70118678528,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "eu-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 29862,
+              "gets": 29963,
+              "readTransferredBytes": 16492919316,
+              "maxInFlight": 912
+            },
+            "shape": [
+              62710,
+              6011925
+            ]
+          }
+        },
+        "initializeStore": {
+          "stage": "initializeStore",
+          "status": "ok",
+          "seconds": 59.09213708,
+          "peakCgroupBytes": 1185984512,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 587,
+              "readTransferredBytes": 114934239,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "reopenStore": {
+          "stage": "reopenStore",
+          "status": "ok",
+          "seconds": 3.632139360000001,
+          "peakCgroupBytes": 641146880,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 44,
+              "readTransferredBytes": 36551,
+              "maxInFlight": 9
+            }
+          }
+        },
+        "filterCells": {
+          "stage": "filterCells",
+          "status": "ok",
+          "seconds": 27.777198176,
+          "peakCgroupBytes": 1137586176,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 783,
+              "readTransferredBytes": 178365350,
+              "maxInFlight": 40
+            }
+          }
+        },
+        "markHvgs": {
+          "stage": "markHvgs",
+          "status": "ok",
+          "seconds": 195.900051618,
+          "peakCgroupBytes": 10594697216,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 32785,
+              "gets": 33172,
+              "readTransferredBytes": 12461394491,
+              "maxInFlight": 128
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 159,
+                  "featureGroupCount": 395,
+                  "cellBandCount": 83
+                }
+              ]
+            }
+          }
+        },
+        "runNormalization": {
+          "stage": "runNormalization",
+          "status": "ok",
+          "seconds": 222.283378425,
+          "peakCgroupBytes": 3085123584,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 22825,
+              "gets": 23093,
+              "readTransferredBytes": 11839818897,
+              "maxInFlight": 120
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 159,
+                  "featureGroupCount": 275,
+                  "cellBandCount": 83
+                }
+              ]
+            }
+          }
+        },
+        "runPca": {
+          "stage": "runPca",
+          "status": "ok",
+          "seconds": 183.233882243,
+          "peakCgroupBytes": 3866042368,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 467,
+              "readTransferredBytes": 1425032740,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildEmbeddingInitialization": {
+          "stage": "buildEmbeddingInitialization",
+          "status": "ok",
+          "seconds": 87.034135543,
+          "peakCgroupBytes": 1380667392,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 280,
+              "readTransferredBytes": 1329430560,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "buildAnnIndex": {
+          "stage": "buildAnnIndex",
+          "status": "ok",
+          "seconds": 165.24496628100002,
+          "peakCgroupBytes": 3192950784,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 277,
+              "readTransferredBytes": 498003054,
+              "maxInFlight": 8
+            }
+          }
+        },
+        "queryNeighbors": {
+          "stage": "queryNeighbors",
+          "status": "ok",
+          "seconds": 281.602440776,
+          "peakCgroupBytes": 3906424832,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 467,
+              "readTransferredBytes": 1515799310,
+              "maxInFlight": 8
+            }
+          }
+        },
+        "buildConnectivityMap": {
+          "stage": "buildConnectivityMap",
+          "status": "ok",
+          "seconds": 55.890397807999996,
+          "peakCgroupBytes": 2356535296,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "eu-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 276,
+              "readTransferredBytes": 477321274,
+              "maxInFlight": 8
+            }
+          }
+        },
+        "runUmap": {
+          "stage": "runUmap",
+          "status": "ok",
+          "seconds": 837.392642045,
+          "peakCgroupBytes": 6094835712,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "eu-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 348,
+              "readTransferredBytes": 477603587,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "runLeiden": {
+          "stage": "runLeiden",
+          "status": "ok",
+          "seconds": 118.183456988,
+          "peakCgroupBytes": 4050874368,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "ap-northeast"
+          },
+          "details": {}
+        },
+        "findMarkers": {
+          "stage": "findMarkers",
+          "status": "ok",
+          "seconds": 232.82239252099998,
+          "peakCgroupBytes": 41903747072,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "eu-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 32785,
+              "gets": 33960,
+              "readTransferredBytes": 12598215648,
+              "maxInFlight": 191
+            },
+            "executionReports": {
+              "countsTReadGroup": [
+                {
+                  "featureWidth": 159,
+                  "cellBandCount": 83
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "full": {
+      "runTag": "tahoe_rna_95624334_cells_scaled_layout_replicate_1",
+      "nRows": 95624334,
+      "countMatrix": {
+        "unitBytes": 2000000000,
+        "chunkBytes": 25500000
+      },
+      "stages": {
+        "createStore": {
+          "stage": "createStore",
+          "status": "ok",
+          "seconds": 9811.712653594,
+          "peakCgroupBytes": 139158716416,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {}
+        },
+        "writeCountsT": {
+          "stage": "writeCountsT",
+          "status": "ok",
+          "seconds": 3523.507680312,
+          "peakCgroupBytes": 84000563200,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 479760,
+              "gets": 479933,
+              "readTransferredBytes": 264587084095,
+              "maxInFlight": 928
+            },
+            "shape": [
+              62710,
+              95624334
+            ]
+          }
+        },
+        "initializeStore": {
+          "stage": "initializeStore",
+          "status": "ok",
+          "seconds": 410.748159196,
+          "peakCgroupBytes": 6403010560,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 6135,
+              "readTransferredBytes": 1808883066,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "reopenStore": {
+          "stage": "reopenStore",
+          "status": "ok",
+          "seconds": 3.57716735,
+          "peakCgroupBytes": 1357963264,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 44,
+              "readTransferredBytes": 36631,
+              "maxInFlight": 9
+            }
+          }
+        },
+        "filterCells": {
+          "stage": "filterCells",
+          "status": "ok",
+          "seconds": 243.278602063,
+          "peakCgroupBytes": 8382492672,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 11535,
+              "readTransferredBytes": 2859406925,
+              "maxInFlight": 40
+            }
+          }
+        },
+        "markHvgs": {
+          "stage": "markHvgs",
+          "status": "ok",
+          "seconds": 2605.7033129829997,
+          "peakCgroupBytes": 15101902848,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 476596,
+              "gets": 480567,
+              "readTransferredBytes": 197542367408,
+              "maxInFlight": 128
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 10,
+                  "featureGroupCount": 6271,
+                  "cellBandCount": 76
+                }
+              ]
+            }
+          }
+        },
+        "runNormalization": {
+          "stage": "runNormalization",
+          "status": "ok",
+          "seconds": 1774.073362759,
+          "peakCgroupBytes": 17595146240,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 64828,
+              "gets": 67784,
+              "readTransferredBytes": 63582940155,
+              "maxInFlight": 120
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 10,
+                  "featureGroupCount": 853,
+                  "cellBandCount": 76
+                }
+              ]
+            }
+          }
+        },
+        "runPca": {
+          "stage": "runPca",
+          "status": "ok",
+          "seconds": 1816.085386081,
+          "peakCgroupBytes": 5442138112,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 5496,
+              "readTransferredBytes": 22317346322,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildEmbeddingInitialization": {
+          "stage": "buildEmbeddingInitialization",
+          "status": "ok",
+          "seconds": 1790.2151385729999,
+          "peakCgroupBytes": 3266334720,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3202,
+              "readTransferredBytes": 20944570551,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildAnnIndex": {
+          "stage": "buildAnnIndex",
+          "status": "ok",
+          "seconds": 3543.745320368,
+          "peakCgroupBytes": 36773040128,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3043,
+              "readTransferredBytes": 7835184207,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "queryNeighbors": {
+          "stage": "queryNeighbors",
+          "status": "ok",
+          "seconds": 3818.674310942,
+          "peakCgroupBytes": 44585930752,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 6009,
+              "readTransferredBytes": 25930747078,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildConnectivityMap": {
+          "stage": "buildConnectivityMap",
+          "status": "ok",
+          "seconds": 309.720378514,
+          "peakCgroupBytes": 33178218496,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3120,
+              "readTransferredBytes": 7882573155,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "runUmap": {
+          "stage": "runUmap",
+          "status": "ok",
+          "seconds": 9128.683513986,
+          "peakCgroupBytes": 83625676800,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3977,
+              "readTransferredBytes": 8218367771,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "runLeiden": {
+          "stage": "runLeiden",
+          "status": "ok",
+          "seconds": 875.887539985,
+          "peakCgroupBytes": 56883023872,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {}
+        },
+        "findMarkers": {
+          "stage": "findMarkers",
+          "status": "ok",
+          "seconds": 3242.3501741719997,
+          "peakCgroupBytes": 59829690368,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 476596,
+              "gets": 482123,
+              "readTransferredBytes": 197744981428,
+              "maxInFlight": 149
+            },
+            "executionReports": {
+              "countsTReadGroup": [
+                {
+                  "featureWidth": 10,
+                  "cellBandCount": 76
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "fullReplicate2": {
+      "runTag": "tahoe_rna_95624334_cells_scaled_layout_replicate_2",
+      "nRows": 95624334,
+      "countMatrix": {
+        "unitBytes": 2000000000,
+        "chunkBytes": 25500000
+      },
+      "stages": {
+        "createStore": {
+          "stage": "createStore",
+          "status": "ok",
+          "seconds": 10898.282773789,
+          "peakCgroupBytes": 138147188736,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {}
+        },
+        "writeCountsT": {
+          "stage": "writeCountsT",
+          "status": "ok",
+          "seconds": 3987.331254633,
+          "peakCgroupBytes": 80502013952,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 479760,
+              "gets": 479933,
+              "readTransferredBytes": 264587084095,
+              "maxInFlight": 928
+            },
+            "shape": [
+              62710,
+              95624334
+            ]
+          }
+        },
+        "initializeStore": {
+          "stage": "initializeStore",
+          "status": "ok",
+          "seconds": 386.15125540500003,
+          "peakCgroupBytes": 6431834112,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 6135,
+              "readTransferredBytes": 1808883066,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "reopenStore": {
+          "stage": "reopenStore",
+          "status": "ok",
+          "seconds": 4.174194124,
+          "peakCgroupBytes": 1357856768,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 44,
+              "readTransferredBytes": 36631,
+              "maxInFlight": 9
+            }
+          }
+        },
+        "filterCells": {
+          "stage": "filterCells",
+          "status": "ok",
+          "seconds": 215.634267921,
+          "peakCgroupBytes": 8082333696,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 11535,
+              "readTransferredBytes": 2859406925,
+              "maxInFlight": 40
+            }
+          }
+        },
+        "markHvgs": {
+          "stage": "markHvgs",
+          "status": "ok",
+          "seconds": 2163.440949507,
+          "peakCgroupBytes": 15130464256,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 476596,
+              "gets": 480567,
+              "readTransferredBytes": 197542367408,
+              "maxInFlight": 128
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 10,
+                  "featureGroupCount": 6271,
+                  "cellBandCount": 76
+                }
+              ]
+            }
+          }
+        },
+        "runNormalization": {
+          "stage": "runNormalization",
+          "status": "ok",
+          "seconds": 2057.4118813669998,
+          "peakCgroupBytes": 17643048960,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 64828,
+              "gets": 67784,
+              "readTransferredBytes": 63582940155,
+              "maxInFlight": 120
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 10,
+                  "featureGroupCount": 853,
+                  "cellBandCount": 76
+                }
+              ]
+            }
+          }
+        },
+        "runPca": {
+          "stage": "runPca",
+          "status": "ok",
+          "seconds": 1648.439646927,
+          "peakCgroupBytes": 5195894784,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 5496,
+              "readTransferredBytes": 22317346322,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildEmbeddingInitialization": {
+          "stage": "buildEmbeddingInitialization",
+          "status": "ok",
+          "seconds": 1399.040397845,
+          "peakCgroupBytes": 3534540800,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3202,
+              "readTransferredBytes": 20944570551,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildAnnIndex": {
+          "stage": "buildAnnIndex",
+          "status": "ok",
+          "seconds": 3255.1393870660004,
+          "peakCgroupBytes": 36778381312,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3043,
+              "readTransferredBytes": 7835184207,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "queryNeighbors": {
+          "stage": "queryNeighbors",
+          "status": "ok",
+          "seconds": 4116.316134397,
+          "peakCgroupBytes": 44557631488,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 6009,
+              "readTransferredBytes": 25930670575,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildConnectivityMap": {
+          "stage": "buildConnectivityMap",
+          "status": "ok",
+          "seconds": 162.378736717,
+          "peakCgroupBytes": 33190588416,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3120,
+              "readTransferredBytes": 7882573300,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "runUmap": {
+          "stage": "runUmap",
+          "status": "ok",
+          "seconds": 15681.902036364001,
+          "peakCgroupBytes": 84152430592,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3977,
+              "readTransferredBytes": 8218367269,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "runLeiden": {
+          "stage": "runLeiden",
+          "status": "ok",
+          "seconds": 1005.94685409,
+          "peakCgroupBytes": 56919093248,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-east"
+          },
+          "details": {}
+        },
+        "findMarkers": {
+          "stage": "findMarkers",
+          "status": "ok",
+          "seconds": 2780.325177781,
+          "peakCgroupBytes": 58744684544,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 476596,
+              "gets": 482123,
+              "readTransferredBytes": 197744751018,
+              "maxInFlight": 184
+            },
+            "executionReports": {
+              "countsTReadGroup": [
+                {
+                  "featureWidth": 10,
+                  "cellBandCount": 76
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "fullReplicate3": {
+      "runTag": "tahoe_rna_95624334_cells_scaled_layout_replicate_3",
+      "nRows": 95624334,
+      "countMatrix": {
+        "unitBytes": 2000000000,
+        "chunkBytes": 25500000
+      },
+      "stages": {
+        "createStore": {
+          "stage": "createStore",
+          "status": "ok",
+          "seconds": 10095.724616883,
+          "peakCgroupBytes": 137959534592,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {}
+        },
+        "writeCountsT": {
+          "stage": "writeCountsT",
+          "status": "ok",
+          "seconds": 3653.0813762410003,
+          "peakCgroupBytes": 72689635328,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 479760,
+              "gets": 479933,
+              "readTransferredBytes": 264587084095,
+              "maxInFlight": 928
+            },
+            "shape": [
+              62710,
+              95624334
+            ]
+          }
+        },
+        "initializeStore": {
+          "stage": "initializeStore",
+          "status": "ok",
+          "seconds": 352.192959088,
+          "peakCgroupBytes": 6413180928,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 6135,
+              "readTransferredBytes": 1808883066,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "reopenStore": {
+          "stage": "reopenStore",
+          "status": "ok",
+          "seconds": 3.002510464,
+          "peakCgroupBytes": 1358024704,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 44,
+              "readTransferredBytes": 36631,
+              "maxInFlight": 9
+            }
+          }
+        },
+        "filterCells": {
+          "stage": "filterCells",
+          "status": "ok",
+          "seconds": 196.740505788,
+          "peakCgroupBytes": 7980552192,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 11535,
+              "readTransferredBytes": 2859406925,
+              "maxInFlight": 40
+            }
+          }
+        },
+        "markHvgs": {
+          "stage": "markHvgs",
+          "status": "ok",
+          "seconds": 2411.341199673,
+          "peakCgroupBytes": 14008406016,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 476596,
+              "gets": 480567,
+              "readTransferredBytes": 197542367326,
+              "maxInFlight": 128
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 10,
+                  "featureGroupCount": 6271,
+                  "cellBandCount": 76
+                }
+              ]
+            }
+          }
+        },
+        "runNormalization": {
+          "stage": "runNormalization",
+          "status": "ok",
+          "seconds": 2016.2435119890001,
+          "peakCgroupBytes": 17727819776,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 64828,
+              "gets": 67784,
+              "readTransferredBytes": 63582940114,
+              "maxInFlight": 120
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 10,
+                  "featureGroupCount": 853,
+                  "cellBandCount": 76
+                }
+              ]
+            }
+          }
+        },
+        "runPca": {
+          "stage": "runPca",
+          "status": "ok",
+          "seconds": 3290.1507968799997,
+          "peakCgroupBytes": 5335822336,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 5496,
+              "readTransferredBytes": 22317346281,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildEmbeddingInitialization": {
+          "stage": "buildEmbeddingInitialization",
+          "status": "ok",
+          "seconds": 1539.0066223370002,
+          "peakCgroupBytes": 3327696896,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3202,
+              "readTransferredBytes": 20944570510,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildAnnIndex": {
+          "stage": "buildAnnIndex",
+          "status": "ok",
+          "seconds": 2373.2333967860004,
+          "peakCgroupBytes": 36777619456,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3043,
+              "readTransferredBytes": 7835184166,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "queryNeighbors": {
+          "stage": "queryNeighbors",
+          "status": "ok",
+          "seconds": 3274.4197184279997,
+          "peakCgroupBytes": 44614164480,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 6009,
+              "readTransferredBytes": 25930712960,
+              "maxInFlight": 16
+            }
+          }
+        },
+        "buildConnectivityMap": {
+          "stage": "buildConnectivityMap",
+          "status": "ok",
+          "seconds": 183.559903759,
+          "peakCgroupBytes": 27884765184,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3120,
+              "readTransferredBytes": 7882572959,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "runUmap": {
+          "stage": "runUmap",
+          "status": "ok",
+          "seconds": 17698.025416559,
+          "peakCgroupBytes": 84311519232,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_AZURE",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 3977,
+              "readTransferredBytes": 8218368808,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "runLeiden": {
+          "stage": "runLeiden",
+          "status": "ok",
+          "seconds": 869.613477666,
+          "peakCgroupBytes": 56891834368,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {}
+        },
+        "findMarkers": {
+          "stage": "findMarkers",
+          "status": "ok",
+          "seconds": 4488.9209250839995,
+          "peakCgroupBytes": 60492967936,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 476596,
+              "gets": 482123,
+              "readTransferredBytes": 197745264801,
+              "maxInFlight": 189
+            },
+            "executionReports": {
+              "countsTReadGroup": [
+                {
+                  "featureWidth": 10,
+                  "cellBandCount": 76
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "fixedLayout": {
+      "runTag": "tahoe_rna_95624334_cells_fixed_layout_replicate_1",
+      "nRows": 95624334,
+      "countMatrix": {
+        "unitBytes": 2000000000,
+        "chunkBytes": 200000000
+      },
+      "stages": {
+        "createStore": {
+          "stage": "createStore",
+          "status": "ok",
+          "seconds": 10800.918969667,
+          "peakCgroupBytes": 105408479232,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {}
+        },
+        "writeCountsT": {
+          "stage": "writeCountsT",
+          "status": "ok",
+          "seconds": 5742.5587547469995,
+          "peakCgroupBytes": 53373366272,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-west"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 65967,
+              "gets": 66595,
+              "readTransferredBytes": 263367225432,
+              "maxInFlight": 96
+            },
+            "shape": [
+              62710,
+              95624334
+            ]
+          }
+        },
+        "initializeStore": {
+          "stage": "initializeStore",
+          "status": "ok",
+          "seconds": 389.893374425,
+          "peakCgroupBytes": 6425006080,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 6135,
+              "readTransferredBytes": 1808883161,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "reopenStore": {
+          "stage": "reopenStore",
+          "status": "ok",
+          "seconds": 3.2508194150000005,
+          "peakCgroupBytes": 1357733888,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 44,
+              "readTransferredBytes": 36664,
+              "maxInFlight": 9
+            }
+          }
+        },
+        "filterCells": {
+          "stage": "filterCells",
+          "status": "ok",
+          "seconds": 251.301838455,
+          "peakCgroupBytes": 8350470144,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_GCP",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 11535,
+              "readTransferredBytes": 2859406925,
+              "maxInFlight": 40
+            }
+          }
+        },
+        "markHvgs": {
+          "stage": "markHvgs",
+          "status": "ok",
+          "seconds": 11753.542364772,
+          "peakCgroupBytes": 9871642624,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 3762600,
+              "gets": 3766571,
+              "readTransferredBytes": 234996692136,
+              "maxInFlight": 128
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 10,
+                  "featureGroupCount": 6271,
+                  "cellBandCount": 600
+                }
+              ]
+            }
+          }
+        },
+        "runNormalization": {
+          "stage": "runNormalization",
+          "status": "ok",
+          "seconds": 3381.2880205280003,
+          "peakCgroupBytes": 6525431808,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-east"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 511800,
+              "gets": 514756,
+              "readTransferredBytes": 68899956033,
+              "maxInFlight": 123
+            },
+            "executionReports": {
+              "countsTCellBand": [
+                {
+                  "featureWidth": 10,
+                  "featureGroupCount": 853,
+                  "cellBandCount": 600
+                }
+              ]
+            }
+          }
+        },
+        "importClusters": {
+          "stage": "importClusters",
+          "status": "ok",
+          "seconds": 775.378894809,
+          "peakCgroupBytes": 44008341504,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 0,
+              "gets": 2895,
+              "readTransferredBytes": 1303389377,
+              "maxInFlight": 10
+            }
+          }
+        },
+        "findMarkers": {
+          "stage": "findMarkers",
+          "status": "ok",
+          "seconds": 10972.364277415,
+          "peakCgroupBytes": 46978899968,
+          "modalCpuLimit": 16.0,
+          "modalMemoryMb": 262144,
+          "memoryMaxBytes": 274877906944,
+          "cytearcMemoryBudget": 206158430208,
+          "workers": 16,
+          "placement": {
+            "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+            "region": "us-central"
+          },
+          "details": {
+            "storeOperations": {
+              "rangeGets": 3762600,
+              "gets": 3768127,
+              "readTransferredBytes": 235199306564,
+              "maxInFlight": 192
+            },
+            "executionReports": {
+              "countsTReadGroup": [
+                {
+                  "featureWidth": 10,
+                  "cellBandCount": 600
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

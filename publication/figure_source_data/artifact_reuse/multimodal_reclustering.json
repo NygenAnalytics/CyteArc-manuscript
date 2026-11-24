@@ -1,0 +1,66 @@
+{
+ "sizes": [
+  {
+   "cells": 100000,
+   "cytearc": {
+    "storedSeconds": 8.544665383000023
+   },
+   "seurat": {
+    "storedSeconds": 38.20700001716614,
+    "outcome": "pass"
+   }
+  },
+  {
+   "cells": 300000,
+   "cytearc": {
+    "storedSeconds": 9.966627792999986
+   },
+   "seurat": {
+    "storedSeconds": 1057.3259999752045,
+    "outcome": "pass"
+   }
+  },
+  {
+   "cells": 600000,
+   "cytearc": {
+    "storedSeconds": 14.724386097999968
+   },
+   "seurat": {
+    "storedSeconds": 11019.84400010109,
+    "outcome": "time"
+   }
+  },
+  {
+   "cells": 1000000,
+   "cytearc": {
+    "storedSeconds": 16.165871061000303
+   },
+   "seurat": {
+    "storedSeconds": null,
+    "outcome": "time"
+   }
+  },
+  {
+   "cells": 1457527,
+   "cytearc": {
+    "storedSeconds": 20.35000904100002
+   },
+   "seurat": {
+    "storedSeconds": null,
+    "outcome": "oom"
+   }
+  }
+ ],
+ "source": [
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_100000/cytearc_wnn_1.json",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_100000/seurat_1.json",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_300000/cytearc_wnn_1.json",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_300000/seurat_1.json",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_600000/cytearc_wnn_1.json",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_600000/seurat_1.json",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_1000000/cytearc_wnn_1.json",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_1000000/seurat_1.json",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_1457527/cytearc_wnn_1.json",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_1457527/seurat_1.json"
+ ]
+}

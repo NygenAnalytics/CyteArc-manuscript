@@ -1,0 +1,294 @@
+{
+  "description": "CyteArc PBA pseudotime (truncated SVD of the transposed random-walk Laplacian) against the exact dense potential pinv(L) R on the same graph and source/sink vector, with a dense truncated SVD separating ARPACK accuracy from truncation.",
+  "reference": {
+    "implementation": "numpy.linalg.pinv and numpy.linalg.svd on the dense Laplacian",
+    "numpyVersion": "2.5.3",
+    "operator": "L = I - D^-1 A, A the symmetrised connectivity map, D its degree matrix"
+  },
+  "comparisonKind": "exact reference: same graph, same source/sink vector, same scaling",
+  "dataset": {
+    "name": "bastidas-ponce_4K_pancreas-d15_rnaseq",
+    "input": {
+      "catalogue": "cytearc_docs",
+      "dataset": "bastidas-ponce_4K_pancreas-d15_rnaseq",
+      "files": {
+        "data.h5ad": {
+          "bytes": 52477898,
+          "sha256": "9e3e459eca00ba06b496ec80def32941b5b2889918720e3e7aa6ffb811fbe7c6"
+        }
+      }
+    },
+    "analysis": {
+      "cytearcVersion": "1.3.0",
+      "filtering": {
+        "enabled": true,
+        "method": "mad",
+        "attrs": [
+          "RNA_nCounts",
+          "RNA_nFeatures",
+          "RNA_percentMito",
+          "RNA_percentRibo"
+        ],
+        "minP": 0.01,
+        "maxP": 0.99,
+        "sampleColumn": null,
+        "nMads": 3.0,
+        "minCellsPerSample": 20
+      },
+      "hvgCount": 1000,
+      "pcaDims": 21,
+      "neighborsK": 11,
+      "leiden": {
+        "partitions": [
+          0.5,
+          0.75,
+          1.0,
+          1.25
+        ],
+        "selected": null
+      },
+      "annIndex": {
+        "ann_metric": "l2",
+        "ann_m": 24,
+        "ann_ef": 200,
+        "ann_efc": 200,
+        "rand_state": 4466,
+        "ann_parallel": false
+      },
+      "analysisCells": 3546
+    },
+    "graph": "connectivity_map",
+    "cells": 3546,
+    "cellsScored": 3546,
+    "graphEdgesSymmetric": 56466,
+    "connectedComponents": 1,
+    "labelColumn": "clusters",
+    "sources": [
+      "Ductal"
+    ],
+    "sinks": [
+      "Alpha",
+      "Beta",
+      "Delta"
+    ],
+    "sourceCells": 877,
+    "sinkCells": 1068
+  },
+  "parameters": {
+    "nSingularVals": [
+      10,
+      30,
+      100
+    ],
+    "randomSeed": 4444,
+    "sourceSinkVector": "-1/n_sources on sources, +1/n_sinks on sinks, 0 elsewhere",
+    "scaling": "min-max on both sides"
+  },
+  "denseChecks": {
+    "pinvSeconds": 6.8647348510000015,
+    "svdSeconds": 6.407990389000005,
+    "nullSingularValue": 3.260656798999023e-15,
+    "smallestNonzeroSingularValue": 0.0004803586231999949,
+    "largestSingularValue": 1.4110961847196977,
+    "maxAbsDiffPinvVersusSvdExact": 1.0311529408113529e-11,
+    "graphWeightDtype": "float32",
+    "maxAbsDiffCyteArcOperatorVersusFloat64Operator": 3.297980014083102e-08
+  },
+  "comparisons": {
+    "nSingularVals10": {
+      "modesUsed": 9,
+      "cytearcStoredDtype": "float64",
+      "largestSingularValueUsed": 0.026006058783741785,
+      "scaledCyteArcVersusExact": {
+        "n": 3546,
+        "pearson": 0.9999949754394869,
+        "spearman": 0.9998043548752495,
+        "maxAbsDiff": 0.0026866678529372523,
+        "meanAbsDiff": 0.0012666496045297456,
+        "rangeFirst": 1.0,
+        "rangeSecond": 1.0
+      },
+      "scaledCyteArcVersusDenseTruncated": {
+        "n": 3546,
+        "pearson": 0.9999999999999839,
+        "spearman": 0.9999999999999999,
+        "maxAbsDiff": 3.1890046401500394e-07,
+        "meanAbsDiff": 8.567534617135524e-08,
+        "rangeFirst": 1.0,
+        "rangeSecond": 1.0
+      },
+      "scaledDenseTruncatedVersusExact": {
+        "n": 3546,
+        "pearson": 0.9999949754866757,
+        "spearman": 0.9998043548752495,
+        "maxAbsDiff": 0.002686572621571015,
+        "meanAbsDiff": 0.0012666481828874213,
+        "rangeFirst": 1.0,
+        "rangeSecond": 1.0
+      },
+      "rawRelativeL2ErrorCyteArcVersusExact": 0.003170030947090958,
+      "rawRelativeL2ErrorCyteArcVersusDenseTruncated": 6.758786867701689e-07,
+      "rawCyteArcVersusExact": {
+        "n": 3546,
+        "pearson": 0.9999949754394865,
+        "spearman": 0.9998043548752495,
+        "maxAbsDiff": 0.010930972609071166,
+        "meanAbsDiff": 0.0034288706005049232,
+        "rangeFirst": 3.1312935680196388,
+        "rangeSecond": 3.1269568352511863
+      },
+      "rawRelativeL2ErrorCyteArcVersusDenseTruncatedOfCyteArcOperator": 7.354865733612022e-12,
+      "cytearcSecondsScaled": 1.4145492620000013,
+      "cytearcSecondsRaw": 1.415742801999997
+    },
+    "nSingularVals30": {
+      "modesUsed": 29,
+      "cytearcStoredDtype": "float64",
+      "largestSingularValueUsed": 0.10675129698954139,
+      "scaledCyteArcVersusExact": {
+        "n": 3546,
+        "pearson": 0.9999998758029345,
+        "spearman": 0.9999874283133102,
+        "maxAbsDiff": 0.0010882998465097937,
+        "meanAbsDiff": 0.00015829729509754672,
+        "rangeFirst": 1.0,
+        "rangeSecond": 1.0
+      },
+      "scaledCyteArcVersusDenseTruncated": {
+        "n": 3546,
+        "pearson": 0.9999999999999848,
+        "spearman": 0.9999999991926043,
+        "maxAbsDiff": 3.1869884269813964e-07,
+        "meanAbsDiff": 8.670143962995764e-08,
+        "rangeFirst": 1.0,
+        "rangeSecond": 1.0
+      },
+      "scaledDenseTruncatedVersusExact": {
+        "n": 3546,
+        "pearson": 0.9999998758032297,
+        "spearman": 0.9999874129727951,
+        "maxAbsDiff": 0.0010884220231901776,
+        "meanAbsDiff": 0.00015826903404332951,
+        "rangeFirst": 1.0,
+        "rangeSecond": 1.0
+      },
+      "rawRelativeL2ErrorCyteArcVersusExact": 0.0004983919561889434,
+      "rawRelativeL2ErrorCyteArcVersusDenseTruncated": 6.759067449223195e-07,
+      "rawCyteArcVersusExact": {
+        "n": 3546,
+        "pearson": 0.999999875802934,
+        "spearman": 0.9999874283133102,
+        "maxAbsDiff": 0.0035544124727979742,
+        "meanAbsDiff": 0.00046047610105223394,
+        "rangeFirst": 3.126844908060905,
+        "rangeSecond": 3.1269568352511863
+      },
+      "rawRelativeL2ErrorCyteArcVersusDenseTruncatedOfCyteArcOperator": 8.089895046429797e-12,
+      "cytearcSecondsScaled": 0.45724302899999714,
+      "cytearcSecondsRaw": 0.45740131699999864
+    },
+    "nSingularVals100": {
+      "modesUsed": 99,
+      "cytearcStoredDtype": "float64",
+      "largestSingularValueUsed": 0.3183644908806702,
+      "scaledCyteArcVersusExact": {
+        "n": 3546,
+        "pearson": 0.9999999512064712,
+        "spearman": 0.9999931737399126,
+        "maxAbsDiff": 0.0006441970142811379,
+        "meanAbsDiff": 9.83639302287958e-05,
+        "rangeFirst": 1.0,
+        "rangeSecond": 1.0
+      },
+      "scaledCyteArcVersusDenseTruncated": {
+        "n": 3546,
+        "pearson": 0.9999999999999848,
+        "spearman": 0.999999999730868,
+        "maxAbsDiff": 3.186091760004617e-07,
+        "meanAbsDiff": 8.679384880227053e-08,
+        "rangeFirst": 1.0,
+        "rangeSecond": 1.0
+      },
+      "scaledDenseTruncatedVersusExact": {
+        "n": 3546,
+        "pearson": 0.9999999512069545,
+        "spearman": 0.9999931742781764,
+        "maxAbsDiff": 0.0006442828794555946,
+        "meanAbsDiff": 9.832541109968704e-05,
+        "rangeFirst": 1.0,
+        "rangeSecond": 1.0
+      },
+      "rawRelativeL2ErrorCyteArcVersusExact": 0.00031238995171311494,
+      "rawRelativeL2ErrorCyteArcVersusDenseTruncated": 6.758987425811029e-07,
+      "rawCyteArcVersusExact": {
+        "n": 3546,
+        "pearson": 0.9999999512064706,
+        "spearman": 0.9999931737399126,
+        "maxAbsDiff": 0.0021608896075209216,
+        "meanAbsDiff": 0.00027405443511401825,
+        "rangeFirst": 3.1269970384855466,
+        "rangeSecond": 3.1269568352511863
+      },
+      "rawRelativeL2ErrorCyteArcVersusDenseTruncatedOfCyteArcOperator": 3.1768176855987416e-12,
+      "cytearcSecondsScaled": 0.692006825,
+      "cytearcSecondsRaw": 0.7200407970000029
+    }
+  },
+  "clusterMedianScaledPseudotime": {
+    "Alpha": {
+      "exact": 0.960599,
+      "cytearcNSingularVals10": 0.958914,
+      "cytearcNSingularVals30": 0.960829,
+      "cytearcNSingularVals100": 0.960688
+    },
+    "Beta": {
+      "exact": 0.966856,
+      "cytearcNSingularVals10": 0.964712,
+      "cytearcNSingularVals30": 0.966947,
+      "cytearcNSingularVals100": 0.96679
+    },
+    "Delta": {
+      "exact": 0.946953,
+      "cytearcNSingularVals10": 0.945654,
+      "cytearcNSingularVals30": 0.947028,
+      "cytearcNSingularVals100": 0.946968
+    },
+    "Ductal": {
+      "exact": 0.019789,
+      "cytearcNSingularVals10": 0.021233,
+      "cytearcNSingularVals30": 0.020031,
+      "cytearcNSingularVals100": 0.019963
+    },
+    "Epsilon": {
+      "exact": 0.935265,
+      "cytearcNSingularVals10": 0.936919,
+      "cytearcNSingularVals30": 0.935453,
+      "cytearcNSingularVals100": 0.935289
+    },
+    "Ngn3 high EP": {
+      "exact": 0.580449,
+      "cytearcNSingularVals10": 0.581105,
+      "cytearcNSingularVals30": 0.580572,
+      "cytearcNSingularVals100": 0.580485
+    },
+    "Ngn3 low EP": {
+      "exact": 0.03562,
+      "cytearcNSingularVals10": 0.035744,
+      "cytearcNSingularVals30": 0.03538,
+      "cytearcNSingularVals100": 0.03545
+    },
+    "Pre-endocrine": {
+      "exact": 0.883694,
+      "cytearcNSingularVals10": 0.885032,
+      "cytearcNSingularVals30": 0.883551,
+      "cytearcNSingularVals100": 0.883736
+    }
+  },
+  "notes": [
+    "CyteArc returns U S^-1 V^T R from the k smallest singular triplets of L^T after dropping the null mode, which equals pinv(L) R restricted to those modes; the omitted modes have the largest singular values.",
+    "The Laplacian convention is CyteArc's; the comparison checks the numerical method, not the choice of Laplacian.",
+    "CyteArc against the dense SVD truncated to the same modes measures numerical precision; CyteArc against pinv(L) R adds the truncation error of the omitted modes.",
+    "The reference operator is built in float64. CyteArc sums the degrees of the float32 graph in float32, which perturbs L^T by about 2e-8 and the raw potential by about 3e-6 (relative L2). Against a dense SVD of CyteArc's own operator the ARPACK result agrees to about 1e-11, so the solver itself contributes nothing measurable."
+  ],
+  "runtimeSeconds": 80.159078155
+}

@@ -1,0 +1,9 @@
+group,capability,Analysis in memory,Analysis in blocks,Cloud data access,Reference mapping,Workflow tracking,CyteArc
+,Tools,"Scanpy, Seurat","Scarf, BPCells, AnnData with Dask, SnapATAC2",CELLxGENE Census,"Azimuth, ArchMap, scvi-hub","Nextflow, Snakemake, LaminDB",this study
+Atlas scale,Reads counts in blocks,N,Ya,Y,-,-,Ya
+Atlas scale,Reanalyzes a remote atlas without a complete local copy,N,Pb,Pb,-,-,Y
+Reuse,Analysis becomes a mapping reference,Yc,Pc,-,Pc,-,Y
+Reuse,Matching results are reused automatically,N,Pe,-,N,Pe,Yf
+Provenance,Results are not overwritten,N,N,-,Nd,Pe,Y
+Provenance,Analysis parameters are saved,P,P,-,Pd,Y,Y
+Provenance,Results are linked to their inputs,N,N,-,Pd,Ye,Y

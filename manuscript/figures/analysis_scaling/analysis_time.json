@@ -1,0 +1,519 @@
+{
+ "datasets": {
+  "embryo_1000000": {
+   "name": "Embryo 1M",
+   "tick": "1M",
+   "cells": 1000000
+  },
+  "brain_1306127": {
+   "name": "Mouse brain 1.3M",
+   "tick": "1.3M",
+   "cells": 1306127
+  },
+  "hbca_neurons": {
+   "name": "Brain-atlas neurons 2.5M",
+   "tick": "2.5M",
+   "cells": 2480956
+  },
+  "mssm_cohort": {
+   "name": "Prefrontal cortex 4.1M",
+   "tick": "4.1M",
+   "cells": 4140453
+  },
+  "embryo_10000000": {
+   "name": "Embryo 10M",
+   "tick": "10M",
+   "cells": 10000000
+  }
+ },
+ "arms": {
+  "cytearc": {
+   "embryo_1000000": {
+    "tool": "cytearc",
+    "standIn": null,
+    "containerGiB": 32.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 6.076688734690349,
+     "low": 5.931895740826925,
+     "high": 6.318371287981669,
+     "n": 3,
+     "values": [
+      5.9797991752624515,
+      5.931895740826925,
+      6.318371287981669
+     ]
+    }
+   },
+   "brain_1306127": {
+    "tool": "cytearc",
+    "standIn": null,
+    "containerGiB": 32.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 7.52420058912701,
+     "low": 6.949725878238678,
+     "high": 7.853725254535675,
+     "n": 3,
+     "values": [
+      7.853725254535675,
+      7.769150634606679,
+      6.949725878238678
+     ]
+    }
+   },
+   "hbca_neurons": {
+    "tool": "cytearc",
+    "standIn": null,
+    "containerGiB": 32.0,
+    "cpu": 16,
+    "minutes": {
+     "mean": 11.377672592798868,
+     "low": 11.1449245651563,
+     "high": 11.557575555642446,
+     "n": 3,
+     "values": [
+      11.430517657597859,
+      11.557575555642446,
+      11.1449245651563
+     ]
+    }
+   },
+   "mssm_cohort": {
+    "tool": "cytearc",
+    "standIn": null,
+    "containerGiB": 32.0,
+    "cpu": 16,
+    "minutes": {
+     "mean": 16.722940611839295,
+     "low": 16.589196157455444,
+     "high": 16.904115784168244,
+     "n": 3,
+     "values": [
+      16.904115784168244,
+      16.589196157455444,
+      16.675509893894194
+     ]
+    }
+   },
+   "embryo_10000000": {
+    "tool": "cytearc",
+    "standIn": null,
+    "containerGiB": 32.0,
+    "cpu": 16,
+    "minutes": {
+     "mean": 48.000120582845476,
+     "low": 43.43156407674154,
+     "high": 51.073091220855716,
+     "n": 3,
+     "values": [
+      43.43156407674154,
+      51.073091220855716,
+      49.49570645093918
+     ]
+    }
+   }
+  },
+  "scanpy": {
+   "embryo_1000000": {
+    "tool": "scanpy",
+    "standIn": null,
+    "containerGiB": 64.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 119.14160508844589,
+     "low": 114.75481728712718,
+     "high": 124.46288858652115,
+     "n": 3,
+     "values": [
+      124.46288858652115,
+      114.75481728712718,
+      118.2071093916893
+     ]
+    }
+   },
+   "brain_1306127": {
+    "tool": "scanpy",
+    "standIn": null,
+    "containerGiB": 128.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 206.6170611143112,
+     "low": 197.11436843077342,
+     "high": 225.1683593551318,
+     "n": 3,
+     "values": [
+      225.1683593551318,
+      197.11436843077342,
+      197.56845555702844
+     ]
+    }
+   },
+   "hbca_neurons": {
+    "tool": "scanpy",
+    "state": "oom",
+    "outcome": "not completed at the largest tier tried",
+    "lastTierGiB": 336.0,
+    "lastStep": "filterCells"
+   },
+   "mssm_cohort": {
+    "tool": "scanpy",
+    "state": "oom",
+    "outcome": "not completed at the largest tier tried",
+    "lastTierGiB": 336.0,
+    "lastStep": "filterCells"
+   },
+   "embryo_10000000": {
+    "tool": "scanpy",
+    "state": "oom",
+    "outcome": "not completed at the largest tier tried",
+    "lastTierGiB": 336.0,
+    "lastStep": "filterCells"
+   }
+  },
+  "scanpy_dask_covariance_csc": {
+   "embryo_1000000": {
+    "tool": "scanpy_dask_covariance_csc",
+    "standIn": null,
+    "containerGiB": 64.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 37.11687275038825,
+     "low": 36.527042929331465,
+     "high": 37.78271261453629,
+     "n": 3,
+     "values": [
+      37.04086270729701,
+      37.78271261453629,
+      36.527042929331465
+     ]
+    }
+   },
+   "brain_1306127": {
+    "tool": "scanpy_dask_covariance_csc",
+    "standIn": null,
+    "containerGiB": 128.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 43.496040880680084,
+     "low": 39.725220207373305,
+     "high": 46.51481912533442,
+     "n": 3,
+     "values": [
+      46.51481912533442,
+      39.725220207373305,
+      44.24808330933253
+     ]
+    }
+   },
+   "hbca_neurons": {
+    "tool": "scanpy_dask_covariance_csc",
+    "standIn": null,
+    "containerGiB": 256.0,
+    "cpu": 16,
+    "minutes": {
+     "mean": 76.65653345982234,
+     "low": 76.39393530686696,
+     "high": 77.14878026247024,
+     "n": 3,
+     "values": [
+      76.4268848101298,
+      76.39393530686696,
+      77.14878026247024
+     ]
+    }
+   },
+   "mssm_cohort": {
+    "tool": "scanpy_dask_covariance_csc",
+    "standIn": null,
+    "containerGiB": 256.0,
+    "cpu": 16,
+    "minutes": {
+     "mean": 199.75246045456993,
+     "low": 177.02842957576115,
+     "high": 241.83711535930632,
+     "n": 3,
+     "values": [
+      180.39183642864228,
+      241.83711535930632,
+      177.02842957576115
+     ]
+    }
+   },
+   "embryo_10000000": {
+    "tool": "scanpy_dask_covariance_csc",
+    "state": "timeout",
+    "outcome": "did not finish within Modal's 24-hour limit per call (in findMarkers)",
+    "lastTierGiB": 336.0,
+    "lastStep": "findMarkers"
+   }
+  },
+  "census_scanpy": {
+   "embryo_1000000": {
+    "tool": "census_scanpy",
+    "standIn": null,
+    "containerGiB": 64.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 150.21231880320443,
+     "low": 147.5682483434677,
+     "high": 153.31402114629745,
+     "n": 3,
+     "values": [
+      147.5682483434677,
+      149.75468691984813,
+      153.31402114629745
+     ]
+    }
+   },
+   "brain_1306127": {
+    "state": "not run"
+   },
+   "hbca_neurons": {
+    "state": "not run"
+   },
+   "mssm_cohort": {
+    "state": "not run"
+   },
+   "embryo_10000000": {
+    "tool": "census_scanpy",
+    "state": "oom",
+    "outcome": "not completed at the largest tier tried",
+    "lastTierGiB": 336.0,
+    "lastStep": "read"
+   }
+  },
+  "seurat": {
+   "embryo_1000000": {
+    "tool": "seurat",
+    "standIn": null,
+    "containerGiB": 336.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 293.46330688926906,
+     "low": 286.50693233410516,
+     "high": 297.8111373345057,
+     "n": 3,
+     "values": [
+      297.8111373345057,
+      286.50693233410516,
+      296.0718509991964
+     ]
+    }
+   },
+   "brain_1306127": {
+    "tool": "seurat",
+    "state": "na",
+    "outcome": "dgCMatrix limit: more than 2^31 - 1 non-zero values",
+    "lastTierGiB": 64.0,
+    "lastStep": "read"
+   },
+   "hbca_neurons": {
+    "tool": "seurat",
+    "state": "na",
+    "outcome": "dgCMatrix limit: more than 2^31 - 1 non-zero values",
+    "lastTierGiB": 128.0,
+    "lastStep": null
+   },
+   "mssm_cohort": {
+    "tool": "seurat",
+    "state": "na",
+    "outcome": "dgCMatrix limit: more than 2^31 - 1 non-zero values",
+    "lastTierGiB": 64.0,
+    "lastStep": null
+   },
+   "embryo_10000000": {
+    "tool": "seurat",
+    "state": "na",
+    "outcome": "dgCMatrix limit: more than 2^31 - 1 non-zero values",
+    "lastTierGiB": 256.0,
+    "lastStep": null
+   }
+  },
+  "seurat_bpcells": {
+   "embryo_1000000": {
+    "tool": "seurat_bpcells",
+    "standIn": null,
+    "containerGiB": 32.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 53.668243833382924,
+     "low": 52.86329433520635,
+     "high": 54.55260333220164,
+     "n": 3,
+     "values": [
+      52.86329433520635,
+      53.58883383274078,
+      54.55260333220164
+     ]
+    }
+   },
+   "brain_1306127": {
+    "tool": "seurat_bpcells",
+    "standIn": null,
+    "containerGiB": 32.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 70.30319188833238,
+     "low": 67.61680200099946,
+     "high": 72.28058766523996,
+     "n": 3,
+     "values": [
+      71.01218599875769,
+      67.61680200099946,
+      72.28058766523996
+     ]
+    }
+   },
+   "hbca_neurons": {
+    "tool": "seurat_bpcells",
+    "standIn": null,
+    "containerGiB": 64.0,
+    "cpu": 16,
+    "minutes": {
+     "mean": 261.91385611163247,
+     "low": 236.04231400092442,
+     "high": 305.33265649875005,
+     "n": 3,
+     "values": [
+      305.33265649875005,
+      244.36659783522288,
+      236.04231400092442
+     ]
+    }
+   },
+   "mssm_cohort": {
+    "tool": "seurat_bpcells",
+    "state": "crash",
+    "outcome": "crashed: segmentation fault during runUmap (RSpectra eigensolver of uwot's spectral initialisation)",
+    "lastTierGiB": 64.0,
+    "lastStep": "runUmap"
+   },
+   "embryo_10000000": {
+    "tool": "seurat_bpcells",
+    "state": "timeout",
+    "outcome": "did not finish within Modal's 24-hour limit per call (in runLeiden)",
+    "lastTierGiB": 128.0,
+    "lastStep": "runLeiden"
+   }
+  },
+  "bpcells_cached": {
+   "embryo_1000000": {
+    "tool": "bpcells_cached",
+    "standIn": null,
+    "containerGiB": 32.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 9.410822888215383,
+     "low": 8.733865666389466,
+     "high": 10.432411332925161,
+     "n": 3,
+     "values": [
+      10.432411332925161,
+      9.066191665331523,
+      8.733865666389466
+     ]
+    }
+   },
+   "brain_1306127": {
+    "tool": "bpcells_cached",
+    "standIn": null,
+    "containerGiB": 32.0,
+    "cpu": 8,
+    "minutes": {
+     "mean": 12.126055667135452,
+     "low": 11.660541498661042,
+     "high": 12.36334050099055,
+     "n": 3,
+     "values": [
+      11.660541498661042,
+      12.36334050099055,
+      12.35428500175476
+     ]
+    }
+   },
+   "hbca_neurons": {
+    "tool": "bpcells_cached_spca",
+    "standIn": "UMAP from scaled PCA",
+    "containerGiB": 32.0,
+    "cpu": 16,
+    "minutes": {
+     "mean": 36.296001554860005,
+     "low": 32.00868433316548,
+     "high": 43.48105583190918,
+     "n": 3,
+     "values": [
+      33.39826449950536,
+      32.00868433316548,
+      43.48105583190918
+     ]
+    }
+   },
+   "mssm_cohort": {
+    "tool": "bpcells_cached_spca",
+    "standIn": "UMAP from scaled PCA",
+    "containerGiB": 32.0,
+    "cpu": 16,
+    "minutes": {
+     "mean": 47.82113599909676,
+     "low": 47.02039950291316,
+     "high": 48.38922166426976,
+     "n": 3,
+     "values": [
+      48.38922166426976,
+      48.05378683010737,
+      47.02039950291316
+     ]
+    }
+   },
+   "embryo_10000000": {
+    "tool": "bpcells_cached",
+    "standIn": null,
+    "containerGiB": 64.0,
+    "cpu": 16,
+    "minutes": {
+     "mean": 137.07486239009435,
+     "low": 115.87906566858291,
+     "high": 160.3793431679408,
+     "n": 3,
+     "values": [
+      160.3793431679408,
+      134.9661783337593,
+      115.87906566858291
+     ]
+    }
+   }
+  }
+ },
+ "tahoe": {
+  "cells": 95624334,
+  "tick": "95.6M",
+  "minutes": {
+   "mean": 566.5911214294166,
+   "low": 485.86657012959995,
+   "high": 639.0709664235501,
+   "n": 3,
+   "values": [
+    485.86657012959995,
+    574.8358277351,
+    639.0709664235501
+   ]
+  },
+  "cpu": 16,
+  "containerGiB": 256.0
+ },
+ "legendOrder": [
+  "seurat",
+  "scanpy",
+  "census_scanpy",
+  "seurat_bpcells",
+  "scanpy_dask_covariance_csc",
+  "bpcells_cached",
+  "cytearc"
+ ],
+ "source": [
+  ".build/derived/benchmarks/toolkit_comparisons.json",
+  ".build/derived/benchmarks/toolkit_analysis_times.json",
+  "experiments/benchmarks/records/tahoe_rna_scaling_results.json"
+ ]
+}

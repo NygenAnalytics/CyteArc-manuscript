@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "comparator_stopped",
+    "dataset": "combat_stephenson_pbmc_citeseq",
+    "cells": 1457527,
+    "cellSelectionSha256": "d7c7e338577c8f2b257be999c5167ac037ad5f52feb7d760aeb3b249356e7216",
+    "outcome": "memory_limit",
+    "stages": [
+      {
+        "stage": "seurat.workflow.process",
+        "wallSeconds": 1311.329567512,
+        "operationPeakBytes": 128881397760,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 137438953472
+      }
+    ],
+    "stageWindows": [
+      {
+        "stage": "input_setup",
+        "wallSeconds": 1253.1619999408722,
+        "sampledPeakBytes": 87437549568
+      },
+      {
+        "stage": "initial:RNA.normalization",
+        "wallSeconds": null,
+        "sampledPeakBytes": 128874426368,
+        "unfinished": true
+      }
+    ],
+    "containerMemoryLimitBytes": 137438953472,
+    "memoryLimitGiB": 120,
+    "timeLimitSeconds": 36000,
+    "lastStage": "initial:RNA.normalization"
+  }
+}

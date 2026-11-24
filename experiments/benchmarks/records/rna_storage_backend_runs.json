@@ -1,0 +1,1171 @@
+{
+  "provenance": {
+    "capturedAt": "2026-10-04T05:04:31.147754+00:00"
+  },
+  "records": {
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_local_zarr_cpus_8_replicate_1_memory_tiers": {
+      "attemptHours": 20.0,
+      "attempts": [
+        {
+          "failedStep": null,
+          "memoryGib": 32,
+          "outcome": {
+            "returned": {
+              "failedStep": null,
+              "status": "ok",
+              "workflowSeconds": 2184.3729526996613
+            }
+          },
+          "peakCgroupBytes": 24262512640,
+          "status": "ok",
+          "workflowSeconds": 2184.3729526996613
+        }
+      ],
+      "coordinatorStartedAt": 1791084120.7360966,
+      "cpu": 8.0,
+      "dataset": "embryo_1000000",
+      "finishedAt": 1791086345.9202394,
+      "gpu": null,
+      "nonpreemptible": true,
+      "payload": {
+        "containerCpu": 8.0,
+        "dataset": "embryo_1000000",
+        "inputMode": "directory",
+        "maxRestarts": 1,
+        "preemptible": false,
+        "replicate": 1,
+        "tool": "scanpy_dask_covariance_csc_local_zarr",
+        "workers": 8
+      },
+      "status": "ok",
+      "takeover": false,
+      "tiers": [
+        32
+      ],
+      "tool": "scanpy_dask_covariance_csc_local_zarr"
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_local_zarr_cpus_8_replicate_1_memory_32gib": {
+      "cellsAfterFilter": 954823,
+      "chunkRows": 50000,
+      "clusters": 39,
+      "completedSteps": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "container": {
+        "cpu": 8.0,
+        "memoryMb": 32768,
+        "preemptible": false,
+        "workers": 8
+      },
+      "currentStep": null,
+      "dataset": "embryo_1000000",
+      "download": {
+        "bytes": 3228366339,
+        "inputMode": "directory",
+        "seconds": 34.448246240615845
+      },
+      "elapsedSeconds": 2219.254314184189,
+      "failedStep": null,
+      "finishedAt": 1791086345.1488986,
+      "genesAfterFilter": 32574,
+      "input": {
+        "format": "zarr",
+        "location": "localDisk"
+      },
+      "interruptions": [],
+      "lazyReader": "anndata.experimental.read_elem_lazy",
+      "log": "rame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals\"] = pvals[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:622: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals_adj\"] = pvals_adj[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:633: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"logfoldchanges\"] = np.log2(\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:607: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"names\"] = self.var_names[global_indices]\n",
+      "markerFormat": "csc",
+      "markerInputNnz": 1613092148,
+      "mode": "dask2_csc",
+      "nCells": 1000000,
+      "nGenes": 45525,
+      "nnz": 1706570607,
+      "pcaRoute": "dask covariance_eigh",
+      "peakAnonBytes": 0,
+      "peakCgroupBytes": 24262512640,
+      "peakRssBytes": 25841500160,
+      "replicate": 1,
+      "restarts": 0,
+      "returnCode": 0,
+      "sparseMatrixBytesEstimate": 13660564864,
+      "startedAt": 1791084125.8946288,
+      "status": "ok",
+      "stepOrder": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "steps": {
+        "filterCells": {
+          "end": 1791084211.5192766,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 12359319552,
+          "peakRssBytes": 12326006784,
+          "seconds": 38.669856786727905,
+          "start": 1791084172.8494198
+        },
+        "findMarkers": {
+          "end": 1791086342.930898,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 24262512640,
+          "peakRssBytes": 24364048384,
+          "seconds": 985.681233882904,
+          "start": 1791085357.249664
+        },
+        "markHvgs": {
+          "end": 1791084251.3345566,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 15205691392,
+          "peakRssBytes": 15631990784,
+          "seconds": 23.717488050460815,
+          "start": 1791084227.6170685
+        },
+        "materializeMarkerInput": {
+          "end": 1791085357.0964854,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 22972051456,
+          "peakRssBytes": 25841500160,
+          "seconds": 68.97638154029846,
+          "start": 1791085288.1201038
+        },
+        "queryNeighbors": {
+          "end": 1791084473.905357,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 4879552512,
+          "peakRssBytes": 5007716352,
+          "seconds": 139.55650758743286,
+          "start": 1791084334.3488493
+        },
+        "readLazy": {
+          "end": 1791084172.8194818,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 963223552,
+          "peakRssBytes": 1008885760,
+          "seconds": 1.4066848754882812,
+          "start": 1791084171.412797
+        },
+        "runLeiden": {
+          "end": 1791085288.1195793,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 6673170432,
+          "peakRssBytes": 6808326144,
+          "seconds": 44.6060791015625,
+          "start": 1791085243.5135002
+        },
+        "runNormalization": {
+          "end": 1791084227.6163852,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 10128166912,
+          "peakRssBytes": 11707965440,
+          "seconds": 16.08487367630005,
+          "start": 1791084211.5315115
+        },
+        "runPca": {
+          "end": 1791084334.3481803,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 14981079040,
+          "peakRssBytes": 14380072960,
+          "seconds": 83.0130500793457,
+          "start": 1791084251.3351302
+        },
+        "runUmap": {
+          "end": 1791085243.5127082,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 11289157632,
+          "peakRssBytes": 11414171648,
+          "seconds": 769.6068751811981,
+          "start": 1791084473.905833
+        }
+      },
+      "tool": "scanpy_dask_covariance_csc_local_zarr",
+      "workflowSeconds": 2184.3729526996613
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_local_zarr_cpus_8_replicate_2_memory_tiers": {
+      "attemptHours": 20.0,
+      "attempts": [
+        {
+          "failedStep": null,
+          "memoryGib": 32,
+          "outcome": {
+            "returned": {
+              "failedStep": null,
+              "status": "ok",
+              "workflowSeconds": 1234.0704944133759
+            }
+          },
+          "peakCgroupBytes": 26877669376,
+          "status": "ok",
+          "workflowSeconds": 1234.0704944133759
+        }
+      ],
+      "coordinatorStartedAt": 1791086537.4343662,
+      "cpu": 8.0,
+      "dataset": "embryo_1000000",
+      "finishedAt": 1791087792.4591851,
+      "gpu": null,
+      "nonpreemptible": true,
+      "payload": {
+        "containerCpu": 8.0,
+        "dataset": "embryo_1000000",
+        "inputMode": "directory",
+        "maxRestarts": 1,
+        "preemptible": false,
+        "replicate": 2,
+        "tool": "scanpy_dask_covariance_csc_local_zarr",
+        "workers": 8
+      },
+      "status": "ok",
+      "takeover": false,
+      "tiers": [
+        32
+      ],
+      "tool": "scanpy_dask_covariance_csc_local_zarr"
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_local_zarr_cpus_8_replicate_2_memory_32gib": {
+      "cellsAfterFilter": 954823,
+      "chunkRows": 50000,
+      "clusters": 39,
+      "completedSteps": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "container": {
+        "cpu": 8.0,
+        "memoryMb": 32768,
+        "preemptible": false,
+        "workers": 8
+      },
+      "currentStep": null,
+      "dataset": "embryo_1000000",
+      "download": {
+        "bytes": 3228366339,
+        "inputMode": "directory",
+        "seconds": 17.039314031600952
+      },
+      "elapsedSeconds": 1251.426519393921,
+      "failedStep": null,
+      "finishedAt": 1791087791.8147163,
+      "genesAfterFilter": 32574,
+      "input": {
+        "format": "zarr",
+        "location": "localDisk"
+      },
+      "interruptions": [],
+      "lazyReader": "anndata.experimental.read_elem_lazy",
+      "log": "rame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals\"] = pvals[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:622: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals_adj\"] = pvals_adj[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:633: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"logfoldchanges\"] = np.log2(\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:607: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"names\"] = self.var_names[global_indices]\n",
+      "markerFormat": "csc",
+      "markerInputNnz": 1613092148,
+      "mode": "dask2_csc",
+      "nCells": 1000000,
+      "nGenes": 45525,
+      "nnz": 1706570607,
+      "pcaRoute": "dask covariance_eigh",
+      "peakAnonBytes": 0,
+      "peakCgroupBytes": 26877669376,
+      "peakRssBytes": 26862174208,
+      "replicate": 2,
+      "restarts": 0,
+      "returnCode": 0,
+      "sparseMatrixBytesEstimate": 13660564864,
+      "startedAt": 1791086540.3882287,
+      "status": "ok",
+      "stepOrder": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "steps": {
+        "filterCells": {
+          "end": 1791086574.9832726,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 12864565248,
+          "peakRssBytes": 12863172608,
+          "seconds": 13.338747024536133,
+          "start": 1791086561.6445255
+        },
+        "findMarkers": {
+          "end": 1791087790.6502187,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 24481808384,
+          "peakRssBytes": 24579010560,
+          "seconds": 583.971019744873,
+          "start": 1791087206.679199
+        },
+        "markHvgs": {
+          "end": 1791086589.9910362,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 14151651328,
+          "peakRssBytes": 14168485888,
+          "seconds": 8.280471801757812,
+          "start": 1791086581.7105644
+        },
+        "materializeMarkerInput": {
+          "end": 1791087206.5990825,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 26877669376,
+          "peakRssBytes": 26862174208,
+          "seconds": 30.58983564376831,
+          "start": 1791087176.0092468
+        },
+        "queryNeighbors": {
+          "end": 1791086681.4127028,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 6175412224,
+          "peakRssBytes": 6280572928,
+          "seconds": 54.29058241844177,
+          "start": 1791086627.1221204
+        },
+        "readLazy": {
+          "end": 1791086561.6304162,
+          "seconds": 0.6103148460388184,
+          "start": 1791086561.0201013
+        },
+        "runLeiden": {
+          "end": 1791087176.009071,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 7925698560,
+          "peakRssBytes": 8044175360,
+          "seconds": 27.457542896270752,
+          "start": 1791087148.5515282
+        },
+        "runNormalization": {
+          "end": 1791086581.7104454,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 10955698176,
+          "peakRssBytes": 10972102656,
+          "seconds": 6.7234883308410645,
+          "start": 1791086574.986957
+        },
+        "runPca": {
+          "end": 1791086627.1219845,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 14443675648,
+          "peakRssBytes": 14479695872,
+          "seconds": 37.13081669807434,
+          "start": 1791086589.9911678
+        },
+        "runUmap": {
+          "end": 1791087148.5513513,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 12567298048,
+          "peakRssBytes": 12665790464,
+          "seconds": 467.13850474357605,
+          "start": 1791086681.4128466
+        }
+      },
+      "tool": "scanpy_dask_covariance_csc_local_zarr",
+      "workflowSeconds": 1234.0704944133759
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_local_zarr_cpus_8_replicate_3_memory_tiers": {
+      "attemptHours": 20.0,
+      "attempts": [
+        {
+          "failedStep": null,
+          "memoryGib": 32,
+          "outcome": {
+            "returned": {
+              "failedStep": null,
+              "status": "ok",
+              "workflowSeconds": 1674.325602054596
+            }
+          },
+          "peakCgroupBytes": 25797976064,
+          "status": "ok",
+          "workflowSeconds": 1674.325602054596
+        }
+      ],
+      "coordinatorStartedAt": 1791088053.839968,
+      "cpu": 8.0,
+      "dataset": "embryo_1000000",
+      "finishedAt": 1791089750.7561991,
+      "gpu": null,
+      "nonpreemptible": true,
+      "payload": {
+        "containerCpu": 8.0,
+        "dataset": "embryo_1000000",
+        "inputMode": "directory",
+        "maxRestarts": 1,
+        "preemptible": false,
+        "replicate": 3,
+        "tool": "scanpy_dask_covariance_csc_local_zarr",
+        "workers": 8
+      },
+      "status": "ok",
+      "takeover": false,
+      "tiers": [
+        32
+      ],
+      "tool": "scanpy_dask_covariance_csc_local_zarr"
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_local_zarr_cpus_8_replicate_3_memory_32gib": {
+      "cellsAfterFilter": 954823,
+      "chunkRows": 50000,
+      "clusters": 39,
+      "completedSteps": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "container": {
+        "cpu": 8.0,
+        "memoryMb": 32768,
+        "preemptible": false,
+        "workers": 8
+      },
+      "currentStep": null,
+      "dataset": "embryo_1000000",
+      "download": {
+        "bytes": 3228366339,
+        "inputMode": "directory",
+        "seconds": 17.141233205795288
+      },
+      "elapsedSeconds": 1691.7782227993011,
+      "failedStep": null,
+      "finishedAt": 1791089750.0220702,
+      "genesAfterFilter": 32574,
+      "input": {
+        "format": "zarr",
+        "location": "localDisk"
+      },
+      "interruptions": [],
+      "lazyReader": "anndata.experimental.read_elem_lazy",
+      "log": "rame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals\"] = pvals[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:622: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals_adj\"] = pvals_adj[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:633: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"logfoldchanges\"] = np.log2(\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:607: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"names\"] = self.var_names[global_indices]\n",
+      "markerFormat": "csc",
+      "markerInputNnz": 1613092148,
+      "mode": "dask2_csc",
+      "nCells": 1000000,
+      "nGenes": 45525,
+      "nnz": 1706570607,
+      "pcaRoute": "dask covariance_eigh",
+      "peakAnonBytes": 0,
+      "peakCgroupBytes": 25797976064,
+      "peakRssBytes": 25849966592,
+      "replicate": 3,
+      "restarts": 0,
+      "returnCode": 0,
+      "sparseMatrixBytesEstimate": 13660564864,
+      "startedAt": 1791088058.243882,
+      "status": "ok",
+      "stepOrder": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "steps": {
+        "filterCells": {
+          "end": 1791088098.3225152,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 14652211200,
+          "peakRssBytes": 14676533248,
+          "seconds": 17.277724504470825,
+          "start": 1791088081.0447907
+        },
+        "findMarkers": {
+          "end": 1791089748.7129288,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 24077213696,
+          "peakRssBytes": 24168833024,
+          "seconds": 836.3304440975189,
+          "start": 1791088912.3824847
+        },
+        "markHvgs": {
+          "end": 1791088117.5711813,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 16478724096,
+          "peakRssBytes": 16391458816,
+          "seconds": 10.648922443389893,
+          "start": 1791088106.9222589
+        },
+        "materializeMarkerInput": {
+          "end": 1791088912.2703028,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 25797976064,
+          "peakRssBytes": 25849966592,
+          "seconds": 37.96778583526611,
+          "start": 1791088874.302517
+        },
+        "queryNeighbors": {
+          "end": 1791088238.3883286,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 5038137344,
+          "peakRssBytes": 5151170560,
+          "seconds": 72.8287627696991,
+          "start": 1791088165.5595658
+        },
+        "readLazy": {
+          "end": 1791088081.0181668,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 4485824512,
+          "peakRssBytes": 4521750528,
+          "seconds": 1.0130228996276855,
+          "start": 1791088080.005144
+        },
+        "runLeiden": {
+          "end": 1791088874.3023596,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 7067058176,
+          "peakRssBytes": 7185580032,
+          "seconds": 38.83602499961853,
+          "start": 1791088835.4663346
+        },
+        "runNormalization": {
+          "end": 1791088106.9220786,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 11249262592,
+          "peakRssBytes": 11205677056,
+          "seconds": 8.595211505889893,
+          "start": 1791088098.326867
+        },
+        "runPca": {
+          "end": 1791088165.5594552,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 14574682112,
+          "peakRssBytes": 14475735040,
+          "seconds": 47.98815870285034,
+          "start": 1791088117.5712965
+        },
+        "runUmap": {
+          "end": 1791088835.4661727,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 11709313024,
+          "peakRssBytes": 11817521152,
+          "seconds": 597.0777170658112,
+          "start": 1791088238.3884556
+        }
+      },
+      "tool": "scanpy_dask_covariance_csc_local_zarr",
+      "workflowSeconds": 1674.325602054596
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_remote_zarr_cpus_8_replicate_1_memory_tiers": {
+      "attemptHours": 20.0,
+      "attempts": [
+        {
+          "failedStep": null,
+          "memoryGib": 32,
+          "outcome": {
+            "returned": {
+              "failedStep": null,
+              "status": "ok",
+              "workflowSeconds": 1303.0357332229614
+            }
+          },
+          "peakCgroupBytes": 27057332224,
+          "status": "ok",
+          "workflowSeconds": 1303.0357332229614
+        }
+      ],
+      "coordinatorStartedAt": 1791078970.5347571,
+      "cpu": 8.0,
+      "dataset": "embryo_1000000",
+      "finishedAt": 1791080277.8398004,
+      "gpu": null,
+      "nonpreemptible": true,
+      "payload": {
+        "containerCpu": 8.0,
+        "dataset": "embryo_1000000",
+        "inputMode": "remote",
+        "maxRestarts": 1,
+        "preemptible": false,
+        "replicate": 1,
+        "tool": "scanpy_dask_covariance_csc_remote_zarr",
+        "workers": 8
+      },
+      "status": "ok",
+      "takeover": false,
+      "tiers": [
+        32
+      ],
+      "tool": "scanpy_dask_covariance_csc_remote_zarr"
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_remote_zarr_cpus_8_replicate_1_memory_32gib": {
+      "cellsAfterFilter": 954823,
+      "chunkRows": 50000,
+      "clusters": 39,
+      "completedSteps": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "container": {
+        "cpu": 8.0,
+        "memoryMb": 32768,
+        "preemptible": false,
+        "workers": 8
+      },
+      "currentStep": null,
+      "dataset": "embryo_1000000",
+      "download": {
+        "bytes": 0,
+        "inputMode": "remote",
+        "seconds": 4.76837158203125e-07
+      },
+      "elapsedSeconds": 1303.2738802433014,
+      "failedStep": null,
+      "finishedAt": 1791080268.1798368,
+      "genesAfterFilter": 32574,
+      "input": {
+        "client": "obstore",
+        "format": "zarr",
+        "location": "objectStorage"
+      },
+      "interruptions": [],
+      "lazyReader": "anndata.experimental.read_elem_lazy",
+      "log": "rame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals\"] = pvals[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:622: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals_adj\"] = pvals_adj[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:633: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"logfoldchanges\"] = np.log2(\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:607: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"names\"] = self.var_names[global_indices]\n",
+      "markerFormat": "csc",
+      "markerInputNnz": 1613092148,
+      "mode": "dask2_csc",
+      "nCells": 1000000,
+      "nGenes": 45525,
+      "nnz": 1706570607,
+      "pcaRoute": "dask covariance_eigh",
+      "peakAnonBytes": 0,
+      "peakCgroupBytes": 27057332224,
+      "peakRssBytes": 27127377920,
+      "replicate": 1,
+      "restarts": 0,
+      "returnCode": 0,
+      "sparseMatrixBytesEstimate": 13660564864,
+      "startedAt": 1791078964.905988,
+      "status": "ok",
+      "stepOrder": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "steps": {
+        "filterCells": {
+          "end": 1791078999.775479,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 11014717440,
+          "peakRssBytes": 11052183552,
+          "seconds": 27.730595588684082,
+          "start": 1791078972.0448835
+        },
+        "findMarkers": {
+          "end": 1791080266.9900064,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 25015066624,
+          "peakRssBytes": 25104072704,
+          "seconds": 551.873574256897,
+          "start": 1791079715.1164322
+        },
+        "markHvgs": {
+          "end": 1791079033.4730268,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 11777822720,
+          "peakRssBytes": 11827970048,
+          "seconds": 20.712798833847046,
+          "start": 1791079012.760228
+        },
+        "materializeMarkerInput": {
+          "end": 1791079715.0356147,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 27057332224,
+          "peakRssBytes": 27127377920,
+          "seconds": 55.72879767417908,
+          "start": 1791079659.306817
+        },
+        "queryNeighbors": {
+          "end": 1791079167.2756267,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 5692911616,
+          "peakRssBytes": 5792526336,
+          "seconds": 52.86077666282654,
+          "start": 1791079114.41485
+        },
+        "readLazy": {
+          "end": 1791078972.0312917,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 741593088,
+          "peakRssBytes": 801214464,
+          "seconds": 2.6345252990722656,
+          "start": 1791078969.3967664
+        },
+        "runLeiden": {
+          "end": 1791079659.306657,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 7679700992,
+          "peakRssBytes": 7790174208,
+          "seconds": 26.627830743789673,
+          "start": 1791079632.6788263
+        },
+        "runNormalization": {
+          "end": 1791079012.7601006,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 10211864576,
+          "peakRssBytes": 10258014208,
+          "seconds": 12.980981349945068,
+          "start": 1791078999.7791193
+        },
+        "runPca": {
+          "end": 1791079114.4147184,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 13124571136,
+          "peakRssBytes": 13207552000,
+          "seconds": 80.94156789779663,
+          "start": 1791079033.4731505
+        },
+        "runUmap": {
+          "end": 1791079632.6786802,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 12323553280,
+          "peakRssBytes": 12420399104,
+          "seconds": 465.4028913974762,
+          "start": 1791079167.2757888
+        }
+      },
+      "tool": "scanpy_dask_covariance_csc_remote_zarr",
+      "workflowSeconds": 1303.0357332229614
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_remote_zarr_cpus_8_replicate_2_memory_tiers": {
+      "attemptHours": 20.0,
+      "attempts": [
+        {
+          "failedStep": null,
+          "memoryGib": 32,
+          "outcome": {
+            "returned": {
+              "failedStep": null,
+              "status": "ok",
+              "workflowSeconds": 1858.7998704910278
+            }
+          },
+          "peakCgroupBytes": 28433965056,
+          "status": "ok",
+          "workflowSeconds": 1858.7998704910278
+        }
+      ],
+      "coordinatorStartedAt": 1791080486.351141,
+      "cpu": 8.0,
+      "dataset": "embryo_1000000",
+      "finishedAt": 1791082349.8500764,
+      "gpu": null,
+      "nonpreemptible": true,
+      "payload": {
+        "containerCpu": 8.0,
+        "dataset": "embryo_1000000",
+        "inputMode": "remote",
+        "maxRestarts": 1,
+        "preemptible": false,
+        "replicate": 2,
+        "tool": "scanpy_dask_covariance_csc_remote_zarr",
+        "workers": 8
+      },
+      "status": "ok",
+      "takeover": false,
+      "tiers": [
+        32
+      ],
+      "tool": "scanpy_dask_covariance_csc_remote_zarr"
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_remote_zarr_cpus_8_replicate_2_memory_32gib": {
+      "cellsAfterFilter": 954823,
+      "chunkRows": 50000,
+      "clusters": 39,
+      "completedSteps": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "container": {
+        "cpu": 8.0,
+        "memoryMb": 32768,
+        "preemptible": false,
+        "workers": 8
+      },
+      "currentStep": null,
+      "dataset": "embryo_1000000",
+      "download": {
+        "bytes": 0,
+        "inputMode": "remote",
+        "seconds": 9.5367431640625e-07
+      },
+      "elapsedSeconds": 1859.0578784942627,
+      "failedStep": null,
+      "finishedAt": 1791082349.0975332,
+      "genesAfterFilter": 32574,
+      "input": {
+        "client": "obstore",
+        "format": "zarr",
+        "location": "objectStorage"
+      },
+      "interruptions": [],
+      "lazyReader": "anndata.experimental.read_elem_lazy",
+      "log": "rame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals\"] = pvals[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:622: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals_adj\"] = pvals_adj[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:633: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"logfoldchanges\"] = np.log2(\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:607: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"names\"] = self.var_names[global_indices]\n",
+      "markerFormat": "csc",
+      "markerInputNnz": 1613092148,
+      "mode": "dask2_csc",
+      "nCells": 1000000,
+      "nGenes": 45525,
+      "nnz": 1706570607,
+      "pcaRoute": "dask covariance_eigh",
+      "peakAnonBytes": 0,
+      "peakCgroupBytes": 28433965056,
+      "peakRssBytes": 28683751424,
+      "replicate": 2,
+      "restarts": 0,
+      "returnCode": 0,
+      "sparseMatrixBytesEstimate": 13660564864,
+      "startedAt": 1791080490.039688,
+      "status": "ok",
+      "stepOrder": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "steps": {
+        "filterCells": {
+          "end": 1791080530.124583,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 13433982976,
+          "peakRssBytes": 13434527744,
+          "seconds": 32.76783537864685,
+          "start": 1791080497.3567476
+        },
+        "findMarkers": {
+          "end": 1791082347.5031419,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 24404987904,
+          "peakRssBytes": 24511975424,
+          "seconds": 896.5079016685486,
+          "start": 1791081450.9952402
+        },
+        "markHvgs": {
+          "end": 1791080566.883704,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 14150594560,
+          "peakRssBytes": 14189350912,
+          "seconds": 19.222781896591187,
+          "start": 1791080547.660922
+        },
+        "materializeMarkerInput": {
+          "end": 1791081450.8716447,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 28433965056,
+          "peakRssBytes": 28683751424,
+          "seconds": 72.12789034843445,
+          "start": 1791081378.7437544
+        },
+        "queryNeighbors": {
+          "end": 1791080723.663405,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 5917564928,
+          "peakRssBytes": 6026768384,
+          "seconds": 73.90050721168518,
+          "start": 1791080649.7628977
+        },
+        "readLazy": {
+          "end": 1791080497.3310204,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 920133632,
+          "peakRssBytes": 967876608,
+          "seconds": 2.3264966011047363,
+          "start": 1791080495.0045238
+        },
+        "runLeiden": {
+          "end": 1791081378.7436166,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 7800045568,
+          "peakRssBytes": 7924383744,
+          "seconds": 42.13049793243408,
+          "start": 1791081336.6131186
+        },
+        "runNormalization": {
+          "end": 1791080547.6607952,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 11033198592,
+          "peakRssBytes": 11095678976,
+          "seconds": 17.530447483062744,
+          "start": 1791080530.1303477
+        },
+        "runPca": {
+          "end": 1791080649.762742,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 13843648512,
+          "peakRssBytes": 13888548864,
+          "seconds": 82.87890648841858,
+          "start": 1791080566.8838356
+        },
+        "runUmap": {
+          "end": 1791081336.6129675,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 12441538560,
+          "peakRssBytes": 12548132864,
+          "seconds": 612.9494242668152,
+          "start": 1791080723.6635432
+        }
+      },
+      "tool": "scanpy_dask_covariance_csc_remote_zarr",
+      "workflowSeconds": 1858.7998704910278
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_remote_zarr_cpus_8_replicate_3_memory_tiers": {
+      "attemptHours": 20.0,
+      "attempts": [
+        {
+          "failedStep": null,
+          "memoryGib": 32,
+          "outcome": {
+            "returned": {
+              "failedStep": null,
+              "status": "ok",
+              "workflowSeconds": 1275.095980167389
+            }
+          },
+          "peakCgroupBytes": 27711250432,
+          "status": "ok",
+          "workflowSeconds": 1275.095980167389
+        }
+      ],
+      "coordinatorStartedAt": 1791082604.652368,
+      "cpu": 8.0,
+      "dataset": "embryo_1000000",
+      "finishedAt": 1791083884.5296116,
+      "gpu": null,
+      "nonpreemptible": true,
+      "payload": {
+        "containerCpu": 8.0,
+        "dataset": "embryo_1000000",
+        "inputMode": "remote",
+        "maxRestarts": 1,
+        "preemptible": false,
+        "replicate": 3,
+        "tool": "scanpy_dask_covariance_csc_remote_zarr",
+        "workers": 8
+      },
+      "status": "ok",
+      "takeover": false,
+      "tiers": [
+        32
+      ],
+      "tool": "scanpy_dask_covariance_csc_remote_zarr"
+    },
+    "rna_storage_backend_embryo_1000000_scanpy_dask_covariance_csc_remote_zarr_cpus_8_replicate_3_memory_32gib": {
+      "cellsAfterFilter": 954823,
+      "chunkRows": 50000,
+      "clusters": 39,
+      "completedSteps": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "container": {
+        "cpu": 8.0,
+        "memoryMb": 32768,
+        "preemptible": false,
+        "workers": 8
+      },
+      "currentStep": null,
+      "dataset": "embryo_1000000",
+      "download": {
+        "bytes": 0,
+        "inputMode": "remote",
+        "seconds": 9.5367431640625e-07
+      },
+      "elapsedSeconds": 1275.3341324329376,
+      "failedStep": null,
+      "finishedAt": 1791083883.801557,
+      "genesAfterFilter": 32574,
+      "input": {
+        "client": "obstore",
+        "format": "zarr",
+        "location": "objectStorage"
+      },
+      "interruptions": [],
+      "lazyReader": "anndata.experimental.read_elem_lazy",
+      "log": "rame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals\"] = pvals[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:622: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"pvals_adj\"] = pvals_adj[global_indices]\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:633: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"logfoldchanges\"] = np.log2(\n/usr/local/lib/python3.12/site-packages/scanpy/tools/_rank_genes_groups.py:607: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`\n  self.stats[group_name, \"names\"] = self.var_names[global_indices]\n",
+      "markerFormat": "csc",
+      "markerInputNnz": 1613092148,
+      "mode": "dask2_csc",
+      "nCells": 1000000,
+      "nGenes": 45525,
+      "nnz": 1706570607,
+      "pcaRoute": "dask covariance_eigh",
+      "peakAnonBytes": 0,
+      "peakCgroupBytes": 27711250432,
+      "peakRssBytes": 27804164096,
+      "replicate": 3,
+      "restarts": 0,
+      "returnCode": 0,
+      "sparseMatrixBytesEstimate": 13660564864,
+      "startedAt": 1791082608.467456,
+      "status": "ok",
+      "stepOrder": [
+        "readLazy",
+        "filterCells",
+        "runNormalization",
+        "markHvgs",
+        "runPca",
+        "queryNeighbors",
+        "runUmap",
+        "runLeiden",
+        "materializeMarkerInput",
+        "findMarkers"
+      ],
+      "steps": {
+        "filterCells": {
+          "end": 1791082639.437327,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 11708497920,
+          "peakRssBytes": 11770281984,
+          "seconds": 25.448257446289062,
+          "start": 1791082613.9890695
+        },
+        "findMarkers": {
+          "end": 1791083882.6817272,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 24622460928,
+          "peakRssBytes": 24749461504,
+          "seconds": 546.9489660263062,
+          "start": 1791083335.7327611
+        },
+        "markHvgs": {
+          "end": 1791082668.0869722,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 13555224576,
+          "peakRssBytes": 13612826624,
+          "seconds": 15.59151577949524,
+          "start": 1791082652.4954565
+        },
+        "materializeMarkerInput": {
+          "end": 1791083335.6499264,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 27711250432,
+          "peakRssBytes": 27804164096,
+          "seconds": 54.94983458518982,
+          "start": 1791083280.7000918
+        },
+        "queryNeighbors": {
+          "end": 1791082784.024373,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 5501886464,
+          "peakRssBytes": 5643747328,
+          "seconds": 54.40928936004639,
+          "start": 1791082729.6150837
+        },
+        "readLazy": {
+          "end": 1791082613.9748492,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 785928192,
+          "peakRssBytes": 846675968,
+          "seconds": 1.6871168613433838,
+          "start": 1791082612.2877324
+        },
+        "runLeiden": {
+          "end": 1791083280.699905,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 7976177664,
+          "peakRssBytes": 8136908800,
+          "seconds": 28.31986117362976,
+          "start": 1791083252.3800437
+        },
+        "runNormalization": {
+          "end": 1791082652.4953249,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 11446890496,
+          "peakRssBytes": 11532140544,
+          "seconds": 13.054116487503052,
+          "start": 1791082639.4412084
+        },
+        "runPca": {
+          "end": 1791082729.6149323,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 13069754368,
+          "peakRssBytes": 14246395904,
+          "seconds": 61.52782440185547,
+          "start": 1791082668.087108
+        },
+        "runUmap": {
+          "end": 1791083252.3798814,
+          "peakAnonBytes": 0,
+          "peakCgroupBytes": 12616613888,
+          "peakRssBytes": 12753317888,
+          "seconds": 468.3553626537323,
+          "start": 1791082784.0245187
+        }
+      },
+      "tool": "scanpy_dask_covariance_csc_remote_zarr",
+      "workflowSeconds": 1275.095980167389
+    }
+  }
+}

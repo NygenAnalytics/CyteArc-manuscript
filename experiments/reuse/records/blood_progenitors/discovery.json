@@ -1,0 +1,4788 @@
+{
+  "module": "reuse.blood_progenitors",
+  "function": "discover",
+  "region": "us-east",
+  "status": "completed",
+  "result": {
+    "settings": {
+      "requireToken": true,
+      "collections": {
+        "gong_2025_all_cells_ff4235bb": "60a2676d-9f37-46cc-9b02-c7370a53be9c",
+        "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "he_2025_altra_all_samples_789ad837": "3a518635-c062-4c66-a9bd-c4581a5e3c63",
+        "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c": "0a839c4b-10d0-4d64-9272-684c49a2c8ba",
+        "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "kock_2025_aida_phase_1_data_freeze_v2_south_korea_thailand_india_c838aec3": "ced320a1-29f3-47c1-a735-513c7084d508",
+        "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f": "436154da-bcf1-4130-9c8b-120ff9a888f2",
+        "yazar_2022_single_cell_eqtl_mapping_control_autoimmune_disease_3faad104": "dde06e0f-ab3b-46be-96a2-a8082383c4a1",
+        "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff": "8f126edf-5405-4731-8374-b5ce11f53e82",
+        "unpub_0000_scalebio_single_cell_rna_sequencing_human_pbmcs_2c820d53": "4a9fd4d7-d870-4265-89a5-ad51ab811d89",
+        "cambridge_2021_single_cell_multi_omics_immune_response_covid_19_c7775e88": "ddfad306-714d-4cc0-9985-d9072820c530",
+        "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7": "7d7cabfd-1d1f-40af-96b7-26a0825a306d",
+        "marteau_2026_single_cell_colorectal_cancer_atlas_core_atlas_05a8c945": "3a844375-60ea-474b-adf1-98e76928baee",
+        "furer_2025_human_chspcs_ultima_4a5b00e0": "5542eeb0-96ef-4ab9-95ea-eb6abc178461",
+        "furer_2025_human_chspcs_illumina_d9f3a82c": "5542eeb0-96ef-4ab9-95ea-eb6abc178461",
+        "alegbe_2026_ibdverse_multitissue_atlasing_cohort_0e5c75da": "7f7fdf50-aa0e-4a6f-979c-53655cac9d5d",
+        "fachrul_2026_all_cells_human_pbmc_samples_collected_indonesia_ca7d95ac": "d1e0e64d-6d2a-4a3e-b7f4-43ed909a9d9c",
+        "yoshida_2022_pbmc_2a498ace": "03f821b4-87be-4ff4-b65a-b5fc00061da7",
+        "gong_2025_human_immune_health_atlas_e522d2cd": "77f9d7e9-5675-49c3-abed-ce02f39eef1b",
+        "liu_2021_time_resolved_systems_fatal_covid_19_adaptive_cells_21d3e683": "ed9185e3-5b82-40c7-9824-b2141590c7f0",
+        "unpub_0000_human_pbmc_glaucoma_atlas_30c2a6fd": "de2cde16-c8d3-4a6d-80be-1be9e879aaca",
+        "ivanova_2023_circulating_immune_cells_cv19_infection_vaccination_hc_242c6e7f": "ecb739c5-fe0d-4b48-81c6-217c4d64eec4",
+        "xu_2026_myeloid_cells_3d8d8c97": "6c147b03-08e4-4bb7-afb7-2bcc0a814b65",
+        "hao_2021_nygc_multimodal_pbmc_ed5d841d": "b0cf0afa-ec40-4d65-b570-ed4ceacc6813",
+        "chen_2022_global_dataset_infant_kmt2ar_b_all_cf83c98a": "10ec9198-584e-4a7e-8a24-4a332915a4ef",
+        "liu_2021_time_resolved_systems_fatal_covid_19_innate_cells_30cd5311": "ed9185e3-5b82-40c7-9824-b2141590c7f0",
+        "xu_2026_t_cells_f2b69d9b": "6c147b03-08e4-4bb7-afb7-2bcc0a814b65",
+        "wells_2025_immune_aging_project_all_cells_1b350d0a": "cc431242-35ea-41e1-a100-41e0dec2665b",
+        "binvignat_2024_single_cell_rna_seq_arthritis_disease_activity_d18736c3": "e1a9ca56-f2ee-435d-980a-4f49ab7a952b",
+        "rabadam_2024_citeseq_jdm_pbmcs_a199ca73": "c672834e-c3e3-49cb-81a5-4c844be4a975",
+        "chan_2020_autoimmunity_pbmcs_c2a461b1": "eb735cc9-d0a7-48fa-b255-db726bf365af",
+        "rodriguezubreva_2022_activated_pbmcs_expanded_cohort_cite_seq_3c75a463": "bf325905-5e8e-42e3-933d-9a9053e9af80",
+        "jin_2021_individual_single_cell_rna_seq_data_schulte_schrepping_et_al_5e717147": "b9fc3d70-5a72-4479-a046-c2cc1ab19efc",
+        "tabula_2022_tabula_sapiens_all_cells_53d208b0": "e5f58829-1a66-40b5-a624-9046778e74f5",
+        "knight_2026_integrated_global_cells_612b7bff": "10eb236d-d42d-45b8-8363-c2dcf865f388",
+        "heimlich_2024_single_cell_sequencing_human_indeterminant_potential_19e46756": "0aab20b3-c30c-4606-bd2e-d20dae739c45",
+        "lim_2025_normal_malignant_cells_t_all_patients_extension_cohort_edb69e37": "962df42d-9675-4d05-bc75-597ec7bf4afb",
+        "li_2022_single_cell_transcriptomic_renal_cell_carcinoma_patients_5af90777": "f7cecffa-00b4-4560-a29a-8ad626b8ee08",
+        "lee_2020_immunophenotyping_covid_19_development_severe_covid_19_de2c780c": "4f889ffc-d4bc-4748-905b-8eb9db47a2ed",
+        "chan_2020_pbmcs_fa8605cf": "0434a9d4-85fd-4554-b8e3-cf6c582bb2fa",
+        "jin_2021_individual_single_cell_rna_seq_pbmc_data_arunachalam_et_al_59b69042": "b9fc3d70-5a72-4479-a046-c2cc1ab19efc",
+        "wilk_2020_single_cell_atlas_peripheral_sars_cov_2_infection_456e8b9b": "a72afd53-ab92-4511-88da-252fb0e26b9a",
+        "han_2020_construction_human_cell_landscape_at_single_cell_level_2adb1f8a": "38833785-fac5-48fd-944a-0f62a4c23ed1",
+        "krishna_2021_single_cell_sequencing_links_topology_therapy_efficacy_bd65a70f": "3f50314f-bdc9-40c6-8e4a-b0901ebfbe4c",
+        "knight_2026_innate_lymphocytes_4057e00c": "10eb236d-d42d-45b8-8363-c2dcf865f388",
+        "guerreromurillo_2024_cd19_carpos_carneg_t_cells_460dfe21": "14dc301f-d4fb-4743-a590-aa88d5f1df1a",
+        "szabo_2019_single_cell_transcriptomics_signatures_health_disease_01209dce": "24d42e5e-ce6d-45ff-a66b-a3b3b715deaf",
+        "rodriguezubreva_2022_activated_pbmcs_twins_scrna_d7d7e89c": "bf325905-5e8e-42e3-933d-9a9053e9af80",
+        "de_vrij_2024_longitudinal_5b25a46f": "126afc71-47fb-4e9d-8aaf-9d9f61e0ac77",
+        "nose_2026_t_cells_gastric_cancer_patients_ca140407": "0540ee09-5b45-43ec-9fc1-b9a7fa7f8f53",
+        "szabo_2021_49_years_old_male_fresh_pbmcs_2_days_post_intubation_db59611b": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "ventotormo_2018_pregnant_uterus_all_5bc42b88": "a9254216-6cd8-4186-b32c-349363777584",
+        "arutyunyan_2023_all_donors_all_cell_states_vivo_74cff64f": "e2c257e7-6f79-487c-b81c-39451cd4ab3c",
+        "kock_2025_aida_phase_1_data_freeze_v1_japan_singapore_south_korea_b0e547f0": "ced320a1-29f3-47c1-a735-513c7084d508",
+        "de_vrij_2024_cross_sectional_3241c34f": "126afc71-47fb-4e9d-8aaf-9d9f61e0ac77",
+        "szabo_2021_49_years_old_male_fresh_pbmcs_3_days_post_intubation_eeacb0c1": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "triana_2021_blood_bone_marrow_healthy_young_donor_d3566d6a": "93eebe82-d8c3-41bc-a906-63b5b5f24a9d",
+        "szabo_2021_66_years_old_female_fresh_pbmcs_2_days_post_intubation_881fe679": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "dominguez_conde_2022_global_1b9d8702": "62ef75e4-cbea-454e-a0ce-998ec40223d3",
+        "jardine_2021_cd34_fetal_bone_marrow_fetal_liver_cord_blood_cite_seq_471647b3": "793fdaec-5067-428a-a9db-ecefe135c945",
+        "szabo_2021_66_years_old_female_fresh_pbmcs_4_days_post_intubation_ed9e9f96": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "szabo_2021_74_years_old_female_fresh_pbmcs_3_days_post_intubation_84230ea4": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "szabo_2021_74_years_old_female_fresh_pbmcs_4_days_post_intubation_cab0bc48": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "szabo_2021_74_years_old_female_fresh_pbmcs_7_days_post_intubation_79ef1959": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "xu_2026_b_cells_ee782eb7": "6c147b03-08e4-4bb7-afb7-2bcc0a814b65",
+        "szabo_2021_66_years_old_female_fresh_pbmcs_3_days_post_intubation_ea786a06": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "szabo_2021_74_years_old_female_fresh_pbmcs_8_days_post_intubation_50eb1e23": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "travaglini_2020_krasnow_lab_human_lung_cell_atlas_10x_8c42cfd0": "5d445965-6f1a-4b68-ba3a-b8f765155d3a",
+        "szabo_2021_49_years_old_male_fresh_pbmcs_1_day_post_intubation_c874f155": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "szabo_2021_82_years_old_female_fresh_pbmcs_1_day_post_intubation_8a554710": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "szabo_2021_66_years_old_female_fresh_pbmcs_7_days_post_intubation_01c93cf6": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "guimaraes_2024_multi_tissue_single_cell_tumor_microenvironment_atlas_b617ee1b": "3f7c572c-cd73-4b51-a313-207c7f20f188",
+        "knight_2026_dendritic_cells_a1058181": "10eb236d-d42d-45b8-8363-c2dcf865f388",
+        "rodriguezubreva_2022_steady_state_b_cells_scrna_a5d95a42": "bf325905-5e8e-42e3-933d-9a9053e9af80",
+        "travaglini_2020_krasnow_lab_human_lung_cell_atlas_smart_seq2_e04daea4": "5d445965-6f1a-4b68-ba3a-b8f765155d3a",
+        "ng_2026_t_cells_small_cell_lung_cancer_biopsies_b9735320": "0d281971-11ea-4f85-9c0f-a3a4a7b4f888"
+      },
+      "storeConcurrency": 4,
+      "nthreads": 8,
+      "memBudget": "3G",
+      "quotaReserve": 200
+    },
+    "genes": {
+      "CD34": "ENSG00000174059",
+      "SPINK2": "ENSG00000128040",
+      "PROM1": "ENSG00000007062",
+      "CRHBP": "ENSG00000145708"
+    },
+    "labels": [
+      "CD34-positive, CD38-negative hematopoietic stem cell",
+      "basophil mast progenitor cell",
+      "common dendritic progenitor",
+      "common lymphoid progenitor",
+      "common myeloid progenitor",
+      "cord blood hematopoietic stem cell",
+      "erythroid progenitor cell",
+      "erythroid progenitor cell, mammalian",
+      "granulocyte monocyte progenitor cell",
+      "hematopoietic multipotent progenitor cell",
+      "hematopoietic precursor cell",
+      "hematopoietic stem cell",
+      "lymphoid lineage restricted progenitor cell",
+      "megakaryocyte progenitor cell",
+      "megakaryocyte-erythroid progenitor cell",
+      "myeloid lineage restricted progenitor cell"
+    ],
+    "tissues": [
+      "blood",
+      "venous blood"
+    ],
+    "wallSeconds": 483.890271749,
+    "traffic": {
+      "requestsByKind": {
+        "api": 197,
+        "status200": 10405,
+        "resolvers": 13988,
+        "status302": 13988,
+        "cdn": 13988,
+        "status206": 3780
+      },
+      "unattributedRequestsByKind": {
+        "api": 8,
+        "status200": 8
+      },
+      "quotaWaits": {
+        "resolvers": {
+          "waits": 42,
+          "seconds": 1716.8710707420005
+        }
+      },
+      "quotaPolicies": [
+        "\"fixed window\";\"api\";q=1000;w=300",
+        "\"fixed window\";\"api\";q=500;w=300",
+        "\"fixed window\";\"resolvers\";q=5000;w=300"
+      ]
+    },
+    "stores": [
+      {
+        "storeId": "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff",
+        "cells": 836148,
+        "peripheralBloodCells": 836148,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 836148,
+        "labelledProgenitors": 3431,
+        "candidates": 13149,
+        "missingGenes": [],
+        "seconds": 15.429090048000006,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 502,
+            "gets": 502,
+            "rangedGets": 156,
+            "responseBytes": 78985537
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 174,
+            "302": 250,
+            "206": 78
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 174,
+            "resolvers": 250,
+            "status302": 250,
+            "cdn": 250,
+            "status206": 78
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "alegbe_2026_ibdverse_multitissue_atlasing_cohort_0e5c75da",
+        "cells": 1852681,
+        "peripheralBloodCells": 481017,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 481017,
+        "labelledProgenitors": 0,
+        "candidates": 15324,
+        "missingGenes": [],
+        "seconds": 14.172381960999985,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 573,
+            "gets": 573,
+            "rangedGets": 128,
+            "responseBytes": 52795173
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 224,
+            "302": 285,
+            "206": 64
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 224,
+            "resolvers": 285,
+            "status302": 285,
+            "cdn": 285,
+            "status206": 64
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "arutyunyan_2023_all_donors_all_cell_states_vivo_74cff64f",
+        "cells": 325665,
+        "peripheralBloodCells": 10989,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 10989,
+        "labelledProgenitors": 0,
+        "candidates": 457,
+        "missingGenes": [],
+        "seconds": 3.9605382180000106,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 208,
+            "gets": 208,
+            "rangedGets": 32,
+            "responseBytes": 22267323
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 89,
+            "302": 103,
+            "206": 16
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 89,
+            "resolvers": 103,
+            "status302": 103,
+            "cdn": 103,
+            "status206": 16
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "binvignat_2024_single_cell_rna_seq_arthritis_disease_activity_d18736c3",
+        "cells": 108717,
+        "peripheralBloodCells": 108717,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 108717,
+        "labelledProgenitors": 0,
+        "candidates": 316,
+        "missingGenes": [],
+        "seconds": 229.365500477,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 274,
+            "gets": 274,
+            "rangedGets": 30,
+            "responseBytes": 18547635
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 123,
+            "302": 136,
+            "206": 15
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 123,
+            "resolvers": 136,
+            "status302": 136,
+            "cdn": 136,
+            "status206": 15
+          },
+          "quotaWaitSeconds": 214.95448763599998
+        }
+      },
+      {
+        "storeId": "cambridge_2021_single_cell_multi_omics_immune_response_covid_19_c7775e88",
+        "cells": 647366,
+        "peripheralBloodCells": 647366,
+        "excludedCells": 7884,
+        "excludedValues": {
+          "time_after_LPS": {
+            "10h": 3885,
+            "90m": 3999
+          }
+        },
+        "cellsRead": 639482,
+        "labelledProgenitors": 3224,
+        "candidates": 11175,
+        "missingGenes": [],
+        "seconds": 17.12169525500002,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 490,
+            "gets": 490,
+            "rangedGets": 208,
+            "responseBytes": 133867368
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 142,
+            "302": 244,
+            "206": 104
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 142,
+            "resolvers": 244,
+            "status302": 244,
+            "cdn": 244,
+            "status206": 104
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "chan_2020_autoimmunity_pbmcs_c2a461b1",
+        "cells": 97499,
+        "peripheralBloodCells": 97499,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 97499,
+        "labelledProgenitors": 270,
+        "candidates": 1404,
+        "missingGenes": [],
+        "seconds": 218.94144453300004,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 154,
+            "gets": 154,
+            "rangedGets": 30,
+            "responseBytes": 56152031
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 63,
+            "302": 76,
+            "206": 15
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 63,
+            "resolvers": 76,
+            "status302": 76,
+            "cdn": 76,
+            "status206": 15
+          },
+          "quotaWaitSeconds": 214.30788651499998
+        }
+      },
+      {
+        "storeId": "chan_2020_pbmcs_fa8605cf",
+        "cells": 59506,
+        "peripheralBloodCells": 59506,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 59506,
+        "labelledProgenitors": 0,
+        "candidates": 437,
+        "missingGenes": [],
+        "seconds": 5.40432036499999,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 172,
+            "gets": 172,
+            "rangedGets": 18,
+            "responseBytes": 44247903
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 78,
+            "302": 85,
+            "206": 9
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 78,
+            "resolvers": 85,
+            "status302": 85,
+            "cdn": 85,
+            "status206": 9
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "chen_2022_global_dataset_infant_kmt2ar_b_all_cf83c98a",
+        "cells": 128588,
+        "peripheralBloodCells": 128588,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 128588,
+        "labelledProgenitors": 13128,
+        "candidates": 55043,
+        "missingGenes": [],
+        "seconds": 11.902024424000018,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 214,
+            "gets": 214,
+            "rangedGets": 50,
+            "responseBytes": 172344521
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 83,
+            "302": 106,
+            "206": 25
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 83,
+            "resolvers": 106,
+            "status302": 106,
+            "cdn": 106,
+            "status206": 25
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "de_vrij_2024_cross_sectional_3241c34f",
+        "cells": 17308,
+        "peripheralBloodCells": 9687,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 9687,
+        "labelledProgenitors": 19,
+        "candidates": 240,
+        "missingGenes": [],
+        "seconds": 8.40730655799996,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 218,
+            "gets": 218,
+            "rangedGets": 12,
+            "responseBytes": 11776038
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 104,
+            "302": 108,
+            "206": 6
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 104,
+            "resolvers": 108,
+            "status302": 108,
+            "cdn": 108,
+            "status206": 6
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "de_vrij_2024_longitudinal_5b25a46f",
+        "cells": 12822,
+        "peripheralBloodCells": 12822,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 12822,
+        "labelledProgenitors": 26,
+        "candidates": 143,
+        "missingGenes": [],
+        "seconds": 3.2776199169999813,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 238,
+            "gets": 238,
+            "rangedGets": 10,
+            "responseBytes": 10230157
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 115,
+            "302": 118,
+            "206": 5
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 115,
+            "resolvers": 118,
+            "status302": 118,
+            "cdn": 118,
+            "status206": 5
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "dominguez_conde_2022_global_1b9d8702",
+        "cells": 329762,
+        "peripheralBloodCells": 5921,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 5921,
+        "labelledProgenitors": 0,
+        "candidates": 56,
+        "missingGenes": [],
+        "seconds": 6.433706187999974,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 196,
+            "gets": 196,
+            "rangedGets": 36,
+            "responseBytes": 19655336
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 81,
+            "302": 97,
+            "206": 18
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 81,
+            "resolvers": 97,
+            "status302": 97,
+            "cdn": 97,
+            "status206": 18
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "fachrul_2026_all_cells_human_pbmc_samples_collected_indonesia_ca7d95ac",
+        "cells": 462034,
+        "peripheralBloodCells": 462034,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 462034,
+        "labelledProgenitors": 0,
+        "candidates": 3498,
+        "missingGenes": [],
+        "seconds": 13.896256730000005,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 450,
+            "gets": 450,
+            "rangedGets": 192,
+            "responseBytes": 225093009
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 130,
+            "302": 224,
+            "206": 96
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 130,
+            "resolvers": 224,
+            "status302": 224,
+            "cdn": 224,
+            "status206": 96
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "furer_2025_human_chspcs_illumina_d9f3a82c",
+        "cells": 495763,
+        "peripheralBloodCells": 495763,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 495763,
+        "labelledProgenitors": 374956,
+        "candidates": 381567,
+        "missingGenes": [],
+        "seconds": 12.530330165999999,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 322,
+            "gets": 322,
+            "rangedGets": 144,
+            "responseBytes": 80816659
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 90,
+            "302": 160,
+            "206": 72
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 90,
+            "resolvers": 160,
+            "status302": 160,
+            "cdn": 160,
+            "status206": 72
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "furer_2025_human_chspcs_ultima_4a5b00e0",
+        "cells": 516121,
+        "peripheralBloodCells": 516121,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 516121,
+        "labelledProgenitors": 411098,
+        "candidates": 422342,
+        "missingGenes": [],
+        "seconds": 14.376370086999998,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 374,
+            "gets": 374,
+            "rangedGets": 180,
+            "responseBytes": 99168086
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 98,
+            "302": 186,
+            "206": 90
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 98,
+            "resolvers": 186,
+            "status302": 186,
+            "cdn": 186,
+            "status206": 90
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "gong_2025_all_cells_ff4235bb",
+        "cells": 3758514,
+        "peripheralBloodCells": 3758514,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 3758514,
+        "labelledProgenitors": 3463,
+        "candidates": 63524,
+        "missingGenes": [],
+        "seconds": 43.337157287,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 978,
+            "gets": 978,
+            "rangedGets": 224,
+            "responseBytes": 268109149
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 379,
+            "302": 487,
+            "206": 112
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 4,
+            "status200": 379,
+            "resolvers": 487,
+            "status302": 487,
+            "cdn": 487,
+            "status206": 112
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+        "cells": 1821725,
+        "peripheralBloodCells": 263917,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 263917,
+        "labelledProgenitors": 171,
+        "candidates": 9701,
+        "missingGenes": [],
+        "seconds": 13.215553112999999,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 469,
+            "gets": 469,
+            "rangedGets": 32,
+            "responseBytes": 26747907
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 220,
+            "302": 233,
+            "206": 16
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 220,
+            "resolvers": 233,
+            "status302": 233,
+            "cdn": 233,
+            "status206": 16
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+        "cells": 1350748,
+        "peripheralBloodCells": 1350748,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1350748,
+        "labelledProgenitors": 1013,
+        "candidates": 33684,
+        "missingGenes": [],
+        "seconds": 22.568741881999998,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 763,
+            "gets": 763,
+            "rangedGets": 288,
+            "responseBytes": 119839768
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 239,
+            "302": 380,
+            "206": 144
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 239,
+            "resolvers": 380,
+            "status302": 380,
+            "cdn": 380,
+            "status206": 144
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+        "cells": 2596111,
+        "peripheralBloodCells": 2596111,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 2596111,
+        "labelledProgenitors": 1445,
+        "candidates": 58255,
+        "missingGenes": [],
+        "seconds": 40.608506983999995,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 1012,
+            "gets": 1012,
+            "rangedGets": 272,
+            "responseBytes": 104264601
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 372,
+            "302": 504,
+            "206": 136
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 4,
+            "status200": 372,
+            "resolvers": 504,
+            "status302": 504,
+            "cdn": 504,
+            "status206": 136
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+        "cells": 1750565,
+        "peripheralBloodCells": 1750565,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1750565,
+        "labelledProgenitors": 1380,
+        "candidates": 37786,
+        "missingGenes": [],
+        "seconds": 35.061378655,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 755,
+            "gets": 755,
+            "rangedGets": 192,
+            "responseBytes": 125971927
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 283,
+            "302": 376,
+            "206": 96
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 283,
+            "resolvers": 376,
+            "status302": 376,
+            "cdn": 376,
+            "status206": 96
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+        "cells": 1322061,
+        "peripheralBloodCells": 1322061,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1322061,
+        "labelledProgenitors": 1183,
+        "candidates": 25401,
+        "missingGenes": [],
+        "seconds": 54.08269164800001,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 763,
+            "gets": 763,
+            "rangedGets": 288,
+            "responseBytes": 118286250
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 239,
+            "302": 380,
+            "206": 144
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 239,
+            "resolvers": 380,
+            "status302": 380,
+            "cdn": 380,
+            "status206": 144
+          },
+          "quotaWaitSeconds": 213.33716990200003
+        }
+      },
+      {
+        "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+        "cells": 2616824,
+        "peripheralBloodCells": 2616824,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 2616824,
+        "labelledProgenitors": 2024,
+        "candidates": 88847,
+        "missingGenes": [],
+        "seconds": 40.523318074,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 1034,
+            "gets": 1034,
+            "rangedGets": 272,
+            "responseBytes": 105687540
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 383,
+            "302": 515,
+            "206": 136
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 4,
+            "status200": 383,
+            "resolvers": 515,
+            "status302": 515,
+            "cdn": 515,
+            "status206": 136
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+        "cells": 1234234,
+        "peripheralBloodCells": 1234234,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1234234,
+        "labelledProgenitors": 1074,
+        "candidates": 30343,
+        "missingGenes": [],
+        "seconds": 23.536417188,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 709,
+            "gets": 709,
+            "rangedGets": 256,
+            "responseBytes": 124460798
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 228,
+            "302": 353,
+            "206": 128
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 228,
+            "resolvers": 353,
+            "status302": 353,
+            "cdn": 353,
+            "status206": 128
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+        "cells": 1712244,
+        "peripheralBloodCells": 1712244,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1712244,
+        "labelledProgenitors": 1385,
+        "candidates": 52028,
+        "missingGenes": [],
+        "seconds": 23.688245579999993,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 755,
+            "gets": 755,
+            "rangedGets": 192,
+            "responseBytes": 118555261
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 283,
+            "302": 376,
+            "206": 96
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 283,
+            "resolvers": 376,
+            "status302": 376,
+            "cdn": 376,
+            "status206": 96
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+        "cells": 1206761,
+        "peripheralBloodCells": 1206761,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1206761,
+        "labelledProgenitors": 927,
+        "candidates": 36790,
+        "missingGenes": [],
+        "seconds": 24.310617265000005,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 709,
+            "gets": 709,
+            "rangedGets": 256,
+            "responseBytes": 123931652
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 228,
+            "302": 353,
+            "206": 128
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 228,
+            "resolvers": 353,
+            "status302": 353,
+            "cdn": 353,
+            "status206": 128
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "guerreromurillo_2024_cd19_carpos_carneg_t_cells_460dfe21",
+        "cells": 37100,
+        "peripheralBloodCells": 18122,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 18122,
+        "labelledProgenitors": 0,
+        "candidates": 60,
+        "missingGenes": [],
+        "seconds": 6.140242591999993,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 148,
+            "gets": 148,
+            "rangedGets": 18,
+            "responseBytes": 11892549
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 66,
+            "302": 73,
+            "206": 9
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 66,
+            "resolvers": 73,
+            "status302": 73,
+            "cdn": 73,
+            "status206": 9
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "guimaraes_2024_multi_tissue_single_cell_tumor_microenvironment_atlas_b617ee1b",
+        "cells": 391963,
+        "peripheralBloodCells": 2463,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 2463,
+        "labelledProgenitors": 0,
+        "candidates": 28,
+        "missingGenes": [],
+        "seconds": 6.713929138000026,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 226,
+            "gets": 226,
+            "rangedGets": 16,
+            "responseBytes": 9389385
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 106,
+            "302": 112,
+            "206": 8
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 106,
+            "resolvers": 112,
+            "status302": 112,
+            "cdn": 112,
+            "status206": 8
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "han_2020_construction_human_cell_landscape_at_single_cell_level_2adb1f8a",
+        "cells": 599926,
+        "peripheralBloodCells": 17331,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 17331,
+        "labelledProgenitors": 35,
+        "candidates": 79,
+        "missingGenes": [],
+        "seconds": 5.196795511999994,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 242,
+            "gets": 242,
+            "rangedGets": 48,
+            "responseBytes": 12080610
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 98,
+            "302": 120,
+            "206": 24
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 98,
+            "resolvers": 120,
+            "status302": 120,
+            "cdn": 120,
+            "status206": 24
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "hao_2021_nygc_multimodal_pbmc_ed5d841d",
+        "cells": 161764,
+        "peripheralBloodCells": 161764,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 161764,
+        "labelledProgenitors": 329,
+        "candidates": 5053,
+        "missingGenes": [],
+        "seconds": 15.089787501000018,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 196,
+            "gets": 196,
+            "rangedGets": 42,
+            "responseBytes": 78507814
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 78,
+            "302": 97,
+            "206": 21
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 78,
+            "resolvers": 97,
+            "status302": 97,
+            "cdn": 97,
+            "status206": 21
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "he_2025_altra_all_samples_789ad837",
+        "cells": 2029864,
+        "peripheralBloodCells": 2029864,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 2029864,
+        "labelledProgenitors": 1534,
+        "candidates": 60830,
+        "missingGenes": [],
+        "seconds": 34.309763306,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 821,
+            "gets": 821,
+            "rangedGets": 224,
+            "responseBytes": 132300969
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 300,
+            "302": 409,
+            "206": 112
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 300,
+            "resolvers": 409,
+            "status302": 409,
+            "cdn": 409,
+            "status206": 112
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "heimlich_2024_single_cell_sequencing_human_indeterminant_potential_19e46756",
+        "cells": 66985,
+        "peripheralBloodCells": 66985,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 66985,
+        "labelledProgenitors": 0,
+        "candidates": 410,
+        "missingGenes": [],
+        "seconds": 4.030259421999972,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 176,
+            "gets": 176,
+            "rangedGets": 30,
+            "responseBytes": 32913243
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 74,
+            "302": 87,
+            "206": 15
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 74,
+            "resolvers": 87,
+            "status302": 87,
+            "cdn": 87,
+            "status206": 15
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "ivanova_2023_circulating_immune_cells_cv19_infection_vaccination_hc_242c6e7f",
+        "cells": 189902,
+        "peripheralBloodCells": 189902,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 189902,
+        "labelledProgenitors": 0,
+        "candidates": 1804,
+        "missingGenes": [],
+        "seconds": 9.033730488000003,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 294,
+            "gets": 294,
+            "rangedGets": 76,
+            "responseBytes": 117117513
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 110,
+            "302": 146,
+            "206": 38
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 110,
+            "resolvers": 146,
+            "status302": 146,
+            "cdn": 146,
+            "status206": 38
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "jardine_2021_cd34_fetal_bone_marrow_fetal_liver_cord_blood_cite_seq_471647b3",
+        "cells": 27998,
+        "peripheralBloodCells": 0,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 0,
+        "labelledProgenitors": 0,
+        "candidates": 0,
+        "missingGenes": [],
+        "seconds": 3.236928177999971,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 108,
+            "gets": 108,
+            "rangedGets": 0,
+            "responseBytes": 423550
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 55,
+            "302": 53
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 55,
+            "resolvers": 53,
+            "status302": 53,
+            "cdn": 53
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "jin_2021_individual_single_cell_rna_seq_data_schulte_schrepping_et_al_5e717147",
+        "cells": 90957,
+        "peripheralBloodCells": 90957,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 90957,
+        "labelledProgenitors": 0,
+        "candidates": 1064,
+        "missingGenes": [],
+        "seconds": 4.624513257999979,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 190,
+            "gets": 190,
+            "rangedGets": 48,
+            "responseBytes": 100203696
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 72,
+            "302": 94,
+            "206": 24
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 72,
+            "resolvers": 94,
+            "status302": 94,
+            "cdn": 94,
+            "status206": 24
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "jin_2021_individual_single_cell_rna_seq_pbmc_data_arunachalam_et_al_59b69042",
+        "cells": 49139,
+        "peripheralBloodCells": 49139,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 49139,
+        "labelledProgenitors": 703,
+        "candidates": 1433,
+        "missingGenes": [],
+        "seconds": 6.591546256000015,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 146,
+            "gets": 146,
+            "rangedGets": 16,
+            "responseBytes": 69305065
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 66,
+            "302": 72,
+            "206": 8
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 66,
+            "resolvers": 72,
+            "status302": 72,
+            "cdn": 72,
+            "status206": 8
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "knight_2026_dendritic_cells_a1058181",
+        "cells": 15063,
+        "peripheralBloodCells": 1417,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1417,
+        "labelledProgenitors": 0,
+        "candidates": 92,
+        "missingGenes": [],
+        "seconds": 6.5387753429999975,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 140,
+            "gets": 140,
+            "rangedGets": 6,
+            "responseBytes": 23258141
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 68,
+            "302": 69,
+            "206": 3
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 68,
+            "resolvers": 69,
+            "status302": 69,
+            "cdn": 69,
+            "status206": 3
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "knight_2026_innate_lymphocytes_4057e00c",
+        "cells": 64793,
+        "peripheralBloodCells": 22723,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 22723,
+        "labelledProgenitors": 0,
+        "candidates": 729,
+        "missingGenes": [],
+        "seconds": 3.8649172490000296,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 166,
+            "gets": 166,
+            "rangedGets": 32,
+            "responseBytes": 44992450
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 68,
+            "302": 82,
+            "206": 16
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 68,
+            "resolvers": 82,
+            "status302": 82,
+            "cdn": 82,
+            "status206": 16
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "knight_2026_integrated_global_cells_612b7bff",
+        "cells": 226157,
+        "peripheralBloodCells": 77571,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 77571,
+        "labelledProgenitors": 0,
+        "candidates": 1803,
+        "missingGenes": [],
+        "seconds": 5.0356288099999915,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 238,
+            "gets": 238,
+            "rangedGets": 72,
+            "responseBytes": 104863663
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 84,
+            "302": 118,
+            "206": 36
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 84,
+            "resolvers": 118,
+            "status302": 118,
+            "cdn": 118,
+            "status206": 36
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "kock_2025_aida_phase_1_data_freeze_v1_japan_singapore_south_korea_b0e547f0",
+        "cells": 1058909,
+        "peripheralBloodCells": 10282,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 10282,
+        "labelledProgenitors": 0,
+        "candidates": 165,
+        "missingGenes": [],
+        "seconds": 8.388348894999979,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 349,
+            "gets": 349,
+            "rangedGets": 18,
+            "responseBytes": 39479807
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 167,
+            "302": 173,
+            "206": 9
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 167,
+            "resolvers": 173,
+            "status302": 173,
+            "cdn": 173,
+            "status206": 9
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "kock_2025_aida_phase_1_data_freeze_v2_south_korea_thailand_india_c838aec3",
+        "cells": 1265624,
+        "peripheralBloodCells": 1265624,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1265624,
+        "labelledProgenitors": 135,
+        "candidates": 24682,
+        "missingGenes": [],
+        "seconds": 52.610917740999994,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 645,
+            "gets": 645,
+            "rangedGets": 288,
+            "responseBytes": 247865670
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 180,
+            "302": 321,
+            "206": 144
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 180,
+            "resolvers": 321,
+            "status302": 321,
+            "cdn": 321,
+            "status206": 144
+          },
+          "quotaWaitSeconds": 214.19821060100003
+        }
+      },
+      {
+        "storeId": "krishna_2021_single_cell_sequencing_links_topology_therapy_efficacy_bd65a70f",
+        "cells": 167283,
+        "peripheralBloodCells": 31546,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 31546,
+        "labelledProgenitors": 0,
+        "candidates": 333,
+        "missingGenes": [],
+        "seconds": 5.192110167999999,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 170,
+            "gets": 170,
+            "rangedGets": 36,
+            "responseBytes": 44157903
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 68,
+            "302": 84,
+            "206": 18
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 68,
+            "resolvers": 84,
+            "status302": 84,
+            "cdn": 84,
+            "status206": 18
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "lee_2020_immunophenotyping_covid_19_development_severe_covid_19_de2c780c",
+        "cells": 59572,
+        "peripheralBloodCells": 59572,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 59572,
+        "labelledProgenitors": 0,
+        "candidates": 527,
+        "missingGenes": [],
+        "seconds": 5.238814880000007,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 192,
+            "gets": 192,
+            "rangedGets": 32,
+            "responseBytes": 123969862
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 81,
+            "302": 95,
+            "206": 16
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 81,
+            "resolvers": 95,
+            "status302": 95,
+            "cdn": 95,
+            "status206": 16
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "li_2022_single_cell_transcriptomic_renal_cell_carcinoma_patients_5af90777",
+        "cells": 270855,
+        "peripheralBloodCells": 60084,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 60084,
+        "labelledProgenitors": 0,
+        "candidates": 503,
+        "missingGenes": [],
+        "seconds": 12.168159661000004,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 280,
+            "gets": 280,
+            "rangedGets": 132,
+            "responseBytes": 155021229
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 75,
+            "302": 139,
+            "206": 66
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 75,
+            "resolvers": 139,
+            "status302": 139,
+            "cdn": 139,
+            "status206": 66
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "lim_2025_normal_malignant_cells_t_all_patients_extension_cohort_edb69e37",
+        "cells": 333487,
+        "peripheralBloodCells": 65230,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 65230,
+        "labelledProgenitors": 51,
+        "candidates": 19054,
+        "missingGenes": [],
+        "seconds": 5.293802571000015,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 232,
+            "gets": 232,
+            "rangedGets": 48,
+            "responseBytes": 42975170
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 93,
+            "302": 115,
+            "206": 24
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 93,
+            "resolvers": 115,
+            "status302": 115,
+            "cdn": 115,
+            "status206": 24
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "liu_2021_time_resolved_systems_fatal_covid_19_adaptive_cells_21d3e683",
+        "cells": 246964,
+        "peripheralBloodCells": 246964,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 246964,
+        "labelledProgenitors": 0,
+        "candidates": 3908,
+        "missingGenes": [],
+        "seconds": 10.438091826000004,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 306,
+            "gets": 306,
+            "rangedGets": 128,
+            "responseBytes": 93230338
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 90,
+            "302": 152,
+            "206": 64
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 90,
+            "resolvers": 152,
+            "status302": 152,
+            "cdn": 152,
+            "status206": 64
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "liu_2021_time_resolved_systems_fatal_covid_19_innate_cells_30cd5311",
+        "cells": 125117,
+        "peripheralBloodCells": 125117,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 125117,
+        "labelledProgenitors": 0,
+        "candidates": 474,
+        "missingGenes": [],
+        "seconds": 3.628760161999992,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 222,
+            "gets": 222,
+            "rangedGets": 64,
+            "responseBytes": 125452230
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 80,
+            "302": 110,
+            "206": 32
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 80,
+            "resolvers": 110,
+            "status302": 110,
+            "cdn": 110,
+            "status206": 32
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "marteau_2026_single_cell_colorectal_cancer_atlas_core_atlas_05a8c945",
+        "cells": 3790266,
+        "peripheralBloodCells": 538580,
+        "excludedCells": 63428,
+        "excludedValues": {
+          "enrichment_cell_types": {
+            "CD3+/CD4+": 147,
+            "CD3+/CD4+/CD25-": 997,
+            "CD3+/CD4+/CD25high": 912,
+            "CD3+/CD4+/CD25int": 164,
+            "CD45+": 54835,
+            "CD45+/CD45-": 2839,
+            "CD66b+": 2402,
+            "CD8+": 1132
+          }
+        },
+        "cellsRead": 475152,
+        "labelledProgenitors": 134,
+        "candidates": 6673,
+        "missingGenes": [],
+        "seconds": 33.04808307299999,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 1420,
+            "gets": 1420,
+            "rangedGets": 256,
+            "responseBytes": 44983871
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 586,
+            "302": 706,
+            "206": 128
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 8,
+            "status200": 586,
+            "resolvers": 706,
+            "status302": 706,
+            "cdn": 706,
+            "status206": 128
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "ng_2026_t_cells_small_cell_lung_cancer_biopsies_b9735320",
+        "cells": 450,
+        "peripheralBloodCells": 195,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 195,
+        "labelledProgenitors": 0,
+        "candidates": 0,
+        "missingGenes": [
+          "CD34",
+          "CRHBP"
+        ],
+        "seconds": 4.445125757999961,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 112,
+            "gets": 112,
+            "rangedGets": 0,
+            "responseBytes": 961673
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 57,
+            "302": 55
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 57,
+            "resolvers": 55,
+            "status302": 55,
+            "cdn": 55
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "nose_2026_t_cells_gastric_cancer_patients_ca140407",
+        "cells": 45698,
+        "peripheralBloodCells": 12798,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 12798,
+        "labelledProgenitors": 0,
+        "candidates": 117,
+        "missingGenes": [],
+        "seconds": 13.474857814000018,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 336,
+            "gets": 336,
+            "rangedGets": 36,
+            "responseBytes": 39357792
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 151,
+            "302": 167,
+            "206": 18
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 151,
+            "resolvers": 167,
+            "status302": 167,
+            "cdn": 167,
+            "status206": 18
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+        "cells": 1263676,
+        "peripheralBloodCells": 1263676,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1263676,
+        "labelledProgenitors": 0,
+        "candidates": 15452,
+        "missingGenes": [],
+        "seconds": 49.10069876499999,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 602,
+            "gets": 602,
+            "rangedGets": 256,
+            "responseBytes": 108367221
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 174,
+            "302": 300,
+            "206": 128
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 174,
+            "resolvers": 300,
+            "status302": 300,
+            "cdn": 300,
+            "status206": 128
+          },
+          "quotaWaitSeconds": 215.15659965200007
+        }
+      },
+      {
+        "storeId": "rabadam_2024_citeseq_jdm_pbmcs_a199ca73",
+        "cells": 105827,
+        "peripheralBloodCells": 105827,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 105827,
+        "labelledProgenitors": 0,
+        "candidates": 2518,
+        "missingGenes": [],
+        "seconds": 219.90267196799996,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 264,
+            "gets": 264,
+            "rangedGets": 48,
+            "responseBytes": 67121063
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 109,
+            "302": 131,
+            "206": 24
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 109,
+            "resolvers": 131,
+            "status302": 131,
+            "cdn": 131,
+            "status206": 24
+          },
+          "quotaWaitSeconds": 214.48409744499997
+        }
+      },
+      {
+        "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+        "cells": 1462702,
+        "peripheralBloodCells": 1399186,
+        "excludedCells": 406015,
+        "excludedValues": {
+          "Sample type": {
+            "B cells sorted from frozen PBMC (MACS, STEMCELL 19054)": 196908,
+            "CD19+ B cell sorted from fresh PBMC (FACS)": 31913,
+            "CD19+ B cell sorted from fresh PBMC (MACS)": 65822,
+            "CD3+ T cell and CD19+ B cell sorted from fresh PBMC (FACS)": 74822,
+            "CD3+ T cell sorted from fresh PBMC (FACS)": 36550
+          }
+        },
+        "cellsRead": 993171,
+        "labelledProgenitors": 0,
+        "candidates": 16059,
+        "missingGenes": [],
+        "seconds": 28.579351071999994,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 676,
+            "gets": 676,
+            "rangedGets": 224,
+            "responseBytes": 129832287
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 227,
+            "302": 337,
+            "206": 112
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 227,
+            "resolvers": 337,
+            "status302": 337,
+            "cdn": 337,
+            "status206": 112
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "rodriguezubreva_2022_activated_pbmcs_expanded_cohort_cite_seq_3c75a463",
+        "cells": 95064,
+        "peripheralBloodCells": 95064,
+        "excludedCells": 57625,
+        "excludedValues": {
+          "stimulation": {
+            "CD3": 33828,
+            "CD40L": 23797
+          }
+        },
+        "cellsRead": 37439,
+        "labelledProgenitors": 105,
+        "candidates": 702,
+        "missingGenes": [],
+        "seconds": 5.722261436999986,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 198,
+            "gets": 198,
+            "rangedGets": 30,
+            "responseBytes": 68405887
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 85,
+            "302": 98,
+            "206": 15
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 85,
+            "resolvers": 98,
+            "status302": 98,
+            "cdn": 98,
+            "status206": 15
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "rodriguezubreva_2022_activated_pbmcs_twins_scrna_d7d7e89c",
+        "cells": 16901,
+        "peripheralBloodCells": 16901,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 16901,
+        "labelledProgenitors": 0,
+        "candidates": 194,
+        "missingGenes": [
+          "CRHBP",
+          "PROM1"
+        ],
+        "seconds": 3.4652302089999694,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 148,
+            "gets": 148,
+            "rangedGets": 12,
+            "responseBytes": 11309704
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 69,
+            "302": 73,
+            "206": 6
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 69,
+            "resolvers": 73,
+            "status302": 73,
+            "cdn": 73,
+            "status206": 6
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "rodriguezubreva_2022_steady_state_b_cells_scrna_a5d95a42",
+        "cells": 1324,
+        "peripheralBloodCells": 1324,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1324,
+        "labelledProgenitors": 0,
+        "candidates": 38,
+        "missingGenes": [],
+        "seconds": 5.3307487870000045,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 132,
+            "gets": 132,
+            "rangedGets": 4,
+            "responseBytes": 6037213
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 65,
+            "302": 65,
+            "206": 2
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 65,
+            "resolvers": 65,
+            "status302": 65,
+            "cdn": 65,
+            "status206": 2
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2019_single_cell_transcriptomics_signatures_health_disease_01209dce",
+        "cells": 51876,
+        "peripheralBloodCells": 17625,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 17625,
+        "labelledProgenitors": 0,
+        "candidates": 91,
+        "missingGenes": [],
+        "seconds": 4.888989562000006,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 146,
+            "gets": 146,
+            "rangedGets": 32,
+            "responseBytes": 38809548
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 58,
+            "302": 72,
+            "206": 16
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 58,
+            "resolvers": 72,
+            "status302": 72,
+            "cdn": 72,
+            "status206": 16
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_49_years_old_male_fresh_pbmcs_1_day_post_intubation_c874f155",
+        "cells": 4603,
+        "peripheralBloodCells": 4603,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 4603,
+        "labelledProgenitors": 0,
+        "candidates": 151,
+        "missingGenes": [],
+        "seconds": 4.062764240000035,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 118,
+            "gets": 118,
+            "rangedGets": 8,
+            "responseBytes": 17716038
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 58,
+            "206": 4
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 58,
+            "status302": 58,
+            "cdn": 58,
+            "status206": 4
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_49_years_old_male_fresh_pbmcs_2_days_post_intubation_db59611b",
+        "cells": 11574,
+        "peripheralBloodCells": 11574,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 11574,
+        "labelledProgenitors": 0,
+        "candidates": 393,
+        "missingGenes": [],
+        "seconds": 4.290372606000005,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 118,
+            "gets": 118,
+            "rangedGets": 8,
+            "responseBytes": 35853470
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 58,
+            "206": 4
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 58,
+            "status302": 58,
+            "cdn": 58,
+            "status206": 4
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_49_years_old_male_fresh_pbmcs_3_days_post_intubation_eeacb0c1",
+        "cells": 9337,
+        "peripheralBloodCells": 9337,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 9337,
+        "labelledProgenitors": 0,
+        "candidates": 353,
+        "missingGenes": [],
+        "seconds": 3.5439504660000125,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 122,
+            "gets": 122,
+            "rangedGets": 12,
+            "responseBytes": 34976815
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 60,
+            "206": 6
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 60,
+            "status302": 60,
+            "cdn": 60,
+            "status206": 6
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_66_years_old_female_fresh_pbmcs_2_days_post_intubation_881fe679",
+        "cells": 7097,
+        "peripheralBloodCells": 7097,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 7097,
+        "labelledProgenitors": 0,
+        "candidates": 202,
+        "missingGenes": [],
+        "seconds": 4.9288819120000085,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 120,
+            "gets": 120,
+            "rangedGets": 10,
+            "responseBytes": 22142574
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 59,
+            "206": 5
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 59,
+            "status302": 59,
+            "cdn": 59,
+            "status206": 5
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_66_years_old_female_fresh_pbmcs_3_days_post_intubation_ea786a06",
+        "cells": 4792,
+        "peripheralBloodCells": 4792,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 4792,
+        "labelledProgenitors": 0,
+        "candidates": 80,
+        "missingGenes": [],
+        "seconds": 3.9336998329999915,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 114,
+            "gets": 114,
+            "rangedGets": 4,
+            "responseBytes": 10275088
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 56,
+            "206": 2
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 56,
+            "status302": 56,
+            "cdn": 56,
+            "status206": 2
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_66_years_old_female_fresh_pbmcs_4_days_post_intubation_ed9e9f96",
+        "cells": 5696,
+        "peripheralBloodCells": 5696,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 5696,
+        "labelledProgenitors": 0,
+        "candidates": 174,
+        "missingGenes": [],
+        "seconds": 2.54707795500002,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 114,
+            "gets": 114,
+            "rangedGets": 4,
+            "responseBytes": 16981696
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 56,
+            "206": 2
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 56,
+            "status302": 56,
+            "cdn": 56,
+            "status206": 2
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_66_years_old_female_fresh_pbmcs_7_days_post_intubation_01c93cf6",
+        "cells": 3726,
+        "peripheralBloodCells": 3726,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 3726,
+        "labelledProgenitors": 0,
+        "candidates": 191,
+        "missingGenes": [],
+        "seconds": 4.284742902999994,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 114,
+            "gets": 114,
+            "rangedGets": 4,
+            "responseBytes": 11992402
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 56,
+            "206": 2
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 56,
+            "status302": 56,
+            "cdn": 56,
+            "status206": 2
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_74_years_old_female_fresh_pbmcs_3_days_post_intubation_84230ea4",
+        "cells": 5608,
+        "peripheralBloodCells": 5608,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 5608,
+        "labelledProgenitors": 0,
+        "candidates": 189,
+        "missingGenes": [],
+        "seconds": 4.4447584289999895,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 114,
+            "gets": 114,
+            "rangedGets": 4,
+            "responseBytes": 15773341
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 56,
+            "206": 2
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 56,
+            "status302": 56,
+            "cdn": 56,
+            "status206": 2
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_74_years_old_female_fresh_pbmcs_4_days_post_intubation_cab0bc48",
+        "cells": 5080,
+        "peripheralBloodCells": 5080,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 5080,
+        "labelledProgenitors": 0,
+        "candidates": 163,
+        "missingGenes": [],
+        "seconds": 2.402358988000003,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 114,
+            "gets": 114,
+            "rangedGets": 4,
+            "responseBytes": 15056556
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 56,
+            "206": 2
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 56,
+            "status302": 56,
+            "cdn": 56,
+            "status206": 2
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_74_years_old_female_fresh_pbmcs_7_days_post_intubation_79ef1959",
+        "cells": 4846,
+        "peripheralBloodCells": 4846,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 4846,
+        "labelledProgenitors": 0,
+        "candidates": 218,
+        "missingGenes": [],
+        "seconds": 2.721477144000005,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 120,
+            "gets": 120,
+            "rangedGets": 10,
+            "responseBytes": 17721666
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 59,
+            "206": 5
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 59,
+            "status302": 59,
+            "cdn": 59,
+            "status206": 5
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_74_years_old_female_fresh_pbmcs_8_days_post_intubation_50eb1e23",
+        "cells": 4755,
+        "peripheralBloodCells": 4755,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 4755,
+        "labelledProgenitors": 0,
+        "candidates": 153,
+        "missingGenes": [],
+        "seconds": 3.085061579000012,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 114,
+            "gets": 114,
+            "rangedGets": 4,
+            "responseBytes": 15277481
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 56,
+            "206": 2
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 56,
+            "status302": 56,
+            "cdn": 56,
+            "status206": 2
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "szabo_2021_82_years_old_female_fresh_pbmcs_1_day_post_intubation_8a554710",
+        "cells": 4232,
+        "peripheralBloodCells": 4232,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 4232,
+        "labelledProgenitors": 0,
+        "candidates": 67,
+        "missingGenes": [],
+        "seconds": 4.073514278000005,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 114,
+            "gets": 114,
+            "rangedGets": 4,
+            "responseBytes": 8799855
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 56,
+            "206": 2
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 56,
+            "status302": 56,
+            "cdn": 56,
+            "status206": 2
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "tabula_2022_tabula_sapiens_all_cells_53d208b0",
+        "cells": 1136218,
+        "peripheralBloodCells": 85233,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 85233,
+        "labelledProgenitors": 198,
+        "candidates": 1272,
+        "missingGenes": [],
+        "seconds": 17.989605841000014,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 667,
+            "gets": 667,
+            "rangedGets": 304,
+            "responseBytes": 153413514
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 183,
+            "302": 332,
+            "206": 152
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 183,
+            "resolvers": 332,
+            "status302": 332,
+            "cdn": 332,
+            "status206": 152
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "travaglini_2020_krasnow_lab_human_lung_cell_atlas_10x_8c42cfd0",
+        "cells": 65662,
+        "peripheralBloodCells": 4669,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 4669,
+        "labelledProgenitors": 0,
+        "candidates": 91,
+        "missingGenes": [],
+        "seconds": 5.63308071299997,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 172,
+            "gets": 172,
+            "rangedGets": 48,
+            "responseBytes": 56604910
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 63,
+            "302": 85,
+            "206": 24
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 63,
+            "resolvers": 85,
+            "status302": 85,
+            "cdn": 85,
+            "status206": 24
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "travaglini_2020_krasnow_lab_human_lung_cell_atlas_smart_seq2_e04daea4",
+        "cells": 9409,
+        "peripheralBloodCells": 752,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 752,
+        "labelledProgenitors": 0,
+        "candidates": 19,
+        "missingGenes": [],
+        "seconds": 3.4000785759999985,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 154,
+            "gets": 154,
+            "rangedGets": 4,
+            "responseBytes": 11507933
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 76,
+            "302": 76,
+            "206": 2
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 76,
+            "resolvers": 76,
+            "status302": 76,
+            "cdn": 76,
+            "status206": 2
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "triana_2021_blood_bone_marrow_healthy_young_donor_d3566d6a",
+        "cells": 15502,
+        "peripheralBloodCells": 7145,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 7145,
+        "labelledProgenitors": 54,
+        "candidates": 195,
+        "missingGenes": [],
+        "seconds": 3.2346876490000227,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 116,
+            "gets": 116,
+            "rangedGets": 0,
+            "responseBytes": 3120092
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 59,
+            "302": 57
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 59,
+            "resolvers": 57,
+            "status302": 57,
+            "cdn": 57
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "unpub_0000_human_pbmc_glaucoma_atlas_30c2a6fd",
+        "cells": 207952,
+        "peripheralBloodCells": 207952,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 207952,
+        "labelledProgenitors": 1457,
+        "candidates": 3173,
+        "missingGenes": [],
+        "seconds": 9.654584911,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 214,
+            "gets": 214,
+            "rangedGets": 48,
+            "responseBytes": 164057977
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 84,
+            "302": 106,
+            "206": 24
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 84,
+            "resolvers": 106,
+            "status302": 106,
+            "cdn": 106,
+            "status206": 24
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "unpub_0000_scalebio_single_cell_rna_sequencing_human_pbmcs_2c820d53",
+        "cells": 685024,
+        "peripheralBloodCells": 685024,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 685024,
+        "labelledProgenitors": 632,
+        "candidates": 8328,
+        "missingGenes": [],
+        "seconds": 15.173483452999989,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 370,
+            "gets": 370,
+            "rangedGets": 120,
+            "responseBytes": 105605796
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 126,
+            "302": 184,
+            "206": 60
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 126,
+            "resolvers": 184,
+            "status302": 184,
+            "cdn": 184,
+            "status206": 60
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+        "cells": 600929,
+        "peripheralBloodCells": 600929,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 600929,
+        "labelledProgenitors": 0,
+        "candidates": 7551,
+        "missingGenes": [],
+        "seconds": 18.244866824000013,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 506,
+            "gets": 506,
+            "rangedGets": 176,
+            "responseBytes": 194826440
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 166,
+            "302": 252,
+            "206": 88
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 166,
+            "resolvers": 252,
+            "status302": 252,
+            "cdn": 252,
+            "status206": 88
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "ventotormo_2018_pregnant_uterus_all_5bc42b88",
+        "cells": 70325,
+        "peripheralBloodCells": 11266,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 11266,
+        "labelledProgenitors": 0,
+        "candidates": 660,
+        "missingGenes": [],
+        "seconds": 7.608477536000009,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 254,
+            "gets": 254,
+            "rangedGets": 144,
+            "responseBytes": 164896676
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 56,
+            "302": 126,
+            "206": 72
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 56,
+            "resolvers": 126,
+            "status302": 126,
+            "cdn": 126,
+            "status206": 72
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+        "cells": 1281499,
+        "peripheralBloodCells": 111324,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 111324,
+        "labelledProgenitors": 0,
+        "candidates": 1316,
+        "missingGenes": [],
+        "seconds": 227.493331884,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 653,
+            "gets": 653,
+            "rangedGets": 304,
+            "responseBytes": 80880682
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 176,
+            "302": 325,
+            "206": 152
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 176,
+            "resolvers": 325,
+            "status302": 325,
+            "cdn": 325,
+            "status206": 152
+          },
+          "quotaWaitSeconds": 214.97094151899998
+        }
+      },
+      {
+        "storeId": "wilk_2020_single_cell_atlas_peripheral_sars_cov_2_infection_456e8b9b",
+        "cells": 44721,
+        "peripheralBloodCells": 44721,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 44721,
+        "labelledProgenitors": 0,
+        "candidates": 337,
+        "missingGenes": [],
+        "seconds": 8.882197394999992,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 160,
+            "gets": 160,
+            "rangedGets": 20,
+            "responseBytes": 34440732
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 71,
+            "302": 79,
+            "206": 10
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 71,
+            "resolvers": 79,
+            "status302": 79,
+            "cdn": 79,
+            "status206": 10
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "xu_2026_b_cells_ee782eb7",
+        "cells": 4829,
+        "peripheralBloodCells": 4829,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 4829,
+        "labelledProgenitors": 0,
+        "candidates": 70,
+        "missingGenes": [],
+        "seconds": 6.84025356799998,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 200,
+            "gets": 200,
+            "rangedGets": 12,
+            "responseBytes": 11662566
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 95,
+            "302": 99,
+            "206": 6
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 95,
+            "resolvers": 99,
+            "status302": 99,
+            "cdn": 99,
+            "status206": 6
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "xu_2026_myeloid_cells_3d8d8c97",
+        "cells": 167156,
+        "peripheralBloodCells": 167156,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 167156,
+        "labelledProgenitors": 0,
+        "candidates": 620,
+        "missingGenes": [],
+        "seconds": 13.05035131699998,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 236,
+            "gets": 236,
+            "rangedGets": 54,
+            "responseBytes": 142864858
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 92,
+            "302": 117,
+            "206": 27
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 92,
+            "resolvers": 117,
+            "status302": 117,
+            "cdn": 117,
+            "status206": 27
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "xu_2026_t_cells_f2b69d9b",
+        "cells": 112040,
+        "peripheralBloodCells": 112040,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 112040,
+        "labelledProgenitors": 0,
+        "candidates": 699,
+        "missingGenes": [],
+        "seconds": 9.139527334000007,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 274,
+            "gets": 274,
+            "rangedGets": 60,
+            "responseBytes": 83828489
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 108,
+            "302": 136,
+            "206": 30
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 108,
+            "resolvers": 136,
+            "status302": 136,
+            "cdn": 136,
+            "status206": 30
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      {
+        "storeId": "yazar_2022_single_cell_eqtl_mapping_control_autoimmune_disease_3faad104",
+        "cells": 1248980,
+        "peripheralBloodCells": 1248980,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 1248980,
+        "labelledProgenitors": 1812,
+        "candidates": 22023,
+        "missingGenes": [],
+        "seconds": 45.717434688,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 612,
+            "gets": 612,
+            "rangedGets": 288,
+            "responseBytes": 74545435
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 163,
+            "302": 305,
+            "206": 144
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 163,
+            "resolvers": 305,
+            "status302": 305,
+            "cdn": 305,
+            "status206": 144
+          },
+          "quotaWaitSeconds": 215.46167747200002
+        }
+      },
+      {
+        "storeId": "yoshida_2022_pbmc_2a498ace",
+        "cells": 422220,
+        "peripheralBloodCells": 339597,
+        "excludedCells": 0,
+        "excludedValues": {},
+        "cellsRead": 339597,
+        "labelledProgenitors": 864,
+        "candidates": 5016,
+        "missingGenes": [],
+        "seconds": 11.076218779000016,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 328,
+            "gets": 328,
+            "rangedGets": 132,
+            "responseBytes": 71014673
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 99,
+            "302": 163,
+            "206": 66
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 99,
+            "resolvers": 163,
+            "status302": 163,
+            "cdn": 163,
+            "status206": 66
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      }
+    ],
+    "failures": [],
+    "tables": {
+      "cells": {
+        "rows": 1560089,
+        "bytes": 14359690
+      },
+      "donors": {
+        "rows": 5159,
+        "bytes": 106122
+      }
+    }
+  },
+  "elapsedSeconds": 487.77589321136475
+}

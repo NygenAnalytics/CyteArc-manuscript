@@ -1,0 +1,134 @@
+{
+ "sizes": [
+  {
+   "part": "reference_500000",
+   "cells": 500003,
+   "nonzeros": 689239787,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_1500000",
+   "cells": 1499999,
+   "nonzeros": 2068765663,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_3000000",
+   "cells": 2999999,
+   "nonzeros": 4137339630,
+   "overRLimit": true
+  },
+  {
+   "part": "reference_all",
+   "cells": 4292870,
+   "nonzeros": 5920720691,
+   "overRLimit": true
+  }
+ ],
+ "methods": {
+  "unintegrated": [
+   {
+    "part": "reference_500000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 13.479686737060547
+   },
+   {
+    "part": "reference_1500000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 15.05324935913086
+   },
+   {
+    "part": "reference_3000000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 13.503425598144531
+   },
+   {
+    "part": "reference_all",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 17.236820220947266
+   }
+  ],
+  "seurat_map": [
+   {
+    "part": "reference_500000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 71.44922637939453
+   },
+   {
+    "part": "reference_1500000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 212.71975708007812
+   },
+   {
+    "part": "reference_3000000",
+    "outcome": "limit",
+    "failedStep": "readReference"
+   },
+   {
+    "part": "reference_all",
+    "outcome": "limit",
+    "failedStep": "readReference"
+   }
+  ],
+  "symphony": [
+   {
+    "part": "reference_500000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 29.3880615234375
+   },
+   {
+    "part": "reference_1500000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 90.47879028320312
+   },
+   {
+    "part": "reference_3000000",
+    "outcome": "limit",
+    "failedStep": "readReference"
+   },
+   {
+    "part": "reference_all",
+    "outcome": "limit",
+    "failedStep": "readReference"
+   }
+  ],
+  "celltypist_hvg": [
+   {
+    "part": "reference_500000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 21.40426254272461
+   },
+   {
+    "part": "reference_1500000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 62.777103424072266
+   },
+   {
+    "part": "reference_3000000",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 124.97592163085938
+   },
+   {
+    "part": "reference_all",
+    "outcome": "pass",
+    "failedStep": null,
+    "peakGiB": 178.63157653808594
+   }
+  ]
+ },
+ "rNonzeroLimit": 2147483647,
+ "source": [
+  "experiments/mapping/records/reference_ladder.json"
+ ]
+}

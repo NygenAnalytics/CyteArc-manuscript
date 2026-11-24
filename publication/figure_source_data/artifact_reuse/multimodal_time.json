@@ -1,0 +1,82 @@
+{
+ "sizes": [
+  {
+   "cells": 100000,
+   "cytearc": {
+    "initialSeconds": 67.19745473100011,
+    "peakGiB": 10.299503326416016
+   },
+   "seurat": {
+    "outcome": "pass",
+    "lastStage": null,
+    "initialSeconds": 451.75999999046326,
+    "peakGiB": 16.709259033203125,
+    "memoryLimitGiB": 120,
+    "timeLimitSeconds": 7200
+   }
+  },
+  {
+   "cells": 300000,
+   "cytearc": {
+    "initialSeconds": 151.8126358320001,
+    "peakGiB": 11.289058685302734
+   },
+   "seurat": {
+    "outcome": "pass",
+    "lastStage": null,
+    "initialSeconds": 2470.949000120163,
+    "peakGiB": 44.86835479736328,
+    "memoryLimitGiB": 120,
+    "timeLimitSeconds": 14400
+   }
+  },
+  {
+   "cells": 600000,
+   "cytearc": {
+    "initialSeconds": 326.044184434,
+    "peakGiB": 10.706459045410156
+   },
+   "seurat": {
+    "outcome": "pass",
+    "lastStage": "fresh_revision:WNN.clustering",
+    "initialSeconds": 13521.341000080109,
+    "peakGiB": 87.64254760742188,
+    "memoryLimitGiB": 120,
+    "timeLimitSeconds": 28800
+   }
+  },
+  {
+   "cells": 1000000,
+   "cytearc": {
+    "initialSeconds": 516.7380642080001,
+    "peakGiB": 9.864273071289062
+   },
+   "seurat": {
+    "outcome": "time",
+    "lastStage": "initial:WNN.clustering",
+    "initialSeconds": null,
+    "peakGiB": 118.83913040161133,
+    "memoryLimitGiB": 120,
+    "timeLimitSeconds": 36000
+   }
+  },
+  {
+   "cells": 1457527,
+   "cytearc": {
+    "initialSeconds": 796.2847184940003,
+    "peakGiB": 11.058147430419922
+   },
+   "seurat": {
+    "outcome": "oom",
+    "lastStage": "initial:RNA.normalization",
+    "initialSeconds": null,
+    "peakGiB": 120.03015518188477,
+    "memoryLimitGiB": 120,
+    "timeLimitSeconds": 36000
+   }
+  }
+ ],
+ "source": [
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq"
+ ]
+}

@@ -1,0 +1,283 @@
+metric,value,kind
+markers / embryo_1000000 / pairs,6000,int
+markers / embryo_1000000 / aurocMaxAbsDiff_presto,6.698545080841001e-07,float
+markers / embryo_1000000 / aurocPairs_presto,6000,int
+markers / embryo_1000000 / aurocMaxAbsDiff_scanpy_csc,3.28828612117249e-07,float
+markers / embryo_1000000 / aurocPairs_scanpy_csc,6000,int
+markers / embryo_1000000 / pMaxAbsLog10Diff_bpcells,2.8824254286519135e-05,float
+markers / embryo_1000000 / pPairsAboveFloor_bpcells,5585,int
+markers / embryo_1000000 / pPairsOneBelowFloor_bpcells,0,int
+markers / brain_1306127 / pairs,6000,int
+markers / brain_1306127 / aurocMaxAbsDiff_scanpy_csc,2.0409413392652453e-07,float
+markers / brain_1306127 / aurocPairs_scanpy_csc,6000,int
+markers / brain_1306127 / pMaxAbsLog10Diff_bpcells,2.628429243145547e-05,float
+markers / brain_1306127 / pPairsAboveFloor_bpcells,5339,int
+markers / brain_1306127 / pPairsOneBelowFloor_bpcells,0,int
+markers / tabula_sapiens / pairs,6000,int
+markers / tabula_sapiens / aurocMaxAbsDiff_scanpy_csc,1.1491300754840061e-06,float
+markers / tabula_sapiens / aurocPairs_scanpy_csc,6000,int
+markers / tabula_sapiens / pMaxAbsLog10Diff_bpcells,7.433643332888096e-06,float
+markers / tabula_sapiens / pPairsAboveFloor_bpcells,5956,int
+markers / tabula_sapiens / pPairsOneBelowFloor_bpcells,0,int
+markers / recordLargestAucDiff / brain_1306127,2.0409413392652453e-07,float
+markers / recordLargestAucDiff / embryo_1000000,9.98683120201349e-07,float
+markers / recordLargestAucDiff / tabula_sapiens,1.1491300754840061e-06,float
+markers / auroc,1.1491300754840061e-06,float
+markers / log10P,2.8824254286519135e-05,float
+pca / cells,3696,int
+pca / dimensions,21,int
+pca / minimumFeatures,2000,int
+pca / maximumFeatures,5000,int
+pca / configurations,10,int
+pca / maxSubspaceAngleDegrees,0.014266638270069935,float
+pca / maxRelativeVarianceError,2.8354437500815086e-08,float
+pca / source,experiments/methods/records/rna_numerical_reproducibility.json,str
+leiden / cells,18597,int
+leiden / threads / 0,1,int
+leiden / threads / 1,4,int
+leiden / threads / 2,8,int
+leiden / threads / 3,16,int
+leiden / nativePartitionsIdentical,True,bool
+leiden / nativeModularity,0.8629411567784498,float
+leiden / igraphModularity,0.8627815015000332,float
+leiden / source,experiments/methods/records/rna_numerical_reproducibility.json,str
+pipelineRepeatability / cells,18597,int
+pipelineRepeatability / runsPerMode,3,int
+pipelineRepeatability / allArraysIdentical,True,bool
+pipelineRepeatability / deterministicARI,1.0,float
+pipelineRepeatability / source,experiments/methods/records/rna_numerical_reproducibility.json,str
+lsi / cells,6194,int
+lsi / peaks,25000,int
+lsi / dimensions,30,int
+lsi / skipFirst,True,bool
+lsi / toleranceDegrees,0.05,float
+lsi / biologicalWorkflowIterations,5,int
+lsi / biologicalWorkflowOversamples,10,int
+lsi / sampledSelection / cells,400,int
+lsi / sampledSelection / maxSubspaceAngleDegrees,0.001903873155785156,float
+lsi / iterations,80,int
+lsi / oversamples,100,int
+lsi / maxSubspaceAngleDegrees,0.000934835021262951,float
+lsi / maxProjectionAbsoluteError,8.179664758023453e-10,float
+lsi / source,experiments/methods/records/lsi.json,str
+scenic / regulators,18,int
+scenic / seeds,3,int
+scenic / coreCases,54,int
+scenic / aucMaxAbsoluteError,8.326672684688674e-17,float
+scenic / curveMaxAbsoluteError,0.0,float
+scenic / referenceVersion,0.12.1,str
+scenic / source,experiments/methods/records/scenic_pruning.json,str
+chromvar / cells,2612,int
+chromvar / peaks,98316,int
+chromvar / motifs,879,int
+chromvar / referenceVersion,1.34.1,str
+chromvar / deviationMaxAbsoluteError,1.6840695504782843e-14,float
+chromvar / zScoreMaxAbsoluteError,2.7959856652159942e-12,float
+chromvar / finiteMasksEqual,True,bool
+chromvar / source,experiments/methods/records/chromvar.json,str
+dropletQc / datasets / 0 / name,pbmc_1k_v2,str
+dropletQc / datasets / 0 / rawBarcodes,737280,int
+dropletQc / datasets / 0 / testedBarcodes,1191,int
+dropletQc / datasets / 0 / filteredCells,996,int
+dropletQc / datasets / 0 / cellCallJaccard,1.0,float
+dropletQc / datasets / 0 / nativeCalls,1042,int
+dropletQc / datasets / 0 / referenceCalls,1042,int
+dropletQc / datasets / 1 / name,pbmc_10k_v3,str
+dropletQc / datasets / 1 / rawBarcodes,6794880,int
+dropletQc / datasets / 1 / testedBarcodes,17781,int
+dropletQc / datasets / 1 / filteredCells,11769,int
+dropletQc / datasets / 1 / cellCallJaccard,0.9826201256024536,float
+dropletQc / datasets / 1 / nativeCalls,6819,int
+dropletQc / datasets / 1 / referenceCalls,6756,int
+dropletQc / emptyDropsVersion,1.32.1,str
+dropletQc / soupXVersion,1.6.2,str
+dropletQc / emptyDropsAmbientMaxAbsoluteError,1.0061396160665481e-16,float
+dropletQc / soupAmbientCountsIdentical,True,bool
+dropletQc / soupProfileMaxAbsoluteError,9.947554932554503e-17,float
+dropletQc / rhoMaxAbsoluteError,3.9995784462121264e-14,float
+dropletQc / correctedCountMaxAbsoluteError,0.9998614397721535,float
+dropletQc / source,experiments/methods/records/droplet_qc.json,str
+geneScores / cells,400,int
+geneScores / peaks,240122,int
+geneScores / genes,256,int
+geneScores / maxAbsoluteError,0.0,float
+geneScores / genesWithoutOverlaps,25,int
+geneScores / source,experiments/methods/records/gene_scores.json,str
+hto / datasets / 0 / name,stoeckius,str
+hto / datasets / 0 / cells,21522,int
+hto / datasets / 0 / hashtags,8,int
+hto / datasets / 0 / identityAgreement,0.9999535359167364,float
+hto / datasets / 0 / globalClassAgreement,1.0,float
+hto / datasets / 1 / name,gse245108,str
+hto / datasets / 1 / cells,8438,int
+hto / datasets / 1 / hashtags,10,int
+hto / datasets / 1 / identityAgreement,1.0,float
+hto / datasets / 1 / globalClassAgreement,1.0,float
+hto / minimumIdentityAgreement,0.9999535359167364,float
+hto / globalClassesIdentical,True,bool
+hto / identityDifferences,1,int
+hto / seuratVersion,5.5.1,str
+hto / source,experiments/methods/records/hto_demultiplexing.json,str
+grnboost2 / cells,2612,int
+grnboost2 / genes,14211,int
+grnboost2 / factors,1249,int
+grnboost2 / matchedPearson,1.0,float
+grnboost2 / matchedMaxAbsoluteDifference,0.0,float
+grnboost2 / arboretoVersion,0.1.6,str
+grnboost2 / sklearnVersion,1.9.1,str
+grnboost2 / source,experiments/methods/records/grnboost2.json,str
+harmony / harmonypy,2.0.2,str
+harmony / rHarmony,2.0.5,str
+harmony / cells / kang,6000,int
+harmony / cells / binvignat,6000,int
+harmony / seeds,10,int
+harmony / fixedRounds,10,int
+harmony / steps / assignmentPenaltyOff / harmonypy,4.4568987522808357e-07,float
+harmony / steps / assignmentPenaltyOff / rHarmony,1.4164315812470463e-06,float
+harmony / steps / assignmentPenaltyOn / harmonypy,0.00868819975663826,float
+harmony / steps / assignmentPenaltyOn / rHarmony,0.006431576167842845,float
+harmony / steps / cytearcOwnNumerator,9.992007221626409e-16,float
+harmony / steps / harmonypyOwnNumerator,6.865822325674564e-07,float
+harmony / steps / rHarmonyOwnNumerator,2.32836494751254e-07,float
+harmony / steps / singleClusterCorrection,7.90920521964722e-07,float
+harmony / steps / correctionVersusHarmonypy,0.022397035783475516,float
+harmony / steps / correctionOwnEquationsReproduced,True,bool
+harmony / fullFits / harmonypy / ownStoppingRules / kang / passed,True,bool
+harmony / fullFits / harmonypy / ownStoppingRules / kang / crossOverlapMedian,0.9734611111111112,float
+harmony / fullFits / harmonypy / ownStoppingRules / kang / referenceOverlapMin,0.9711000000000001,float
+harmony / fullFits / harmonypy / ownStoppingRules / kang / iLISIMedianDifference,0.0008864618949157022,float
+harmony / fullFits / harmonypy / ownStoppingRules / kang / referenceILISIRange,0.005061272486611923,float
+harmony / fullFits / harmonypy / ownStoppingRules / binvignat / passed,True,bool
+harmony / fullFits / harmonypy / ownStoppingRules / binvignat / crossOverlapMedian,0.8562,float
+harmony / fullFits / harmonypy / ownStoppingRules / binvignat / referenceOverlapMin,0.8191222222222223,float
+harmony / fullFits / harmonypy / ownStoppingRules / binvignat / iLISIMedianDifference,0.004413790631309811,float
+harmony / fullFits / harmonypy / ownStoppingRules / binvignat / referenceILISIRange,0.027282063831366443,float
+harmony / fullFits / harmonypy / ownStoppingRules / datasetsPassed,2,int
+harmony / fullFits / harmonypy / ownStoppingRules / datasets,2,int
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / kang / passed,False,bool
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / kang / crossOverlapMedian,0.9693888888888891,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / kang / referenceOverlapMin,0.9713111111111111,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / kang / iLISIMedianDifference,0.0016328948925143916,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / kang / referenceILISIRange,0.003598957139868242,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / binvignat / passed,False,bool
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / binvignat / crossOverlapMedian,0.8590833333333334,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / binvignat / referenceOverlapMin,0.8592222222222223,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / binvignat / iLISIMedianDifference,0.004739549729995851,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / binvignat / referenceILISIRange,0.0060447526703656385,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / datasetsPassed,0,int
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOn / datasets,2,int
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / kang / passed,False,bool
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / kang / crossOverlapMedian,0.9542555555555556,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / kang / referenceOverlapMin,0.9592666666666667,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / kang / iLISIMedianDifference,0.0043123908767152,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / kang / referenceILISIRange,0.016190925264807365,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / binvignat / passed,True,bool
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / binvignat / crossOverlapMedian,0.8557999999999999,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / binvignat / referenceOverlapMin,0.8411555555555555,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / binvignat / iLISIMedianDifference,0.004049955127787108,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / binvignat / referenceILISIRange,0.009259681154117017,float
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / datasetsPassed,1,int
+harmony / fullFits / harmonypy / fixedRoundsPenaltyOff / datasets,2,int
+harmony / fullFits / rHarmony / ownStoppingRules / kang / passed,True,bool
+harmony / fullFits / rHarmony / ownStoppingRules / kang / crossOverlapMedian,0.9735222222222223,float
+harmony / fullFits / rHarmony / ownStoppingRules / kang / referenceOverlapMin,0.9714777777777778,float
+harmony / fullFits / rHarmony / ownStoppingRules / kang / iLISIMedianDifference,0.0008002976797948369,float
+harmony / fullFits / rHarmony / ownStoppingRules / kang / referenceILISIRange,0.0032371732623421856,float
+harmony / fullFits / rHarmony / ownStoppingRules / binvignat / passed,False,bool
+harmony / fullFits / rHarmony / ownStoppingRules / binvignat / crossOverlapMedian,0.68485,float
+harmony / fullFits / rHarmony / ownStoppingRules / binvignat / referenceOverlapMin,0.8712555555555554,float
+harmony / fullFits / rHarmony / ownStoppingRules / binvignat / iLISIMedianDifference,0.13416869615749982,float
+harmony / fullFits / rHarmony / ownStoppingRules / binvignat / referenceILISIRange,0.008938847285118623,float
+harmony / fullFits / rHarmony / ownStoppingRules / datasetsPassed,1,int
+harmony / fullFits / rHarmony / ownStoppingRules / datasets,2,int
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / kang / passed,False,bool
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / kang / crossOverlapMedian,0.9686777777777779,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / kang / referenceOverlapMin,0.9701000000000002,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / kang / iLISIMedianDifference,0.000990530024601477,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / kang / referenceILISIRange,0.005988242828656398,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / binvignat / passed,False,bool
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / binvignat / crossOverlapMedian,0.8587111111111112,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / binvignat / referenceOverlapMin,0.8606,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / binvignat / iLISIMedianDifference,0.006134882452597912,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / binvignat / referenceILISIRange,0.006558585593745447,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / datasetsPassed,0,int
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOn / datasets,2,int
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / kang / passed,False,bool
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / kang / crossOverlapMedian,0.9518,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / kang / referenceOverlapMin,0.9539555555555556,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / kang / iLISIMedianDifference,0.004525989767588001,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / kang / referenceILISIRange,0.009931998868484282,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / binvignat / passed,True,bool
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / binvignat / crossOverlapMedian,0.8529277777777778,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / binvignat / referenceOverlapMin,0.8440888888888888,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / binvignat / iLISIMedianDifference,0.006110956899932629,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / binvignat / referenceILISIRange,0.012557744123517733,float
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / datasetsPassed,1,int
+harmony / fullFits / rHarmony / fixedRoundsPenaltyOff / datasets,2,int
+harmony / seedStability / binvignat / cells,9000,int
+harmony / seedStability / binvignat / sameSeedOverlapMedian,0.8832814814814816,float
+harmony / seedStability / binvignat / harmonypyBetweenSeedsOverlapMedian,0.8841111111111111,float
+harmony / seedStability / binvignat / cytearcBetweenSeedsOverlapMedian,0.9035185185185185,float
+harmony / seedStability / kang / cells,18597,int
+harmony / seedStability / kang / sameSeedOverlapMedian,0.9776057070136761,float
+harmony / seedStability / kang / harmonypyBetweenSeedsOverlapMedian,0.9818787976555359,float
+harmony / seedStability / kang / cytearcBetweenSeedsOverlapMedian,0.9853273825527413,float
+harmony / sources / 0,experiments/integration/records/harmony2.json,str
+harmony / sources / 1,experiments/integration/records/harmony2_r_reference.json,str
+harmony / sources / 2,experiments/integration/records/harmony_seed_stability.json,str
+wnn / citeCells,7299,int
+wnn / teaCells,6194,int
+wnn / seuratVersion,5.5.1,str
+wnn / maxAbs,2.980228441806787e-08,float
+wnn / neighborsIdentical,True,bool
+wnn / condition,"Self-free modality neighbor rows with k=20, nearest-to-kth bandwidth, L2-normalized reductions; public Seurat search and bandwidth are evaluated separately.",str
+wnn / source,.build/derived/integration/multimodal_neighbors.json,str
+wnnFixture / cellsTwo,300,int
+wnnFixture / cellsThree,48,int
+wnnFixture / maxAbs,2.978431179467833e-08,float
+wnnFixture / neighborsIdentical,True,bool
+wnnFixture / float32Resolution,1.1920928955078125e-07,float
+wnnFixture / defaultsOverlap,0.8865000000000002,float
+lisi / version,0.6.1,str
+lisi / maxPerCell,1.509903313490213e-14,float
+cellCycle / version,1.12.4,str
+cellCycle / cellsPancreas,3546,int
+cellCycle / cellsPbmc,4331,int
+cellCycle / maxAbsSameControls,3.885780586188048e-16,float
+cellCycle / randomControlsS,0.9946319061105914,float
+cellCycle / randomControlsG2M,0.9869173733111212,float
+aucell / version,2.2.0,str
+aucell / cells,4331,int
+aucell / aucell,2.9795201195170762e-08,float
+aucell / waggr,9.209746671956509e-07,float
+aucell / sets,18,int
+aucell / source,experiments/methods/records/aucell.json,str
+magic / version,3.0.0,str
+magic / cells,4331,int
+magic / genes,200,int
+magic / maxAbs,6.7091916733375e-06,float
+magic / range,44.15380192212061,float
+magic / perGenePearsonMin,0.9999999999999762,float
+magic / defaultsMedianR,0.9544153352959253,float
+pba / cells,3546,int
+pba / spearman,0.9999874283133102,float
+pba / maxAbs,0.0010882998465097937,float
+pba / versusDenseTruncated,3.1869884269813964e-07,float
+pba / denseTruncatedSpearman,0.9999999991926043,float
+pba / modesUsed,29,int
+fate / pancreasCells,3696,int
+fate / pancreasPearsonMin,0.9999999979323224,float
+fate / pancreasMaxAbs,4.3132057472305974e-05,float
+fate / pancreasDefaultsPearson,0.9849548908817067,float
+fate / larryProgenitors,1110,int
+fate / larryPearson,0.9999999999465047,float
+fate / solverMaxAbs,2.862654971957923e-07,float
+symphony / cells,500,int
+symphony / referenceCells,3000,int
+symphony / referenceStudies,3,int
+symphony / genes,2000,int
+symphony / maxAbs,8.03942903360166e-08,float
+symphony / projectedMaxAbs,4.2632564145606e-14,float
+symphony / assignmentMaxAbs,7.02783264916462e-09,float
+symphony / correctionShift,7.90129092802333,float
+symphony / scaling,Shared unclipped reference PCA scaling,str

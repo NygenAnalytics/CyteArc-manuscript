@@ -1,0 +1,1345 @@
+{
+  "description": "CyteArc run_cell_cycle_scoring against scanpy.tl.score_genes_cell_cycle with CyteArc's bundled S and G2M gene lists: a deterministic all-genes-per-bin control check, a matched comparison on identical normalised values and parameters, seed-to-seed variability within each implementation, and a default-versus-default comparison.",
+  "reference": {
+    "package": "scanpy",
+    "version": "1.12.4",
+    "anndataVersion": "0.13.4",
+    "functions": [
+      "scanpy.tl.score_genes_cell_cycle",
+      "scanpy.tl.score_genes"
+    ]
+  },
+  "cytearcFunctions": [
+    "DataStore.run_cell_cycle_scoring",
+    "RNAassay.score_features"
+  ],
+  "parameters": {
+    "geneLists": "cytearc.quality_control.cell_cycle_genes (human symbols, matched case-insensitively)",
+    "cytearcSeeds": [
+      4466,
+      1,
+      2,
+      3,
+      4
+    ],
+    "scanpySeeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "nBins": [
+      50,
+      25
+    ],
+    "deterministicControlSize": 1000000
+  },
+  "comparisonKinds": {
+    "deterministicControls": "exact parity: identical inputs, parameters and control sets",
+    "deterministicControlsPublic": "exact parity through DataStore.run_cell_cycle_scoring(ctrl_size, log_transform=True) against Scanpy on the same log1p values",
+    "matched": "matched inputs and parameters; control genes are random draws in each implementation",
+    "seedVariability": "within-implementation seed-to-seed agreement against between-implementation agreement; sameSeed compares the two implementations at equal seeds",
+    "defaults": "default versus default: each implementation with its own documented normalisation and parameters"
+  },
+  "datasets": {
+    "pancreas": {
+      "dataset": {
+        "name": "bastidas-ponce_4K_pancreas-d15_rnaseq",
+        "input": {
+          "catalogue": "cytearc_docs",
+          "dataset": "bastidas-ponce_4K_pancreas-d15_rnaseq",
+          "files": {
+            "data.h5ad": {
+              "bytes": 52477898,
+              "sha256": "9e3e459eca00ba06b496ec80def32941b5b2889918720e3e7aa6ffb811fbe7c6"
+            }
+          }
+        },
+        "analysis": {
+          "cytearcVersion": "1.3.0",
+          "filtering": {
+            "enabled": true,
+            "method": "mad",
+            "attrs": [
+              "RNA_nCounts",
+              "RNA_nFeatures",
+              "RNA_percentMito",
+              "RNA_percentRibo"
+            ],
+            "minP": 0.01,
+            "maxP": 0.99,
+            "sampleColumn": null,
+            "nMads": 3.0,
+            "minCellsPerSample": 20
+          },
+          "hvgCount": 1000,
+          "pcaDims": 21,
+          "neighborsK": 11,
+          "leiden": {
+            "partitions": [
+              0.5,
+              0.75,
+              1.0,
+              1.25
+            ],
+            "selected": null
+          },
+          "annIndex": {
+            "ann_metric": "l2",
+            "ann_m": 24,
+            "ann_ef": 200,
+            "ann_efc": 200,
+            "rand_state": 4466,
+            "ann_parallel": false
+          },
+          "analysisCells": 3546
+        },
+        "cellSelection": "analysis_cell_selection",
+        "cells": 3546,
+        "cellsInStore": 3696,
+        "features": 27998,
+        "sizeFactor": 1000.0,
+        "maxAbsDiffRawRowSumsVersusStoredTotals": 0.0
+      },
+      "genes": {
+        "sListLength": 43,
+        "g2mListLength": 54,
+        "controlSize": 43,
+        "sMissing": [],
+        "g2mMissing": [
+          "PIMREG",
+          "JPT1"
+        ],
+        "sMatchedMoreThanOnce": [],
+        "g2mMatchedMoreThanOnce": [],
+        "sMatched": 43,
+        "g2mMatched": 52
+      },
+      "deterministicControls": {
+        "nBins50": {
+          "S": {
+            "n": 3546,
+            "pearson": 0.9999999999999999,
+            "spearman": 0.9999999999999999,
+            "maxAbsDiff": 1.6653345369377348e-16,
+            "meanAbsDiff": 2.787494181081739e-18,
+            "rangeFirst": 0.3308560862210457,
+            "rangeSecond": 0.3308560862210457
+          },
+          "G2M": {
+            "n": 3546,
+            "pearson": 1.0,
+            "spearman": 0.9999999999999999,
+            "maxAbsDiff": 3.3306690738754696e-16,
+            "meanAbsDiff": 7.762716332994917e-18,
+            "rangeFirst": 0.5957614841669223,
+            "rangeSecond": 0.5957614841669223
+          }
+        },
+        "nBins25": {
+          "S": {
+            "n": 3546,
+            "pearson": 1.0,
+            "spearman": 0.9999999999999999,
+            "maxAbsDiff": 1.3877787807814457e-16,
+            "meanAbsDiff": 2.7948322668515226e-18,
+            "rangeFirst": 0.3304381829523379,
+            "rangeSecond": 0.3304381829523379
+          },
+          "G2M": {
+            "n": 3546,
+            "pearson": 0.9999999999999998,
+            "spearman": 0.9999999999999999,
+            "maxAbsDiff": 3.885780586188048e-16,
+            "meanAbsDiff": 7.909478048390585e-18,
+            "rangeFirst": 0.5964124395695485,
+            "rangeSecond": 0.5964124395695485
+          }
+        }
+      },
+      "deterministicControlsPublic": {
+        "nBins50": {
+          "S": {
+            "n": 3546,
+            "pearson": 1.0,
+            "spearman": 0.9999999999999999,
+            "maxAbsDiff": 8.326672684688674e-17,
+            "meanAbsDiff": 2.2615980342472585e-18,
+            "rangeFirst": 0.2535897729720663,
+            "rangeSecond": 0.2535897729720663
+          },
+          "G2M": {
+            "n": 3546,
+            "pearson": 0.9951032644295783,
+            "spearman": 0.8855438430565779,
+            "maxAbsDiff": 0.02767789646342915,
+            "meanAbsDiff": 0.0058462099332811214,
+            "rangeFirst": 0.41698448444174563,
+            "rangeSecond": 0.40750473167015117
+          }
+        },
+        "nBins25": {
+          "S": {
+            "n": 3546,
+            "pearson": 1.0,
+            "spearman": 0.9999999999999999,
+            "maxAbsDiff": 8.326672684688674e-17,
+            "meanAbsDiff": 2.2361593369120095e-18,
+            "rangeFirst": 0.25235354624694706,
+            "rangeSecond": 0.25235354624694706
+          },
+          "G2M": {
+            "n": 3546,
+            "pearson": 0.9950859578824244,
+            "spearman": 0.882510139392512,
+            "maxAbsDiff": 0.02766258401256256,
+            "meanAbsDiff": 0.0058433546784276485,
+            "rangeFirst": 0.4156115247768633,
+            "rangeSecond": 0.40614738874745065
+          }
+        }
+      },
+      "matched": {
+        "nBins50": {
+          "cytearcSeed": 4466,
+          "scanpySeed": 0,
+          "S": {
+            "n": 3546,
+            "pearson": 0.9946319061105914,
+            "spearman": 0.9543359562566233,
+            "maxAbsDiff": 0.01442403833310204,
+            "meanAbsDiff": 0.0029498876469495425,
+            "rangeFirst": 0.25673724585281166,
+            "rangeSecond": 0.25755078027332823
+          },
+          "G2M": {
+            "n": 3546,
+            "pearson": 0.9869173733111212,
+            "spearman": 0.7466879215962529,
+            "maxAbsDiff": 0.036939066215065985,
+            "meanAbsDiff": 0.006373195525880223,
+            "rangeFirst": 0.4145449493930552,
+            "rangeSecond": 0.4086602057587398
+          },
+          "phase": {
+            "n": 3546,
+            "fractionIdentical": 0.9633389734912577,
+            "cohenKappa": 0.9233831098798692,
+            "labels": [
+              "G1",
+              "S",
+              "G2M"
+            ],
+            "contingencyRowsFirstColumnsSecond": [
+              [
+                2314,
+                62,
+                1
+              ],
+              [
+                57,
+                862,
+                3
+              ],
+              [
+                2,
+                5,
+                240
+              ]
+            ]
+          },
+          "phaseFractionsCyteArc": {
+            "G1": 0.6703327693175409,
+            "S": 0.26001128031584886,
+            "G2M": 0.06965595036661026
+          },
+          "phaseFractionsScanpy": {
+            "G1": 0.6692047377326565,
+            "S": 0.2619853355893965,
+            "G2M": 0.06880992667794698
+          }
+        },
+        "nBins25": {
+          "cytearcSeed": 4466,
+          "scanpySeed": 0,
+          "S": {
+            "n": 3546,
+            "pearson": 0.9936359831496184,
+            "spearman": 0.9422010374463364,
+            "maxAbsDiff": 0.01398699458572578,
+            "meanAbsDiff": 0.0031824632583812226,
+            "rangeFirst": 0.263726064103233,
+            "rangeSecond": 0.26067651420245475
+          },
+          "G2M": {
+            "n": 3546,
+            "pearson": 0.9849269802030678,
+            "spearman": 0.7075423657609369,
+            "maxAbsDiff": 0.04210214545503872,
+            "meanAbsDiff": 0.007312980543328073,
+            "rangeFirst": 0.41406106285412503,
+            "rangeSecond": 0.40914454404780687
+          },
+          "phase": {
+            "n": 3546,
+            "fractionIdentical": 0.9483925549915397,
+            "cohenKappa": 0.8978469267087379,
+            "labels": [
+              "G1",
+              "S",
+              "G2M"
+            ],
+            "contingencyRowsFirstColumnsSecond": [
+              [
+                2168,
+                88,
+                1
+              ],
+              [
+                81,
+                946,
+                1
+              ],
+              [
+                4,
+                8,
+                249
+              ]
+            ]
+          },
+          "phaseFractionsCyteArc": {
+            "G1": 0.6364918217710096,
+            "S": 0.2899041173152848,
+            "G2M": 0.07360406091370558
+          },
+          "phaseFractionsScanpy": {
+            "G1": 0.6353637901861252,
+            "S": 0.29385222786238013,
+            "G2M": 0.07078398195149464
+          }
+        }
+      },
+      "seedVariability": {
+        "nBins50": {
+          "withinCyteArc": {
+            "pairs": 10,
+            "pearsonS": {
+              "min": 0.9943516907318991,
+              "median": 0.994743683575243,
+              "max": 0.9950168604973025
+            },
+            "pearsonG2M": {
+              "min": 0.9959844858224463,
+              "median": 0.9963552932563868,
+              "max": 0.9965888619291067
+            },
+            "maxAbsDiffS": {
+              "min": 0.012450364493754258,
+              "median": 0.01449093005684592,
+              "max": 0.016548495044676155
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.01774285213046421,
+              "median": 0.021326745107177553,
+              "max": 0.02462842399814568
+            },
+            "phaseFractionIdentical": {
+              "min": 0.957980823463057,
+              "median": 0.9624929498025945,
+              "max": 0.9667230682459109
+            },
+            "phaseKappa": {
+              "min": 0.9122775471902048,
+              "median": 0.9220837140590556,
+              "max": 0.9310480749297756
+            }
+          },
+          "withinScanpy": {
+            "pairs": 10,
+            "pearsonS": {
+              "min": 0.9940349419273892,
+              "median": 0.9946450841141223,
+              "max": 0.9950927860274972
+            },
+            "pearsonG2M": {
+              "min": 0.9957903604223826,
+              "median": 0.9962858827270655,
+              "max": 0.9965446869962765
+            },
+            "maxAbsDiffS": {
+              "min": 0.012450364493754258,
+              "median": 0.014557232824741632,
+              "max": 0.015514446094199386
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.016079626402844174,
+              "median": 0.019657683505340126,
+              "max": 0.02280605125452169
+            },
+            "phaseFractionIdentical": {
+              "min": 0.9602368866328257,
+              "median": 0.9643260011280316,
+              "max": 0.9664410603496898
+            },
+            "phaseKappa": {
+              "min": 0.9172383724106058,
+              "median": 0.9256203973581488,
+              "max": 0.9298298068421484
+            }
+          },
+          "cytearcVersusScanpy": {
+            "pairs": 25,
+            "pearsonS": {
+              "min": 0.9940349419273893,
+              "median": 0.994761030075715,
+              "max": 1.0
+            },
+            "pearsonG2M": {
+              "min": 0.9869173733111212,
+              "median": 0.9912021014334377,
+              "max": 0.995219160041869
+            },
+            "maxAbsDiffS": {
+              "min": 8.326672684688674e-17,
+              "median": 0.014287296525851395,
+              "max": 0.016548495044676155
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.027039435289343036,
+              "median": 0.03352603570334747,
+              "max": 0.04219118783603678
+            },
+            "phaseFractionIdentical": {
+              "min": 0.957980823463057,
+              "median": 0.9630569655950366,
+              "max": 0.9983079526226735
+            },
+            "phaseKappa": {
+              "min": 0.9121966394841419,
+              "median": 0.9231375212021844,
+              "max": 0.9964816029972853
+            }
+          },
+          "sameSeed": {
+            "pairs": 4,
+            "pearsonS": {
+              "min": 0.9999999999999998,
+              "median": 1.0,
+              "max": 1.0
+            },
+            "pearsonG2M": {
+              "min": 0.9950380949637845,
+              "median": 0.9951012481510074,
+              "max": 0.995219160041869
+            },
+            "maxAbsDiffS": {
+              "min": 8.326672684688674e-17,
+              "median": 8.326672684688674e-17,
+              "max": 9.71445146547012e-17
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.027543596248102778,
+              "median": 0.027543596248102778,
+              "max": 0.027543596248102778
+            },
+            "phaseFractionIdentical": {
+              "min": 0.9971799210377891,
+              "median": 0.9973209249858996,
+              "max": 0.9983079526226735
+            },
+            "phaseKappa": {
+              "min": 0.9941238524858291,
+              "median": 0.9944289797071082,
+              "max": 0.9964816029972853
+            }
+          }
+        },
+        "nBins25": {
+          "withinCyteArc": {
+            "pairs": 10,
+            "pearsonS": {
+              "min": 0.9929369243486791,
+              "median": 0.9934565240988221,
+              "max": 0.9937948202089278
+            },
+            "pearsonG2M": {
+              "min": 0.991901098711323,
+              "median": 0.9937328997317205,
+              "max": 0.9943686214757627
+            },
+            "maxAbsDiffS": {
+              "min": 0.014546738208060581,
+              "median": 0.015752343239505126,
+              "max": 0.018412142430814703
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.021576072898635685,
+              "median": 0.029693211829143737,
+              "max": 0.03498594728030907
+            },
+            "phaseFractionIdentical": {
+              "min": 0.9368302312464749,
+              "median": 0.9420473773265652,
+              "max": 0.9486745628877609
+            },
+            "phaseKappa": {
+              "min": 0.8754229724026338,
+              "median": 0.8855060002264521,
+              "max": 0.8982820360866989
+            }
+          },
+          "withinScanpy": {
+            "pairs": 10,
+            "pearsonS": {
+              "min": 0.9929369243486789,
+              "median": 0.9934851865204096,
+              "max": 0.9937948202089278
+            },
+            "pearsonG2M": {
+              "min": 0.9917434861278078,
+              "median": 0.9927676696722239,
+              "max": 0.9938466873222565
+            },
+            "maxAbsDiffS": {
+              "min": 0.014401066378540118,
+              "median": 0.01630935871067478,
+              "max": 0.01751044552676742
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.02157607289863568,
+              "median": 0.02761580975707325,
+              "max": 0.03498594728030907
+            },
+            "phaseFractionIdentical": {
+              "min": 0.9382402707275804,
+              "median": 0.9440214326001128,
+              "max": 0.9500846023688664
+            },
+            "phaseKappa": {
+              "min": 0.8778076581571311,
+              "median": 0.8891899109115488,
+              "max": 0.9008838371874875
+            }
+          },
+          "cytearcVersusScanpy": {
+            "pairs": 25,
+            "pearsonS": {
+              "min": 0.9929369243486789,
+              "median": 0.9935205709945458,
+              "max": 1.0
+            },
+            "pearsonG2M": {
+              "min": 0.9844845265387262,
+              "median": 0.988231549604111,
+              "max": 0.9952918532739022
+            },
+            "maxAbsDiffS": {
+              "min": 8.326672684688674e-17,
+              "median": 0.015630121613747616,
+              "max": 0.018412142430814703
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.027543596248102778,
+              "median": 0.03569115996389331,
+              "max": 0.045816665720467546
+            },
+            "phaseFractionIdentical": {
+              "min": 0.9357021996615905,
+              "median": 0.9444444444444444,
+              "max": 0.9985899605188945
+            },
+            "phaseKappa": {
+              "min": 0.8732008486023891,
+              "median": 0.8904238987402768,
+              "max": 0.9971900046579675
+            }
+          },
+          "sameSeed": {
+            "pairs": 4,
+            "pearsonS": {
+              "min": 0.9999999999999998,
+              "median": 0.9999999999999999,
+              "max": 1.0
+            },
+            "pearsonG2M": {
+              "min": 0.9950593894141513,
+              "median": 0.9951850139813454,
+              "max": 0.9952918532739022
+            },
+            "maxAbsDiffS": {
+              "min": 8.326672684688674e-17,
+              "median": 8.326672684688674e-17,
+              "max": 8.326672684688674e-17
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.027543596248102778,
+              "median": 0.027543596248102778,
+              "max": 0.027543596248102778
+            },
+            "phaseFractionIdentical": {
+              "min": 0.9943598420755781,
+              "median": 0.9971799210377891,
+              "max": 0.9985899605188945
+            },
+            "phaseKappa": {
+              "min": 0.9888547151139775,
+              "median": 0.9944487655220122,
+              "max": 0.9971900046579675
+            }
+          }
+        }
+      },
+      "defaults": {
+        "cytearc": {
+          "normalization": "counts * 1000 / library size, then log1p",
+          "nBins": 50,
+          "randSeed": 4466,
+          "seconds": 0.08140590299998962,
+          "phaseFractions": {
+            "G1": 0.6703327693175409,
+            "S": 0.26001128031584886,
+            "G2M": 0.06965595036661026
+          }
+        },
+        "scanpy": {
+          "normalization": "normalize_total(target_sum=1e4) then log1p",
+          "nBins": 25,
+          "randomState": 0,
+          "seconds": 2.617177158000004,
+          "phaseFractions": {
+            "G1": 0.631979695431472,
+            "S": 0.2952622673434856,
+            "G2M": 0.0727580372250423
+          }
+        },
+        "S": {
+          "n": 3546,
+          "pearson": 0.9894560963109942,
+          "spearman": 0.9479116674543583,
+          "maxAbsDiff": 0.7198168538971995,
+          "meanAbsDiff": 0.09210112977042148,
+          "rangeFirst": 0.25673724585281166,
+          "rangeSecond": 1.1308244543829427
+        },
+        "G2M": {
+          "n": 3546,
+          "pearson": 0.98220029497005,
+          "spearman": 0.8039909403681458,
+          "maxAbsDiff": 0.9525948801638229,
+          "meanAbsDiff": 0.14074257249748265,
+          "rangeFirst": 0.4145449493930552,
+          "rangeSecond": 1.6040654727674166
+        },
+        "phase": {
+          "n": 3546,
+          "fractionIdentical": 0.9413423575860124,
+          "cohenKappa": 0.8813855909082356,
+          "labels": [
+            "G1",
+            "S",
+            "G2M"
+          ],
+          "contingencyRowsFirstColumnsSecond": [
+            [
+              2209,
+              159,
+              9
+            ],
+            [
+              32,
+              885,
+              5
+            ],
+            [
+              0,
+              3,
+              244
+            ]
+          ]
+        }
+      },
+      "supplementary": {
+        "storedScores": {
+          "note": "S_score and G2M_score shipped with the source AnnData of this store; their gene lists and normalisation are not recorded in the store",
+          "cytearcDefaultVersusStored": {
+            "S": {
+              "n": 3546,
+              "pearson": 0.9783573008884568,
+              "spearman": 0.896230074940845,
+              "maxAbsDiff": 0.9141572303107622,
+              "meanAbsDiff": 0.183230818203143,
+              "rangeFirst": 0.25673724585281166,
+              "rangeSecond": 1.5084665417671204
+            },
+            "G2M": {
+              "n": 3546,
+              "pearson": 0.9830818487204883,
+              "spearman": 0.8383130041466427,
+              "maxAbsDiff": 1.1488515679802809,
+              "meanAbsDiff": 0.20588947121551823,
+              "rangeFirst": 0.4145449493930552,
+              "rangeSecond": 1.9416734874248505
+            }
+          },
+          "scanpyDefaultVersusStored": {
+            "S": {
+              "n": 3546,
+              "pearson": 0.9809240447090073,
+              "spearman": 0.8991018002590343,
+              "maxAbsDiff": 0.28099264349937875,
+              "meanAbsDiff": 0.1195830441658143,
+              "rangeFirst": 1.1308244543829427,
+              "rangeSecond": 1.5084665417671204
+            },
+            "G2M": {
+              "n": 3546,
+              "pearson": 0.9840572373284239,
+              "spearman": 0.7988131844135066,
+              "maxAbsDiff": 0.3576180754975036,
+              "meanAbsDiff": 0.0715086519361504,
+              "rangeFirst": 1.6040654727674166,
+              "rangeSecond": 1.9416734874248505
+            }
+          }
+        }
+      },
+      "timings": {
+        "cytearcFiveSeedsNBins50Seconds": 2.0070610989999977,
+        "scanpyFiveSeedsNBins50Seconds": 0.9532392739999977,
+        "cytearcFiveSeedsNBins25Seconds": 1.7384635720000006,
+        "scanpyFiveSeedsNBins25Seconds": 0.8709938040000083
+      },
+      "seconds": 79.28964755300001
+    },
+    "pbmc": {
+      "dataset": {
+        "name": "tenx_5K_pbmc_rnaseq",
+        "input": {
+          "catalogue": "cytearc_docs",
+          "dataset": "tenx_5K_pbmc_rnaseq",
+          "files": {
+            "data.h5": {
+              "bytes": 18098007,
+              "sha256": "17a47c2d3b323858ae9183e332fa31a01bf130eaa7ca6199ca9d4efe5217374f"
+            }
+          }
+        },
+        "analysis": {
+          "cytearcVersion": "1.3.0",
+          "filtering": {
+            "enabled": true,
+            "method": "mad",
+            "attrs": [
+              "RNA_nCounts",
+              "RNA_nFeatures",
+              "RNA_percentMito",
+              "RNA_percentRibo"
+            ],
+            "minP": 0.01,
+            "maxP": 0.99,
+            "sampleColumn": null,
+            "nMads": 3.0,
+            "minCellsPerSample": 20
+          },
+          "hvgCount": 1000,
+          "pcaDims": 21,
+          "neighborsK": 11,
+          "leiden": {
+            "partitions": [
+              0.5,
+              0.75,
+              1.0,
+              1.25
+            ],
+            "selected": null
+          },
+          "annIndex": {
+            "ann_metric": "l2",
+            "ann_m": 24,
+            "ann_ef": 200,
+            "ann_efc": 200,
+            "rand_state": 4466,
+            "ann_parallel": false
+          },
+          "analysisCells": 4331
+        },
+        "cellSelection": "analysis_cell_selection",
+        "cells": 4331,
+        "cellsInStore": 5025,
+        "features": 33538,
+        "sizeFactor": 1000.0,
+        "maxAbsDiffRawRowSumsVersusStoredTotals": 0.0
+      },
+      "genes": {
+        "sListLength": 43,
+        "g2mListLength": 54,
+        "controlSize": 43,
+        "sMissing": [],
+        "g2mMissing": [],
+        "sMatchedMoreThanOnce": [],
+        "g2mMatchedMoreThanOnce": [],
+        "sMatched": 43,
+        "g2mMatched": 54
+      },
+      "deterministicControls": {
+        "nBins50": {
+          "S": {
+            "n": 4331,
+            "pearson": 1.0,
+            "spearman": 1.0,
+            "maxAbsDiff": 8.326672684688674e-17,
+            "meanAbsDiff": 4.077461321968113e-19,
+            "rangeFirst": 0.25851786351604267,
+            "rangeSecond": 0.25851786351604267
+          },
+          "G2M": {
+            "n": 4331,
+            "pearson": 1.0,
+            "spearman": 1.0,
+            "maxAbsDiff": 2.7755575615628914e-16,
+            "meanAbsDiff": 1.995472721615436e-18,
+            "rangeFirst": 0.35888941436184474,
+            "rangeSecond": 0.35888941436184446
+          }
+        },
+        "nBins25": {
+          "S": {
+            "n": 4331,
+            "pearson": 1.0,
+            "spearman": 1.0,
+            "maxAbsDiff": 1.6653345369377348e-16,
+            "meanAbsDiff": 1.4667645737767414e-18,
+            "rangeFirst": 0.25715870651118317,
+            "rangeSecond": 0.25715870651118317
+          },
+          "G2M": {
+            "n": 4331,
+            "pearson": 1.0,
+            "spearman": 1.0,
+            "maxAbsDiff": 2.7755575615628914e-16,
+            "meanAbsDiff": 1.9193707912447146e-18,
+            "rangeFirst": 0.35899376829193574,
+            "rangeSecond": 0.35899376829193547
+          }
+        }
+      },
+      "deterministicControlsPublic": {
+        "nBins50": {
+          "S": {
+            "n": 4331,
+            "pearson": 0.9999999999999998,
+            "spearman": 1.0,
+            "maxAbsDiff": 8.326672684688674e-17,
+            "meanAbsDiff": 3.6568980225509696e-19,
+            "rangeFirst": 0.20257627741717113,
+            "rangeSecond": 0.20257627741717113
+          },
+          "G2M": {
+            "n": 4331,
+            "pearson": 0.9999999999999998,
+            "spearman": 1.0,
+            "maxAbsDiff": 1.8041124150158794e-16,
+            "meanAbsDiff": 1.0622227333850132e-18,
+            "rangeFirst": 0.2617794704507767,
+            "rangeSecond": 0.2617794704507767
+          }
+        },
+        "nBins25": {
+          "S": {
+            "n": 4331,
+            "pearson": 1.0,
+            "spearman": 1.0,
+            "maxAbsDiff": 1.1796119636642288e-16,
+            "meanAbsDiff": 6.636889401278156e-19,
+            "rangeFirst": 0.20481537354098314,
+            "rangeSecond": 0.20481537354098314
+          },
+          "G2M": {
+            "n": 4331,
+            "pearson": 1.0,
+            "spearman": 1.0,
+            "maxAbsDiff": 1.3877787807814457e-16,
+            "meanAbsDiff": 9.809138288310322e-19,
+            "rangeFirst": 0.26205539255015825,
+            "rangeSecond": 0.26205539255015825
+          }
+        }
+      },
+      "matched": {
+        "nBins50": {
+          "cytearcSeed": 4466,
+          "scanpySeed": 0,
+          "S": {
+            "n": 4331,
+            "pearson": 0.9763788256255278,
+            "spearman": 0.9515576455384781,
+            "maxAbsDiff": 0.011864746275244191,
+            "meanAbsDiff": 0.0016937997500888727,
+            "rangeFirst": 0.2087868724997075,
+            "rangeSecond": 0.20683729551008773
+          },
+          "G2M": {
+            "n": 4331,
+            "pearson": 0.9279454030836535,
+            "spearman": 0.8755095124865234,
+            "maxAbsDiff": 0.01487150721145905,
+            "meanAbsDiff": 0.0034959650771651273,
+            "rangeFirst": 0.26163102166215446,
+            "rangeSecond": 0.2671863044630112
+          },
+          "phase": {
+            "n": 4331,
+            "fractionIdentical": 0.9138767028399908,
+            "cohenKappa": 0.7921713643275042,
+            "labels": [
+              "G1",
+              "S",
+              "G2M"
+            ],
+            "contingencyRowsFirstColumnsSecond": [
+              [
+                2908,
+                114,
+                6
+              ],
+              [
+                226,
+                1023,
+                0
+              ],
+              [
+                22,
+                5,
+                27
+              ]
+            ]
+          },
+          "phaseFractionsCyteArc": {
+            "G1": 0.699145693835142,
+            "S": 0.28838605402909256,
+            "G2M": 0.012468252135765412
+          },
+          "phaseFractionsScanpy": {
+            "G1": 0.7287000692680674,
+            "S": 0.2636804433156315,
+            "G2M": 0.007619487416301085
+          }
+        },
+        "nBins25": {
+          "cytearcSeed": 4466,
+          "scanpySeed": 0,
+          "S": {
+            "n": 4331,
+            "pearson": 0.9475205655985686,
+            "spearman": 0.891208780472865,
+            "maxAbsDiff": 0.019386087175105614,
+            "meanAbsDiff": 0.008152589200048556,
+            "rangeFirst": 0.2105535410856906,
+            "rangeSecond": 0.20863265962121139
+          },
+          "G2M": {
+            "n": 4331,
+            "pearson": 0.9367476302194122,
+            "spearman": 0.8833496600991076,
+            "maxAbsDiff": 0.021107078774254096,
+            "meanAbsDiff": 0.008279616096953855,
+            "rangeFirst": 0.270614488918901,
+            "rangeSecond": 0.2692450964430568
+          },
+          "phase": {
+            "n": 4331,
+            "fractionIdentical": 0.9672131147540983,
+            "cohenKappa": 0.35800935528690625,
+            "labels": [
+              "G1",
+              "S",
+              "G2M"
+            ],
+            "contingencyRowsFirstColumnsSecond": [
+              [
+                4148,
+                17,
+                123
+              ],
+              [
+                0,
+                17,
+                0
+              ],
+              [
+                2,
+                0,
+                24
+              ]
+            ]
+          },
+          "phaseFractionsCyteArc": {
+            "G1": 0.9900715770030016,
+            "S": 0.003925190487185408,
+            "G2M": 0.006003232509812976
+          },
+          "phaseFractionsScanpy": {
+            "G1": 0.9582082659893789,
+            "S": 0.007850380974370815,
+            "G2M": 0.03394135303625029
+          }
+        }
+      },
+      "seedVariability": {
+        "nBins50": {
+          "withinCyteArc": {
+            "pairs": 10,
+            "pearsonS": {
+              "min": 0.9733629585281676,
+              "median": 0.9791555716083992,
+              "max": 0.9813056158591016
+            },
+            "pearsonG2M": {
+              "min": 0.9213913352225264,
+              "median": 0.9409484408645343,
+              "max": 0.9599338990408978
+            },
+            "maxAbsDiffS": {
+              "min": 0.008060473606169714,
+              "median": 0.008554656055531726,
+              "max": 0.01010433159118668
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.01013758049174391,
+              "median": 0.013925964628898443,
+              "max": 0.01662364002857805
+            },
+            "phaseFractionIdentical": {
+              "min": 0.9057954283075502,
+              "median": 0.9131840221657817,
+              "max": 0.9182636804433156
+            },
+            "phaseKappa": {
+              "min": 0.7742766702689445,
+              "median": 0.7919146384389737,
+              "max": 0.8042919658013175
+            }
+          },
+          "withinScanpy": {
+            "pairs": 10,
+            "pearsonS": {
+              "min": 0.9766439110496056,
+              "median": 0.9789486313899846,
+              "max": 0.9801480851212777
+            },
+            "pearsonG2M": {
+              "min": 0.9214271358283105,
+              "median": 0.9550075983935971,
+              "max": 0.9628975454595554
+            },
+            "maxAbsDiffS": {
+              "min": 0.008185115714793335,
+              "median": 0.008847546689737881,
+              "max": 0.01129518447546867
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.01013758049174391,
+              "median": 0.013724527814409105,
+              "max": 0.016138472177329347
+            },
+            "phaseFractionIdentical": {
+              "min": 0.9057954283075502,
+              "median": 0.9144539367351652,
+              "max": 0.9238051258369891
+            },
+            "phaseKappa": {
+              "min": 0.7742766702689445,
+              "median": 0.7943015959738631,
+              "max": 0.8104803291940094
+            }
+          },
+          "cytearcVersusScanpy": {
+            "pairs": 25,
+            "pearsonS": {
+              "min": 0.9733629585281677,
+              "median": 0.9790213999801621,
+              "max": 1.0
+            },
+            "pearsonG2M": {
+              "min": 0.9213913352225264,
+              "median": 0.9526372431714617,
+              "max": 1.0
+            },
+            "maxAbsDiffS": {
+              "min": 8.326672684688674e-17,
+              "median": 0.008699655971426128,
+              "max": 0.011864746275244191
+            },
+            "maxAbsDiffG2M": {
+              "min": 2.7755575615628914e-17,
+              "median": 0.013620192052445714,
+              "max": 0.016623640028578048
+            },
+            "phaseFractionIdentical": {
+              "min": 0.9057954283075502,
+              "median": 0.9150311706303395,
+              "max": 1.0
+            },
+            "phaseKappa": {
+              "min": 0.7742766702689445,
+              "median": 0.79984849946151,
+              "max": 1.0
+            }
+          },
+          "sameSeed": {
+            "pairs": 4,
+            "pearsonS": {
+              "min": 1.0,
+              "median": 1.0,
+              "max": 1.0
+            },
+            "pearsonG2M": {
+              "min": 0.9999999999999998,
+              "median": 1.0,
+              "max": 1.0
+            },
+            "maxAbsDiffS": {
+              "min": 8.326672684688674e-17,
+              "median": 8.326672684688674e-17,
+              "max": 1.1102230246251565e-16
+            },
+            "maxAbsDiffG2M": {
+              "min": 2.7755575615628914e-17,
+              "median": 3.469446951953614e-17,
+              "max": 4.163336342344337e-17
+            },
+            "phaseFractionIdentical": {
+              "min": 1.0,
+              "median": 1.0,
+              "max": 1.0
+            },
+            "phaseKappa": {
+              "min": 1.0,
+              "median": 1.0,
+              "max": 1.0
+            }
+          }
+        },
+        "nBins25": {
+          "withinCyteArc": {
+            "pairs": 10,
+            "pearsonS": {
+              "min": 0.9209154712024281,
+              "median": 0.9332516396570869,
+              "max": 0.9515313835817458
+            },
+            "pearsonG2M": {
+              "min": 0.9000293443814237,
+              "median": 0.9208610671887447,
+              "max": 0.9397996583437337
+            },
+            "maxAbsDiffS": {
+              "min": 0.014846785862297499,
+              "median": 0.018886257757253583,
+              "max": 0.02585682303210375
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.01419585127767352,
+              "median": 0.01853833000083944,
+              "max": 0.025390130799861414
+            },
+            "phaseFractionIdentical": {
+              "min": 0.8582313553451859,
+              "median": 0.9257677210805818,
+              "max": 0.9711383052412838
+            },
+            "phaseKappa": {
+              "min": 0.10733585186368788,
+              "median": 0.4129700489609407,
+              "max": 0.6610604027770038
+            }
+          },
+          "withinScanpy": {
+            "pairs": 10,
+            "pearsonS": {
+              "min": 0.920915471202428,
+              "median": 0.9370747035118895,
+              "max": 0.9486256546112136
+            },
+            "pearsonG2M": {
+              "min": 0.9000293443814237,
+              "median": 0.9249807300270612,
+              "max": 0.9383236249469404
+            },
+            "maxAbsDiffS": {
+              "min": 0.014846785862297499,
+              "median": 0.016897262265642705,
+              "max": 0.023770439478646432
+            },
+            "maxAbsDiffG2M": {
+              "min": 0.01419585127767352,
+              "median": 0.016341109431870903,
+              "max": 0.024680646243855634
+            },
+            "phaseFractionIdentical": {
+              "min": 0.887093050103902,
+              "median": 0.9377741861002078,
+              "max": 0.9771415377510967
+            },
+            "phaseKappa": {
+              "min": 0.3731364886380084,
+              "median": 0.5525253956688226,
+              "max": 0.706328838223298
+            }
+          },
+          "cytearcVersusScanpy": {
+            "pairs": 25,
+            "pearsonS": {
+              "min": 0.9209154712024281,
+              "median": 0.939798952342005,
+              "max": 1.0
+            },
+            "pearsonG2M": {
+              "min": 0.9000293443814237,
+              "median": 0.9285976796543214,
+              "max": 1.0
+            },
+            "maxAbsDiffS": {
+              "min": 8.326672684688674e-17,
+              "median": 0.017352823455518827,
+              "max": 0.02585682303210375
+            },
+            "maxAbsDiffG2M": {
+              "min": 2.7755575615628914e-17,
+              "median": 0.01671680774126216,
+              "max": 0.025390130799861414
+            },
+            "phaseFractionIdentical": {
+              "min": 0.8582313553451859,
+              "median": 0.9422766104825675,
+              "max": 1.0
+            },
+            "phaseKappa": {
+              "min": 0.10733585186368788,
+              "median": 0.5229077053982458,
+              "max": 1.0
+            }
+          },
+          "sameSeed": {
+            "pairs": 4,
+            "pearsonS": {
+              "min": 0.9999999999999998,
+              "median": 1.0,
+              "max": 1.0
+            },
+            "pearsonG2M": {
+              "min": 0.9999999999999998,
+              "median": 0.9999999999999999,
+              "max": 1.0
+            },
+            "maxAbsDiffS": {
+              "min": 8.326672684688674e-17,
+              "median": 8.326672684688674e-17,
+              "max": 1.1102230246251565e-16
+            },
+            "maxAbsDiffG2M": {
+              "min": 2.7755575615628914e-17,
+              "median": 2.7755575615628914e-17,
+              "max": 2.7755575615628914e-17
+            },
+            "phaseFractionIdentical": {
+              "min": 1.0,
+              "median": 1.0,
+              "max": 1.0
+            },
+            "phaseKappa": {
+              "min": 1.0,
+              "median": 1.0,
+              "max": 1.0
+            }
+          }
+        }
+      },
+      "defaults": {
+        "cytearc": {
+          "normalization": "counts * 1000 / library size, then log1p",
+          "nBins": 50,
+          "randSeed": 4466,
+          "seconds": 0.09040959399999338,
+          "phaseFractions": {
+            "G1": 0.699145693835142,
+            "S": 0.28838605402909256,
+            "G2M": 0.012468252135765412
+          }
+        },
+        "scanpy": {
+          "normalization": "normalize_total(target_sum=1e4) then log1p",
+          "nBins": 25,
+          "randomState": 0,
+          "seconds": 0.34532896299998583,
+          "phaseFractions": {
+            "G1": 0.8981759408912491,
+            "S": 0.0355576079427384,
+            "G2M": 0.06626645116601247
+          }
+        },
+        "S": {
+          "n": 4331,
+          "pearson": 0.9548916001092977,
+          "spearman": 0.9316605175086641,
+          "maxAbsDiff": 0.6107627561231883,
+          "meanAbsDiff": 0.07800940759737811,
+          "rangeFirst": 0.2087868724997075,
+          "rangeSecond": 1.001650192425956
+        },
+        "G2M": {
+          "n": 4331,
+          "pearson": 0.908837879355087,
+          "spearman": 0.8568814440671875,
+          "maxAbsDiff": 0.7523524592204411,
+          "meanAbsDiff": 0.04151726467240188,
+          "rangeFirst": 0.26163102166215446,
+          "rangeSecond": 1.1360773317963844
+        },
+        "phase": {
+          "n": 4331,
+          "fractionIdentical": 0.7099976910644193,
+          "cohenKappa": 0.19658852569350405,
+          "labels": [
+            "G1",
+            "S",
+            "G2M"
+          ],
+          "contingencyRowsFirstColumnsSecond": [
+            [
+              2874,
+              2,
+              152
+            ],
+            [
+              1011,
+              152,
+              86
+            ],
+            [
+              5,
+              0,
+              49
+            ]
+          ]
+        }
+      },
+      "supplementary": {},
+      "timings": {
+        "cytearcFiveSeedsNBins50Seconds": 2.41668884500001,
+        "scanpyFiveSeedsNBins50Seconds": 1.1748255669999992,
+        "cytearcFiveSeedsNBins25Seconds": 1.9527246590000118,
+        "scanpyFiveSeedsNBins25Seconds": 1.0593703720000178
+      },
+      "seconds": 52.389247345
+    }
+  },
+  "notes": [
+    "CyteArc scores library-size-normalised counts scaled to 1,000 and log-transformed with log1p (CyteArc's default); the matched comparison gives Scanpy exactly these values. The assay-level deterministic check uses the values without the log transform.",
+    "Both implementations set the control size to the length of the shorter input list, counting symbols that are absent from the assay.",
+    "CyteArc draws the control genes of every expression bin from one generator seeded with rand_seed, in the order Scanpy draws them after seeding the global NumPy generator once per score_genes call. Different seeds give different draws, so identical control sets require the deterministic setting or equal seeds (sameSeed).",
+    "CyteArc matches symbols case-insensitively; Scanpy matches exact var names, so the lists given to Scanpy were translated to the matched feature ids."
+  ],
+  "runtimeSeconds": 131.679032218
+}

@@ -1,0 +1,54 @@
+[project]
+name = "cytearc-manuscript"
+version = "0.1.0"
+description = "Build the CyteArc paper from prepared figure and table data"
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+# Rendering versions are fixed; cloud experiments use experiments/runtime/python-cytearc.in.
+dependencies = [
+    "matplotlib==3.11.2",
+    "numpy==2.5.3",
+    "pandas",
+    "scikit-learn",
+    "scipy",
+    "statsmodels",
+    "zarr",
+]
+
+[dependency-groups]
+# Explicit collection and catalogue preparation.
+collect = [
+    "cytebase>=0.1.0",
+    "boto3==1.43.104",
+    "duckdb==1.5.6",
+]
+# Optional client for the central cloud runner.
+cloud = ["modal"]
+experiment = [
+    "cytearc==1.3.0",
+    "cytebase==0.1.0",
+    "decoupler==2.2.0",
+    "igraph>=1.0.0",
+    "polars>=1.20",
+    "pyarrow>=19",
+    "pydantic>=2.13.4",
+    "pyscenic==0.12.1",
+    "rdata==1.1.0",
+    "scanpy==1.12.4",
+    "scikit-image==0.26.0",
+    "setuptools==80.9.0",
+]
+dev = ["ruff==0.16.9"]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+# The scripts' comments and most of their code wrap at 100 columns.
+line-length = 100
+target-version = "py314"
+src = ["manuscript", "experiments"]
+
+[tool.ruff.lint]
+# The CyteArc repository's rule set, plus import sorting.
+select = ["E4", "E7", "E9", "F", "I"]

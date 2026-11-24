@@ -1,0 +1,94 @@
+{
+ "stages": [
+  {
+   "stage": "filterCells",
+   "name": "cell filter",
+   "fork": null,
+   "storedSeconds": 44.77984887599996,
+   "forkSeconds": null
+  },
+  {
+   "stage": "markHvgs",
+   "name": "variable genes",
+   "fork": null,
+   "storedSeconds": 342.601621068,
+   "forkSeconds": null
+  },
+  {
+   "stage": "runNormalization",
+   "name": "normalization",
+   "fork": "lookup",
+   "storedSeconds": 281.9854407779999,
+   "forkSeconds": 40.502934232
+  },
+  {
+   "stage": "runPca",
+   "name": "PCA",
+   "fork": "lookup",
+   "storedSeconds": 226.55699222400017,
+   "forkSeconds": 18.973824297
+  },
+  {
+   "stage": "buildAnnIndex",
+   "name": "neighbor index",
+   "fork": "lookup",
+   "storedSeconds": 221.8412554219999,
+   "forkSeconds": 18.986018837000003
+  },
+  {
+   "stage": "queryNeighbors",
+   "name": "neighbors",
+   "fork": "computed",
+   "storedSeconds": 215.52881528999978,
+   "forkSeconds": 247.79605962099998
+  },
+  {
+   "stage": "buildConnectivityMap",
+   "name": "graph",
+   "fork": "computed",
+   "storedSeconds": 42.46458683600031,
+   "forkSeconds": 90.36716461399999
+  },
+  {
+   "stage": "buildEmbeddingInitialization",
+   "name": "UMAP initialization",
+   "fork": null,
+   "storedSeconds": 141.60060647799992,
+   "forkSeconds": null
+  },
+  {
+   "stage": "runUmap",
+   "name": "UMAP",
+   "fork": "computed",
+   "storedSeconds": 876.9608877070004,
+   "forkSeconds": 1262.886780625
+  },
+  {
+   "stage": "runLeiden",
+   "name": "Leiden",
+   "fork": "computed",
+   "storedSeconds": 111.55103721700016,
+   "forkSeconds": 109.25516932400001
+  },
+  {
+   "stage": "findMarkers",
+   "name": "markers",
+   "fork": "computed",
+   "storedSeconds": 397.5684756339997,
+   "forkSeconds": 412.04794197699994
+  }
+ ],
+ "totals": {
+  "storedSeconds": 2903.43956753,
+  "forkSeconds": 2122.353116161
+ },
+ "cells": 10000000,
+ "cpus": {
+  "stored": 16,
+  "fork": 16
+ },
+ "source": [
+  "experiments/mapping/records/artifact_reuse_runs.json",
+  "experiments/benchmarks/records/raw/rna_scaling_runs.json"
+ ]
+}

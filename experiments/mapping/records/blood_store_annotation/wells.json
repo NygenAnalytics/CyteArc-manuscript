@@ -1,0 +1,35 @@
+{
+ "study": "wells",
+ "mappingRule": {
+  "savedNeighbors": 30,
+  "voteThreshold": 0.0,
+  "missingFeaturePolicy": "reference_mean"
+ },
+ "eligibility": "Primary cells (is_primary_data) with tissue 'blood' and a recorded donor",
+ "referenceOpening": {
+  "seconds": 106.763446498,
+  "countReadBytes": 0,
+  "transferredBytes": 2653757063,
+  "referenceCells": 4292870,
+  "referenceFeatures": 2000
+ },
+ "referenceReadsIncludingOpening": {
+  "countReadBytes": 0,
+  "transferredBytes": 4111151617
+ },
+ "peakContainerBytes": 11423084544,
+ "containerMemoryBytes": 68719476736,
+ "stores": [
+  {
+   "store": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+   "storeCells": 1281499,
+   "eligibleCells": 111324,
+   "donors": 19,
+   "referenceFeaturesMissing": [],
+   "mappingPeakContainerBytes": 5016035328,
+   "mappingSeconds": 544.889344718,
+   "typedCells": 110830,
+   "agreeingCells": 109525
+  }
+ ]
+}

@@ -1,0 +1,282 @@
+{
+  "module": "internal.reuse.composite_and_remote",
+  "function": "run",
+  "region": "us-central",
+  "startedAt": 1793166775.9349227,
+  "status": "completed",
+  "result": {
+    "remoteQueries": {
+      "tabulaSapiens1_1M": {
+        "totalCells": 1136218,
+        "bCellsSelected": 114495,
+        "umapShape": [
+          1136218,
+          2
+        ],
+        "ms4a1MeanInBCells": 0.7682125065930686,
+        "openSeconds": 3.964638153,
+        "openIo": {
+          "readBytes": 78727,
+          "readMB": 0.079,
+          "requests": 105,
+          "raw": {
+            "gets": 105,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 78727,
+            "readRequestedBytes": 78727,
+            "readTransferredBytes": 78727,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 10
+          },
+          "http": {
+            "requests": 261,
+            "gets": 261,
+            "rangedGets": 0,
+            "responseBytes": 203874
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 178,
+            "302": 83
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "embeddingAndMarkerQuerySeconds": 4.493398767,
+        "embeddingAndMarkerQueryIo": {
+          "readBytes": 68537741,
+          "readMB": 68.538,
+          "requests": 135,
+          "raw": {
+            "gets": 107,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 28,
+            "partialGets": 0,
+            "requestedBytes": 55360507,
+            "transferredBytes": 68537741,
+            "readRequestedBytes": 68537741,
+            "readTransferredBytes": 68537741,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 56,
+            "countReadBytes": 55360507,
+            "maxInFlight": 28
+          },
+          "http": {
+            "requests": 302,
+            "gets": 302,
+            "rangedGets": 112,
+            "responseBytes": 68703126
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 122,
+            "302": 124,
+            "206": 56
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "localStoreBytes": 0,
+        "sourceCountBytes": 12198454875,
+        "countMatrixAttributes": {
+          "cytearc:countMatrixLayout": {
+            "policy": {
+              "unitBytes": 1000000000,
+              "chunkBytes": 100000000
+            },
+            "nCells": 1136218,
+            "nFeats": 60606,
+            "dtype": "uint32",
+            "itemsize": 4,
+            "chunksPerShard": 28,
+            "counts": {
+              "shape": [
+                1136218,
+                60606
+              ],
+              "chunks": [
+                4125,
+                6048
+              ],
+              "shards": [
+                4125,
+                66528
+              ]
+            },
+            "countsT": {
+              "shape": [
+                60606,
+                1136218
+              ],
+              "chunks": [
+                216,
+                41250
+              ],
+              "shards": [
+                6048,
+                41250
+              ]
+            },
+            "readGroup": {
+              "featureWidth": 216,
+              "cellExtent": 1136218,
+              "chunkFeatures": 216,
+              "chunkCells": 41250,
+              "shardFeatures": 6048,
+              "shardCells": 41250,
+              "shardsTouched": 28,
+              "chunksTouched": 28,
+              "readGroupBytes": 981692352,
+              "physicalShardBytes": 997920000
+            },
+            "sourceDecodeAmplification": 1.0,
+            "fingerprint": "c28a7d6501736f03d0931fe2568f6e970805fa5be5d5a6c9d9c3e472ae504c00"
+          },
+          "complete": true,
+          "content_fingerprint": "afdbea71b0fdbfb7a771f6d9837b5eb9baec9e54513863f94350318f9c849c5a"
+        },
+        "repeatedQuery": {
+          "elapsedSeconds": 2.5136676500000004,
+          "io": {
+            "readBytes": 66270896,
+            "readMB": 66.271,
+            "requests": 103,
+            "raw": {
+              "gets": 75,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 28,
+              "partialGets": 0,
+              "requestedBytes": 55360507,
+              "transferredBytes": 66270896,
+              "readRequestedBytes": 66270896,
+              "readTransferredBytes": 66270896,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 56,
+              "countReadBytes": 55360507,
+              "maxInFlight": 28
+            },
+            "http": {
+              "requests": 186,
+              "gets": 186,
+              "rangedGets": 112,
+              "responseBytes": 66353271
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "302": 93,
+              "200": 37,
+              "206": 56
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "sourceCountBytes": 12198454875
+        }
+      },
+      "wilkCovid19DonorTest": {
+        "totalCells": 44721,
+        "testedCells": 10339,
+        "seconds": 10.370886375,
+        "io": {
+          "readBytes": 37523350,
+          "readMB": 37.523,
+          "requests": 381,
+          "raw": {
+            "gets": 378,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 3,
+            "partialGets": 0,
+            "requestedBytes": 32784087,
+            "transferredBytes": 37523350,
+            "readRequestedBytes": 37523350,
+            "readTransferredBytes": 37523350,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 6,
+            "countReadBytes": 32784087,
+            "maxInFlight": 10
+          },
+          "http": {
+            "requests": 411,
+            "gets": 411,
+            "rangedGets": 18,
+            "responseBytes": 37532018
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 263,
+            "302": 139,
+            "206": 9
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "localMountMB": 5.868,
+        "adjustedPValues": {
+          "ISG15": 0.06993006993006994,
+          "IFIT1": 0.06993006993006994,
+          "IFIT2": 0.23426573426573427,
+          "IFIT3": 0.11013986013986014,
+          "MX1": 0.04895104895104895,
+          "OAS1": 0.21678321678321677
+        },
+        "donorsByCondition": {
+          "normal": [
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5",
+            "H6"
+          ],
+          "COVID-19": [
+            "C1",
+            "C2",
+            "C3",
+            "C4",
+            "C5",
+            "C6",
+            "C7"
+          ]
+        },
+        "test": "Two-sided Mann-Whitney on donor means with pooled BH correction across six genes",
+        "targetCellType": "CD14-positive monocyte"
+      }
+    },
+    "resources": {
+      "operationBaselineBytes": 475713536,
+      "operationPeakBytes": 1362100224,
+      "operationIncrementalPeakBytes": 886386688,
+      "operationPeakSource": "cgroupMemoryCurrent",
+      "processTreeRssBaselineBytes": 488402944,
+      "processTreeRssPeakBytes": 1413505024,
+      "processTreeRssIncrementalPeakBytes": 925102080,
+      "processTreeRssAfterBytes": 1083080704,
+      "cgroupMemoryCurrentBaselineBytes": 475713536,
+      "cgroupMemoryCurrentPeakBytes": 1362100224,
+      "cgroupMemoryCurrentAfterBytes": 1031663616,
+      "cgroupMemoryPeakBytes": null,
+      "cgroupMemoryPeakScope": "unavailable",
+      "memoryMaxBytes": 17179869184,
+      "memoryEventsDelta": null,
+      "cpuQuotaCores": null
+    },
+    "sourceStorageOptions": {
+      "token": false,
+      "block_size": 1
+    }
+  },
+  "elapsedSeconds": 22.069854974746704
+}

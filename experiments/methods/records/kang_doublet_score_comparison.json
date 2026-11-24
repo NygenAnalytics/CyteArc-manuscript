@@ -1,0 +1,365 @@
+{
+  "description": "CyteArc doublet scores against demuxlet genotype-based multiplet calls for the Kang 2018 PBMCs, with Scrublet and total counts as comparators.",
+  "groundTruth": {
+    "source": "GEO GSE96583, GSE96583_batch2.total.tsne.df.tsv.gz (demuxlet calls)",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96583/suppl/GSE96583_batch2.total.tsne.df.tsv.gz",
+    "positiveClass": "doublet",
+    "negativeClass": "singlet",
+    "dropped": "ambs (ambiguous)",
+    "limitation": "demuxlet detects only doublets between donors"
+  },
+  "reference": {
+    "comparator": "scanpy.pp.scrublet with defaults (expected_doublet_rate 0.05, sim_doublet_ratio 2, 30 PCs)",
+    "scanpyVersion": "1.12.4",
+    "scikitImageVersion": "0.26.0",
+    "randomState": 0,
+    "baseline": "RNA_nCounts (total counts per cell)"
+  },
+  "comparisonKind": "accuracy against genotype-based ground truth",
+  "conditions": {
+    "ctrl": {
+      "dataset": "kang_15K_pbmc_rnaseq",
+      "input": {
+        "catalogue": "cytearc_docs",
+        "dataset": "kang_15K_pbmc_rnaseq",
+        "files": {
+          "barcodes.tsv.gz": {
+            "bytes": 52875,
+            "sha256": "a4711c121443d9cb37e33e6ac57449f539ff46e0a50e4a34695861cbba666c54"
+          },
+          "features.tsv.gz": {
+            "bytes": 276960,
+            "sha256": "86f9914714bc554b3b8149681986521b3881c22a934a99e1b45401c3dd08aef4"
+          },
+          "matrix.mtx.gz": {
+            "bytes": 28537003,
+            "sha256": "8c5d623aa57bbf7e1187a643524792003cc103375ad3449e603cf6e9ccfff61d"
+          }
+        }
+      },
+      "join": {
+        "geoCells": 14619,
+        "geoBarcodesWithSuffix11": 0,
+        "storeCells": 14619,
+        "matchedDirectly": 14619,
+        "matchedAfterRemap": 14619,
+        "unmatched": 0
+      },
+      "callsInStore": {
+        "singlet": 12315,
+        "doublet": 1598,
+        "ambs": 706
+      },
+      "callsInGeoTable": {
+        "singlet": 12315,
+        "doublet": 1598,
+        "ambs": 706
+      },
+      "storeTotalCountsRange": [
+        562.0,
+        7982.0
+      ],
+      "cytearcDefaultRun": {
+        "seconds": 56.337937862000004,
+        "hvgCount": 1000,
+        "pcaDims": 21,
+        "neighborsK": 11,
+        "leiden": {
+          "partitions": [
+            0.5,
+            0.75,
+            1.0,
+            1.25
+          ],
+          "selected": null
+        },
+        "filtering": {
+          "enabled": false
+        },
+        "annIndex": {
+          "ann_m": 24,
+          "ann_ef": 200,
+          "ann_efc": 200
+        },
+        "doubletParameters": {
+          "cluster_sample_fraction": 1.0,
+          "max_cells_per_cluster": null,
+          "sample_columns": [],
+          "simulation_ratio": 2.0,
+          "heterotypic_fraction": 0.0,
+          "save_k": 30,
+          "expected_doublet_rate": 0.05,
+          "threshold": null,
+          "smoothing_t": 0,
+          "normalize_scores": false,
+          "random_seed": 4444
+        },
+        "cellsScored": 14619
+      },
+      "cytearcDocsDefaultRun": {
+        "seconds": 8.369835475000002,
+        "hvgCount": 2000,
+        "pcaDims": 25,
+        "neighborsK": 21,
+        "leiden": {
+          "partitions": [
+            1.0
+          ],
+          "selected": null
+        },
+        "filtering": {
+          "enabled": true,
+          "method": "manual",
+          "attrs": [
+            "RNA_nCounts",
+            "RNA_nFeatures"
+          ],
+          "lows": [
+            500,
+            200
+          ],
+          "highs": [
+            15000,
+            4000
+          ],
+          "keepBounds": false
+        },
+        "annIndex": {
+          "ann_m": 24,
+          "ann_ef": 200,
+          "ann_efc": 200
+        },
+        "doubletParameters": {
+          "cluster_sample_fraction": 1.0,
+          "max_cells_per_cluster": null,
+          "sample_columns": [],
+          "simulation_ratio": 2.0,
+          "heterotypic_fraction": 0.0,
+          "save_k": 30,
+          "expected_doublet_rate": 0.05,
+          "threshold": null,
+          "smoothing_t": 0,
+          "normalize_scores": false,
+          "random_seed": 4444
+        },
+        "cellsScored": 14526
+      },
+      "scrublet": {
+        "seconds": 96.799000592,
+        "cells": 14619,
+        "threshold": 0.1571417195335974,
+        "predictedDoubletFraction": 0.07839113482454341
+      }
+    },
+    "stim": {
+      "dataset": "kang_14K_ifnb-pbmc_rnaseq",
+      "input": {
+        "catalogue": "cytearc_docs",
+        "dataset": "kang_14K_ifnb-pbmc_rnaseq",
+        "files": {
+          "barcodes.tsv.gz": {
+            "bytes": 52332,
+            "sha256": "3864ea5bf7fa6ff8c88a93bf316bd5bea43bafc4b827b63fe64f1a5c691abe5e"
+          },
+          "features.tsv.gz": {
+            "bytes": 276960,
+            "sha256": "86f9914714bc554b3b8149681986521b3881c22a934a99e1b45401c3dd08aef4"
+          },
+          "matrix.mtx.gz": {
+            "bytes": 29043500,
+            "sha256": "a695c2cdab408ce14cb8922d42f7f2d2e28fbaa7a7cd2b29354f94af09334bd4"
+          }
+        }
+      },
+      "join": {
+        "geoCells": 14446,
+        "geoBarcodesWithSuffix11": 313,
+        "storeCells": 14446,
+        "matchedDirectly": 14133,
+        "matchedAfterRemap": 14446,
+        "unmatched": 0
+      },
+      "callsInStore": {
+        "singlet": 12364,
+        "doublet": 1571,
+        "ambs": 511
+      },
+      "callsInGeoTable": {
+        "singlet": 12364,
+        "doublet": 1571,
+        "ambs": 511
+      },
+      "storeTotalCountsRange": [
+        604.0,
+        11819.0
+      ],
+      "cytearcDefaultRun": {
+        "seconds": 14.314255338999999,
+        "hvgCount": 1000,
+        "pcaDims": 21,
+        "neighborsK": 11,
+        "leiden": {
+          "partitions": [
+            0.5,
+            0.75,
+            1.0,
+            1.25
+          ],
+          "selected": null
+        },
+        "filtering": {
+          "enabled": false
+        },
+        "annIndex": {
+          "ann_m": 24,
+          "ann_ef": 200,
+          "ann_efc": 200
+        },
+        "doubletParameters": {
+          "cluster_sample_fraction": 1.0,
+          "max_cells_per_cluster": null,
+          "sample_columns": [],
+          "simulation_ratio": 2.0,
+          "heterotypic_fraction": 0.0,
+          "save_k": 30,
+          "expected_doublet_rate": 0.05,
+          "threshold": null,
+          "smoothing_t": 0,
+          "normalize_scores": false,
+          "random_seed": 4444
+        },
+        "cellsScored": 14446
+      },
+      "cytearcDocsDefaultRun": {
+        "seconds": 8.538014609000015,
+        "hvgCount": 2000,
+        "pcaDims": 25,
+        "neighborsK": 21,
+        "leiden": {
+          "partitions": [
+            1.0
+          ],
+          "selected": null
+        },
+        "filtering": {
+          "enabled": true,
+          "method": "manual",
+          "attrs": [
+            "RNA_nCounts",
+            "RNA_nFeatures"
+          ],
+          "lows": [
+            500,
+            200
+          ],
+          "highs": [
+            15000,
+            4000
+          ],
+          "keepBounds": false
+        },
+        "annIndex": {
+          "ann_m": 24,
+          "ann_ef": 200,
+          "ann_efc": 200
+        },
+        "doubletParameters": {
+          "cluster_sample_fraction": 1.0,
+          "max_cells_per_cluster": null,
+          "sample_columns": [],
+          "simulation_ratio": 2.0,
+          "heterotypic_fraction": 0.0,
+          "save_k": 30,
+          "expected_doublet_rate": 0.05,
+          "threshold": null,
+          "smoothing_t": 0,
+          "normalize_scores": false,
+          "random_seed": 4444
+        },
+        "cellsScored": 14345
+      },
+      "scrublet": {
+        "seconds": 69.107931506,
+        "cells": 14446,
+        "threshold": 0.5823917712195448,
+        "predictedDoubletFraction": 0.0
+      }
+    }
+  },
+  "dropped": {
+    "ambiguousCalls": 1217,
+    "unscoredByAnyMethod": 130
+  },
+  "results": {
+    "ctrl": {
+      "cells": 13853,
+      "doublets": 1592,
+      "doubletPrevalence": 0.11492095574965712,
+      "cytearcDefault": {
+        "auroc": 0.8909723767684355,
+        "auprc": 0.5932370328040327
+      },
+      "cytearcDocsRun": {
+        "auroc": 0.9120793593610332,
+        "auprc": 0.6517160245784848
+      },
+      "scrublet": {
+        "auroc": 0.8739706453726918,
+        "auprc": 0.5777850114574758
+      },
+      "nCounts": {
+        "auroc": 0.801198539184791,
+        "auprc": 0.31339842297424547
+      }
+    },
+    "stim": {
+      "cells": 13865,
+      "doublets": 1564,
+      "doubletPrevalence": 0.11280201947349441,
+      "cytearcDefault": {
+        "auroc": 0.8890516303438203,
+        "auprc": 0.5812486006811028
+      },
+      "cytearcDocsRun": {
+        "auroc": 0.909822897146615,
+        "auprc": 0.6234085691987846
+      },
+      "scrublet": {
+        "auroc": 0.8469230663674652,
+        "auprc": 0.48970855774266075
+      },
+      "nCounts": {
+        "auroc": 0.802486349954706,
+        "auprc": 0.2953308534358676
+      }
+    },
+    "pooled": {
+      "cells": 27718,
+      "doublets": 3156,
+      "doubletPrevalence": 0.11386102893426654,
+      "cytearcDefault": {
+        "auroc": 0.8899795326670802,
+        "auprc": 0.5872256525351783
+      },
+      "cytearcDocsRun": {
+        "auroc": 0.9109178614135883,
+        "auprc": 0.6372474714865646
+      },
+      "scrublet": {
+        "auroc": 0.8610684090203329,
+        "auprc": 0.5356792395540204
+      },
+      "nCounts": {
+        "auroc": 0.8013071071071382,
+        "auprc": 0.30221660757904456
+      }
+    }
+  },
+  "notes": [
+    "Each condition's store holds every barcode of the catalogue's count files, which are every barcode of the GEO table (callsInStore against callsInGeoTable); the documentation-settings run scores the cells its manual filter keeps, and only cells every method scored are evaluated.",
+    "Pooled metrics concatenate the per-condition scores; each condition is a separate 10x lane, so doublets only form within a condition.",
+    "AUROC and AUPRC use the continuous scores of every method, so they do not depend on Scrublet's automatic threshold (reported per condition with the fraction of cells it calls doublets).",
+    "CyteArc pipeline filtering was disabled so that all store cells are scored; the default MAD filter would remove high-count cells, which are enriched for doublets."
+  ],
+  "runtimeSeconds": 292.544537677
+}

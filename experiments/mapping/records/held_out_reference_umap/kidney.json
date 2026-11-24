@@ -1,0 +1,27 @@
+{
+  "cells": 388878,
+  "matchesBenchmark": {
+    "cytearcVersion": true,
+    "configuration": true,
+    "cells": true
+  },
+  "cellsPerType": {
+    "B lineage": 10921,
+    "Connecting tubule": 15393,
+    "Distal convoluted tubule": 13146,
+    "Endothelial cells": 29175,
+    "Intercalated cells": 14886,
+    "Myeloid cells": 20242,
+    "Neural cells": 2621,
+    "Parietal epithelium": 3173,
+    "Podocytes": 966,
+    "Principal cells": 34053,
+    "Proximal tubule": 106541,
+    "Stromal cells": 9834,
+    "T and NK cells": 38603,
+    "Thick ascending limb": 71570,
+    "Thin ascending limb": 6245,
+    "Thin descending limb": 11464,
+    "Urothelial cells": 45
+  }
+}

@@ -1,0 +1,4055 @@
+{
+  "annotations": {
+    "atlasRows": 11441407,
+    "bytesRead": 133876955,
+    "columns": [
+      "author_major_cell_cluster",
+      "author_experimental_id"
+    ],
+    "idsChecked": 28660,
+    "origin": "atlas H5AD obs columns, by range requests",
+    "requests": 128,
+    "seconds": 45.561960797
+  },
+  "batch": {
+    "batches": 16,
+    "cellsPerBatch": {
+      "run_13": 6536,
+      "run_14": 10238,
+      "run_15": 29891,
+      "run_16": 11848,
+      "run_17": 43497,
+      "run_18": 10104,
+      "run_19": 10294,
+      "run_20": 12024,
+      "run_21": 7948,
+      "run_22": 15210,
+      "run_23": 12877,
+      "run_24": 18223,
+      "run_25": 51435,
+      "run_26": 15446,
+      "run_27": 12808,
+      "run_4": 4551
+    },
+    "column": "author_experimental_id"
+  },
+  "clusterings": {
+    "k11_r0.5": {
+      "artifactId": "c076c158d0612a2ab0ac7efdc8079fa4df0a3517c2afec3f38f057a749f7615f",
+      "cells": 272930,
+      "clusters": 16,
+      "k": 11,
+      "resolution": 0.5
+    },
+    "k11_r1": {
+      "artifactId": "2f7a57946dba1443f0af9580436309b001b60ede2777ed9b4589e19cdef729b2",
+      "cells": 272930,
+      "clusters": 19,
+      "k": 11,
+      "resolution": 1.0
+    },
+    "k15_r0.5": {
+      "artifactId": "48a5eac8f62393aff38b0d7ff9ffb9b02828a85e3dd055628e11bd783e08da32",
+      "cells": 272930,
+      "clusters": 14,
+      "k": 15,
+      "resolution": 0.5
+    },
+    "k15_r1": {
+      "artifactId": "96c157edb5f1cd4f53d43f8d9f86911402486f984ccdaccc4807fc108481563e",
+      "cells": 272930,
+      "clusters": 19,
+      "k": 15,
+      "resolution": 1.0
+    },
+    "k21_r0.5": {
+      "artifactId": "35161f86890c9b438f79acc2464b3fde47c57c1dcc630db30e3dba51a4764d19",
+      "cells": 272930,
+      "clusters": 14,
+      "k": 21,
+      "resolution": 0.5
+    },
+    "k21_r1": {
+      "artifactId": "caa1e216227c766e9a7bc2fbbb1ec90920f7f8d0087641737b3a0f67188b657a",
+      "cells": 272930,
+      "clusters": 18,
+      "k": 21,
+      "resolution": 1.0
+    }
+  },
+  "container": {
+    "budgetBytes": 25769803776,
+    "cpu": 8,
+    "memoryMb": 32768,
+    "workers": 8
+  },
+  "copied": {
+    "cellData": {
+      "sourceBytes": 429627441,
+      "userStoreBytes": 769807440
+    },
+    "featureData": {
+      "sourceBytes": 805336,
+      "userStoreBytes": 1256131
+    }
+  },
+  "experiment": "mount",
+  "jobSeconds": 5171.984749971,
+  "lineage": {
+    "activeCells": 10000000,
+    "cells": 272930,
+    "column": "author_major_cell_cluster",
+    "labelCounts": {
+      "Adipocytes": 100077,
+      "B_cells": 38779,
+      "CNS_neurons": 1840956,
+      "Cardiomyocytes": 32462,
+      "Definitive_erythroid": 902923,
+      "Endothelium": 272930,
+      "Ependymal_cells": 13431,
+      "Epithelial_cells": 458939,
+      "Eye_and_other": 81989,
+      "Hepatocytes": 253271,
+      "Intermediate_neuronal_progenitors": 549055,
+      "Intestine": 45377,
+      "Lung_and_airway": 67052,
+      "Mast_cells": 20882,
+      "Megakaryocytes": 13200,
+      "Mesoderm": 2855032,
+      "Muscle_cells": 266799,
+      "Neural_crest_PNS_glia": 110804,
+      "Neural_crest_PNS_neurons": 90854,
+      "Neuroectoderm_and_glia": 1515468,
+      "Olfactory_sensory_neurons": 37425,
+      "Oligodendrocytes": 27363,
+      "Primitive_erythroid": 94909,
+      "T_cells": 78147,
+      "Testis_and_adrenal": 2915,
+      "White_blood_cells": 228961
+    },
+    "value": "Endothelium"
+  },
+  "lineageGraph": {
+    "counts": {
+      "fingerprints": [
+        "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024",
+        "ddb8820c3fb7ad39abbcf894d888753558e4b8cbbdc62cdcb7a279a23c055266"
+      ],
+      "joinedTo": [
+        "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d",
+        "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+        "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+        "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50"
+      ],
+      "location": "source"
+    },
+    "edges": [
+      {
+        "inputs": [
+          "dataset"
+        ],
+        "source": "counts",
+        "target": "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d"
+      },
+      {
+        "inputs": [
+          "dataset"
+        ],
+        "source": "counts",
+        "target": "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2"
+      },
+      {
+        "inputs": [
+          "dataset"
+        ],
+        "source": "counts",
+        "target": "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124"
+      },
+      {
+        "inputs": [
+          "dataset"
+        ],
+        "source": "counts",
+        "target": "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492"
+      },
+      {
+        "inputs": [
+          "dataset"
+        ],
+        "source": "counts",
+        "target": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50"
+      },
+      {
+        "inputs": [
+          "clusters"
+        ],
+        "source": "2f7a57946dba1443f0af9580436309b001b60ede2777ed9b4589e19cdef729b2",
+        "target": "96680d98266b27658eacf920cc021ee1ef3b17f147e9580098faccf36ee5712c"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "2f7a57946dba1443f0af9580436309b001b60ede2777ed9b4589e19cdef729b2"
+      },
+      {
+        "inputs": [
+          "pca_cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "35161f86890c9b438f79acc2464b3fde47c57c1dcc630db30e3dba51a4764d19"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "48a5eac8f62393aff38b0d7ff9ffb9b02828a85e3dd055628e11bd783e08da32"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "96c157edb5f1cd4f53d43f8d9f86911402486f984ccdaccc4807fc108481563e"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "c076c158d0612a2ab0ac7efdc8079fa4df0a3517c2afec3f38f057a749f7615f"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "caa1e216227c766e9a7bc2fbbb1ec90920f7f8d0087641737b3a0f67188b657a"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "1487791fb7fc407445dbe718439f5e7b7bd2fda935092201ba63c8219e284fc3"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "target": "96680d98266b27658eacf920cc021ee1ef3b17f147e9580098faccf36ee5712c"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "55ae78b2c9558d20522f68a3b1544cd197c2954f4e394b6fca8d981be9da8c2d",
+        "target": "2f7a57946dba1443f0af9580436309b001b60ede2777ed9b4589e19cdef729b2"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "55ae78b2c9558d20522f68a3b1544cd197c2954f4e394b6fca8d981be9da8c2d",
+        "target": "c076c158d0612a2ab0ac7efdc8079fa4df0a3517c2afec3f38f057a749f7615f"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "55ae78b2c9558d20522f68a3b1544cd197c2954f4e394b6fca8d981be9da8c2d",
+        "target": "1487791fb7fc407445dbe718439f5e7b7bd2fda935092201ba63c8219e284fc3"
+      },
+      {
+        "inputs": [
+          "neighbors"
+        ],
+        "source": "e67cbf949c88ecbaf9c6c1bc945aa8ae80066214d96d5bee0fd7e39ec45ccc09",
+        "target": "55ae78b2c9558d20522f68a3b1544cd197c2954f4e394b6fca8d981be9da8c2d"
+      },
+      {
+        "inputs": [
+          "ann_index"
+        ],
+        "source": "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "target": "e67cbf949c88ecbaf9c6c1bc945aa8ae80066214d96d5bee0fd7e39ec45ccc09"
+      },
+      {
+        "inputs": [
+          "ann_index"
+        ],
+        "source": "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "target": "7acb101f758db225e3c338784f0ecb1c0e8c3d2123ac7f0cbbf70bd6b28fbc33"
+      },
+      {
+        "inputs": [
+          "ann_index"
+        ],
+        "source": "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "target": "72c001ef6559a0acf578df652a622691e618b364877bfab25b8942b0b7a617be"
+      },
+      {
+        "inputs": [
+          "coordinates"
+        ],
+        "source": "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "target": "e67cbf949c88ecbaf9c6c1bc945aa8ae80066214d96d5bee0fd7e39ec45ccc09"
+      },
+      {
+        "inputs": [
+          "coordinates"
+        ],
+        "source": "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "target": "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a"
+      },
+      {
+        "inputs": [
+          "coordinates"
+        ],
+        "source": "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "target": "7acb101f758db225e3c338784f0ecb1c0e8c3d2123ac7f0cbbf70bd6b28fbc33"
+      },
+      {
+        "inputs": [
+          "coordinates"
+        ],
+        "source": "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "target": "72c001ef6559a0acf578df652a622691e618b364877bfab25b8942b0b7a617be"
+      },
+      {
+        "inputs": [
+          "coordinates"
+        ],
+        "source": "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "target": "43946aea5a14234799538074f7cc16670d1e0aae7fb8a73b3cabd7bd097f967c"
+      },
+      {
+        "inputs": [
+          "batch_snapshot"
+        ],
+        "source": "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979",
+        "target": "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e"
+      },
+      {
+        "inputs": [
+          "reduction"
+        ],
+        "source": "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab",
+        "target": "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e"
+      },
+      {
+        "inputs": [
+          "feature_scaling"
+        ],
+        "source": "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca",
+        "target": "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab"
+      },
+      {
+        "inputs": [
+          "normalized"
+        ],
+        "source": "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "target": "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab"
+      },
+      {
+        "inputs": [
+          "normalized"
+        ],
+        "source": "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "target": "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca"
+      },
+      {
+        "inputs": [
+          "feature_selection"
+        ],
+        "source": "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0",
+        "target": "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492"
+      },
+      {
+        "inputs": [
+          "feature_snapshot"
+        ],
+        "source": "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "target": "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0"
+      },
+      {
+        "inputs": [
+          "feature_snapshot"
+        ],
+        "source": "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "target": "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd"
+      },
+      {
+        "inputs": [
+          "feature_summary"
+        ],
+        "source": "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+        "target": "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "12bc6a689344d52f4b9ea5eafcee1f664366c73fc5739c0809d6d57f59187498",
+        "target": "35161f86890c9b438f79acc2464b3fde47c57c1dcc630db30e3dba51a4764d19"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "12bc6a689344d52f4b9ea5eafcee1f664366c73fc5739c0809d6d57f59187498",
+        "target": "caa1e216227c766e9a7bc2fbbb1ec90920f7f8d0087641737b3a0f67188b657a"
+      },
+      {
+        "inputs": [
+          "neighbors"
+        ],
+        "source": "7acb101f758db225e3c338784f0ecb1c0e8c3d2123ac7f0cbbf70bd6b28fbc33",
+        "target": "12bc6a689344d52f4b9ea5eafcee1f664366c73fc5739c0809d6d57f59187498"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "fb2dbe06ffac6c30e512d3d8c864499f198b1aef6f15a74fc77a8c318e5fba7e",
+        "target": "48a5eac8f62393aff38b0d7ff9ffb9b02828a85e3dd055628e11bd783e08da32"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "fb2dbe06ffac6c30e512d3d8c864499f198b1aef6f15a74fc77a8c318e5fba7e",
+        "target": "96c157edb5f1cd4f53d43f8d9f86911402486f984ccdaccc4807fc108481563e"
+      },
+      {
+        "inputs": [
+          "neighbors"
+        ],
+        "source": "72c001ef6559a0acf578df652a622691e618b364877bfab25b8942b0b7a617be",
+        "target": "fb2dbe06ffac6c30e512d3d8c864499f198b1aef6f15a74fc77a8c318e5fba7e"
+      },
+      {
+        "inputs": [
+          "clusters"
+        ],
+        "source": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5",
+        "target": "4a11409aaaf7cbbb9534014c73175e9ffa448d67bd9df707fcc2a9b712da47b8"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+        "target": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5"
+      },
+      {
+        "inputs": [
+          "pca_cell_selection"
+        ],
+        "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+        "target": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+        "target": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+        "target": "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+        "target": "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+        "target": "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26"
+      },
+      {
+        "inputs": [
+          "cell_selection"
+        ],
+        "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+        "target": "4a11409aaaf7cbbb9534014c73175e9ffa448d67bd9df707fcc2a9b712da47b8"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+        "target": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+        "target": "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f"
+      },
+      {
+        "inputs": [
+          "neighbors"
+        ],
+        "source": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2",
+        "target": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e"
+      },
+      {
+        "inputs": [
+          "ann_index"
+        ],
+        "source": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+        "target": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2"
+      },
+      {
+        "inputs": [
+          "ann_index"
+        ],
+        "source": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+        "target": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67"
+      },
+      {
+        "inputs": [
+          "coordinates"
+        ],
+        "source": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+        "target": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2"
+      },
+      {
+        "inputs": [
+          "coordinates"
+        ],
+        "source": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+        "target": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f"
+      },
+      {
+        "inputs": [
+          "coordinates"
+        ],
+        "source": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+        "target": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67"
+      },
+      {
+        "inputs": [
+          "feature_scaling"
+        ],
+        "source": "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03",
+        "target": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032"
+      },
+      {
+        "inputs": [
+          "normalized"
+        ],
+        "source": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+        "target": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032"
+      },
+      {
+        "inputs": [
+          "normalized"
+        ],
+        "source": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+        "target": "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03"
+      },
+      {
+        "inputs": [
+          "prior_cell_selection"
+        ],
+        "source": "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb",
+        "target": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c"
+      },
+      {
+        "inputs": [
+          "feature_selection"
+        ],
+        "source": "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd",
+        "target": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50"
+      },
+      {
+        "inputs": [
+          "feature_summary"
+        ],
+        "source": "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+        "target": "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd"
+      },
+      {
+        "inputs": [
+          "graph"
+        ],
+        "source": "320879bd090250acb16a63b57000b72b887c025601a1ac6d20b96db36d2c3cee",
+        "target": "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26"
+      },
+      {
+        "inputs": [
+          "neighbors"
+        ],
+        "source": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67",
+        "target": "320879bd090250acb16a63b57000b72b887c025601a1ac6d20b96db36d2c3cee"
+      },
+      {
+        "inputs": [
+          "initialization"
+        ],
+        "source": "43946aea5a14234799538074f7cc16670d1e0aae7fb8a73b3cabd7bd097f967c",
+        "target": "1487791fb7fc407445dbe718439f5e7b7bd2fda935092201ba63c8219e284fc3"
+      },
+      {
+        "inputs": [
+          "feature_selection"
+        ],
+        "source": "bdcafa2f1ac664f8ea34fe77c99fdd57bbb3eac1cfccfadfa86c632dad42b5a9",
+        "target": "4a11409aaaf7cbbb9534014c73175e9ffa448d67bd9df707fcc2a9b712da47b8"
+      },
+      {
+        "inputs": [
+          "feature_selection"
+        ],
+        "source": "bdcafa2f1ac664f8ea34fe77c99fdd57bbb3eac1cfccfadfa86c632dad42b5a9",
+        "target": "96680d98266b27658eacf920cc021ee1ef3b17f147e9580098faccf36ee5712c"
+      },
+      {
+        "inputs": [
+          "all_features"
+        ],
+        "source": "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d",
+        "target": "bdcafa2f1ac664f8ea34fe77c99fdd57bbb3eac1cfccfadfa86c632dad42b5a9"
+      }
+    ],
+    "nodes": [
+      {
+        "bytes": 639014,
+        "id": "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "kind": "cell_selection",
+        "operation": "manual_selection",
+        "otherInputs": {
+          "ordered_row_ids_fingerprint": "d47f567f32e3fc39374eebed6a8de0e50455191852390087fafc884deea6a54a",
+          "values_fingerprint": "08d206811d4ae8b21b21d9c01d305e7ea20195c94edf7a0bd10965987c0111f3"
+        },
+        "outputs": [],
+        "parameters": {},
+        "scope": "datastore"
+      },
+      {
+        "bytes": 0,
+        "id": "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb",
+        "kind": "cell_selection",
+        "operation": "manual_selection",
+        "otherInputs": {
+          "ordered_row_ids_fingerprint": "d47f567f32e3fc39374eebed6a8de0e50455191852390087fafc884deea6a54a",
+          "values_fingerprint": "0141c537579a5bef0644ecf4c05b06d01e5eae1c331f7e86c060fd73f2d9b1f9"
+        },
+        "outputs": [],
+        "parameters": {},
+        "scope": "datastore"
+      },
+      {
+        "bytes": 0,
+        "id": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+        "kind": "cell_selection",
+        "operation": "auto_filter_cells",
+        "otherInputs": {
+          "artifact_metrics": {},
+          "metadata_fingerprints": {
+            "RNA_nCounts": "2168c5111621ce530072d6b92dca7ab73ce6f1bd57b77a07d1423eb413d53e27",
+            "RNA_nFeatures": "9ec25d6b55c58d5ba8a9da2ba999545965df58676a60fa2a9b1841c175247606",
+            "RNA_percentMito": "37667e34d24b1728e0154f9b918e1dd9fa42061a335a4720b57f6c49e95aed51",
+            "RNA_percentRibo": "1e64d3c2151b4c8533b8cc61bf69a61505097b675189647e2d6169702b2e3ce2"
+          },
+          "ordered_row_ids_fingerprint": "d47f567f32e3fc39374eebed6a8de0e50455191852390087fafc884deea6a54a",
+          "values_fingerprint": "e5c0a2c36288edc753977afff4af1962b1abf8c7ec648098878299e7b413b2d5"
+        },
+        "outputs": [],
+        "parameters": {
+          "attrs": [
+            "RNA_nCounts",
+            "RNA_nFeatures",
+            "RNA_percentMito",
+            "RNA_percentRibo"
+          ],
+          "max_p": 0.99,
+          "method": "gaussian",
+          "metric_sources": [
+            {
+              "column": "RNA_nCounts",
+              "name": "RNA_nCounts",
+              "source": "metadataColumn"
+            },
+            {
+              "column": "RNA_nFeatures",
+              "name": "RNA_nFeatures",
+              "source": "metadataColumn"
+            },
+            {
+              "column": "RNA_percentMito",
+              "name": "RNA_percentMito",
+              "source": "metadataColumn"
+            },
+            {
+              "column": "RNA_percentRibo",
+              "name": "RNA_percentRibo",
+              "source": "metadataColumn"
+            }
+          ],
+          "min_p": 0.01,
+          "resolved_bounds": {
+            "RNA_nCounts": {
+              "high": 8722.627641009958,
+              "low": -3408.627641009958
+            },
+            "RNA_nFeatures": {
+              "high": 3575.842584520975,
+              "low": -447.84258452097515
+            },
+            "RNA_percentMito": {
+              "high": 1.5103714595216249,
+              "low": -1.2568860349335385
+            },
+            "RNA_percentRibo": {
+              "high": 1.2236752284281653,
+              "low": -0.3784965883974315
+            }
+          }
+        },
+        "scope": "datastore"
+      },
+      {
+        "bytes": 0,
+        "id": "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d",
+        "kind": "feature_selection",
+        "operation": "create_all_features",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "dataset_fingerprint": "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024",
+          "ordered_feature_ids_fingerprint": "d12f615951bd01118a096be144d528fa40570b3661382b508a09825f96035d65"
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 0,
+        "id": "bdcafa2f1ac664f8ea34fe77c99fdd57bbb3eac1cfccfadfa86c632dad42b5a9",
+        "kind": "feature_selection",
+        "operation": "set_feature_selection",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "values_fingerprint": "39395fa3f228c168eddd812b40a72906404ad27beba2b9d389c43e6b07e757de"
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 0,
+        "id": "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+        "kind": "feature_summary",
+        "operation": "summarize_rna_features",
+        "otherInputs": {
+          "dataset_fingerprint": "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024"
+        },
+        "outputs": [],
+        "parameters": {
+          "normalization_method": {
+            "module": "cytearc.assay",
+            "qualname": "norm_lib_size"
+          },
+          "size_factor": 1000
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 808823,
+        "id": "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+        "kind": "feature_summary",
+        "operation": "summarize_rna_features",
+        "otherInputs": {
+          "dataset_fingerprint": "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024"
+        },
+        "outputs": [],
+        "parameters": {
+          "normalization_method": {
+            "module": "cytearc.assay",
+            "qualname": "norm_lib_size"
+          },
+          "size_factor": 1000
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 1111178,
+        "id": "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979",
+        "kind": "metadata_snapshot",
+        "operation": "snapshot_run_metadata",
+        "otherInputs": {
+          "column_fingerprints": {
+            "author_experimental_id": "a76da0028e44e8b5b1d33a3260615263d3567a7e4af779b8563496df1621ee03"
+          },
+          "ordered_row_ids_fingerprint": "d47f567f32e3fc39374eebed6a8de0e50455191852390087fafc884deea6a54a"
+        },
+        "outputs": [],
+        "parameters": {
+          "assay": null,
+          "axis": "cell",
+          "ordered_columns": [
+            "author_experimental_id"
+          ]
+        },
+        "scope": "datastore"
+      },
+      {
+        "bytes": 0,
+        "id": "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "kind": "metadata_snapshot",
+        "operation": "snapshot_run_metadata",
+        "otherInputs": {
+          "column_fingerprints": {
+            "names": "fa482b23835284c845abd0e1ebc5bed27aae1095150b5ebad6f12a4a41aceb81"
+          },
+          "ordered_row_ids_fingerprint": "d12f615951bd01118a096be144d528fa40570b3661382b508a09825f96035d65"
+        },
+        "outputs": [],
+        "parameters": {
+          "assay": "RNA",
+          "axis": "feature",
+          "ordered_columns": [
+            "names"
+          ]
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 0,
+        "id": "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd",
+        "kind": "feature_selection",
+        "operation": "select_hvgs",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "bin_strategy": "adaptive",
+          "blacklist": "^MT-|^RPS|^RPL|^MRPS|^MRPL|^CCN[A-Z]|^HLA-|^H2-|^HIST|^H1-[1-6]$|^H1F[1-6]$|^H2AC\\d+$|^H2BC\\d+$|^H3C\\d+$|^H4C\\d+$|^H2AW$|^H3-4$|^H4-16$|^XIST$|^DDX3Y$|^USP9Y$|^EIF1AY$|^KDM5D$|^SRY$|^ZFY$|^UTY$|^TMSB4Y$|^NLGN4Y$",
+          "blacklist_fingerprint": "578835792b3a122a0ab91315726f7f007ca396faddb5ce9af6cc160d34404578",
+          "keep_bounds": false,
+          "lowess_frac": 0.1,
+          "max_cells": 8849615,
+          "max_mean": {
+            "special_float": "inf"
+          },
+          "max_var": {
+            "special_float": "inf"
+          },
+          "min_cells": 20,
+          "min_mean": {
+            "special_float": "-inf"
+          },
+          "min_var": {
+            "special_float": "-inf"
+          },
+          "n_bins": 200,
+          "top_n": 1000,
+          "variance_estimator": "regularized_local_quantile",
+          "variance_quantile": 0.25
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 328982,
+        "id": "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0",
+        "kind": "feature_selection",
+        "operation": "select_hvgs",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "bin_strategy": "adaptive",
+          "blacklist": "^MT-|^RPS|^RPL|^MRPS|^MRPL|^CCN[A-Z]|^HLA-|^H2-|^HIST|^H1-[1-6]$|^H1F[1-6]$|^H2AC\\d+$|^H2BC\\d+$|^H3C\\d+$|^H4C\\d+$|^H2AW$|^H3-4$|^H4-16$|^XIST$|^DDX3Y$|^USP9Y$|^EIF1AY$|^KDM5D$|^SRY$|^ZFY$|^UTY$|^TMSB4Y$|^NLGN4Y$",
+          "blacklist_fingerprint": "578835792b3a122a0ab91315726f7f007ca396faddb5ce9af6cc160d34404578",
+          "keep_bounds": false,
+          "lowess_frac": 0.1,
+          "max_cells": 271566,
+          "max_mean": {
+            "special_float": "inf"
+          },
+          "max_var": {
+            "special_float": "inf"
+          },
+          "min_cells": 20,
+          "min_mean": {
+            "special_float": "-inf"
+          },
+          "min_var": {
+            "special_float": "-inf"
+          },
+          "n_bins": 200,
+          "top_n": 1000,
+          "variance_estimator": "regularized_local_quantile",
+          "variance_quantile": 0.25
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 476608887,
+        "id": "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "kind": "normalized",
+        "operation": "run_normalization",
+        "otherInputs": {
+          "dataset_fingerprint": "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024"
+        },
+        "outputs": [],
+        "parameters": {
+          "log_transform": true,
+          "normalization_method": {
+            "external_hook": true,
+            "module": "cytearc.assay",
+            "qualname": "norm_lib_size"
+          },
+          "renormalize_subset": true,
+          "size_factor": 1000.0
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 16274,
+        "id": "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca",
+        "kind": "feature_scaling",
+        "operation": "calculate_feature_scaling",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "enabled": true
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 0,
+        "id": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+        "kind": "normalized",
+        "operation": "run_normalization",
+        "otherInputs": {
+          "dataset_fingerprint": "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024"
+        },
+        "outputs": [],
+        "parameters": {
+          "log_transform": true,
+          "normalization_method": {
+            "external_hook": true,
+            "module": "cytearc.assay",
+            "qualname": "norm_lib_size"
+          },
+          "renormalize_subset": true,
+          "size_factor": 1000.0
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 0,
+        "id": "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03",
+        "kind": "feature_scaling",
+        "operation": "calculate_feature_scaling",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "enabled": true
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 0,
+        "id": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+        "kind": "reduction",
+        "operation": "run_pca",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "dims": 21,
+          "feat_scaling": true
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 0,
+        "id": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+        "kind": "ann_index",
+        "operation": "build_ann_index",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "ann_ef": 200,
+          "ann_efc": 200,
+          "ann_m": 24,
+          "ann_metric": "l2",
+          "ann_parallel": true,
+          "rand_state": 4466
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 1112110024,
+        "id": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67",
+        "kind": "neighbors",
+        "operation": "query_neighbors",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "distance_metric": "l2",
+          "k": 21
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 1667924247,
+        "id": "320879bd090250acb16a63b57000b72b887c025601a1ac6d20b96db36d2c3cee",
+        "kind": "connectivity_map",
+        "operation": "build_connectivity_map",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "bandwidth": 1.5,
+          "local_connectivity": 1.0
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 6576756,
+        "id": "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26",
+        "kind": "cluster_labels",
+        "operation": "run_leiden_clustering",
+        "otherInputs": {},
+        "outputs": [
+          "reuse_leiden_k21_r1"
+        ],
+        "parameters": {
+          "backend": "cytearc",
+          "edge_weighting": "graph",
+          "graph_upper_only": false,
+          "random_seed": 4444,
+          "resolution": 1.0,
+          "symmetric_graph": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 0,
+        "id": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2",
+        "kind": "neighbors",
+        "operation": "query_neighbors",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "distance_metric": "l2",
+          "k": 11
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 0,
+        "id": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+        "kind": "connectivity_map",
+        "operation": "build_connectivity_map",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "bandwidth": 1.5,
+          "local_connectivity": 1.0
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 7139562,
+        "id": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5",
+        "kind": "cluster_labels",
+        "operation": "run_leiden_clustering",
+        "otherInputs": {},
+        "outputs": [
+          "reuse_leiden_published_r2"
+        ],
+        "parameters": {
+          "backend": "cytearc",
+          "edge_weighting": "graph",
+          "graph_upper_only": false,
+          "random_seed": 4444,
+          "resolution": 2.0,
+          "symmetric_graph": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 6031501,
+        "id": "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f",
+        "kind": "cluster_labels",
+        "operation": "run_leiden_clustering",
+        "otherInputs": {},
+        "outputs": [
+          "reuse_leiden_published_r0.5"
+        ],
+        "parameters": {
+          "backend": "cytearc",
+          "edge_weighting": "graph",
+          "graph_upper_only": false,
+          "random_seed": 4444,
+          "resolution": 0.5,
+          "symmetric_graph": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 243776208,
+        "id": "4a11409aaaf7cbbb9534014c73175e9ffa448d67bd9df707fcc2a9b712da47b8",
+        "kind": "marker_table",
+        "operation": "run_marker_search",
+        "otherInputs": {},
+        "outputs": [
+          "reuse_markers_r2"
+        ],
+        "parameters": {
+          "adjustment_method": "fdr_bh",
+          "adjustment_scope": "within_group_all_tested_features",
+          "alternative": "two-sided",
+          "continuity_correction": true,
+          "method": "mannwhitneyu",
+          "normalization": {
+            "log_transform": false,
+            "renormalize_subset": false
+          },
+          "normalization_method": {
+            "module": "cytearc.assay",
+            "qualname": "norm_lib_size"
+          },
+          "size_factor": 1000,
+          "tie_correction": true
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 21501055,
+        "id": "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab",
+        "kind": "reduction",
+        "operation": "run_pca",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "dims": 21,
+          "feat_scaling": true
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 21441360,
+        "id": "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "kind": "batch_correction",
+        "operation": "run_harmony",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "batch_columns": [
+            "author_experimental_id"
+          ],
+          "harmony_parameters": {}
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 62921069,
+        "id": "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "kind": "ann_index",
+        "operation": "build_ann_index",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "ann_ef": 50,
+          "ann_efc": 50,
+          "ann_m": 48,
+          "ann_metric": "l2",
+          "ann_parallel": true,
+          "rand_state": 4466
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 427052,
+        "id": "43946aea5a14234799538074f7cc16670d1e0aae7fb8a73b3cabd7bd097f967c",
+        "kind": "embedding_initialization",
+        "operation": "build_embedding_initialization",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "batch_size": 272930,
+          "kmeans_batch_size": 10000,
+          "kmeans_sampling": 0.1,
+          "n_centroids": 1000,
+          "rand_state": 4466
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 21626166,
+        "id": "72c001ef6559a0acf578df652a622691e618b364877bfab25b8942b0b7a617be",
+        "kind": "neighbors",
+        "operation": "query_neighbors",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "distance_metric": "l2",
+          "k": 15
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 31295932,
+        "id": "fb2dbe06ffac6c30e512d3d8c864499f198b1aef6f15a74fc77a8c318e5fba7e",
+        "kind": "connectivity_map",
+        "operation": "build_connectivity_map",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "bandwidth": 1.5,
+          "local_connectivity": 1.0
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 148245,
+        "id": "48a5eac8f62393aff38b0d7ff9ffb9b02828a85e3dd055628e11bd783e08da32",
+        "kind": "cluster_labels",
+        "operation": "run_leiden_clustering",
+        "otherInputs": {},
+        "outputs": [
+          "k15_r0.5"
+        ],
+        "parameters": {
+          "backend": "cytearc",
+          "edge_weighting": "graph",
+          "graph_upper_only": false,
+          "random_seed": 4444,
+          "resolution": 0.5,
+          "symmetric_graph": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 166632,
+        "id": "96c157edb5f1cd4f53d43f8d9f86911402486f984ccdaccc4807fc108481563e",
+        "kind": "cluster_labels",
+        "operation": "run_leiden_clustering",
+        "otherInputs": {},
+        "outputs": [
+          "k15_r1"
+        ],
+        "parameters": {
+          "backend": "cytearc",
+          "edge_weighting": "graph",
+          "graph_upper_only": false,
+          "random_seed": 4444,
+          "resolution": 1.0,
+          "symmetric_graph": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 30199412,
+        "id": "7acb101f758db225e3c338784f0ecb1c0e8c3d2123ac7f0cbbf70bd6b28fbc33",
+        "kind": "neighbors",
+        "operation": "query_neighbors",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "distance_metric": "l2",
+          "k": 21
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 43987043,
+        "id": "12bc6a689344d52f4b9ea5eafcee1f664366c73fc5739c0809d6d57f59187498",
+        "kind": "connectivity_map",
+        "operation": "build_connectivity_map",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "bandwidth": 1.5,
+          "local_connectivity": 1.0
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 148262,
+        "id": "35161f86890c9b438f79acc2464b3fde47c57c1dcc630db30e3dba51a4764d19",
+        "kind": "cluster_labels",
+        "operation": "run_leiden_clustering",
+        "otherInputs": {},
+        "outputs": [
+          "k21_r0.5"
+        ],
+        "parameters": {
+          "backend": "cytearc",
+          "edge_weighting": "graph",
+          "graph_upper_only": false,
+          "random_seed": 4444,
+          "resolution": 0.5,
+          "symmetric_graph": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 159683,
+        "id": "caa1e216227c766e9a7bc2fbbb1ec90920f7f8d0087641737b3a0f67188b657a",
+        "kind": "cluster_labels",
+        "operation": "run_leiden_clustering",
+        "otherInputs": {},
+        "outputs": [
+          "k21_r1"
+        ],
+        "parameters": {
+          "backend": "cytearc",
+          "edge_weighting": "graph",
+          "graph_upper_only": false,
+          "random_seed": 4444,
+          "resolution": 1.0,
+          "symmetric_graph": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 16194618,
+        "id": "e67cbf949c88ecbaf9c6c1bc945aa8ae80066214d96d5bee0fd7e39ec45ccc09",
+        "kind": "neighbors",
+        "operation": "query_neighbors",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "distance_metric": "l2",
+          "k": 11
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 23097195,
+        "id": "55ae78b2c9558d20522f68a3b1544cd197c2954f4e394b6fca8d981be9da8c2d",
+        "kind": "connectivity_map",
+        "operation": "build_connectivity_map",
+        "otherInputs": {},
+        "outputs": [],
+        "parameters": {
+          "bandwidth": 1.5,
+          "local_connectivity": 1.0
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 167372,
+        "id": "2f7a57946dba1443f0af9580436309b001b60ede2777ed9b4589e19cdef729b2",
+        "kind": "cluster_labels",
+        "operation": "run_leiden_clustering",
+        "otherInputs": {},
+        "outputs": [
+          "k11_r1"
+        ],
+        "parameters": {
+          "backend": "cytearc",
+          "edge_weighting": "graph",
+          "graph_upper_only": false,
+          "random_seed": 4444,
+          "resolution": 1.0,
+          "symmetric_graph": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 150380,
+        "id": "c076c158d0612a2ab0ac7efdc8079fa4df0a3517c2afec3f38f057a749f7615f",
+        "kind": "cluster_labels",
+        "operation": "run_leiden_clustering",
+        "otherInputs": {},
+        "outputs": [
+          "k11_r0.5"
+        ],
+        "parameters": {
+          "backend": "cytearc",
+          "edge_weighting": "graph",
+          "graph_upper_only": false,
+          "random_seed": 4444,
+          "resolution": 0.5,
+          "symmetric_graph": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 2006377,
+        "id": "1487791fb7fc407445dbe718439f5e7b7bd2fda935092201ba63c8219e284fc3",
+        "kind": "embedding",
+        "operation": "run_umap",
+        "otherInputs": {},
+        "outputs": [
+          "umap_k11"
+        ],
+        "parameters": {
+          "dens_frac": 0.3,
+          "dens_lambda": 2.0,
+          "dens_var_shift": 0.1,
+          "graph_upper_only": false,
+          "initial_alpha": 1.0,
+          "min_dist": 1.0,
+          "n_epochs": 300,
+          "negative_sample_rate": 5.0,
+          "parallel": true,
+          "random_seed": 4444,
+          "repulsion_strength": 1.0,
+          "spread": 2.0,
+          "symmetric_graph": false,
+          "umap_dims": 2,
+          "use_density_map": false
+        },
+        "scope": "assay"
+      },
+      {
+        "bytes": 61161521,
+        "id": "96680d98266b27658eacf920cc021ee1ef3b17f147e9580098faccf36ee5712c",
+        "kind": "marker_table",
+        "operation": "run_marker_search",
+        "otherInputs": {},
+        "outputs": [
+          "markers_k11_r1"
+        ],
+        "parameters": {
+          "adjustment_method": "fdr_bh",
+          "adjustment_scope": "within_group_all_tested_features",
+          "alternative": "two-sided",
+          "continuity_correction": true,
+          "method": "mannwhitneyu",
+          "normalization": {
+            "log_transform": false,
+            "renormalize_subset": false
+          },
+          "normalization_method": {
+            "module": "cytearc.assay",
+            "qualname": "norm_lib_size"
+          },
+          "size_factor": 1000,
+          "tie_correction": true
+        },
+        "scope": "assay"
+      }
+    ],
+    "sharedByAll": [
+      "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+      "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+      "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979",
+      "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+      "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0",
+      "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+      "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca",
+      "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab",
+      "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+      "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a"
+    ],
+    "upstream": {
+      "k11_r0.5": [
+        "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+        "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979",
+        "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0",
+        "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca",
+        "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab",
+        "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "e67cbf949c88ecbaf9c6c1bc945aa8ae80066214d96d5bee0fd7e39ec45ccc09",
+        "55ae78b2c9558d20522f68a3b1544cd197c2954f4e394b6fca8d981be9da8c2d",
+        "c076c158d0612a2ab0ac7efdc8079fa4df0a3517c2afec3f38f057a749f7615f"
+      ],
+      "k11_r1": [
+        "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+        "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979",
+        "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0",
+        "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca",
+        "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab",
+        "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "e67cbf949c88ecbaf9c6c1bc945aa8ae80066214d96d5bee0fd7e39ec45ccc09",
+        "55ae78b2c9558d20522f68a3b1544cd197c2954f4e394b6fca8d981be9da8c2d",
+        "2f7a57946dba1443f0af9580436309b001b60ede2777ed9b4589e19cdef729b2"
+      ],
+      "k15_r0.5": [
+        "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+        "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979",
+        "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0",
+        "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca",
+        "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab",
+        "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "72c001ef6559a0acf578df652a622691e618b364877bfab25b8942b0b7a617be",
+        "fb2dbe06ffac6c30e512d3d8c864499f198b1aef6f15a74fc77a8c318e5fba7e",
+        "48a5eac8f62393aff38b0d7ff9ffb9b02828a85e3dd055628e11bd783e08da32"
+      ],
+      "k15_r1": [
+        "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+        "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979",
+        "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0",
+        "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca",
+        "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab",
+        "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "72c001ef6559a0acf578df652a622691e618b364877bfab25b8942b0b7a617be",
+        "fb2dbe06ffac6c30e512d3d8c864499f198b1aef6f15a74fc77a8c318e5fba7e",
+        "96c157edb5f1cd4f53d43f8d9f86911402486f984ccdaccc4807fc108481563e"
+      ],
+      "k21_r0.5": [
+        "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+        "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979",
+        "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0",
+        "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca",
+        "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab",
+        "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "7acb101f758db225e3c338784f0ecb1c0e8c3d2123ac7f0cbbf70bd6b28fbc33",
+        "12bc6a689344d52f4b9ea5eafcee1f664366c73fc5739c0809d6d57f59187498",
+        "35161f86890c9b438f79acc2464b3fde47c57c1dcc630db30e3dba51a4764d19"
+      ],
+      "k21_r1": [
+        "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26",
+        "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124",
+        "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979",
+        "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0",
+        "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492",
+        "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca",
+        "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab",
+        "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e",
+        "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a",
+        "7acb101f758db225e3c338784f0ecb1c0e8c3d2123ac7f0cbbf70bd6b28fbc33",
+        "12bc6a689344d52f4b9ea5eafcee1f664366c73fc5739c0809d6d57f59187498",
+        "caa1e216227c766e9a7bc2fbbb1ec90920f7f8d0087641737b3a0f67188b657a"
+      ]
+    }
+  },
+  "markers": {
+    "artifactId": "96680d98266b27658eacf920cc021ee1ef3b17f147e9580098faccf36ee5712c",
+    "clustering": "k11_r1"
+  },
+  "notCopied": {
+    "publishedResultKinds": [
+      "ann_index",
+      "cell_selection",
+      "cluster_labels",
+      "connectivity_map",
+      "embedding",
+      "embedding_initialization",
+      "feature_scaling",
+      "feature_selection",
+      "feature_summary",
+      "marker_table",
+      "metadata_snapshot",
+      "neighbors",
+      "normalized",
+      "reduction"
+    ],
+    "publishedResultsBytes": 5929065159
+  },
+  "parameters": {
+    "ann": {
+      "ann_ef": 50,
+      "ann_efc": 50,
+      "ann_m": 48,
+      "ann_parallel": true,
+      "rand_state": 4466
+    },
+    "budgetBytes": 25769803776,
+    "kValues": [
+      11,
+      15,
+      21
+    ],
+    "markers": "k11_r1",
+    "resolutions": [
+      0.5,
+      1.0
+    ],
+    "umap": true,
+    "workers": 8,
+    "workflow": {
+      "annParallel": true,
+      "assayName": "RNA",
+      "cellKey": "I",
+      "clusterSourceArtifactId": null,
+      "clusterSourceUri": null,
+      "dims": 21,
+      "filterAttrs": [
+        "RNA_nCounts",
+        "RNA_nFeatures",
+        "RNA_percentMito",
+        "RNA_percentRibo"
+      ],
+      "filterMaxQuantile": 0.99,
+      "filterMinQuantile": 0.01,
+      "graphLocalCache": "auto",
+      "graphSeed": 4466,
+      "h5adBatchSize": 1000,
+      "hvgMinCells": 20,
+      "k": 11,
+      "kmeansBatchSize": 10000,
+      "kmeansSampling": 0.1,
+      "leidenBackend": "cytearc",
+      "leidenResolution": 1.0,
+      "leidenSeed": 4444,
+      "minFeaturesPerCell": 10,
+      "nCentroids": 1000,
+      "parisMinClusterSize": null,
+      "parisNClusters": "auto",
+      "topN": 1000,
+      "umapEpochs": 300,
+      "umapParallel": true,
+      "umapSeed": 4444
+    }
+  },
+  "referenceTag": "embryo_rna_scaling_10000000_cells_replicate_6",
+  "referenced": {
+    "countSummaries": {
+      "sourceBytes": 67888859
+    },
+    "counts": {
+      "sourceBytes": 35227369000
+    },
+    "countsT": {
+      "sourceBytes": 23177564632
+    }
+  },
+  "reopen": {
+    "countsFingerprintMatches": true,
+    "countsRemountedFromSource": true,
+    "datasetFingerprintMatches": true,
+    "fingerprintCheckPassed": true,
+    "manifestNamesSource": true,
+    "requiresTranspose": true
+  },
+  "reuse": {
+    "clusterings": {
+      "reuse_leiden_k21_r1": {
+        "artifactId": "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26",
+        "cells": 8894085,
+        "clusters": 52
+      },
+      "reuse_leiden_published_r0.5": {
+        "artifactId": "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f",
+        "cells": 8894085,
+        "clusters": 37
+      },
+      "reuse_leiden_published_r2": {
+        "artifactId": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5",
+        "cells": 8894085,
+        "clusters": 74
+      }
+    },
+    "lineageGraph": {
+      "counts": {
+        "fingerprints": [
+          "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024",
+          "ddb8820c3fb7ad39abbcf894d888753558e4b8cbbdc62cdcb7a279a23c055266"
+        ],
+        "joinedTo": [
+          "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d",
+          "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+          "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50"
+        ],
+        "location": "source"
+      },
+      "edges": [
+        {
+          "inputs": [
+            "dataset"
+          ],
+          "source": "counts",
+          "target": "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d"
+        },
+        {
+          "inputs": [
+            "dataset"
+          ],
+          "source": "counts",
+          "target": "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2"
+        },
+        {
+          "inputs": [
+            "dataset"
+          ],
+          "source": "counts",
+          "target": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50"
+        },
+        {
+          "inputs": [
+            "clusters"
+          ],
+          "source": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5",
+          "target": "4a11409aaaf7cbbb9534014c73175e9ffa448d67bd9df707fcc2a9b712da47b8"
+        },
+        {
+          "inputs": [
+            "cell_selection"
+          ],
+          "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "target": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5"
+        },
+        {
+          "inputs": [
+            "pca_cell_selection"
+          ],
+          "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "target": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032"
+        },
+        {
+          "inputs": [
+            "cell_selection"
+          ],
+          "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "target": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50"
+        },
+        {
+          "inputs": [
+            "cell_selection"
+          ],
+          "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "target": "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2"
+        },
+        {
+          "inputs": [
+            "cell_selection"
+          ],
+          "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "target": "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f"
+        },
+        {
+          "inputs": [
+            "cell_selection"
+          ],
+          "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "target": "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26"
+        },
+        {
+          "inputs": [
+            "cell_selection"
+          ],
+          "source": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "target": "4a11409aaaf7cbbb9534014c73175e9ffa448d67bd9df707fcc2a9b712da47b8"
+        },
+        {
+          "inputs": [
+            "graph"
+          ],
+          "source": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+          "target": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5"
+        },
+        {
+          "inputs": [
+            "graph"
+          ],
+          "source": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+          "target": "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f"
+        },
+        {
+          "inputs": [
+            "neighbors"
+          ],
+          "source": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2",
+          "target": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e"
+        },
+        {
+          "inputs": [
+            "ann_index"
+          ],
+          "source": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+          "target": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2"
+        },
+        {
+          "inputs": [
+            "ann_index"
+          ],
+          "source": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+          "target": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67"
+        },
+        {
+          "inputs": [
+            "coordinates"
+          ],
+          "source": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+          "target": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2"
+        },
+        {
+          "inputs": [
+            "coordinates"
+          ],
+          "source": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+          "target": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f"
+        },
+        {
+          "inputs": [
+            "coordinates"
+          ],
+          "source": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+          "target": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67"
+        },
+        {
+          "inputs": [
+            "feature_scaling"
+          ],
+          "source": "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03",
+          "target": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032"
+        },
+        {
+          "inputs": [
+            "normalized"
+          ],
+          "source": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+          "target": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032"
+        },
+        {
+          "inputs": [
+            "normalized"
+          ],
+          "source": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+          "target": "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03"
+        },
+        {
+          "inputs": [
+            "prior_cell_selection"
+          ],
+          "source": "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb",
+          "target": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c"
+        },
+        {
+          "inputs": [
+            "feature_selection"
+          ],
+          "source": "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd",
+          "target": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50"
+        },
+        {
+          "inputs": [
+            "feature_snapshot"
+          ],
+          "source": "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+          "target": "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd"
+        },
+        {
+          "inputs": [
+            "feature_summary"
+          ],
+          "source": "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+          "target": "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd"
+        },
+        {
+          "inputs": [
+            "graph"
+          ],
+          "source": "320879bd090250acb16a63b57000b72b887c025601a1ac6d20b96db36d2c3cee",
+          "target": "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26"
+        },
+        {
+          "inputs": [
+            "neighbors"
+          ],
+          "source": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67",
+          "target": "320879bd090250acb16a63b57000b72b887c025601a1ac6d20b96db36d2c3cee"
+        },
+        {
+          "inputs": [
+            "feature_selection"
+          ],
+          "source": "bdcafa2f1ac664f8ea34fe77c99fdd57bbb3eac1cfccfadfa86c632dad42b5a9",
+          "target": "4a11409aaaf7cbbb9534014c73175e9ffa448d67bd9df707fcc2a9b712da47b8"
+        },
+        {
+          "inputs": [
+            "all_features"
+          ],
+          "source": "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d",
+          "target": "bdcafa2f1ac664f8ea34fe77c99fdd57bbb3eac1cfccfadfa86c632dad42b5a9"
+        }
+      ],
+      "nodes": [
+        {
+          "bytes": 0,
+          "id": "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb",
+          "kind": "cell_selection",
+          "operation": "manual_selection",
+          "otherInputs": {
+            "ordered_row_ids_fingerprint": "d47f567f32e3fc39374eebed6a8de0e50455191852390087fafc884deea6a54a",
+            "values_fingerprint": "0141c537579a5bef0644ecf4c05b06d01e5eae1c331f7e86c060fd73f2d9b1f9"
+          },
+          "outputs": [],
+          "parameters": {},
+          "scope": "datastore"
+        },
+        {
+          "bytes": 0,
+          "id": "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "kind": "cell_selection",
+          "operation": "auto_filter_cells",
+          "otherInputs": {
+            "artifact_metrics": {},
+            "metadata_fingerprints": {
+              "RNA_nCounts": "2168c5111621ce530072d6b92dca7ab73ce6f1bd57b77a07d1423eb413d53e27",
+              "RNA_nFeatures": "9ec25d6b55c58d5ba8a9da2ba999545965df58676a60fa2a9b1841c175247606",
+              "RNA_percentMito": "37667e34d24b1728e0154f9b918e1dd9fa42061a335a4720b57f6c49e95aed51",
+              "RNA_percentRibo": "1e64d3c2151b4c8533b8cc61bf69a61505097b675189647e2d6169702b2e3ce2"
+            },
+            "ordered_row_ids_fingerprint": "d47f567f32e3fc39374eebed6a8de0e50455191852390087fafc884deea6a54a",
+            "values_fingerprint": "e5c0a2c36288edc753977afff4af1962b1abf8c7ec648098878299e7b413b2d5"
+          },
+          "outputs": [],
+          "parameters": {
+            "attrs": [
+              "RNA_nCounts",
+              "RNA_nFeatures",
+              "RNA_percentMito",
+              "RNA_percentRibo"
+            ],
+            "max_p": 0.99,
+            "method": "gaussian",
+            "metric_sources": [
+              {
+                "column": "RNA_nCounts",
+                "name": "RNA_nCounts",
+                "source": "metadataColumn"
+              },
+              {
+                "column": "RNA_nFeatures",
+                "name": "RNA_nFeatures",
+                "source": "metadataColumn"
+              },
+              {
+                "column": "RNA_percentMito",
+                "name": "RNA_percentMito",
+                "source": "metadataColumn"
+              },
+              {
+                "column": "RNA_percentRibo",
+                "name": "RNA_percentRibo",
+                "source": "metadataColumn"
+              }
+            ],
+            "min_p": 0.01,
+            "resolved_bounds": {
+              "RNA_nCounts": {
+                "high": 8722.627641009958,
+                "low": -3408.627641009958
+              },
+              "RNA_nFeatures": {
+                "high": 3575.842584520975,
+                "low": -447.84258452097515
+              },
+              "RNA_percentMito": {
+                "high": 1.5103714595216249,
+                "low": -1.2568860349335385
+              },
+              "RNA_percentRibo": {
+                "high": 1.2236752284281653,
+                "low": -0.3784965883974315
+              }
+            }
+          },
+          "scope": "datastore"
+        },
+        {
+          "bytes": 0,
+          "id": "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d",
+          "kind": "feature_selection",
+          "operation": "create_all_features",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "dataset_fingerprint": "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024",
+            "ordered_feature_ids_fingerprint": "d12f615951bd01118a096be144d528fa40570b3661382b508a09825f96035d65"
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "bdcafa2f1ac664f8ea34fe77c99fdd57bbb3eac1cfccfadfa86c632dad42b5a9",
+          "kind": "feature_selection",
+          "operation": "set_feature_selection",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "values_fingerprint": "39395fa3f228c168eddd812b40a72906404ad27beba2b9d389c43e6b07e757de"
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+          "kind": "feature_summary",
+          "operation": "summarize_rna_features",
+          "otherInputs": {
+            "dataset_fingerprint": "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024"
+          },
+          "outputs": [],
+          "parameters": {
+            "normalization_method": {
+              "module": "cytearc.assay",
+              "qualname": "norm_lib_size"
+            },
+            "size_factor": 1000
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+          "kind": "metadata_snapshot",
+          "operation": "snapshot_run_metadata",
+          "otherInputs": {
+            "column_fingerprints": {
+              "names": "fa482b23835284c845abd0e1ebc5bed27aae1095150b5ebad6f12a4a41aceb81"
+            },
+            "ordered_row_ids_fingerprint": "d12f615951bd01118a096be144d528fa40570b3661382b508a09825f96035d65"
+          },
+          "outputs": [],
+          "parameters": {
+            "assay": "RNA",
+            "axis": "feature",
+            "ordered_columns": [
+              "names"
+            ]
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd",
+          "kind": "feature_selection",
+          "operation": "select_hvgs",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "bin_strategy": "adaptive",
+            "blacklist": "^MT-|^RPS|^RPL|^MRPS|^MRPL|^CCN[A-Z]|^HLA-|^H2-|^HIST|^H1-[1-6]$|^H1F[1-6]$|^H2AC\\d+$|^H2BC\\d+$|^H3C\\d+$|^H4C\\d+$|^H2AW$|^H3-4$|^H4-16$|^XIST$|^DDX3Y$|^USP9Y$|^EIF1AY$|^KDM5D$|^SRY$|^ZFY$|^UTY$|^TMSB4Y$|^NLGN4Y$",
+            "blacklist_fingerprint": "578835792b3a122a0ab91315726f7f007ca396faddb5ce9af6cc160d34404578",
+            "keep_bounds": false,
+            "lowess_frac": 0.1,
+            "max_cells": 8849615,
+            "max_mean": {
+              "special_float": "inf"
+            },
+            "max_var": {
+              "special_float": "inf"
+            },
+            "min_cells": 20,
+            "min_mean": {
+              "special_float": "-inf"
+            },
+            "min_var": {
+              "special_float": "-inf"
+            },
+            "n_bins": 200,
+            "top_n": 1000,
+            "variance_estimator": "regularized_local_quantile",
+            "variance_quantile": 0.25
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+          "kind": "normalized",
+          "operation": "run_normalization",
+          "otherInputs": {
+            "dataset_fingerprint": "c6802b7b7f26f5cec5df1dd28677704d29ec685f5619009d5b5c81e1fb88c024"
+          },
+          "outputs": [],
+          "parameters": {
+            "log_transform": true,
+            "normalization_method": {
+              "external_hook": true,
+              "module": "cytearc.assay",
+              "qualname": "norm_lib_size"
+            },
+            "renormalize_subset": true,
+            "size_factor": 1000.0
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03",
+          "kind": "feature_scaling",
+          "operation": "calculate_feature_scaling",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "enabled": true
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+          "kind": "reduction",
+          "operation": "run_pca",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "dims": 21,
+            "feat_scaling": true
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+          "kind": "ann_index",
+          "operation": "build_ann_index",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "ann_ef": 200,
+            "ann_efc": 200,
+            "ann_m": 24,
+            "ann_metric": "l2",
+            "ann_parallel": true,
+            "rand_state": 4466
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 1112110024,
+          "id": "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67",
+          "kind": "neighbors",
+          "operation": "query_neighbors",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "distance_metric": "l2",
+            "k": 21
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 1667924247,
+          "id": "320879bd090250acb16a63b57000b72b887c025601a1ac6d20b96db36d2c3cee",
+          "kind": "connectivity_map",
+          "operation": "build_connectivity_map",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "bandwidth": 1.5,
+            "local_connectivity": 1.0
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 6576756,
+          "id": "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26",
+          "kind": "cluster_labels",
+          "operation": "run_leiden_clustering",
+          "otherInputs": {},
+          "outputs": [
+            "reuse_leiden_k21_r1"
+          ],
+          "parameters": {
+            "backend": "cytearc",
+            "edge_weighting": "graph",
+            "graph_upper_only": false,
+            "random_seed": 4444,
+            "resolution": 1.0,
+            "symmetric_graph": false
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2",
+          "kind": "neighbors",
+          "operation": "query_neighbors",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "distance_metric": "l2",
+            "k": 11
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 0,
+          "id": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+          "kind": "connectivity_map",
+          "operation": "build_connectivity_map",
+          "otherInputs": {},
+          "outputs": [],
+          "parameters": {
+            "bandwidth": 1.5,
+            "local_connectivity": 1.0
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 7139562,
+          "id": "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5",
+          "kind": "cluster_labels",
+          "operation": "run_leiden_clustering",
+          "otherInputs": {},
+          "outputs": [
+            "reuse_leiden_published_r2"
+          ],
+          "parameters": {
+            "backend": "cytearc",
+            "edge_weighting": "graph",
+            "graph_upper_only": false,
+            "random_seed": 4444,
+            "resolution": 2.0,
+            "symmetric_graph": false
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 6031501,
+          "id": "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f",
+          "kind": "cluster_labels",
+          "operation": "run_leiden_clustering",
+          "otherInputs": {},
+          "outputs": [
+            "reuse_leiden_published_r0.5"
+          ],
+          "parameters": {
+            "backend": "cytearc",
+            "edge_weighting": "graph",
+            "graph_upper_only": false,
+            "random_seed": 4444,
+            "resolution": 0.5,
+            "symmetric_graph": false
+          },
+          "scope": "assay"
+        },
+        {
+          "bytes": 243776208,
+          "id": "4a11409aaaf7cbbb9534014c73175e9ffa448d67bd9df707fcc2a9b712da47b8",
+          "kind": "marker_table",
+          "operation": "run_marker_search",
+          "otherInputs": {},
+          "outputs": [
+            "reuse_markers_r2"
+          ],
+          "parameters": {
+            "adjustment_method": "fdr_bh",
+            "adjustment_scope": "within_group_all_tested_features",
+            "alternative": "two-sided",
+            "continuity_correction": true,
+            "method": "mannwhitneyu",
+            "normalization": {
+              "log_transform": false,
+              "renormalize_subset": false
+            },
+            "normalization_method": {
+              "module": "cytearc.assay",
+              "qualname": "norm_lib_size"
+            },
+            "size_factor": 1000,
+            "tie_correction": true
+          },
+          "scope": "assay"
+        }
+      ],
+      "sharedByAll": [
+        "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb",
+        "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+        "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+        "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+        "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd",
+        "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+        "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03",
+        "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+        "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f"
+      ],
+      "upstream": {
+        "reuse_leiden_k21_r1": [
+          "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb",
+          "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+          "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+          "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd",
+          "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+          "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03",
+          "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+          "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+          "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67",
+          "320879bd090250acb16a63b57000b72b887c025601a1ac6d20b96db36d2c3cee",
+          "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26"
+        ],
+        "reuse_leiden_published_r0.5": [
+          "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb",
+          "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+          "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+          "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd",
+          "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+          "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03",
+          "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+          "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+          "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2",
+          "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+          "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f"
+        ],
+        "reuse_leiden_published_r2": [
+          "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb",
+          "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c",
+          "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2",
+          "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346",
+          "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd",
+          "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50",
+          "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03",
+          "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032",
+          "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+          "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2",
+          "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+          "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5"
+        ]
+      }
+    },
+    "published": {
+      "annIndex": {
+        "artifactId": "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f",
+        "inUserStore": false,
+        "kind": "ann_index",
+        "listedOnMount": true
+      },
+      "clusters": {
+        "artifactId": "103c659e429379f495eeeb4c38f856e6623dd2fd75ab8c84060f986e1b51d30c",
+        "inUserStore": false,
+        "kind": "cluster_labels",
+        "listedOnMount": true
+      },
+      "graph": {
+        "artifactId": "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e",
+        "inUserStore": false,
+        "kind": "connectivity_map",
+        "listedOnMount": true
+      },
+      "markers": {
+        "artifactId": "3205de10aba402efa9609907833e78343746b4fb6b535ed300e1595b7da1690e",
+        "inUserStore": false,
+        "kind": "marker_table",
+        "listedOnMount": true
+      },
+      "neighbors": {
+        "artifactId": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2",
+        "inUserStore": false,
+        "kind": "neighbors",
+        "listedOnMount": true
+      }
+    },
+    "publishedLeidenParameters": {
+      "backend": "cytearc",
+      "graph_upper_only": false,
+      "random_seed": 4444,
+      "resolution": 1.0,
+      "symmetric_graph": false
+    },
+    "stepOrder": [
+      "reuse.list",
+      "reuse.same.neighbors",
+      "reuse.same.clusters",
+      "reuse.leiden.r0.5",
+      "reuse.leiden.r2",
+      "reuse.neighbors.k21",
+      "reuse.graph.k21",
+      "reuse.leiden.k21_r1",
+      "reuse.markers.r2"
+    ],
+    "steps": {
+      "sameClusters": {
+        "artifactId": "103c659e429379f495eeeb4c38f856e6623dd2fd75ab8c84060f986e1b51d30c",
+        "bytesWritten": 0,
+        "isPublished": true
+      },
+      "sameNeighbors": {
+        "artifactId": "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2",
+        "bytesWritten": 0,
+        "isPublished": true
+      }
+    },
+    "totals": {
+      "seconds": 2012.1655298740002,
+      "sourceReadByComponent": {
+        "artifact:ann_index": 1599092507,
+        "artifact:cell_selection": 11417687,
+        "artifact:cluster_labels": 6304,
+        "artifact:connectivity_map": 1287709085,
+        "artifact:feature_selection": 2365215,
+        "artifact:feature_summary": 5757080,
+        "artifact:marker_table": 4712,
+        "artifact:metadata_snapshot": 2124801,
+        "artifact:neighbors": 9119,
+        "artifact:normalized": 31878,
+        "artifact:reduction": 699899098,
+        "countsT": 23298450185
+      },
+      "sourceReadBytes": 26906867671,
+      "userStoreBytesWritten": 3043558298
+    }
+  },
+  "source": {
+    "after": {
+      "byArtifact": {
+        "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e": 643843596,
+        "103c659e429379f495eeeb4c38f856e6623dd2fd75ab8c84060f986e1b51d30c": 4740870,
+        "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c": 1140528,
+        "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032": 699988469,
+        "3205de10aba402efa9609907833e78343746b4fb6b535ed300e1595b7da1690e": 125763204,
+        "51d32f6931ee45cbb328a221e9dc0753c9e65456e85a93be1c136a62f55e290a": 64985424,
+        "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346": 302049,
+        "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2": 821297,
+        "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d": 1426,
+        "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd": 335875,
+        "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50": 2111615059,
+        "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2": 663024244,
+        "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb": 3429,
+        "bdcafa2f1ac664f8ea34fe77c99fdd57bbb3eac1cfccfadfa86c632dad42b5a9": 1611,
+        "be18fd9f68c49a6178f24a6fab9650182f614aefbd0abe3e522e5c044b3f0b1c": 13404136,
+        "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03": 17250,
+        "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f": 1599076692
+      },
+      "byComponent": {
+        "artifact:ann_index": 1599076692,
+        "artifact:cell_selection": 1143957,
+        "artifact:cluster_labels": 4740870,
+        "artifact:connectivity_map": 643843596,
+        "artifact:embedding": 64985424,
+        "artifact:embedding_initialization": 13404136,
+        "artifact:feature_scaling": 17250,
+        "artifact:feature_selection": 338912,
+        "artifact:feature_summary": 821297,
+        "artifact:marker_table": 125763204,
+        "artifact:metadata_snapshot": 302049,
+        "artifact:neighbors": 663024244,
+        "artifact:normalized": 2111615059,
+        "artifact:reduction": 699988469,
+        "cellData": 429627441,
+        "countSummaries": 67888859,
+        "counts": 35227369000,
+        "countsT": 23177564632,
+        "featureData": 805336,
+        "other": 2822
+      },
+      "byTopLevel": {
+        "RNA": 64401551578,
+        "artifacts": 1144089,
+        "cellData": 429627441,
+        "zarr.json": 141
+      },
+      "bytes": 64832323249,
+      "digest": "d76c483a7fecf7aa2831cbcf0fb474b0162a36139ffb44d5715b4c4405de8e52",
+      "objects": 4025
+    },
+    "before": {
+      "byArtifact": {
+        "0633443eedfe8df8402b6a7d7e8deb0d918fa5e06bc0b86c6fcd9ea8400b828e": 643843596,
+        "103c659e429379f495eeeb4c38f856e6623dd2fd75ab8c84060f986e1b51d30c": 4740870,
+        "2b45c5e0d4a690826f3a48e1dce48234cf4ca7d1b4555b519d2cf60a5a05eb7c": 1140528,
+        "30e6e7b22b8b86487a514b5eaac410e5f13f2de07e374fb03bb027c3f49f9032": 699988469,
+        "3205de10aba402efa9609907833e78343746b4fb6b535ed300e1595b7da1690e": 125763204,
+        "51d32f6931ee45cbb328a221e9dc0753c9e65456e85a93be1c136a62f55e290a": 64985424,
+        "5e2f6df4baedc50caf77010e204ef2d3423353fbc990995583d1be1a3b647346": 302049,
+        "61ec2183343900a5409ff493cb2eac776fb0888dd31847bcc341f63c94778ed2": 821297,
+        "7961428c481dba824d6a148a6eee47e5fb03be7a2756d3e6e6b674b69ed0915d": 1426,
+        "8285be67d50206740c46b8118c14ef4a1999d00a14962409fb2fe215da4ee5cd": 335875,
+        "88d27cac871414c7c8d5163bebddcc6f27c6a25921c5eee608379ea4132fca50": 2111615059,
+        "b009492739a80b69cb890984a71d24bfa1f06fd3e2aae257b69ae257d7b0e0d2": 663024244,
+        "b33642986e1a207b8e3b89875cd829cd4029fbc8999f5fcd83e788c90bb087eb": 3429,
+        "bdcafa2f1ac664f8ea34fe77c99fdd57bbb3eac1cfccfadfa86c632dad42b5a9": 1611,
+        "be18fd9f68c49a6178f24a6fab9650182f614aefbd0abe3e522e5c044b3f0b1c": 13404136,
+        "c14f6fa4e60742baac59503ff77032a4d9c4e7c394889c49e072cd08035edf03": 17250,
+        "ee4a11ff4389b9474ae66f353d9afb0307a5861bb364f2c5ecd32d57b2a50a5f": 1599076692
+      },
+      "byComponent": {
+        "artifact:ann_index": 1599076692,
+        "artifact:cell_selection": 1143957,
+        "artifact:cluster_labels": 4740870,
+        "artifact:connectivity_map": 643843596,
+        "artifact:embedding": 64985424,
+        "artifact:embedding_initialization": 13404136,
+        "artifact:feature_scaling": 17250,
+        "artifact:feature_selection": 338912,
+        "artifact:feature_summary": 821297,
+        "artifact:marker_table": 125763204,
+        "artifact:metadata_snapshot": 302049,
+        "artifact:neighbors": 663024244,
+        "artifact:normalized": 2111615059,
+        "artifact:reduction": 699988469,
+        "cellData": 429627441,
+        "countSummaries": 67888859,
+        "counts": 35227369000,
+        "countsT": 23177564632,
+        "featureData": 805336,
+        "other": 2822
+      },
+      "byTopLevel": {
+        "RNA": 64401551578,
+        "artifacts": 1144089,
+        "cellData": 429627441,
+        "zarr.json": 141
+      },
+      "bytes": 64832323249,
+      "digest": "d76c483a7fecf7aa2831cbcf0fb474b0162a36139ffb44d5715b4c4405de8e52",
+      "objects": 4025
+    },
+    "cells": 10000000,
+    "genes": 45525,
+    "unchanged": true
+  },
+  "sourceSampling": {
+    "atlasRows": 11441407,
+    "seed": 0,
+    "size": 10000000
+  },
+  "sourceStore": "embryo_rna_scaling_10000000_cells_replicate_6",
+  "status": "ok",
+  "stepOrder": [
+    "mount",
+    "annotate",
+    "selectLineage",
+    "selectGenes",
+    "normalize",
+    "pca",
+    "harmony",
+    "annIndex",
+    "neighbors.k11",
+    "graph.k11",
+    "leiden.k11_r0.5",
+    "leiden.k11_r1",
+    "neighbors.k15",
+    "graph.k15",
+    "leiden.k15_r0.5",
+    "leiden.k15_r1",
+    "neighbors.k21",
+    "graph.k21",
+    "leiden.k21_r0.5",
+    "leiden.k21_r1",
+    "markers.k11_r1",
+    "umapInitialization",
+    "umap.k11",
+    "reuse.list",
+    "reuse.same.neighbors",
+    "reuse.same.clusters",
+    "reuse.leiden.r0.5",
+    "reuse.leiden.r2",
+    "reuse.neighbors.k21",
+    "reuse.graph.k21",
+    "reuse.leiden.k21_r1",
+    "reuse.markers.r2",
+    "reopen"
+  ],
+  "steps": {
+    "annIndex": {
+      "peakCgroupBytes": 3818209280,
+      "peakRssBytes": 3883532288,
+      "seconds": 8.867730778999885,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 12,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:ann_index": 910,
+          "artifact:metadata_snapshot": 303543,
+          "counts": 2449,
+          "countsT": 2447,
+          "other": 1757
+        },
+        "readRequestedBytes": 311106,
+        "readTransferredBytes": 311106,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 311106,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:ann_index": 910,
+        "artifact:metadata_snapshot": 303543,
+        "counts": 2449,
+        "countsT": 2447,
+        "other": 1757
+      },
+      "sourceReadBytes": 311106,
+      "sourceReadRequests": 15,
+      "userStoreBytesAfter": 1487659238,
+      "userStoreBytesBefore": 1424738103,
+      "userStoreBytesWritten": 62921135
+    },
+    "annotate": {
+      "peakCgroupBytes": 3105927168,
+      "peakRssBytes": 3144843264,
+      "seconds": 20.98036175899999,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 2,
+        "gets": 2,
+        "lists": 0,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "other": 132
+        },
+        "readRequestedBytes": 132,
+        "readTransferredBytes": 132,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 132,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "other": 132
+      },
+      "sourceReadBytes": 132,
+      "sourceReadRequests": 4,
+      "userStoreBytesAfter": 901643536,
+      "userStoreBytesBefore": 771064636,
+      "userStoreBytesWritten": 130578900
+    },
+    "graph.k11": {
+      "peakCgroupBytes": 3856138240,
+      "peakRssBytes": 3922628608,
+      "seconds": 17.977191931000107,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 9,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:connectivity_map": 825,
+          "artifact:metadata_snapshot": 303543,
+          "other": 132
+        },
+        "readRequestedBytes": 304500,
+        "readTransferredBytes": 304500,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304500,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:connectivity_map": 825,
+        "artifact:metadata_snapshot": 303543,
+        "other": 132
+      },
+      "sourceReadBytes": 304500,
+      "sourceReadRequests": 12,
+      "userStoreBytesAfter": 1526951183,
+      "userStoreBytesBefore": 1503853922,
+      "userStoreBytesWritten": 23097261
+    },
+    "graph.k15": {
+      "peakCgroupBytes": 4248772608,
+      "peakRssBytes": 4320231424,
+      "seconds": 2.888223036999989,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 7,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:connectivity_map": 825,
+          "artifact:metadata_snapshot": 303543
+        },
+        "readRequestedBytes": 304368,
+        "readTransferredBytes": 304368,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304368,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:connectivity_map": 825,
+        "artifact:metadata_snapshot": 303543
+      },
+      "sourceReadBytes": 304368,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1580191099,
+      "userStoreBytesBefore": 1548895167,
+      "userStoreBytesWritten": 31295932
+    },
+    "graph.k21": {
+      "peakCgroupBytes": 4338311168,
+      "peakRssBytes": 4408815616,
+      "seconds": 4.0838403359998665,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 7,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:connectivity_map": 825,
+          "artifact:metadata_snapshot": 303543
+        },
+        "readRequestedBytes": 304368,
+        "readTransferredBytes": 304368,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304368,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:connectivity_map": 825,
+        "artifact:metadata_snapshot": 303543
+      },
+      "sourceReadBytes": 304368,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1654692431,
+      "userStoreBytesBefore": 1610705388,
+      "userStoreBytesWritten": 43987043
+    },
+    "harmony": {
+      "peakCgroupBytes": 3965100032,
+      "peakRssBytes": 4031037440,
+      "seconds": 132.91746991000014,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 2,
+        "gets": 11,
+        "lists": 1,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:batch_correction": 0,
+          "artifact:metadata_snapshot": 303543,
+          "other": 0
+        },
+        "readRequestedBytes": 303543,
+        "readTransferredBytes": 303543,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 303543,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:batch_correction": 0,
+        "artifact:metadata_snapshot": 303543,
+        "other": 0
+      },
+      "sourceReadBytes": 303543,
+      "sourceReadRequests": 14,
+      "userStoreBytesAfter": 1424738103,
+      "userStoreBytesBefore": 1402185433,
+      "userStoreBytesWritten": 22552670
+    },
+    "leiden.k11_r0.5": {
+      "peakCgroupBytes": 4233408512,
+      "peakRssBytes": 4303609856,
+      "seconds": 33.570724119999795,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 9,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:cluster_labels": 1136,
+          "artifact:metadata_snapshot": 303543,
+          "other": 132
+        },
+        "readRequestedBytes": 304811,
+        "readTransferredBytes": 304811,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304811,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:cluster_labels": 1136,
+        "artifact:metadata_snapshot": 303543,
+        "other": 132
+      },
+      "sourceReadBytes": 304811,
+      "sourceReadRequests": 12,
+      "userStoreBytesAfter": 1527101629,
+      "userStoreBytesBefore": 1526951183,
+      "userStoreBytesWritten": 150446
+    },
+    "leiden.k11_r1": {
+      "peakCgroupBytes": 4248772608,
+      "peakRssBytes": 4320231424,
+      "seconds": 6.043126244000177,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 7,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:cluster_labels": 1136,
+          "artifact:metadata_snapshot": 303543
+        },
+        "readRequestedBytes": 304679,
+        "readTransferredBytes": 304679,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304679,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:cluster_labels": 1136,
+        "artifact:metadata_snapshot": 303543
+      },
+      "sourceReadBytes": 304679,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1527269001,
+      "userStoreBytesBefore": 1527101629,
+      "userStoreBytesWritten": 167372
+    },
+    "leiden.k15_r0.5": {
+      "peakCgroupBytes": 4305833984,
+      "peakRssBytes": 4376338432,
+      "seconds": 5.743508965999808,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 7,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:cluster_labels": 1136,
+          "artifact:metadata_snapshot": 303543
+        },
+        "readRequestedBytes": 304679,
+        "readTransferredBytes": 304679,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304679,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:cluster_labels": 1136,
+        "artifact:metadata_snapshot": 303543
+      },
+      "sourceReadBytes": 304679,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1580339344,
+      "userStoreBytesBefore": 1580191099,
+      "userStoreBytesWritten": 148245
+    },
+    "leiden.k15_r1": {
+      "peakCgroupBytes": 4312125440,
+      "peakRssBytes": 4382629888,
+      "seconds": 6.112166303999857,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 7,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:cluster_labels": 1136,
+          "artifact:metadata_snapshot": 303543
+        },
+        "readRequestedBytes": 304679,
+        "readTransferredBytes": 304679,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304679,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:cluster_labels": 1136,
+        "artifact:metadata_snapshot": 303543
+      },
+      "sourceReadBytes": 304679,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1580505976,
+      "userStoreBytesBefore": 1580339344,
+      "userStoreBytesWritten": 166632
+    },
+    "leiden.k21_r0.5": {
+      "peakCgroupBytes": 4423086080,
+      "peakRssBytes": 4494721024,
+      "seconds": 7.920074719999775,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 7,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:cluster_labels": 1136,
+          "artifact:metadata_snapshot": 303543
+        },
+        "readRequestedBytes": 304679,
+        "readTransferredBytes": 304679,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304679,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:cluster_labels": 1136,
+        "artifact:metadata_snapshot": 303543
+      },
+      "sourceReadBytes": 304679,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1654840693,
+      "userStoreBytesBefore": 1654692431,
+      "userStoreBytesWritten": 148262
+    },
+    "leiden.k21_r1": {
+      "peakCgroupBytes": 4424331264,
+      "peakRssBytes": 4494782464,
+      "seconds": 7.494570231000125,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 7,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:cluster_labels": 1136,
+          "artifact:metadata_snapshot": 303543
+        },
+        "readRequestedBytes": 304679,
+        "readTransferredBytes": 304679,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304679,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:cluster_labels": 1136,
+        "artifact:metadata_snapshot": 303543
+      },
+      "sourceReadBytes": 304679,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1655000376,
+      "userStoreBytesBefore": 1654840693,
+      "userStoreBytesWritten": 159683
+    },
+    "markers.k11_r1": {
+      "peakCgroupBytes": 6967504896,
+      "peakRssBytes": 7079956480,
+      "seconds": 773.0747570610001,
+      "sourceOperations": {
+        "countReadBytes": 23298450185,
+        "countReadRequests": 167624,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 83844,
+        "lists": 7,
+        "maxInFlight": 72,
+        "partialGets": 0,
+        "rangeGets": 83812,
+        "readBytesByComponent": {
+          "artifact:feature_selection": 17266,
+          "artifact:marker_table": 2356,
+          "counts": 2449,
+          "countsT": 23298452632,
+          "other": 1757
+        },
+        "readRequestedBytes": 23298476460,
+        "readTransferredBytes": 23298476460,
+        "requestedBytes": 23298450185,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 23298476460,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:feature_selection": 17266,
+        "artifact:marker_table": 2356,
+        "counts": 2449,
+        "countsT": 23298452632,
+        "other": 1757
+      },
+      "sourceReadBytes": 23298476460,
+      "sourceReadRequests": 167664,
+      "userStoreBytesAfter": 1716161963,
+      "userStoreBytesBefore": 1655000376,
+      "userStoreBytesWritten": 61161587
+    },
+    "mount": {
+      "peakCgroupBytes": 1595650048,
+      "peakRssBytes": 1645740032,
+      "seconds": 41.735298361999995,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 848,
+        "lists": 11,
+        "maxInFlight": 56,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "cellData": 429652821,
+          "counts": 39184,
+          "countsT": 9788,
+          "featureData": 821952,
+          "other": 31628
+        },
+        "readRequestedBytes": 430555373,
+        "readTransferredBytes": 430555373,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 430555373,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "cellData": 429652821,
+        "counts": 39184,
+        "countsT": 9788,
+        "featureData": 821952,
+        "other": 31628
+      },
+      "sourceReadBytes": 430555373,
+      "sourceReadRequests": 860,
+      "userStoreBytesAfter": 771064636,
+      "userStoreBytesBefore": 0,
+      "userStoreBytesWritten": 771064636
+    },
+    "neighbors.k11": {
+      "peakCgroupBytes": 3818369024,
+      "peakRssBytes": 3884593152,
+      "seconds": 7.069984416000352,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 9,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:metadata_snapshot": 303543,
+          "artifact:neighbors": 1134,
+          "other": 132
+        },
+        "readRequestedBytes": 304809,
+        "readTransferredBytes": 304809,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304809,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:metadata_snapshot": 303543,
+        "artifact:neighbors": 1134,
+        "other": 132
+      },
+      "sourceReadBytes": 304809,
+      "sourceReadRequests": 12,
+      "userStoreBytesAfter": 1503853922,
+      "userStoreBytesBefore": 1487659238,
+      "userStoreBytesWritten": 16194684
+    },
+    "neighbors.k15": {
+      "peakCgroupBytes": 4379779072,
+      "peakRssBytes": 4451237888,
+      "seconds": 5.400910372999988,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 7,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:metadata_snapshot": 303543,
+          "artifact:neighbors": 1134
+        },
+        "readRequestedBytes": 304677,
+        "readTransferredBytes": 304677,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304677,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:metadata_snapshot": 303543,
+        "artifact:neighbors": 1134
+      },
+      "sourceReadBytes": 304677,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1548895167,
+      "userStoreBytesBefore": 1527269001,
+      "userStoreBytesWritten": 21626166
+    },
+    "neighbors.k21": {
+      "peakCgroupBytes": 4444696576,
+      "peakRssBytes": 4515201024,
+      "seconds": 6.357340265999937,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 7,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:metadata_snapshot": 303543,
+          "artifact:neighbors": 1134
+        },
+        "readRequestedBytes": 304677,
+        "readTransferredBytes": 304677,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304677,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:metadata_snapshot": 303543,
+        "artifact:neighbors": 1134
+      },
+      "sourceReadBytes": 304677,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1610705388,
+      "userStoreBytesBefore": 1580505976,
+      "userStoreBytesWritten": 30199412
+    },
+    "normalize": {
+      "peakCgroupBytes": 4245286912,
+      "peakRssBytes": 4315516928,
+      "seconds": 1224.337971716,
+      "sourceOperations": {
+        "countReadBytes": 15646018697,
+        "countReadRequests": 100648,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 50336,
+        "lists": 2,
+        "maxInFlight": 56,
+        "partialGets": 0,
+        "rangeGets": 50324,
+        "readBytesByComponent": {
+          "artifact:metadata_snapshot": 303543,
+          "artifact:normalized": 1301,
+          "counts": 2449,
+          "countsT": 15646021144,
+          "other": 1757
+        },
+        "readRequestedBytes": 15646330194,
+        "readTransferredBytes": 15646330194,
+        "requestedBytes": 15646018697,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 15646330194,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:metadata_snapshot": 303543,
+        "artifact:normalized": 1301,
+        "counts": 2449,
+        "countsT": 15646021144,
+        "other": 1757
+      },
+      "sourceReadBytes": 15646330194,
+      "sourceReadRequests": 100663,
+      "userStoreBytesAfter": 1380667972,
+      "userStoreBytesBefore": 904059019,
+      "userStoreBytesWritten": 476608953
+    },
+    "pca": {
+      "peakCgroupBytes": 4737605632,
+      "peakRssBytes": 4787621888,
+      "seconds": 9.77462451700012,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 2,
+        "gets": 16,
+        "lists": 3,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:feature_scaling": 802,
+          "artifact:metadata_snapshot": 303543,
+          "artifact:reduction": 1321,
+          "counts": 2449,
+          "countsT": 2447,
+          "other": 1889
+        },
+        "readRequestedBytes": 312451,
+        "readTransferredBytes": 312451,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 312451,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:feature_scaling": 802,
+        "artifact:metadata_snapshot": 303543,
+        "artifact:reduction": 1321,
+        "counts": 2449,
+        "countsT": 2447,
+        "other": 1889
+      },
+      "sourceReadBytes": 312451,
+      "sourceReadRequests": 21,
+      "userStoreBytesAfter": 1402185433,
+      "userStoreBytesBefore": 1380667972,
+      "userStoreBytesWritten": 21517461
+    },
+    "reopen": {
+      "peakCgroupBytes": 6375288832,
+      "peakRssBytes": 6467342336,
+      "seconds": 6.097219433999271,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 0,
+        "gets": 26,
+        "lists": 0,
+        "maxInFlight": 8,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "cellData": 3590,
+          "counts": 12245,
+          "countsT": 2447,
+          "featureData": 2019,
+          "other": 9891
+        },
+        "readRequestedBytes": 30192,
+        "readTransferredBytes": 30192,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 30192,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "cellData": 3590,
+        "counts": 12245,
+        "countsT": 2447,
+        "featureData": 2019,
+        "other": 9891
+      },
+      "sourceReadBytes": 30192,
+      "sourceReadRequests": 26,
+      "userStoreBytesAfter": 4762153822,
+      "userStoreBytesBefore": 4762153822,
+      "userStoreBytesWritten": 0
+    },
+    "reuse.graph.k21": {
+      "peakCgroupBytes": 11075616768,
+      "peakRssBytes": 11145768960,
+      "seconds": 32.39862957000014,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 39,
+        "lists": 4,
+        "maxInFlight": 3,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:ann_index": 1820,
+          "artifact:cell_selection": 1143237,
+          "artifact:connectivity_map": 825,
+          "artifact:feature_selection": 337063,
+          "artifact:feature_summary": 822440,
+          "artifact:metadata_snapshot": 303543,
+          "artifact:normalized": 4554,
+          "artifact:reduction": 7567
+        },
+        "readRequestedBytes": 2621049,
+        "readTransferredBytes": 2621049,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 2621049,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:ann_index": 1820,
+        "artifact:cell_selection": 1143237,
+        "artifact:connectivity_map": 825,
+        "artifact:feature_selection": 337063,
+        "artifact:feature_summary": 822440,
+        "artifact:metadata_snapshot": 303543,
+        "artifact:normalized": 4554,
+        "artifact:reduction": 7567
+      },
+      "sourceReadBytes": 2621049,
+      "sourceReadRequests": 44,
+      "userStoreBytesAfter": 4511800858,
+      "userStoreBytesBefore": 2843876611,
+      "userStoreBytesWritten": 1667924247
+    },
+    "reuse.leiden.k21_r1": {
+      "peakCgroupBytes": 13965742080,
+      "peakRssBytes": 14035144704,
+      "seconds": 128.6612240229997,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 38,
+        "lists": 4,
+        "maxInFlight": 3,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:ann_index": 910,
+          "artifact:cell_selection": 1143237,
+          "artifact:cluster_labels": 1136,
+          "artifact:feature_selection": 337063,
+          "artifact:feature_summary": 822440,
+          "artifact:metadata_snapshot": 303543,
+          "artifact:normalized": 4554,
+          "artifact:reduction": 7567
+        },
+        "readRequestedBytes": 2620450,
+        "readTransferredBytes": 2620450,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 2620450,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:ann_index": 910,
+        "artifact:cell_selection": 1143237,
+        "artifact:cluster_labels": 1136,
+        "artifact:feature_selection": 337063,
+        "artifact:feature_summary": 822440,
+        "artifact:metadata_snapshot": 303543,
+        "artifact:normalized": 4554,
+        "artifact:reduction": 7567
+      },
+      "sourceReadBytes": 2620450,
+      "sourceReadRequests": 43,
+      "userStoreBytesAfter": 4518377614,
+      "userStoreBytesBefore": 4511800858,
+      "userStoreBytesWritten": 6576756
+    },
+    "reuse.leiden.r0.5": {
+      "peakCgroupBytes": 10262945792,
+      "peakRssBytes": 10333048832,
+      "seconds": 199.01093588100002,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 70,
+        "lists": 4,
+        "maxInFlight": 9,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:ann_index": 910,
+          "artifact:cell_selection": 1143237,
+          "artifact:cluster_labels": 1136,
+          "artifact:connectivity_map": 643852480,
+          "artifact:feature_selection": 337063,
+          "artifact:feature_summary": 822440,
+          "artifact:metadata_snapshot": 303543,
+          "artifact:neighbors": 1134,
+          "artifact:normalized": 4554,
+          "artifact:reduction": 7567
+        },
+        "readRequestedBytes": 646474064,
+        "readTransferredBytes": 646474064,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 646474064,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:ann_index": 910,
+        "artifact:cell_selection": 1143237,
+        "artifact:cluster_labels": 1136,
+        "artifact:connectivity_map": 643852480,
+        "artifact:feature_selection": 337063,
+        "artifact:feature_summary": 822440,
+        "artifact:metadata_snapshot": 303543,
+        "artifact:neighbors": 1134,
+        "artifact:normalized": 4554,
+        "artifact:reduction": 7567
+      },
+      "sourceReadBytes": 646474064,
+      "sourceReadRequests": 75,
+      "userStoreBytesAfter": 1724627025,
+      "userStoreBytesBefore": 1718595524,
+      "userStoreBytesWritten": 6031501
+    },
+    "reuse.leiden.r2": {
+      "peakCgroupBytes": 10264682496,
+      "peakRssBytes": 10334789632,
+      "seconds": 140.83956753899975,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 70,
+        "lists": 4,
+        "maxInFlight": 9,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:ann_index": 910,
+          "artifact:cell_selection": 1143237,
+          "artifact:cluster_labels": 1136,
+          "artifact:connectivity_map": 643852480,
+          "artifact:feature_selection": 337063,
+          "artifact:feature_summary": 822440,
+          "artifact:metadata_snapshot": 303543,
+          "artifact:neighbors": 1134,
+          "artifact:normalized": 4554,
+          "artifact:reduction": 7567
+        },
+        "readRequestedBytes": 646474064,
+        "readTransferredBytes": 646474064,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 646474064,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:ann_index": 910,
+        "artifact:cell_selection": 1143237,
+        "artifact:cluster_labels": 1136,
+        "artifact:connectivity_map": 643852480,
+        "artifact:feature_selection": 337063,
+        "artifact:feature_summary": 822440,
+        "artifact:metadata_snapshot": 303543,
+        "artifact:neighbors": 1134,
+        "artifact:normalized": 4554,
+        "artifact:reduction": 7567
+      },
+      "sourceReadBytes": 646474064,
+      "sourceReadRequests": 75,
+      "userStoreBytesAfter": 1731766587,
+      "userStoreBytesBefore": 1724627025,
+      "userStoreBytesWritten": 7139562
+    },
+    "reuse.list": {
+      "peakCgroupBytes": 5824126976,
+      "peakRssBytes": 5894230016,
+      "seconds": 2.8751290639997933,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 0,
+        "gets": 5,
+        "lists": 5,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:ann_index": 910,
+          "artifact:cluster_labels": 1136,
+          "artifact:connectivity_map": 825,
+          "artifact:marker_table": 2356,
+          "artifact:neighbors": 1134
+        },
+        "readRequestedBytes": 6361,
+        "readTransferredBytes": 6361,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 6361,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:ann_index": 910,
+        "artifact:cluster_labels": 1136,
+        "artifact:connectivity_map": 825,
+        "artifact:marker_table": 2356,
+        "artifact:neighbors": 1134
+      },
+      "sourceReadBytes": 6361,
+      "sourceReadRequests": 10,
+      "userStoreBytesAfter": 1718595524,
+      "userStoreBytesBefore": 1718595524,
+      "userStoreBytesWritten": 0
+    },
+    "reuse.markers.r2": {
+      "peakCgroupBytes": 15453270016,
+      "peakRssBytes": 15537938432,
+      "seconds": 915.8648627130005,
+      "sourceOperations": {
+        "countReadBytes": 23298450185,
+        "countReadRequests": 167624,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 83830,
+        "lists": 3,
+        "maxInFlight": 72,
+        "partialGets": 0,
+        "rangeGets": 83812,
+        "readBytesByComponent": {
+          "artifact:cell_selection": 3415028,
+          "artifact:feature_selection": 5774,
+          "artifact:marker_table": 2356,
+          "countsT": 23298450185
+        },
+        "readRequestedBytes": 23301873343,
+        "readTransferredBytes": 23301873343,
+        "requestedBytes": 23298450185,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 23301873343,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:cell_selection": 3415028,
+        "artifact:feature_selection": 5774,
+        "artifact:marker_table": 2356,
+        "countsT": 23298450185
+      },
+      "sourceReadBytes": 23301873343,
+      "sourceReadRequests": 167646,
+      "userStoreBytesAfter": 4762153822,
+      "userStoreBytesBefore": 4518377614,
+      "userStoreBytesWritten": 243776208
+    },
+    "reuse.neighbors.k21": {
+      "peakCgroupBytes": 10555985920,
+      "peakRssBytes": 10624319488,
+      "seconds": 538.7481702960004,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 378,
+        "lists": 4,
+        "maxInFlight": 8,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:ann_index": 1599081813,
+          "artifact:cell_selection": 1143237,
+          "artifact:feature_selection": 337063,
+          "artifact:feature_summary": 822440,
+          "artifact:metadata_snapshot": 303543,
+          "artifact:neighbors": 1134,
+          "artifact:normalized": 4554,
+          "artifact:reduction": 699838021
+        },
+        "readRequestedBytes": 2301531805,
+        "readTransferredBytes": 2301531805,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 2301531805,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:ann_index": 1599081813,
+        "artifact:cell_selection": 1143237,
+        "artifact:feature_selection": 337063,
+        "artifact:feature_summary": 822440,
+        "artifact:metadata_snapshot": 303543,
+        "artifact:neighbors": 1134,
+        "artifact:normalized": 4554,
+        "artifact:reduction": 699838021
+      },
+      "sourceReadBytes": 2301531805,
+      "sourceReadRequests": 383,
+      "userStoreBytesAfter": 2843876611,
+      "userStoreBytesBefore": 1731766587,
+      "userStoreBytesWritten": 1112110024
+    },
+    "reuse.same.clusters": {
+      "peakCgroupBytes": 5473828864,
+      "peakRssBytes": 5543931904,
+      "seconds": 19.282029995999892,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 0,
+        "gets": 42,
+        "lists": 4,
+        "maxInFlight": 3,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:ann_index": 910,
+          "artifact:cell_selection": 1143237,
+          "artifact:cluster_labels": 1760,
+          "artifact:connectivity_map": 2475,
+          "artifact:feature_selection": 337063,
+          "artifact:feature_summary": 822440,
+          "artifact:metadata_snapshot": 303543,
+          "artifact:neighbors": 1134,
+          "artifact:normalized": 4554,
+          "artifact:reduction": 7567
+        },
+        "readRequestedBytes": 2624683,
+        "readTransferredBytes": 2624683,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 2624683,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:ann_index": 910,
+        "artifact:cell_selection": 1143237,
+        "artifact:cluster_labels": 1760,
+        "artifact:connectivity_map": 2475,
+        "artifact:feature_selection": 337063,
+        "artifact:feature_summary": 822440,
+        "artifact:metadata_snapshot": 303543,
+        "artifact:neighbors": 1134,
+        "artifact:normalized": 4554,
+        "artifact:reduction": 7567
+      },
+      "sourceReadBytes": 2624683,
+      "sourceReadRequests": 46,
+      "userStoreBytesAfter": 1718595524,
+      "userStoreBytesBefore": 1718595524,
+      "userStoreBytesWritten": 0
+    },
+    "reuse.same.neighbors": {
+      "peakCgroupBytes": 5605650432,
+      "peakRssBytes": 5675753472,
+      "seconds": 34.48498079199999,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 0,
+        "gets": 52,
+        "lists": 4,
+        "maxInFlight": 3,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:ann_index": 4324,
+          "artifact:cell_selection": 1143237,
+          "artifact:feature_selection": 337063,
+          "artifact:feature_summary": 822440,
+          "artifact:metadata_snapshot": 303543,
+          "artifact:neighbors": 3449,
+          "artifact:normalized": 4554,
+          "artifact:reduction": 23242
+        },
+        "readRequestedBytes": 2641852,
+        "readTransferredBytes": 2641852,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 2641852,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:ann_index": 4324,
+        "artifact:cell_selection": 1143237,
+        "artifact:feature_selection": 337063,
+        "artifact:feature_summary": 822440,
+        "artifact:metadata_snapshot": 303543,
+        "artifact:neighbors": 3449,
+        "artifact:normalized": 4554,
+        "artifact:reduction": 23242
+      },
+      "sourceReadBytes": 2641852,
+      "sourceReadRequests": 56,
+      "userStoreBytesAfter": 1718595524,
+      "userStoreBytesBefore": 1718595524,
+      "userStoreBytesWritten": 0
+    },
+    "selectGenes": {
+      "peakCgroupBytes": 4306440192,
+      "peakRssBytes": 4381798400,
+      "seconds": 637.611933051,
+      "sourceOperations": {
+        "countReadBytes": 23298450185,
+        "countReadRequests": 167624,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 2,
+        "gets": 83834,
+        "lists": 4,
+        "maxInFlight": 64,
+        "partialGets": 0,
+        "rangeGets": 83812,
+        "readBytesByComponent": {
+          "artifact:feature_selection": 4037,
+          "artifact:feature_summary": 1143,
+          "artifact:metadata_snapshot": 605516,
+          "countsT": 23298450185,
+          "other": 528
+        },
+        "readRequestedBytes": 23299061409,
+        "readTransferredBytes": 23299061409,
+        "requestedBytes": 23298450185,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 23299061409,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:feature_selection": 4037,
+        "artifact:feature_summary": 1143,
+        "artifact:metadata_snapshot": 605516,
+        "countsT": 23298450185,
+        "other": 528
+      },
+      "sourceReadBytes": 23299061409,
+      "sourceReadRequests": 167652,
+      "userStoreBytesAfter": 904059019,
+      "userStoreBytesBefore": 902921016,
+      "userStoreBytesWritten": 1138003
+    },
+    "selectLineage": {
+      "peakCgroupBytes": 3115413504,
+      "peakRssBytes": 3153244160,
+      "seconds": 6.808903703999988,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 2,
+        "gets": 8,
+        "lists": 1,
+        "maxInFlight": 2,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:cell_selection": 3371,
+          "other": 330
+        },
+        "readRequestedBytes": 3701,
+        "readTransferredBytes": 3701,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 3701,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:cell_selection": 3371,
+        "other": 330
+      },
+      "sourceReadBytes": 3701,
+      "sourceReadRequests": 11,
+      "userStoreBytesAfter": 902921016,
+      "userStoreBytesBefore": 901643536,
+      "userStoreBytesWritten": 1277480
+    },
+    "umap.k11": {
+      "peakCgroupBytes": 6070870016,
+      "peakRssBytes": 6144557056,
+      "seconds": 54.99364535299992,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 9,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:embedding": 1681,
+          "artifact:metadata_snapshot": 303543,
+          "other": 132
+        },
+        "readRequestedBytes": 305356,
+        "readTransferredBytes": 305356,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 305356,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:embedding": 1681,
+        "artifact:metadata_snapshot": 303543,
+        "other": 132
+      },
+      "sourceReadBytes": 305356,
+      "sourceReadRequests": 12,
+      "userStoreBytesAfter": 1718595524,
+      "userStoreBytesBefore": 1716589081,
+      "userStoreBytesWritten": 2006443
+    },
+    "umapInitialization": {
+      "peakCgroupBytes": 5948715008,
+      "peakRssBytes": 6023995392,
+      "seconds": 10.500348357999883,
+      "sourceOperations": {
+        "countReadBytes": 0,
+        "countReadRequests": 0,
+        "deleteDirs": 0,
+        "deletes": 0,
+        "existsChecks": 1,
+        "gets": 9,
+        "lists": 2,
+        "maxInFlight": 1,
+        "partialGets": 0,
+        "rangeGets": 0,
+        "readBytesByComponent": {
+          "artifact:embedding_initialization": 891,
+          "artifact:metadata_snapshot": 303543,
+          "other": 132
+        },
+        "readRequestedBytes": 304566,
+        "readTransferredBytes": 304566,
+        "requestedBytes": 0,
+        "sets": 0,
+        "sizeQueries": 0,
+        "transferredBytes": 304566,
+        "writeTransferredBytes": 0
+      },
+      "sourceReadByComponent": {
+        "artifact:embedding_initialization": 891,
+        "artifact:metadata_snapshot": 303543,
+        "other": 132
+      },
+      "sourceReadBytes": 304566,
+      "sourceReadRequests": 12,
+      "userStoreBytesAfter": 1716589081,
+      "userStoreBytesBefore": 1716161963,
+      "userStoreBytesWritten": 427118
+    }
+  },
+  "totals": {
+    "peakRssBytes": 15537938432,
+    "seconds": 5050.5274548219995,
+    "sourceReadBytes": 89586517759,
+    "sourceReadRequests": 605458,
+    "userStoreBytesWritten": 4762153822
+  },
+  "userStore": {
+    "afterMount": {
+      "byArtifact": {},
+      "byComponent": {
+        "cellData": 769807440,
+        "featureData": 1256131,
+        "other": 1065
+      },
+      "byTopLevel": {
+        "RNA": 1256587,
+        "cellData": 769807440,
+        "zarr.json": 609
+      },
+      "bytes": 771064636,
+      "digest": "584536845c8c58cfa1b770976c7d3fa2a315449a7e4580e1510a9eba7f8a8563",
+      "objects": 721
+    },
+    "final": {
+      "byArtifact": {
+        "03d8ed68ca6ceb4a948123d1011a2f2baf774c1097ff8636201557f6e441798a": 62921069,
+        "06f75f61a945211f535552c0eceaca80e0436295f29ddc502fc58540b5793c26": 639014,
+        "12bc6a689344d52f4b9ea5eafcee1f664366c73fc5739c0809d6d57f59187498": 43987043,
+        "1487791fb7fc407445dbe718439f5e7b7bd2fda935092201ba63c8219e284fc3": 2006377,
+        "25599829828632b3b5a16f7792e2309c62acffcf7f427b79fa01b84cb1fa9a6e": 21441360,
+        "2f7a57946dba1443f0af9580436309b001b60ede2777ed9b4589e19cdef729b2": 167372,
+        "320879bd090250acb16a63b57000b72b887c025601a1ac6d20b96db36d2c3cee": 1667924247,
+        "35161f86890c9b438f79acc2464b3fde47c57c1dcc630db30e3dba51a4764d19": 148262,
+        "41ce103fe63d9de5ec36d4325891fe0cbce7542aa0a55c597eaf1e70de268979": 1111178,
+        "43946aea5a14234799538074f7cc16670d1e0aae7fb8a73b3cabd7bd097f967c": 427052,
+        "47e0702f967856f5a920b8c9457b8f3c5bd967fdaa7f0548f3f464479f0c6492": 476608887,
+        "48a5eac8f62393aff38b0d7ff9ffb9b02828a85e3dd055628e11bd783e08da32": 148245,
+        "4a11409aaaf7cbbb9534014c73175e9ffa448d67bd9df707fcc2a9b712da47b8": 243776208,
+        "4d11d6e88db3fc6f1eb0262da1886e9c03f9c4462bb7c9207e2f9491435d34c5": 7139562,
+        "55ae78b2c9558d20522f68a3b1544cd197c2954f4e394b6fca8d981be9da8c2d": 23097195,
+        "72c001ef6559a0acf578df652a622691e618b364877bfab25b8942b0b7a617be": 21626166,
+        "7acb101f758db225e3c338784f0ecb1c0e8c3d2123ac7f0cbbf70bd6b28fbc33": 30199412,
+        "7c609bc621949128dea16f27e973b124f2d04fde0088ac7f13847458c318bfca": 16274,
+        "96680d98266b27658eacf920cc021ee1ef3b17f147e9580098faccf36ee5712c": 61161521,
+        "96c157edb5f1cd4f53d43f8d9f86911402486f984ccdaccc4807fc108481563e": 166632,
+        "a0cd8e9b5478cdcae61d4b0325c9d20d21a3a3042d46ed32f2e57cd793ceb36f": 6031501,
+        "a905b5f69d38b40acf16ddeb4c61f065a36df4429b29daf013a4849834b61f67": 1112110024,
+        "c076c158d0612a2ab0ac7efdc8079fa4df0a3517c2afec3f38f057a749f7615f": 150380,
+        "caa1e216227c766e9a7bc2fbbb1ec90920f7f8d0087641737b3a0f67188b657a": 159683,
+        "caf5c53c774c9797fd4a9b4ce51683ecebbf056b7e6821c219577d785a0282a0": 328982,
+        "e12b34fa44ea9bb73b5d45ac6f8f41dfc61923356dd7939dc4b29ec71d2da5ab": 21501055,
+        "e38fed14a5bc11f4041cded7c9a1289fe3f499dcfd023f7adac845c06cda9f26": 6576756,
+        "e67cbf949c88ecbaf9c6c1bc945aa8ae80066214d96d5bee0fd7e39ec45ccc09": 16194618,
+        "f3fb7e3b5b07fe258282674c0da2e51ee681d6fdb179f9c9510d737e9e28a124": 808823,
+        "fb2dbe06ffac6c30e512d3d8c864499f198b1aef6f15a74fc77a8c318e5fba7e": 31295932
+      },
+      "byComponent": {
+        "artifact:ann_index": 62921069,
+        "artifact:batch_correction": 21441360,
+        "artifact:cell_selection": 639014,
+        "artifact:cluster_labels": 20688393,
+        "artifact:connectivity_map": 1766304417,
+        "artifact:embedding": 2006377,
+        "artifact:embedding_initialization": 427052,
+        "artifact:feature_scaling": 16274,
+        "artifact:feature_selection": 328982,
+        "artifact:feature_summary": 808823,
+        "artifact:marker_table": 304937729,
+        "artifact:metadata_snapshot": 1111178,
+        "artifact:neighbors": 1180130220,
+        "artifact:normalized": 476608887,
+        "artifact:reduction": 21501055,
+        "cellData": 901024674,
+        "featureData": 1256131,
+        "other": 2187
+      },
+      "byTopLevel": {
+        "RNA": 3859378149,
+        "artifacts": 1750390,
+        "cellData": 901024674,
+        "zarr.json": 609
+      },
+      "bytes": 4762153822,
+      "digest": "51e6e7c8d93be1069f025e50350a6cb6c8d05410cdb91f2003c6226aa81f5950",
+      "objects": 2003
+    }
+  },
+  "userStoreLocation": "container local disk"
+}

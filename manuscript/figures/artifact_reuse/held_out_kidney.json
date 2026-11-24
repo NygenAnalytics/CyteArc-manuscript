@@ -1,0 +1,62 @@
+{
+ "tissue": "kidney",
+ "umap": {
+  "raster": "experiments/mapping/records/held_out_reference_umap/kidney.npz",
+  "cells": 388878,
+  "types": {
+   "B lineage": 10921,
+   "Connecting tubule": 15393,
+   "Distal convoluted tubule": 13146,
+   "Endothelial cells": 29175,
+   "Intercalated cells": 14886,
+   "Myeloid cells": 20242,
+   "Neural cells": 2621,
+   "Parietal epithelium": 3173,
+   "Podocytes": 966,
+   "Principal cells": 34053,
+   "Proximal tubule": 106541,
+   "Stromal cells": 9834,
+   "T and NK cells": 38603,
+   "Thick ascending limb": 71570,
+   "Thin ascending limb": 6245,
+   "Thin descending limb": 11464,
+   "Urothelial cells": 45
+  }
+ },
+ "scaleHigh": 0.16174832962138086,
+ "reference": {
+  "cells": 388878,
+  "donors": 125,
+  "datasets": 2
+ },
+ "query": {
+  "study": "Reck",
+  "cells": 46957,
+  "donors": 12
+ },
+ "methods": {
+  "unintegrated": {
+   "disagreement": 0.036884809506569805,
+   "low": 0.030132104511358393,
+   "high": 0.04599266806932134
+  },
+  "seurat_map": {
+   "disagreement": 0.033562621121451586,
+   "low": 0.026012561623253383,
+   "high": 0.04416144282053647
+  },
+  "symphony": {
+   "disagreement": 0.05645590646761933,
+   "low": 0.04889616673498365,
+   "high": 0.06667141689313094
+  },
+  "celltypist": {
+   "disagreement": 0.07080946397768173,
+   "low": 0.06121935783273458,
+   "high": 0.07984478120074423
+  }
+ },
+ "source": [
+  "experiments/mapping/records/cross_study/evaluation.json"
+ ]
+}

@@ -1,0 +1,4096 @@
+{
+  "module": "internal.mapping.cross_study_mapping",
+  "function": "run",
+  "region": "us-east",
+  "startedAt": 1793171217.0560074,
+  "status": "completed",
+  "result": {
+    "settings": {
+      "mode": "benchmark",
+      "tissue": "lung",
+      "referenceMethod": "integrated",
+      "workDirectory": "/tmp/lung_integrated_mapping",
+      "nthreads": 16,
+      "memBudget": "24G"
+    },
+    "mode": "benchmark",
+    "labelColumn": "cell_type",
+    "inputs": {
+      "sources": [
+        {
+          "role": "reference",
+          "study": "HLCA",
+          "sourceUrl": "https://datasets.cellxgene.cziscience.com/688185ad-11c2-4172-a53a-f4f1f4076860.h5ad",
+          "sourceCells": 584944,
+          "eligibleCells": 546358,
+          "labelMap": {
+            "AT1": "AT1",
+            "AT2": "AT2",
+            "B cell lineage": "B cell lineage",
+            "Basal": "Basal",
+            "Dendritic cells": "Dendritic cells",
+            "EC arterial": "EC arterial",
+            "EC capillary": "EC capillary",
+            "EC venous": "EC venous",
+            "Fibroblasts": "Fibroblasts",
+            "Innate lymphoid cell NK": "Innate lymphoid cell NK",
+            "Lymphatic EC differentiating": "Lymphatic EC differentiating",
+            "Lymphatic EC mature": "Lymphatic EC mature",
+            "Lymphatic EC proliferating": "Lymphatic EC proliferating",
+            "Macrophages": "Macrophages",
+            "Mast cells": "Mast cells",
+            "Monocytes": "Monocytes",
+            "Multiciliated lineage": "Multiciliated lineage",
+            "Myofibroblasts": "Myofibroblasts",
+            "None": null,
+            "Rare": "Rare",
+            "SM activated stress response": "SM activated stress response",
+            "Secretory": "Secretory",
+            "Smooth muscle FAM83D+": "Smooth muscle FAM83D+",
+            "Submucosal Secretory": "Submucosal Secretory",
+            "T cell lineage": "T cell lineage"
+          },
+          "excludedLabelCells": {
+            "None": 3286
+          },
+          "primaryOnly": false
+        },
+        {
+          "role": "query",
+          "study": "Meyer_2019",
+          "sourceUrl": "https://datasets.cellxgene.cziscience.com/688185ad-11c2-4172-a53a-f4f1f4076860.h5ad",
+          "sourceCells": 584944,
+          "eligibleCells": 35300,
+          "labelMap": {
+            "AT1": "AT1",
+            "AT2": "AT2",
+            "B cell lineage": "B cell lineage",
+            "Basal": "Basal",
+            "Dendritic cells": "Dendritic cells",
+            "EC arterial": "EC arterial",
+            "EC capillary": "EC capillary",
+            "EC venous": "EC venous",
+            "Fibroblasts": "Fibroblasts",
+            "Innate lymphoid cell NK": "Innate lymphoid cell NK",
+            "Lymphatic EC differentiating": "Lymphatic EC differentiating",
+            "Lymphatic EC mature": "Lymphatic EC mature",
+            "Lymphatic EC proliferating": "Lymphatic EC proliferating",
+            "Macrophages": "Macrophages",
+            "Mast cells": "Mast cells",
+            "Monocytes": "Monocytes",
+            "Multiciliated lineage": "Multiciliated lineage",
+            "Myofibroblasts": "Myofibroblasts",
+            "None": null,
+            "Rare": "Rare",
+            "SM activated stress response": "SM activated stress response",
+            "Secretory": "Secretory",
+            "Smooth muscle FAM83D+": "Smooth muscle FAM83D+",
+            "Submucosal Secretory": "Submucosal Secretory",
+            "T cell lineage": "T cell lineage"
+          },
+          "excludedLabelCells": {
+            "None": 3286
+          },
+          "primaryOnly": false
+        }
+      ],
+      "referenceQuerySourceCellIdOverlap": 0,
+      "rawDonorIdCollisions": [],
+      "donorIdentityScope": "Shared HLCA identifiers with overlapping donors excluded",
+      "sharedGenes": 27402,
+      "parts": {
+        "reference": {
+          "cells": 546358,
+          "donors": [
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0001"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0005"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0006"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0007"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0008"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0009"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0010"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0012"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0014"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0015"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0017"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0019"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0020"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD071"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD072"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD073"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD076"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD077"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD078"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD080"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD101"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD103"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD104"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD105"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD106"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD107"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD66"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD67"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD68"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD69"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD70"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD84"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD85"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD87"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD92"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD94"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD95"
+            },
+            {
+              "study": "Banovich_Kropski_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD98"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D322"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D326"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D337"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D339"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D344"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D353"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D354"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D363"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D367"
+            },
+            {
+              "study": "Barbry_Leroy_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D372"
+            },
+            {
+              "study": "Jain_Misharin_2021_10Xv1",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_4837472020-3173-NC002"
+            },
+            {
+              "study": "Jain_Misharin_2021_10Xv1",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_4837472020-3173-NC008"
+            },
+            {
+              "study": "Jain_Misharin_2021_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_4837472020-3173-NC003"
+            },
+            {
+              "study": "Jain_Misharin_2021_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_4837472020-3173-NC004"
+            },
+            {
+              "study": "Jain_Misharin_2021_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_4837472020-3173-NC005"
+            },
+            {
+              "study": "Jain_Misharin_2021_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_4837472020-3173-NC006"
+            },
+            {
+              "study": "Jain_Misharin_2021_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_4837472020-3173-NC007"
+            },
+            {
+              "study": "Krasnow_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747donor 1"
+            },
+            {
+              "study": "Krasnow_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747donor 2"
+            },
+            {
+              "study": "Krasnow_2020",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747donor 3"
+            },
+            {
+              "study": "Lafyatis_Rojas_2019_10Xv1",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747lafy_donor_1"
+            },
+            {
+              "study": "Lafyatis_Rojas_2019_10Xv1",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747lafy_donor_2"
+            },
+            {
+              "study": "Lafyatis_Rojas_2019_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747lafy_donor_3"
+            },
+            {
+              "study": "Lafyatis_Rojas_2019_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747lafy_donor_4"
+            },
+            {
+              "study": "Lafyatis_Rojas_2019_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747lafy_donor_5"
+            },
+            {
+              "study": "Lafyatis_Rojas_2019_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747lafy_donor_6"
+            },
+            {
+              "study": "Misharin_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747NU_CZI01"
+            },
+            {
+              "study": "Misharin_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747NU_CZI02"
+            },
+            {
+              "study": "Misharin_Budinger_2018",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747Donor_01"
+            },
+            {
+              "study": "Misharin_Budinger_2018",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747Donor_02"
+            },
+            {
+              "study": "Misharin_Budinger_2018",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747Donor_03"
+            },
+            {
+              "study": "Misharin_Budinger_2018",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747Donor_04"
+            },
+            {
+              "study": "Misharin_Budinger_2018",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747Donor_05"
+            },
+            {
+              "study": "Misharin_Budinger_2018",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747Donor_06"
+            },
+            {
+              "study": "Misharin_Budinger_2018",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747Donor_07"
+            },
+            {
+              "study": "Misharin_Budinger_2018",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747Donor_08"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-01"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-02"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-03"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-04"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-06"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-07"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-08"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-09"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-10"
+            },
+            {
+              "study": "Nawijn_2021",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-11"
+            },
+            {
+              "study": "Seibold_2020_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T120"
+            },
+            {
+              "study": "Seibold_2020_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T121"
+            },
+            {
+              "study": "Seibold_2020_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T126"
+            },
+            {
+              "study": "Seibold_2020_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T137"
+            },
+            {
+              "study": "Seibold_2020_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T85"
+            },
+            {
+              "study": "Seibold_2020_10Xv2",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T89"
+            },
+            {
+              "study": "Seibold_2020_10Xv3",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T101"
+            },
+            {
+              "study": "Seibold_2020_10Xv3",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T153"
+            },
+            {
+              "study": "Seibold_2020_10Xv3",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T154"
+            },
+            {
+              "study": "Seibold_2020_10Xv3",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T164"
+            },
+            {
+              "study": "Seibold_2020_10Xv3",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T165"
+            },
+            {
+              "study": "Seibold_2020_10Xv3",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T166"
+            },
+            {
+              "study": "Seibold_2020_10Xv3",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T167"
+            },
+            {
+              "study": "Seibold_2020_10Xv3",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747T90"
+            },
+            {
+              "study": "Teichmann_Meyer_2019",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747284C"
+            },
+            {
+              "study": "Teichmann_Meyer_2019",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747290B"
+            },
+            {
+              "study": "Teichmann_Meyer_2019",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747292B"
+            },
+            {
+              "study": "Teichmann_Meyer_2019",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747296C"
+            },
+            {
+              "study": "Teichmann_Meyer_2019",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747298C"
+            },
+            {
+              "study": "Teichmann_Meyer_2019",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747302C"
+            }
+          ],
+          "studies": {
+            "Banovich_Kropski_2020": 121181,
+            "Barbry_Leroy_2020": 74293,
+            "Nawijn_2021": 70014,
+            "Misharin_2021": 64559,
+            "Krasnow_2020": 59801,
+            "Misharin_Budinger_2018": 41187,
+            "Jain_Misharin_2021_10Xv2": 33135,
+            "Seibold_2020_10Xv3": 21466,
+            "Lafyatis_Rojas_2019_10Xv2": 21109,
+            "Jain_Misharin_2021_10Xv1": 12422,
+            "Teichmann_Meyer_2019": 12157,
+            "Seibold_2020_10Xv2": 12127,
+            "Lafyatis_Rojas_2019_10Xv1": 2907
+          },
+          "labels": {
+            "Macrophages": 108327,
+            "Basal": 84700,
+            "Secretory": 80263,
+            "AT2": 59402,
+            "T cell lineage": 41246,
+            "Multiciliated lineage": 40987,
+            "Monocytes": 23696,
+            "EC capillary": 22993,
+            "Fibroblasts": 17683,
+            "EC venous": 12467,
+            "Innate lymphoid cell NK": 10246,
+            "Dendritic cells": 8647,
+            "AT1": 7843,
+            "EC arterial": 7220,
+            "B cell lineage": 4924,
+            "Submucosal Secretory": 4700,
+            "Mast cells": 4320,
+            "Lymphatic EC mature": 3864,
+            "Rare": 885,
+            "Myofibroblasts": 643,
+            "Lymphatic EC differentiating": 556,
+            "SM activated stress response": 420,
+            "Smooth muscle FAM83D+": 298,
+            "Lymphatic EC proliferating": 28
+          },
+          "nonzeroCounts": 1082165051,
+          "bytes": 13222648156,
+          "cellIdSha256": "b9b442a1093d6a2a0b53a70b787e845b958f52f5835be4d6af870732ef6201ab",
+          "sha256": "f526599a45b401d76db5e16e3a94bf04ec06625028fdebdd9ceb044863a5717d"
+        },
+        "query": {
+          "cells": 35300,
+          "donors": [
+            {
+              "study": "Meyer_2019",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747356C"
+            },
+            {
+              "study": "Meyer_2019",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747368C"
+            },
+            {
+              "study": "Meyer_2019",
+              "donor_id": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747390C"
+            }
+          ],
+          "studies": {
+            "Meyer_2019": 35300
+          },
+          "labels": {
+            "T cell lineage": 9613,
+            "Innate lymphoid cell NK": 6732,
+            "Macrophages": 3517,
+            "AT2": 3003,
+            "Monocytes": 2833,
+            "Fibroblasts": 2701,
+            "Mast cells": 2303,
+            "Dendritic cells": 1672,
+            "B cell lineage": 1360,
+            "EC venous": 508,
+            "EC capillary": 212,
+            "EC arterial": 171,
+            "Lymphatic EC mature": 137,
+            "SM activated stress response": 136,
+            "Multiciliated lineage": 111,
+            "AT1": 94,
+            "Myofibroblasts": 73,
+            "Secretory": 64,
+            "Smooth muscle FAM83D+": 37,
+            "Basal": 13,
+            "Lymphatic EC differentiating": 10
+          },
+          "nonzeroCounts": 51743921,
+          "bytes": 639091828,
+          "cellIdSha256": "cefa4ebaf62d19958c77946feb167a8a22dafd8050de259b539b3632f6ce111b",
+          "sha256": "5e81571eabff23d87afd033fbde45d69234e5691371da84419a2b29517ddd8c8"
+        }
+      }
+    },
+    "inputDownloadAndVerificationSeconds": 71.429234616,
+    "timingBoundary": "Fresh prepared matched H5ADs; original source assembly and input downloads excluded from analysis steps",
+    "arms": {
+      "integrated": {
+        "registrationIo": {
+          "gets": 766,
+          "sets": 93,
+          "deletes": 0,
+          "deleteDirs": 12,
+          "sizeQueries": 0,
+          "rangeGets": 0,
+          "partialGets": 0,
+          "requestedBytes": 584763,
+          "transferredBytes": 855768986,
+          "readRequestedBytes": 855184223,
+          "readTransferredBytes": 855184223,
+          "writeTransferredBytes": 584763,
+          "countReadRequests": 0,
+          "countReadBytes": 0,
+          "maxInFlight": 10
+        },
+        "queryAnnotationIo": {
+          "reference": {
+            "gets": 143,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 143538743,
+            "readRequestedBytes": 143538743,
+            "readTransferredBytes": 143538743,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 8
+          },
+          "query": {
+            "gets": 446,
+            "sets": 182,
+            "deletes": 6,
+            "deleteDirs": 19,
+            "sizeQueries": 0,
+            "rangeGets": 2,
+            "partialGets": 0,
+            "requestedBytes": 145905172,
+            "transferredBytes": 180263966,
+            "readRequestedBytes": 171645622,
+            "readTransferredBytes": 171645622,
+            "writeTransferredBytes": 8618344,
+            "countReadRequests": 4,
+            "countReadBytes": 137286828,
+            "maxInFlight": 10
+          }
+        },
+        "evaluation": {
+          "studies": {
+            "Meyer_2019": {
+              "accuracy": 0.9158356940509915,
+              "macroF1": 0.7872226869987384,
+              "perType": {
+                "AT1": {
+                  "support": 94,
+                  "precision": 0.9666666666666667,
+                  "recall": 0.925531914893617,
+                  "f1": 0.9456521739130435
+                },
+                "AT2": {
+                  "support": 3003,
+                  "precision": 0.9959946595460614,
+                  "recall": 0.9936729936729937,
+                  "f1": 0.9948324720786798
+                },
+                "B cell lineage": {
+                  "support": 1360,
+                  "precision": 0.9954887218045113,
+                  "recall": 0.9735294117647059,
+                  "f1": 0.9843866171003718
+                },
+                "Basal": {
+                  "support": 13,
+                  "precision": 0.5294117647058824,
+                  "recall": 0.6923076923076923,
+                  "f1": 0.6
+                },
+                "Dendritic cells": {
+                  "support": 1672,
+                  "precision": 0.9153776160145587,
+                  "recall": 0.6016746411483254,
+                  "f1": 0.7260916636593288
+                },
+                "EC arterial": {
+                  "support": 171,
+                  "precision": 0.9504132231404959,
+                  "recall": 0.672514619883041,
+                  "f1": 0.7876712328767124
+                },
+                "EC capillary": {
+                  "support": 212,
+                  "precision": 0.7090909090909091,
+                  "recall": 0.9198113207547169,
+                  "f1": 0.8008213552361396
+                },
+                "EC venous": {
+                  "support": 508,
+                  "precision": 0.9475806451612904,
+                  "recall": 0.9251968503937008,
+                  "f1": 0.9362549800796812
+                },
+                "Fibroblasts": {
+                  "support": 2701,
+                  "precision": 0.9882005899705014,
+                  "recall": 0.9922251018141429,
+                  "f1": 0.9902087566968409
+                },
+                "Innate lymphoid cell NK": {
+                  "support": 6732,
+                  "precision": 0.9823200992555832,
+                  "recall": 0.9408793820558526,
+                  "f1": 0.9611532625189682
+                },
+                "Lymphatic EC differentiating": {
+                  "support": 10,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "Lymphatic EC mature": {
+                  "support": 137,
+                  "precision": 0.9241379310344827,
+                  "recall": 0.9781021897810219,
+                  "f1": 0.950354609929078
+                },
+                "Macrophages": {
+                  "support": 3517,
+                  "precision": 0.7800829875518672,
+                  "recall": 0.694910435029855,
+                  "f1": 0.7350375939849624
+                },
+                "Mast cells": {
+                  "support": 2303,
+                  "precision": 0.9908695652173913,
+                  "recall": 0.9895788102475033,
+                  "f1": 0.9902237671084075
+                },
+                "Monocytes": {
+                  "support": 2833,
+                  "precision": 0.6573757559821194,
+                  "recall": 0.8824567596187787,
+                  "f1": 0.753465943339361
+                },
+                "Multiciliated lineage": {
+                  "support": 111,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0
+                },
+                "Myofibroblasts": {
+                  "support": 73,
+                  "precision": 0.72,
+                  "recall": 0.4931506849315068,
+                  "f1": 0.5853658536585366
+                },
+                "SM activated stress response": {
+                  "support": 136,
+                  "precision": 0.9310344827586207,
+                  "recall": 0.39705882352941174,
+                  "f1": 0.5567010309278351
+                },
+                "Secretory": {
+                  "support": 64,
+                  "precision": 0.8142857142857143,
+                  "recall": 0.890625,
+                  "f1": 0.8507462686567164
+                },
+                "Smooth muscle FAM83D+": {
+                  "support": 37,
+                  "precision": 0.2682926829268293,
+                  "recall": 0.8918918918918919,
+                  "f1": 0.4125
+                },
+                "T cell lineage": {
+                  "support": 9613,
+                  "precision": 0.9550539151466291,
+                  "recall": 0.9858524914178717,
+                  "f1": 0.9702088452088452
+                }
+              },
+              "assignmentCoverage": 1.0,
+              "rareTypes": {
+                "B cell lineage": {
+                  "support": 1360,
+                  "precision": 0.9954887218045113,
+                  "recall": 0.9735294117647059,
+                  "f1": 0.9843866171003718
+                },
+                "Mast cells": {
+                  "support": 2303,
+                  "precision": 0.9908695652173913,
+                  "recall": 0.9895788102475033,
+                  "f1": 0.9902237671084075
+                },
+                "Lymphatic EC mature": {
+                  "support": 137,
+                  "precision": 0.9241379310344827,
+                  "recall": 0.9781021897810219,
+                  "f1": 0.950354609929078
+                },
+                "Myofibroblasts": {
+                  "support": 73,
+                  "precision": 0.72,
+                  "recall": 0.4931506849315068,
+                  "f1": 0.5853658536585366
+                },
+                "Lymphatic EC differentiating": {
+                  "support": 10,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "SM activated stress response": {
+                  "support": 136,
+                  "precision": 0.9310344827586207,
+                  "recall": 0.39705882352941174,
+                  "f1": 0.5567010309278351
+                },
+                "Smooth muscle FAM83D+": {
+                  "support": 37,
+                  "precision": 0.2682926829268293,
+                  "recall": 0.8918918918918919,
+                  "f1": 0.4125
+                }
+              },
+              "donorBootstrap95CI": {
+                "estimable": true,
+                "accuracy": [
+                  0.8298997772828508,
+                  0.9432803221623097
+                ],
+                "macroF1": [
+                  0.7358719360811837,
+                  0.8266402013620893
+                ],
+                "donors": 3,
+                "resamples": 1000
+              },
+              "coverageCurve": [
+                {
+                  "requestedCoverage": 0.5,
+                  "actualCoverage": 0.5,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9935410764872521,
+                  "macroF1AllCells": 0.4818080429204466
+                },
+                {
+                  "requestedCoverage": 0.75,
+                  "actualCoverage": 0.75,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9896506137865911,
+                  "macroF1AllCells": 0.6390405458332705
+                },
+                {
+                  "requestedCoverage": 0.9,
+                  "actualCoverage": 0.9,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9604658482845452,
+                  "macroF1AllCells": 0.7510984905219036
+                },
+                {
+                  "requestedCoverage": 1.0,
+                  "actualCoverage": 1.0,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9158356940509915,
+                  "macroF1AllCells": 0.7872226869987384
+                }
+              ],
+              "donorConfusionMatrices": [
+                {
+                  "donor": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747356C",
+                  "cells": 13465,
+                  "confusion": [
+                    [
+                      80,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1468,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      666,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      12,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      521,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      247,
+                      0,
+                      206,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      8,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      71,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      4,
+                      67,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      309,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3769,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      227,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      13,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      11,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      953,
+                      0,
+                      17,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      20,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      10,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      94,
+                      0,
+                      1730,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      67,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      15,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      1,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      39,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2783,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747368C",
+                  "cells": 7184,
+                  "confusion": [
+                    [
+                      5,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      2,
+                      297,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      431,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      235,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      108,
+                      0,
+                      8,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      41,
+                      12,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      89,
+                      12,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      15,
+                      214,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1573,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      7,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      30,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      18,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1157,
+                      0,
+                      973,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      96,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0,
+                      74,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      19,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      11,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0,
+                      7,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      9,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      7,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1666,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747390C",
+                  "cells": 14651,
+                  "confusion": [
+                    [
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1219,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      227,
+                      0,
+                      9,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      7,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      250,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      34,
+                      6,
+                      44,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      66,
+                      36,
+                      7,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      35,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      12,
+                      189,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      2,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      798,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      4,
+                      1,
+                      0,
+                      6,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2558,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      161,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      91,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      334,
+                      0,
+                      41,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2163,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      14,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      33,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      187,
+                      3,
+                      696,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      25,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      7,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      22,
+                      0,
+                      3,
+                      0,
+                      18,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0,
+                      48,
+                      0,
+                      63,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      40,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      22,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      3,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      1,
+                      60,
+                      0,
+                      0,
+                      0,
+                      0,
+                      7,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      5028,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              ]
+            }
+          },
+          "labelOrder": [
+            "AT1",
+            "AT2",
+            "B cell lineage",
+            "Basal",
+            "Dendritic cells",
+            "EC arterial",
+            "EC capillary",
+            "EC venous",
+            "Fibroblasts",
+            "Innate lymphoid cell NK",
+            "Lymphatic EC differentiating",
+            "Lymphatic EC mature",
+            "Lymphatic EC proliferating",
+            "Macrophages",
+            "Mast cells",
+            "Monocytes",
+            "Multiciliated lineage",
+            "Myofibroblasts",
+            "Rare",
+            "SM activated stress response",
+            "Secretory",
+            "Smooth muscle FAM83D+",
+            "Submucosal Secretory",
+            "T cell lineage",
+            "unassigned"
+          ],
+          "rareTypeRule": "Reference frequency below 1% with at least 20 reference cells",
+          "bootstrapUnit": "Donor within each query study; all donor cells retained together",
+          "coverageRule": "Descending confidence; ties use a fixed seeded cell permutation; unassigned cells remain unassigned"
+        },
+        "pipeline": {
+          "run": {
+            "runId": "6a2c987b9ece217d04c8f5a781516ae0e5ceac987503d2d1321ae89db6938c5b",
+            "recipe": "basic_rna_analysis",
+            "requestedLabel": null,
+            "label": null,
+            "assay": "RNA",
+            "startedAtNs": 1793171329972141810,
+            "finishedAtNs": 1793171730583339638,
+            "status": "completed",
+            "complete": true,
+            "config": {
+              "cellKey": "I",
+              "filtering": {
+                "enabled": false
+              },
+              "harmonyBatchColumns": [
+                "study"
+              ],
+              "hvgCount": 2000,
+              "pcaDims": 30,
+              "neighborsK": 30,
+              "umap": false,
+              "tsne": false,
+              "leiden": {
+                "partitions": [],
+                "selected": null
+              },
+              "cellCycle": false,
+              "paris": false,
+              "doublets": false,
+              "doubletSampleColumns": [],
+              "markers": false,
+              "snapshotColumns": [],
+              "membershipStrength": false,
+              "species": null,
+              "params": {
+                "ann_index": {
+                  "ann_parallel": false
+                }
+              },
+              "shutdown": {
+                "signalGuardAvailable": true,
+                "unavailableReason": null
+              }
+            },
+            "stageOrder": [
+              "input_snapshot",
+              "filtering",
+              "cell_cycle",
+              "highly_variable_features",
+              "normalization",
+              "pca",
+              "harmony",
+              "ann_index",
+              "neighbors",
+              "connectivity",
+              "embedding_initialization",
+              "umap",
+              "paris",
+              "cluster_selection",
+              "membership_strength",
+              "tsne",
+              "doublets",
+              "markers"
+            ],
+            "outputs": [
+              {
+                "key": "input_cell_selection",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "cell_selection",
+                  "artifact_id": "354b53b8bcb4d9db09731b24962fe4d0e52e5f881dfe6a8f03b5c985baa6fb84"
+                }
+              },
+              {
+                "key": "analysis_cell_selection",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "cell_selection",
+                  "artifact_id": "354b53b8bcb4d9db09731b24962fe4d0e52e5f881dfe6a8f03b5c985baa6fb84"
+                }
+              },
+              {
+                "key": "feature_universe",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "ad077dff7d4f2edb6503a8372fb08f13958b495b311758a1a867a437ff2c2740",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "highly_variable_features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "03b5a7dc4d436940c0d840cf9214cb1891c8da263835a59b64b27f48855caf43",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "normalized",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "normalized",
+                  "artifact_id": "0910bcbff0c4e0c79f86f26712b3314df73e9ea36eb26368a2a9ed898056702a",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "pca",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "reduction",
+                  "artifact_id": "18e17b176c122a4c046b116bed42bec3113abbf00c979d76179a2c33b4bfc332",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "harmony",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "batch_correction",
+                  "artifact_id": "b52a34c6651b9c0ca8f195730f4fa937842e144f30e305007b135fbf4e950e70",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "ann_index",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "ann_index",
+                  "artifact_id": "3c26af47a4ca0cfe2c1649fc66c81800983f2a8ce9123b50e0ab2205dbd1d1f5",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "neighbors",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "neighbors",
+                  "artifact_id": "8a2c3955a575f5837d415b4321122cd7f19778d09b4cc044fec3fec378e1784f",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "connectivity_map",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "connectivity_map",
+                  "artifact_id": "eb99c17d2e8f329937138fe9645dafe1233a9a409a113e0414467034c07c8558",
+                  "assay": "RNA"
+                }
+              }
+            ],
+            "fields": [
+              {
+                "key": "I",
+                "axis": "cells",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "cell_selection",
+                  "artifact_id": "354b53b8bcb4d9db09731b24962fe4d0e52e5f881dfe6a8f03b5c985baa6fb84"
+                },
+                "sourceValue": "values",
+                "valueIndex": null,
+                "dtype": "|b1",
+                "fill": false,
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "ids",
+                "axis": "cells",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "168986b0b5fb37cd6348215ff18cf7f9b522a8fab07d990cc9b0bde94fdf102f"
+                },
+                "sourceValue": "ids",
+                "valueIndex": null,
+                "dtype": "<U42",
+                "fill": "",
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "names",
+                "axis": "cells",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "168986b0b5fb37cd6348215ff18cf7f9b522a8fab07d990cc9b0bde94fdf102f"
+                },
+                "sourceValue": "names",
+                "valueIndex": null,
+                "dtype": "<U42",
+                "fill": "",
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "I",
+                "axis": "features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "ad077dff7d4f2edb6503a8372fb08f13958b495b311758a1a867a437ff2c2740",
+                  "assay": "RNA"
+                },
+                "sourceValue": "values",
+                "valueIndex": null,
+                "dtype": "|b1",
+                "fill": false,
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "ids",
+                "axis": "features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "cebe7b177c35cf64e85eaf0edb9e23aa827cbeb109b85b75ea50398260945264",
+                  "assay": "RNA"
+                },
+                "sourceValue": "ids",
+                "valueIndex": null,
+                "dtype": "<U15",
+                "fill": "",
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "names",
+                "axis": "features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "cebe7b177c35cf64e85eaf0edb9e23aa827cbeb109b85b75ea50398260945264",
+                  "assay": "RNA"
+                },
+                "sourceValue": "names",
+                "valueIndex": null,
+                "dtype": "<U17",
+                "fill": "",
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "highly_variable_features",
+                "axis": "features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "03b5a7dc4d436940c0d840cf9214cb1891c8da263835a59b64b27f48855caf43",
+                  "assay": "RNA"
+                },
+                "sourceValue": "values",
+                "valueIndex": null,
+                "dtype": "|b1",
+                "fill": false,
+                "missingMask": null,
+                "display": null
+              }
+            ],
+            "error": null,
+            "interruption": null
+          },
+          "stages": [
+            {
+              "stage": "input_snapshot",
+              "ordinal": 0,
+              "startedAtNs": 1793171329986712839,
+              "finishedAtNs": 1793171331674045899,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "input_cell_selection",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "datastore",
+                    "kind": "cell_selection",
+                    "artifact_id": "354b53b8bcb4d9db09731b24962fe4d0e52e5f881dfe6a8f03b5c985baa6fb84"
+                  },
+                  "reused": false
+                },
+                {
+                  "outputKey": "cell_snapshot",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "datastore",
+                    "kind": "metadata_snapshot",
+                    "artifact_id": "168986b0b5fb37cd6348215ff18cf7f9b522a8fab07d990cc9b0bde94fdf102f"
+                  },
+                  "reused": false
+                },
+                {
+                  "outputKey": "feature_snapshot",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "metadata_snapshot",
+                    "artifact_id": "cebe7b177c35cf64e85eaf0edb9e23aa827cbeb109b85b75ea50398260945264",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                },
+                {
+                  "outputKey": "feature_universe",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_selection",
+                    "artifact_id": "ad077dff7d4f2edb6503a8372fb08f13958b495b311758a1a867a437ff2c2740",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "snapshot_pipeline_input_selection",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "datastore",
+                    "kind": "cell_selection",
+                    "artifact_id": "354b53b8bcb4d9db09731b24962fe4d0e52e5f881dfe6a8f03b5c985baa6fb84"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "snapshot_run_metadata",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "datastore",
+                    "kind": "metadata_snapshot",
+                    "artifact_id": "168986b0b5fb37cd6348215ff18cf7f9b522a8fab07d990cc9b0bde94fdf102f"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "snapshot_run_metadata",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "metadata_snapshot",
+                    "artifact_id": "cebe7b177c35cf64e85eaf0edb9e23aa827cbeb109b85b75ea50398260945264",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "create_all_features",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_selection",
+                    "artifact_id": "ad077dff7d4f2edb6503a8372fb08f13958b495b311758a1a867a437ff2c2740",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 1.6841135279999975,
+                "rssBaselineBytes": 2283491328,
+                "rssPeakBytes": 2364239872,
+                "rssIncrementalPeakBytes": 80748544,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 18,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "filtering",
+              "ordinal": 1,
+              "startedAtNs": 1793171331679459375,
+              "finishedAtNs": 1793171331691865058,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.013361846999998761,
+                "rssBaselineBytes": 2364223488,
+                "rssPeakBytes": 2364223488,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "cell_cycle",
+              "ordinal": 2,
+              "startedAtNs": 1793171331697123745,
+              "finishedAtNs": 1793171331708115636,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.012177334000000428,
+                "rssBaselineBytes": 2364223488,
+                "rssPeakBytes": 2364223488,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "highly_variable_features",
+              "ordinal": 3,
+              "startedAtNs": 1793171331714081319,
+              "finishedAtNs": 1793171338307657792,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "highly_variable_features",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_selection",
+                    "artifact_id": "03b5a7dc4d436940c0d840cf9214cb1891c8da263835a59b64b27f48855caf43",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "summarize_rna_features",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_summary",
+                    "artifact_id": "5b616463239d14cf7ac3aaaa36fc75734790ce2f0e78083185f2fee3c7256cbd",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "select_hvgs",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_selection",
+                    "artifact_id": "03b5a7dc4d436940c0d840cf9214cb1891c8da263835a59b64b27f48855caf43",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 6.59469498899999,
+                "rssBaselineBytes": 2364223488,
+                "rssPeakBytes": 8949497856,
+                "rssIncrementalPeakBytes": 6585274368,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 21,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "normalization",
+              "ordinal": 4,
+              "startedAtNs": 1793171338313840323,
+              "finishedAtNs": 1793171351710798151,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "normalized",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "normalized",
+                    "artifact_id": "0910bcbff0c4e0c79f86f26712b3314df73e9ea36eb26368a2a9ed898056702a",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "run_normalization",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "normalized",
+                    "artifact_id": "0910bcbff0c4e0c79f86f26712b3314df73e9ea36eb26368a2a9ed898056702a",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 13.398175109999983,
+                "rssBaselineBytes": 2504716288,
+                "rssPeakBytes": 4269342720,
+                "rssIncrementalPeakBytes": 1764626432,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 127,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "pca",
+              "ordinal": 5,
+              "startedAtNs": 1793171351717520359,
+              "finishedAtNs": 1793171383875284002,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "pca",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "reduction",
+                    "artifact_id": "18e17b176c122a4c046b116bed42bec3113abbf00c979d76179a2c33b4bfc332",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "calculate_feature_scaling",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_scaling",
+                    "artifact_id": "6ff99c9af714f813d4d214fae2eb3f5fc9ff27808ae60008779ce3dd61c25841",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "run_pca",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "reduction",
+                    "artifact_id": "18e17b176c122a4c046b116bed42bec3113abbf00c979d76179a2c33b4bfc332",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 32.159524721999986,
+                "rssBaselineBytes": 2691833856,
+                "rssPeakBytes": 5460324352,
+                "rssIncrementalPeakBytes": 2768490496,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 286,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "harmony",
+              "ordinal": 6,
+              "startedAtNs": 1793171383882634590,
+              "finishedAtNs": 1793171613657325061,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "harmony",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "batch_correction",
+                    "artifact_id": "b52a34c6651b9c0ca8f195730f4fa937842e144f30e305007b135fbf4e950e70",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "run_harmony",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "batch_correction",
+                    "artifact_id": "b52a34c6651b9c0ca8f195730f4fa937842e144f30e305007b135fbf4e950e70",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 229.77684563199998,
+                "rssBaselineBytes": 2764623872,
+                "rssPeakBytes": 3708588032,
+                "rssIncrementalPeakBytes": 943964160,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2235,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "ann_index",
+              "ordinal": 7,
+              "startedAtNs": 1793171613665443988,
+              "finishedAtNs": 1793171705200043233,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "ann_index",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "ann_index",
+                    "artifact_id": "3c26af47a4ca0cfe2c1649fc66c81800983f2a8ce9123b50e0ab2205dbd1d1f5",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "build_ann_index",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "ann_index",
+                    "artifact_id": "3c26af47a4ca0cfe2c1649fc66c81800983f2a8ce9123b50e0ab2205dbd1d1f5",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 91.53740809100003,
+                "rssBaselineBytes": 3564679168,
+                "rssPeakBytes": 3833974784,
+                "rssIncrementalPeakBytes": 269295616,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 891,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "neighbors",
+              "ordinal": 8,
+              "startedAtNs": 1793171705208969596,
+              "finishedAtNs": 1793171714093767456,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "neighbors",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "neighbors",
+                    "artifact_id": "8a2c3955a575f5837d415b4321122cd7f19778d09b4cc044fec3fec378e1784f",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "query_neighbors",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "neighbors",
+                    "artifact_id": "8a2c3955a575f5837d415b4321122cd7f19778d09b4cc044fec3fec378e1784f",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 8.887862418999987,
+                "rssBaselineBytes": 3768942592,
+                "rssPeakBytes": 4444725248,
+                "rssIncrementalPeakBytes": 675782656,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 80,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "connectivity",
+              "ordinal": 9,
+              "startedAtNs": 1793171714102575439,
+              "finishedAtNs": 1793171730391214217,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "connectivity_map",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "connectivity_map",
+                    "artifact_id": "eb99c17d2e8f329937138fe9645dafe1233a9a409a113e0414467034c07c8558",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "build_connectivity_map",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "connectivity_map",
+                    "artifact_id": "eb99c17d2e8f329937138fe9645dafe1233a9a409a113e0414467034c07c8558",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 16.292039545999955,
+                "rssBaselineBytes": 3996999680,
+                "rssPeakBytes": 4162252800,
+                "rssIncrementalPeakBytes": 165253120,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 141,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "embedding_initialization",
+              "ordinal": 10,
+              "startedAtNs": 1793171730399854045,
+              "finishedAtNs": 1793171730410922488,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.01569316500001605,
+                "rssBaselineBytes": 3492507648,
+                "rssPeakBytes": 3492507648,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "umap",
+              "ordinal": 11,
+              "startedAtNs": 1793171730419633766,
+              "finishedAtNs": 1793171730431066457,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.016095952999990004,
+                "rssBaselineBytes": 3492507648,
+                "rssPeakBytes": 3492507648,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "paris",
+              "ordinal": 12,
+              "startedAtNs": 1793171730440216951,
+              "finishedAtNs": 1793171730451165925,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.01616441200008012,
+                "rssBaselineBytes": 3492507648,
+                "rssPeakBytes": 3492507648,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "cluster_selection",
+              "ordinal": 13,
+              "startedAtNs": 1793171730460394610,
+              "finishedAtNs": 1793171730470993016,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.01610039299998789,
+                "rssBaselineBytes": 3492507648,
+                "rssPeakBytes": 3492507648,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "membership_strength",
+              "ordinal": 14,
+              "startedAtNs": 1793171730480556858,
+              "finishedAtNs": 1793171730491843070,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.017027687999984664,
+                "rssBaselineBytes": 3492507648,
+                "rssPeakBytes": 3492507648,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "tsne",
+              "ordinal": 15,
+              "startedAtNs": 1793171730501637671,
+              "finishedAtNs": 1793171730512213697,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.016502790000004097,
+                "rssBaselineBytes": 3492507648,
+                "rssPeakBytes": 3492507648,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "doublets",
+              "ordinal": 16,
+              "startedAtNs": 1793171730522382896,
+              "finishedAtNs": 1793171730533966146,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.017882362000023022,
+                "rssBaselineBytes": 3492507648,
+                "rssPeakBytes": 3492507648,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "markers",
+              "ordinal": 17,
+              "startedAtNs": 1793171730544422573,
+              "finishedAtNs": 1793171730555189778,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.017374125000060303,
+                "rssBaselineBytes": 3492507648,
+                "rssPeakBytes": 3492507648,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            }
+          ],
+          "summary": {
+            "createdArtifacts": [
+              {
+                "type": "artifact",
+                "scope": "datastore",
+                "kind": "cell_selection",
+                "artifact_id": "354b53b8bcb4d9db09731b24962fe4d0e52e5f881dfe6a8f03b5c985baa6fb84"
+              },
+              {
+                "type": "artifact",
+                "scope": "datastore",
+                "kind": "metadata_snapshot",
+                "artifact_id": "168986b0b5fb37cd6348215ff18cf7f9b522a8fab07d990cc9b0bde94fdf102f"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "metadata_snapshot",
+                "artifact_id": "cebe7b177c35cf64e85eaf0edb9e23aa827cbeb109b85b75ea50398260945264",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_selection",
+                "artifact_id": "ad077dff7d4f2edb6503a8372fb08f13958b495b311758a1a867a437ff2c2740",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_summary",
+                "artifact_id": "5b616463239d14cf7ac3aaaa36fc75734790ce2f0e78083185f2fee3c7256cbd",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_selection",
+                "artifact_id": "03b5a7dc4d436940c0d840cf9214cb1891c8da263835a59b64b27f48855caf43",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "normalized",
+                "artifact_id": "0910bcbff0c4e0c79f86f26712b3314df73e9ea36eb26368a2a9ed898056702a",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_scaling",
+                "artifact_id": "6ff99c9af714f813d4d214fae2eb3f5fc9ff27808ae60008779ce3dd61c25841",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "reduction",
+                "artifact_id": "18e17b176c122a4c046b116bed42bec3113abbf00c979d76179a2c33b4bfc332",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "batch_correction",
+                "artifact_id": "b52a34c6651b9c0ca8f195730f4fa937842e144f30e305007b135fbf4e950e70",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "ann_index",
+                "artifact_id": "3c26af47a4ca0cfe2c1649fc66c81800983f2a8ce9123b50e0ab2205dbd1d1f5",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "neighbors",
+                "artifact_id": "8a2c3955a575f5837d415b4321122cd7f19778d09b4cc044fec3fec378e1784f",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "connectivity_map",
+                "artifact_id": "eb99c17d2e8f329937138fe9645dafe1233a9a409a113e0414467034c07c8558",
+                "assay": "RNA"
+              }
+            ],
+            "reusedArtifacts": [],
+            "uncleanIncomplete": false,
+            "signalProtection": {
+              "signalGuardAvailable": true,
+              "unavailableReason": null
+            }
+          }
+        }
+      }
+    },
+    "steps": {
+      "convert_reference": {
+        "rssBeforeBytes": 496230400,
+        "seconds": 40.436708772,
+        "rssAfterBytes": 2185515008,
+        "peakRssBytes": 17861656576,
+        "peakCgroupBytes": 16033837056,
+        "peakAnonBytes": 0
+      },
+      "integrated_reference": {
+        "rssBeforeBytes": 2283474944,
+        "seconds": 400.65975105399997,
+        "rssAfterBytes": 3492507648,
+        "peakRssBytes": 9299484672,
+        "peakCgroupBytes": 9557725184,
+        "peakAnonBytes": 0
+      },
+      "integrated_registration": {
+        "rssBeforeBytes": 3492507648,
+        "seconds": 2.94542242600005,
+        "rssAfterBytes": 3492507648,
+        "peakRssBytes": 3682910208,
+        "peakCgroupBytes": 3631755264,
+        "peakAnonBytes": 0
+      },
+      "convert_query": {
+        "rssBeforeBytes": 3492507648,
+        "seconds": 8.882880480999916,
+        "rssAfterBytes": 3571781632,
+        "peakRssBytes": 9724395520,
+        "peakCgroupBytes": 8667123712,
+        "peakAnonBytes": 0
+      },
+      "snapshot_query_cells": {
+        "rssBeforeBytes": 3585822720,
+        "seconds": 0.02709445899995444,
+        "rssAfterBytes": 3585822720
+      },
+      "integrated_projection_correction_neighbors": {
+        "rssBeforeBytes": 3571142656,
+        "seconds": 6.641742715999953,
+        "rssAfterBytes": 3928285184,
+        "peakRssBytes": 4983848960,
+        "peakCgroupBytes": 4929351680,
+        "peakAnonBytes": 0
+      },
+      "integrated_label_voting": {
+        "rssBeforeBytes": 3928285184,
+        "seconds": 1.0190390410000418,
+        "rssAfterBytes": 3963240448,
+        "peakRssBytes": 4077936640,
+        "peakCgroupBytes": 4018511872,
+        "peakAnonBytes": 0
+      }
+    },
+    "peakProcessTreeRssBytes": 17861656576,
+    "peakContainerBytes": 16033837056,
+    "memoryDefinition": "Sampled container memory.current and process-tree RSS, using the same Sampler as external mapping comparators"
+  },
+  "elapsedSeconds": 535.1839942932129
+}

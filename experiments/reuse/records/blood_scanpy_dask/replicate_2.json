@@ -1,0 +1,46 @@
+{
+  "tool": "scanpy_dask_covariance_csc",
+  "dataset": "blood_cohort_4714857",
+  "replicate": 2,
+  "status": "ok",
+  "container": {
+    "cpu": 16,
+    "memoryMb": 131072,
+    "workers": 16,
+    "preemptible": false,
+    "region": "uk"
+  },
+  "versions": {
+    "scanpy": "1.12.4",
+    "anndata": "0.13.4",
+    "dask": "2026.8.0"
+  },
+  "settings": {
+    "filterCells": false,
+    "variableGenes": 2000,
+    "variableGeneExclusionPattern": "^MT-|^RP[SL]\\d+[AXY]?\\d*$|^RPLP[0-2]$|^RPSA$|^MRP[SL]\\d+[A-C]?$|^HLA-|^HIST[1-4]H|^H1-[1-6]$|^H1F[1-6]$|^H2AC\\d+$|^H2BC\\d+$|^H3C\\d+$|^H4C\\d+$|^H2AW$|^H3-4$|^H4-16$|^XIST$|^DDX3Y$|^USP9Y$|^EIF1AY$|^KDM5D$|^SRY$|^ZFY$|^UTY$|^TMSB4Y$|^NLGN4Y$",
+    "principalComponents": 30,
+    "neighbors": 30,
+    "umap": false,
+    "markers": false
+  },
+  "input": {
+    "format": "h5ad",
+    "location": "localDisk"
+  },
+  "mode": "dask_covariance_csc",
+  "lazyReader": "anndata.experimental.read_elem_lazy",
+  "chunkRows": 50000,
+  "nCells": 4714857,
+  "nGenes": 18446,
+  "nnz": 6535468092,
+  "clusters": 32,
+  "download": {
+    "bytes": 87719372065,
+    "seconds": 298.1486554145813
+  },
+  "workflowSeconds": 1458.8214383125305,
+  "peakCgroupBytes": 74295123968,
+  "peakRssBytes": 75086180352,
+  "memorySampleSeconds": 0.5
+}

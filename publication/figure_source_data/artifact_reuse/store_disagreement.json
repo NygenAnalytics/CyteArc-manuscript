@@ -1,0 +1,109 @@
+{
+ "jobs": [
+  {
+   "name": "Wells",
+   "stores": 1,
+   "cells": 111324,
+   "typedCells": 110830,
+   "agreeingCells": 109525,
+   "disagreement": 0.01177479021925476,
+   "missingGenes": [
+    0
+   ]
+  },
+  {
+   "name": "Yoshida",
+   "stores": 1,
+   "cells": 339597,
+   "typedCells": 336723,
+   "agreeingCells": 321329,
+   "disagreement": 0.045717102781811736,
+   "missingGenes": [
+    0
+   ]
+  },
+  {
+   "name": "van der Wijst",
+   "stores": 1,
+   "cells": 600929,
+   "typedCells": 598918,
+   "agreeingCells": 580717,
+   "disagreement": 0.03038980294464355,
+   "missingGenes": [
+    684
+   ]
+  },
+  {
+   "name": "Perez",
+   "stores": 1,
+   "cells": 1263676,
+   "typedCells": 1254604,
+   "agreeingCells": 1225213,
+   "disagreement": 0.02342651545826413,
+   "missingGenes": [
+    247
+   ]
+  },
+  {
+   "name": "Ren",
+   "stores": 1,
+   "cells": 1399186,
+   "typedCells": 1398517,
+   "agreeingCells": 1293759,
+   "disagreement": 0.07490649023215301,
+   "missingGenes": [
+    63
+   ]
+  },
+  {
+   "name": "Gong",
+   "stores": 1,
+   "cells": 3758514,
+   "typedCells": 3716088,
+   "agreeingCells": 3580086,
+   "disagreement": 0.03659816452139997,
+   "missingGenes": [
+    889
+   ]
+  },
+  {
+   "name": "Sound Life, CMV+",
+   "stores": 4,
+   "cells": 6359167,
+   "typedCells": 6319668,
+   "agreeingCells": 6269534,
+   "disagreement": 0.007933011670866241,
+   "missingGenes": [
+    0
+   ]
+  },
+  {
+   "name": "Sound Life, CMV\u2212",
+   "stores": 4,
+   "cells": 7430381,
+   "typedCells": 7390557,
+   "agreeingCells": 7361068,
+   "disagreement": 0.003990091680505237,
+   "missingGenes": [
+    0
+   ]
+  }
+ ],
+ "total": {
+  "stores": 14,
+  "cells": 21262774,
+  "typedCells": 21125905,
+  "disagreement": 0.01820864005589351
+ },
+ "source": [
+  "experiments/mapping/records/blood_store_annotation/gong_all_cells.json",
+  "experiments/mapping/records/blood_store_annotation/perez.json",
+  "experiments/mapping/records/blood_store_annotation/ren.json",
+  "experiments/mapping/records/blood_store_annotation/sound_life.json",
+  "experiments/mapping/records/blood_store_annotation/sound_life_cmv_positive.json",
+  "experiments/mapping/records/blood_store_annotation/van_der_wijst.json",
+  "experiments/mapping/records/blood_store_annotation/wells.json",
+  "experiments/mapping/records/blood_store_annotation/yoshida.json",
+  ".build/derived/mapping/blood_store_annotation.json"
+ ]
+}

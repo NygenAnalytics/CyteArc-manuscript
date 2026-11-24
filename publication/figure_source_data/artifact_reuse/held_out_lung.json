@@ -1,0 +1,69 @@
+{
+ "tissue": "lung",
+ "umap": {
+  "raster": "experiments/mapping/records/held_out_reference_umap/lung.npz",
+  "cells": 546358,
+  "types": {
+   "AT1": 7843,
+   "AT2": 59402,
+   "B cell lineage": 4924,
+   "Basal": 84700,
+   "Dendritic cells": 8647,
+   "EC arterial": 7220,
+   "EC capillary": 22993,
+   "EC venous": 12467,
+   "Fibroblasts": 17683,
+   "Innate lymphoid cell NK": 10246,
+   "Lymphatic EC differentiating": 556,
+   "Lymphatic EC mature": 3864,
+   "Lymphatic EC proliferating": 28,
+   "Macrophages": 108327,
+   "Mast cells": 4320,
+   "Monocytes": 23696,
+   "Multiciliated lineage": 40987,
+   "Myofibroblasts": 643,
+   "Rare": 885,
+   "SM activated stress response": 420,
+   "Secretory": 80263,
+   "Smooth muscle FAM83D+": 298,
+   "Submucosal Secretory": 4700,
+   "T cell lineage": 41246
+  }
+ },
+ "scaleHigh": 0.16174832962138086,
+ "reference": {
+  "cells": 546358,
+  "donors": 104,
+  "datasets": 13
+ },
+ "query": {
+  "study": "Madissoon",
+  "cells": 35300,
+  "donors": 3
+ },
+ "methods": {
+  "unintegrated": {
+   "disagreement": 0.07065155807365442,
+   "low": 0.05378472459217798,
+   "high": 0.11887527839643652
+  },
+  "seurat_map": {
+   "disagreement": 0.07385269121813032,
+   "low": 0.07098491570541265,
+   "high": 0.08101336302895323
+  },
+  "symphony": {
+   "disagreement": 0.09864022662889516,
+   "low": 0.0793119923554706,
+   "high": 0.16174832962138086
+  },
+  "celltypist": {
+   "disagreement": 0.07886685552407935,
+   "low": 0.040920906052729245,
+   "high": 0.15116926503340755
+  }
+ },
+ "source": [
+  "experiments/mapping/records/cross_study/evaluation.json"
+ ]
+}

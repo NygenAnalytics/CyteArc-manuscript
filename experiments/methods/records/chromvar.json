@@ -1,0 +1,63 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "experiment": "chromvar",
+    "inputs": {
+      "matrix": {
+        "url": "https://cf.10xgenomics.com/samples/cell-arc/2.0.0/pbmc_granulocyte_sorted_3k/pbmc_granulocyte_sorted_3k_filtered_feature_bc_matrix.h5",
+        "sha256": "5fbff5a4d85e0df345f6502e966ec787a8a4c429fd6b88a8772c43fd915cf3ff",
+        "bytes": 38844318
+      },
+      "genome": {
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh38.primary_assembly.genome.fa.gz",
+        "sha256": "86ef9981f90267b036f59db02d0f4b15a2c388bf1dc0376cc5bc35c16e5fcb37",
+        "bytes": 844691642
+      },
+      "motifs": {
+        "url": "https://jaspar.elixir.no/download/data/2024/CORE/JASPAR2024_CORE_vertebrates_non-redundant_pfms_jaspar.txt",
+        "sha256": "2a6c7c24afb0614ed418c9f02b68845adebf38f80f6cebabbcd5de804eaacb59",
+        "bytes": 283814
+      }
+    },
+    "cells": 2612,
+    "peaks": 98316,
+    "motifs": 879,
+    "motifMatches": 11777569,
+    "excludedAmbiguousPeaks": 0,
+    "settings": {
+      "backgroundIterations": 50,
+      "kernelWidth": 0.1,
+      "bins": 50,
+      "seed": 0,
+      "motifPValue": 5e-05,
+      "motifBackground": "subject",
+      "maxAbsoluteError": 1e-08
+    },
+    "motifSeconds": 202.64910795700007,
+    "nativeSeconds": 16.687425587000007,
+    "referenceInputsSha256": "142fb1c25acaba493809c5ba1934091124c107038ae624b6c1a43856195a4289",
+    "results": {
+      "deviations": {
+        "finiteMaskEqual": true,
+        "finiteEntries": 2295915,
+        "maxAbsoluteError": 1.6840695504782843e-14,
+        "meetsTolerance": true
+      },
+      "z": {
+        "finiteMaskEqual": true,
+        "finiteEntries": 2295915,
+        "maxAbsoluteError": 2.7959856652159942e-12,
+        "meetsTolerance": true
+      }
+    },
+    "reference": {
+      "package": "chromVAR",
+      "version": "1.34.1",
+      "R": "R version 4.6.1 (2026-06-24)",
+      "seconds": 83.589
+    },
+    "comparisonKind": "Deviations and z-scores using identical motif matches and background peak samples",
+    "performanceClaim": false
+  }
+}

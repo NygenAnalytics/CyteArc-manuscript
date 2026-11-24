@@ -1,0 +1,22 @@
+{
+  "seed": 0,
+  "cells": 5000,
+  "runs": {
+    "embryo": {
+      "title": "one-million-cell mouse embryo sample",
+      "umapArtifact": "a4a5e6283f04f4c9c57f3ac95892a787f6c149ee0fd9a4cf3fbcfa2970a8bbc4",
+      "clusterArtifact": "bd0c9e84a5b59196651080d39024bcdbb5b278c14d27febef5b78c3ffda3b734",
+      "cellsInRun": 889150,
+      "clusters": 40,
+      "largestSixShare": 0.45496822808300064
+    },
+    "brain": {
+      "title": "1.3 million mouse brain cells",
+      "umapArtifact": "cebc3d13e721c52dbe9565cb42fda9632e3c7d9c9eeb36bb8e5cacc7ace485ff",
+      "clusterArtifact": "47f44fbedb1bb5e0d543e884e1835d91c133f38fd47394217b0081942240864d",
+      "cellsInRun": 1162239,
+      "clusters": 35,
+      "largestSixShare": 0.42815720346675684
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+ "raster": "experiments/reuse/records/tabula_sapiens_query_raster.npz",
+ "cells": 1136218,
+ "bCells": 114495,
+ "ms4a1Top": 1.80608995739986,
+ "bCellLabel": {
+  "row": 116.0,
+  "column": 96.0
+ },
+ "rows": [
+  {
+   "key": "cytebase",
+   "label": "CyteBase",
+   "seconds": {
+    "mean": 9.046838855,
+    "low": 8.458036920000001,
+    "high": 10.115852057000001,
+    "n": 3,
+    "values": [
+     10.115852057000001,
+     8.566627588,
+     8.458036920000001
+    ]
+   },
+   "bytes": {
+    "mean": 68907001.33333333,
+    "low": 68906990.0,
+    "high": 68907014.0,
+    "n": 3,
+    "values": [
+     68906990.0,
+     68907014.0,
+     68907000.0
+    ]
+   }
+  },
+  {
+   "key": "census",
+   "label": "Census",
+   "seconds": {
+    "mean": 60.606322504,
+    "low": 57.385723587,
+    "high": 64.866716795,
+    "n": 3,
+    "values": [
+     64.866716795,
+     57.385723587,
+     59.56652713
+    ]
+   },
+   "bytes": {
+    "mean": 4646075103.666667,
+    "low": 4643922575.0,
+    "high": 4649129666.0,
+    "n": 3,
+    "values": [
+     4643922575.0,
+     4649129666.0,
+     4645173070.0
+    ]
+   },
+   "timeOverQuery": 6.699171221614513,
+   "dataOverQuery": 67.42529806501908
+  },
+  {
+   "key": "download",
+   "label": "H5AD download",
+   "seconds": {
+    "mean": 222.18956232070923,
+    "low": 222.18956232070923,
+    "high": 222.18956232070923,
+    "n": 1,
+    "values": [
+     222.18956232070923
+    ]
+   },
+   "bytes": {
+    "mean": 45013733785.0,
+    "low": 45013733785.0,
+    "high": 45013733785.0,
+    "n": 1,
+    "values": [
+     45013733785.0
+    ]
+   },
+   "timeOverQuery": 24.559911575954473,
+   "dataOverQuery": 653.2534127736725
+  }
+ ],
+ "source": [
+  "experiments/reuse/records/tabula_sapiens_query_raster.npz",
+  "experiments/reuse/records/composite_and_remote/remote_queries/replicate_1.json",
+  "experiments/reuse/records/composite_and_remote/remote_queries/replicate_2.json",
+  "experiments/reuse/records/composite_and_remote/remote_queries/replicate_3.json",
+  "experiments/reuse/records/census_queries/replicate_1.json",
+  "experiments/reuse/records/census_queries/replicate_2.json",
+  "experiments/reuse/records/census_queries/replicate_3.json",
+  "experiments/benchmarks/records/rna_workflow_runs.json",
+  ".build/derived/reuse/composite_and_remote.json"
+ ]
+}

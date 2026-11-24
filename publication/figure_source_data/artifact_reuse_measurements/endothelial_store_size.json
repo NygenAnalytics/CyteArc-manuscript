@@ -1,0 +1,45 @@
+{
+ "sizes": [
+  {
+   "name": "source H5AD",
+   "kind": "source",
+   "bytes": 40194354711
+  },
+  {
+   "name": "remote store",
+   "kind": "source",
+   "bytes": 64832323249
+  },
+  {
+   "name": "its counts, 2 layouts",
+   "kind": "source",
+   "bytes": 58404933632
+  },
+  {
+   "name": "its analysis results",
+   "kind": "source",
+   "bytes": 5929065159
+  },
+  {
+   "name": "user store, mounted",
+   "kind": "user",
+   "bytes": 771064636
+  },
+  {
+   "name": "after the reanalysis",
+   "kind": "user",
+   "bytes": 1718595524
+  },
+  {
+   "name": "after the requests",
+   "kind": "user",
+   "bytes": 4762153822
+  }
+ ],
+ "readBytes": 89586517759,
+ "notCopiedBytes": 5929065159,
+ "source": [
+  "experiments/reuse/records/embryo_endothelial_reanalysis.json",
+  "experiments/benchmarks/records/raw/rna_scaling_runs.json"
+ ]
+}

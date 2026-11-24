@@ -1,0 +1,259 @@
+modalEnvironmentName = "cytearc_profiling"
+modalAppName = "cytearc-experiments"
+modalSecretName = "cytearc-r2"
+datasetPrefix = "experiments/datasets/embryo"
+dataset = "embryo"
+resultsPrefix = "experiments"
+runTag = "embryo_rna_scaling_10000000_cells_replicate_5"
+targetSizes = [10000000]
+samplingSeed = 0
+
+[countMatrix]
+unitBytes = 1000000000
+chunkBytes = 100000000
+
+[prepareResources]
+modalMemoryRequestMb = 196608
+modalMemoryLimitMb = 212992
+modalCpuRequest = 8.0
+modalCpuLimit = 16.0
+timeoutSeconds = 86400
+ephemeralDiskMb = 524288
+
+[workflow]
+assayName = "RNA"
+cellKey = "I"
+filterAttrs = [
+    "RNA_nCounts",
+    "RNA_nFeatures",
+    "RNA_percentMito",
+    "RNA_percentRibo",
+]
+filterMinQuantile = 0.01
+filterMaxQuantile = 0.99
+minFeaturesPerCell = 10
+h5adBatchSize = 1000
+topN = 1000
+hvgMinCells = 20
+k = 11
+dims = 21
+nCentroids = 1000
+graphSeed = 4466
+annParallel = true
+umapEpochs = 300
+umapSeed = 4444
+umapParallel = true
+leidenResolution = 1.0
+leidenBackend = "cytearc"
+leidenSeed = 4444
+graphLocalCache = "auto"
+
+[stageResources.createStore]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.writeCountsT]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.initializeStore]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.reopenStore]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.filterCells]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 14400
+ephemeralDiskMb = 524288
+
+[stageResources.markHvgs]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 43200
+ephemeralDiskMb = 524288
+
+[stageResources.runNormalization]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.runPca]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.buildEmbeddingInitialization]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.buildAnnIndex]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.queryNeighbors]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.buildConnectivityMap]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.runUmap]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.runLeiden]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.findMarkers]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.importClusters]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.validateExperiment]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.makeBulkMean]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.makeBulkSum]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.runDoublets]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288
+
+[stageResources.runDoubletsRatio01]
+modalMemoryRequestMb = 65536
+modalMemoryLimitMb = 65536
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 51539607552
+workers = 16
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288

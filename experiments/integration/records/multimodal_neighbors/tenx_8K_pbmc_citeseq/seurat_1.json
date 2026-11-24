@@ -1,0 +1,162 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "matchedKernel": {
+      "weightsMaxAbs": 2.979690538751356e-08,
+      "affinitiesMaxAbs": 2.9801795919937035e-08,
+      "neighborsIdentical": true,
+      "passed": true
+    },
+    "inputsSha256": "dd4e5acbf252d0560d32c825cb12f9e5da68ead03c7f9360db1cf2f32d305238",
+    "seuratComparisons": {
+      "50": {
+        "cytearcNeighborOverlap": {
+          "mean": 0.6443005891217976,
+          "median": 0.65
+        },
+        "cytearcClusterAri": 0.9000127862283708,
+        "weightPearson": [
+          0.6132752791108615,
+          0.613275278855302
+        ],
+        "biologicalAgreement": null
+      },
+      "200": {
+        "cytearcNeighborOverlap": {
+          "mean": 0.6408343608713524,
+          "median": 0.65
+        },
+        "cytearcClusterAri": 0.9038221201317597,
+        "weightPearson": [
+          0.6132752791108615,
+          0.613275278855302
+        ],
+        "biologicalAgreement": null
+      }
+    },
+    "candidateComparison": {
+      "neighborOverlap": {
+        "mean": 0.9868612138649129,
+        "median": 1.0
+      },
+      "weightsMaxAbs": 0.0
+    },
+    "seurat": {
+      "50": {
+        "Seurat": "5.5.1",
+        "SeuratObject": "5.4.0",
+        "R": "R version 4.6.1 (2026-06-24)",
+        "kNn": 20,
+        "knnRange": 50,
+        "neighborSeconds": 9.121000000000002,
+        "clusteringSeconds": 1.064,
+        "cells": 7299,
+        "modalities": [
+          "RNA",
+          "ADT"
+        ],
+        "threads": 8
+      },
+      "200": {
+        "Seurat": "5.5.1",
+        "SeuratObject": "5.4.0",
+        "R": "R version 4.6.1 (2026-06-24)",
+        "kNn": 20,
+        "knnRange": 200,
+        "neighborSeconds": 17.302000000000003,
+        "clusteringSeconds": 1.0279999999999987,
+        "cells": 7299,
+        "modalities": [
+          "RNA",
+          "ADT"
+        ],
+        "threads": 8
+      }
+    },
+    "stages": [
+      {
+        "stage": "seurat.matched.process",
+        "wallSeconds": 7.304898554,
+        "operationBaselineBytes": 431898624,
+        "operationPeakBytes": 953958400,
+        "operationIncrementalPeakBytes": 522059776,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 470704128,
+        "processTreeRssPeakBytes": 5412626432,
+        "processTreeRssIncrementalPeakBytes": 4941922304,
+        "processTreeRssAfterBytes": 469139456,
+        "cgroupMemoryCurrentBaselineBytes": 431898624,
+        "cgroupMemoryCurrentPeakBytes": 953958400,
+        "cgroupMemoryCurrentAfterBytes": 822788096,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "seurat.50.process",
+        "wallSeconds": 16.520061573,
+        "operationBaselineBytes": 822792192,
+        "operationPeakBytes": 1312448512,
+        "operationIncrementalPeakBytes": 489656320,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 469155840,
+        "processTreeRssPeakBytes": 8626757632,
+        "processTreeRssIncrementalPeakBytes": 8157601792,
+        "processTreeRssAfterBytes": 467558400,
+        "cgroupMemoryCurrentBaselineBytes": 822792192,
+        "cgroupMemoryCurrentPeakBytes": 1312448512,
+        "cgroupMemoryCurrentAfterBytes": 1196032000,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      {
+        "stage": "seurat.200.process",
+        "wallSeconds": 24.63750685,
+        "operationBaselineBytes": 1148510208,
+        "operationPeakBytes": 1316433920,
+        "operationIncrementalPeakBytes": 167923712,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 467574784,
+        "processTreeRssPeakBytes": 8680173568,
+        "processTreeRssIncrementalPeakBytes": 8212598784,
+        "processTreeRssAfterBytes": 467558400,
+        "cgroupMemoryCurrentBaselineBytes": 1148510208,
+        "cgroupMemoryCurrentPeakBytes": 1316433920,
+        "cgroupMemoryCurrentAfterBytes": 1192194048,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      }
+    ],
+    "settings": {
+      "neighborCount": 20,
+      "seuratCandidateBreadths": [
+        50,
+        200
+      ],
+      "hvgCount": 2000,
+      "rnaDimensions": 30,
+      "adtDimensions": 15,
+      "atacDimensions": 30,
+      "peakCount": 25000,
+      "resolution": 1.0,
+      "seed": 4466,
+      "l2Normalize": true,
+      "annParallel": false,
+      "tolerances": {
+        "matchedKernelMaxAbs": 1e-06,
+        "candidateWeightMaxAbs": 1e-12,
+        "candidateMeanNeighborOverlapMin": 0.9,
+        "candidateBiologicalAriDecreaseMax": 0.05
+      }
+    }
+  }
+}

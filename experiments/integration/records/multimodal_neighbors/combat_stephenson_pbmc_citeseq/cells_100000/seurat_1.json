@@ -1,0 +1,196 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "dataset": "combat_stephenson_pbmc_citeseq",
+    "cells": 100000,
+    "cellSelectionSha256": "8c34701d142f17aebe4bf58b678f88a26d0549702410dd9348507df3d380f58c",
+    "outcome": "completed",
+    "stages": [
+      {
+        "stage": "seurat.workflow.process",
+        "wallSeconds": 1017.3686531559999,
+        "operationPeakBytes": 17941430272,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 137438953472
+      }
+    ],
+    "stageWindows": [
+      {
+        "stage": "input_setup",
+        "wallSeconds": 61.19099998474121,
+        "sampledPeakBytes": 7000473600
+      },
+      {
+        "stage": "initial:RNA.normalization",
+        "wallSeconds": 6.387999773025513,
+        "sampledPeakBytes": 10196074496
+      },
+      {
+        "stage": "initial:RNA.features",
+        "wallSeconds": 5.0960001945495605,
+        "sampledPeakBytes": 9120522240
+      },
+      {
+        "stage": "initial:RNA.scaling",
+        "wallSeconds": 4.303999900817871,
+        "sampledPeakBytes": 8332812288
+      },
+      {
+        "stage": "initial:RNA.reduction",
+        "wallSeconds": 14.953999996185303,
+        "sampledPeakBytes": 12727148544
+      },
+      {
+        "stage": "initial:RNA.neighbors",
+        "wallSeconds": 25.375,
+        "sampledPeakBytes": 9569984512
+      },
+      {
+        "stage": "initial:RNA.clustering",
+        "wallSeconds": 23.75100016593933,
+        "sampledPeakBytes": 10256797696
+      },
+      {
+        "stage": "initial:ADT.normalization",
+        "wallSeconds": 3.0199999809265137,
+        "sampledPeakBytes": 10668683264
+      },
+      {
+        "stage": "initial:ADT.scaling",
+        "wallSeconds": 1.246999979019165,
+        "sampledPeakBytes": 12329373696
+      },
+      {
+        "stage": "initial:ADT.reduction",
+        "wallSeconds": 0.8480000495910645,
+        "sampledPeakBytes": 10384941056
+      },
+      {
+        "stage": "initial:ADT.neighbors",
+        "wallSeconds": 24.248000144958496,
+        "sampledPeakBytes": 10394279936
+      },
+      {
+        "stage": "initial:ADT.clustering",
+        "wallSeconds": 23.58799982070923,
+        "sampledPeakBytes": 11522961408
+      },
+      {
+        "stage": "initial:WNN.integration",
+        "wallSeconds": 281.2660000324249,
+        "sampledPeakBytes": 11412959232
+      },
+      {
+        "stage": "initial:WNN.clustering",
+        "wallSeconds": 37.674999952316284,
+        "sampledPeakBytes": 13176725504
+      },
+      {
+        "stage": "export_graphs",
+        "wallSeconds": 0.10299992561340332,
+        "sampledPeakBytes": null
+      },
+      {
+        "stage": "reuse_revision:WNN.clustering",
+        "wallSeconds": 38.20700001716614,
+        "sampledPeakBytes": 13298122752
+      },
+      {
+        "stage": "fresh_revision:RNA.normalization",
+        "wallSeconds": 5.766000032424927,
+        "sampledPeakBytes": 12568473600
+      },
+      {
+        "stage": "fresh_revision:RNA.features",
+        "wallSeconds": 8.532000064849854,
+        "sampledPeakBytes": 16001863680
+      },
+      {
+        "stage": "fresh_revision:RNA.scaling",
+        "wallSeconds": 4.000999927520752,
+        "sampledPeakBytes": 13296279552
+      },
+      {
+        "stage": "fresh_revision:RNA.reduction",
+        "wallSeconds": 15.776000022888184,
+        "sampledPeakBytes": 17941430272
+      },
+      {
+        "stage": "fresh_revision:RNA.neighbors",
+        "wallSeconds": 26.10800004005432,
+        "sampledPeakBytes": 14741422080
+      },
+      {
+        "stage": "fresh_revision:RNA.clustering",
+        "wallSeconds": 26.361999988555908,
+        "sampledPeakBytes": 13141438464
+      },
+      {
+        "stage": "fresh_revision:ADT.normalization",
+        "wallSeconds": 1.7080001831054688,
+        "sampledPeakBytes": 13141438464
+      },
+      {
+        "stage": "fresh_revision:ADT.scaling",
+        "wallSeconds": 0.809999942779541,
+        "sampledPeakBytes": 13291839488
+      },
+      {
+        "stage": "fresh_revision:ADT.reduction",
+        "wallSeconds": 0.7899999618530273,
+        "sampledPeakBytes": 13291839488
+      },
+      {
+        "stage": "fresh_revision:ADT.neighbors",
+        "wallSeconds": 24.698000192642212,
+        "sampledPeakBytes": 13291847680
+      },
+      {
+        "stage": "fresh_revision:ADT.clustering",
+        "wallSeconds": 25.611000061035156,
+        "sampledPeakBytes": 13291847680
+      },
+      {
+        "stage": "fresh_revision:WNN.integration",
+        "wallSeconds": 281.6099998950958,
+        "sampledPeakBytes": 13291855872
+      },
+      {
+        "stage": "fresh_revision:WNN.clustering",
+        "wallSeconds": 39.574000120162964,
+        "sampledPeakBytes": 13507588096
+      }
+    ],
+    "containerMemoryLimitBytes": 137438953472,
+    "memoryLimitGiB": 120,
+    "timeLimitSeconds": 7200,
+    "biologicalAgreement": {
+      "RNA": {
+        "ari": 0.37766349260751186,
+        "nmi": 0.6333591307855674,
+        "clusters": 31,
+        "annotatedCells": 93433,
+        "unannotatedCells": 6567
+      },
+      "ADT": {
+        "ari": 0.2259160365514076,
+        "nmi": 0.46510517094665205,
+        "clusters": 33,
+        "annotatedCells": 93433,
+        "unannotatedCells": 6567
+      },
+      "WNN": {
+        "ari": 0.3042019404533022,
+        "nmi": 0.5438278196068147,
+        "clusters": 38,
+        "annotatedCells": 93433,
+        "unannotatedCells": 6567
+      }
+    },
+    "reuseValidation": {
+      "clusterLabelsIdentical": true,
+      "clusterAri": 1.0
+    }
+  }
+}

@@ -1,0 +1,6574 @@
+{
+  "module": "internal.mapping.cross_study_mapping",
+  "function": "run",
+  "region": "us-south",
+  "startedAt": 1793171218.3811984,
+  "status": "completed",
+  "result": {
+    "settings": {
+      "mode": "benchmark",
+      "tissue": "blood",
+      "referenceMethod": "integrated",
+      "workDirectory": "/tmp/blood_integrated_mapping",
+      "nthreads": 16,
+      "memBudget": "24G"
+    },
+    "mode": "benchmark",
+    "labelColumn": "cell_type",
+    "inputs": {
+      "sources": [
+        {
+          "role": "reference",
+          "study": "Hao_2021",
+          "sourceUrl": "https://datasets.cellxgene.cziscience.com/4078abd1-063d-4b35-aa04-324dddf8244e.h5ad",
+          "sourceCells": 161764,
+          "eligibleCells": 161159,
+          "labelMap": {
+            "B cell": "B cells",
+            "CD14-low, CD16-positive monocyte": "Monocytes",
+            "CD14-positive monocyte": "Monocytes",
+            "CD16-negative, CD56-bright natural killer cell, human": "NK and ILC",
+            "CD4-positive, alpha-beta T cell": "T cells",
+            "CD4-positive, alpha-beta cytotoxic T cell": "T cells",
+            "CD8-positive, alpha-beta T cell": "T cells",
+            "central memory CD4-positive, alpha-beta T cell": "T cells",
+            "central memory CD8-positive, alpha-beta T cell": "T cells",
+            "conventional dendritic cell": "Dendritic cells",
+            "double negative thymocyte": "T cells",
+            "effector memory CD4-positive, alpha-beta T cell": "T cells",
+            "effector memory CD8-positive, alpha-beta T cell": "T cells",
+            "erythrocyte": "Erythroid",
+            "gamma-delta T cell": "T cells",
+            "hematopoietic stem cell": "Progenitors",
+            "innate lymphoid cell": "NK and ILC",
+            "memory B cell": "B cells",
+            "memory regulatory T cell": "T cells",
+            "mucosal-associated invariant T cell": "T cells",
+            "myeloid dendritic cell, human": "Dendritic cells",
+            "naive B cell": "B cells",
+            "naive regulatory T cell": "T cells",
+            "naive thymus-derived CD4-positive, alpha-beta T cell": "T cells",
+            "naive thymus-derived CD8-positive, alpha-beta T cell": "T cells",
+            "natural killer cell": "NK and ILC",
+            "plasmablast": "Plasma cells",
+            "plasmacytoid dendritic cell": "Dendritic cells",
+            "platelet": "Platelets",
+            "unknown": null
+          },
+          "excludedLabelCells": {
+            "unknown": 605
+          },
+          "primaryOnly": true,
+          "primaryPublication": {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8238499/",
+            "cohort": "Eight HVTN087 HIV-vaccine trial participants sampled before and after vaccination"
+          }
+        },
+        {
+          "role": "reference",
+          "study": "Yoshida_2022",
+          "sourceUrl": "https://datasets.cellxgene.cziscience.com/4554d5bf-9182-47af-8caf-6b2c93513829.h5ad",
+          "sourceCells": 422220,
+          "eligibleCells": 336746,
+          "labelMap": {
+            "B cell": "B cells",
+            "CD16-negative, CD56-bright natural killer cell, human": "NK and ILC",
+            "CD4-positive helper T cell": "T cells",
+            "CD4-positive, alpha-beta cytotoxic T cell": "T cells",
+            "CD8-positive, alpha-beta cytotoxic T cell": "T cells",
+            "central memory CD8-positive, alpha-beta T cell": "T cells",
+            "class switched memory B cell": "B cells",
+            "classical monocyte": "Monocytes",
+            "conventional dendritic cell": "Dendritic cells",
+            "dendritic cell": "Dendritic cells",
+            "effector memory CD8-positive, alpha-beta T cell": "T cells",
+            "effector memory CD8-positive, alpha-beta T cell, terminally differentiated": "T cells",
+            "erythrocyte": "Erythroid",
+            "gamma-delta T cell": "T cells",
+            "granulocyte": "Granulocytes",
+            "hematopoietic precursor cell": "Progenitors",
+            "innate lymphoid cell": "NK and ILC",
+            "mature NK T cell": "T cells",
+            "mucosal-associated invariant T cell": "T cells",
+            "naive B cell": "B cells",
+            "naive thymus-derived CD4-positive, alpha-beta T cell": "T cells",
+            "naive thymus-derived CD8-positive, alpha-beta T cell": "T cells",
+            "natural killer cell": "NK and ILC",
+            "non-classical monocyte": "Monocytes",
+            "plasma cell": "Plasma cells",
+            "plasmablast": "Plasma cells",
+            "plasmacytoid dendritic cell": "Dendritic cells",
+            "platelet": "Platelets",
+            "regulatory T cell": "T cells",
+            "unknown": null
+          },
+          "excludedLabelCells": {
+            "unknown": 3593
+          },
+          "primaryOnly": true,
+          "primaryPublication": {
+            "url": "https://www.nature.com/articles/s41586-021-04345-x",
+            "cohort": "UK children and adults with healthy, COVID-19 and post-COVID blood samples"
+          }
+        },
+        {
+          "role": "query",
+          "study": "Wilk_2020",
+          "sourceUrl": "https://datasets.cellxgene.cziscience.com/8d7fad46-2f37-4aa0-ac9d-babbc36efb6f.h5ad",
+          "sourceCells": 44721,
+          "eligibleCells": 44721,
+          "labelMap": {
+            "B cell": "B cells",
+            "CD14-positive monocyte": "Monocytes",
+            "CD4-positive, alpha-beta T cell": "T cells",
+            "CD4-positive, alpha-beta memory T cell": "T cells",
+            "CD8-positive, alpha-beta memory T cell": "T cells",
+            "IgA plasmablast": "Plasma cells",
+            "IgG plasmablast": "Plasma cells",
+            "class switched memory B cell": "B cells",
+            "conventional dendritic cell": "Dendritic cells",
+            "effector CD8-positive, alpha-beta T cell": "T cells",
+            "erythrocyte": "Erythroid",
+            "gamma-delta T cell": "T cells",
+            "granulocyte": "Granulocytes",
+            "monocyte": "Monocytes",
+            "naive T cell": "T cells",
+            "natural killer cell": "NK and ILC",
+            "neutrophil": "Granulocytes",
+            "plasmacytoid dendritic cell": "Dendritic cells",
+            "platelet": "Platelets"
+          },
+          "excludedLabelCells": {},
+          "primaryOnly": true,
+          "primaryPublication": {
+            "url": "https://www.nature.com/articles/s41591-020-0944-y",
+            "cohort": "Seven Stanford COVID-19 patients and six asymptomatic adult controls"
+          }
+        },
+        {
+          "role": "query",
+          "study": "Lee_2020",
+          "sourceUrl": "https://datasets.cellxgene.cziscience.com/5e491a70-a1ea-4469-9ffa-9ddff0ec3910.h5ad",
+          "sourceCells": 59572,
+          "eligibleCells": 58199,
+          "labelMap": {
+            "CD4-positive helper T cell": "T cells",
+            "CD8-positive, alpha-beta T cell": "T cells",
+            "IgG memory B cell": "B cells",
+            "IgG-negative class switched memory B cell": "B cells",
+            "blood cell": null,
+            "classical monocyte": "Monocytes",
+            "dendritic cell": "Dendritic cells",
+            "effector CD4-positive, alpha-beta T cell": "T cells",
+            "effector CD8-positive, alpha-beta T cell": "T cells",
+            "erythrocyte": "Erythroid",
+            "intermediate monocyte": "Monocytes",
+            "natural killer cell": "NK and ILC",
+            "non-classical monocyte": "Monocytes",
+            "platelet": "Platelets"
+          },
+          "excludedLabelCells": {
+            "blood cell": 1373
+          },
+          "primaryOnly": true,
+          "primaryPublication": {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7402635/",
+            "cohort": "Korean COVID-19, influenza and healthy PBMC cohort"
+          }
+        }
+      ],
+      "referenceQuerySourceCellIdOverlap": 0,
+      "rawDonorIdCollisions": [],
+      "donorIdentityScope": "Donor identifiers are scoped to each primary study; source publications document recruitment and sample provenance",
+      "sharedGenes": 18143,
+      "parts": {
+        "reference": {
+          "cells": 497905,
+          "donors": [
+            {
+              "study": "Hao_2021",
+              "donor_id": "P1"
+            },
+            {
+              "study": "Hao_2021",
+              "donor_id": "P2"
+            },
+            {
+              "study": "Hao_2021",
+              "donor_id": "P3"
+            },
+            {
+              "study": "Hao_2021",
+              "donor_id": "P4"
+            },
+            {
+              "study": "Hao_2021",
+              "donor_id": "P5"
+            },
+            {
+              "study": "Hao_2021",
+              "donor_id": "P6"
+            },
+            {
+              "study": "Hao_2021",
+              "donor_id": "P7"
+            },
+            {
+              "study": "Hao_2021",
+              "donor_id": "P8"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN1"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN11"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN12"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN13"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN14"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN2"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN3"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN5"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN6"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN7"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AN9"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AP1"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AP13"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AP2"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AP5"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AP6"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AP7"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "AP9"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP13"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP15"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP16"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP17"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP18"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP19"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP20"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP21"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP22"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP23"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP24"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP26"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP27"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP28"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP30"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP31"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP32"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP35"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP36"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP37"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP38"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP39"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP41"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "NP44"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC10"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC11"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC17"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC18"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC19"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC2"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC21"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC24"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC26"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC27"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC29"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC5"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC6"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PC9"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP1"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP11"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP13"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP14"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP15"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP16"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP2"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP3"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP4"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP5"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP6"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP8"
+            },
+            {
+              "study": "Yoshida_2022",
+              "donor_id": "PP9"
+            }
+          ],
+          "studies": {
+            "Yoshida_2022": 336746,
+            "Hao_2021": 161159
+          },
+          "labels": {
+            "T cells": 267053,
+            "Monocytes": 100682,
+            "NK and ILC": 62447,
+            "B cells": 53699,
+            "Dendritic cells": 7502,
+            "Platelets": 3571,
+            "Plasma cells": 1298,
+            "Progenitors": 1193,
+            "Erythroid": 437,
+            "Granulocytes": 23
+          },
+          "nonzeroCounts": 768612647,
+          "bytes": 9408430772,
+          "cellIdSha256": "75f2ee4e6332b0315befd072a46e7d2b7e77c41aa4ba62e648c26cdff19bd76f",
+          "sha256": "b793d83be3bc4454e57db7b452762f74db33ba9878522751d66b343536d73722"
+        },
+        "query": {
+          "cells": 102920,
+          "donors": [
+            {
+              "study": "Lee_2020",
+              "donor_id": "Flu 1"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "Flu 2"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "Flu 3"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "Flu 4"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "Flu 5"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "Normal 1"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "Normal 2"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "Normal 3"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "Normal 4"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "nCoV 1"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "nCoV 11"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "nCoV 2"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "nCoV 3_4"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "nCoV 5"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "nCoV 6"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "nCoV 7_8"
+            },
+            {
+              "study": "Lee_2020",
+              "donor_id": "nCoV 9_10"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "C1"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "C2"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "C3"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "C4"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "C5"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "C6"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "C7"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "H1"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "H2"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "H3"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "H4"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "H5"
+            },
+            {
+              "study": "Wilk_2020",
+              "donor_id": "H6"
+            }
+          ],
+          "studies": {
+            "Lee_2020": 58199,
+            "Wilk_2020": 44721
+          },
+          "labels": {
+            "Monocytes": 32775,
+            "T cells": 31397,
+            "NK and ILC": 16226,
+            "B cells": 11415,
+            "Platelets": 4243,
+            "Erythroid": 2630,
+            "Plasma cells": 2063,
+            "Dendritic cells": 1340,
+            "Granulocytes": 831
+          },
+          "nonzeroCounts": 150567309,
+          "bytes": 1844144708,
+          "cellIdSha256": "4a1f7a96e9c5d764f823bc01dad416cf95295b64b3e9bb22feb2ad33841cd890",
+          "sha256": "c250382be8642440d447ead0d897c17d7cb1368faa7f0cdc5e94d4c60273b4d8"
+        }
+      }
+    },
+    "inputDownloadAndVerificationSeconds": 212.69160759300001,
+    "timingBoundary": "Fresh prepared matched H5ADs; original source assembly and input downloads excluded from analysis steps",
+    "arms": {
+      "integrated": {
+        "registrationIo": {
+          "gets": 756,
+          "sets": 93,
+          "deletes": 0,
+          "deleteDirs": 12,
+          "sizeQueries": 0,
+          "rangeGets": 0,
+          "partialGets": 0,
+          "requestedBytes": 601862,
+          "transferredBytes": 769040358,
+          "readRequestedBytes": 768438496,
+          "readTransferredBytes": 768438496,
+          "writeTransferredBytes": 601862,
+          "countReadRequests": 0,
+          "countReadBytes": 0,
+          "maxInFlight": 10
+        },
+        "queryAnnotationIo": {
+          "reference": {
+            "gets": 135,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 128677549,
+            "readRequestedBytes": 128677549,
+            "readTransferredBytes": 128677549,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 8
+          },
+          "query": {
+            "gets": 519,
+            "sets": 203,
+            "deletes": 12,
+            "deleteDirs": 19,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 23527500,
+            "transferredBytes": 441024825,
+            "readRequestedBytes": 417497325,
+            "readTransferredBytes": 417497325,
+            "writeTransferredBytes": 23527500,
+            "countReadRequests": 4,
+            "countReadBytes": 326645772,
+            "maxInFlight": 10
+          }
+        },
+        "evaluation": {
+          "studies": {
+            "Lee_2020": {
+              "accuracy": 0.9547758552552449,
+              "macroF1": 0.9139081046119315,
+              "perType": {
+                "B cells": {
+                  "support": 6393,
+                  "precision": 0.9959605752140895,
+                  "recall": 0.9641795714062256,
+                  "f1": 0.9798124304562073
+                },
+                "Dendritic cells": {
+                  "support": 650,
+                  "precision": 0.9133986928104575,
+                  "recall": 0.86,
+                  "f1": 0.8858954041204438
+                },
+                "Erythroid": {
+                  "support": 1193,
+                  "precision": 0.9126691266912669,
+                  "recall": 0.6219614417435038,
+                  "f1": 0.7397806580259222
+                },
+                "Monocytes": {
+                  "support": 21088,
+                  "precision": 0.9873077286024347,
+                  "recall": 0.9922704855842185,
+                  "f1": 0.9897828863346104
+                },
+                "NK and ILC": {
+                  "support": 9369,
+                  "precision": 0.9392735527809307,
+                  "recall": 0.883231935105134,
+                  "f1": 0.9103911106221464
+                },
+                "Platelets": {
+                  "support": 3716,
+                  "precision": 0.9391212281630492,
+                  "recall": 0.9547900968783638,
+                  "f1": 0.9468908460101414
+                },
+                "T cells": {
+                  "support": 15790,
+                  "precision": 0.9187410244135951,
+                  "recall": 0.9723875870804306,
+                  "f1": 0.9448033967140483
+                }
+              },
+              "assignmentCoverage": 1.0,
+              "rareTypes": {
+                "Platelets": {
+                  "support": 3716,
+                  "precision": 0.9391212281630492,
+                  "recall": 0.9547900968783638,
+                  "f1": 0.9468908460101414
+                },
+                "Erythroid": {
+                  "support": 1193,
+                  "precision": 0.9126691266912669,
+                  "recall": 0.6219614417435038,
+                  "f1": 0.7397806580259222
+                }
+              },
+              "donorBootstrap95CI": {
+                "estimable": true,
+                "accuracy": [
+                  0.9427680533473892,
+                  0.9649229534939049
+                ],
+                "macroF1": [
+                  0.8841883199151291,
+                  0.9269355302533316
+                ],
+                "donors": 17,
+                "resamples": 1000
+              },
+              "coverageCurve": [
+                {
+                  "requestedCoverage": 0.5,
+                  "actualCoverage": 0.5000085912129074,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9828178694158075,
+                  "macroF1AllCells": 0.5404999807379893
+                },
+                {
+                  "requestedCoverage": 0.75,
+                  "actualCoverage": 0.7500128868193612,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9832760595647193,
+                  "macroF1AllCells": 0.7055452633194053
+                },
+                {
+                  "requestedCoverage": 0.9,
+                  "actualCoverage": 0.9000154641832334,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.975811378388698,
+                  "macroF1AllCells": 0.8472656546900549
+                },
+                {
+                  "requestedCoverage": 1.0,
+                  "actualCoverage": 1.0,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9547758552552449,
+                  "macroF1AllCells": 0.9139081046119315
+                }
+              ],
+              "donorConfusionMatrices": [
+                {
+                  "donor": "Flu 1",
+                  "cells": 4768,
+                  "confusion": [
+                    [
+                      27,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      7,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      95,
+                      0,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      2866,
+                      1,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      231,
+                      0,
+                      0,
+                      0,
+                      275,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      3,
+                      0,
+                      4,
+                      0,
+                      0,
+                      5,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      2,
+                      0,
+                      5,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1225,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "Flu 2",
+                  "cells": 1322,
+                  "confusion": [
+                    [
+                      237,
+                      0,
+                      0,
+                      0,
+                      1,
+                      2,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      8,
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      2,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      621,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      164,
+                      0,
+                      0,
+                      0,
+                      29,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      31,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      6,
+                      0,
+                      0,
+                      0,
+                      211,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "Flu 3",
+                  "cells": 2573,
+                  "confusion": [
+                    [
+                      19,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      2,
+                      0,
+                      0,
+                      10,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      4,
+                      0,
+                      6,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1652,
+                      0,
+                      2,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      349,
+                      0,
+                      0,
+                      0,
+                      11,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      54,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      1,
+                      450,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "Flu 4",
+                  "cells": 1026,
+                  "confusion": [
+                    [
+                      152,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      2,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      443,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      199,
+                      0,
+                      0,
+                      0,
+                      13,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      20,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      9,
+                      0,
+                      0,
+                      0,
+                      181,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "Flu 5",
+                  "cells": 614,
+                  "confusion": [
+                    [
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      163,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      25,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      1,
+                      0,
+                      62,
+                      4,
+                      7,
+                      0,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      156,
+                      0,
+                      0,
+                      0,
+                      22,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      45,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0,
+                      9,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      103,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "Normal 1",
+                  "cells": 4253,
+                  "confusion": [
+                    [
+                      758,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      27,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      8,
+                      0,
+                      0,
+                      582,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      715,
+                      0,
+                      0,
+                      0,
+                      281,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      18,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      15,
+                      2,
+                      0,
+                      0,
+                      1834,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "Normal 2",
+                  "cells": 4589,
+                  "confusion": [
+                    [
+                      381,
+                      0,
+                      0,
+                      0,
+                      1,
+                      3,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      107,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      2,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      8,
+                      0,
+                      0,
+                      1589,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      986,
+                      0,
+                      0,
+                      0,
+                      31,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      6,
+                      1,
+                      0,
+                      45,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      59,
+                      0,
+                      0,
+                      1,
+                      1361,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "Normal 3",
+                  "cells": 4408,
+                  "confusion": [
+                    [
+                      398,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      1,
+                      1,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      117,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      7,
+                      2,
+                      13,
+                      0,
+                      53,
+                      5,
+                      1,
+                      0,
+                      0,
+                      58,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      15,
+                      0,
+                      0,
+                      1587,
+                      2,
+                      0,
+                      0,
+                      0,
+                      10,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      667,
+                      0,
+                      0,
+                      0,
+                      39,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      2,
+                      1,
+                      0,
+                      121,
+                      0,
+                      14,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      7,
+                      28,
+                      0,
+                      0,
+                      0,
+                      1250,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "Normal 4",
+                  "cells": 4031,
+                  "confusion": [
+                    [
+                      267,
+                      0,
+                      0,
+                      0,
+                      0,
+                      70,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      54,
+                      0,
+                      0,
+                      12,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      11,
+                      0,
+                      16,
+                      1,
+                      3,
+                      0,
+                      0,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1587,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1183,
+                      0,
+                      0,
+                      0,
+                      13,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      6,
+                      5,
+                      0,
+                      31,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      152,
+                      0,
+                      0,
+                      1,
+                      611,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "nCoV 1",
+                  "cells": 4360,
+                  "confusion": [
+                    [
+                      652,
+                      0,
+                      7,
+                      0,
+                      0,
+                      28,
+                      5,
+                      8,
+                      0,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      5,
+                      0,
+                      0,
+                      11,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      164,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      1,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      2,
+                      0,
+                      1592,
+                      0,
+                      0,
+                      22,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      2,
+                      0,
+                      0,
+                      249,
+                      0,
+                      2,
+                      0,
+                      43,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0,
+                      790,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      3,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      8,
+                      0,
+                      734,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "nCoV 11",
+                  "cells": 4368,
+                  "confusion": [
+                    [
+                      601,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      1,
+                      6,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      49,
+                      0,
+                      0,
+                      12,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      4,
+                      0,
+                      1,
+                      0,
+                      23,
+                      0,
+                      0,
+                      4,
+                      0,
+                      9,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      1,
+                      0,
+                      0,
+                      1879,
+                      0,
+                      0,
+                      4,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      379,
+                      0,
+                      0,
+                      0,
+                      54,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      442,
+                      0,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      10,
+                      0,
+                      3,
+                      1,
+                      873,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "nCoV 2",
+                  "cells": 4887,
+                  "confusion": [
+                    [
+                      425,
+                      0,
+                      1,
+                      0,
+                      0,
+                      8,
+                      1,
+                      2,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      23,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      7,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      3,
+                      0,
+                      0,
+                      720,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      833,
+                      0,
+                      0,
+                      0,
+                      56,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      169,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      7,
+                      2,
+                      1,
+                      4,
+                      2607,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "nCoV 3_4",
+                  "cells": 1087,
+                  "confusion": [
+                    [
+                      173,
+                      0,
+                      0,
+                      0,
+                      0,
+                      6,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      516,
+                      2,
+                      4,
+                      0,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      132,
+                      0,
+                      0,
+                      1,
+                      17,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      71,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      6,
+                      0,
+                      0,
+                      0,
+                      148,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "nCoV 5",
+                  "cells": 3892,
+                  "confusion": [
+                    [
+                      470,
+                      0,
+                      0,
+                      0,
+                      2,
+                      4,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      69,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      2,
+                      0,
+                      12,
+                      0,
+                      2,
+                      0,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      13,
+                      0,
+                      0,
+                      1189,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      548,
+                      0,
+                      0,
+                      0,
+                      66,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      166,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      15,
+                      1,
+                      0,
+                      0,
+                      1322,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "nCoV 6",
+                  "cells": 4275,
+                  "confusion": [
+                    [
+                      563,
+                      0,
+                      0,
+                      0,
+                      0,
+                      8,
+                      0,
+                      3,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      42,
+                      0,
+                      0,
+                      6,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      10,
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1068,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      852,
+                      0,
+                      1,
+                      0,
+                      94,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      287,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      32,
+                      5,
+                      2,
+                      1,
+                      1292,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "nCoV 7_8",
+                  "cells": 3252,
+                  "confusion": [
+                    [
+                      263,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      6,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      5,
+                      0,
+                      0,
+                      6,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      265,
+                      0,
+                      0,
+                      0,
+                      2,
+                      119,
+                      1,
+                      18,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      2,
+                      0,
+                      0,
+                      0,
+                      800,
+                      1,
+                      7,
+                      9,
+                      0,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      161,
+                      0,
+                      1,
+                      0,
+                      27,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1014,
+                      1,
+                      23,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      9,
+                      4,
+                      0,
+                      497,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "nCoV 9_10",
+                  "cells": 4494,
+                  "confusion": [
+                    [
+                      777,
+                      0,
+                      0,
+                      0,
+                      0,
+                      11,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      42,
+                      0,
+                      0,
+                      11,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      7,
+                      0,
+                      11,
+                      0,
+                      4,
+                      2,
+                      0,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      1,
+                      0,
+                      2172,
+                      0,
+                      1,
+                      0,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      471,
+                      0,
+                      0,
+                      0,
+                      14,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      0,
+                      279,
+                      0,
+                      8,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      11,
+                      0,
+                      0,
+                      0,
+                      655,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              ]
+            },
+            "Wilk_2020": {
+              "accuracy": 0.870038684287024,
+              "macroF1": 0.7453935742560474,
+              "perType": {
+                "B cells": {
+                  "support": 5022,
+                  "precision": 0.9722936303913168,
+                  "recall": 0.6778176025487853,
+                  "f1": 0.7987797723806171
+                },
+                "Dendritic cells": {
+                  "support": 690,
+                  "precision": 0.7058125741399762,
+                  "recall": 0.8623188405797102,
+                  "f1": 0.776255707762557
+                },
+                "Erythroid": {
+                  "support": 1437,
+                  "precision": 0.9874326750448833,
+                  "recall": 0.7654836464857342,
+                  "f1": 0.8624068992551941
+                },
+                "Granulocytes": {
+                  "support": 831,
+                  "precision": 1.0,
+                  "recall": 0.006016847172081829,
+                  "f1": 0.011961722488038277
+                },
+                "Monocytes": {
+                  "support": 11687,
+                  "precision": 0.9233379109782697,
+                  "recall": 0.9780097544279969,
+                  "f1": 0.949887808526552
+                },
+                "NK and ILC": {
+                  "support": 6857,
+                  "precision": 0.8346545866364666,
+                  "recall": 0.8598512469009771,
+                  "f1": 0.847065584368939
+                },
+                "Plasma cells": {
+                  "support": 2063,
+                  "precision": 0.6381297332894303,
+                  "recall": 0.9394086282113427,
+                  "f1": 0.76
+                },
+                "Platelets": {
+                  "support": 527,
+                  "precision": 0.8350515463917526,
+                  "recall": 0.7685009487666035,
+                  "f1": 0.8003952569169961
+                },
+                "T cells": {
+                  "support": 15607,
+                  "precision": 0.8978658536585366,
+                  "recall": 0.9057474210290254,
+                  "f1": 0.9017894166055309
+                }
+              },
+              "assignmentCoverage": 1.0,
+              "rareTypes": {
+                "Platelets": {
+                  "support": 527,
+                  "precision": 0.8350515463917526,
+                  "recall": 0.7685009487666035,
+                  "f1": 0.8003952569169961
+                },
+                "Plasma cells": {
+                  "support": 2063,
+                  "precision": 0.6381297332894303,
+                  "recall": 0.9394086282113427,
+                  "f1": 0.76
+                },
+                "Erythroid": {
+                  "support": 1437,
+                  "precision": 0.9874326750448833,
+                  "recall": 0.7654836464857342,
+                  "f1": 0.8624068992551941
+                },
+                "Granulocytes": {
+                  "support": 831,
+                  "precision": 1.0,
+                  "recall": 0.006016847172081829,
+                  "f1": 0.011961722488038277
+                }
+              },
+              "donorBootstrap95CI": {
+                "estimable": true,
+                "accuracy": [
+                  0.8257590405706702,
+                  0.9001662875833654
+                ],
+                "macroF1": [
+                  0.6848075832280716,
+                  0.7805028457723655
+                ],
+                "donors": 13,
+                "resamples": 1000
+              },
+              "coverageCurve": [
+                {
+                  "requestedCoverage": 0.5,
+                  "actualCoverage": 0.5000111804297758,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9432494074504718,
+                  "macroF1AllCells": 0.5090930876275698
+                },
+                {
+                  "requestedCoverage": 0.75,
+                  "actualCoverage": 0.7500055902148879,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9298172386035002,
+                  "macroF1AllCells": 0.6638960878573678
+                },
+                {
+                  "requestedCoverage": 0.9,
+                  "actualCoverage": 0.9000022360859552,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.9039230788342567,
+                  "macroF1AllCells": 0.7257338346832605
+                },
+                {
+                  "requestedCoverage": 1.0,
+                  "actualCoverage": 1.0,
+                  "requestedCoverageAchieved": true,
+                  "accuracyAssigned": 0.870038684287024,
+                  "macroF1AllCells": 0.7453935742560474
+                }
+              ],
+              "donorConfusionMatrices": [
+                {
+                  "donor": "C1",
+                  "cells": 8362,
+                  "confusion": [
+                    [
+                      436,
+                      4,
+                      0,
+                      0,
+                      26,
+                      21,
+                      81,
+                      0,
+                      4,
+                      34,
+                      0
+                    ],
+                    [
+                      0,
+                      51,
+                      0,
+                      0,
+                      13,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      2,
+                      1,
+                      15,
+                      0,
+                      26,
+                      2,
+                      0,
+                      0,
+                      0,
+                      10,
+                      0
+                    ],
+                    [
+                      0,
+                      2,
+                      0,
+                      1,
+                      137,
+                      7,
+                      0,
+                      0,
+                      28,
+                      41,
+                      0
+                    ],
+                    [
+                      6,
+                      16,
+                      0,
+                      0,
+                      3438,
+                      1,
+                      9,
+                      0,
+                      4,
+                      22,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      442,
+                      0,
+                      1,
+                      1,
+                      296,
+                      0
+                    ],
+                    [
+                      2,
+                      0,
+                      0,
+                      0,
+                      23,
+                      1,
+                      607,
+                      2,
+                      2,
+                      8,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      23,
+                      2,
+                      0,
+                      62,
+                      1,
+                      11,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      21,
+                      1,
+                      0,
+                      69,
+                      171,
+                      5,
+                      2,
+                      22,
+                      2145,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "C2",
+                  "cells": 1735,
+                  "confusion": [
+                    [
+                      336,
+                      0,
+                      0,
+                      0,
+                      1,
+                      17,
+                      49,
+                      0,
+                      2,
+                      14,
+                      0
+                    ],
+                    [
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      9,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      9,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      217,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      232,
+                      0,
+                      0,
+                      0,
+                      39,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      72,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      15,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      2,
+                      0,
+                      0,
+                      0,
+                      38,
+                      1,
+                      0,
+                      8,
+                      657,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "C3",
+                  "cells": 6545,
+                  "confusion": [
+                    [
+                      425,
+                      0,
+                      0,
+                      0,
+                      9,
+                      18,
+                      63,
+                      0,
+                      2,
+                      35,
+                      0
+                    ],
+                    [
+                      1,
+                      25,
+                      0,
+                      0,
+                      5,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      109,
+                      0,
+                      3,
+                      1,
+                      0,
+                      0,
+                      4,
+                      12,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      28,
+                      1,
+                      0,
+                      0,
+                      63,
+                      5,
+                      0
+                    ],
+                    [
+                      2,
+                      4,
+                      0,
+                      0,
+                      1103,
+                      0,
+                      1,
+                      0,
+                      2,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      271,
+                      0,
+                      0,
+                      0,
+                      56,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      0,
+                      0,
+                      7,
+                      0,
+                      298,
+                      3,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      2,
+                      0,
+                      113,
+                      0,
+                      11,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      4,
+                      29,
+                      1,
+                      0,
+                      25,
+                      171,
+                      5,
+                      4,
+                      33,
+                      3573,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "C4",
+                  "cells": 3688,
+                  "confusion": [
+                    [
+                      196,
+                      5,
+                      1,
+                      0,
+                      42,
+                      17,
+                      749,
+                      3,
+                      6,
+                      57,
+                      0
+                    ],
+                    [
+                      0,
+                      48,
+                      0,
+                      0,
+                      10,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      5,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      2,
+                      1,
+                      0,
+                      1,
+                      11,
+                      0,
+                      1,
+                      0,
+                      78,
+                      6,
+                      0
+                    ],
+                    [
+                      5,
+                      4,
+                      0,
+                      0,
+                      719,
+                      0,
+                      5,
+                      0,
+                      4,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      87,
+                      0,
+                      0,
+                      1,
+                      15,
+                      0
+                    ],
+                    [
+                      10,
+                      1,
+                      2,
+                      0,
+                      11,
+                      0,
+                      703,
+                      1,
+                      1,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      34,
+                      0,
+                      10,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      24,
+                      7,
+                      1,
+                      0,
+                      12,
+                      60,
+                      22,
+                      2,
+                      7,
+                      682,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "C5",
+                  "cells": 2507,
+                  "confusion": [
+                    [
+                      14,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      64,
+                      7,
+                      0,
+                      11,
+                      0
+                    ],
+                    [
+                      0,
+                      42,
+                      0,
+                      0,
+                      18,
+                      0,
+                      0,
+                      2,
+                      0,
+                      5,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      10,
+                      1,
+                      0,
+                      1,
+                      1,
+                      9,
+                      0
+                    ],
+                    [
+                      2,
+                      6,
+                      0,
+                      0,
+                      432,
+                      1,
+                      2,
+                      13,
+                      1,
+                      18,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      434,
+                      0,
+                      5,
+                      0,
+                      77,
+                      0
+                    ],
+                    [
+                      7,
+                      1,
+                      0,
+                      0,
+                      4,
+                      5,
+                      116,
+                      5,
+                      0,
+                      8,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      77,
+                      0,
+                      15,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      13,
+                      0,
+                      0,
+                      17,
+                      53,
+                      3,
+                      14,
+                      19,
+                      965,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "C6",
+                  "cells": 1893,
+                  "confusion": [
+                    [
+                      14,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      8,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      2,
+                      1,
+                      894,
+                      0,
+                      61,
+                      7,
+                      4,
+                      0,
+                      3,
+                      54,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      1,
+                      0,
+                      73,
+                      1,
+                      0,
+                      0,
+                      15,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      282,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      51,
+                      0,
+                      0,
+                      0,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      34,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      4,
+                      2,
+                      0,
+                      1,
+                      14,
+                      0,
+                      1,
+                      19,
+                      324,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "C7",
+                  "cells": 3364,
+                  "confusion": [
+                    [
+                      224,
+                      6,
+                      0,
+                      0,
+                      3,
+                      5,
+                      3,
+                      1,
+                      9,
+                      9,
+                      0
+                    ],
+                    [
+                      0,
+                      92,
+                      0,
+                      0,
+                      13,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      19,
+                      0,
+                      7,
+                      2,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      2,
+                      2,
+                      0,
+                      1,
+                      78,
+                      2,
+                      0,
+                      2,
+                      32,
+                      9,
+                      0
+                    ],
+                    [
+                      0,
+                      16,
+                      0,
+                      0,
+                      2357,
+                      0,
+                      0,
+                      1,
+                      2,
+                      8,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      115,
+                      1,
+                      0,
+                      3,
+                      11,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      27,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      20,
+                      1,
+                      0,
+                      48,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      6,
+                      0,
+                      0,
+                      0,
+                      10,
+                      1,
+                      0,
+                      6,
+                      204,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "H1",
+                  "cells": 2100,
+                  "confusion": [
+                    [
+                      157,
+                      1,
+                      0,
+                      0,
+                      4,
+                      7,
+                      2,
+                      0,
+                      1,
+                      13,
+                      0
+                    ],
+                    [
+                      0,
+                      55,
+                      0,
+                      0,
+                      6,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      3,
+                      3,
+                      0,
+                      21,
+                      1,
+                      0,
+                      1,
+                      0,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      1,
+                      30,
+                      5,
+                      0,
+                      0,
+                      16,
+                      2,
+                      0
+                    ],
+                    [
+                      1,
+                      8,
+                      0,
+                      0,
+                      794,
+                      2,
+                      0,
+                      1,
+                      3,
+                      20,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      1,
+                      0,
+                      0,
+                      416,
+                      0,
+                      1,
+                      3,
+                      22,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      6,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      5,
+                      0,
+                      0,
+                      13,
+                      39,
+                      0,
+                      1,
+                      9,
+                      411,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "H2",
+                  "cells": 1941,
+                  "confusion": [
+                    [
+                      273,
+                      0,
+                      0,
+                      0,
+                      1,
+                      11,
+                      1,
+                      1,
+                      0,
+                      9,
+                      0
+                    ],
+                    [
+                      0,
+                      60,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      12,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      13,
+                      0,
+                      0,
+                      1,
+                      5,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      11,
+                      0,
+                      0,
+                      390,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      206,
+                      0,
+                      0,
+                      0,
+                      15,
+                      0
+                    ],
+                    [
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      26,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      23,
+                      0,
+                      0,
+                      4,
+                      867,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "H3",
+                  "cells": 2306,
+                  "confusion": [
+                    [
+                      273,
+                      1,
+                      0,
+                      0,
+                      0,
+                      7,
+                      2,
+                      0,
+                      0,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      30,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      3,
+                      0,
+                      5,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      1,
+                      11,
+                      0,
+                      0,
+                      0,
+                      7,
+                      6,
+                      0
+                    ],
+                    [
+                      0,
+                      8,
+                      0,
+                      0,
+                      238,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      202,
+                      0,
+                      0,
+                      0,
+                      59,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      9,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      8,
+                      0,
+                      2,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      8,
+                      1,
+                      0,
+                      1,
+                      41,
+                      0,
+                      0,
+                      8,
+                      1358,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "H4",
+                  "cells": 5136,
+                  "confusion": [
+                    [
+                      461,
+                      1,
+                      0,
+                      0,
+                      1,
+                      53,
+                      8,
+                      0,
+                      2,
+                      21,
+                      0
+                    ],
+                    [
+                      0,
+                      62,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      2,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      9,
+                      2,
+                      0
+                    ],
+                    [
+                      1,
+                      3,
+                      0,
+                      0,
+                      354,
+                      2,
+                      0,
+                      0,
+                      1,
+                      7,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      2745,
+                      1,
+                      1,
+                      10,
+                      214,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      38,
+                      0,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      9,
+                      0,
+                      0,
+                      0,
+                      192,
+                      0,
+                      0,
+                      18,
+                      904,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "H5",
+                  "cells": 3146,
+                  "confusion": [
+                    [
+                      431,
+                      1,
+                      0,
+                      0,
+                      7,
+                      25,
+                      4,
+                      0,
+                      0,
+                      19,
+                      0
+                    ],
+                    [
+                      0,
+                      73,
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      2,
+                      0,
+                      5,
+                      0,
+                      2,
+                      2,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      1,
+                      0,
+                      0,
+                      20,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      4,
+                      0,
+                      0,
+                      834,
+                      0,
+                      0,
+                      0,
+                      2,
+                      7,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      565,
+                      0,
+                      0,
+                      2,
+                      26,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      24,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      10,
+                      0,
+                      1,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      10,
+                      1,
+                      0,
+                      0,
+                      75,
+                      0,
+                      0,
+                      12,
+                      965,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "donor": "H6",
+                  "cells": 1998,
+                  "confusion": [
+                    [
+                      164,
+                      0,
+                      0,
+                      0,
+                      1,
+                      4,
+                      3,
+                      0,
+                      2,
+                      16,
+                      0
+                    ],
+                    [
+                      0,
+                      46,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      2,
+                      1,
+                      22,
+                      0,
+                      2,
+                      8,
+                      2,
+                      0,
+                      2,
+                      59,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      10,
+                      7,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0,
+                      0,
+                      272,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      130,
+                      0,
+                      0,
+                      2,
+                      83,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      5,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      5,
+                      10,
+                      0,
+                      0,
+                      4,
+                      29,
+                      0,
+                      1,
+                      14,
+                      1081,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  ]
+                }
+              ]
+            }
+          },
+          "labelOrder": [
+            "B cells",
+            "Dendritic cells",
+            "Erythroid",
+            "Granulocytes",
+            "Monocytes",
+            "NK and ILC",
+            "Plasma cells",
+            "Platelets",
+            "Progenitors",
+            "T cells",
+            "unassigned"
+          ],
+          "rareTypeRule": "Reference frequency below 1% with at least 20 reference cells",
+          "bootstrapUnit": "Donor within each query study; all donor cells retained together",
+          "coverageRule": "Descending confidence; ties use a fixed seeded cell permutation; unassigned cells remain unassigned"
+        },
+        "pipeline": {
+          "run": {
+            "runId": "3b7bffb2daba9bf9d860a4cb9f89a000962d85fd249ea3ecdb91562e087d41ea",
+            "recipe": "basic_rna_analysis",
+            "requestedLabel": null,
+            "label": null,
+            "assay": "RNA",
+            "startedAtNs": 1793171482763253756,
+            "finishedAtNs": 1793171886048947351,
+            "status": "completed",
+            "complete": true,
+            "config": {
+              "cellKey": "I",
+              "filtering": {
+                "enabled": false
+              },
+              "harmonyBatchColumns": [
+                "study"
+              ],
+              "hvgCount": 2000,
+              "pcaDims": 30,
+              "neighborsK": 30,
+              "umap": false,
+              "tsne": false,
+              "leiden": {
+                "partitions": [],
+                "selected": null
+              },
+              "cellCycle": false,
+              "paris": false,
+              "doublets": false,
+              "doubletSampleColumns": [],
+              "markers": false,
+              "snapshotColumns": [],
+              "membershipStrength": false,
+              "species": null,
+              "params": {
+                "ann_index": {
+                  "ann_parallel": false
+                }
+              },
+              "shutdown": {
+                "signalGuardAvailable": true,
+                "unavailableReason": null
+              }
+            },
+            "stageOrder": [
+              "input_snapshot",
+              "filtering",
+              "cell_cycle",
+              "highly_variable_features",
+              "normalization",
+              "pca",
+              "harmony",
+              "ann_index",
+              "neighbors",
+              "connectivity",
+              "embedding_initialization",
+              "umap",
+              "paris",
+              "cluster_selection",
+              "membership_strength",
+              "tsne",
+              "doublets",
+              "markers"
+            ],
+            "outputs": [
+              {
+                "key": "input_cell_selection",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "cell_selection",
+                  "artifact_id": "a149b2a0d0c1ba9bfc7db10ad639f79e16bb28ee90d0c1016a51e77234995101"
+                }
+              },
+              {
+                "key": "analysis_cell_selection",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "cell_selection",
+                  "artifact_id": "a149b2a0d0c1ba9bfc7db10ad639f79e16bb28ee90d0c1016a51e77234995101"
+                }
+              },
+              {
+                "key": "feature_universe",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "ee73289270fed96e225133eaf3a7502d9a70426c5b74a186dc37fbb54d700e2e",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "highly_variable_features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "e54e7040f5b8fd954853b26a13eb421a764c9b0a4d810fa0662a7a520baf6408",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "normalized",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "normalized",
+                  "artifact_id": "e6f8121f2992bc601c5d70be868d971327dad2e3a669f51e9880c6e8935d121f",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "pca",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "reduction",
+                  "artifact_id": "9259ee48845ec67b17f3b4ed1eb29d53be582470b6a8d22c789ecfc54cb17138",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "harmony",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "batch_correction",
+                  "artifact_id": "f4da2a9d0f41b0f5cc7e34afe8a8ced4f57ab624588267c30f77995695c0ce5a",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "ann_index",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "ann_index",
+                  "artifact_id": "91bb7b698fe49b28cca4d2e84fcea884fe6aebdbeac56b5be3a298408c9de798",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "neighbors",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "neighbors",
+                  "artifact_id": "56760b80a2b3c6193a62d7f1d277ca298885979a78ea0f19ee44f5ae3a212acc",
+                  "assay": "RNA"
+                }
+              },
+              {
+                "key": "connectivity_map",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "connectivity_map",
+                  "artifact_id": "e8736a455280e30239af869b2b2d0d6bf87ab924b7f7b7785d397a6af43fff79",
+                  "assay": "RNA"
+                }
+              }
+            ],
+            "fields": [
+              {
+                "key": "I",
+                "axis": "cells",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "cell_selection",
+                  "artifact_id": "a149b2a0d0c1ba9bfc7db10ad639f79e16bb28ee90d0c1016a51e77234995101"
+                },
+                "sourceValue": "values",
+                "valueIndex": null,
+                "dtype": "|b1",
+                "fill": false,
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "ids",
+                "axis": "cells",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "97aa4622ec3666a5900f1336b02e680ba4e807e6cfc29d4303378990466d05c6"
+                },
+                "sourceValue": "ids",
+                "valueIndex": null,
+                "dtype": "<U66",
+                "fill": "",
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "names",
+                "axis": "cells",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "97aa4622ec3666a5900f1336b02e680ba4e807e6cfc29d4303378990466d05c6"
+                },
+                "sourceValue": "names",
+                "valueIndex": null,
+                "dtype": "<U66",
+                "fill": "",
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "I",
+                "axis": "features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "ee73289270fed96e225133eaf3a7502d9a70426c5b74a186dc37fbb54d700e2e",
+                  "assay": "RNA"
+                },
+                "sourceValue": "values",
+                "valueIndex": null,
+                "dtype": "|b1",
+                "fill": false,
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "ids",
+                "axis": "features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "48c80fd39cabb22f4da871e884182216c7012b706c0f2fb7665d885d4e9086dc",
+                  "assay": "RNA"
+                },
+                "sourceValue": "ids",
+                "valueIndex": null,
+                "dtype": "<U15",
+                "fill": "",
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "names",
+                "axis": "features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "48c80fd39cabb22f4da871e884182216c7012b706c0f2fb7665d885d4e9086dc",
+                  "assay": "RNA"
+                },
+                "sourceValue": "names",
+                "valueIndex": null,
+                "dtype": "<U15",
+                "fill": "",
+                "missingMask": null,
+                "display": null
+              },
+              {
+                "key": "highly_variable_features",
+                "axis": "features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "e54e7040f5b8fd954853b26a13eb421a764c9b0a4d810fa0662a7a520baf6408",
+                  "assay": "RNA"
+                },
+                "sourceValue": "values",
+                "valueIndex": null,
+                "dtype": "|b1",
+                "fill": false,
+                "missingMask": null,
+                "display": null
+              }
+            ],
+            "error": null,
+            "interruption": null
+          },
+          "stages": [
+            {
+              "stage": "input_snapshot",
+              "ordinal": 0,
+              "startedAtNs": 1793171482790602086,
+              "finishedAtNs": 1793171484574072351,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "input_cell_selection",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "datastore",
+                    "kind": "cell_selection",
+                    "artifact_id": "a149b2a0d0c1ba9bfc7db10ad639f79e16bb28ee90d0c1016a51e77234995101"
+                  },
+                  "reused": false
+                },
+                {
+                  "outputKey": "cell_snapshot",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "datastore",
+                    "kind": "metadata_snapshot",
+                    "artifact_id": "97aa4622ec3666a5900f1336b02e680ba4e807e6cfc29d4303378990466d05c6"
+                  },
+                  "reused": false
+                },
+                {
+                  "outputKey": "feature_snapshot",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "metadata_snapshot",
+                    "artifact_id": "48c80fd39cabb22f4da871e884182216c7012b706c0f2fb7665d885d4e9086dc",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                },
+                {
+                  "outputKey": "feature_universe",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_selection",
+                    "artifact_id": "ee73289270fed96e225133eaf3a7502d9a70426c5b74a186dc37fbb54d700e2e",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "snapshot_pipeline_input_selection",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "datastore",
+                    "kind": "cell_selection",
+                    "artifact_id": "a149b2a0d0c1ba9bfc7db10ad639f79e16bb28ee90d0c1016a51e77234995101"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "snapshot_run_metadata",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "datastore",
+                    "kind": "metadata_snapshot",
+                    "artifact_id": "97aa4622ec3666a5900f1336b02e680ba4e807e6cfc29d4303378990466d05c6"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "snapshot_run_metadata",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "metadata_snapshot",
+                    "artifact_id": "48c80fd39cabb22f4da871e884182216c7012b706c0f2fb7665d885d4e9086dc",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "create_all_features",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_selection",
+                    "artifact_id": "ee73289270fed96e225133eaf3a7502d9a70426c5b74a186dc37fbb54d700e2e",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 1.7795566450000138,
+                "rssBaselineBytes": 2222809088,
+                "rssPeakBytes": 2350485504,
+                "rssIncrementalPeakBytes": 127676416,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 18,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "filtering",
+              "ordinal": 1,
+              "startedAtNs": 1793171484583077190,
+              "finishedAtNs": 1793171484602735330,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.02138033900001801,
+                "rssBaselineBytes": 2350469120,
+                "rssPeakBytes": 2350469120,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "cell_cycle",
+              "ordinal": 2,
+              "startedAtNs": 1793171484611631060,
+              "finishedAtNs": 1793171484630872609,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.021336759999996957,
+                "rssBaselineBytes": 2350469120,
+                "rssPeakBytes": 2350469120,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "highly_variable_features",
+              "ordinal": 3,
+              "startedAtNs": 1793171484641819739,
+              "finishedAtNs": 1793171489322561518,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "highly_variable_features",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_selection",
+                    "artifact_id": "e54e7040f5b8fd954853b26a13eb421a764c9b0a4d810fa0662a7a520baf6408",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "summarize_rna_features",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_summary",
+                    "artifact_id": "36c0d9c28fb8a5bf0eaed0e7a29f9ced54ea5416ff7780b456c03272b0bf420c",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "select_hvgs",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_selection",
+                    "artifact_id": "e54e7040f5b8fd954853b26a13eb421a764c9b0a4d810fa0662a7a520baf6408",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 4.6841162990000385,
+                "rssBaselineBytes": 2350469120,
+                "rssPeakBytes": 8370114560,
+                "rssIncrementalPeakBytes": 6019645440,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 18,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "normalization",
+              "ordinal": 4,
+              "startedAtNs": 1793171489332437867,
+              "finishedAtNs": 1793171499476999528,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "normalized",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "normalized",
+                    "artifact_id": "e6f8121f2992bc601c5d70be868d971327dad2e3a669f51e9880c6e8935d121f",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "run_normalization",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "normalized",
+                    "artifact_id": "e6f8121f2992bc601c5d70be868d971327dad2e3a669f51e9880c6e8935d121f",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 10.146293587999992,
+                "rssBaselineBytes": 2521313280,
+                "rssPeakBytes": 4673765376,
+                "rssIncrementalPeakBytes": 2152452096,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 91,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "pca",
+              "ordinal": 5,
+              "startedAtNs": 1793171499487574038,
+              "finishedAtNs": 1793171518325963833,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "pca",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "reduction",
+                    "artifact_id": "9259ee48845ec67b17f3b4ed1eb29d53be582470b6a8d22c789ecfc54cb17138",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "calculate_feature_scaling",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "feature_scaling",
+                    "artifact_id": "3ffeb5642f405a184db7fce87f12276db956f1d2fa05356df45ace14ad18cf71",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                },
+                {
+                  "operation": "run_pca",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "reduction",
+                    "artifact_id": "9259ee48845ec67b17f3b4ed1eb29d53be582470b6a8d22c789ecfc54cb17138",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 18.841211117,
+                "rssBaselineBytes": 3091922944,
+                "rssPeakBytes": 5765312512,
+                "rssIncrementalPeakBytes": 2673389568,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 148,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "harmony",
+              "ordinal": 6,
+              "startedAtNs": 1793171518337859203,
+              "finishedAtNs": 1793171750189592767,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "harmony",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "batch_correction",
+                    "artifact_id": "f4da2a9d0f41b0f5cc7e34afe8a8ced4f57ab624588267c30f77995695c0ce5a",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "run_harmony",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "batch_correction",
+                    "artifact_id": "f4da2a9d0f41b0f5cc7e34afe8a8ced4f57ab624588267c30f77995695c0ce5a",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 231.856276868,
+                "rssBaselineBytes": 3137748992,
+                "rssPeakBytes": 4007481344,
+                "rssIncrementalPeakBytes": 869732352,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2190,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "ann_index",
+              "ordinal": 7,
+              "startedAtNs": 1793171750200205796,
+              "finishedAtNs": 1793171851252078046,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "ann_index",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "ann_index",
+                    "artifact_id": "91bb7b698fe49b28cca4d2e84fcea884fe6aebdbeac56b5be3a298408c9de798",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "build_ann_index",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "ann_index",
+                    "artifact_id": "91bb7b698fe49b28cca4d2e84fcea884fe6aebdbeac56b5be3a298408c9de798",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 101.05540777499994,
+                "rssBaselineBytes": 3887964160,
+                "rssPeakBytes": 4127629312,
+                "rssIncrementalPeakBytes": 239665152,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 963,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "neighbors",
+              "ordinal": 8,
+              "startedAtNs": 1793171851269406106,
+              "finishedAtNs": 1793171864371547537,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "neighbors",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "neighbors",
+                    "artifact_id": "56760b80a2b3c6193a62d7f1d277ca298885979a78ea0f19ee44f5ae3a212acc",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "query_neighbors",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "neighbors",
+                    "artifact_id": "56760b80a2b3c6193a62d7f1d277ca298885979a78ea0f19ee44f5ae3a212acc",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 13.106818500000031,
+                "rssBaselineBytes": 4089438208,
+                "rssPeakBytes": 4671094784,
+                "rssIncrementalPeakBytes": 581656576,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 96,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "connectivity",
+              "ordinal": 9,
+              "startedAtNs": 1793171864384621977,
+              "finishedAtNs": 1793171885735473367,
+              "status": "completed",
+              "complete": true,
+              "outputs": [
+                {
+                  "outputKey": "connectivity_map",
+                  "artifact": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "connectivity_map",
+                    "artifact_id": "e8736a455280e30239af869b2b2d0d6bf87ab924b7f7b7785d397a6af43fff79",
+                    "assay": "RNA"
+                  },
+                  "reused": false
+                }
+              ],
+              "plans": [
+                {
+                  "operation": "build_connectivity_map",
+                  "ref": {
+                    "type": "artifact",
+                    "scope": "assay",
+                    "kind": "connectivity_map",
+                    "artifact_id": "e8736a455280e30239af869b2b2d0d6bf87ab924b7f7b7785d397a6af43fff79",
+                    "assay": "RNA"
+                  },
+                  "disposition": "created"
+                }
+              ],
+              "metrics": {
+                "wallSeconds": 21.355787074999967,
+                "rssBaselineBytes": 4200075264,
+                "rssPeakBytes": 4354183168,
+                "rssIncrementalPeakBytes": 154107904,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 165,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "embedding_initialization",
+              "ordinal": 10,
+              "startedAtNs": 1793171885749857377,
+              "finishedAtNs": 1793171885775416446,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.032819509000091784,
+                "rssBaselineBytes": 3749093376,
+                "rssPeakBytes": 3749093376,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "umap",
+              "ordinal": 11,
+              "startedAtNs": 1793171885788908646,
+              "finishedAtNs": 1793171885808454425,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.026510669000003872,
+                "rssBaselineBytes": 3749093376,
+                "rssPeakBytes": 3749093376,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "paris",
+              "ordinal": 12,
+              "startedAtNs": 1793171885822242155,
+              "finishedAtNs": 1793171885840546905,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.025540629000033732,
+                "rssBaselineBytes": 3749093376,
+                "rssPeakBytes": 3749093376,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "cluster_selection",
+              "ordinal": 13,
+              "startedAtNs": 1793171885854053644,
+              "finishedAtNs": 1793171885872271494,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.025752148999913516,
+                "rssBaselineBytes": 3749093376,
+                "rssPeakBytes": 3749093376,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "membership_strength",
+              "ordinal": 14,
+              "startedAtNs": 1793171885886126274,
+              "finishedAtNs": 1793171885904690453,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.026796478999926876,
+                "rssBaselineBytes": 3749093376,
+                "rssPeakBytes": 3749093376,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "tsne",
+              "ordinal": 15,
+              "startedAtNs": 1793171885919090653,
+              "finishedAtNs": 1793171885939942903,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.028873209000039424,
+                "rssBaselineBytes": 3749093376,
+                "rssPeakBytes": 3749093376,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "doublets",
+              "ordinal": 16,
+              "startedAtNs": 1793171885954447062,
+              "finishedAtNs": 1793171885974705972,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.029255678999902557,
+                "rssBaselineBytes": 3749093376,
+                "rssPeakBytes": 3749093376,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            },
+            {
+              "stage": "markers",
+              "ordinal": 17,
+              "startedAtNs": 1793171885990178702,
+              "finishedAtNs": 1793171886010410261,
+              "status": "skipped",
+              "complete": true,
+              "outputs": [],
+              "plans": [],
+              "metrics": {
+                "wallSeconds": 0.029341468999973586,
+                "rssBaselineBytes": 3749093376,
+                "rssPeakBytes": 3749093376,
+                "rssIncrementalPeakBytes": 0,
+                "sampleIntervalSeconds": 0.1,
+                "sampleCount": 2,
+                "samplingErrorCount": 0,
+                "rssUnavailableReason": null
+              },
+              "error": null,
+              "interruption": null
+            }
+          ],
+          "summary": {
+            "createdArtifacts": [
+              {
+                "type": "artifact",
+                "scope": "datastore",
+                "kind": "cell_selection",
+                "artifact_id": "a149b2a0d0c1ba9bfc7db10ad639f79e16bb28ee90d0c1016a51e77234995101"
+              },
+              {
+                "type": "artifact",
+                "scope": "datastore",
+                "kind": "metadata_snapshot",
+                "artifact_id": "97aa4622ec3666a5900f1336b02e680ba4e807e6cfc29d4303378990466d05c6"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "metadata_snapshot",
+                "artifact_id": "48c80fd39cabb22f4da871e884182216c7012b706c0f2fb7665d885d4e9086dc",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_selection",
+                "artifact_id": "ee73289270fed96e225133eaf3a7502d9a70426c5b74a186dc37fbb54d700e2e",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_summary",
+                "artifact_id": "36c0d9c28fb8a5bf0eaed0e7a29f9ced54ea5416ff7780b456c03272b0bf420c",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_selection",
+                "artifact_id": "e54e7040f5b8fd954853b26a13eb421a764c9b0a4d810fa0662a7a520baf6408",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "normalized",
+                "artifact_id": "e6f8121f2992bc601c5d70be868d971327dad2e3a669f51e9880c6e8935d121f",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_scaling",
+                "artifact_id": "3ffeb5642f405a184db7fce87f12276db956f1d2fa05356df45ace14ad18cf71",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "reduction",
+                "artifact_id": "9259ee48845ec67b17f3b4ed1eb29d53be582470b6a8d22c789ecfc54cb17138",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "batch_correction",
+                "artifact_id": "f4da2a9d0f41b0f5cc7e34afe8a8ced4f57ab624588267c30f77995695c0ce5a",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "ann_index",
+                "artifact_id": "91bb7b698fe49b28cca4d2e84fcea884fe6aebdbeac56b5be3a298408c9de798",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "neighbors",
+                "artifact_id": "56760b80a2b3c6193a62d7f1d277ca298885979a78ea0f19ee44f5ae3a212acc",
+                "assay": "RNA"
+              },
+              {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "connectivity_map",
+                "artifact_id": "e8736a455280e30239af869b2b2d0d6bf87ab924b7f7b7785d397a6af43fff79",
+                "assay": "RNA"
+              }
+            ],
+            "reusedArtifacts": [],
+            "uncleanIncomplete": false,
+            "signalProtection": {
+              "signalGuardAvailable": true,
+              "unavailableReason": null
+            }
+          }
+        }
+      }
+    },
+    "steps": {
+      "convert_reference": {
+        "rssBeforeBytes": 499822592,
+        "seconds": 50.764730705999966,
+        "rssAfterBytes": 2189320192,
+        "peakRssBytes": 13663633408,
+        "peakCgroupBytes": 12673196032,
+        "peakAnonBytes": 0
+      },
+      "integrated_reference": {
+        "rssBeforeBytes": 2222776320,
+        "seconds": 403.358695414,
+        "rssAfterBytes": 3749093376,
+        "peakRssBytes": 8348831744,
+        "peakCgroupBytes": 6912651264,
+        "peakAnonBytes": 0
+      },
+      "integrated_registration": {
+        "rssBeforeBytes": 3749093376,
+        "seconds": 2.816047831999981,
+        "rssAfterBytes": 3753181184,
+        "peakRssBytes": 3753181184,
+        "peakCgroupBytes": 3660025856,
+        "peakAnonBytes": 0
+      },
+      "convert_query": {
+        "rssBeforeBytes": 3753181184,
+        "seconds": 20.01941748899992,
+        "rssAfterBytes": 3998597120,
+        "peakRssBytes": 10934173696,
+        "peakCgroupBytes": 10549198848,
+        "peakAnonBytes": 0
+      },
+      "snapshot_query_cells": {
+        "rssBeforeBytes": 3998597120,
+        "seconds": 0.04857792799998606,
+        "rssAfterBytes": 3998597120
+      },
+      "integrated_projection_correction_neighbors": {
+        "rssBeforeBytes": 3996499968,
+        "seconds": 14.626245555999958,
+        "rssAfterBytes": 4360687616,
+        "peakRssBytes": 6157570048,
+        "peakCgroupBytes": 6079021056,
+        "peakAnonBytes": 0
+      },
+      "integrated_label_voting": {
+        "rssBeforeBytes": 4360687616,
+        "seconds": 1.7292497269999103,
+        "rssAfterBytes": 4369006592,
+        "peakRssBytes": 4448763904,
+        "peakCgroupBytes": 4347543552,
+        "peakAnonBytes": 0
+      }
+    },
+    "peakProcessTreeRssBytes": 13663633408,
+    "peakContainerBytes": 12673196032,
+    "memoryDefinition": "Sampled container memory.current and process-tree RSS, using the same Sampler as external mapping comparators"
+  },
+  "elapsedSeconds": 710.100729227066
+}

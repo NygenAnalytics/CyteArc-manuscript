@@ -1,0 +1,192 @@
+{
+  "eligibleDatasets": [
+    "pbmc_1k_v2",
+    "pbmc_10k_v3"
+  ],
+  "datasets": {
+    "pbmc_1k_v2": {
+      "status": "completed",
+      "result": {
+        "status": "ok",
+        "experiment": "droplet_qc",
+        "dataset": "pbmc_1k_v2",
+        "settings": {
+          "lower": 100,
+          "retain": 10000,
+          "iterations": 10000,
+          "seed": 0,
+          "fdr": 0.001,
+          "cellCallJaccardTarget": 0.98,
+          "ambientMaxAbsoluteError": 1e-10,
+          "rhoMaxAbsoluteError": 1e-06,
+          "correctedCountMaxAbsoluteError": 1.000001,
+          "soupMaximumContamination": 1.0,
+          "soupFdr": 0.05
+        },
+        "inputs": {
+          "raw": {
+            "url": "https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_1k_v2/pbmc_1k_v2_raw_feature_bc_matrix.h5",
+            "sha256": "fd258b397faf0e38eed00f8f06f6068cd380963d15e90e25a67c5cd9e19e4f71"
+          },
+          "filtered": {
+            "url": "https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_1k_v2/pbmc_1k_v2_filtered_feature_bc_matrix.h5",
+            "sha256": "344673d4eca5af4b4f8343ef85c039fa5b24fea75a7d714a54427548b7b60213"
+          }
+        },
+        "rawBarcodes": 737280,
+        "genes": 33538,
+        "emptydrops": {
+          "reference": {
+            "processSeconds": 23.690685111,
+            "package": "DropletUtils",
+            "version": "1.32.1",
+            "seconds": 8.66,
+            "alpha": 937.359257123604,
+            "retain": 10000,
+            "R": "R version 4.6.1 (2026-06-24)"
+          },
+          "nativeSeconds": 2.7844868970000007,
+          "nativeAlpha": 937.359257123604,
+          "nativeAmbientDroplets": 141133,
+          "testedBarcodes": 1191,
+          "nativeCells": 1042,
+          "referenceCells": 1042,
+          "cellCallAgreement": 1.0,
+          "cellCallJaccard": 1.0,
+          "ambientMaxAbsoluteError": 1.0061396160665481e-16,
+          "logProbabilityMaxAbsoluteDifference": 1.6279955161735415e-10,
+          "pValueMeanAbsoluteDifference": 0.00028831576301829425,
+          "meetsTargets": true,
+          "comparisonKind": "Implementation agreement with independent Monte Carlo streams and shared model precision fitted by DropletUtils to the ambient droplets"
+        },
+        "soupx": {
+          "reference": {
+            "processSeconds": 49.585438976999995,
+            "package": "SoupX",
+            "version": "1.6.2",
+            "rho": 0.0380130597330676,
+            "method": "subtraction",
+            "roundToInt": false,
+            "ambientDroplets": 141133,
+            "profileBoundaryCheck": {
+              "constructorRangeProfile": [
+                1,
+                0
+              ],
+              "explicitRangeProfile": [
+                0.5,
+                0.5
+              ]
+            },
+            "R": "R version 4.6.1 (2026-06-24)"
+          },
+          "ambientDroplets": 141133,
+          "ambientCountsIdentical": true,
+          "ambientDropletsIdentical": true,
+          "filteredCells": 996,
+          "ambientProfileMaxAbsoluteError": 9.901476340223869e-17,
+          "nonExpressingCellMatrixAgreement": 1.0,
+          "nativeRho": 0.038013059733027606,
+          "nativeRhoOnReferenceCells": 0.038013059733027606,
+          "rhoMaxAbsoluteError": 3.9995784462121264e-14,
+          "correctedCountMaxAbsoluteError": 0.9998025375116046,
+          "correctedCellTotalMaxAbsoluteError": 0.9920709827329119,
+          "meetsTargets": true,
+          "comparisonKind": "Ambient profile and global Poisson fit; native integer correction compared with SoupX continuous subtraction on matching rho, without cluster expansion"
+        }
+      }
+    },
+    "pbmc_10k_v3": {
+      "status": "completed",
+      "result": {
+        "status": "ok",
+        "experiment": "droplet_qc",
+        "dataset": "pbmc_10k_v3",
+        "settings": {
+          "lower": 100,
+          "retain": 10000,
+          "iterations": 10000,
+          "seed": 0,
+          "fdr": 0.001,
+          "cellCallJaccardTarget": 0.98,
+          "ambientMaxAbsoluteError": 1e-10,
+          "rhoMaxAbsoluteError": 1e-06,
+          "correctedCountMaxAbsoluteError": 1.000001,
+          "soupMaximumContamination": 1.0,
+          "soupFdr": 0.05
+        },
+        "inputs": {
+          "raw": {
+            "url": "https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_10k_v3/pbmc_10k_v3_raw_feature_bc_matrix.h5",
+            "sha256": "aa61d225aa24c0ea1c7c36658cd0a51c9ffc49e94d71ac4d1a1985c27129d2bc"
+          },
+          "filtered": {
+            "url": "https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_10k_v3/pbmc_10k_v3_filtered_feature_bc_matrix.h5",
+            "sha256": "ebc5dedc938830e20f8e1aafb893b0a9e0bf88584f3ef2d00b232dd277a188af"
+          }
+        },
+        "rawBarcodes": 6794880,
+        "genes": 33538,
+        "emptydrops": {
+          "reference": {
+            "processSeconds": 72.446788602,
+            "package": "DropletUtils",
+            "version": "1.32.1",
+            "seconds": 41.189,
+            "alpha": 7032.29282368177,
+            "retain": 10000,
+            "R": "R version 4.6.1 (2026-06-24)"
+          },
+          "nativeSeconds": 4.571742587999992,
+          "nativeAlpha": 7032.29282368177,
+          "nativeAmbientDroplets": 1088029,
+          "testedBarcodes": 17781,
+          "nativeCells": 6819,
+          "referenceCells": 6756,
+          "cellCallAgreement": 0.9933074630223272,
+          "cellCallJaccard": 0.9826201256024536,
+          "ambientMaxAbsoluteError": 9.939423416260862e-17,
+          "logProbabilityMaxAbsoluteDifference": 3.2014213502407074e-10,
+          "pValueMeanAbsoluteDifference": 0.002224343635996188,
+          "meetsTargets": true,
+          "comparisonKind": "Implementation agreement with independent Monte Carlo streams and shared model precision fitted by DropletUtils to the ambient droplets"
+        },
+        "soupx": {
+          "reference": {
+            "processSeconds": 6023.171940278,
+            "package": "SoupX",
+            "version": "1.6.2",
+            "rho": 0.0528809862862468,
+            "method": "subtraction",
+            "roundToInt": false,
+            "ambientDroplets": 1088029,
+            "profileBoundaryCheck": {
+              "constructorRangeProfile": [
+                1,
+                0
+              ],
+              "explicitRangeProfile": [
+                0.5,
+                0.5
+              ]
+            },
+            "R": "R version 4.6.1 (2026-06-24)"
+          },
+          "ambientDroplets": 1088029,
+          "ambientCountsIdentical": true,
+          "ambientDropletsIdentical": true,
+          "filteredCells": 11769,
+          "ambientProfileMaxAbsoluteError": 9.947554932554503e-17,
+          "nonExpressingCellMatrixAgreement": 1.0,
+          "nativeRho": 0.052880986286246774,
+          "nativeRhoOnReferenceCells": 0.052880986286246774,
+          "rhoMaxAbsoluteError": 2.7755575615628914e-17,
+          "correctedCountMaxAbsoluteError": 0.9998614397721535,
+          "correctedCellTotalMaxAbsoluteError": 0.9826807256031316,
+          "meetsTargets": true,
+          "comparisonKind": "Ambient profile and global Poisson fit; native integer correction compared with SoupX continuous subtraction on matching rho, without cluster expansion"
+        }
+      }
+    }
+  }
+}

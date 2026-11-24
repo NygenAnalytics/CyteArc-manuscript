@@ -1,0 +1,355 @@
+{
+  "status": "ok",
+  "experiment": "lsi",
+  "settings": {
+    "dataset": "swanson_7K_pbmc_teaseq",
+    "cells": 400,
+    "cellSeed": 4467,
+    "features": 25000,
+    "dimensions": 30,
+    "skipFirst": true,
+    "seed": 4466,
+    "iterations": 20,
+    "oversamples": 100,
+    "batchSizes": [
+      64,
+      400
+    ],
+    "maxSubspaceAngleDegrees": 0.05,
+    "maxProjectionAbsoluteError": 1e-06
+  },
+  "cellIdsSha256": "703667f1ec2ff9fd7a24240e5f6093390641500790fcb4ab88d2115f084a7b3f",
+  "normalizedSha256": "1d20786fe7ec32571d884d4ad20d70d18f559ed6672641fda2d06484ac02160b",
+  "shape": [
+    400,
+    25000
+  ],
+  "singularValues": [
+    0.2807863810372948,
+    0.07707710414272509,
+    0.0667014267290574,
+    0.06491227911110026,
+    0.0642361232887076,
+    0.06341502887174795,
+    0.06277690996197159,
+    0.06223521904595173,
+    0.0617441066922122,
+    0.061467383174890554,
+    0.05995111678538496,
+    0.05911672398811281,
+    0.05897941227436032,
+    0.05847279584261684,
+    0.05814301556751296,
+    0.057502865152033164,
+    0.056906633559245634,
+    0.05563693588161802,
+    0.055146397699462495,
+    0.05502193987891398,
+    0.0549142791776571,
+    0.05451270658144892,
+    0.053898244171088905,
+    0.05378287425754751,
+    0.053685285539950695,
+    0.05335852178884178,
+    0.05305974404217088,
+    0.052826053321553657,
+    0.05264667782203395,
+    0.052429421906059606,
+    0.052141910565256924,
+    0.05204368797407183
+  ],
+  "results": [
+    {
+      "batchSize": 64,
+      "maxSubspaceAngleDegrees": 0.001903873155785156,
+      "medianSubspaceAngleDegrees": 9.28417622930615e-06,
+      "maxProjectionAbsoluteError": 2.6540132036512176e-09,
+      "seconds": 18.0286727680068,
+      "parameters": {
+        "dims": 30,
+        "skip_first": true,
+        "rand_state": 4466,
+        "solver": "streaming",
+        "n_iter": 20,
+        "n_oversamples": 100
+      },
+      "executionOptions": {
+        "batch_size": 64,
+        "invalidate_cache": true,
+        "local_cache": "auto"
+      },
+      "meetsTolerance": true
+    },
+    {
+      "batchSize": 400,
+      "maxSubspaceAngleDegrees": 0.0019038731557771242,
+      "medianSubspaceAngleDegrees": 9.284176229182148e-06,
+      "maxProjectionAbsoluteError": 2.654013092628915e-09,
+      "seconds": 11.518795768002747,
+      "parameters": {
+        "dims": 30,
+        "skip_first": true,
+        "rand_state": 4466,
+        "solver": "streaming",
+        "n_iter": 20,
+        "n_oversamples": 100
+      },
+      "executionOptions": {
+        "batch_size": 400,
+        "invalidate_cache": true,
+        "local_cache": "auto"
+      },
+      "meetsTolerance": true
+    }
+  ],
+  "reference": "Dense float64 uncentered SVD of the same normalized ATAC matrix, first component omitted",
+  "fullSelectionMeasurements": [
+    {
+      "status": "ok",
+      "experiment": "lsi",
+      "settings": {
+        "dataset": "swanson_7K_pbmc_teaseq",
+        "cells": 6194,
+        "cellSeed": 4467,
+        "features": 25000,
+        "dimensions": 30,
+        "skipFirst": true,
+        "seed": 4466,
+        "batchSizes": [
+          null
+        ],
+        "maxSubspaceAngleDegrees": 0.05,
+        "maxProjectionAbsoluteError": 1e-06,
+        "cellSelection": "active",
+        "configurations": [
+          {
+            "iterations": 5,
+            "oversamples": 10
+          },
+          {
+            "iterations": 20,
+            "oversamples": 100
+          }
+        ]
+      },
+      "workers": 8,
+      "memoryBudget": "24G",
+      "inputHashes": {
+        "sourceArchive": "085564b0bea8105f1aa29e0291a05273fe300acb809ab96bd3f92caf96032293",
+        "selectedRows": "940a9279ce789f5465274e9787bea9519c15c7694c86eac2fc3152d230f463ed",
+        "cellsFile": "c8a52f971ead850283ce453a14b666f75d423d056b6bd52703332047ee5e9be0",
+        "featuresFile": "fea3c6965574f6aa205985385ff009a7276772df172afc74be3dc147c1c4fb30"
+      },
+      "cellIdsSha256": "448052a14b3602ca205a90f8674ee89911a03b5a2fcb9ea5891566dc674f804d",
+      "normalizedSha256": "3f35bfd3c7bcac4930e1749895499e02794945b761285920a1706cae03f1b964",
+      "normalization": {
+        "normalization_method": {
+          "external_hook": true,
+          "identity": "cytearc.assay.norm_tf_idf:selected-cell-df:total-count-tf"
+        },
+        "size_factor": null,
+        "log_transform": false,
+        "renormalize_subset": false
+      },
+      "shape": [
+        6194,
+        25000
+      ],
+      "results": [
+        {
+          "iterations": 5,
+          "oversamples": 10,
+          "batchSize": null,
+          "maxSubspaceAngleDegrees": 88.4304009168643,
+          "medianSubspaceAngleDegrees": 43.7598299617419,
+          "maxProjectionAbsoluteError": 8.303824121369541e-10,
+          "seconds": 13.60755736099999,
+          "parameters": {
+            "dims": 30,
+            "skip_first": true,
+            "rand_state": 4466,
+            "solver": "streaming",
+            "n_iter": 5,
+            "n_oversamples": 10
+          },
+          "executionOptions": {
+            "batch_size": 1342,
+            "invalidate_cache": true,
+            "local_cache": "auto"
+          },
+          "meetsTolerance": false
+        },
+        {
+          "iterations": 20,
+          "oversamples": 100,
+          "batchSize": null,
+          "maxSubspaceAngleDegrees": 5.5981500906577075,
+          "medianSubspaceAngleDegrees": 1.0666971390484974,
+          "maxProjectionAbsoluteError": 7.935245620316334e-10,
+          "seconds": 69.89968023600001,
+          "parameters": {
+            "dims": 30,
+            "skip_first": true,
+            "rand_state": 4466,
+            "solver": "streaming",
+            "n_iter": 20,
+            "n_oversamples": 100
+          },
+          "executionOptions": {
+            "batch_size": 1342,
+            "invalidate_cache": true,
+            "local_cache": "auto"
+          },
+          "meetsTolerance": false
+        }
+      ],
+      "reference": "One dense float64 uncentered SVD of the same normalized ATAC matrix, first component omitted",
+      "performanceClaim": false,
+      "denseSvdSeconds": 50.446833103,
+      "singularValues": [
+        1.108685372448394,
+        0.2510040571862127,
+        0.199112693444347,
+        0.1701393024345054,
+        0.1129294689040199,
+        0.10265259749175007,
+        0.08592555584400548,
+        0.07825454608241142,
+        0.07329670084685364,
+        0.07222882946560556,
+        0.07085524241189475,
+        0.06992864382748064,
+        0.06969066731987388,
+        0.06943932775079718,
+        0.06939630036704922,
+        0.06932088893002528,
+        0.06927337428067061,
+        0.06915408649789519,
+        0.06900945963098605,
+        0.06884322521342111,
+        0.06878104685840143,
+        0.06860799512386465,
+        0.06858194787713863,
+        0.06853960712479992,
+        0.06840498438022209,
+        0.06837504853146546,
+        0.06825415048588672,
+        0.06820429675256613,
+        0.0681311836795459,
+        0.06802087972753557,
+        0.06795606177714608,
+        0.06792954693267522
+      ]
+    },
+    {
+      "status": "ok",
+      "experiment": "lsi",
+      "settings": {
+        "dataset": "swanson_7K_pbmc_teaseq",
+        "cells": 6194,
+        "cellSeed": 4467,
+        "features": 25000,
+        "dimensions": 30,
+        "skipFirst": true,
+        "seed": 4466,
+        "batchSizes": [
+          null
+        ],
+        "maxSubspaceAngleDegrees": 0.05,
+        "maxProjectionAbsoluteError": 1e-06,
+        "cellSelection": "active",
+        "configurations": [
+          {
+            "iterations": 80,
+            "oversamples": 100
+          }
+        ]
+      },
+      "workers": 8,
+      "memoryBudget": "24G",
+      "inputHashes": {
+        "sourceArchive": "085564b0bea8105f1aa29e0291a05273fe300acb809ab96bd3f92caf96032293",
+        "selectedRows": "940a9279ce789f5465274e9787bea9519c15c7694c86eac2fc3152d230f463ed",
+        "cellsFile": "c8a52f971ead850283ce453a14b666f75d423d056b6bd52703332047ee5e9be0",
+        "featuresFile": "fea3c6965574f6aa205985385ff009a7276772df172afc74be3dc147c1c4fb30"
+      },
+      "cellIdsSha256": "448052a14b3602ca205a90f8674ee89911a03b5a2fcb9ea5891566dc674f804d",
+      "normalizedSha256": "3f35bfd3c7bcac4930e1749895499e02794945b761285920a1706cae03f1b964",
+      "normalization": {
+        "normalization_method": {
+          "external_hook": true,
+          "identity": "cytearc.assay.norm_tf_idf:selected-cell-df:total-count-tf"
+        },
+        "size_factor": null,
+        "log_transform": false,
+        "renormalize_subset": false
+      },
+      "shape": [
+        6194,
+        25000
+      ],
+      "results": [
+        {
+          "iterations": 80,
+          "oversamples": 100,
+          "batchSize": null,
+          "maxSubspaceAngleDegrees": 0.000934835021262951,
+          "medianSubspaceAngleDegrees": 1.665655510273963e-05,
+          "maxProjectionAbsoluteError": 8.179664758023453e-10,
+          "seconds": 241.15703232699997,
+          "parameters": {
+            "dims": 30,
+            "skip_first": true,
+            "rand_state": 4466,
+            "solver": "streaming",
+            "n_iter": 80,
+            "n_oversamples": 100
+          },
+          "executionOptions": {
+            "batch_size": 1342,
+            "invalidate_cache": true,
+            "local_cache": "auto"
+          },
+          "meetsTolerance": true
+        }
+      ],
+      "reference": "One dense float64 uncentered SVD of the same normalized ATAC matrix, first component omitted",
+      "performanceClaim": false,
+      "denseSvdSeconds": 46.436948634000004,
+      "singularValues": [
+        1.108685372448394,
+        0.2510040571862127,
+        0.199112693444347,
+        0.1701393024345054,
+        0.1129294689040199,
+        0.10265259749175007,
+        0.08592555584400548,
+        0.07825454608241142,
+        0.07329670084685364,
+        0.07222882946560556,
+        0.07085524241189475,
+        0.06992864382748064,
+        0.06969066731987388,
+        0.06943932775079718,
+        0.06939630036704922,
+        0.06932088893002528,
+        0.06927337428067061,
+        0.06915408649789519,
+        0.06900945963098605,
+        0.06884322521342111,
+        0.06878104685840143,
+        0.06860799512386465,
+        0.06858194787713863,
+        0.06853960712479992,
+        0.06840498438022209,
+        0.06837504853146546,
+        0.06825415048588672,
+        0.06820429675256613,
+        0.0681311836795459,
+        0.06802087972753557,
+        0.06795606177714608,
+        0.06792954693267522
+      ]
+    }
+  ]
+}

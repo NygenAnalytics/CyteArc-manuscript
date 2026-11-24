@@ -1,0 +1,4654 @@
+{
+  "module": "catalogue.catalogue_screen",
+  "function": "run",
+  "region": "us-east",
+  "status": "completed",
+  "result": {
+    "settings": {
+      "storeConcurrency": 4,
+      "nthreads": 8,
+      "memBudget": "3G",
+      "storeAttempts": 2,
+      "retryDelaySeconds": 60,
+      "quotaReserve": 200,
+      "maxFailedStores": 0,
+      "requireToken": true,
+      "storeIds": [
+        "gong_2025_all_cells_ff4235bb",
+        "gong_2025_human_immune_health_atlas_e522d2cd",
+        "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+        "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+        "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+        "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+        "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+        "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+        "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+        "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+        "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+        "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+        "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+        "wells_2025_immune_aging_project_all_cells_1b350d0a",
+        "yoshida_2022_pbmc_2a498ace"
+      ]
+    },
+    "authenticated": true,
+    "sourceStorageOptions": {
+      "token": "HF_TOKEN",
+      "block_size": 1
+    },
+    "release": {
+      "version": "2610",
+      "catalogueSha256": "faeed3858e03423dd6f645e4cc795be3d113be48359eb66ab65480209f928920",
+      "bucketBytes": 1090887979503,
+      "eligibleStores": 15,
+      "eligibleCells": 24400813,
+      "eligiblePrimaryCells": 22718809,
+      "eligibleCollections": 8
+    },
+    "selection": {
+      "organism": "Homo sapiens",
+      "tissues": [
+        "blood",
+        "venous blood",
+        "umbilical cord blood"
+      ],
+      "cells": "is_primary_data and a blood tissue label"
+    },
+    "panel": {
+      "interferon": {
+        "ISG15": "ENSG00000187608",
+        "IFIT1": "ENSG00000185745",
+        "IFIT2": "ENSG00000119922",
+        "IFIT3": "ENSG00000119917",
+        "MX1": "ENSG00000157601",
+        "OAS1": "ENSG00000089127"
+      },
+      "lineage": {
+        "CD3E": "ENSG00000198851",
+        "MS4A1": "ENSG00000156738",
+        "CD14": "ENSG00000170458",
+        "NKG7": "ENSG00000105374"
+      }
+    },
+    "scoreDefinition": "Mean over ISG15, IFIT1, IFIT2, IFIT3, MX1 and OAS1 of log2(CPM + 1) in a donor-by-coarse-type pseudobulk of at least 20 cells; the library is the sum of the stored RNA_nCounts",
+    "cellTypeMap": "blood_cell_type (experiments/reuse/blood_cohort_analysis.py), with mast cells as Granulocytes and malignant cells unassigned",
+    "wallSeconds": 284.85466680599995,
+    "traffic": {
+      "requestsByKind": {
+        "api": 55,
+        "status200": 3459,
+        "resolvers": 6913,
+        "status302": 6913,
+        "cdn": 6908,
+        "status206": 3504
+      },
+      "unattributedRequestsByKind": {
+        "api": 11,
+        "status200": 11,
+        "resolvers": 5,
+        "status302": 5
+      },
+      "quotaWaits": {
+        "resolvers": {
+          "waits": 28,
+          "seconds": 4494.766678056999
+        }
+      },
+      "quotaPolicies": [
+        "\"fixed window\";\"api\";q=1000;w=300",
+        "\"fixed window\";\"api\";q=500;w=300",
+        "\"fixed window\";\"resolvers\";q=5000;w=300"
+      ]
+    },
+    "totals": {
+      "storesEligible": 15,
+      "storesScreened": 15,
+      "storesFailed": 0,
+      "storesWithoutSelectedCells": 0,
+      "cellsInScreenedStores": 24400813,
+      "primaryBloodCellsRead": 21526691,
+      "cellsWithoutDonor": 0,
+      "cellsWithoutCoarseType": 137960,
+      "studyScopedDonors": 957,
+      "donorsWithScore": 956,
+      "responseBytes": 3805816949,
+      "httpRequests": 13860,
+      "storeCountBytes": 129566698398,
+      "storeBytes": 132560253728,
+      "responseShareOfStoreCountBytes": 0.029373419220032754,
+      "responseShareOfRelease": 0.0034887330509718335,
+      "storeSecondsSum": 1106.005146745
+    },
+    "stores": [
+      {
+        "listingSeconds": 0.39323212399999985,
+        "openSeconds": 7.5733758909999995,
+        "listedObjects": 2528,
+        "storeBytes": 23994523347,
+        "countBytes": 23646343333,
+        "countsByGeneBytes": 9182430133,
+        "storeId": "gong_2025_all_cells_ff4235bb",
+        "metadataSeconds": 18.003195685999998,
+        "cells": 3758514,
+        "primaryCells": 3758514,
+        "selectedCells": 3758514,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 129,
+          "bandsTouched": 8,
+          "bandGeneTotal": 1032,
+          "genes": 18063,
+          "cellChunksPerBand": 14,
+          "shardFilesTouched": 98,
+          "uncompressedBandBytes": 7757572896
+        },
+        "panelSeconds": 18.617284070999997,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 42426,
+        "donors": 234,
+        "groups": 2105,
+        "seconds": 44.83285748,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 518678807,
+          "readMB": 518.679,
+          "requests": 1146,
+          "raw": {
+            "gets": 1034,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 112,
+            "partialGets": 0,
+            "requestedBytes": 494545182,
+            "transferredBytes": 518678807,
+            "readRequestedBytes": 518678807,
+            "readTransferredBytes": 518678807,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 224,
+            "countReadBytes": 494545182,
+            "maxInFlight": 30
+          },
+          "http": {
+            "requests": 1278,
+            "gets": 1278,
+            "rangedGets": 448,
+            "responseBytes": 519173503
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 417,
+            "302": 637,
+            "206": 224
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 4,
+            "status200": 417,
+            "resolvers": 637,
+            "status302": 637,
+            "cdn": 637,
+            "status206": 224
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "60a2676d-9f37-46cc-9b02-c7370a53be9c",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x gene expression flex"
+        ],
+        "catalogueCells": 3758514,
+        "cataloguePrimaryCells": 3758514
+      },
+      {
+        "listingSeconds": 0.400624054000005,
+        "openSeconds": 4.329422192999999,
+        "listedObjects": 2301,
+        "storeBytes": 13833124226,
+        "countBytes": 13502331530,
+        "countsByGeneBytes": 4947399588,
+        "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+        "metadataSeconds": 11.409889039,
+        "cells": 2616824,
+        "primaryCells": 2616824,
+        "selectedCells": 2616824,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 190,
+          "bandsTouched": 8,
+          "bandGeneTotal": 1520,
+          "genes": 32357,
+          "cellChunksPerBand": 17,
+          "shardFilesTouched": 85,
+          "uncompressedBandBytes": 7955144960
+        },
+        "panelSeconds": 17.981367223999996,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 17786,
+        "donors": 18,
+        "groups": 479,
+        "seconds": 34.222979278000004,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 249495753,
+          "readMB": 249.496,
+          "requests": 1197,
+          "raw": {
+            "gets": 1061,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 136,
+            "partialGets": 0,
+            "requestedBytes": 243461001,
+            "transferredBytes": 249495753,
+            "readRequestedBytes": 249495753,
+            "readTransferredBytes": 249495753,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 272,
+            "countReadBytes": 243461001,
+            "maxInFlight": 24
+          },
+          "http": {
+            "requests": 1198,
+            "gets": 1198,
+            "rangedGets": 544,
+            "responseBytes": 249869708
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 329,
+            "302": 597,
+            "206": 272
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 4,
+            "status200": 329,
+            "resolvers": 597,
+            "status302": 597,
+            "cdn": 597,
+            "status206": 272
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3"
+        ],
+        "catalogueCells": 2616824,
+        "cataloguePrimaryCells": 2616824
+      },
+      {
+        "listingSeconds": 0.39882162600000015,
+        "openSeconds": 6.070702633,
+        "listedObjects": 2236,
+        "storeBytes": 13721135449,
+        "countBytes": 13393393537,
+        "countsByGeneBytes": 4904233707,
+        "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+        "metadataSeconds": 15.071101272,
+        "cells": 2596111,
+        "primaryCells": 2596111,
+        "selectedCells": 2596111,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 190,
+          "bandsTouched": 8,
+          "bandGeneTotal": 1520,
+          "genes": 32357,
+          "cellChunksPerBand": 17,
+          "shardFilesTouched": 85,
+          "uncompressedBandBytes": 7892177440
+        },
+        "panelSeconds": 17.457532098999998,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 14857,
+        "donors": 17,
+        "groups": 449,
+        "seconds": 39.131192286,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 247755347,
+          "readMB": 247.755,
+          "requests": 1188,
+          "raw": {
+            "gets": 1052,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 136,
+            "partialGets": 0,
+            "requestedBytes": 241736332,
+            "transferredBytes": 247755347,
+            "readRequestedBytes": 247755347,
+            "readTransferredBytes": 247755347,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 272,
+            "countReadBytes": 241736332,
+            "maxInFlight": 30
+          },
+          "http": {
+            "requests": 1180,
+            "gets": 1180,
+            "rangedGets": 544,
+            "responseBytes": 248118678
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 320,
+            "302": 588,
+            "206": 272
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 4,
+            "status200": 320,
+            "resolvers": 588,
+            "status302": 588,
+            "cdn": 588,
+            "status206": 272
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3"
+        ],
+        "catalogueCells": 2596111,
+        "cataloguePrimaryCells": 2596111
+      },
+      {
+        "listingSeconds": 0.2171583109999995,
+        "openSeconds": 6.181799429000001,
+        "listedObjects": 1506,
+        "storeBytes": 9947729721,
+        "countBytes": 9731146078,
+        "countsByGeneBytes": 3625732449,
+        "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+        "metadataSeconds": 10.324598284,
+        "cells": 1821725,
+        "primaryCells": 263917,
+        "selectedCells": 263917,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 269,
+          "bandsTouched": 8,
+          "bandGeneTotal": 2152,
+          "genes": 32357,
+          "cellChunksPerBand": 12,
+          "shardFilesTouched": 60,
+          "uncompressedBandBytes": 7840704400
+        },
+        "panelSeconds": 4.8569026550000025,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 1792,
+        "donors": 16,
+        "groups": 157,
+        "seconds": 21.628350613000002,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 45368947,
+          "readMB": 45.369,
+          "requests": 811,
+          "raw": {
+            "gets": 795,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 16,
+            "partialGets": 0,
+            "requestedBytes": 34221323,
+            "transferredBytes": 45368947,
+            "readRequestedBytes": 45368947,
+            "readTransferredBytes": 45368947,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 32,
+            "countReadBytes": 34221323,
+            "maxInFlight": 29
+          },
+          "http": {
+            "requests": 539,
+            "gets": 539,
+            "rangedGets": 64,
+            "responseBytes": 45397979
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 239,
+            "302": 268,
+            "206": 32
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 239,
+            "resolvers": 268,
+            "status302": 268,
+            "cdn": 268,
+            "status206": 32
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "77f9d7e9-5675-49c3-abed-ce02f39eef1b",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3"
+        ],
+        "catalogueCells": 1821725,
+        "cataloguePrimaryCells": 263917
+      },
+      {
+        "listingSeconds": 0.770694326000001,
+        "openSeconds": 4.423231652999998,
+        "listedObjects": 1599,
+        "storeBytes": 9500713758,
+        "countBytes": 9279726092,
+        "countsByGeneBytes": 3393687934,
+        "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+        "metadataSeconds": 7.744162698000004,
+        "cells": 1750565,
+        "primaryCells": 1750565,
+        "selectedCells": 1750565,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 285,
+          "bandsTouched": 8,
+          "bandGeneTotal": 2280,
+          "genes": 32357,
+          "cellChunksPerBand": 12,
+          "shardFilesTouched": 72,
+          "uncompressedBandBytes": 7982576400
+        },
+        "panelSeconds": 16.694506667,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 7373,
+        "donors": 12,
+        "groups": 350,
+        "seconds": 29.732822373,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 256093805,
+          "readMB": 256.094,
+          "requests": 1036,
+          "raw": {
+            "gets": 940,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 96,
+            "partialGets": 0,
+            "requestedBytes": 251821529,
+            "transferredBytes": 256093805,
+            "readRequestedBytes": 256093805,
+            "readTransferredBytes": 256093805,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 192,
+            "countReadBytes": 251821529,
+            "maxInFlight": 27
+          },
+          "http": {
+            "requests": 875,
+            "gets": 875,
+            "rangedGets": 384,
+            "responseBytes": 256253698
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 247,
+            "302": 436,
+            "206": 192
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 247,
+            "resolvers": 436,
+            "status302": 436,
+            "cdn": 436,
+            "status206": 192
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3"
+        ],
+        "catalogueCells": 1750565,
+        "cataloguePrimaryCells": 1750565
+      },
+      {
+        "listingSeconds": 0.2891839730000001,
+        "openSeconds": 5.2601218570000015,
+        "listedObjects": 1596,
+        "storeBytes": 9316525987,
+        "countBytes": 9100110804,
+        "countsByGeneBytes": 3329372220,
+        "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+        "metadataSeconds": 7.553545000000007,
+        "cells": 1712244,
+        "primaryCells": 1712244,
+        "selectedCells": 1712244,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 292,
+          "bandsTouched": 8,
+          "bandGeneTotal": 2281,
+          "genes": 32357,
+          "cellChunksPerBand": 12,
+          "shardFilesTouched": 72,
+          "uncompressedBandBytes": 7811257128
+        },
+        "panelSeconds": 187.683338285,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 8654,
+        "donors": 12,
+        "groups": 308,
+        "seconds": 200.85955598600003,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 256301986,
+          "readMB": 256.302,
+          "requests": 1036,
+          "raw": {
+            "gets": 940,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 96,
+            "partialGets": 0,
+            "requestedBytes": 252108375,
+            "transferredBytes": 256301986,
+            "readRequestedBytes": 256301986,
+            "readTransferredBytes": 256301986,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 192,
+            "countReadBytes": 252108375,
+            "maxInFlight": 24
+          },
+          "http": {
+            "requests": 875,
+            "gets": 875,
+            "rangedGets": 384,
+            "responseBytes": 256462731
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 247,
+            "302": 436,
+            "206": 192
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 247,
+            "resolvers": 436,
+            "status302": 436,
+            "cdn": 436,
+            "status206": 192
+          },
+          "quotaWaitSeconds": 1383.4836669929998
+        },
+        "collectionId": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3"
+        ],
+        "catalogueCells": 1712244,
+        "cataloguePrimaryCells": 1712244
+      },
+      {
+        "listingSeconds": 0.09369380199999,
+        "openSeconds": 175.979745896,
+        "listedObjects": 943,
+        "storeBytes": 7706961707,
+        "countBytes": 7618633109,
+        "countsByGeneBytes": 2989692827,
+        "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+        "metadataSeconds": 7.115585581000005,
+        "cells": 1462702,
+        "primaryCells": 1421129,
+        "selectedCells": 1399186,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 339,
+          "bandsTouched": 10,
+          "bandGeneTotal": 3390,
+          "genes": 27131,
+          "cellChunksPerBand": 16,
+          "shardFilesTouched": 72,
+          "uncompressedBandBytes": 9917119560
+        },
+        "panelSeconds": 15.79847278699998,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 0,
+        "donors": 182,
+        "groups": 1370,
+        "seconds": 199.034868753,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 390842937,
+          "readMB": 390.843,
+          "requests": 935,
+          "raw": {
+            "gets": 775,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 160,
+            "partialGets": 0,
+            "requestedBytes": 384965664,
+            "transferredBytes": 390842937,
+            "readRequestedBytes": 390842937,
+            "readTransferredBytes": 390842937,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 320,
+            "countReadBytes": 384965664,
+            "maxInFlight": 24
+          },
+          "http": {
+            "requests": 1032,
+            "gets": 1032,
+            "rangedGets": 640,
+            "responseBytes": 391156737
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 197,
+            "302": 515,
+            "206": 320
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 197,
+            "resolvers": 515,
+            "status302": 515,
+            "cdn": 515,
+            "status206": 320
+          },
+          "quotaWaitSeconds": 864.4939911309999
+        },
+        "collectionId": "0a839c4b-10d0-4d64-9272-684c49a2c8ba",
+        "author": "Ren",
+        "year": 2021,
+        "assays": [
+          "10x 3' v3",
+          "10x 5' v2"
+        ],
+        "catalogueCells": 1462702,
+        "cataloguePrimaryCells": 1421129
+      },
+      {
+        "listingSeconds": 0.2829819529999993,
+        "openSeconds": 6.326818881,
+        "listedObjects": 1246,
+        "storeBytes": 7117193805,
+        "countBytes": 6946276225,
+        "countsByGeneBytes": 2559507361,
+        "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+        "metadataSeconds": 11.638977682999998,
+        "cells": 1350748,
+        "primaryCells": 1350748,
+        "selectedCells": 1350748,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 359,
+          "bandsTouched": 8,
+          "bandGeneTotal": 2872,
+          "genes": 32357,
+          "cellChunksPerBand": 18,
+          "shardFilesTouched": 45,
+          "uncompressedBandBytes": 7758696512
+        },
+        "panelSeconds": 18.37515967,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 6011,
+        "donors": 10,
+        "groups": 256,
+        "seconds": 36.749522670999994,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 211195096,
+          "readMB": 211.195,
+          "requests": 1096,
+          "raw": {
+            "gets": 952,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 144,
+            "partialGets": 0,
+            "requestedBytes": 207770103,
+            "transferredBytes": 211195096,
+            "readRequestedBytes": 211195096,
+            "readTransferredBytes": 211195096,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 288,
+            "countReadBytes": 207770103,
+            "maxInFlight": 30
+          },
+          "http": {
+            "requests": 995,
+            "gets": 995,
+            "rangedGets": 576,
+            "responseBytes": 211395352
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 211,
+            "302": 496,
+            "206": 288
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 211,
+            "resolvers": 496,
+            "status302": 496,
+            "cdn": 496,
+            "status206": 288
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3"
+        ],
+        "catalogueCells": 1350748,
+        "cataloguePrimaryCells": 1350748
+      },
+      {
+        "listingSeconds": 0.20116505800000084,
+        "openSeconds": 3.2182536749999997,
+        "listedObjects": 1244,
+        "storeBytes": 7069477126,
+        "countBytes": 6901600835,
+        "countsByGeneBytes": 2537631783,
+        "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+        "metadataSeconds": 6.074881642000001,
+        "cells": 1322061,
+        "primaryCells": 1322061,
+        "selectedCells": 1322061,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 359,
+          "bandsTouched": 8,
+          "bandGeneTotal": 2872,
+          "genes": 32357,
+          "cellChunksPerBand": 18,
+          "shardFilesTouched": 45,
+          "uncompressedBandBytes": 7593918384
+        },
+        "panelSeconds": 16.874211833000004,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 9625,
+        "donors": 8,
+        "groups": 229,
+        "seconds": 26.40959855,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 209806886,
+          "readMB": 209.807,
+          "requests": 1096,
+          "raw": {
+            "gets": 952,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 144,
+            "partialGets": 0,
+            "requestedBytes": 206401719,
+            "transferredBytes": 209806886,
+            "readRequestedBytes": 209806886,
+            "readTransferredBytes": 209806886,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 288,
+            "countReadBytes": 206401719,
+            "maxInFlight": 24
+          },
+          "http": {
+            "requests": 995,
+            "gets": 995,
+            "rangedGets": 576,
+            "responseBytes": 210007655
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 211,
+            "302": 496,
+            "206": 288
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 211,
+            "resolvers": 496,
+            "status302": 496,
+            "cdn": 496,
+            "status206": 288
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3"
+        ],
+        "catalogueCells": 1322061,
+        "cataloguePrimaryCells": 1322061
+      },
+      {
+        "listingSeconds": 0.34552535099999204,
+        "openSeconds": 4.320686121999984,
+        "listedObjects": 1228,
+        "storeBytes": 8749102576,
+        "countBytes": 8510817701,
+        "countsByGeneBytes": 3464596824,
+        "storeId": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+        "metadataSeconds": 8.807491568999978,
+        "cells": 1281499,
+        "primaryCells": 1281499,
+        "selectedCells": 111324,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 195,
+          "bandsTouched": 8,
+          "bandGeneTotal": 1560,
+          "genes": 35475,
+          "cellChunksPerBand": 19,
+          "shardFilesTouched": 114,
+          "uncompressedBandBytes": 7996553760
+        },
+        "panelSeconds": 10.394159652000042,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 485,
+        "donors": 19,
+        "groups": 126,
+        "seconds": 23.885250555000027,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 186263915,
+          "readMB": 186.264,
+          "requests": 991,
+          "raw": {
+            "gets": 839,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 152,
+            "partialGets": 0,
+            "requestedBytes": 165297155,
+            "transferredBytes": 186263915,
+            "readRequestedBytes": 186263915,
+            "readTransferredBytes": 186263915,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 304,
+            "countReadBytes": 165297155,
+            "maxInFlight": 14
+          },
+          "http": {
+            "requests": 983,
+            "gets": 983,
+            "rangedGets": 608,
+            "responseBytes": 186520678
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 189,
+            "302": 490,
+            "206": 304
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 189,
+            "resolvers": 490,
+            "status302": 490,
+            "cdn": 490,
+            "status206": 304
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "cc431242-35ea-41e1-a100-41e0dec2665b",
+        "author": "Wells",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3",
+          "10x 5' v2"
+        ],
+        "catalogueCells": 1281499,
+        "cataloguePrimaryCells": 1281499
+      },
+      {
+        "listingSeconds": 0.10236384299999202,
+        "openSeconds": 3.3668885550000027,
+        "listedObjects": 806,
+        "storeBytes": 3909170340,
+        "countBytes": 3669448941,
+        "countsByGeneBytes": 1401218661,
+        "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+        "metadataSeconds": 180.06177427799997,
+        "cells": 1263676,
+        "primaryCells": 1263676,
+        "selectedCells": 1263676,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 377,
+          "bandsTouched": 8,
+          "bandGeneTotal": 3016,
+          "genes": 30172,
+          "cellChunksPerBand": 16,
+          "shardFilesTouched": 40,
+          "uncompressedBandBytes": 7622493632
+        },
+        "panelSeconds": 11.622198628000035,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 9072,
+        "donors": 261,
+        "groups": 1793,
+        "seconds": 195.282872704,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 157327162,
+          "readMB": 157.327,
+          "requests": 803,
+          "raw": {
+            "gets": 675,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 128,
+            "partialGets": 0,
+            "requestedBytes": 143007053,
+            "transferredBytes": 157327162,
+            "readRequestedBytes": 157327162,
+            "readTransferredBytes": 157327162,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 256,
+            "countReadBytes": 143007053,
+            "maxInFlight": 24
+          },
+          "http": {
+            "requests": 858,
+            "gets": 858,
+            "rangedGets": 512,
+            "responseBytes": 157573077
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 174,
+            "302": 428,
+            "206": 256
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 174,
+            "resolvers": 428,
+            "status302": 428,
+            "cdn": 428,
+            "status206": 256
+          },
+          "quotaWaitSeconds": 863.9621253569999
+        },
+        "collectionId": "436154da-bcf1-4130-9c8b-120ff9a888f2",
+        "author": "Perez",
+        "year": 2022,
+        "assays": [
+          "10x 3' v2"
+        ],
+        "catalogueCells": 1263676,
+        "cataloguePrimaryCells": 1263676
+      },
+      {
+        "listingSeconds": 0.21940349700000183,
+        "openSeconds": 4.4153179489999985,
+        "listedObjects": 1161,
+        "storeBytes": 6607117036,
+        "countBytes": 6450243417,
+        "countsByGeneBytes": 2372293389,
+        "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+        "metadataSeconds": 6.7847803829999975,
+        "cells": 1234234,
+        "primaryCells": 1234234,
+        "selectedCells": 1234234,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 404,
+          "bandsTouched": 8,
+          "bandGeneTotal": 3232,
+          "genes": 32357,
+          "cellChunksPerBand": 16,
+          "shardFilesTouched": 40,
+          "uncompressedBandBytes": 7978088576
+        },
+        "panelSeconds": 14.329958297000005,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 7002,
+        "donors": 10,
+        "groups": 238,
+        "seconds": 25.815138509999997,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 248742459,
+          "readMB": 248.742,
+          "requests": 1055,
+          "raw": {
+            "gets": 927,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 128,
+            "partialGets": 0,
+            "requestedBytes": 245515846,
+            "transferredBytes": 248742459,
+            "readRequestedBytes": 248742459,
+            "readTransferredBytes": 248742459,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 256,
+            "countReadBytes": 245515846,
+            "maxInFlight": 24
+          },
+          "http": {
+            "requests": 913,
+            "gets": 913,
+            "rangedGets": 512,
+            "responseBytes": 248894327
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 202,
+            "302": 455,
+            "206": 256
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 202,
+            "resolvers": 455,
+            "status302": 455,
+            "cdn": 455,
+            "status206": 256
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3"
+        ],
+        "catalogueCells": 1234234,
+        "cataloguePrimaryCells": 1234234
+      },
+      {
+        "listingSeconds": 0.33489870299999325,
+        "openSeconds": 3.5854378930000053,
+        "listedObjects": 1160,
+        "storeBytes": 6615112991,
+        "countBytes": 6461993824,
+        "countsByGeneBytes": 2372191421,
+        "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+        "metadataSeconds": 5.637063435000002,
+        "cells": 1206761,
+        "primaryCells": 1206761,
+        "selectedCells": 1206761,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 404,
+          "bandsTouched": 8,
+          "bandGeneTotal": 3232,
+          "genes": 32357,
+          "cellChunksPerBand": 16,
+          "shardFilesTouched": 40,
+          "uncompressedBandBytes": 7800503104
+        },
+        "panelSeconds": 186.097525943,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 8015,
+        "donors": 9,
+        "groups": 229,
+        "seconds": 195.693842928,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 248761397,
+          "readMB": 248.761,
+          "requests": 1055,
+          "raw": {
+            "gets": 927,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 128,
+            "partialGets": 0,
+            "requestedBytes": 245593691,
+            "transferredBytes": 248761397,
+            "readRequestedBytes": 248761397,
+            "readTransferredBytes": 248761397,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 256,
+            "countReadBytes": 245593691,
+            "maxInFlight": 24
+          },
+          "http": {
+            "requests": 913,
+            "gets": 913,
+            "rangedGets": 512,
+            "responseBytes": 248913099
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 202,
+            "302": 455,
+            "206": 256
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 202,
+            "resolvers": 455,
+            "status302": 455,
+            "cdn": 455,
+            "status206": 256
+          },
+          "quotaWaitSeconds": 1382.8268945759999
+        },
+        "collectionId": "e9360edf-b0b7-4e01-bce8-e596814f13e7",
+        "author": "Gong",
+        "year": 2025,
+        "assays": [
+          "10x 3' v3"
+        ],
+        "catalogueCells": 1206761,
+        "cataloguePrimaryCells": 1206761
+      },
+      {
+        "listingSeconds": 0.11321254899996802,
+        "openSeconds": 4.74895598400002,
+        "listedObjects": 728,
+        "storeBytes": 2545263036,
+        "countBytes": 2462180393,
+        "countsByGeneBytes": 998439327,
+        "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+        "metadataSeconds": 3.240148480000016,
+        "cells": 600929,
+        "primaryCells": 600929,
+        "selectedCells": 600929,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 832,
+          "bandsTouched": 8,
+          "bandGeneTotal": 6656,
+          "genes": 18006,
+          "cellChunksPerBand": 11,
+          "shardFilesTouched": 18,
+          "uncompressedBandBytes": 7999566848
+        },
+        "panelSeconds": 11.166158871999983,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 2011,
+        "donors": 80,
+        "groups": 546,
+        "seconds": 19.39935954499998,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 375396663,
+          "readMB": 375.397,
+          "requests": 1032,
+          "raw": {
+            "gets": 944,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 88,
+            "partialGets": 0,
+            "requestedBytes": 369035229,
+            "transferredBytes": 375396663,
+            "readRequestedBytes": 375396663,
+            "readTransferredBytes": 375396663,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 176,
+            "countReadBytes": 369035229,
+            "maxInFlight": 21
+          },
+          "http": {
+            "requests": 668,
+            "gets": 668,
+            "rangedGets": 352,
+            "responseBytes": 375324199
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 159,
+            "302": 333,
+            "206": 176
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 159,
+            "resolvers": 333,
+            "status302": 333,
+            "cdn": 333,
+            "status206": 176
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "7d7cabfd-1d1f-40af-96b7-26a0825a306d",
+        "author": "van der Wijst",
+        "year": 2021,
+        "assays": [
+          "10x 5' transcription profiling"
+        ],
+        "catalogueCells": 600929,
+        "cataloguePrimaryCells": 600929
+      },
+      {
+        "listingSeconds": 0.0542142820000322,
+        "openSeconds": 5.216512985999998,
+        "listedObjects": 356,
+        "storeBytes": 1927102623,
+        "countBytes": 1892452579,
+        "countsByGeneBytes": 723667094,
+        "storeId": "yoshida_2022_pbmc_2a498ace",
+        "metadataSeconds": 2.2776274049999756,
+        "cells": 422220,
+        "primaryCells": 339597,
+        "selectedCells": 339597,
+        "absentColumns": [],
+        "missingGenes": [],
+        "panelLayout": {
+          "bandGenes": 1078,
+          "bandsTouched": 8,
+          "bandGeneTotal": 8624,
+          "genes": 32344,
+          "cellChunksPerBand": 11,
+          "shardFilesTouched": 15,
+          "uncompressedBandBytes": 7282450560
+        },
+        "panelSeconds": 5.741071304999991,
+        "cellsWithoutDonor": 0,
+        "cellsWithoutCoarseType": 2851,
+        "donors": 69,
+        "groups": 636,
+        "seconds": 13.326934513000026,
+        "attempts": 1,
+        "errors": [],
+        "io": {
+          "readBytes": 200703819,
+          "readMB": 200.704,
+          "requests": 662,
+          "raw": {
+            "gets": 574,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 88,
+            "partialGets": 0,
+            "requestedBytes": 196694709,
+            "transferredBytes": 200703819,
+            "readRequestedBytes": 200703819,
+            "readTransferredBytes": 200703819,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 176,
+            "countReadBytes": 196694709,
+            "maxInFlight": 9
+          },
+          "http": {
+            "requests": 558,
+            "gets": 558,
+            "rangedGets": 352,
+            "responseBytes": 200755528
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 104,
+            "302": 278,
+            "206": 176
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 2,
+            "status200": 104,
+            "resolvers": 278,
+            "status302": 278,
+            "cdn": 278,
+            "status206": 176
+          },
+          "quotaWaitSeconds": 0.0
+        },
+        "collectionId": "03f821b4-87be-4ff4-b65a-b5fc00061da7",
+        "author": "Yoshida",
+        "year": 2022,
+        "assays": [
+          "10x 5' v1"
+        ],
+        "catalogueCells": 422220,
+        "cataloguePrimaryCells": 339597
+      }
+    ],
+    "failures": [],
+    "duplicateUnitsDropped": [],
+    "sharedDonorIdsAcrossCollections": [],
+    "scores": {
+      "byDisease": [
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "B cells",
+          "stores": 3,
+          "collections": 3,
+          "donors": 222,
+          "cells": 438611,
+          "median": 4.48550409692299,
+          "q25": 4.019289115810102,
+          "q75": 5.305522621333647
+        },
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "Dendritic cells",
+          "stores": 3,
+          "collections": 3,
+          "donors": 160,
+          "cells": 16788,
+          "median": 4.917574765984796,
+          "q25": 4.210189531967772,
+          "q75": 6.182993159680477
+        },
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "Erythroid",
+          "stores": 1,
+          "collections": 1,
+          "donors": 1,
+          "cells": 39,
+          "median": 0.7560927634009514,
+          "q25": 0.7560927634009514,
+          "q75": 0.7560927634009514
+        },
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "Granulocytes",
+          "stores": 1,
+          "collections": 1,
+          "donors": 5,
+          "cells": 267,
+          "median": 6.415756022762042,
+          "q25": 4.566736501284416,
+          "q75": 6.571101596759523
+        },
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "Monocytes",
+          "stores": 3,
+          "collections": 3,
+          "donors": 216,
+          "cells": 389659,
+          "median": 5.689257200701119,
+          "q25": 4.966180236211676,
+          "q75": 6.811000696176205
+        },
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "NK and ILC",
+          "stores": 3,
+          "collections": 3,
+          "donors": 203,
+          "cells": 95610,
+          "median": 5.056972068357216,
+          "q25": 4.464193451545173,
+          "q75": 5.986948772419854
+        },
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "Plasma cells",
+          "stores": 3,
+          "collections": 3,
+          "donors": 123,
+          "cells": 17825,
+          "median": 3.7600274882688915,
+          "q25": 3.3327205284067882,
+          "q75": 4.459637032666106
+        },
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "Platelets",
+          "stores": 2,
+          "collections": 2,
+          "donors": 93,
+          "cells": 12039,
+          "median": 2.9351379670847906,
+          "q25": 1.6583234042919388,
+          "q75": 3.968031122356031
+        },
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "Progenitors",
+          "stores": 1,
+          "collections": 1,
+          "donors": 3,
+          "cells": 197,
+          "median": 3.643888218726785,
+          "q25": 3.397003404143208,
+          "q75": 4.673370308605514
+        },
+        {
+          "disease": "COVID-19",
+          "coarseCellType": "T cells",
+          "stores": 3,
+          "collections": 3,
+          "donors": 222,
+          "cells": 751737,
+          "median": 4.488204210327104,
+          "q25": 3.9484143726927385,
+          "q75": 5.229321775554563
+        },
+        {
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "B cells",
+          "stores": 6,
+          "collections": 3,
+          "donors": 182,
+          "cells": 705487,
+          "median": 4.782708413537769,
+          "q25": 4.4735402396762876,
+          "q75": 5.024689105473223
+        },
+        {
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Dendritic cells",
+          "stores": 6,
+          "collections": 3,
+          "donors": 157,
+          "cells": 89514,
+          "median": 5.027427296164245,
+          "q25": 4.7887950354863245,
+          "q75": 5.5254300456395455
+        },
+        {
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Erythroid",
+          "stores": 6,
+          "collections": 3,
+          "donors": 43,
+          "cells": 6871,
+          "median": 2.6686386684743475,
+          "q25": 2.2708673340164856,
+          "q75": 2.9613118010624975
+        },
+        {
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Monocytes",
+          "stores": 6,
+          "collections": 3,
+          "donors": 182,
+          "cells": 1282785,
+          "median": 6.05493714625329,
+          "q25": 5.6914662308104385,
+          "q75": 6.448738881124186
+        },
+        {
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "NK and ILC",
+          "stores": 6,
+          "collections": 3,
+          "donors": 182,
+          "cells": 763793,
+          "median": 4.6790695720514375,
+          "q25": 4.454546422150052,
+          "q75": 4.926453090307153
+        },
+        {
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Plasma cells",
+          "stores": 6,
+          "collections": 3,
+          "donors": 58,
+          "cells": 6389,
+          "median": 3.457626318664051,
+          "q25": 3.1069378748760013,
+          "q75": 3.8708366534189684
+        },
+        {
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Platelets",
+          "stores": 6,
+          "collections": 3,
+          "donors": 102,
+          "cells": 29426,
+          "median": 1.8300123965852562,
+          "q25": 1.0197945839965197,
+          "q75": 2.3355577845095374
+        },
+        {
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Progenitors",
+          "stores": 6,
+          "collections": 3,
+          "donors": 74,
+          "cells": 5625,
+          "median": 3.8836909663446573,
+          "q25": 3.547589570899442,
+          "q75": 4.221603461676582
+        },
+        {
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "T cells",
+          "stores": 6,
+          "collections": 3,
+          "donors": 182,
+          "cells": 5550500,
+          "median": 4.649072072954979,
+          "q25": 4.259226024746434,
+          "q75": 4.873397319961641
+        },
+        {
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "stores": 11,
+          "collections": 8,
+          "donors": 350,
+          "cells": 968954,
+          "median": 4.259763789969476,
+          "q25": 3.564175620786091,
+          "q75": 4.776547367706469
+        },
+        {
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "stores": 11,
+          "collections": 8,
+          "donors": 309,
+          "cells": 127226,
+          "median": 4.541899591754613,
+          "q25": 3.991689959526092,
+          "q75": 5.059866237077335
+        },
+        {
+          "disease": "normal",
+          "coarseCellType": "Erythroid",
+          "stores": 7,
+          "collections": 4,
+          "donors": 53,
+          "cells": 11342,
+          "median": 2.6097634285848628,
+          "q25": 2.490813801338519,
+          "q75": 2.850753762596728
+        },
+        {
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "stores": 11,
+          "collections": 8,
+          "donors": 351,
+          "cells": 1799982,
+          "median": 5.546263419979034,
+          "q25": 4.728694402972259,
+          "q75": 6.1092812104425
+        },
+        {
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "stores": 11,
+          "collections": 8,
+          "donors": 351,
+          "cells": 1039133,
+          "median": 4.37379075525192,
+          "q25": 3.895049277517562,
+          "q75": 4.801529180680457
+        },
+        {
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "stores": 11,
+          "collections": 8,
+          "donors": 87,
+          "cells": 9632,
+          "median": 3.359652208335588,
+          "q25": 3.116036641506348,
+          "q75": 3.7115549054210466
+        },
+        {
+          "disease": "normal",
+          "coarseCellType": "Platelets",
+          "stores": 8,
+          "collections": 5,
+          "donors": 132,
+          "cells": 34420,
+          "median": 1.6663102209638234,
+          "q25": 0.795353055881598,
+          "q75": 2.2386303884218215
+        },
+        {
+          "disease": "normal",
+          "coarseCellType": "Progenitors",
+          "stores": 6,
+          "collections": 3,
+          "donors": 75,
+          "cells": 6926,
+          "median": 3.7218126672032454,
+          "q25": 3.430220461487238,
+          "q75": 4.148884622139745
+        },
+        {
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "stores": 11,
+          "collections": 8,
+          "donors": 353,
+          "cells": 6272563,
+          "median": 3.8512540014839836,
+          "q25": 3.358149231708614,
+          "q75": 4.516549535251602
+        },
+        {
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "B cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 16,
+          "cells": 7337,
+          "median": 3.374858488609628,
+          "q25": 3.1618161633780457,
+          "q75": 3.7171061606115416
+        },
+        {
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Dendritic cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 14,
+          "cells": 1366,
+          "median": 4.1692033697507505,
+          "q25": 3.84912679716246,
+          "q75": 4.2669170170584
+        },
+        {
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Erythroid",
+          "stores": 1,
+          "collections": 1,
+          "donors": 1,
+          "cells": 159,
+          "median": 1.1525032305188851,
+          "q25": 1.1525032305188851,
+          "q75": 1.1525032305188851
+        },
+        {
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Monocytes",
+          "stores": 1,
+          "collections": 1,
+          "donors": 20,
+          "cells": 16848,
+          "median": 4.874678545016977,
+          "q25": 4.381775045449654,
+          "q75": 5.276456615080349
+        },
+        {
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "NK and ILC",
+          "stores": 1,
+          "collections": 1,
+          "donors": 18,
+          "cells": 14274,
+          "median": 4.284216875350838,
+          "q25": 3.994464230161264,
+          "q75": 4.5681031170621935
+        },
+        {
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Plasma cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 3,
+          "cells": 128,
+          "median": 2.7730136945804786,
+          "q25": 2.7510737413331805,
+          "q75": 2.77723664707598
+        },
+        {
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Platelets",
+          "stores": 1,
+          "collections": 1,
+          "donors": 4,
+          "cells": 206,
+          "median": 0.9754074658036188,
+          "q25": 0.0,
+          "q75": 2.0377168951033684
+        },
+        {
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Progenitors",
+          "stores": 1,
+          "collections": 1,
+          "donors": 3,
+          "cells": 103,
+          "median": 1.5601435084601158,
+          "q25": 1.2364033536689194,
+          "q75": 1.6141143226186494
+        },
+        {
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "T cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 20,
+          "cells": 55785,
+          "median": 3.6930603277015246,
+          "q25": 3.354026143687622,
+          "q75": 3.9748803770960626
+        },
+        {
+          "disease": "respiratory system disorder",
+          "coarseCellType": "B cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 14,
+          "cells": 7245,
+          "median": 3.528595535626602,
+          "q25": 3.2756061043958935,
+          "q75": 3.8163642035639658
+        },
+        {
+          "disease": "respiratory system disorder",
+          "coarseCellType": "Dendritic cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 12,
+          "cells": 1026,
+          "median": 3.468350090895936,
+          "q25": 3.0375491417553726,
+          "q75": 3.857688791913582
+        },
+        {
+          "disease": "respiratory system disorder",
+          "coarseCellType": "Monocytes",
+          "stores": 1,
+          "collections": 1,
+          "donors": 15,
+          "cells": 29410,
+          "median": 4.3810334655834895,
+          "q25": 4.0547635148393875,
+          "q75": 4.977150086805911
+        },
+        {
+          "disease": "respiratory system disorder",
+          "coarseCellType": "NK and ILC",
+          "stores": 1,
+          "collections": 1,
+          "donors": 15,
+          "cells": 5391,
+          "median": 3.9041640235703166,
+          "q25": 3.4883455122198734,
+          "q75": 4.090789595042892
+        },
+        {
+          "disease": "respiratory system disorder",
+          "coarseCellType": "Plasma cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 4,
+          "cells": 507,
+          "median": 3.239208241088018,
+          "q25": 2.955751606603452,
+          "q75": 3.4147508120180383
+        },
+        {
+          "disease": "respiratory system disorder",
+          "coarseCellType": "T cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 15,
+          "cells": 35957,
+          "median": 3.4056234413863433,
+          "q25": 3.172524050881522,
+          "q75": 3.7205875933036587
+        },
+        {
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "B cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 159,
+          "cells": 91824,
+          "median": 4.797313739043839,
+          "q25": 3.801093168234965,
+          "q75": 5.778015651625527
+        },
+        {
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "Dendritic cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 151,
+          "cells": 12853,
+          "median": 5.69866973478925,
+          "q25": 4.269510527321031,
+          "q75": 6.664413237845209
+        },
+        {
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "Monocytes",
+          "stores": 1,
+          "collections": 1,
+          "donors": 162,
+          "cells": 254931,
+          "median": 6.712392199755396,
+          "q25": 5.370393984471327,
+          "q75": 7.432812297040478
+        },
+        {
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "NK and ILC",
+          "stores": 1,
+          "collections": 1,
+          "donors": 156,
+          "cells": 54177,
+          "median": 5.246738463992735,
+          "q25": 4.052274753472114,
+          "q75": 5.977703857493988
+        },
+        {
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "Plasma cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 13,
+          "cells": 396,
+          "median": 5.2593404127331,
+          "q25": 4.372662246231805,
+          "q75": 5.525046227036597
+        },
+        {
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "T cells",
+          "stores": 1,
+          "collections": 1,
+          "donors": 162,
+          "cells": 355471,
+          "median": 4.639040343366361,
+          "q25": 3.6431459736141973,
+          "q75": 5.3767134907482825
+        }
+      ],
+      "byStoreAndDisease": [
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "B cells",
+          "donors": 135,
+          "cells": 217183,
+          "median": 4.871286237506635,
+          "q25": 4.61973214324816,
+          "q75": 5.053380502785586
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Dendritic cells",
+          "donors": 110,
+          "cells": 9649,
+          "median": 5.152731155095662,
+          "q25": 4.797791133263162,
+          "q75": 5.6197336344664315
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Erythroid",
+          "donors": 1,
+          "cells": 37,
+          "median": 3.8290577557731,
+          "q25": 3.8290577557731,
+          "q75": 3.8290577557731
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Monocytes",
+          "donors": 135,
+          "cells": 198848,
+          "median": 6.1319978017633785,
+          "q25": 5.710527004535761,
+          "q75": 6.501398222430776
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "NK and ILC",
+          "donors": 135,
+          "cells": 309241,
+          "median": 4.768521236519447,
+          "q25": 4.561492654358586,
+          "q75": 5.009941907775355
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Plasma cells",
+          "donors": 14,
+          "cells": 511,
+          "median": 3.9579373199691643,
+          "q25": 3.4352921099457534,
+          "q75": 4.53134656873614
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Platelets",
+          "donors": 55,
+          "cells": 2434,
+          "median": 1.6541947469597045,
+          "q25": 0.7551605019063268,
+          "q75": 2.437420059924964
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Progenitors",
+          "donors": 31,
+          "cells": 1009,
+          "median": 4.205270221052795,
+          "q25": 3.7915209424471223,
+          "q75": 4.55860286153371
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "T cells",
+          "donors": 135,
+          "cells": 1325699,
+          "median": 4.735187661249075,
+          "q25": 4.573846140572565,
+          "q75": 4.934762404593823
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 99,
+          "cells": 194600,
+          "median": 4.943991398412155,
+          "q25": 4.6264604224791634,
+          "q75": 5.229886784665643
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 89,
+          "cells": 9373,
+          "median": 4.972532078220363,
+          "q25": 4.61885265289848,
+          "q75": 5.413630744931926
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "normal",
+          "coarseCellType": "Erythroid",
+          "donors": 1,
+          "cells": 25,
+          "median": 4.075979607902548,
+          "q25": 4.075979607902548,
+          "q75": 4.075979607902548
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 99,
+          "cells": 170907,
+          "median": 6.103740471224323,
+          "q25": 5.729949265716197,
+          "q75": 6.517965730981581
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 99,
+          "cells": 251718,
+          "median": 4.842941908243858,
+          "q25": 4.519054292399242,
+          "q75": 5.062815351592988
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 6,
+          "cells": 188,
+          "median": 3.8242881253212815,
+          "q25": 3.375846892158471,
+          "q75": 4.575375098783367
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "normal",
+          "coarseCellType": "Platelets",
+          "donors": 44,
+          "cells": 2099,
+          "median": 1.6415090545272273,
+          "q25": 0.7705353052132472,
+          "q75": 2.968277029748769
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "normal",
+          "coarseCellType": "Progenitors",
+          "donors": 22,
+          "cells": 845,
+          "median": 4.171656520082491,
+          "q25": 3.720514731982723,
+          "q75": 4.623333379733084
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 99,
+          "cells": 1017422,
+          "median": 4.7447784639639945,
+          "q25": 4.514983889210854,
+          "q75": 4.962946313869724
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "B cells",
+          "donors": 3,
+          "cells": 5477,
+          "median": 4.565064762099454,
+          "q25": 4.224360464701439,
+          "q75": 4.802808869888939
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Dendritic cells",
+          "donors": 3,
+          "cells": 672,
+          "median": 4.700579730614847,
+          "q25": 4.348086780951191,
+          "q75": 4.942118917779521
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Erythroid",
+          "donors": 1,
+          "cells": 213,
+          "median": 1.9979449982610282,
+          "q25": 1.9979449982610282,
+          "q75": 1.9979449982610282
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Monocytes",
+          "donors": 3,
+          "cells": 6216,
+          "median": 5.495063868444926,
+          "q25": 5.2921242287017725,
+          "q75": 5.888548963970344
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "NK and ILC",
+          "donors": 3,
+          "cells": 4997,
+          "median": 4.150637994126274,
+          "q25": 4.0897925601038345,
+          "q75": 4.569592758966047
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Plasma cells",
+          "donors": 2,
+          "cells": 62,
+          "median": 3.501556073524892,
+          "q25": 3.501399777061504,
+          "q75": 3.50171236998828
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Platelets",
+          "donors": 3,
+          "cells": 352,
+          "median": 1.4465377283329408,
+          "q25": 1.2681775971271252,
+          "q75": 1.8711148055848736
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Progenitors",
+          "donors": 1,
+          "cells": 20,
+          "median": 1.6382609498898253,
+          "q25": 1.6382609498898253,
+          "q75": 1.6382609498898253
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "T cells",
+          "donors": 3,
+          "cells": 38180,
+          "median": 3.7718751590648165,
+          "q25": 3.5957108684963757,
+          "q75": 4.056446974741699
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 13,
+          "cells": 22573,
+          "median": 4.413668344108557,
+          "q25": 4.240006100913013,
+          "q75": 4.732841175097302
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 13,
+          "cells": 2904,
+          "median": 4.959405551191867,
+          "q25": 4.328412334916088,
+          "q75": 5.547181915982679
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "normal",
+          "coarseCellType": "Erythroid",
+          "donors": 3,
+          "cells": 466,
+          "median": 1.8378888393493977,
+          "q25": 1.399533507459038,
+          "q75": 2.220832302815692
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 13,
+          "cells": 20815,
+          "median": 5.632890221099423,
+          "q25": 5.443605372182546,
+          "q75": 6.530368796998484
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 13,
+          "cells": 16610,
+          "median": 4.673985907781847,
+          "q25": 4.407083045772225,
+          "q75": 4.828696627396202
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 4,
+          "cells": 177,
+          "median": 3.5383289726319176,
+          "q25": 3.2818036424151775,
+          "q75": 3.766705133315998
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "normal",
+          "coarseCellType": "Platelets",
+          "donors": 12,
+          "cells": 657,
+          "median": 0.796255929142272,
+          "q25": 0.0,
+          "q75": 1.3890180368570182
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 13,
+          "cells": 141461,
+          "median": 3.7920958066580934,
+          "q25": 3.646725356371425,
+          "q75": 4.029964875796867
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 10,
+          "cells": 124071,
+          "median": 4.284589934376382,
+          "q25": 4.239564629638168,
+          "q75": 4.461911568938129
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 9,
+          "cells": 14775,
+          "median": 4.9232413636735215,
+          "q25": 4.730127367463311,
+          "q75": 5.092098204655848
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+          "disease": "normal",
+          "coarseCellType": "Erythroid",
+          "donors": 9,
+          "cells": 4541,
+          "median": 2.7256294677181763,
+          "q25": 2.70923161668802,
+          "q75": 2.7464732361343436
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 10,
+          "cells": 232235,
+          "median": 5.713390769396781,
+          "q25": 5.575153716572175,
+          "q75": 6.049296590045753
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 10,
+          "cells": 124946,
+          "median": 4.424130714823669,
+          "q25": 4.162418192349501,
+          "q75": 4.555151109327845
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 9,
+          "cells": 1070,
+          "median": 3.5585059158873396,
+          "q25": 3.3076770918580665,
+          "q75": 3.699749127869229
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+          "disease": "normal",
+          "coarseCellType": "Platelets",
+          "donors": 9,
+          "cells": 9006,
+          "median": 1.887087817716967,
+          "q25": 1.826806059713765,
+          "q75": 2.3145314997669644
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+          "disease": "normal",
+          "coarseCellType": "Progenitors",
+          "donors": 9,
+          "cells": 1013,
+          "median": 3.433071803367504,
+          "q25": 3.3175437987272534,
+          "q75": 4.173739196298584
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 10,
+          "cells": 833052,
+          "median": 3.9627503891367746,
+          "q25": 3.7694001831016832,
+          "q75": 4.084711572027314
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "B cells",
+          "donors": 17,
+          "cells": 208361,
+          "median": 4.27450323585025,
+          "q25": 4.160636891111778,
+          "q75": 4.546094050491695
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Dendritic cells",
+          "donors": 17,
+          "cells": 29191,
+          "median": 4.926982232615468,
+          "q25": 4.834397611688115,
+          "q75": 5.04360887608098
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Erythroid",
+          "donors": 16,
+          "cells": 2992,
+          "median": 2.6772374347725347,
+          "q25": 2.4796116303174163,
+          "q75": 2.8768773672267454
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Monocytes",
+          "donors": 17,
+          "cells": 446167,
+          "median": 5.8416423609581685,
+          "q25": 5.702112154499795,
+          "q75": 6.245086730445905
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "NK and ILC",
+          "donors": 17,
+          "cells": 161758,
+          "median": 4.3007317826155,
+          "q25": 4.182767397413038,
+          "q75": 4.5741355922704345
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Plasma cells",
+          "donors": 16,
+          "cells": 1919,
+          "median": 3.18259606196474,
+          "q25": 3.095009651787323,
+          "q75": 3.5888733490438565
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Platelets",
+          "donors": 17,
+          "cells": 13951,
+          "median": 1.9532082178696069,
+          "q25": 1.7630798895145505,
+          "q75": 2.2035073707440707
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Progenitors",
+          "donors": 16,
+          "cells": 1429,
+          "median": 3.555932988282829,
+          "q25": 3.381189315767432,
+          "q75": 3.83965215412885
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "T cells",
+          "donors": 17,
+          "cells": 1715466,
+          "median": 3.8763548280923428,
+          "q25": 3.8077414486192187,
+          "q75": 4.0668270425410915
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 12,
+          "cells": 135112,
+          "median": 4.500228861125805,
+          "q25": 4.311616681410438,
+          "q75": 4.92021795520137
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 12,
+          "cells": 26536,
+          "median": 4.842930273980576,
+          "q25": 4.659207650741039,
+          "q75": 5.492585166916603
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+          "disease": "normal",
+          "coarseCellType": "Erythroid",
+          "donors": 12,
+          "cells": 2440,
+          "median": 2.6400643463234292,
+          "q25": 2.4743336376001883,
+          "q75": 2.944700180072207
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 12,
+          "cells": 388840,
+          "median": 5.88884998550117,
+          "q25": 5.708770816696856,
+          "q75": 6.669523583542734
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 12,
+          "cells": 182092,
+          "median": 4.45998818766819,
+          "q25": 4.316321538291536,
+          "q75": 4.92754499905201
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 12,
+          "cells": 2230,
+          "median": 3.3271118461204114,
+          "q25": 3.0998004180963785,
+          "q75": 3.892664269725473
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+          "disease": "normal",
+          "coarseCellType": "Platelets",
+          "donors": 12,
+          "cells": 6688,
+          "median": 1.7733744594932137,
+          "q25": 1.526596521483016,
+          "q75": 2.1214594777418294
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+          "disease": "normal",
+          "coarseCellType": "Progenitors",
+          "donors": 12,
+          "cells": 1380,
+          "median": 3.607945027785994,
+          "q25": 3.4173693697035983,
+          "q75": 3.862040170671143
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 12,
+          "cells": 997874,
+          "median": 4.046610063208345,
+          "q25": 3.8904269665833278,
+          "q75": 4.41774473788009
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "B cells",
+          "donors": 8,
+          "cells": 105887,
+          "median": 4.542680224741003,
+          "q25": 4.4065154461751685,
+          "q75": 4.794294018579947
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Dendritic cells",
+          "donors": 8,
+          "cells": 16482,
+          "median": 4.9467304362914515,
+          "q25": 4.885372040045801,
+          "q75": 5.3667006653551566
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Erythroid",
+          "donors": 8,
+          "cells": 2234,
+          "median": 2.8425260191284667,
+          "q25": 2.642290925962503,
+          "q75": 3.2309087216770935
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Monocytes",
+          "donors": 8,
+          "cells": 238135,
+          "median": 5.998576427306828,
+          "q25": 5.836879231008107,
+          "q75": 6.332485498258224
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "NK and ILC",
+          "donors": 8,
+          "cells": 75407,
+          "median": 4.455504428216733,
+          "q25": 4.367815970532948,
+          "q75": 4.6186093697240675
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Plasma cells",
+          "donors": 8,
+          "cells": 1121,
+          "median": 3.2604277022878554,
+          "q25": 3.08284778958957,
+          "q75": 4.002023520199046
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Platelets",
+          "donors": 8,
+          "cells": 3781,
+          "median": 1.8712335791434973,
+          "q25": 1.3254040738442947,
+          "q75": 2.251216901397762
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Progenitors",
+          "donors": 8,
+          "cells": 1183,
+          "median": 3.8596901865779847,
+          "q25": 3.614279207642743,
+          "q75": 4.104930975153538
+        },
+        {
+          "storeId": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "T cells",
+          "donors": 8,
+          "cells": 868206,
+          "median": 4.1038176933862935,
+          "q25": 4.0005258410120055,
+          "q75": 4.28678264090565
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 18,
+          "cells": 221316,
+          "median": 4.4442934736165185,
+          "q25": 4.232897497494893,
+          "q75": 4.5819048436509355
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 18,
+          "cells": 33141,
+          "median": 4.846964038037955,
+          "q25": 4.678718792106043,
+          "q75": 5.014308954824525
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+          "disease": "normal",
+          "coarseCellType": "Erythroid",
+          "donors": 16,
+          "cells": 2736,
+          "median": 2.5154553234519548,
+          "q25": 2.387377441762686,
+          "q75": 2.575582401929002
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 18,
+          "cells": 436185,
+          "median": 5.7649032509261335,
+          "q25": 5.6186900437162395,
+          "q75": 5.972751432915973
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 18,
+          "cells": 200684,
+          "median": 4.434207964973435,
+          "q25": 4.211855877766785,
+          "q75": 4.692637930114872
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 18,
+          "cells": 3005,
+          "median": 3.4820921412071835,
+          "q25": 3.302719771800433,
+          "q75": 3.7117224853534316
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+          "disease": "normal",
+          "coarseCellType": "Platelets",
+          "donors": 18,
+          "cells": 9167,
+          "median": 1.8555846803352156,
+          "q25": 1.4266659646638158,
+          "q75": 2.115369592279852
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+          "disease": "normal",
+          "coarseCellType": "Progenitors",
+          "donors": 18,
+          "cells": 2024,
+          "median": 3.6698817878192997,
+          "q25": 3.4779117075857866,
+          "q75": 3.8675669354546987
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 18,
+          "cells": 1690761,
+          "median": 3.8919884621137095,
+          "q25": 3.788369650324565,
+          "q75": 3.961017201808155
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "B cells",
+          "donors": 10,
+          "cells": 92436,
+          "median": 4.378539668700125,
+          "q25": 4.164785756129978,
+          "q75": 4.697834701424895
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Dendritic cells",
+          "donors": 10,
+          "cells": 16643,
+          "median": 4.8206460100932835,
+          "q25": 4.696336011468471,
+          "q75": 5.542776816517744
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Erythroid",
+          "donors": 8,
+          "cells": 759,
+          "median": 2.2471875780825323,
+          "q25": 2.2273237434617634,
+          "q75": 3.037815175720626
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Monocytes",
+          "donors": 10,
+          "cells": 206417,
+          "median": 5.838553319466787,
+          "q25": 5.665642245847904,
+          "q75": 6.43776790431605
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "NK and ILC",
+          "donors": 10,
+          "cells": 85354,
+          "median": 4.248019849809312,
+          "q25": 4.159776192576224,
+          "q75": 4.569025412081133
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Plasma cells",
+          "donors": 9,
+          "cells": 1416,
+          "median": 3.382838731999049,
+          "q25": 2.795555380526847,
+          "q75": 3.8381625312578733
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Platelets",
+          "donors": 10,
+          "cells": 5540,
+          "median": 1.8984191525646872,
+          "q25": 1.2197659420985838,
+          "q75": 2.41612738452194
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Progenitors",
+          "donors": 10,
+          "cells": 1074,
+          "median": 3.814114548492214,
+          "q25": 3.4396579379806016,
+          "q75": 4.0671905284015955
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "T cells",
+          "donors": 10,
+          "cells": 817552,
+          "median": 3.7417474450673764,
+          "q25": 3.676956868707351,
+          "q75": 4.166014185463484
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 12,
+          "cells": 148275,
+          "median": 4.495388151836449,
+          "q25": 4.34907385209188,
+          "q75": 4.6195029511320245
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 12,
+          "cells": 23240,
+          "median": 4.80066079058833,
+          "q25": 4.691170222547408,
+          "q75": 4.896327066985833
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+          "disease": "normal",
+          "coarseCellType": "Erythroid",
+          "donors": 10,
+          "cells": 1048,
+          "median": 2.6372849419803,
+          "q25": 2.588979435241902,
+          "q75": 2.758634609871513
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 12,
+          "cells": 335473,
+          "median": 5.917239719795861,
+          "q25": 5.650321798869394,
+          "q75": 6.045618348430979
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 12,
+          "cells": 163231,
+          "median": 4.492018349241716,
+          "q25": 4.335477489003473,
+          "q75": 4.648851743007934
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 11,
+          "cells": 2018,
+          "median": 3.246410871514351,
+          "q25": 3.201781382039602,
+          "q75": 3.333478991639429
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+          "disease": "normal",
+          "coarseCellType": "Platelets",
+          "donors": 12,
+          "cells": 5633,
+          "median": 1.6953087706737118,
+          "q25": 1.3978366525852437,
+          "q75": 1.8531252771806743
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+          "disease": "normal",
+          "coarseCellType": "Progenitors",
+          "donors": 12,
+          "cells": 1385,
+          "median": 3.4668398178152846,
+          "q25": 3.377398744921644,
+          "q75": 3.6345776585139387
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 12,
+          "cells": 1023262,
+          "median": 4.007760610482123,
+          "q25": 3.7914892790763783,
+          "q75": 4.071605497361651
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "B cells",
+          "donors": 9,
+          "cells": 76143,
+          "median": 4.481521547757463,
+          "q25": 4.271313557531379,
+          "q75": 4.541189262568689
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Dendritic cells",
+          "donors": 9,
+          "cells": 16877,
+          "median": 4.8263589271596175,
+          "q25": 4.776062511693744,
+          "q75": 4.867364321836469
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Erythroid",
+          "donors": 9,
+          "cells": 636,
+          "median": 2.4526177227971666,
+          "q25": 2.0338733629038015,
+          "q75": 2.9595105900400203
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Monocytes",
+          "donors": 9,
+          "cells": 187002,
+          "median": 5.9493282812531065,
+          "q25": 5.740934806357295,
+          "q75": 6.2375365914084915
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "NK and ILC",
+          "donors": 9,
+          "cells": 127036,
+          "median": 4.498135804177397,
+          "q25": 4.33698806741588,
+          "q75": 4.683546385410583
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Plasma cells",
+          "donors": 9,
+          "cells": 1360,
+          "median": 3.460047339330501,
+          "q25": 3.3879945523944097,
+          "q75": 3.7950593226206606
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Platelets",
+          "donors": 9,
+          "cells": 3368,
+          "median": 1.428317895916626,
+          "q25": 1.1762511426777307,
+          "q75": 1.9567926544372465
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "Progenitors",
+          "donors": 8,
+          "cells": 910,
+          "median": 3.9814903982454224,
+          "q25": 3.7825115812208336,
+          "q75": 4.162980038709356
+        },
+        {
+          "storeId": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+          "disease": "cytomegalovirus infection",
+          "coarseCellType": "T cells",
+          "donors": 9,
+          "cells": 785397,
+          "median": 4.014151206027511,
+          "q25": 3.856758930249858,
+          "q75": 4.1046366393310985
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 99,
+          "cells": 59735,
+          "median": 3.5009243780398775,
+          "q25": 3.2295189231545365,
+          "q75": 3.9313902665260185
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 95,
+          "cells": 10406,
+          "median": 4.008706801131535,
+          "q25": 3.5678460608023688,
+          "q75": 4.298840494541448
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 99,
+          "cells": 101298,
+          "median": 4.733210259996231,
+          "q25": 4.33516728521629,
+          "q75": 5.158279377838705
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 99,
+          "cells": 38304,
+          "median": 3.6645953677064376,
+          "q25": 3.325646401191578,
+          "q75": 4.018178805927304
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 3,
+          "cells": 87,
+          "median": 3.605260116165183,
+          "q25": 3.4689709798686064,
+          "q75": 3.7674823670936766
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 99,
+          "cells": 273933,
+          "median": 3.2239784847016026,
+          "q25": 2.9793341274970118,
+          "q75": 3.4732112478045094
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "B cells",
+          "donors": 159,
+          "cells": 91824,
+          "median": 4.797313739043839,
+          "q25": 3.801093168234965,
+          "q75": 5.778015651625527
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "Dendritic cells",
+          "donors": 151,
+          "cells": 12853,
+          "median": 5.69866973478925,
+          "q25": 4.269510527321031,
+          "q75": 6.664413237845209
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "Monocytes",
+          "donors": 162,
+          "cells": 254931,
+          "median": 6.712392199755396,
+          "q25": 5.370393984471327,
+          "q75": 7.432812297040478
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "NK and ILC",
+          "donors": 156,
+          "cells": 54177,
+          "median": 5.246738463992735,
+          "q25": 4.052274753472114,
+          "q75": 5.977703857493988
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "Plasma cells",
+          "donors": 13,
+          "cells": 396,
+          "median": 5.2593404127331,
+          "q25": 4.372662246231805,
+          "q75": 5.525046227036597
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "disease": "systemic lupus erythematosus",
+          "coarseCellType": "T cells",
+          "donors": 162,
+          "cells": 355471,
+          "median": 4.639040343366361,
+          "q25": 3.6431459736141973,
+          "q75": 5.3767134907482825
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "COVID-19",
+          "coarseCellType": "B cells",
+          "donors": 157,
+          "cells": 384508,
+          "median": 4.55824368209151,
+          "q25": 4.094558605898509,
+          "q75": 5.368655394860031
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "COVID-19",
+          "coarseCellType": "Dendritic cells",
+          "donors": 109,
+          "cells": 10486,
+          "median": 4.874682018307861,
+          "q25": 4.219722732448182,
+          "q75": 6.25209384629471
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "COVID-19",
+          "coarseCellType": "Granulocytes",
+          "donors": 5,
+          "cells": 267,
+          "median": 6.415756022762042,
+          "q25": 4.566736501284416,
+          "q75": 6.571101596759523
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "COVID-19",
+          "coarseCellType": "Monocytes",
+          "donors": 151,
+          "cells": 250384,
+          "median": 5.731804386600369,
+          "q25": 5.00789634890123,
+          "q75": 6.87772175315873
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "COVID-19",
+          "coarseCellType": "NK and ILC",
+          "donors": 137,
+          "cells": 49667,
+          "median": 5.18507383162446,
+          "q25": 4.551081686263608,
+          "q75": 6.016841183270263
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "COVID-19",
+          "coarseCellType": "Plasma cells",
+          "donors": 79,
+          "cells": 11723,
+          "median": 3.7600274882688915,
+          "q25": 3.3747093425143495,
+          "q75": 4.495043077657641
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "COVID-19",
+          "coarseCellType": "Platelets",
+          "donors": 90,
+          "cells": 11700,
+          "median": 3.0372610529224993,
+          "q25": 1.6654385833388072,
+          "q75": 4.082104761597457
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "COVID-19",
+          "coarseCellType": "T cells",
+          "donors": 155,
+          "cells": 513360,
+          "median": 4.643891144770859,
+          "q25": 4.1536540158152135,
+          "q75": 5.283530354234003
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 25,
+          "cells": 18698,
+          "median": 4.138166751156267,
+          "q25": 3.7500815194594597,
+          "q75": 4.7919354976569055
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 22,
+          "cells": 1713,
+          "median": 4.176344298984648,
+          "q25": 3.77064955452601,
+          "q75": 4.707056386730896
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 24,
+          "cells": 25075,
+          "median": 5.4906139271889725,
+          "q25": 5.086888533662539,
+          "q75": 6.2368332223449645
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 24,
+          "cells": 8550,
+          "median": 4.394716329922321,
+          "q25": 4.201008124209819,
+          "q75": 4.659096441948795
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 8,
+          "cells": 251,
+          "median": 3.6280961274077432,
+          "q25": 3.1948839416165105,
+          "q75": 4.0474472224745055
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "normal",
+          "coarseCellType": "Platelets",
+          "donors": 16,
+          "cells": 644,
+          "median": 0.8421073889024954,
+          "q25": 0.5977809440425328,
+          "q75": 2.3058914096034266
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 25,
+          "cells": 109773,
+          "median": 3.878020584362187,
+          "q25": 3.5868141804976603,
+          "q75": 4.418572108338673
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "COVID-19",
+          "coarseCellType": "B cells",
+          "donors": 52,
+          "cells": 44171,
+          "median": 4.130601985579279,
+          "q25": 3.8783172411409175,
+          "q75": 5.109710515691272
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "COVID-19",
+          "coarseCellType": "Dendritic cells",
+          "donors": 47,
+          "cells": 6052,
+          "median": 5.022291745572802,
+          "q25": 4.098140288908499,
+          "q75": 5.696829583998056
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "COVID-19",
+          "coarseCellType": "Monocytes",
+          "donors": 53,
+          "cells": 133101,
+          "median": 5.35412789240895,
+          "q25": 4.745230718082538,
+          "q75": 6.73123719403235
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "COVID-19",
+          "coarseCellType": "NK and ILC",
+          "donors": 53,
+          "cells": 41808,
+          "median": 4.685052729143013,
+          "q25": 4.285788190924227,
+          "q75": 5.517367109920762
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "COVID-19",
+          "coarseCellType": "Plasma cells",
+          "donors": 40,
+          "cells": 5797,
+          "median": 3.714229940618905,
+          "q25": 2.9242966205741183,
+          "q75": 4.199448270583957
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "COVID-19",
+          "coarseCellType": "T cells",
+          "donors": 53,
+          "cells": 192540,
+          "median": 3.985908472524898,
+          "q25": 3.747210626582112,
+          "q75": 4.70372552255165
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 11,
+          "cells": 11101,
+          "median": 3.4820631017890817,
+          "q25": 3.1817547934093398,
+          "q75": 3.6329224106815508
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 10,
+          "cells": 2922,
+          "median": 3.72350561006332,
+          "q25": 3.4020224255890437,
+          "q75": 4.203306788882547
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 11,
+          "cells": 19813,
+          "median": 4.640155487567319,
+          "q25": 4.435109545038245,
+          "q75": 5.087389044729784
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 11,
+          "cells": 15011,
+          "median": 3.827426730982768,
+          "q25": 3.5377550194184755,
+          "q75": 4.025224371090739
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 2,
+          "cells": 95,
+          "median": 3.2143891019819444,
+          "q25": 3.199889543605134,
+          "q75": 3.2288886603587548
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 11,
+          "cells": 46600,
+          "median": 3.638888585863496,
+          "q25": 3.4068592055174496,
+          "q75": 3.784565494391267
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "respiratory system disorder",
+          "coarseCellType": "B cells",
+          "donors": 14,
+          "cells": 7245,
+          "median": 3.528595535626602,
+          "q25": 3.2756061043958935,
+          "q75": 3.8163642035639658
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "respiratory system disorder",
+          "coarseCellType": "Dendritic cells",
+          "donors": 12,
+          "cells": 1026,
+          "median": 3.468350090895936,
+          "q25": 3.0375491417553726,
+          "q75": 3.857688791913582
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "respiratory system disorder",
+          "coarseCellType": "Monocytes",
+          "donors": 15,
+          "cells": 29410,
+          "median": 4.3810334655834895,
+          "q25": 4.0547635148393875,
+          "q75": 4.977150086805911
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "respiratory system disorder",
+          "coarseCellType": "NK and ILC",
+          "donors": 15,
+          "cells": 5391,
+          "median": 3.9041640235703166,
+          "q25": 3.4883455122198734,
+          "q75": 4.090789595042892
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "respiratory system disorder",
+          "coarseCellType": "Plasma cells",
+          "donors": 4,
+          "cells": 507,
+          "median": 3.239208241088018,
+          "q25": 2.955751606603452,
+          "q75": 3.4147508120180383
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "disease": "respiratory system disorder",
+          "coarseCellType": "T cells",
+          "donors": 15,
+          "cells": 35957,
+          "median": 3.4056234413863433,
+          "q25": 3.172524050881522,
+          "q75": 3.7205875933036587
+        },
+        {
+          "storeId": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 16,
+          "cells": 10496,
+          "median": 2.6424947068496527,
+          "q25": 2.314282006457331,
+          "q75": 2.8887521941731094
+        },
+        {
+          "storeId": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 3,
+          "cells": 174,
+          "median": 2.8408670832518736,
+          "q25": 2.6909299045913184,
+          "q75": 2.963980131138994
+        },
+        {
+          "storeId": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 18,
+          "cells": 40704,
+          "median": 3.15083432903349,
+          "q25": 2.8385134861357075,
+          "q75": 3.463129877710507
+        },
+        {
+          "storeId": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 18,
+          "cells": 12762,
+          "median": 3.6505400628924947,
+          "q25": 3.4011896881649584,
+          "q75": 4.19665937622634
+        },
+        {
+          "storeId": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 8,
+          "cells": 325,
+          "median": 2.392511215225417,
+          "q25": 2.080797368914823,
+          "q75": 2.549331246207011
+        },
+        {
+          "storeId": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 19,
+          "cells": 46253,
+          "median": 3.16201951398193,
+          "q25": 2.732060289923809,
+          "q75": 3.593315636466407
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "COVID-19",
+          "coarseCellType": "B cells",
+          "donors": 13,
+          "cells": 9932,
+          "median": 4.921745947121394,
+          "q25": 4.32927160673398,
+          "q75": 5.64450295197904
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "COVID-19",
+          "coarseCellType": "Dendritic cells",
+          "donors": 4,
+          "cells": 250,
+          "median": 5.179346587203193,
+          "q25": 4.598216296433367,
+          "q75": 5.627054816969414
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "COVID-19",
+          "coarseCellType": "Erythroid",
+          "donors": 1,
+          "cells": 39,
+          "median": 0.7560927634009514,
+          "q25": 0.7560927634009514,
+          "q75": 0.7560927634009514
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "COVID-19",
+          "coarseCellType": "Monocytes",
+          "donors": 12,
+          "cells": 6174,
+          "median": 5.604116326404918,
+          "q25": 4.501786482306389,
+          "q75": 6.605166951211952
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "COVID-19",
+          "coarseCellType": "NK and ILC",
+          "donors": 13,
+          "cells": 4135,
+          "median": 4.956132787039291,
+          "q25": 4.60681050992618,
+          "q75": 6.2530202680702685
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "COVID-19",
+          "coarseCellType": "Plasma cells",
+          "donors": 4,
+          "cells": 305,
+          "median": 3.879742656805119,
+          "q25": 3.18829324516279,
+          "q75": 4.729217165251898
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "COVID-19",
+          "coarseCellType": "Platelets",
+          "donors": 3,
+          "cells": 339,
+          "median": 1.9932058133691983,
+          "q25": 1.6896631182173003,
+          "q75": 2.4641718902269947
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "COVID-19",
+          "coarseCellType": "Progenitors",
+          "donors": 3,
+          "cells": 197,
+          "median": 3.643888218726785,
+          "q25": 3.397003404143208,
+          "q75": 4.673370308605514
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "COVID-19",
+          "coarseCellType": "T cells",
+          "donors": 14,
+          "cells": 45837,
+          "median": 4.3686766638777215,
+          "q25": 3.7158406186177753,
+          "q75": 4.709304115367836
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "normal",
+          "coarseCellType": "B cells",
+          "donors": 35,
+          "cells": 22977,
+          "median": 3.9553918139938964,
+          "q25": 3.59200543125692,
+          "q75": 4.756985364506349
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "normal",
+          "coarseCellType": "Dendritic cells",
+          "donors": 26,
+          "cells": 2042,
+          "median": 4.492204628464693,
+          "q25": 4.045761426719437,
+          "q75": 5.081165236311046
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "normal",
+          "coarseCellType": "Erythroid",
+          "donors": 2,
+          "cells": 86,
+          "median": 3.5881366147965537,
+          "q25": 3.5566911911606374,
+          "q75": 3.61958203843247
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "normal",
+          "coarseCellType": "Monocytes",
+          "donors": 35,
+          "cells": 28637,
+          "median": 5.229222137974375,
+          "q25": 4.632546803484624,
+          "q75": 5.737072650644377
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "normal",
+          "coarseCellType": "NK and ILC",
+          "donors": 35,
+          "cells": 25225,
+          "median": 4.397696440844196,
+          "q25": 3.9837658930499344,
+          "q75": 4.880789682736409
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "normal",
+          "coarseCellType": "Plasma cells",
+          "donors": 6,
+          "cells": 186,
+          "median": 3.539841763816969,
+          "q25": 3.4293960954955303,
+          "q75": 4.096972630135285
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "normal",
+          "coarseCellType": "Platelets",
+          "donors": 9,
+          "cells": 526,
+          "median": 0.8640264009577231,
+          "q25": 0.0,
+          "q75": 1.5234931786117338
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "normal",
+          "coarseCellType": "Progenitors",
+          "donors": 2,
+          "cells": 279,
+          "median": 3.0377738165582278,
+          "q25": 2.8308188883597243,
+          "q75": 3.244728744756731
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "normal",
+          "coarseCellType": "T cells",
+          "donors": 35,
+          "cells": 92172,
+          "median": 3.7410210228568697,
+          "q25": 3.3561483262532725,
+          "q75": 4.172837817071818
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "B cells",
+          "donors": 16,
+          "cells": 7337,
+          "median": 3.374858488609628,
+          "q25": 3.1618161633780457,
+          "q75": 3.7171061606115416
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Dendritic cells",
+          "donors": 14,
+          "cells": 1366,
+          "median": 4.1692033697507505,
+          "q25": 3.84912679716246,
+          "q75": 4.2669170170584
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Erythroid",
+          "donors": 1,
+          "cells": 159,
+          "median": 1.1525032305188851,
+          "q25": 1.1525032305188851,
+          "q75": 1.1525032305188851
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Monocytes",
+          "donors": 20,
+          "cells": 16848,
+          "median": 4.874678545016977,
+          "q25": 4.381775045449654,
+          "q75": 5.276456615080349
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "NK and ILC",
+          "donors": 18,
+          "cells": 14274,
+          "median": 4.284216875350838,
+          "q25": 3.994464230161264,
+          "q75": 4.5681031170621935
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Plasma cells",
+          "donors": 3,
+          "cells": 128,
+          "median": 2.7730136945804786,
+          "q25": 2.7510737413331805,
+          "q75": 2.77723664707598
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Platelets",
+          "donors": 4,
+          "cells": 206,
+          "median": 0.9754074658036188,
+          "q25": 0.0,
+          "q75": 2.0377168951033684
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "Progenitors",
+          "donors": 3,
+          "cells": 103,
+          "median": 1.5601435084601158,
+          "q25": 1.2364033536689194,
+          "q75": 1.6141143226186494
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "disease": "post-COVID-19 disorder",
+          "coarseCellType": "T cells",
+          "donors": 20,
+          "cells": 55785,
+          "median": 3.6930603277015246,
+          "q25": 3.354026143687622,
+          "q75": 3.9748803770960626
+        }
+      ],
+      "withinStoreContrasts": [
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "coarseCellType": "B cells",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 135,
+          "normalDonors": 99,
+          "medianDifference": -0.07270516090552004
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "coarseCellType": "Dendritic cells",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 110,
+          "normalDonors": 89,
+          "medianDifference": 0.180199076875299
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "coarseCellType": "Monocytes",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 135,
+          "normalDonors": 99,
+          "medianDifference": 0.02825733053905566
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "coarseCellType": "NK and ILC",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 135,
+          "normalDonors": 99,
+          "medianDifference": -0.07442067172441025
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "coarseCellType": "Plasma cells",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 14,
+          "normalDonors": 6,
+          "medianDifference": 0.13364919464788283
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "coarseCellType": "Platelets",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 55,
+          "normalDonors": 44,
+          "medianDifference": 0.012685692432477191
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "coarseCellType": "Progenitors",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 31,
+          "normalDonors": 22,
+          "medianDifference": 0.03361370097030392
+        },
+        {
+          "storeId": "gong_2025_all_cells_ff4235bb",
+          "coarseCellType": "T cells",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 135,
+          "normalDonors": 99,
+          "medianDifference": -0.009590802714919633
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "coarseCellType": "B cells",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 3,
+          "normalDonors": 13,
+          "medianDifference": 0.1513964179908971
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "coarseCellType": "Dendritic cells",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 3,
+          "normalDonors": 13,
+          "medianDifference": -0.2588258205770195
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "coarseCellType": "Monocytes",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 3,
+          "normalDonors": 13,
+          "medianDifference": -0.13782635265449716
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "coarseCellType": "NK and ILC",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 3,
+          "normalDonors": 13,
+          "medianDifference": -0.5233479136555728
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "coarseCellType": "Platelets",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 3,
+          "normalDonors": 12,
+          "medianDifference": 0.6502817991906689
+        },
+        {
+          "storeId": "gong_2025_human_immune_health_atlas_e522d2cd",
+          "coarseCellType": "T cells",
+          "disease": "cytomegalovirus infection",
+          "diseaseDonors": 3,
+          "normalDonors": 13,
+          "medianDifference": -0.020220647593276908
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "coarseCellType": "B cells",
+          "disease": "systemic lupus erythematosus",
+          "diseaseDonors": 159,
+          "normalDonors": 99,
+          "medianDifference": 1.2963893610039618
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "coarseCellType": "Dendritic cells",
+          "disease": "systemic lupus erythematosus",
+          "diseaseDonors": 151,
+          "normalDonors": 95,
+          "medianDifference": 1.6899629336577142
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "coarseCellType": "Monocytes",
+          "disease": "systemic lupus erythematosus",
+          "diseaseDonors": 162,
+          "normalDonors": 99,
+          "medianDifference": 1.9791819397591643
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "coarseCellType": "NK and ILC",
+          "disease": "systemic lupus erythematosus",
+          "diseaseDonors": 156,
+          "normalDonors": 99,
+          "medianDifference": 1.582143096286297
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "coarseCellType": "Plasma cells",
+          "disease": "systemic lupus erythematosus",
+          "diseaseDonors": 13,
+          "normalDonors": 3,
+          "medianDifference": 1.6540802965679169
+        },
+        {
+          "storeId": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+          "coarseCellType": "T cells",
+          "disease": "systemic lupus erythematosus",
+          "diseaseDonors": 162,
+          "normalDonors": 99,
+          "medianDifference": 1.415061858664758
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "coarseCellType": "B cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 157,
+          "normalDonors": 25,
+          "medianDifference": 0.42007693093524345
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "coarseCellType": "Dendritic cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 109,
+          "normalDonors": 22,
+          "medianDifference": 0.698337719323213
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "coarseCellType": "Monocytes",
+          "disease": "COVID-19",
+          "diseaseDonors": 151,
+          "normalDonors": 24,
+          "medianDifference": 0.2411904594113965
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "coarseCellType": "NK and ILC",
+          "disease": "COVID-19",
+          "diseaseDonors": 137,
+          "normalDonors": 24,
+          "medianDifference": 0.7903575017021387
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "coarseCellType": "Plasma cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 79,
+          "normalDonors": 8,
+          "medianDifference": 0.13193136086114832
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "coarseCellType": "Platelets",
+          "disease": "COVID-19",
+          "diseaseDonors": 90,
+          "normalDonors": 16,
+          "medianDifference": 2.195153664020004
+        },
+        {
+          "storeId": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+          "coarseCellType": "T cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 155,
+          "normalDonors": 25,
+          "medianDifference": 0.7658705604086724
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "B cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 52,
+          "normalDonors": 11,
+          "medianDifference": 0.6485388837901973
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "B cells",
+          "disease": "respiratory system disorder",
+          "diseaseDonors": 14,
+          "normalDonors": 11,
+          "medianDifference": 0.04653243383752015
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "Dendritic cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 47,
+          "normalDonors": 10,
+          "medianDifference": 1.2987861355094816
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "Dendritic cells",
+          "disease": "respiratory system disorder",
+          "diseaseDonors": 12,
+          "normalDonors": 10,
+          "medianDifference": -0.255155519167384
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "Monocytes",
+          "disease": "COVID-19",
+          "diseaseDonors": 53,
+          "normalDonors": 11,
+          "medianDifference": 0.7139724048416314
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "Monocytes",
+          "disease": "respiratory system disorder",
+          "diseaseDonors": 15,
+          "normalDonors": 11,
+          "medianDifference": -0.2591220219838295
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "NK and ILC",
+          "disease": "COVID-19",
+          "diseaseDonors": 53,
+          "normalDonors": 11,
+          "medianDifference": 0.8576259981602452
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "NK and ILC",
+          "disease": "respiratory system disorder",
+          "diseaseDonors": 15,
+          "normalDonors": 11,
+          "medianDifference": 0.07673729258754847
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "T cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 53,
+          "normalDonors": 11,
+          "medianDifference": 0.34701988666140204
+        },
+        {
+          "storeId": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+          "coarseCellType": "T cells",
+          "disease": "respiratory system disorder",
+          "diseaseDonors": 15,
+          "normalDonors": 11,
+          "medianDifference": -0.23326514447715274
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "B cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 13,
+          "normalDonors": 35,
+          "medianDifference": 0.9663541331274978
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "B cells",
+          "disease": "post-COVID-19 disorder",
+          "diseaseDonors": 16,
+          "normalDonors": 35,
+          "medianDifference": -0.5805333253842684
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "Dendritic cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 4,
+          "normalDonors": 26,
+          "medianDifference": 0.6871419587385006
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "Dendritic cells",
+          "disease": "post-COVID-19 disorder",
+          "diseaseDonors": 14,
+          "normalDonors": 26,
+          "medianDifference": -0.32300125871394236
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "Monocytes",
+          "disease": "COVID-19",
+          "diseaseDonors": 12,
+          "normalDonors": 35,
+          "medianDifference": 0.37489418843054256
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "Monocytes",
+          "disease": "post-COVID-19 disorder",
+          "diseaseDonors": 20,
+          "normalDonors": 35,
+          "medianDifference": -0.35454359295739835
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "NK and ILC",
+          "disease": "COVID-19",
+          "diseaseDonors": 13,
+          "normalDonors": 35,
+          "medianDifference": 0.5584363461950952
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "NK and ILC",
+          "disease": "post-COVID-19 disorder",
+          "diseaseDonors": 18,
+          "normalDonors": 35,
+          "medianDifference": -0.1134795654933578
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "Plasma cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 4,
+          "normalDonors": 6,
+          "medianDifference": 0.3399008929881502
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "Plasma cells",
+          "disease": "post-COVID-19 disorder",
+          "diseaseDonors": 3,
+          "normalDonors": 6,
+          "medianDifference": -0.7668280692364902
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "Platelets",
+          "disease": "COVID-19",
+          "diseaseDonors": 3,
+          "normalDonors": 9,
+          "medianDifference": 1.1291794124114753
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "Platelets",
+          "disease": "post-COVID-19 disorder",
+          "diseaseDonors": 4,
+          "normalDonors": 9,
+          "medianDifference": 0.11138106484589572
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "T cells",
+          "disease": "COVID-19",
+          "diseaseDonors": 14,
+          "normalDonors": 35,
+          "medianDifference": 0.6276556410208518
+        },
+        {
+          "storeId": "yoshida_2022_pbmc_2a498ace",
+          "coarseCellType": "T cells",
+          "disease": "post-COVID-19 disorder",
+          "diseaseDonors": 20,
+          "normalDonors": 35,
+          "medianDifference": -0.04796069515534507
+        }
+      ]
+    },
+    "labelMap": [
+      {
+        "label": "naive thymus-derived CD4-positive, alpha-beta T cell",
+        "coarseCellType": "T cells",
+        "cells": 3774887,
+        "stores": 12
+      },
+      {
+        "label": "CD14-positive, CD16-negative classical monocyte",
+        "coarseCellType": "Monocytes",
+        "cells": 2628376,
+        "stores": 11
+      },
+      {
+        "label": "effector memory CD8-positive, alpha-beta T cell",
+        "coarseCellType": "T cells",
+        "cells": 1637732,
+        "stores": 12
+      },
+      {
+        "label": "central memory CD4-positive, alpha-beta T cell",
+        "coarseCellType": "T cells",
+        "cells": 1615138,
+        "stores": 11
+      },
+      {
+        "label": "CD16-positive, CD56-dim natural killer cell, human",
+        "coarseCellType": "NK and ILC",
+        "cells": 1553029,
+        "stores": 11
+      },
+      {
+        "label": "effector memory CD4-positive, alpha-beta T cell",
+        "coarseCellType": "T cells",
+        "cells": 1525102,
+        "stores": 11
+      },
+      {
+        "label": "naive thymus-derived CD8-positive, alpha-beta T cell",
+        "coarseCellType": "T cells",
+        "cells": 1018643,
+        "stores": 12
+      },
+      {
+        "label": "naive B cell",
+        "coarseCellType": "B cells",
+        "cells": 987091,
+        "stores": 12
+      },
+      {
+        "label": "CD8-positive, alpha-beta T cell",
+        "coarseCellType": "T cells",
+        "cells": 709760,
+        "stores": 3
+      },
+      {
+        "label": "B cell",
+        "coarseCellType": "B cells",
+        "cells": 618785,
+        "stores": 5
+      },
+      {
+        "label": "classical monocyte",
+        "coarseCellType": "Monocytes",
+        "cells": 548040,
+        "stores": 4
+      },
+      {
+        "label": "CD4-positive, alpha-beta T cell",
+        "coarseCellType": "T cells",
+        "cells": 535925,
+        "stores": 2
+      },
+      {
+        "label": "memory B cell",
+        "coarseCellType": "B cells",
+        "cells": 500112,
+        "stores": 11
+      },
+      {
+        "label": "mucosal-associated invariant T cell",
+        "coarseCellType": "T cells",
+        "cells": 425381,
+        "stores": 12
+      },
+      {
+        "label": "mature gamma-delta T cell",
+        "coarseCellType": "T cells",
+        "cells": 399675,
+        "stores": 11
+      },
+      {
+        "label": "CD14-low, CD16-positive monocyte",
+        "coarseCellType": "Monocytes",
+        "cells": 390144,
+        "stores": 10
+      },
+      {
+        "label": "natural killer cell",
+        "coarseCellType": "NK and ILC",
+        "cells": 275555,
+        "stores": 14
+      },
+      {
+        "label": "CD4-positive, alpha-beta memory T cell",
+        "coarseCellType": "T cells",
+        "cells": 258968,
+        "stores": 11
+      },
+      {
+        "label": "central memory CD8-positive, alpha-beta T cell",
+        "coarseCellType": "T cells",
+        "cells": 254863,
+        "stores": 12
+      },
+      {
+        "label": "mature alpha-beta T cell",
+        "coarseCellType": "T cells",
+        "cells": 253828,
+        "stores": 1
+      },
+      {
+        "label": "memory regulatory T cell",
+        "coarseCellType": "T cells",
+        "cells": 231240,
+        "stores": 10
+      },
+      {
+        "label": "naive regulatory T cell",
+        "coarseCellType": "T cells",
+        "cells": 151081,
+        "stores": 10
+      },
+      {
+        "label": "CD16-negative, CD56-bright natural killer cell, human",
+        "coarseCellType": "NK and ILC",
+        "cells": 132761,
+        "stores": 12
+      },
+      {
+        "label": "Be cell",
+        "coarseCellType": "",
+        "cells": 123541,
+        "stores": 10
+      },
+      {
+        "label": "CD1c-positive myeloid dendritic cell",
+        "coarseCellType": "Dendritic cells",
+        "cells": 120414,
+        "stores": 10
+      },
+      {
+        "label": "transitional stage B cell",
+        "coarseCellType": "B cells",
+        "cells": 110214,
+        "stores": 10
+      },
+      {
+        "label": "intermediate monocyte",
+        "coarseCellType": "Monocytes",
+        "cells": 91263,
+        "stores": 9
+      },
+      {
+        "label": "non-classical monocyte",
+        "coarseCellType": "Monocytes",
+        "cells": 82554,
+        "stores": 4
+      },
+      {
+        "label": "plasmacytoid dendritic cell",
+        "coarseCellType": "Dendritic cells",
+        "cells": 76004,
+        "stores": 14
+      },
+      {
+        "label": "platelet",
+        "coarseCellType": "Platelets",
+        "cells": 65195,
+        "stores": 11
+      },
+      {
+        "label": "memory CCR4-positive regulatory T cell",
+        "coarseCellType": "T cells",
+        "cells": 39362,
+        "stores": 10
+      },
+      {
+        "label": "plasma cell",
+        "coarseCellType": "Plasma cells",
+        "cells": 29813,
+        "stores": 13
+      },
+      {
+        "label": "CD4-positive helper T cell",
+        "coarseCellType": "T cells",
+        "cells": 29439,
+        "stores": 1
+      },
+      {
+        "label": "conventional dendritic cell",
+        "coarseCellType": "Dendritic cells",
+        "cells": 28883,
+        "stores": 4
+      },
+      {
+        "label": "double negative thymocyte",
+        "coarseCellType": "T cells",
+        "cells": 27880,
+        "stores": 10
+      },
+      {
+        "label": "CD8aa(I) thymocyte",
+        "coarseCellType": "T cells",
+        "cells": 25042,
+        "stores": 10
+      },
+      {
+        "label": "CD8-positive, alpha-beta cytotoxic T cell",
+        "coarseCellType": "T cells",
+        "cells": 24708,
+        "stores": 1
+      },
+      {
+        "label": "monocyte",
+        "coarseCellType": "Monocytes",
+        "cells": 23755,
+        "stores": 1
+      },
+      {
+        "label": "T cell",
+        "coarseCellType": "T cells",
+        "cells": 21784,
+        "stores": 10
+      },
+      {
+        "label": "erythrocyte",
+        "coarseCellType": "Erythroid",
+        "cells": 18648,
+        "stores": 11
+      },
+      {
+        "label": "gamma-delta T cell",
+        "coarseCellType": "T cells",
+        "cells": 17631,
+        "stores": 3
+      },
+      {
+        "label": "CD8-positive, alpha-beta regulatory T cell",
+        "coarseCellType": "T cells",
+        "cells": 14835,
+        "stores": 10
+      },
+      {
+        "label": "megakaryocyte",
+        "coarseCellType": "Platelets",
+        "cells": 13035,
+        "stores": 1
+      },
+      {
+        "label": "dendritic cell",
+        "coarseCellType": "Dendritic cells",
+        "cells": 12681,
+        "stores": 2
+      },
+      {
+        "label": "common myeloid progenitor",
+        "coarseCellType": "Progenitors",
+        "cells": 10246,
+        "stores": 10
+      },
+      {
+        "label": "CD8-positive, alpha-beta memory T cell",
+        "coarseCellType": "T cells",
+        "cells": 8631,
+        "stores": 11
+      },
+      {
+        "label": "plasmablast",
+        "coarseCellType": "Plasma cells",
+        "cells": 8340,
+        "stores": 4
+      },
+      {
+        "label": "lymphocyte",
+        "coarseCellType": "",
+        "cells": 8265,
+        "stores": 1
+      },
+      {
+        "label": "innate lymphoid cell",
+        "coarseCellType": "NK and ILC",
+        "cells": 8133,
+        "stores": 11
+      },
+      {
+        "label": "CD14-positive, CD16-positive monocyte",
+        "coarseCellType": "Monocytes",
+        "cells": 8127,
+        "stores": 1
+      },
+      {
+        "label": "CD141-positive myeloid dendritic cell",
+        "coarseCellType": "Dendritic cells",
+        "cells": 7799,
+        "stores": 10
+      },
+      {
+        "label": "effector memory CD8-positive, alpha-beta T cell, terminally differentiated",
+        "coarseCellType": "T cells",
+        "cells": 7237,
+        "stores": 2
+      },
+      {
+        "label": "regulatory T cell",
+        "coarseCellType": "T cells",
+        "cells": 7173,
+        "stores": 1
+      },
+      {
+        "label": "Axl+ dendritic cell, human",
+        "coarseCellType": "Dendritic cells",
+        "cells": 4421,
+        "stores": 10
+      },
+      {
+        "label": "class switched memory B cell",
+        "coarseCellType": "B cells",
+        "cells": 3353,
+        "stores": 1
+      },
+      {
+        "label": "progenitor cell",
+        "coarseCellType": "",
+        "cells": 3303,
+        "stores": 3
+      },
+      {
+        "label": "CD4-positive, alpha-beta cytotoxic T cell",
+        "coarseCellType": "T cells",
+        "cells": 3226,
+        "stores": 1
+      },
+      {
+        "label": "common lymphoid progenitor",
+        "coarseCellType": "Progenitors",
+        "cells": 3052,
+        "stores": 10
+      },
+      {
+        "label": "immature innate lymphoid cell",
+        "coarseCellType": "NK and ILC",
+        "cells": 3010,
+        "stores": 1
+      },
+      {
+        "label": "unknown",
+        "coarseCellType": "",
+        "cells": 2851,
+        "stores": 1
+      },
+      {
+        "label": "CD4-positive, CD25-positive, alpha-beta regulatory T cell",
+        "coarseCellType": "T cells",
+        "cells": 1527,
+        "stores": 1
+      },
+      {
+        "label": "macrophage",
+        "coarseCellType": "Monocytes",
+        "cells": 1446,
+        "stores": 2
+      },
+      {
+        "label": "hematopoietic precursor cell",
+        "coarseCellType": "Progenitors",
+        "cells": 864,
+        "stores": 1
+      },
+      {
+        "label": "effector memory CD4-positive, alpha-beta T cell, terminally differentiated",
+        "coarseCellType": "T cells",
+        "cells": 819,
+        "stores": 1
+      },
+      {
+        "label": "basophil mast progenitor cell",
+        "coarseCellType": "Progenitors",
+        "cells": 767,
+        "stores": 10
+      },
+      {
+        "label": "neutrophil",
+        "coarseCellType": "Granulocytes",
+        "cells": 669,
+        "stores": 1
+      },
+      {
+        "label": "mature NK T cell",
+        "coarseCellType": "T cells",
+        "cells": 510,
+        "stores": 1
+      },
+      {
+        "label": "group 3 innate lymphoid cell",
+        "coarseCellType": "NK and ILC",
+        "cells": 57,
+        "stores": 1
+      },
+      {
+        "label": "group 1 innate lymphoid cell",
+        "coarseCellType": "NK and ILC",
+        "cells": 36,
+        "stores": 1
+      },
+      {
+        "label": "granulocyte",
+        "coarseCellType": "Granulocytes",
+        "cells": 23,
+        "stores": 1
+      },
+      {
+        "label": "mast cell",
+        "coarseCellType": "Granulocytes",
+        "cells": 9,
+        "stores": 1
+      }
+    ],
+    "resources": {
+      "operationBaselineBytes": 479604736,
+      "operationPeakBytes": 4395249664,
+      "operationIncrementalPeakBytes": 3915644928,
+      "operationPeakSource": "cgroupMemoryCurrent",
+      "processTreeRssBaselineBytes": 496226304,
+      "processTreeRssPeakBytes": 4489768960,
+      "processTreeRssIncrementalPeakBytes": 3993542656,
+      "processTreeRssAfterBytes": 3089674240,
+      "cgroupMemoryCurrentBaselineBytes": 479604736,
+      "cgroupMemoryCurrentPeakBytes": 4395249664,
+      "cgroupMemoryCurrentAfterBytes": 3003252736,
+      "cgroupMemoryPeakBytes": null,
+      "cgroupMemoryPeakScope": "unavailable",
+      "memoryMaxBytes": 34359738368,
+      "memoryEventsDelta": null,
+      "cpuQuotaCores": null
+    },
+    "tables": {
+      "groups": {
+        "rows": 9271,
+        "bytes": 470889,
+        "sha256": "d5cc5dae2b3c5d034676e6d32e0ce7620dace3ceb612ca9b69b138e9d23a7912"
+      },
+      "donors": {
+        "rows": 6910,
+        "bytes": 342362,
+        "sha256": "d75a6ef7fededd0fbf886910cae07f06bf4822f8ca72f186032cf50d0a875238"
+      }
+    }
+  },
+  "elapsedSeconds": 290.09485268592834
+}

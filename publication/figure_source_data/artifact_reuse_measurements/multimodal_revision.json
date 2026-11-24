@@ -1,0 +1,52 @@
+{
+ "sizes": [
+  {
+   "cells": 100000,
+   "reuseSeconds": 8.544665383000023,
+   "freshSeconds": 69.14128927899992,
+   "reusePeakGiB": 4.426967620849609,
+   "freshPeakGiB": 10.299503326416016,
+   "reuseStages": 16,
+   "freshStages": 16
+  },
+  {
+   "cells": 300000,
+   "reuseSeconds": 9.966627792999986,
+   "freshSeconds": 154.1443852199999,
+   "reusePeakGiB": 4.740680694580078,
+   "freshPeakGiB": 11.289058685302734,
+   "reuseStages": 16,
+   "freshStages": 16
+  },
+  {
+   "cells": 600000,
+   "reuseSeconds": 14.724386097999968,
+   "freshSeconds": 318.555364544,
+   "reusePeakGiB": 4.655170440673828,
+   "freshPeakGiB": 10.672466278076172,
+   "reuseStages": 16,
+   "freshStages": 16
+  },
+  {
+   "cells": 1000000,
+   "reuseSeconds": 16.165871061000303,
+   "freshSeconds": 528.5468857440002,
+   "reusePeakGiB": 5.048267364501953,
+   "freshPeakGiB": 9.608028411865234,
+   "reuseStages": 16,
+   "freshStages": 16
+  },
+  {
+   "cells": 1457527,
+   "reuseSeconds": 20.35000904100002,
+   "freshSeconds": 814.7676026350006,
+   "reusePeakGiB": 5.546428680419922,
+   "freshPeakGiB": 11.058147430419922,
+   "reuseStages": 16,
+   "freshStages": 16
+  }
+ ],
+ "source": [
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq"
+ ]
+}

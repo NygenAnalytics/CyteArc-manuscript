@@ -1,0 +1,91 @@
+{
+ "sizes": [
+  {
+   "part": "reference_500000",
+   "cells": 500003,
+   "nonzeros": 689239787,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_1500000",
+   "cells": 1499999,
+   "nonzeros": 2068765663,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_3000000",
+   "cells": 2999999,
+   "nonzeros": 4137339630,
+   "overRLimit": true
+  },
+  {
+   "part": "reference_all",
+   "cells": 4292870,
+   "nonzeros": 5920720691,
+   "overRLimit": true
+  }
+ ],
+ "methods": {
+  "unintegrated": [
+   {
+    "part": "reference_500000",
+    "seconds": 206.269618423
+   },
+   {
+    "part": "reference_1500000",
+    "seconds": 545.9251861820002
+   },
+   {
+    "part": "reference_3000000",
+    "seconds": 1621.3876123279997
+   },
+   {
+    "part": "reference_all",
+    "seconds": 1757.2539808960005
+   }
+  ],
+  "seurat_map": [
+   {
+    "part": "reference_500000",
+    "seconds": 909.6828804016113
+   },
+   {
+    "part": "reference_1500000",
+    "seconds": 2135.9886198043823
+   }
+  ],
+  "symphony": [
+   {
+    "part": "reference_500000",
+    "seconds": 1118.9214100837708
+   },
+   {
+    "part": "reference_1500000",
+    "seconds": 3367.6028196811676
+   }
+  ],
+  "celltypist_hvg": [
+   {
+    "part": "reference_500000",
+    "seconds": 441.9095458984375
+   },
+   {
+    "part": "reference_1500000",
+    "seconds": 2448.7951357364655
+   },
+   {
+    "part": "reference_3000000",
+    "seconds": 4554.774781703949
+   },
+   {
+    "part": "reference_all",
+    "seconds": 6710.465706825256
+   }
+  ]
+ },
+ "queryCells": 100002,
+ "source": [
+  ".build/derived/mapping/reference_ladder.json",
+  "experiments/mapping/records/reference_ladder.json"
+ ]
+}

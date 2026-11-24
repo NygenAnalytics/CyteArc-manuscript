@@ -1,0 +1,19 @@
+{
+ "cells": 371747,
+ "raster": "experiments/integration/records/t_cell_reference/combat/raster.npz",
+ "cellsPerSubtype": {
+  "CD4 central memory": 119030,
+  "CD4 naive": 120555,
+  "CD8 effector": 71468,
+  "CD8 naive": 23951,
+  "MAIT": 4976,
+  "Treg": 22026,
+  "V\u03b42 \u03b3\u03b4 T": 6262,
+  "unlabelled": 3479
+ },
+ "source": [
+  "experiments/integration/records/t_cell_reference/combat/raster_summary.json",
+  "experiments/integration/records/t_cell_reference/combat/raster.npz",
+  "experiments/integration/records/t_cell_reference/combat/result.json"
+ ]
+}
