@@ -1,0 +1,141 @@
+{
+  "experimentalConditions": {
+    "machine": {
+      "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+      "cpuCount": 8,
+      "workersDetected": 8,
+      "memoryBytes": 34359738368
+    }
+  },
+  "groups": [
+    "T",
+    "NK",
+    "B",
+    "Mono",
+    "DC",
+    "Other"
+  ],
+  "markers": {
+    "T": [
+      "CD3D",
+      "CD3E",
+      "IL7R"
+    ],
+    "NK": [
+      "NKG7",
+      "GNLY",
+      "KLRD1"
+    ],
+    "B": [
+      "MS4A1",
+      "CD79A",
+      "CD79B"
+    ],
+    "Mono": [
+      "LYZ",
+      "S100A8",
+      "FCGR3A"
+    ],
+    "DC": [
+      "FCER1A",
+      "CLEC10A",
+      "LILRA4"
+    ],
+    "Other": [
+      "PPBP",
+      "PF4",
+      "HBB"
+    ]
+  },
+  "seed": 4466,
+  "threshold": 0.6,
+  "cells": 8486,
+  "runNeighborsK": 21,
+  "heatmapGenes": [
+    "CD3D",
+    "CD3E",
+    "IL7R",
+    "NKG7",
+    "GNLY",
+    "KLRD1",
+    "MS4A1",
+    "CD79A",
+    "CD79B",
+    "LYZ",
+    "S100A8",
+    "FCGR3A",
+    "FCER1A",
+    "CLEC10A",
+    "LILRA4",
+    "PPBP",
+    "PF4",
+    "HBB"
+  ],
+  "dotGenes": [
+    "CD3D",
+    "NKG7",
+    "MS4A1",
+    "LYZ",
+    "FCER1A",
+    "PPBP"
+  ],
+  "fork": {
+    "k11": {
+      "clusters": 18,
+      "neighbors": {
+        "artifactId": "6bf42098783a72533b43a3230bd58cc5580ff2108162cfb7ecd784a565127107",
+        "operation": "query_neighbors",
+        "parameters": {
+          "k": 11,
+          "distance_metric": "l2"
+        },
+        "inputs": {
+          "ann_index": {
+            "kind": "ann_index",
+            "artifactId": "d648550375740c4f717e649755921a3d24a6621487ad044ef7afb5411beaba55"
+          },
+          "coordinates": {
+            "kind": "reduction",
+            "artifactId": "d52d4fa4b788b9feac2bd804eb50ae0aa38a65f4fdd7de9b68406f66cd81378e"
+          }
+        }
+      }
+    },
+    "k15": {
+      "clusters": 18,
+      "neighbors": {
+        "artifactId": "2aa4f4f9164c5d7afee9cee8add22c62f2cff36bc14419b74f7e926cf604d007",
+        "operation": "query_neighbors",
+        "parameters": {
+          "k": 15,
+          "distance_metric": "l2"
+        },
+        "inputs": {
+          "ann_index": {
+            "kind": "ann_index",
+            "artifactId": "d648550375740c4f717e649755921a3d24a6621487ad044ef7afb5411beaba55"
+          },
+          "coordinates": {
+            "kind": "reduction",
+            "artifactId": "d52d4fa4b788b9feac2bd804eb50ae0aa38a65f4fdd7de9b68406f66cd81378e"
+          }
+        }
+      }
+    }
+  },
+  "mount": {
+    "tCells": 3537,
+    "subclusters": 10,
+    "userStoreBytes": 8865175,
+    "atlasBytes": 116413076,
+    "atlasUnchanged": true
+  },
+  "mapping": {
+    "queryCells": 3948,
+    "query": "tenx_5K_pbmc_rnaseq",
+    "assignedShare": 0.9536474164133738,
+    "referenceBytesRead": 11312364,
+    "referenceStoreBytes": 116864987,
+    "placedFrom": "mean UMAP position of the three nearest reference cells"
+  }
+}

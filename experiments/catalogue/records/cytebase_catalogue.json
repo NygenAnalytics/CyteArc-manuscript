@@ -1,0 +1,78 @@
+{
+  "release": "2610",
+  "datasets": {
+    "stores": 1372,
+    "collections": 376,
+    "statuses": {
+      "ready": 1372
+    },
+    "observations": 178034800,
+    "primaryObservations": 163574538,
+    "smallest": 301,
+    "largest": 11441407,
+    "median": 16992.5,
+    "spatial": 639,
+    "spatialAssays": [
+      "Visium Spatial Gene Expression V1",
+      "Slide-seqV2"
+    ]
+  },
+  "organisms": {
+    "count": 10,
+    "human": 1009,
+    "mouse": 329,
+    "otherDatasets": 34,
+    "otherOrganisms": 8,
+    "perOrganism": {
+      "Homo sapiens": 1009,
+      "Mus musculus": 329,
+      "Callithrix jacchus": 23,
+      "Macaca mulatta": 5,
+      "Danio rerio": 1,
+      "Microcebus murinus": 1,
+      "Pan troglodytes": 1,
+      "Rattus norvegicus": 1,
+      "Sus scrofa": 1,
+      "Sus scrofa domesticus": 1
+    }
+  },
+  "terms": {
+    "assays": 43,
+    "tissues": 715,
+    "diseases": 324,
+    "cellTypes": 1124
+  },
+  "selection": {
+    "cellxgeneDatasets": 2170,
+    "skipped": 798,
+    "skippedByReason": {
+      "All cells are secondary": 792,
+      "Known non-RNA assays: EFO:0030007": 6
+    }
+  },
+  "build": {
+    "collectionsExamined": 398,
+    "collectionsRegistered": 376,
+    "collectionsHeldBack": 11,
+    "datasetsAwaitingAssayReview": 29,
+    "heldBackCollectionIds": [
+      "071b706a-7ea7-47a4-bddf-6457725839fc",
+      "20a1dadf-a3a7-4783-b311-fcff3c457763",
+      "37f1f46d-6dfa-482c-9b17-d5850d8536f6",
+      "398e34a9-8736-4b27-a9a7-31a47a67f446",
+      "4f586cb6-972b-4ef7-a4ef-3c3800a3c004",
+      "8b35aa1f-6bcf-4a51-abc3-a3f336a44ae6",
+      "982f9f44-031c-4c8c-91ee-dcaa53b10151",
+      "bd552f76-1f1b-43a3-b9ee-0aace57e90d6",
+      "be2285ed-d27d-4249-97a2-9b23ea924413",
+      "e80f5450-0a0f-4312-a728-431d50aeb8fe",
+      "fdebfda9-bb9a-4b4b-97e5-651097ea07b0"
+    ],
+    "selectionSha256": "782851fea2138ed93f3e079a6059317c1ea3e1ac6a4ff3a88f0153f9f87c4a50"
+  },
+  "sources": {
+    "bucket": "Nygen/cytebase-2610",
+    "catalogue": "hf://buckets/Nygen/cytebase-2610/catalog/cytebase.duckdb",
+    "sha256": "faeed3858e03423dd6f645e4cc795be3d113be48359eb66ab65480209f928920"
+  }
+}

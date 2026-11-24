@@ -1,0 +1,55 @@
+{
+ "raster": "experiments/mapping/records/ladder_reference_umap_raster.npz",
+ "types": [
+  {
+   "type": "B cells",
+   "cells": 362613
+  },
+  {
+   "type": "Dendritic cells",
+   "cells": 56357
+  },
+  {
+   "type": "Erythroid",
+   "cells": 2909
+  },
+  {
+   "type": "Monocytes",
+   "cells": 755828
+  },
+  {
+   "type": "NK and ILC",
+   "cells": 570095
+  },
+  {
+   "type": "Plasma cells",
+   "cells": 27690
+  },
+  {
+   "type": "Platelets",
+   "cells": 34802
+  },
+  {
+   "type": "Progenitors",
+   "cells": 8951
+  },
+  {
+   "type": "T cells",
+   "cells": 2475981
+  }
+ ],
+ "rasterCells": 4295226,
+ "reference": {
+  "cells": 4292870,
+  "studies": 7
+ },
+ "query": {
+  "cells": 100002,
+  "studies": 3
+ },
+ "source": [
+  "experiments/mapping/records/reference_ladder.json",
+  "experiments/reuse/records/blood_cohort_analysis.json",
+  "experiments/mapping/records/ladder_reference_umap_raster.npz"
+ ]
+}

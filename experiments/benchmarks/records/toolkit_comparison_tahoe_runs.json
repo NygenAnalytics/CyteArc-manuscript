@@ -1,0 +1,181 @@
+{
+ "provenance": {
+  "capturedAt": "2026-11-13T08:03:54.943504+00:00"
+ },
+ "records": {
+  "rna_workflow_tahoe_95624334_bpcells_cached_spca_cpus_16_replicate_1_memory_336gib": {
+   "tool": "bpcells_cached_spca",
+   "dataset": "tahoe_95624334",
+   "replicate": 1,
+   "container": {
+    "cpu": 16,
+    "memoryMb": 344064,
+    "workers": 16,
+    "preemptible": false,
+    "region": "us-central"
+   },
+   "image": {
+    "name": "r_multimodal",
+    "r": {
+     "family": "r",
+     "base": "rocker/r-ver:4.6.1",
+     "cranSnapshot": "https://packagemanager.posit.co/cran/__linux__/noble/2026-09-15",
+     "BPCells": "v0.3.1",
+     "presto": "b5df6ee6097eb62522f2e557aa93ac21bab2d05f"
+    },
+    "python": {
+     "family": "python",
+     "base": "debian_slim python 3.14.4",
+     "apt": [
+      "git",
+      "build-essential",
+      "libfftw3-dev",
+      "libmetis-dev",
+      "libtbb-dev"
+     ],
+     "build": {
+      "HNSWLIB_NO_NATIVE": "1",
+      "noBinary": [
+       "hnswlib"
+      ]
+     },
+     "cytearcSource": "pypi:cytearc==1.3.0",
+     "requirements": "experiments/runtime/python-cytearc.txt",
+     "requirementsSha256": "a95cba95de39a5a074640953574088e826db2a15e5e26a94b38ff7d8e26f09a0"
+    }
+   },
+   "restarts": 1,
+   "interruptions": [],
+   "startedAt": 1794488240.4963734,
+   "status": "killed",
+   "currentStep": "runLeiden",
+   "completedSteps": [
+    "convertParquet",
+    "uncompressInput",
+    "convertMatrix",
+    "transposeMatrix",
+    "filterCells",
+    "runNormalization",
+    "markHvgs",
+    "runPca",
+    "queryNeighbors",
+    "runUmap"
+   ],
+   "steps": {
+    "convertParquet": {
+     "start": 1794489396.78958,
+     "end": 1794490007.97532,
+     "seconds": 611.1857399940491,
+     "peakRssBytes": 59455893504,
+     "peakCgroupBytes": 49047502848,
+     "peakAnonBytes": 0
+    },
+    "uncompressInput": {
+     "start": 1794490013.27275,
+     "end": 1794490021.19103,
+     "seconds": 7.918280124664307,
+     "peakRssBytes": 1431195648,
+     "peakCgroupBytes": 1383530496,
+     "peakAnonBytes": 0
+    },
+    "convertMatrix": {
+     "start": 1794490021.19873,
+     "end": 1794494613.75747,
+     "seconds": 4592.558739900589,
+     "peakRssBytes": 31596883968,
+     "peakCgroupBytes": 31546228736,
+     "peakAnonBytes": 0
+    },
+    "transposeMatrix": {
+     "start": 1794494660.13383,
+     "end": 1794499944.62714,
+     "seconds": 5284.49330997467,
+     "peakRssBytes": 35446099968,
+     "peakCgroupBytes": 35398205440,
+     "peakAnonBytes": 0
+    },
+    "filterCells": {
+     "start": 1794499991.76838,
+     "end": 1794501347.46478,
+     "seconds": 1355.6964001655579,
+     "peakRssBytes": 31445868544,
+     "peakCgroupBytes": 31398027264,
+     "peakAnonBytes": 0
+    },
+    "runNormalization": {
+     "start": 1794501347.4655,
+     "end": 1794501387.81946,
+     "seconds": 40.353959798812866,
+     "peakRssBytes": 26529984512,
+     "peakCgroupBytes": 26482171904,
+     "peakAnonBytes": 0
+    },
+    "markHvgs": {
+     "start": 1794501387.81995,
+     "end": 1794501746.79516,
+     "seconds": 358.97520995140076,
+     "peakRssBytes": 32260550656,
+     "peakCgroupBytes": 32212606976,
+     "peakAnonBytes": 0
+    },
+    "runPca": {
+     "start": 1794501746.79563,
+     "end": 1794537959.99792,
+     "seconds": 36213.202290058136,
+     "peakRssBytes": 69375504384,
+     "peakCgroupBytes": 69287940096,
+     "peakAnonBytes": 0
+    },
+    "queryNeighbors": {
+     "start": 1794537960.00052,
+     "end": 1794542161.94388,
+     "seconds": 4201.943360090256,
+     "peakRssBytes": 148001239040,
+     "peakCgroupBytes": 147948363776,
+     "peakAnonBytes": 0
+    },
+    "runUmap": {
+     "start": 1794542161.94439,
+     "end": 1794547298.21438,
+     "seconds": 5136.269989967346,
+     "peakRssBytes": 272369745920,
+     "peakCgroupBytes": 272316882944,
+     "peakAnonBytes": 0
+    },
+    "runLeiden": {
+     "start": 1794547298.21516,
+     "peakRssBytes": 346041729024,
+     "peakCgroupBytes": 345988009984,
+     "peakAnonBytes": 0
+    }
+   },
+   "stepOrder": [
+    "convertParquet",
+    "uncompressInput",
+    "convertMatrix",
+    "transposeMatrix",
+    "filterCells",
+    "runNormalization",
+    "markHvgs",
+    "runPca",
+    "queryNeighbors",
+    "runUmap",
+    "runLeiden"
+   ],
+   "peakRssBytes": 346041729024,
+   "peakCgroupBytes": 345988009984,
+   "peakAnonBytes": 0,
+   "peakWorkDirectoryBytes": 1914888308277,
+   "memorySampleSeconds": 0.5,
+   "elapsedSeconds": 62732.04393649101,
+   "download": {
+    "seconds": 1154.5417740345001,
+    "bytes": 337647333230,
+    "inputMode": "directory"
+   },
+   "failedStep": "runLeiden",
+   "error": "container ended during 'runLeiden'; last recorded peak 322.2 GiB of 336 GiB",
+   "sourceRecordId": "rna_workflow_tahoe_95624334_bpcells_cached_spca_cpus_16_replicate_1_memory_336gib"
+  }
+ }
+}

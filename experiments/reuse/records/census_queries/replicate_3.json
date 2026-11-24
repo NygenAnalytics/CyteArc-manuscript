@@ -1,0 +1,25 @@
+{
+  "module": "reuse.census_query",
+  "function": "run",
+  "region": "us-central",
+  "status": "completed",
+  "result": {
+    "censusVersion": "2025-11-08",
+    "datasetId": "53d208b0-2cfd-4366-9866-c3c6114081bc",
+    "totalCells": 1136218,
+    "cellType": "B cell",
+    "cellsSelected": 114495,
+    "gene": "MS4A1",
+    "geneEntries": 106711,
+    "geneMeanInSelected": 1.8750736584495928,
+    "openSeconds": 7.014585005,
+    "openReceivedBytes": 53267,
+    "querySeconds": 52.551942125,
+    "queryReceivedBytes": 4645119803,
+    "packages": {
+      "cellxgene_census": "1.18.0",
+      "tiledbsoma": "2.3.0"
+    }
+  },
+  "elapsedSeconds": 65.63585877418518
+}

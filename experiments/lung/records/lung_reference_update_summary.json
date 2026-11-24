@@ -1,0 +1,4899 @@
+{
+  "step": "stats",
+  "status": "ok",
+  "test": false,
+  "experimentalConditions": {
+    "datasets": {
+      "hlca_core": {
+        "datasetId": "066943a2-fdac-4b29-b348-40cede398e4e",
+        "datasetVersionId": "688185ad-11c2-4172-a53a-f4f1f4076860",
+        "cells": 584944
+      },
+      "hlca_full": {
+        "datasetId": "9f222629-9e39-47d0-b83f-e08d610c7479",
+        "datasetVersionId": "5f863718-02a6-46cb-83e7-52be988b915b",
+        "cells": 2282447
+      },
+      "natri_ild": {
+        "datasetId": "f14bc322-1322-4184-8d16-409557525ea5",
+        "datasetVersionId": "c3d9262e-0dc5-4eca-bf20-56e6d96d0306",
+        "cells": 471905
+      }
+    },
+    "container": {
+      "containerCpu": 4.0,
+      "containerMemoryMb": 16384,
+      "workers": 4,
+      "budgetBytes": 12884901888
+    },
+    "parameters": {
+      "hvgCount": 2000,
+      "pcaDims": 30,
+      "neighbours": 15,
+      "minFeaturesPerCell": 10,
+      "filtering": false,
+      "batchIntegration": null,
+      "levels": [
+        "ann_level_1",
+        "ann_level_3",
+        "ann_finest_level"
+      ],
+      "voteThreshold": 0.6,
+      "saveK": 15,
+      "missingFeaturePolicy": "reference_mean",
+      "ildDiseases": [
+        "pulmonary fibrosis",
+        "interstitial lung disease",
+        "hypersensitivity pneumonitis",
+        "non-specific interstitial pneumonia",
+        "pulmonary sarcoidosis"
+      ],
+      "natriLabStudy": "Banovich_Kropski_2020",
+      "leidenResolution": 1.0,
+      "leidenSeed": 4444,
+      "maxCellsPerGroup": 5000,
+      "minDetectedFraction": 0.01,
+      "topGenes": 200,
+      "samplingSeed": 26
+    },
+    "design": {
+      "source": "experiments.lung.reference_revision._design; original specification fixed on 1 October 2026 before any result",
+      "versions": {
+        "v1": "the published core HLCA reference of lung_pipeline.py (convert_hlca_core.json); labels ann_level_1, ann_level_3 and ann_finest_level of the core store",
+        "v2": "the core HLCA plus the Kaminski_2020 extension cells with an ILD diagnosis or disease 'normal' (its COPD donors left out, as in part A), in a store mounted on the published full HLCA, with v1's parameters; labels in the columns revision_<level>"
+      },
+      "labels": {
+        "coreCells": "their v1 labels, read from the core store by cell identifier",
+        "revisionCells": "the HLCA's annotation of the extension, with ['Unknown', ''] made blank so that they never vote",
+        "revisedCells": "original_ann_nonharmonized == 'Aberrant_Basaloid' takes {'ann_level_1': 'Epithelial', 'ann_level_3': 'Aberrant basaloid', 'ann_finest_level': 'Aberrant basaloid'}",
+        "fallback": "a pure annotation revision is not needed: the full HLCA holds the authors' labels; the job stops if they are missing"
+      },
+      "centres": {
+        "natri": {
+          "name": "Natri",
+          "source": "natri_ild",
+          "cells": "donorClass == 'neither' in natri_cells.csv.gz"
+        },
+        "lafyatis_2019": {
+          "name": "Lafyatis_2019",
+          "source": "hlca_full",
+          "cells": "study == 'Lafyatis_2019' in replication_cells.csv.gz"
+        },
+        "misharin_budinger_2018": {
+          "name": "Misharin_Budinger_2018",
+          "source": "hlca_full",
+          "cells": "study == 'Misharin_Budinger_2018' in replication_cells.csv.gz"
+        },
+        "schiller_2020": {
+          "name": "Schiller_2020",
+          "source": "hlca_full",
+          "cells": "study == 'Schiller_2020' in replication_cells.csv.gz"
+        },
+        "sheppard_2020": {
+          "name": "Sheppard_2020",
+          "source": "hlca_full",
+          "cells": "study == 'Sheppard_2020' in replication_cells.csv.gz"
+        }
+      },
+      "recipe": "snapshot of the centre's cells; per version run_mapping (save_k 15, missing features reference_mean) and run_label_transfer at ['ann_level_1', 'ann_level_3', 'ann_finest_level'] with threshold_fraction 0.6; phase 1 with v1, phase 2 with v1 and v2 in the same store",
+      "unexplained": "experiments.lung.lung_analysis: within each lineage (the version's ann_level_1 label), distance to the nearest reference cell above the 99th percentile (inverted_cdf) of the calibration controls' distances to the same version; controls scored leave one out",
+      "calibration": "Natri: its 15 control lungs; the other centres: their own control donors when at least 3, else the controls of the other centres of this experiment with the same assay (Kaminski_2020's controls are reference cells of v2 and calibrate nobody); the same under both versions",
+      "reads": "Zarr stores opened read-only for the published stores and the revised reference, wrapped with experiments/runtime/recording_store.py (cytearc.storage.stores.make_store patched for those locations only, as mounting.py)",
+      "traceability": "v1 labels, votes and distances rebuilt from the frozen v1 label transfers alone, in a new read-only handle with no reference opened, compared exactly with the v1 table of phase 1; artifacts of the v1 and v2 lineages classed reused, new or superseded",
+      "completeRerun": "the Natri recipe with both versions in a fresh store mounted on the published Natri store, alone on the bucket after the Natri update",
+      "parameters": {
+        "hvgCount": 2000,
+        "pcaDims": 30,
+        "neighbours": 15,
+        "levels": [
+          "ann_level_1",
+          "ann_level_3",
+          "ann_finest_level"
+        ],
+        "voteThreshold": 0.6,
+        "missingFeaturePolicy": "reference_mean",
+        "newLabel": "Aberrant basaloid",
+        "revisedLabels": {
+          "ann_level_1": "Epithelial",
+          "ann_level_3": "Aberrant basaloid",
+          "ann_finest_level": "Aberrant basaloid"
+        },
+        "noVote": [
+          "Unknown",
+          ""
+        ],
+        "testSample": {
+          "seed": 30,
+          "core": 2000,
+          "revision": 1500,
+          "perCentre": 1000,
+          "perNatriDonor": 60
+        }
+      }
+    }
+  },
+  "design": {
+    "source": "experiments.lung.reference_revision._design; original specification fixed on 1 October 2026 before any result",
+    "versions": {
+      "v1": "the published core HLCA reference of lung_pipeline.py (convert_hlca_core.json); labels ann_level_1, ann_level_3 and ann_finest_level of the core store",
+      "v2": "the core HLCA plus the Kaminski_2020 extension cells with an ILD diagnosis or disease 'normal' (its COPD donors left out, as in part A), in a store mounted on the published full HLCA, with v1's parameters; labels in the columns revision_<level>"
+    },
+    "labels": {
+      "coreCells": "their v1 labels, read from the core store by cell identifier",
+      "revisionCells": "the HLCA's annotation of the extension, with ['Unknown', ''] made blank so that they never vote",
+      "revisedCells": "original_ann_nonharmonized == 'Aberrant_Basaloid' takes {'ann_level_1': 'Epithelial', 'ann_level_3': 'Aberrant basaloid', 'ann_finest_level': 'Aberrant basaloid'}",
+      "fallback": "a pure annotation revision is not needed: the full HLCA holds the authors' labels; the job stops if they are missing"
+    },
+    "centres": {
+      "natri": {
+        "name": "Natri",
+        "source": "natri_ild",
+        "cells": "donorClass == 'neither' in natri_cells.csv.gz"
+      },
+      "lafyatis_2019": {
+        "name": "Lafyatis_2019",
+        "source": "hlca_full",
+        "cells": "study == 'Lafyatis_2019' in replication_cells.csv.gz"
+      },
+      "misharin_budinger_2018": {
+        "name": "Misharin_Budinger_2018",
+        "source": "hlca_full",
+        "cells": "study == 'Misharin_Budinger_2018' in replication_cells.csv.gz"
+      },
+      "schiller_2020": {
+        "name": "Schiller_2020",
+        "source": "hlca_full",
+        "cells": "study == 'Schiller_2020' in replication_cells.csv.gz"
+      },
+      "sheppard_2020": {
+        "name": "Sheppard_2020",
+        "source": "hlca_full",
+        "cells": "study == 'Sheppard_2020' in replication_cells.csv.gz"
+      }
+    },
+    "recipe": "snapshot of the centre's cells; per version run_mapping (save_k 15, missing features reference_mean) and run_label_transfer at ['ann_level_1', 'ann_level_3', 'ann_finest_level'] with threshold_fraction 0.6; phase 1 with v1, phase 2 with v1 and v2 in the same store",
+    "unexplained": "experiments.lung.lung_analysis: within each lineage (the version's ann_level_1 label), distance to the nearest reference cell above the 99th percentile (inverted_cdf) of the calibration controls' distances to the same version; controls scored leave one out",
+    "calibration": "Natri: its 15 control lungs; the other centres: their own control donors when at least 3, else the controls of the other centres of this experiment with the same assay (Kaminski_2020's controls are reference cells of v2 and calibrate nobody); the same under both versions",
+    "reads": "Zarr stores opened read-only for the published stores and the revised reference, wrapped with experiments/runtime/recording_store.py (cytearc.storage.stores.make_store patched for those locations only, as mounting.py)",
+    "traceability": "v1 labels, votes and distances rebuilt from the frozen v1 label transfers alone, in a new read-only handle with no reference opened, compared exactly with the v1 table of phase 1; artifacts of the v1 and v2 lineages classed reused, new or superseded",
+    "completeRerun": "the Natri recipe with both versions in a fresh store mounted on the published Natri store, alone on the bucket after the Natri update",
+    "parameters": {
+      "hvgCount": 2000,
+      "pcaDims": 30,
+      "neighbours": 15,
+      "levels": [
+        "ann_level_1",
+        "ann_level_3",
+        "ann_finest_level"
+      ],
+      "voteThreshold": 0.6,
+      "missingFeaturePolicy": "reference_mean",
+      "newLabel": "Aberrant basaloid",
+      "revisedLabels": {
+        "ann_level_1": "Epithelial",
+        "ann_level_3": "Aberrant basaloid",
+        "ann_finest_level": "Aberrant basaloid"
+      },
+      "noVote": [
+        "Unknown",
+        ""
+      ],
+      "testSample": {
+        "seed": 30,
+        "core": 2000,
+        "revision": 1500,
+        "perCentre": 1000,
+        "perNatriDonor": 60
+      }
+    }
+  },
+  "reference": {
+    "selection": {
+      "rule": "active core cells, and active Kaminski_2020 extension cells with disease in the ILD diagnoses or 'normal'",
+      "core": {
+        "cells": 584944,
+        "donors": 107
+      },
+      "revisionStudy": {
+        "cells": 307650,
+        "donors": 78
+      },
+      "leftOut": {
+        "cells": 67943,
+        "donors": 18,
+        "diseases": [
+          "chronic obstructive pulmonary disease"
+        ]
+      },
+      "added": {
+        "cells": 239707,
+        "donors": 60
+      },
+      "addedByDisease": [
+        {
+          "disease": "normal",
+          "cells": 95303,
+          "donors": 28,
+          "basaloidCells": 0
+        },
+        {
+          "disease": "pulmonary fibrosis",
+          "cells": 144404,
+          "donors": 32,
+          "basaloidCells": 448
+        }
+      ],
+      "selected": {
+        "cells": 824651,
+        "donors": 166
+      },
+      "basaloid": {
+        "cells": 448,
+        "donors": 30,
+        "authorLabel": "Aberrant_Basaloid",
+        "byDisease": {
+          "pulmonary fibrosis": 448
+        },
+        "hlcaLabelsBefore": {
+          "ann_level_1": {
+            "Epithelial": 434,
+            "Unknown": 13,
+            "Endothelial": 1
+          },
+          "ann_level_3": {
+            "Unknown": 397,
+            "AT2": 22,
+            "Secretory": 10,
+            "AT1": 10,
+            "Basal": 5,
+            "Multiciliated lineage": 3,
+            "Rare": 1
+          },
+          "ann_finest_level": {
+            "Unknown": 407,
+            "AT2": 19,
+            "AT1": 10,
+            "Goblet (nasal)": 7,
+            "Multiciliated (non-nasal)": 3,
+            "Hillock-like": 1,
+            "Ionocyte": 1
+          }
+        }
+      },
+      "labels": {
+        "ann_level_1": {
+          "coreCells": 584944,
+          "coreLabelsSameInFullHlca": 584944,
+          "coreClasses": 4,
+          "revisionCellsUnlabelled": 336,
+          "revisionClassesNotInCore": [],
+          "classes": 4,
+          "counts": {
+            "Immune": 438139,
+            "Epithelial": 299793,
+            "Endothelial": 54450,
+            "Stroma": 31933
+          }
+        },
+        "ann_level_3": {
+          "coreCells": 584944,
+          "coreLabelsSameInFullHlca": 584944,
+          "coreClasses": 25,
+          "revisionCellsUnlabelled": 40477,
+          "revisionClassesNotInCore": [],
+          "classes": 26,
+          "counts": {
+            "Macrophages": 226906,
+            "Basal": 86094,
+            "Secretory": 82247,
+            "T cell lineage": 71554,
+            "AT2": 65498,
+            "Multiciliated lineage": 49706,
+            "Monocytes": 44498,
+            "Fibroblasts": 25729,
+            "EC capillary": 24389,
+            "Innate lymphoid cell NK": 23023,
+            "Dendritic cells": 16594,
+            "EC venous": 15124,
+            "B cell lineage": 12184,
+            "AT1": 8605,
+            "EC arterial": 7669,
+            "Mast cells": 7347,
+            "Lymphatic EC mature": 5311,
+            "Submucosal Secretory": 4702,
+            "None": 3286,
+            "Rare": 928,
+            "Myofibroblasts": 737,
+            "Lymphatic EC differentiating": 637,
+            "SM activated stress response": 591,
+            "Aberrant basaloid": 448,
+            "Smooth muscle FAM83D+": 339,
+            "Lymphatic EC proliferating": 28
+          }
+        },
+        "ann_finest_level": {
+          "coreCells": 584944,
+          "coreLabelsSameInFullHlca": 584944,
+          "coreClasses": 61,
+          "revisionCellsUnlabelled": 102232,
+          "revisionClassesNotInCore": [],
+          "classes": 62,
+          "counts": {
+            "Alveolar macrophages": 108619,
+            "AT2": 64423,
+            "Monocyte-derived Mph": 51866,
+            "Multiciliated (non-nasal)": 43744,
+            "Suprabasal": 41465,
+            "Basal resting": 39354,
+            "CD8 T cells": 38227,
+            "Goblet (nasal)": 35964,
+            "Classical monocytes": 29402,
+            "CD4 T cells": 27515,
+            "Club (nasal)": 26069,
+            "NK cells": 23023,
+            "EC general capillary": 16813,
+            "DC2": 14011,
+            "Adventitial fibroblasts": 12211,
+            "Non-classical monocytes": 11640,
+            "B cells": 10087,
+            "Club (non-nasal)": 10027,
+            "Alveolar Mph CCL3+": 9106,
+            "AT1": 8605,
+            "EC venous systemic": 7928,
+            "EC arterial": 7669,
+            "EC aerocyte capillary": 7449,
+            "Mast cells": 7347,
+            "EC venous pulmonary": 6781,
+            "Alveolar fibroblasts": 5722,
+            "Lymphatic EC mature": 5311,
+            "pre-TB secretory": 5037,
+            "Interstitial Mph perivascular": 5035,
+            "Multiciliated (nasal)": 4869,
+            "Hillock-like": 4629,
+            "Smooth muscle": 3391,
+            "Pericytes": 3320,
+            "Alveolar Mph proliferating": 2427,
+            "Plasma cells": 2092,
+            "Peribronchial fibroblasts": 2089,
+            "Goblet (bronchial)": 1685,
+            "SMG serous (nasal)": 1472,
+            "AT0": 1458,
+            "SMG serous (bronchial)": 1417,
+            "Alveolar Mph MT-positive": 1303,
+            "SMG duct": 1275,
+            "Deuterosomal": 1040,
+            "AT2 proliferating": 1029,
+            "Goblet (subsegmental)": 969,
+            "Plasmacytoid DCs": 942,
+            "Myofibroblasts": 737,
+            "Migratory DCs": 690,
+            "Lymphatic EC differentiating": 637,
+            "SM activated stress response": 591,
+            "Ionocyte": 577,
+            "SMG mucous": 537,
+            "T cells proliferating": 506,
+            "Aberrant basaloid": 448,
+            "DC1": 430,
+            "Mesothelium": 357,
+            "Smooth muscle FAM83D+": 339,
+            "Subpleural fibroblasts": 279,
+            "Neuroendocrine": 181,
+            "Tuft": 165,
+            "Hematopoietic stem cells": 60,
+            "Lymphatic EC proliferating": 28
+          }
+        }
+      }
+    },
+    "mappingReference": {
+      "type": "artifact",
+      "scope": "assay",
+      "kind": "mapping_reference",
+      "artifact_id": "6b9a3e6b9936840779cc2d1db8ff4b70800d202919a9b8f9786794055e55c54e",
+      "assay": "RNA"
+    },
+    "cellsSelected": 824651,
+    "panelGenes": 2000,
+    "runStatus": "ran",
+    "seconds": {
+      "mount": 83.003833858,
+      "pipeline": 682.577489833,
+      "build": 69.912979672
+    },
+    "readBytes": {
+      "core": 246196211,
+      "full": 12189604116
+    },
+    "storage": {
+      "mount": {
+        "store": "<results>/stores/lung-reference-screen/revision_reference_v2.zarr",
+        "source": "<results>/stores/lung-reference-screen/hlca_full.zarr",
+        "existed": false,
+        "cells": 2282447,
+        "genes": 55329,
+        "bytes": 436189259,
+        "objects": 2494,
+        "bytesByPart": {
+          "cellData": 435190756,
+          "featureData": 997461,
+          "other": 1042
+        }
+      },
+      "columns": {
+        "bytesAdded": 9046765,
+        "objectsAdded": 96,
+        "newObjects": 96,
+        "changedObjects": 0,
+        "removedObjects": 0,
+        "newBytesByPart": {
+          "cellData": 9046765
+        },
+        "createdArtifacts": [],
+        "storeBytes": 445236024,
+        "storeObjects": 2590
+      },
+      "pipeline": {
+        "bytesAdded": 907545445,
+        "objectsAdded": 222,
+        "newObjects": 222,
+        "changedObjects": 0,
+        "removedObjects": 0,
+        "newBytesByPart": {
+          "artifact:ann_index": 157050049,
+          "artifact:cell_selection": 427627,
+          "artifact:connectivity_map": 79374699,
+          "artifact:feature_scaling": 32337,
+          "artifact:feature_selection": 351444,
+          "artifact:feature_summary": 840379,
+          "artifact:metadata_snapshot": 46801196,
+          "artifact:neighbors": 81744561,
+          "artifact:normalized": 447844215,
+          "artifact:reduction": 93051247,
+          "other": 858,
+          "pipeline": 26833
+        },
+        "createdArtifacts": [
+          {
+            "kind": "ann_index",
+            "artifactId": "1b3000739cfa542b4d83c7a31d52f45c6e2af66d40f9d32cd6f3c89242654adb",
+            "bytes": 157050049
+          },
+          {
+            "kind": "cell_selection",
+            "artifactId": "0d819fb5356daa9345df579adec2ad7ac18be902d2aea8ade495867e752ca0a4",
+            "bytes": 427627
+          },
+          {
+            "kind": "connectivity_map",
+            "artifactId": "2c6ae45af57d1f14ff02f07ad3a7ddae9d0df9dbc747ccc3232e85ab9373d340",
+            "bytes": 79374699
+          },
+          {
+            "kind": "feature_scaling",
+            "artifactId": "cb3951379dd58858da1836b74a40b4e89c71a9379f6fe3d0e4f2715b6aa3c0df",
+            "bytes": 32337
+          },
+          {
+            "kind": "feature_selection",
+            "artifactId": "4d941deb3764bbed7b6700136241546c43bc15d2219e06988a7aad01c41981ac",
+            "bytes": 1426
+          },
+          {
+            "kind": "feature_selection",
+            "artifactId": "d5c8408a236bf9066e1dd349ae6b5c8f5b4274cc200bda831accd791da50891e",
+            "bytes": 350018
+          },
+          {
+            "kind": "feature_summary",
+            "artifactId": "2cbe7d546f2112aed4e68134d168b69a0434d3731a1b0c86b26e50b7d8d661da",
+            "bytes": 840379
+          },
+          {
+            "kind": "metadata_snapshot",
+            "artifactId": "3f5f4dd5f974efd3a9e0386597f314e74001a496b4fd9ea6de70ddedf724ccba",
+            "bytes": 188554
+          },
+          {
+            "kind": "metadata_snapshot",
+            "artifactId": "e59381fba98d2b9005139c3079c8646177964756011fd6e8a65c59dffa4ac8c5",
+            "bytes": 46612642
+          },
+          {
+            "kind": "neighbors",
+            "artifactId": "58cd1a06e993be534114575b2c042fdd5dcff766b17cef66aa35adea80a56e2c",
+            "bytes": 81744561
+          },
+          {
+            "kind": "normalized",
+            "artifactId": "073d62f2ed90a5fe5604e6c651445c805c8d8dd218c9a283072273a6f1c94a43",
+            "bytes": 447844215
+          },
+          {
+            "kind": "reduction",
+            "artifactId": "b2354ec81ab0ee53fccf559abdf9eeadd6a1ba39bee0b893d1ba84db3a4d4fd2",
+            "bytes": 93051247
+          }
+        ],
+        "storeBytes": 1352781469,
+        "storeObjects": 2812
+      },
+      "build": {
+        "bytesAdded": 527844,
+        "objectsAdded": 17,
+        "newObjects": 17,
+        "changedObjects": 0,
+        "removedObjects": 0,
+        "newBytesByPart": {
+          "artifact:mapping_reference": 527778,
+          "other": 66
+        },
+        "createdArtifacts": [
+          {
+            "kind": "mapping_reference",
+            "artifactId": "6b9a3e6b9936840779cc2d1db8ff4b70800d202919a9b8f9786794055e55c54e",
+            "bytes": 527778
+          }
+        ],
+        "storeBytes": 1353309313,
+        "storeObjects": 2829
+      },
+      "store": {
+        "bytes": 1353309313,
+        "objects": 2829,
+        "bytesByPart": {
+          "artifact:ann_index": 157050049,
+          "artifact:cell_selection": 427627,
+          "artifact:connectivity_map": 79374699,
+          "artifact:feature_scaling": 32337,
+          "artifact:feature_selection": 351444,
+          "artifact:feature_summary": 840379,
+          "artifact:mapping_reference": 527778,
+          "artifact:metadata_snapshot": 46801196,
+          "artifact:neighbors": 81744561,
+          "artifact:normalized": 447844215,
+          "artifact:reduction": 93051247,
+          "cellData": 444237521,
+          "featureData": 997461,
+          "other": 1966,
+          "pipeline": 26833
+        }
+      }
+    },
+    "comparison": {
+      "v1": {
+        "mappingReference": {
+          "type": "artifact",
+          "scope": "assay",
+          "kind": "mapping_reference",
+          "artifact_id": "dd18837de18f04cd4d704a53eef902c73d3de351417e9bd87f42a61cd0c9591c",
+          "assay": "RNA"
+        },
+        "cellsSelected": 584944,
+        "panelGenes": 2000
+      },
+      "v2": {
+        "cellsSelected": 824651,
+        "panelGenes": 2000
+      },
+      "panelGenesShared": 1430
+    }
+  },
+  "references": {
+    "v1": {
+      "mappingReference": {
+        "type": "artifact",
+        "scope": "assay",
+        "kind": "mapping_reference",
+        "artifact_id": "dd18837de18f04cd4d704a53eef902c73d3de351417e9bd87f42a61cd0c9591c",
+        "assay": "RNA"
+      },
+      "cellsSelected": 584944,
+      "panelGenes": 2000
+    },
+    "v2": {
+      "mappingReference": {
+        "type": "artifact",
+        "scope": "assay",
+        "kind": "mapping_reference",
+        "artifact_id": "6b9a3e6b9936840779cc2d1db8ff4b70800d202919a9b8f9786794055e55c54e",
+        "assay": "RNA"
+      },
+      "cellsSelected": 824651,
+      "panelGenes": 2000
+    }
+  },
+  "centres": {
+    "natri": {
+      "name": "Natri",
+      "cells": 322457,
+      "calibration": {
+        "v1": {
+          "calibration": "own controls",
+          "calibrationCentres": [
+            "natri"
+          ],
+          "controlDonors": 15
+        },
+        "v2": {
+          "calibration": "own controls",
+          "calibrationCentres": [
+            "natri"
+          ],
+          "controlDonors": 15
+        }
+      },
+      "labelChanges": {
+        "ann_level_1": {
+          "cells": 322457,
+          "changed": 126,
+          "changedShare": 0.0003907497743885231,
+          "changedAmongLabelledUnderBoth": 0.00013959591635412692,
+          "abstainedV1": 0.00018607132113739196,
+          "abstainedV2": 0.00017056537770927596,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "NA",
+              "labelV2": "Epithelial",
+              "cells": 21
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Epithelial",
+              "cells": 17
+            },
+            {
+              "labelV1": "Stroma",
+              "labelV2": "NA",
+              "cells": 14
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Immune",
+              "cells": 13
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "NA",
+              "cells": 13
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "Endothelial",
+              "cells": 9
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "NA",
+              "cells": 7
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Stroma",
+              "cells": 5
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Endothelial",
+              "cells": 5
+            },
+            {
+              "labelV1": "Endothelial",
+              "labelV2": "NA",
+              "cells": 4
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Stroma",
+              "cells": 4
+            },
+            {
+              "labelV1": "Endothelial",
+              "labelV2": "Epithelial",
+              "cells": 3
+            }
+          ]
+        },
+        "ann_level_3": {
+          "cells": 322457,
+          "changed": 23115,
+          "changedShare": 0.07168397646818025,
+          "changedAmongLabelledUnderBoth": 0.012932297402426827,
+          "abstainedV1": 0.04592860443407958,
+          "abstainedV2": 0.052617868428968824,
+          "newLabelCells": 2,
+          "newLabelFromV1": {
+            "AT2": 1,
+            "NA": 1
+          },
+          "topChanges": [
+            {
+              "labelV1": "Macrophages",
+              "labelV2": "NA",
+              "cells": 3632
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Macrophages",
+              "cells": 2855
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Secretory",
+              "cells": 1795
+            },
+            {
+              "labelV1": "Monocytes",
+              "labelV2": "NA",
+              "cells": 1401
+            },
+            {
+              "labelV1": "Secretory",
+              "labelV2": "NA",
+              "cells": 1226
+            },
+            {
+              "labelV1": "Dendritic cells",
+              "labelV2": "NA",
+              "cells": 1119
+            },
+            {
+              "labelV1": "AT2",
+              "labelV2": "NA",
+              "cells": 1113
+            },
+            {
+              "labelV1": "Macrophages",
+              "labelV2": "Monocytes",
+              "cells": 1087
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Monocytes",
+              "cells": 1008
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "AT2",
+              "cells": 675
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Basal",
+              "cells": 556
+            },
+            {
+              "labelV1": "Monocytes",
+              "labelV2": "Macrophages",
+              "cells": 484
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "cells": 322457,
+          "changed": 49482,
+          "changedShare": 0.15345301854200716,
+          "changedAmongLabelledUnderBoth": 0.0234261307840655,
+          "abstainedV1": 0.1387843960590094,
+          "abstainedV2": 0.15349023280623464,
+          "newLabelCells": 2,
+          "newLabelFromV1": {
+            "AT2": 1,
+            "NA": 1
+          },
+          "topChanges": [
+            {
+              "labelV1": "Monocyte-derived Mph",
+              "labelV2": "NA",
+              "cells": 8065
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Monocyte-derived Mph",
+              "cells": 6112
+            },
+            {
+              "labelV1": "Non-classical monocytes",
+              "labelV2": "NA",
+              "cells": 1903
+            },
+            {
+              "labelV1": "pre-TB secretory",
+              "labelV2": "NA",
+              "cells": 1756
+            },
+            {
+              "labelV1": "Alveolar macrophages",
+              "labelV2": "NA",
+              "cells": 1710
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Alveolar macrophages",
+              "cells": 1545
+            },
+            {
+              "labelV1": "DC2",
+              "labelV2": "NA",
+              "cells": 1537
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "pre-TB secretory",
+              "cells": 1379
+            },
+            {
+              "labelV1": "AT2",
+              "labelV2": "NA",
+              "cells": 1342
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "AT0",
+              "cells": 1322
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Non-classical monocytes",
+              "cells": 1224
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "AT2",
+              "cells": 1089
+            }
+          ]
+        }
+      },
+      "donorProportions": {
+        "ann_level_1": {
+          "donors": 63,
+          "meanTotalVariation": 0.00024234209040107968,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.0002600423171671796,
+            "control": 0.00018570136474955974
+          },
+          "maxTotalVariation": {
+            "donor": "TILD103",
+            "value": 0.0032578595862518354
+          },
+          "largestShareChanges": [
+            {
+              "donor": "TILD103",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.28538849975566055,
+              "shareV2": 0.287994787424662,
+              "difference": 0.0026062876690014503
+            },
+            {
+              "donor": "TILD103",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.4715751751099528,
+              "shareV2": 0.4694575663788891,
+              "difference": -0.0021176087310637026
+            },
+            {
+              "donor": "VUILD92 More",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.6703577512776832,
+              "shareV2": 0.67206132879046,
+              "difference": 0.0017035775127768327
+            },
+            {
+              "donor": "TILD103",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.0011402508551881414,
+              "shareV2": 0.0,
+              "difference": -0.0011402508551881414
+            },
+            {
+              "donor": "VUILD92 More",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.2776831345826235,
+              "shareV2": 0.2768313458262351,
+              "difference": -0.0008517887563884163
+            },
+            {
+              "donor": "VUILD92 More",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.0008517887563884157,
+              "shareV2": 0.0,
+              "difference": -0.0008517887563884157
+            },
+            {
+              "donor": "VUILD104",
+              "group": "ILD",
+              "label": "Stroma",
+              "shareV1": 0.0314410480349345,
+              "shareV2": 0.030676855895196507,
+              "difference": -0.0007641921397379924
+            },
+            {
+              "donor": "VUILD98",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.6272358693059862,
+              "shareV2": 0.6265203911280706,
+              "difference": -0.0007154781779156183
+            },
+            {
+              "donor": "VUILD104",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.0008733624454148472,
+              "shareV2": 0.0015283842794759825,
+              "difference": 0.0006550218340611354
+            },
+            {
+              "donor": "VUHD115",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.0006225357958082589,
+              "shareV2": 0.0,
+              "difference": -0.0006225357958082589
+            }
+          ]
+        },
+        "ann_level_3": {
+          "donors": 63,
+          "meanTotalVariation": 0.01820459704603545,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.01848453744833048,
+            "control": 0.017308787758691335
+          },
+          "maxTotalVariation": {
+            "donor": "TILD074",
+            "value": 0.06666666666666664
+          },
+          "largestShareChanges": [
+            {
+              "donor": "TILD074",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.022222222222222223,
+              "shareV2": 0.06666666666666667,
+              "difference": 0.04444444444444444
+            },
+            {
+              "donor": "TILD074",
+              "group": "ILD",
+              "label": "Macrophages",
+              "shareV1": 0.5111111111111111,
+              "shareV2": 0.4666666666666667,
+              "difference": -0.0444444444444444
+            },
+            {
+              "donor": "VUILD83",
+              "group": "ILD",
+              "label": "Macrophages",
+              "shareV1": 0.28888061091450923,
+              "shareV2": 0.24939467312348668,
+              "difference": -0.03948593779102255
+            },
+            {
+              "donor": "VUILD83",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.04972993108586329,
+              "shareV2": 0.0781026882721798,
+              "difference": 0.02837275718631651
+            },
+            {
+              "donor": "TILD103",
+              "group": "ILD",
+              "label": "Secretory",
+              "shareV1": 0.049356572731715266,
+              "shareV2": 0.0759081283596677,
+              "difference": 0.026551555627952438
+            },
+            {
+              "donor": "THD0023",
+              "group": "control",
+              "label": "Macrophages",
+              "shareV1": 0.3053691275167785,
+              "shareV2": 0.28104026845637586,
+              "difference": -0.024328859060402663
+            },
+            {
+              "donor": "THD0021",
+              "group": "control",
+              "label": "Monocytes",
+              "shareV1": 0.4613707919593122,
+              "shareV2": 0.4378784209251635,
+              "difference": -0.023492371034148696
+            },
+            {
+              "donor": "TILD074",
+              "group": "ILD",
+              "label": "Secretory",
+              "shareV1": 0.044444444444444446,
+              "shareV2": 0.022222222222222223,
+              "difference": -0.022222222222222223
+            },
+            {
+              "donor": "TILD074",
+              "group": "ILD",
+              "label": "EC arterial",
+              "shareV1": 0.0,
+              "shareV2": 0.022222222222222223,
+              "difference": 0.022222222222222223
+            },
+            {
+              "donor": "VUILD88",
+              "group": "ILD",
+              "label": "Macrophages",
+              "shareV1": 0.31610090314543754,
+              "shareV2": 0.2967922765493616,
+              "difference": -0.019308626596075962
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "donors": 63,
+          "meanTotalVariation": 0.04275034217805963,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.04236669778749608,
+            "control": 0.043978004227863
+          },
+          "maxTotalVariation": {
+            "donor": "TILD060",
+            "value": 0.11111111111111109
+          },
+          "largestShareChanges": [
+            {
+              "donor": "TILD060",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.1111111111111111,
+              "shareV2": 0.0,
+              "difference": -0.1111111111111111
+            },
+            {
+              "donor": "THD0023",
+              "group": "control",
+              "label": "Non-classical monocytes",
+              "shareV1": 0.1535234899328859,
+              "shareV2": 0.2516778523489933,
+              "difference": 0.09815436241610742
+            },
+            {
+              "donor": "TILD111",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.41238516502211636,
+              "shareV2": 0.3385505273902688,
+              "difference": -0.07383463763184756
+            },
+            {
+              "donor": "THD0022",
+              "group": "control",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.3406193078324226,
+              "shareV2": 0.2786885245901639,
+              "difference": -0.0619307832422587
+            },
+            {
+              "donor": "THD0023",
+              "group": "control",
+              "label": "Classical monocytes",
+              "shareV1": 0.15436241610738255,
+              "shareV2": 0.09479865771812081,
+              "difference": -0.05956375838926174
+            },
+            {
+              "donor": "TILD060",
+              "group": "ILD",
+              "label": "Alveolar macrophages",
+              "shareV1": 0.0,
+              "shareV2": 0.05555555555555555,
+              "difference": 0.05555555555555555
+            },
+            {
+              "donor": "TILD060",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.2777777777777778,
+              "shareV2": 0.3333333333333333,
+              "difference": 0.055555555555555525
+            },
+            {
+              "donor": "THD0026",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.16353111432706222,
+              "shareV2": 0.21852387843704776,
+              "difference": 0.05499276410998555
+            },
+            {
+              "donor": "TILD037",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.145750142612664,
+              "shareV2": 0.19224187107815174,
+              "difference": 0.04649172846548774
+            },
+            {
+              "donor": "TILD116",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.15648,
+              "shareV2": 0.20128,
+              "difference": 0.04479999999999998
+            }
+          ]
+        },
+        "newLabelShareByDonor": {
+          "ILD": {
+            "donors": 48,
+            "donorsWithCells": 2,
+            "meanShare": 7.688299784327008e-06
+          },
+          "control": {
+            "donors": 15,
+            "donorsWithCells": 0,
+            "meanShare": 0.0
+          }
+        }
+      },
+      "unexplained": {
+        "all": {
+          "cells": 322457,
+          "usableV1": 322397,
+          "usableV2": 322402,
+          "unexplainedV1": 5077,
+          "unexplainedV2": 3892,
+          "v1UnexplainedExplainedUnderV2": 2309,
+          "v1UnexplainedStillUnexplained": 2750,
+          "v1UnexplainedWithoutLineageUnderV2": 18,
+          "v1UnexplainedLabelledNewUnderV2": 2,
+          "v1UnexplainedExplainedOrLabelledNew": 2311,
+          "v1ExplainedUnexplainedUnderV2": 1126,
+          "labelledNewUnderV2": 2,
+          "shareV1": 0.015747665145767486,
+          "shareV2": 0.012071885410140136
+        },
+        "byGroup": {
+          "ILD": {
+            "cells": 266193,
+            "usableV1": 266141,
+            "usableV2": 266143,
+            "unexplainedV1": 4405,
+            "unexplainedV2": 3253,
+            "v1UnexplainedExplainedUnderV2": 2084,
+            "v1UnexplainedStillUnexplained": 2307,
+            "v1UnexplainedWithoutLineageUnderV2": 14,
+            "v1UnexplainedLabelledNewUnderV2": 2,
+            "v1UnexplainedExplainedOrLabelledNew": 2086,
+            "v1ExplainedUnexplainedUnderV2": 934,
+            "labelledNewUnderV2": 2,
+            "shareV1": 0.01655137690171751,
+            "shareV2": 0.012222752430084579
+          },
+          "control": {
+            "cells": 56264,
+            "usableV1": 56256,
+            "usableV2": 56259,
+            "unexplainedV1": 672,
+            "unexplainedV2": 639,
+            "v1UnexplainedExplainedUnderV2": 225,
+            "v1UnexplainedStillUnexplained": 443,
+            "v1UnexplainedWithoutLineageUnderV2": 4,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 225,
+            "v1ExplainedUnexplainedUnderV2": 192,
+            "labelledNewUnderV2": 0,
+            "shareV1": 0.011945392491467578,
+            "shareV2": 0.011358182690769478
+          }
+        },
+        "v1UnexplainedByLineageV1": {
+          "Endothelial": {
+            "cells": 243,
+            "usableV1": 243,
+            "usableV2": 243,
+            "unexplainedV1": 243,
+            "unexplainedV2": 141,
+            "v1UnexplainedExplainedUnderV2": 102,
+            "v1UnexplainedStillUnexplained": 141,
+            "v1UnexplainedWithoutLineageUnderV2": 0,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 102,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.5802469135802469
+          },
+          "Epithelial": {
+            "cells": 2496,
+            "usableV1": 2496,
+            "usableV2": 2486,
+            "unexplainedV1": 2496,
+            "unexplainedV2": 1245,
+            "v1UnexplainedExplainedUnderV2": 1241,
+            "v1UnexplainedStillUnexplained": 1245,
+            "v1UnexplainedWithoutLineageUnderV2": 10,
+            "v1UnexplainedLabelledNewUnderV2": 2,
+            "v1UnexplainedExplainedOrLabelledNew": 1243,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 2,
+            "shareV1": 1.0,
+            "shareV2": 0.500804505229284
+          },
+          "Immune": {
+            "cells": 2005,
+            "usableV1": 2005,
+            "usableV2": 2000,
+            "unexplainedV1": 2005,
+            "unexplainedV2": 1213,
+            "v1UnexplainedExplainedUnderV2": 787,
+            "v1UnexplainedStillUnexplained": 1213,
+            "v1UnexplainedWithoutLineageUnderV2": 5,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 787,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.6065
+          },
+          "Stroma": {
+            "cells": 333,
+            "usableV1": 333,
+            "usableV2": 330,
+            "unexplainedV1": 333,
+            "unexplainedV2": 151,
+            "v1UnexplainedExplainedUnderV2": 179,
+            "v1UnexplainedStillUnexplained": 151,
+            "v1UnexplainedWithoutLineageUnderV2": 3,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 179,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.4575757575757576
+          }
+        },
+        "transitions": {
+          "explained -> explained": 316174,
+          "explained -> noLineage": 20,
+          "explained -> unexplained": 1126,
+          "noLineage -> explained": 27,
+          "noLineage -> noLineage": 17,
+          "noLineage -> unexplained": 16,
+          "unexplained -> explained": 2309,
+          "unexplained -> noLineage": 18,
+          "unexplained -> unexplained": 2750
+        },
+        "labelledNew": {
+          "cells": 2,
+          "byGroup": {
+            "ILD": {
+              "cells": 2,
+              "donors": 2
+            }
+          },
+          "stateV1": {
+            "unexplained": 2
+          },
+          "labelV1": {
+            "AT2": 1,
+            "NA": 1
+          },
+          "authorLabels": {
+            "KRT5-/KRT17+": 2
+          },
+          "lineageV2": {
+            "Epithelial": 2
+          }
+        },
+        "authorLabelled": {
+          "authorLabel": "KRT5-/KRT17+",
+          "cells": 1882,
+          "usableV1": 1882,
+          "usableV2": 1881,
+          "unexplainedV1": 915,
+          "unexplainedV2": 502,
+          "v1UnexplainedExplainedUnderV2": 455,
+          "v1UnexplainedStillUnexplained": 459,
+          "v1UnexplainedWithoutLineageUnderV2": 1,
+          "v1UnexplainedLabelledNewUnderV2": 2,
+          "v1UnexplainedExplainedOrLabelledNew": 457,
+          "v1ExplainedUnexplainedUnderV2": 43,
+          "labelledNewUnderV2": 2,
+          "shareV1": 0.4861849096705632,
+          "shareV2": 0.26687931951089844,
+          "labelledNewShare": 0.0010626992561105207,
+          "labelledNewAtLevel3Share": 0.0010626992561105207,
+          "byGroup": {
+            "ILD": {
+              "cells": 1568,
+              "usableV1": 1568,
+              "usableV2": 1567,
+              "unexplainedV1": 785,
+              "unexplainedV2": 418,
+              "v1UnexplainedExplainedUnderV2": 401,
+              "v1UnexplainedStillUnexplained": 383,
+              "v1UnexplainedWithoutLineageUnderV2": 1,
+              "v1UnexplainedLabelledNewUnderV2": 2,
+              "v1UnexplainedExplainedOrLabelledNew": 403,
+              "v1ExplainedUnexplainedUnderV2": 35,
+              "labelledNewUnderV2": 2,
+              "shareV1": 0.5006377551020408,
+              "shareV2": 0.2667517549457562,
+              "labelledNewShare": 0.0012755102040816326
+            },
+            "control": {
+              "cells": 314,
+              "usableV1": 314,
+              "usableV2": 314,
+              "unexplainedV1": 130,
+              "unexplainedV2": 84,
+              "v1UnexplainedExplainedUnderV2": 54,
+              "v1UnexplainedStillUnexplained": 76,
+              "v1UnexplainedWithoutLineageUnderV2": 0,
+              "v1UnexplainedLabelledNewUnderV2": 0,
+              "v1UnexplainedExplainedOrLabelledNew": 54,
+              "v1ExplainedUnexplainedUnderV2": 8,
+              "labelledNewUnderV2": 0,
+              "shareV1": 0.4140127388535032,
+              "shareV2": 0.267515923566879,
+              "labelledNewShare": 0.0
+            }
+          }
+        }
+      },
+      "costs": {
+        "mount": {
+          "seconds": 30.154270224,
+          "bytes": 38381838,
+          "bytesByPart": {
+            "cellData": 37441237,
+            "featureData": 939559,
+            "other": 1042
+          },
+          "existed": false
+        },
+        "phase1": {
+          "seconds": 589.3239464239999,
+          "referenceReadBytes": 386010660,
+          "sourceReadBytes": 2720191142,
+          "bytesAdded": 57860386,
+          "created": [
+            "map_v1",
+            "select",
+            "transfer_v1_ann_finest_level",
+            "transfer_v1_ann_level_1",
+            "transfer_v1_ann_level_3"
+          ],
+          "fromSource": []
+        },
+        "updateV1Requests": {
+          "seconds": 121.708056751,
+          "referenceReadBytes": 277352747,
+          "bytesAdded": 0,
+          "created": []
+        },
+        "updateV2": {
+          "seconds": 617.1298102909998,
+          "referenceReadBytes": 786536169,
+          "revisedStoreReadBytes": 786473635,
+          "fullHlcaReadBytes": 62534,
+          "sourceReadBytes": 2718937199,
+          "bytesAdded": 60970118,
+          "createdHere": true
+        },
+        "recovery": {
+          "seconds": 30.658164115999966,
+          "referenceReadBytes": 0
+        },
+        "storeBytes": {
+          "afterPhase1": 96242224,
+          "afterUpdate": 157212342
+        },
+        "note": "the full HLCA is only v2's source here, so its reads count towards v2"
+      },
+      "traceability": {
+        "recovery": {
+          "identical": true,
+          "sameCells": true,
+          "tableAsWritten": true,
+          "referenceReadBytes": 0,
+          "cells": [
+            322457,
+            322457
+          ]
+        },
+        "v1IdentifiersUnchanged": true,
+        "counts": {
+          "reused": 2,
+          "new": 8,
+          "superseded": 8,
+          "reference v1": 10,
+          "reference v2": 10
+        },
+        "kinds": {
+          "reused": [
+            "cell_selection",
+            "feature_selection"
+          ],
+          "new": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "superseded": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "reference v1": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ],
+          "reference v2": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ]
+        },
+        "ownUnchanged": 5,
+        "ownBefore": 5,
+        "ownChangedOrRemoved": []
+      },
+      "checks": {
+        "projection": {
+          "cells": 322457,
+          "uninformativeAgree": true,
+          "nearestDistanceIdenticalOnInformativeCells": true,
+          "nearestDistanceMaxAbsDifference": 0.0,
+          "diagnostics": {
+            "featureCoverage": 0.971,
+            "queryBatchCount": 1,
+            "algorithmVariant": "scaled_pca",
+            "uninformativeCellCount": 0,
+            "queryScaledDispersion": 1.3092795613586876
+          }
+        },
+        "primaryRun": {
+          "cells": 322457,
+          "inPrimaryTable": 322457,
+          "nearestDistanceAgrees": 1.0,
+          "labelAgrees_ann_level_1": 1.0,
+          "voteAgrees_ann_level_1": 1.0,
+          "labelAgrees_ann_level_3": 1.0,
+          "voteAgrees_ann_level_3": 1.0,
+          "labelAgrees_ann_finest_level": 1.0,
+          "voteAgrees_ann_finest_level": 1.0
+        }
+      },
+      "panelGenes": {
+        "v1": 2000,
+        "v2": 2000,
+        "shared": 1430
+      }
+    },
+    "lafyatis_2019": {
+      "name": "Lafyatis_2019",
+      "cells": 27297,
+      "calibration": {
+        "v1": {
+          "calibration": "controls of the other centres with the same assay (10x 3' v2)",
+          "calibrationCentres": [
+            "sheppard_2020"
+          ],
+          "controlDonors": 3
+        },
+        "v2": {
+          "calibration": "controls of the other centres with the same assay (10x 3' v2)",
+          "calibrationCentres": [
+            "sheppard_2020"
+          ],
+          "controlDonors": 3
+        }
+      },
+      "labelChanges": {
+        "ann_level_1": {
+          "cells": 27297,
+          "changed": 229,
+          "changedShare": 0.008389200278418874,
+          "changedAmongLabelledUnderBoth": 0.0009641413579560204,
+          "abstainedV1": 0.007803055280800088,
+          "abstainedV2": 0.008938711213686485,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "Immune",
+              "labelV2": "NA",
+              "cells": 36
+            },
+            {
+              "labelV1": "Stroma",
+              "labelV2": "NA",
+              "cells": 35
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Immune",
+              "cells": 28
+            },
+            {
+              "labelV1": "Endothelial",
+              "labelV2": "NA",
+              "cells": 27
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Stroma",
+              "cells": 27
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Endothelial",
+              "cells": 20
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "NA",
+              "cells": 19
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Epithelial",
+              "cells": 11
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "Immune",
+              "cells": 10
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Epithelial",
+              "cells": 7
+            },
+            {
+              "labelV1": "Endothelial",
+              "labelV2": "Epithelial",
+              "cells": 3
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Endothelial",
+              "cells": 2
+            }
+          ]
+        },
+        "ann_level_3": {
+          "cells": 27297,
+          "changed": 1921,
+          "changedShare": 0.07037403377660549,
+          "changedAmongLabelledUnderBoth": 0.011640552624159181,
+          "abstainedV1": 0.059310546946550906,
+          "abstainedV2": 0.06187493131113309,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "Macrophages",
+              "labelV2": "NA",
+              "cells": 217
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Macrophages",
+              "cells": 210
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Monocytes",
+              "cells": 154
+            },
+            {
+              "labelV1": "None",
+              "labelV2": "NA",
+              "cells": 91
+            },
+            {
+              "labelV1": "Monocytes",
+              "labelV2": "NA",
+              "cells": 89
+            },
+            {
+              "labelV1": "EC capillary",
+              "labelV2": "NA",
+              "cells": 82
+            },
+            {
+              "labelV1": "Macrophages",
+              "labelV2": "Monocytes",
+              "cells": 66
+            },
+            {
+              "labelV1": "EC venous",
+              "labelV2": "NA",
+              "cells": 66
+            },
+            {
+              "labelV1": "Monocytes",
+              "labelV2": "Macrophages",
+              "cells": 62
+            },
+            {
+              "labelV1": "Secretory",
+              "labelV2": "NA",
+              "cells": 62
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Secretory",
+              "cells": 60
+            },
+            {
+              "labelV1": "Dendritic cells",
+              "labelV2": "NA",
+              "cells": 54
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "cells": 27297,
+          "changed": 4446,
+          "changedShare": 0.16287504121332014,
+          "changedAmongLabelledUnderBoth": 0.026556646274956134,
+          "abstainedV1": 0.1497600468915998,
+          "abstainedV2": 0.16287504121332014,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "NA",
+              "labelV2": "Monocyte-derived Mph",
+              "cells": 551
+            },
+            {
+              "labelV1": "Monocyte-derived Mph",
+              "labelV2": "NA",
+              "cells": 447
+            },
+            {
+              "labelV1": "Alveolar macrophages",
+              "labelV2": "NA",
+              "cells": 303
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Alveolar macrophages",
+              "cells": 170
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Classical monocytes",
+              "cells": 138
+            },
+            {
+              "labelV1": "Adventitial fibroblasts",
+              "labelV2": "NA",
+              "cells": 116
+            },
+            {
+              "labelV1": "Classical monocytes",
+              "labelV2": "NA",
+              "cells": 109
+            },
+            {
+              "labelV1": "EC general capillary",
+              "labelV2": "NA",
+              "cells": 103
+            },
+            {
+              "labelV1": "EC venous pulmonary",
+              "labelV2": "NA",
+              "cells": 100
+            },
+            {
+              "labelV1": "Interstitial Mph perivascular",
+              "labelV2": "NA",
+              "cells": 99
+            },
+            {
+              "labelV1": "Smooth muscle",
+              "labelV2": "NA",
+              "cells": 91
+            },
+            {
+              "labelV1": "Alveolar macrophages",
+              "labelV2": "Monocyte-derived Mph",
+              "cells": 78
+            }
+          ]
+        }
+      },
+      "donorProportions": {
+        "ann_level_1": {
+          "donors": 4,
+          "meanTotalVariation": 0.0017881066203273453,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.0017881066203273453
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+            "value": 0.0031417482905192907
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.0070227314729255225,
+              "shareV2": 0.00997967104047311,
+              "difference": 0.0029569395675475875
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.638698946590279,
+              "shareV2": 0.6359268157457032,
+              "difference": -0.0027721308445758375
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_4",
+              "group": "ILD",
+              "label": "Stroma",
+              "shareV1": 0.1309887869520897,
+              "shareV2": 0.12945973496432212,
+              "difference": -0.0015290519877675934
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "Endothelial",
+              "shareV1": 0.10618347693867207,
+              "shareV2": 0.10466294982260517,
+              "difference": -0.0015205271160668998
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_4",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.008282364933741081,
+              "shareV2": 0.0095565749235474,
+              "difference": 0.0012742099898063186
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.7127470856563609,
+              "shareV2": 0.7135073492143943,
+              "difference": 0.0007602635580333805
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "Stroma",
+              "shareV1": 0.13583375570197667,
+              "shareV2": 0.13634059807399898,
+              "difference": 0.0005068423720223092
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.0117840851495185,
+              "shareV2": 0.0122909275215408,
+              "difference": 0.0005068423720223005
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_4",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.2786697247706422,
+              "shareV2": 0.2782874617737003,
+              "difference": -0.00038226299694194
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_4",
+              "group": "ILD",
+              "label": "Endothelial",
+              "shareV1": 0.12398063200815494,
+              "shareV2": 0.12436289500509684,
+              "difference": 0.00038226299694189836
+            }
+          ]
+        },
+        "ann_level_3": {
+          "donors": 4,
+          "meanTotalVariation": 0.012419680306539449,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.012419680306539449
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+            "value": 0.01607835889853998
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.04768065052670486,
+              "shareV2": 0.05470338199963038,
+              "difference": 0.0070227314729255225
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_4",
+              "group": "ILD",
+              "label": "Monocytes",
+              "shareV1": 0.040774719673802244,
+              "shareV2": 0.047782874617737,
+              "difference": 0.007008154943934759
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+              "group": "ILD",
+              "label": "Innate lymphoid cell NK",
+              "shareV1": 0.048789502864535206,
+              "shareV2": 0.055627425614489,
+              "difference": 0.006837922749953797
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+              "group": "ILD",
+              "label": "T cell lineage",
+              "shareV1": 0.15985954537054148,
+              "shareV2": 0.15431528368138978,
+              "difference": -0.005544261689151703
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_1",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.05808656036446469,
+              "shareV2": 0.053368044256426946,
+              "difference": -0.004718516108037744
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+              "group": "ILD",
+              "label": "Macrophages",
+              "shareV1": 0.37201995934208093,
+              "shareV2": 0.36739974126778785,
+              "difference": -0.004620218074293081
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_4",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.05262487257900102,
+              "shareV2": 0.05708460754332314,
+              "difference": 0.004459734964322122
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "Macrophages",
+              "shareV1": 0.5769133299543842,
+              "shareV2": 0.580841358337557,
+              "difference": 0.003928028383172855
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "EC capillary",
+              "shareV1": 0.06677648251393817,
+              "shareV2": 0.06310187531677648,
+              "difference": -0.003674607197161686
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "None",
+              "shareV1": 0.047516472377090724,
+              "shareV2": 0.043968575772934615,
+              "difference": -0.003547896604156109
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "donors": 4,
+          "meanTotalVariation": 0.03355361076042766,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.03355361076042766
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+            "value": 0.040842727776751055
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.14914063943818148,
+              "shareV2": 0.1690999815191277,
+              "difference": 0.019959342080946213
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.1644703497212367,
+              "shareV2": 0.18258996452103396,
+              "difference": 0.018119614799797262
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_4",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.12805810397553516,
+              "shareV2": 0.14322120285423037,
+              "difference": 0.015163098878695214
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+              "group": "ILD",
+              "label": "Interstitial Mph perivascular",
+              "shareV1": 0.021437811864720015,
+              "shareV2": 0.009794862317501386,
+              "difference": -0.01164294954721863
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "Adventitial fibroblasts",
+              "shareV1": 0.0353522554485555,
+              "shareV2": 0.024455144450076027,
+              "difference": -0.01089711099847947
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_1",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.15099251545720793,
+              "shareV2": 0.15961601041327692,
+              "difference": 0.008623494956068983
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.4646477445514445,
+              "shareV2": 0.4727572225038013,
+              "difference": 0.008109477952356836
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_4",
+              "group": "ILD",
+              "label": "Classical monocytes",
+              "shareV1": 0.034785932721712536,
+              "shareV2": 0.04268603465851172,
+              "difference": 0.007900101936799186
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_2",
+              "group": "ILD",
+              "label": "Peribronchial fibroblasts",
+              "shareV1": 0.0007602635580334517,
+              "shareV2": 0.007856056766345666,
+              "difference": 0.007095793208312214
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc_3",
+              "group": "ILD",
+              "label": "NK cells",
+              "shareV1": 0.048789502864535206,
+              "shareV2": 0.055627425614489,
+              "difference": 0.006837922749953797
+            }
+          ]
+        },
+        "newLabelShareByDonor": {
+          "ILD": {
+            "donors": 4,
+            "donorsWithCells": 0,
+            "meanShare": 0.0
+          }
+        }
+      },
+      "unexplained": {
+        "all": {
+          "cells": 27297,
+          "usableV1": 27084,
+          "usableV2": 27053,
+          "unexplainedV1": 226,
+          "unexplainedV2": 273,
+          "v1UnexplainedExplainedUnderV2": 39,
+          "v1UnexplainedStillUnexplained": 176,
+          "v1UnexplainedWithoutLineageUnderV2": 11,
+          "v1UnexplainedLabelledNewUnderV2": 0,
+          "v1UnexplainedExplainedOrLabelledNew": 39,
+          "v1ExplainedUnexplainedUnderV2": 87,
+          "labelledNewUnderV2": 0,
+          "shareV1": 0.008344409983754245,
+          "shareV2": 0.010091302258529554
+        },
+        "byGroup": {
+          "ILD": {
+            "cells": 27297,
+            "usableV1": 27084,
+            "usableV2": 27053,
+            "unexplainedV1": 226,
+            "unexplainedV2": 273,
+            "v1UnexplainedExplainedUnderV2": 39,
+            "v1UnexplainedStillUnexplained": 176,
+            "v1UnexplainedWithoutLineageUnderV2": 11,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 39,
+            "v1ExplainedUnexplainedUnderV2": 87,
+            "labelledNewUnderV2": 0,
+            "shareV1": 0.008344409983754245,
+            "shareV2": 0.010091302258529554
+          }
+        },
+        "v1UnexplainedByLineageV1": {
+          "Endothelial": {
+            "cells": 28,
+            "usableV1": 28,
+            "usableV2": 27,
+            "unexplainedV1": 28,
+            "unexplainedV2": 24,
+            "v1UnexplainedExplainedUnderV2": 3,
+            "v1UnexplainedStillUnexplained": 24,
+            "v1UnexplainedWithoutLineageUnderV2": 1,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 3,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.8888888888888888
+          },
+          "Epithelial": {
+            "cells": 47,
+            "usableV1": 47,
+            "usableV2": 44,
+            "unexplainedV1": 47,
+            "unexplainedV2": 25,
+            "v1UnexplainedExplainedUnderV2": 19,
+            "v1UnexplainedStillUnexplained": 25,
+            "v1UnexplainedWithoutLineageUnderV2": 3,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 19,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.5681818181818182
+          },
+          "Immune": {
+            "cells": 32,
+            "usableV1": 32,
+            "usableV2": 29,
+            "unexplainedV1": 32,
+            "unexplainedV2": 20,
+            "v1UnexplainedExplainedUnderV2": 9,
+            "v1UnexplainedStillUnexplained": 20,
+            "v1UnexplainedWithoutLineageUnderV2": 3,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 9,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.6896551724137931
+          },
+          "Stroma": {
+            "cells": 119,
+            "usableV1": 119,
+            "usableV2": 115,
+            "unexplainedV1": 119,
+            "unexplainedV2": 107,
+            "v1UnexplainedExplainedUnderV2": 8,
+            "v1UnexplainedStillUnexplained": 107,
+            "v1UnexplainedWithoutLineageUnderV2": 4,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 8,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.9304347826086956
+          }
+        },
+        "transitions": {
+          "explained -> explained": 26665,
+          "explained -> noLineage": 106,
+          "explained -> unexplained": 87,
+          "noLineage -> explained": 76,
+          "noLineage -> noLineage": 127,
+          "noLineage -> unexplained": 10,
+          "unexplained -> explained": 39,
+          "unexplained -> noLineage": 11,
+          "unexplained -> unexplained": 176
+        },
+        "labelledNew": {
+          "cells": 0,
+          "byGroup": {},
+          "stateV1": {},
+          "labelV1": {},
+          "authorLabels": {},
+          "lineageV2": {}
+        }
+      },
+      "costs": {
+        "mount": {
+          "seconds": 104.51375525499999,
+          "bytes": 436189259,
+          "bytesByPart": {
+            "cellData": 435190756,
+            "featureData": 997461,
+            "other": 1042
+          },
+          "existed": false
+        },
+        "phase1": {
+          "seconds": 674.35585486,
+          "referenceReadBytes": 386010660,
+          "sourceReadBytes": 8023578436,
+          "bytesAdded": 6961310,
+          "created": [
+            "map_v1",
+            "select",
+            "transfer_v1_ann_finest_level",
+            "transfer_v1_ann_level_1",
+            "transfer_v1_ann_level_3"
+          ],
+          "fromSource": []
+        },
+        "updateV1Requests": {
+          "seconds": 133.25347171600004,
+          "referenceReadBytes": 277352747,
+          "bytesAdded": 0,
+          "created": []
+        },
+        "updateV2": {
+          "seconds": 666.047387711,
+          "referenceReadBytes": 692726151,
+          "revisedStoreReadBytes": 692726151,
+          "fullHlcaReadBytes": 8023639941,
+          "sourceReadBytes": 8023639941,
+          "bytesAdded": 7474223,
+          "createdHere": true
+        },
+        "recovery": {
+          "seconds": 31.224015796000003,
+          "referenceReadBytes": 0
+        },
+        "storeBytes": {
+          "afterPhase1": 443150569,
+          "afterUpdate": 450624792
+        },
+        "note": "for the full-HLCA centres the full HLCA is both the centre's source and v2's source, so its reads are reported apart"
+      },
+      "traceability": {
+        "recovery": {
+          "identical": true,
+          "sameCells": true,
+          "tableAsWritten": true,
+          "referenceReadBytes": 0,
+          "cells": [
+            27297,
+            27297
+          ]
+        },
+        "v1IdentifiersUnchanged": true,
+        "counts": {
+          "reused": 2,
+          "new": 8,
+          "superseded": 8,
+          "reference v1": 10,
+          "reference v2": 10
+        },
+        "kinds": {
+          "reused": [
+            "cell_selection",
+            "feature_selection"
+          ],
+          "new": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "superseded": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "reference v1": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ],
+          "reference v2": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ]
+        },
+        "ownUnchanged": 10,
+        "ownBefore": 10,
+        "ownChangedOrRemoved": []
+      },
+      "checks": {
+        "projection": {
+          "cells": 27297,
+          "uninformativeAgree": true,
+          "nearestDistanceIdenticalOnInformativeCells": true,
+          "nearestDistanceMaxAbsDifference": 0.0,
+          "diagnostics": {
+            "featureCoverage": 0.963,
+            "queryBatchCount": 1,
+            "algorithmVariant": "scaled_pca",
+            "uninformativeCellCount": 0,
+            "queryScaledDispersion": 0.8215271287637292
+          }
+        },
+        "primaryRun": {
+          "cells": 27297,
+          "inPrimaryTable": 27297,
+          "nearestDistanceAgrees": 1.0,
+          "labelAgrees_ann_level_1": 1.0,
+          "voteAgrees_ann_level_1": 1.0,
+          "labelAgrees_ann_level_3": 1.0,
+          "voteAgrees_ann_level_3": 1.0,
+          "labelAgrees_ann_finest_level": 1.0,
+          "voteAgrees_ann_finest_level": 1.0
+        }
+      },
+      "panelGenes": {
+        "v1": 2000,
+        "v2": 2000,
+        "shared": 1430
+      }
+    },
+    "misharin_budinger_2018": {
+      "name": "Misharin_Budinger_2018",
+      "cells": 37097,
+      "calibration": {
+        "v1": {
+          "calibration": "controls of the other centres with the same assay (10x 3' v2)",
+          "calibrationCentres": [
+            "sheppard_2020"
+          ],
+          "controlDonors": 3
+        },
+        "v2": {
+          "calibration": "controls of the other centres with the same assay (10x 3' v2)",
+          "calibrationCentres": [
+            "sheppard_2020"
+          ],
+          "controlDonors": 3
+        }
+      },
+      "labelChanges": {
+        "ann_level_1": {
+          "cells": 37097,
+          "changed": 152,
+          "changedShare": 0.004097366363856916,
+          "changedAmongLabelledUnderBoth": 0.000893243828497185,
+          "abstainedV1": 0.002479984904439712,
+          "abstainedV2": 0.0025608539774105723,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "Immune",
+              "labelV2": "NA",
+              "cells": 42
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Epithelial",
+              "cells": 41
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Epithelial",
+              "cells": 27
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "NA",
+              "cells": 18
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Immune",
+              "cells": 14
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "Immune",
+              "cells": 4
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Endothelial",
+              "cells": 2
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "Endothelial",
+              "cells": 1
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Endothelial",
+              "cells": 1
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Stroma",
+              "cells": 1
+            },
+            {
+              "labelV1": "Stroma",
+              "labelV2": "NA",
+              "cells": 1
+            }
+          ]
+        },
+        "ann_level_3": {
+          "cells": 37097,
+          "changed": 2085,
+          "changedShare": 0.056204005714747825,
+          "changedAmongLabelledUnderBoth": 0.01006122976974157,
+          "abstainedV1": 0.04245626330970159,
+          "abstainedV2": 0.03531282853060894,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "NA",
+              "labelV2": "Macrophages",
+              "cells": 491
+            },
+            {
+              "labelV1": "Macrophages",
+              "labelV2": "NA",
+              "cells": 178
+            },
+            {
+              "labelV1": "Monocytes",
+              "labelV2": "NA",
+              "cells": 175
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Secretory",
+              "cells": 145
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "AT2",
+              "cells": 135
+            },
+            {
+              "labelV1": "Dendritic cells",
+              "labelV2": "NA",
+              "cells": 106
+            },
+            {
+              "labelV1": "Monocytes",
+              "labelV2": "Macrophages",
+              "cells": 97
+            },
+            {
+              "labelV1": "AT2",
+              "labelV2": "NA",
+              "cells": 93
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Dendritic cells",
+              "cells": 83
+            },
+            {
+              "labelV1": "Secretory",
+              "labelV2": "NA",
+              "cells": 58
+            },
+            {
+              "labelV1": "AT2",
+              "labelV2": "Secretory",
+              "cells": 49
+            },
+            {
+              "labelV1": "Dendritic cells",
+              "labelV2": "Macrophages",
+              "cells": 42
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "cells": 37097,
+          "changed": 6473,
+          "changedShare": 0.17448850311345931,
+          "changedAmongLabelledUnderBoth": 0.03474755898398137,
+          "abstainedV1": 0.15836860123460117,
+          "abstainedV2": 0.14254521928996955,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "NA",
+              "labelV2": "Monocyte-derived Mph",
+              "cells": 1596
+            },
+            {
+              "labelV1": "Alveolar macrophages",
+              "labelV2": "NA",
+              "cells": 1009
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Alveolar macrophages",
+              "cells": 440
+            },
+            {
+              "labelV1": "Alveolar macrophages",
+              "labelV2": "Monocyte-derived Mph",
+              "cells": 378
+            },
+            {
+              "labelV1": "Monocyte-derived Mph",
+              "labelV2": "NA",
+              "cells": 349
+            },
+            {
+              "labelV1": "Non-classical monocytes",
+              "labelV2": "NA",
+              "cells": 201
+            },
+            {
+              "labelV1": "DC2",
+              "labelV2": "NA",
+              "cells": 146
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "AT2",
+              "cells": 143
+            },
+            {
+              "labelV1": "AT2",
+              "labelV2": "NA",
+              "cells": 117
+            },
+            {
+              "labelV1": "Monocyte-derived Mph",
+              "labelV2": "Alveolar macrophages",
+              "cells": 116
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "DC2",
+              "cells": 114
+            },
+            {
+              "labelV1": "pre-TB secretory",
+              "labelV2": "NA",
+              "cells": 106
+            }
+          ]
+        }
+      },
+      "donorProportions": {
+        "ann_level_1": {
+          "donors": 9,
+          "meanTotalVariation": 0.0012772505358417316,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.0012772505358417316
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747Myositis-ILD_01",
+            "value": 0.0036297640653357565
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747Myositis-ILD_01",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.36144073712131786,
+              "shareV2": 0.3649308948764484,
+              "difference": 0.003490157755130563
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747Myositis-ILD_01",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.6131509144213318,
+              "shareV2": 0.6096607566662013,
+              "difference": -0.0034901577551305074
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.13610350833540683,
+              "shareV2": 0.1378452351331177,
+              "difference": 0.0017417267977108686
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.8447374968897736,
+              "shareV2": 0.8432445882060214,
+              "difference": -0.001492908683752181
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc-ILD_02",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.40428526743822335,
+              "shareV2": 0.40569283703472003,
+              "difference": 0.0014075695964966828
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc-ILD_02",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.5802314670003128,
+              "shareV2": 0.5788238974038161,
+              "difference": -0.0014075695964966828
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747HP_01",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.7471870604781997,
+              "shareV2": 0.7457805907172996,
+              "difference": -0.0014064697609000865
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747HP_01",
+              "group": "ILD",
+              "label": "Endothelial",
+              "shareV1": 0.011251758087201125,
+              "shareV2": 0.01230661040787623,
+              "difference": 0.0010548523206751047
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_01",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.19284116331096196,
+              "shareV2": 0.19373601789709172,
+              "difference": 0.0008948545861297563
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_01",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.7543624161073825,
+              "shareV2": 0.7534675615212528,
+              "difference": -0.0008948545861297008
+            }
+          ]
+        },
+        "ann_level_3": {
+          "donors": 9,
+          "meanTotalVariation": 0.023019459004693352,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.023019459004693352
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+            "value": 0.08335406817616321
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "Macrophages",
+              "shareV1": 0.42722070166708137,
+              "shareV2": 0.4782284150286141,
+              "difference": 0.0510077133615327
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.09728788255785022,
+              "shareV2": 0.058223438666334906,
+              "difference": -0.03906444389151531
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "Monocytes",
+              "shareV1": 0.06071161980592187,
+              "shareV2": 0.02687235630753919,
+              "difference": -0.033839263498382684
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747Myositis-ILD_01",
+              "group": "ILD",
+              "label": "Macrophages",
+              "shareV1": 0.46893759597933826,
+              "shareV2": 0.4880636604774536,
+              "difference": 0.019126064498115325
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "Dendritic cells",
+              "shareV1": 0.031848718586713114,
+              "shareV2": 0.04851953222194576,
+              "difference": 0.016670813635232644
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_01",
+              "group": "ILD",
+              "label": "Macrophages",
+              "shareV1": 0.3261744966442953,
+              "shareV2": 0.3422818791946309,
+              "difference": 0.01610738255033556
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747Myositis-ILD_01",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.07915677788636047,
+              "shareV2": 0.065614965796454,
+              "difference": -0.013541812089906471
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "Secretory",
+              "shareV1": 0.014680268723563076,
+              "shareV2": 0.027867628763373974,
+              "difference": 0.013187360039810898
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747HP_01",
+              "group": "ILD",
+              "label": "Monocytes",
+              "shareV1": 0.11181434599156118,
+              "shareV2": 0.09915611814345991,
+              "difference": -0.012658227848101264
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747HP_01",
+              "group": "ILD",
+              "label": "Macrophages",
+              "shareV1": 0.36849507735583686,
+              "shareV2": 0.380098452883263,
+              "difference": 0.01160337552742613
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "donors": 9,
+          "meanTotalVariation": 0.06409093871274715,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.06409093871274715
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+            "value": 0.16421995521273944
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.04503607862652401,
+              "shareV2": 0.16894749937795472,
+              "difference": 0.12391142075143072
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_02",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.12868284228769497,
+              "shareV2": 0.1949740034662045,
+              "difference": 0.06629116117850953
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "Alveolar macrophages",
+              "shareV1": 0.19333167454590694,
+              "shareV2": 0.12814132868872855,
+              "difference": -0.0651903458571784
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_01",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.07606263982102908,
+              "shareV2": 0.1395973154362416,
+              "difference": 0.06353467561521252
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_03",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.33590445384423984,
+              "shareV2": 0.275192834038318,
+              "difference": -0.060711619805921824
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747Myositis-ILD_01",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.09004607008236773,
+              "shareV2": 0.14533016892363534,
+              "difference": 0.055284098841267615
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF_01",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.1342281879194631,
+              "shareV2": 0.08814317673378076,
+              "difference": -0.046085011185682326
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SSc-ILD_01",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.09519212203128016,
+              "shareV2": 0.13844371500289632,
+              "difference": 0.043251592971616154
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747HP_01",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.06891701828410689,
+              "shareV2": 0.1079465541490858,
+              "difference": 0.03902953586497891
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747Myositis-ILD_01",
+              "group": "ILD",
+              "label": "Alveolar macrophages",
+              "shareV1": 0.22350970263855927,
+              "shareV2": 0.18595560519335474,
+              "difference": -0.03755409744520452
+            }
+          ]
+        },
+        "newLabelShareByDonor": {
+          "ILD": {
+            "donors": 9,
+            "donorsWithCells": 0,
+            "meanShare": 0.0
+          }
+        }
+      },
+      "unexplained": {
+        "all": {
+          "cells": 37097,
+          "usableV1": 37005,
+          "usableV2": 37002,
+          "unexplainedV1": 414,
+          "unexplainedV2": 250,
+          "v1UnexplainedExplainedUnderV2": 245,
+          "v1UnexplainedStillUnexplained": 158,
+          "v1UnexplainedWithoutLineageUnderV2": 11,
+          "v1UnexplainedLabelledNewUnderV2": 0,
+          "v1UnexplainedExplainedOrLabelledNew": 245,
+          "v1ExplainedUnexplainedUnderV2": 90,
+          "labelledNewUnderV2": 0,
+          "shareV1": 0.011187677340899878,
+          "shareV2": 0.006756391546402897
+        },
+        "byGroup": {
+          "ILD": {
+            "cells": 37097,
+            "usableV1": 37005,
+            "usableV2": 37002,
+            "unexplainedV1": 414,
+            "unexplainedV2": 250,
+            "v1UnexplainedExplainedUnderV2": 245,
+            "v1UnexplainedStillUnexplained": 158,
+            "v1UnexplainedWithoutLineageUnderV2": 11,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 245,
+            "v1ExplainedUnexplainedUnderV2": 90,
+            "labelledNewUnderV2": 0,
+            "shareV1": 0.011187677340899878,
+            "shareV2": 0.006756391546402897
+          }
+        },
+        "v1UnexplainedByLineageV1": {
+          "Endothelial": {
+            "cells": 25,
+            "usableV1": 25,
+            "usableV2": 25,
+            "unexplainedV1": 25,
+            "unexplainedV2": 15,
+            "v1UnexplainedExplainedUnderV2": 10,
+            "v1UnexplainedStillUnexplained": 15,
+            "v1UnexplainedWithoutLineageUnderV2": 0,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 10,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.6
+          },
+          "Epithelial": {
+            "cells": 204,
+            "usableV1": 204,
+            "usableV2": 201,
+            "unexplainedV1": 204,
+            "unexplainedV2": 64,
+            "v1UnexplainedExplainedUnderV2": 137,
+            "v1UnexplainedStillUnexplained": 64,
+            "v1UnexplainedWithoutLineageUnderV2": 3,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 137,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.31840796019900497
+          },
+          "Immune": {
+            "cells": 171,
+            "usableV1": 171,
+            "usableV2": 163,
+            "unexplainedV1": 171,
+            "unexplainedV2": 70,
+            "v1UnexplainedExplainedUnderV2": 93,
+            "v1UnexplainedStillUnexplained": 70,
+            "v1UnexplainedWithoutLineageUnderV2": 8,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 93,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.4294478527607362
+          },
+          "Stroma": {
+            "cells": 14,
+            "usableV1": 14,
+            "usableV2": 14,
+            "unexplainedV1": 14,
+            "unexplainedV2": 9,
+            "v1UnexplainedExplainedUnderV2": 5,
+            "v1UnexplainedStillUnexplained": 9,
+            "v1UnexplainedWithoutLineageUnderV2": 0,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 5,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.6428571428571429
+          }
+        },
+        "transitions": {
+          "explained -> explained": 36451,
+          "explained -> noLineage": 50,
+          "explained -> unexplained": 90,
+          "noLineage -> explained": 56,
+          "noLineage -> noLineage": 34,
+          "noLineage -> unexplained": 2,
+          "unexplained -> explained": 245,
+          "unexplained -> noLineage": 11,
+          "unexplained -> unexplained": 158
+        },
+        "labelledNew": {
+          "cells": 0,
+          "byGroup": {},
+          "stateV1": {},
+          "labelV1": {},
+          "authorLabels": {},
+          "lineageV2": {}
+        }
+      },
+      "costs": {
+        "mount": {
+          "seconds": 104.625819716,
+          "bytes": 436189259,
+          "bytesByPart": {
+            "cellData": 435190756,
+            "featureData": 997461,
+            "other": 1042
+          },
+          "existed": false
+        },
+        "phase1": {
+          "seconds": 679.4023576979998,
+          "referenceReadBytes": 386010660,
+          "sourceReadBytes": 8055043282,
+          "bytesAdded": 8501692,
+          "created": [
+            "map_v1",
+            "select",
+            "transfer_v1_ann_finest_level",
+            "transfer_v1_ann_level_1",
+            "transfer_v1_ann_level_3"
+          ],
+          "fromSource": []
+        },
+        "updateV1Requests": {
+          "seconds": 127.11626801700001,
+          "referenceReadBytes": 277352747,
+          "bytesAdded": 0,
+          "created": []
+        },
+        "updateV2": {
+          "seconds": 733.2705442160001,
+          "referenceReadBytes": 692726151,
+          "revisedStoreReadBytes": 692726151,
+          "fullHlcaReadBytes": 8055104787,
+          "sourceReadBytes": 8055104787,
+          "bytesAdded": 8952864,
+          "createdHere": true
+        },
+        "recovery": {
+          "seconds": 35.60986084000001,
+          "referenceReadBytes": 0
+        },
+        "storeBytes": {
+          "afterPhase1": 444690951,
+          "afterUpdate": 453643815
+        },
+        "note": "for the full-HLCA centres the full HLCA is both the centre's source and v2's source, so its reads are reported apart"
+      },
+      "traceability": {
+        "recovery": {
+          "identical": true,
+          "sameCells": true,
+          "tableAsWritten": true,
+          "referenceReadBytes": 0,
+          "cells": [
+            37097,
+            37097
+          ]
+        },
+        "v1IdentifiersUnchanged": true,
+        "counts": {
+          "reused": 2,
+          "new": 8,
+          "superseded": 8,
+          "reference v1": 10,
+          "reference v2": 10
+        },
+        "kinds": {
+          "reused": [
+            "cell_selection",
+            "feature_selection"
+          ],
+          "new": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "superseded": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "reference v1": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ],
+          "reference v2": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ]
+        },
+        "ownUnchanged": 10,
+        "ownBefore": 10,
+        "ownChangedOrRemoved": []
+      },
+      "checks": {
+        "projection": {
+          "cells": 37097,
+          "uninformativeAgree": true,
+          "nearestDistanceIdenticalOnInformativeCells": true,
+          "nearestDistanceMaxAbsDifference": 0.0,
+          "diagnostics": {
+            "featureCoverage": 0.963,
+            "queryBatchCount": 1,
+            "algorithmVariant": "scaled_pca",
+            "uninformativeCellCount": 0,
+            "queryScaledDispersion": 0.944496217174006
+          }
+        },
+        "primaryRun": {
+          "cells": 37097,
+          "inPrimaryTable": 37097,
+          "nearestDistanceAgrees": 1.0,
+          "labelAgrees_ann_level_1": 1.0,
+          "voteAgrees_ann_level_1": 1.0,
+          "labelAgrees_ann_level_3": 1.0,
+          "voteAgrees_ann_level_3": 1.0,
+          "labelAgrees_ann_finest_level": 1.0,
+          "voteAgrees_ann_finest_level": 1.0
+        }
+      },
+      "panelGenes": {
+        "v1": 2000,
+        "v2": 2000,
+        "shared": 1430
+      }
+    },
+    "schiller_2020": {
+      "name": "Schiller_2020",
+      "cells": 38648,
+      "calibration": {
+        "v1": {
+          "calibration": "own controls",
+          "calibrationCentres": [
+            "schiller_2020"
+          ],
+          "controlDonors": 11
+        },
+        "v2": {
+          "calibration": "own controls",
+          "calibrationCentres": [
+            "schiller_2020"
+          ],
+          "controlDonors": 11
+        }
+      },
+      "labelChanges": {
+        "ann_level_1": {
+          "cells": 38648,
+          "changed": 509,
+          "changedShare": 0.013170151107431173,
+          "changedAmongLabelledUnderBoth": 0.0039791617581612084,
+          "abstainedV1": 0.0068308838749741255,
+          "abstainedV2": 0.007167253156696336,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "Immune",
+              "labelV2": "NA",
+              "cells": 102
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Immune",
+              "cells": 58
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Epithelial",
+              "cells": 50
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "NA",
+              "cells": 42
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Epithelial",
+              "cells": 42
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Stroma",
+              "cells": 33
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Endothelial",
+              "cells": 31
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "Immune",
+              "cells": 26
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Endothelial",
+              "cells": 23
+            },
+            {
+              "labelV1": "Stroma",
+              "labelV2": "NA",
+              "cells": 21
+            },
+            {
+              "labelV1": "Endothelial",
+              "labelV2": "NA",
+              "cells": 20
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "Stroma",
+              "cells": 14
+            }
+          ]
+        },
+        "ann_level_3": {
+          "cells": 38648,
+          "changed": 4611,
+          "changedShare": 0.1193075967708549,
+          "changedAmongLabelledUnderBoth": 0.025157989768281673,
+          "abstainedV1": 0.08843924653280895,
+          "abstainedV2": 0.09426102256261644,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "Monocytes",
+              "labelV2": "NA",
+              "cells": 458
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Dendritic cells",
+              "cells": 253
+            },
+            {
+              "labelV1": "Macrophages",
+              "labelV2": "NA",
+              "cells": 220
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Macrophages",
+              "cells": 220
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "T cell lineage",
+              "cells": 208
+            },
+            {
+              "labelV1": "T cell lineage",
+              "labelV2": "NA",
+              "cells": 177
+            },
+            {
+              "labelV1": "Dendritic cells",
+              "labelV2": "NA",
+              "cells": 168
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Monocytes",
+              "cells": 165
+            },
+            {
+              "labelV1": "B cell lineage",
+              "labelV2": "NA",
+              "cells": 161
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Secretory",
+              "cells": 139
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Fibroblasts",
+              "cells": 123
+            },
+            {
+              "labelV1": "EC venous",
+              "labelV2": "NA",
+              "cells": 123
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "cells": 38648,
+          "changed": 8053,
+          "changedShare": 0.2083678327468433,
+          "changedAmongLabelledUnderBoth": 0.0448142471352456,
+          "abstainedV1": 0.1934899606706686,
+          "abstainedV2": 0.21188677292486027,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "Classical monocytes",
+              "labelV2": "NA",
+              "cells": 527
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "CD4 T cells",
+              "cells": 517
+            },
+            {
+              "labelV1": "CD8 T cells",
+              "labelV2": "NA",
+              "cells": 444
+            },
+            {
+              "labelV1": "Monocyte-derived Mph",
+              "labelV2": "NA",
+              "cells": 281
+            },
+            {
+              "labelV1": "CD8 T cells",
+              "labelV2": "CD4 T cells",
+              "cells": 271
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "CD8 T cells",
+              "cells": 257
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Monocyte-derived Mph",
+              "cells": 249
+            },
+            {
+              "labelV1": "Alveolar macrophages",
+              "labelV2": "NA",
+              "cells": 238
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Alveolar macrophages",
+              "cells": 214
+            },
+            {
+              "labelV1": "DC2",
+              "labelV2": "NA",
+              "cells": 212
+            },
+            {
+              "labelV1": "Adventitial fibroblasts",
+              "labelV2": "NA",
+              "cells": 185
+            },
+            {
+              "labelV1": "Plasma cells",
+              "labelV2": "NA",
+              "cells": 179
+            }
+          ]
+        }
+      },
+      "donorProportions": {
+        "ann_level_1": {
+          "donors": 14,
+          "meanTotalVariation": 0.0042435545447984035,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.0015419866373215102,
+            "control": 0.0049803457922921015
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5288",
+            "value": 0.012658227848101266
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5288",
+              "group": "control",
+              "label": "Epithelial",
+              "shareV1": 0.0,
+              "shareV2": 0.012658227848101266,
+              "difference": 0.012658227848101266
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5288",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.012658227848101266,
+              "shareV2": 0.0,
+              "difference": -0.012658227848101266
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5213",
+              "group": "control",
+              "label": "Immune",
+              "shareV1": 0.5396618985695709,
+              "shareV2": 0.5299089726918076,
+              "difference": -0.00975292587776333
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5213",
+              "group": "control",
+              "label": "Epithelial",
+              "shareV1": 0.25227568270481143,
+              "shareV2": 0.2607282184655397,
+              "difference": 0.008452535760728241
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5103",
+              "group": "control",
+              "label": "Stroma",
+              "shareV1": 0.0782934833567745,
+              "shareV2": 0.08626347866854196,
+              "difference": 0.007969995311767467
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5103",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.02156586966713549,
+              "shareV2": 0.016877637130801686,
+              "difference": -0.004688232536333804
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc10380",
+              "group": "control",
+              "label": "Immune",
+              "shareV1": 0.5733235077376566,
+              "shareV2": 0.5689019896831246,
+              "difference": -0.004421518054532059
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc9832",
+              "group": "control",
+              "label": "Immune",
+              "shareV1": 0.47986289631533846,
+              "shareV2": 0.47643530419880037,
+              "difference": -0.003427592116538092
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5212",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.009511731135066582,
+              "shareV2": 0.012682308180088777,
+              "difference": 0.003170577045022195
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5212",
+              "group": "control",
+              "label": "Epithelial",
+              "shareV1": 0.3151553582752061,
+              "shareV2": 0.3119847812301839,
+              "difference": -0.0031705770450221604
+            }
+          ]
+        },
+        "ann_level_3": {
+          "donors": 14,
+          "meanTotalVariation": 0.028109005183216573,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.026121698473343755,
+            "control": 0.028650997922272794
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5288",
+            "value": 0.05063291139240507
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5288",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.10126582278481013,
+              "shareV2": 0.1518987341772152,
+              "difference": 0.05063291139240507
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5288",
+              "group": "control",
+              "label": "Macrophages",
+              "shareV1": 0.08860759493670886,
+              "shareV2": 0.05063291139240506,
+              "difference": -0.0379746835443038
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc9826",
+              "group": "ILD",
+              "label": "Monocytes",
+              "shareV1": 0.2973635806253832,
+              "shareV2": 0.26241569589209074,
+              "difference": -0.03494788473329247
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc9832",
+              "group": "control",
+              "label": "Monocytes",
+              "shareV1": 0.15081405312767782,
+              "shareV2": 0.13024850042844902,
+              "difference": -0.0205655526992288
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc9826",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.12568976088289394,
+              "shareV2": 0.1459227467811159,
+              "difference": 0.02023298589822195
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5103",
+              "group": "control",
+              "label": "Monocytes",
+              "shareV1": 0.29020159399906237,
+              "shareV2": 0.27332395686826066,
+              "difference": -0.016877637130801704
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc4659",
+              "group": "control",
+              "label": "Macrophages",
+              "shareV1": 0.5894039735099338,
+              "shareV2": 0.6059602649006622,
+              "difference": 0.01655629139072845
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5213",
+              "group": "control",
+              "label": "Monocytes",
+              "shareV1": 0.06501950585175553,
+              "shareV2": 0.05006501950585176,
+              "difference": -0.014954486345903774
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5212",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.08560558021559923,
+              "shareV2": 0.10019023462270134,
+              "difference": 0.014584654407102104
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc10380",
+              "group": "control",
+              "label": "Monocytes",
+              "shareV1": 0.027450257921886514,
+              "shareV2": 0.013080324244657332,
+              "difference": -0.014369933677229182
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "donors": 14,
+          "meanTotalVariation": 0.048416059123335416,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.06234946875497244,
+            "control": 0.044616038314707125
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc10380",
+            "value": 0.08087693441414884
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc9826",
+              "group": "ILD",
+              "label": "Classical monocytes",
+              "shareV1": 0.20999386879215207,
+              "shareV2": 0.14714898835070508,
+              "difference": -0.06284488044144698
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc9826",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.28877988963825874,
+              "shareV2": 0.34671980380134887,
+              "difference": 0.057939914163090134
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc10380",
+              "group": "control",
+              "label": "CD4 T cells",
+              "shareV1": 0.06061164333087694,
+              "shareV2": 0.10132645541635962,
+              "difference": 0.040714812085482686
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5212",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.17184527584020293,
+              "shareV2": 0.20164870006341154,
+              "difference": 0.029803424223208613
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc10380",
+              "group": "control",
+              "label": "CD8 T cells",
+              "shareV1": 0.13725128960943256,
+              "shareV2": 0.10906411201179071,
+              "difference": -0.028187177597641846
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5213",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.21846553966189858,
+              "shareV2": 0.24577373211963588,
+              "difference": 0.0273081924577373
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc10381",
+              "group": "ILD",
+              "label": "Plasma cells",
+              "shareV1": 0.21350720124562086,
+              "shareV2": 0.1872323861424679,
+              "difference": -0.026274815103152965
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5288",
+              "group": "control",
+              "label": "CD4 T cells",
+              "shareV1": 0.012658227848101266,
+              "shareV2": 0.0379746835443038,
+              "difference": 0.025316455696202535
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc5105",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.16493055555555555,
+              "shareV2": 0.1892361111111111,
+              "difference": 0.024305555555555552
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747muc4659",
+              "group": "control",
+              "label": "CD4 T cells",
+              "shareV1": 0.013245033112582781,
+              "shareV2": 0.03642384105960265,
+              "difference": 0.023178807947019868
+            }
+          ]
+        },
+        "newLabelShareByDonor": {
+          "ILD": {
+            "donors": 3,
+            "donorsWithCells": 0,
+            "meanShare": 0.0
+          },
+          "control": {
+            "donors": 11,
+            "donorsWithCells": 0,
+            "meanShare": 0.0
+          }
+        }
+      },
+      "unexplained": {
+        "all": {
+          "cells": 38648,
+          "usableV1": 38384,
+          "usableV2": 38371,
+          "unexplainedV1": 462,
+          "unexplainedV2": 425,
+          "v1UnexplainedExplainedUnderV2": 219,
+          "v1UnexplainedStillUnexplained": 219,
+          "v1UnexplainedWithoutLineageUnderV2": 24,
+          "v1UnexplainedLabelledNewUnderV2": 0,
+          "v1UnexplainedExplainedOrLabelledNew": 219,
+          "v1ExplainedUnexplainedUnderV2": 184,
+          "labelledNewUnderV2": 0,
+          "shareV1": 0.012036265110462692,
+          "shareV2": 0.011076073076020954
+        },
+        "byGroup": {
+          "ILD": {
+            "cells": 17526,
+            "usableV1": 17426,
+            "usableV2": 17424,
+            "unexplainedV1": 202,
+            "unexplainedV2": 197,
+            "v1UnexplainedExplainedUnderV2": 92,
+            "v1UnexplainedStillUnexplained": 102,
+            "v1UnexplainedWithoutLineageUnderV2": 8,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 92,
+            "v1ExplainedUnexplainedUnderV2": 93,
+            "labelledNewUnderV2": 0,
+            "shareV1": 0.011591874210949156,
+            "shareV2": 0.011306244260789714
+          },
+          "control": {
+            "cells": 21122,
+            "usableV1": 20958,
+            "usableV2": 20947,
+            "unexplainedV1": 260,
+            "unexplainedV2": 228,
+            "v1UnexplainedExplainedUnderV2": 127,
+            "v1UnexplainedStillUnexplained": 117,
+            "v1UnexplainedWithoutLineageUnderV2": 16,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 127,
+            "v1ExplainedUnexplainedUnderV2": 91,
+            "labelledNewUnderV2": 0,
+            "shareV1": 0.01240576390876992,
+            "shareV2": 0.010884613548479496
+          }
+        },
+        "v1UnexplainedByLineageV1": {
+          "Endothelial": {
+            "cells": 63,
+            "usableV1": 63,
+            "usableV2": 60,
+            "unexplainedV1": 63,
+            "unexplainedV2": 18,
+            "v1UnexplainedExplainedUnderV2": 42,
+            "v1UnexplainedStillUnexplained": 18,
+            "v1UnexplainedWithoutLineageUnderV2": 3,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 42,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.3
+          },
+          "Epithelial": {
+            "cells": 110,
+            "usableV1": 110,
+            "usableV2": 104,
+            "unexplainedV1": 110,
+            "unexplainedV2": 60,
+            "v1UnexplainedExplainedUnderV2": 44,
+            "v1UnexplainedStillUnexplained": 60,
+            "v1UnexplainedWithoutLineageUnderV2": 6,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 44,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.5769230769230769
+          },
+          "Immune": {
+            "cells": 263,
+            "usableV1": 263,
+            "usableV2": 248,
+            "unexplainedV1": 263,
+            "unexplainedV2": 126,
+            "v1UnexplainedExplainedUnderV2": 122,
+            "v1UnexplainedStillUnexplained": 126,
+            "v1UnexplainedWithoutLineageUnderV2": 15,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 122,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.5080645161290323
+          },
+          "Stroma": {
+            "cells": 26,
+            "usableV1": 26,
+            "usableV2": 26,
+            "unexplainedV1": 26,
+            "unexplainedV2": 15,
+            "v1UnexplainedExplainedUnderV2": 11,
+            "v1UnexplainedStillUnexplained": 15,
+            "v1UnexplainedWithoutLineageUnderV2": 0,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 11,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.5769230769230769
+          }
+        },
+        "transitions": {
+          "explained -> explained": 37577,
+          "explained -> noLineage": 161,
+          "explained -> unexplained": 184,
+          "noLineage -> explained": 150,
+          "noLineage -> noLineage": 92,
+          "noLineage -> unexplained": 22,
+          "unexplained -> explained": 219,
+          "unexplained -> noLineage": 24,
+          "unexplained -> unexplained": 219
+        },
+        "labelledNew": {
+          "cells": 0,
+          "byGroup": {},
+          "stateV1": {},
+          "labelV1": {},
+          "authorLabels": {},
+          "lineageV2": {}
+        }
+      },
+      "costs": {
+        "mount": {
+          "seconds": 66.676448998,
+          "bytes": 436189259,
+          "bytesByPart": {
+            "cellData": 435190756,
+            "featureData": 997461,
+            "other": 1042
+          },
+          "existed": false
+        },
+        "phase1": {
+          "seconds": 651.0293863390001,
+          "referenceReadBytes": 386010660,
+          "sourceReadBytes": 8055128809,
+          "bytesAdded": 9302682,
+          "created": [
+            "map_v1",
+            "select",
+            "transfer_v1_ann_finest_level",
+            "transfer_v1_ann_level_1",
+            "transfer_v1_ann_level_3"
+          ],
+          "fromSource": []
+        },
+        "updateV1Requests": {
+          "seconds": 106.018814337,
+          "referenceReadBytes": 277352747,
+          "bytesAdded": 0,
+          "created": []
+        },
+        "updateV2": {
+          "seconds": 632.9597933090002,
+          "referenceReadBytes": 692726151,
+          "revisedStoreReadBytes": 692726151,
+          "fullHlcaReadBytes": 8055190314,
+          "sourceReadBytes": 8055190314,
+          "bytesAdded": 9778702,
+          "createdHere": true
+        },
+        "recovery": {
+          "seconds": 27.068323201999988,
+          "referenceReadBytes": 0
+        },
+        "storeBytes": {
+          "afterPhase1": 445491941,
+          "afterUpdate": 455270643
+        },
+        "note": "for the full-HLCA centres the full HLCA is both the centre's source and v2's source, so its reads are reported apart"
+      },
+      "traceability": {
+        "recovery": {
+          "identical": true,
+          "sameCells": true,
+          "tableAsWritten": true,
+          "referenceReadBytes": 0,
+          "cells": [
+            38648,
+            38648
+          ]
+        },
+        "v1IdentifiersUnchanged": true,
+        "counts": {
+          "reused": 2,
+          "new": 8,
+          "superseded": 8,
+          "reference v1": 10,
+          "reference v2": 10
+        },
+        "kinds": {
+          "reused": [
+            "cell_selection",
+            "feature_selection"
+          ],
+          "new": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "superseded": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "reference v1": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ],
+          "reference v2": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ]
+        },
+        "ownUnchanged": 10,
+        "ownBefore": 10,
+        "ownChangedOrRemoved": []
+      },
+      "checks": {
+        "projection": {
+          "cells": 38648,
+          "uninformativeAgree": true,
+          "nearestDistanceIdenticalOnInformativeCells": true,
+          "nearestDistanceMaxAbsDifference": 0.0,
+          "diagnostics": {
+            "featureCoverage": 0.963,
+            "queryBatchCount": 1,
+            "algorithmVariant": "scaled_pca",
+            "uninformativeCellCount": 0,
+            "queryScaledDispersion": 3.6768836258264663
+          }
+        },
+        "primaryRun": {
+          "cells": 38648,
+          "inPrimaryTable": 38648,
+          "nearestDistanceAgrees": 1.0,
+          "labelAgrees_ann_level_1": 1.0,
+          "voteAgrees_ann_level_1": 1.0,
+          "labelAgrees_ann_level_3": 1.0,
+          "voteAgrees_ann_level_3": 1.0,
+          "labelAgrees_ann_finest_level": 1.0,
+          "voteAgrees_ann_finest_level": 1.0
+        }
+      },
+      "panelGenes": {
+        "v1": 2000,
+        "v2": 2000,
+        "shared": 1430
+      }
+    },
+    "sheppard_2020": {
+      "name": "Sheppard_2020",
+      "cells": 80020,
+      "calibration": {
+        "v1": {
+          "calibration": "own controls",
+          "calibrationCentres": [
+            "sheppard_2020"
+          ],
+          "controlDonors": 3
+        },
+        "v2": {
+          "calibration": "own controls",
+          "calibrationCentres": [
+            "sheppard_2020"
+          ],
+          "controlDonors": 3
+        }
+      },
+      "labelChanges": {
+        "ann_level_1": {
+          "cells": 80020,
+          "changed": 188,
+          "changedShare": 0.0023494126468382903,
+          "changedAmongLabelledUnderBoth": 0.0005261905060198699,
+          "abstainedV1": 0.0015746063484128967,
+          "abstainedV2": 0.0016245938515371157,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "Immune",
+              "labelV2": "NA",
+              "cells": 39
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Endothelial",
+              "cells": 29
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Immune",
+              "cells": 17
+            },
+            {
+              "labelV1": "Endothelial",
+              "labelV2": "NA",
+              "cells": 16
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Stroma",
+              "cells": 15
+            },
+            {
+              "labelV1": "Stroma",
+              "labelV2": "NA",
+              "cells": 14
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Endothelial",
+              "cells": 13
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Stroma",
+              "cells": 13
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Epithelial",
+              "cells": 12
+            },
+            {
+              "labelV1": "Immune",
+              "labelV2": "Epithelial",
+              "cells": 10
+            },
+            {
+              "labelV1": "Epithelial",
+              "labelV2": "NA",
+              "cells": 6
+            },
+            {
+              "labelV1": "Endothelial",
+              "labelV2": "Epithelial",
+              "cells": 2
+            }
+          ]
+        },
+        "ann_level_3": {
+          "cells": 80020,
+          "changed": 8446,
+          "changedShare": 0.1055486128467883,
+          "changedAmongLabelledUnderBoth": 0.01091757524175679,
+          "abstainedV1": 0.09601349662584353,
+          "abstainedV2": 0.10448637840539865,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "None",
+              "labelV2": "NA",
+              "cells": 1638
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "None",
+              "cells": 964
+            },
+            {
+              "labelV1": "Fibroblasts",
+              "labelV2": "NA",
+              "cells": 668
+            },
+            {
+              "labelV1": "Macrophages",
+              "labelV2": "NA",
+              "cells": 578
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Myofibroblasts",
+              "cells": 548
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Fibroblasts",
+              "cells": 525
+            },
+            {
+              "labelV1": "SM activated stress response",
+              "labelV2": "NA",
+              "cells": 450
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "SM activated stress response",
+              "cells": 424
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Macrophages",
+              "cells": 336
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Monocytes",
+              "cells": 213
+            },
+            {
+              "labelV1": "Myofibroblasts",
+              "labelV2": "NA",
+              "cells": 210
+            },
+            {
+              "labelV1": "Monocytes",
+              "labelV2": "NA",
+              "cells": 155
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "cells": 80020,
+          "changed": 15261,
+          "changedShare": 0.19071482129467632,
+          "changedAmongLabelledUnderBoth": 0.02255883148498783,
+          "abstainedV1": 0.21322169457635592,
+          "abstainedV2": 0.22566858285428643,
+          "newLabelCells": 0,
+          "newLabelFromV1": {},
+          "topChanges": [
+            {
+              "labelV1": "Smooth muscle",
+              "labelV2": "NA",
+              "cells": 1643
+            },
+            {
+              "labelV1": "Adventitial fibroblasts",
+              "labelV2": "NA",
+              "cells": 1486
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Smooth muscle",
+              "cells": 954
+            },
+            {
+              "labelV1": "Monocyte-derived Mph",
+              "labelV2": "NA",
+              "cells": 827
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Peribronchial fibroblasts",
+              "cells": 805
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Monocyte-derived Mph",
+              "cells": 798
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Adventitial fibroblasts",
+              "cells": 748
+            },
+            {
+              "labelV1": "Alveolar fibroblasts",
+              "labelV2": "NA",
+              "cells": 713
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Myofibroblasts",
+              "cells": 630
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "Alveolar fibroblasts",
+              "cells": 582
+            },
+            {
+              "labelV1": "SM activated stress response",
+              "labelV2": "NA",
+              "cells": 450
+            },
+            {
+              "labelV1": "NA",
+              "labelV2": "SM activated stress response",
+              "cells": 424
+            }
+          ]
+        }
+      },
+      "donorProportions": {
+        "ann_level_1": {
+          "donors": 8,
+          "meanTotalVariation": 0.000841494198936062,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.0009802441984510426,
+            "control": 0.0006102441997444274
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+            "value": 0.0014910536779324003
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.1823558648111332,
+              "shareV2": 0.18101391650099405,
+              "difference": -0.001341948310139146
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF2",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.22124557830421268,
+              "shareV2": 0.22017365205273878,
+              "difference": -0.001071926251473898
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD2",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.0018194541637508747,
+              "shareV2": 0.0026592022393282016,
+              "difference": 0.0008397480755773269
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+              "group": "ILD",
+              "label": "Endothelial",
+              "shareV1": 0.0933399602385686,
+              "shareV2": 0.0940854870775348,
+              "difference": 0.0007455268389661984
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF2",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.0010719262514738985,
+              "shareV2": 0.0017150820023582377,
+              "difference": 0.0006431557508843392
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD1",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.16811568488289566,
+              "shareV2": 0.16749467707594037,
+              "difference": -0.0006210078069552871
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD2",
+              "group": "ILD",
+              "label": "Immune",
+              "shareV1": 0.5591322603219034,
+              "shareV2": 0.5585724282715185,
+              "difference": -0.0005598320503849008
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD2",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.031910426871938416,
+              "shareV2": 0.0324702589223233,
+              "difference": 0.0005598320503848869
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+              "group": "ILD",
+              "label": "Epithelial",
+              "shareV1": 0.025149105367793242,
+              "shareV2": 0.02569582504970179,
+              "difference": 0.0005467196819085481
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD1",
+              "group": "ILD",
+              "label": "Stroma",
+              "shareV1": 0.7865507452093683,
+              "shareV2": 0.78708303761533,
+              "difference": 0.000532292405961754
+            }
+          ]
+        },
+        "ann_level_3": {
+          "donors": 8,
+          "meanTotalVariation": 0.019716800366975033,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.023173239017322902,
+            "control": 0.013956069283061923
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+            "value": 0.03424453280318089
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD1",
+              "group": "ILD",
+              "label": "None",
+              "shareV1": 0.2613555713271824,
+              "shareV2": 0.23891057487579845,
+              "difference": -0.022444996451383953
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.13210735586481112,
+              "shareV2": 0.14895626242544732,
+              "difference": 0.0168489065606362
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF2",
+              "group": "ILD",
+              "label": "None",
+              "shareV1": 0.18480008575410012,
+              "shareV2": 0.1691499624825812,
+              "difference": -0.015650123271518906
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF1",
+              "group": "ILD",
+              "label": "None",
+              "shareV1": 0.22596153846153846,
+              "shareV2": 0.21108058608058608,
+              "difference": -0.014880952380952384
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+              "group": "ILD",
+              "label": "None",
+              "shareV1": 0.3438866799204771,
+              "shareV2": 0.3300695825049702,
+              "difference": -0.013817097415506907
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF2",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.11105155965269589,
+              "shareV2": 0.12337871154464573,
+              "difference": 0.012327151891949842
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747NML3",
+              "group": "control",
+              "label": "Macrophages",
+              "shareV1": 0.22614896988906497,
+              "shareV2": 0.21473851030110935,
+              "difference": -0.011410459587955613
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+              "group": "ILD",
+              "label": "Myofibroblasts",
+              "shareV1": 0.013817097415506959,
+              "shareV2": 0.024552683896620277,
+              "difference": 0.010735586481113318
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD1",
+              "group": "ILD",
+              "label": "Myofibroblasts",
+              "shareV1": 0.01667849538679915,
+              "shareV2": 0.02634847409510291,
+              "difference": 0.009669978708303759
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF1",
+              "group": "ILD",
+              "label": "SM activated stress response",
+              "shareV1": 0.06456043956043957,
+              "shareV2": 0.07417582417582418,
+              "difference": 0.009615384615384609
+            }
+          ]
+        },
+        "ann_finest_level": {
+          "donors": 8,
+          "meanTotalVariation": 0.04283109928499776,
+          "meanTotalVariationByGroup": {
+            "ILD": 0.049840932496330245,
+            "control": 0.031148043932776925
+          },
+          "maxTotalVariation": {
+            "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+            "value": 0.05839960238568587
+          },
+          "largestShareChanges": [
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF1",
+              "group": "ILD",
+              "label": "Peribronchial fibroblasts",
+              "shareV1": 0.028846153846153848,
+              "shareV2": 0.06501831501831502,
+              "difference": 0.036172161172161175
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF1",
+              "group": "ILD",
+              "label": "Adventitial fibroblasts",
+              "shareV1": 0.15567765567765568,
+              "shareV2": 0.11996336996336997,
+              "difference": -0.03571428571428571
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.2536282306163022,
+              "shareV2": 0.28076540755467194,
+              "difference": 0.027137176938369756
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD2",
+              "group": "ILD",
+              "label": "NA",
+              "shareV1": 0.27767669699090275,
+              "shareV2": 0.25108467459762074,
+              "difference": -0.02659202239328201
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747NML3",
+              "group": "control",
+              "label": "Interstitial Mph perivascular",
+              "shareV1": 0.03803486529318542,
+              "shareV2": 0.013153724247226625,
+              "difference": -0.024881141045958795
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747NML3",
+              "group": "control",
+              "label": "NA",
+              "shareV1": 0.1405705229793978,
+              "shareV2": 0.16386687797147384,
+              "difference": 0.02329635499207605
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD1",
+              "group": "ILD",
+              "label": "Smooth muscle",
+              "shareV1": 0.2563875088715401,
+              "shareV2": 0.2336763662171753,
+              "difference": -0.022711142654364802
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF2",
+              "group": "ILD",
+              "label": "Adventitial fibroblasts",
+              "shareV1": 0.10386965376782077,
+              "shareV2": 0.08221674348804803,
+              "difference": -0.021652910279772744
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747IPF3",
+              "group": "ILD",
+              "label": "Adventitial fibroblasts",
+              "shareV1": 0.05720675944333996,
+              "shareV2": 0.036332007952286284,
+              "difference": -0.020874751491053674
+            },
+            {
+              "donor": "homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747SCD2",
+              "group": "ILD",
+              "label": "Monocyte-derived Mph",
+              "shareV1": 0.30510846745976206,
+              "shareV2": 0.3231630510846746,
+              "difference": 0.018054583624912524
+            }
+          ]
+        },
+        "newLabelShareByDonor": {
+          "ILD": {
+            "donors": 5,
+            "donorsWithCells": 0,
+            "meanShare": 0.0
+          },
+          "control": {
+            "donors": 3,
+            "donorsWithCells": 0,
+            "meanShare": 0.0
+          }
+        }
+      },
+      "unexplained": {
+        "all": {
+          "cells": 80020,
+          "usableV1": 79894,
+          "usableV2": 79890,
+          "unexplainedV1": 1167,
+          "unexplainedV2": 1053,
+          "v1UnexplainedExplainedUnderV2": 408,
+          "v1UnexplainedStillUnexplained": 721,
+          "v1UnexplainedWithoutLineageUnderV2": 38,
+          "v1UnexplainedLabelledNewUnderV2": 0,
+          "v1UnexplainedExplainedOrLabelledNew": 408,
+          "v1ExplainedUnexplainedUnderV2": 306,
+          "labelledNewUnderV2": 0,
+          "shareV1": 0.014606854081658197,
+          "shareV2": 0.013180623357116035
+        },
+        "byGroup": {
+          "ILD": {
+            "cells": 52234,
+            "usableV1": 52171,
+            "usableV2": 52163,
+            "unexplainedV1": 884,
+            "unexplainedV2": 779,
+            "v1UnexplainedExplainedUnderV2": 338,
+            "v1UnexplainedStillUnexplained": 522,
+            "v1UnexplainedWithoutLineageUnderV2": 24,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 338,
+            "v1ExplainedUnexplainedUnderV2": 239,
+            "labelledNewUnderV2": 0,
+            "shareV1": 0.01694427938893255,
+            "shareV2": 0.014933957019343212
+          },
+          "control": {
+            "cells": 27786,
+            "usableV1": 27723,
+            "usableV2": 27727,
+            "unexplainedV1": 283,
+            "unexplainedV2": 274,
+            "v1UnexplainedExplainedUnderV2": 70,
+            "v1UnexplainedStillUnexplained": 199,
+            "v1UnexplainedWithoutLineageUnderV2": 14,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 70,
+            "v1ExplainedUnexplainedUnderV2": 67,
+            "labelledNewUnderV2": 0,
+            "shareV1": 0.010208130433214299,
+            "shareV2": 0.009882064413748332
+          }
+        },
+        "v1UnexplainedByLineageV1": {
+          "Endothelial": {
+            "cells": 165,
+            "usableV1": 165,
+            "usableV2": 161,
+            "unexplainedV1": 165,
+            "unexplainedV2": 73,
+            "v1UnexplainedExplainedUnderV2": 88,
+            "v1UnexplainedStillUnexplained": 73,
+            "v1UnexplainedWithoutLineageUnderV2": 4,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 88,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.453416149068323
+          },
+          "Epithelial": {
+            "cells": 155,
+            "usableV1": 155,
+            "usableV2": 151,
+            "unexplainedV1": 155,
+            "unexplainedV2": 96,
+            "v1UnexplainedExplainedUnderV2": 55,
+            "v1UnexplainedStillUnexplained": 96,
+            "v1UnexplainedWithoutLineageUnderV2": 4,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 55,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.6357615894039735
+          },
+          "Immune": {
+            "cells": 337,
+            "usableV1": 337,
+            "usableV2": 313,
+            "unexplainedV1": 337,
+            "unexplainedV2": 237,
+            "v1UnexplainedExplainedUnderV2": 76,
+            "v1UnexplainedStillUnexplained": 237,
+            "v1UnexplainedWithoutLineageUnderV2": 24,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 76,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.7571884984025559
+          },
+          "Stroma": {
+            "cells": 510,
+            "usableV1": 510,
+            "usableV2": 504,
+            "unexplainedV1": 510,
+            "unexplainedV2": 315,
+            "v1UnexplainedExplainedUnderV2": 189,
+            "v1UnexplainedStillUnexplained": 315,
+            "v1UnexplainedWithoutLineageUnderV2": 6,
+            "v1UnexplainedLabelledNewUnderV2": 0,
+            "v1UnexplainedExplainedOrLabelledNew": 189,
+            "v1ExplainedUnexplainedUnderV2": 0,
+            "labelledNewUnderV2": 0,
+            "shareV1": 1.0,
+            "shareV2": 0.625
+          }
+        },
+        "transitions": {
+          "explained -> explained": 78384,
+          "explained -> noLineage": 37,
+          "explained -> unexplained": 306,
+          "noLineage -> explained": 45,
+          "noLineage -> noLineage": 55,
+          "noLineage -> unexplained": 26,
+          "unexplained -> explained": 408,
+          "unexplained -> noLineage": 38,
+          "unexplained -> unexplained": 721
+        },
+        "labelledNew": {
+          "cells": 0,
+          "byGroup": {},
+          "stateV1": {},
+          "labelV1": {},
+          "authorLabels": {},
+          "lineageV2": {}
+        }
+      },
+      "costs": {
+        "mount": {
+          "seconds": 65.3841638,
+          "bytes": 436189259,
+          "bytesByPart": {
+            "cellData": 435190756,
+            "featureData": 997461,
+            "other": 1042
+          },
+          "existed": false
+        },
+        "phase1": {
+          "seconds": 688.88363539,
+          "referenceReadBytes": 386010660,
+          "sourceReadBytes": 8180560633,
+          "bytesAdded": 17954017,
+          "created": [
+            "map_v1",
+            "select",
+            "transfer_v1_ann_finest_level",
+            "transfer_v1_ann_level_1",
+            "transfer_v1_ann_level_3"
+          ],
+          "fromSource": []
+        },
+        "updateV1Requests": {
+          "seconds": 137.08944452699998,
+          "referenceReadBytes": 277352747,
+          "bytesAdded": 0,
+          "created": []
+        },
+        "updateV2": {
+          "seconds": 698.519514267,
+          "referenceReadBytes": 692726151,
+          "revisedStoreReadBytes": 692726151,
+          "fullHlcaReadBytes": 8180622138,
+          "sourceReadBytes": 8180622138,
+          "bytesAdded": 18494182,
+          "createdHere": true
+        },
+        "recovery": {
+          "seconds": 34.32567684999992,
+          "referenceReadBytes": 0
+        },
+        "storeBytes": {
+          "afterPhase1": 454143276,
+          "afterUpdate": 472637458
+        },
+        "note": "for the full-HLCA centres the full HLCA is both the centre's source and v2's source, so its reads are reported apart"
+      },
+      "traceability": {
+        "recovery": {
+          "identical": true,
+          "sameCells": true,
+          "tableAsWritten": true,
+          "referenceReadBytes": 0,
+          "cells": [
+            80020,
+            80020
+          ]
+        },
+        "v1IdentifiersUnchanged": true,
+        "counts": {
+          "reused": 2,
+          "new": 8,
+          "superseded": 8,
+          "reference v1": 10,
+          "reference v2": 10
+        },
+        "kinds": {
+          "reused": [
+            "cell_selection",
+            "feature_selection"
+          ],
+          "new": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "superseded": [
+            "feature_selection",
+            "label_transfer",
+            "projection",
+            "reference_labels"
+          ],
+          "reference v1": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ],
+          "reference v2": [
+            "ann_index",
+            "cell_selection",
+            "feature_scaling",
+            "feature_selection",
+            "feature_summary",
+            "mapping_reference",
+            "metadata_snapshot",
+            "neighbors",
+            "normalized",
+            "reduction"
+          ]
+        },
+        "ownUnchanged": 10,
+        "ownBefore": 10,
+        "ownChangedOrRemoved": []
+      },
+      "checks": {
+        "projection": {
+          "cells": 80020,
+          "uninformativeAgree": true,
+          "nearestDistanceIdenticalOnInformativeCells": true,
+          "nearestDistanceMaxAbsDifference": 0.0,
+          "diagnostics": {
+            "featureCoverage": 0.963,
+            "queryBatchCount": 1,
+            "algorithmVariant": "scaled_pca",
+            "uninformativeCellCount": 0,
+            "queryScaledDispersion": 2.165200011181829
+          }
+        },
+        "primaryRun": {
+          "cells": 80020,
+          "inPrimaryTable": 80020,
+          "nearestDistanceAgrees": 1.0,
+          "labelAgrees_ann_level_1": 1.0,
+          "voteAgrees_ann_level_1": 1.0,
+          "labelAgrees_ann_level_3": 1.0,
+          "voteAgrees_ann_level_3": 1.0,
+          "labelAgrees_ann_finest_level": 1.0,
+          "voteAgrees_ann_finest_level": 1.0
+        }
+      },
+      "panelGenes": {
+        "v1": 2000,
+        "v2": 2000,
+        "shared": 1430
+      }
+    }
+  },
+  "incrementalVersusComplete": {
+    "incremental": {
+      "seconds": 738.8378670419999,
+      "v2Seconds": 617.1298102909998,
+      "bytesAdded": 60970118,
+      "v2BytesAdded": 60970118
+    },
+    "complete": {
+      "seconds": 1202.728278576,
+      "mountSeconds": 32.34334838,
+      "bytesWritten": 157212342,
+      "mountBytes": 38381838,
+      "resultBytes": 118830504,
+      "v2OnlySeconds": 635.0230716530001,
+      "v2OnlyBytes": 99354752
+    },
+    "secondsRatioCompleteToIncremental": 1.6278649650040609,
+    "secondsRatioV2OnlyToIncremental": 0.8594890705796779,
+    "bytesRatioCompleteToIncremental": 2.578514642205547,
+    "bytesRatioV2OnlyToIncremental": 1.6295646992187223,
+    "sameResults": {
+      "v1": true,
+      "v2": true
+    },
+    "samePayloadFingerprints": true,
+    "clean": {
+      "updateCreatedV2": true
+    }
+  },
+  "jobs": {
+    "reference": {
+      "status": "ok",
+      "seconds": 947.199371099472,
+      "previousAttempt": null
+    },
+    "centre_natri": {
+      "status": "ok",
+      "seconds": 706.6207911968231,
+      "previousAttempt": null
+    },
+    "centre_lafyatis_2019": {
+      "status": "ok",
+      "seconds": 877.8362467288971,
+      "previousAttempt": null
+    },
+    "centre_misharin_budinger_2018": {
+      "status": "ok",
+      "seconds": 880.0360844135284,
+      "previousAttempt": null
+    },
+    "centre_schiller_2020": {
+      "status": "ok",
+      "seconds": 801.5423517227173,
+      "previousAttempt": null
+    },
+    "centre_sheppard_2020": {
+      "status": "ok",
+      "seconds": 844.0877227783203,
+      "previousAttempt": null
+    },
+    "update_natri": {
+      "status": "ok",
+      "seconds": 897.156797170639,
+      "previousAttempt": null
+    },
+    "update_lafyatis_2019": {
+      "status": "ok",
+      "seconds": 986.6827368736267,
+      "previousAttempt": null
+    },
+    "update_misharin_budinger_2018": {
+      "status": "ok",
+      "seconds": 1048.1395485401154,
+      "previousAttempt": null
+    },
+    "update_schiller_2020": {
+      "status": "ok",
+      "seconds": 885.8422989845276,
+      "previousAttempt": null
+    },
+    "update_sheppard_2020": {
+      "status": "ok",
+      "seconds": 1019.598023891449,
+      "previousAttempt": null
+    },
+    "rerun_natri": {
+      "status": "ok",
+      "seconds": 1319.8600015640259,
+      "previousAttempt": null
+    }
+  },
+  "steps": {
+    "loadTables": {
+      "seconds": 8.642296084000002,
+      "networkReceivedBytes": 43057105,
+      "peakRssBytes": 962244608,
+      "peakCgroupBytes": null,
+      "reads": {}
+    },
+    "calibrate_v1": {
+      "seconds": 1.999317731999998,
+      "networkReceivedBytes": 610,
+      "peakRssBytes": 1121677312,
+      "peakCgroupBytes": null,
+      "reads": {}
+    },
+    "calibrate_v2": {
+      "seconds": 2.1884034429999986,
+      "networkReceivedBytes": 554,
+      "peakRssBytes": 1125871616,
+      "peakCgroupBytes": null,
+      "reads": {}
+    },
+    "upload_label_changes": {
+      "seconds": 0.7107148690000002,
+      "networkReceivedBytes": 2980,
+      "peakRssBytes": 1220382720,
+      "peakCgroupBytes": null,
+      "reads": {}
+    },
+    "upload_donors": {
+      "seconds": 0.8080926959999992,
+      "networkReceivedBytes": 4956,
+      "peakRssBytes": 1220382720,
+      "peakCgroupBytes": null,
+      "reads": {}
+    },
+    "upload_transitions": {
+      "seconds": 0.696143498999998,
+      "networkReceivedBytes": 2044,
+      "peakRssBytes": 1220382720,
+      "peakCgroupBytes": null,
+      "reads": {}
+    },
+    "upload_unexplained": {
+      "seconds": 0.7318531610000001,
+      "networkReceivedBytes": 2252,
+      "peakRssBytes": 1220382720,
+      "peakCgroupBytes": null,
+      "reads": {}
+    },
+    "upload_thresholds": {
+      "seconds": 0.7210922599999989,
+      "networkReceivedBytes": 1628,
+      "peakRssBytes": 1220382720,
+      "peakCgroupBytes": null,
+      "reads": {}
+    },
+    "upload_costs": {
+      "seconds": 0.7557781319999997,
+      "networkReceivedBytes": 1992,
+      "peakRssBytes": 1220382720,
+      "peakCgroupBytes": null,
+      "reads": {}
+    },
+    "upload_artifacts": {
+      "seconds": 0.6752455940000033,
+      "networkReceivedBytes": 1888,
+      "peakRssBytes": 1220382720,
+      "peakCgroupBytes": null,
+      "reads": {}
+    }
+  },
+  "currentStep": null,
+  "storesOpened": {}
+}

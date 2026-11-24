@@ -1,0 +1,9 @@
+.build/
+.venv/
+__pycache__/
+.ruff_cache/
+.DS_Store
+.env
+experiments/**/configs/*
+!experiments/**/configs/*.toml
+!experiments/**/configs/benchmark/

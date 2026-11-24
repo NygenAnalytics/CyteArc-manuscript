@@ -1,0 +1,188 @@
+{
+ "cellTypes": 19,
+ "sizes": [
+  {
+   "cells": 100000,
+   "graphs": {
+    "cytearc_wnn": [
+     {
+      "seed": 1,
+      "clusters": 18,
+      "ari": 0.43066017436579584
+     },
+     {
+      "seed": 2,
+      "clusters": 19,
+      "ari": 0.43483405804948894
+     },
+     {
+      "seed": 4466,
+      "clusters": 19,
+      "ari": 0.43796328879012514
+     }
+    ],
+    "seurat_wnn": [
+     {
+      "seed": 1,
+      "clusters": 20,
+      "ari": 0.3639959083719274
+     },
+     {
+      "seed": 2,
+      "clusters": 21,
+      "ari": 0.36480496293682074
+     },
+     {
+      "seed": 4466,
+      "clusters": 19,
+      "ari": 0.358679884513539
+     }
+    ]
+   },
+   "seurat": {
+    "outcome": "pass"
+   }
+  },
+  {
+   "cells": 300000,
+   "graphs": {
+    "cytearc_wnn": [
+     {
+      "seed": 1,
+      "clusters": 20,
+      "ari": 0.44032380464931736
+     },
+     {
+      "seed": 2,
+      "clusters": 19,
+      "ari": 0.4418910677420818
+     },
+     {
+      "seed": 4466,
+      "clusters": 19,
+      "ari": 0.43447853801240377
+     }
+    ],
+    "seurat_wnn": [
+     {
+      "seed": 1,
+      "clusters": 18,
+      "ari": 0.349839806698064
+     },
+     {
+      "seed": 2,
+      "clusters": 16,
+      "ari": 0.36908451455744884
+     },
+     {
+      "seed": 4466,
+      "clusters": 19,
+      "ari": 0.3520046458063565
+     }
+    ]
+   },
+   "seurat": {
+    "outcome": "pass"
+   }
+  },
+  {
+   "cells": 600000,
+   "graphs": {
+    "cytearc_wnn": [
+     {
+      "seed": 1,
+      "clusters": 19,
+      "ari": 0.43123179041289245
+     },
+     {
+      "seed": 2,
+      "clusters": 20,
+      "ari": 0.44005775509037026
+     },
+     {
+      "seed": 4466,
+      "clusters": 19,
+      "ari": 0.4291780602274616
+     }
+    ],
+    "seurat_wnn": [
+     {
+      "seed": 1,
+      "clusters": 20,
+      "ari": 0.34287375047127133
+     },
+     {
+      "seed": 2,
+      "clusters": 18,
+      "ari": 0.3624484323956578
+     },
+     {
+      "seed": 4466,
+      "clusters": 19,
+      "ari": 0.3428533178852779
+     }
+    ]
+   },
+   "seurat": {
+    "outcome": "pass"
+   }
+  },
+  {
+   "cells": 1000000,
+   "graphs": {
+    "cytearc_wnn": [
+     {
+      "seed": 1,
+      "clusters": 19,
+      "ari": 0.43111169619581924
+     },
+     {
+      "seed": 2,
+      "clusters": 19,
+      "ari": 0.40401885747723654
+     },
+     {
+      "seed": 4466,
+      "clusters": 19,
+      "ari": 0.43267015558703636
+     }
+    ]
+   },
+   "seurat": {
+    "outcome": "time"
+   }
+  },
+  {
+   "cells": 1457527,
+   "graphs": {
+    "cytearc_wnn": [
+     {
+      "seed": 1,
+      "clusters": 19,
+      "ari": 0.43116238028254733
+     },
+     {
+      "seed": 2,
+      "clusters": 18,
+      "ari": 0.4351030197733912
+     },
+     {
+      "seed": 4466,
+      "clusters": 19,
+      "ari": 0.4331747437931265
+     }
+    ]
+   },
+   "seurat": {
+    "outcome": "oom"
+   }
+  }
+ ],
+ "source": [
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_100000/matched_cluster_agreement.csv",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_300000/matched_cluster_agreement.csv",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_600000/matched_cluster_agreement.csv",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_1000000/matched_cluster_agreement.csv",
+  "experiments/integration/records/multimodal_neighbors/combat_stephenson_pbmc_citeseq/cells_1457527/matched_cluster_agreement.csv"
+ ]
+}

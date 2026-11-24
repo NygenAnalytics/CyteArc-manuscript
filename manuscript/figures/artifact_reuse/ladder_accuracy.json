@@ -1,0 +1,188 @@
+{
+ "sizes": [
+  {
+   "part": "reference_500000",
+   "cells": 500003,
+   "nonzeros": 689239787,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_1500000",
+   "cells": 1499999,
+   "nonzeros": 2068765663,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_3000000",
+   "cells": 2999999,
+   "nonzeros": 4137339630,
+   "overRLimit": true
+  },
+  {
+   "part": "reference_all",
+   "cells": 4292870,
+   "nonzeros": 5920720691,
+   "overRLimit": true
+  }
+ ],
+ "methods": {
+  "unintegrated": [
+   {
+    "part": "reference_500000",
+    "disagreement": 0.05030899382012355,
+    "low": 0.04018501222466242,
+    "high": 0.05958556633373524
+   },
+   {
+    "part": "reference_1500000",
+    "disagreement": 0.04912901741965159,
+    "low": 0.03886237301267792,
+    "high": 0.0587412418719393
+   },
+   {
+    "part": "reference_3000000",
+    "disagreement": 0.04744905101897967,
+    "low": 0.037313143990867936,
+    "high": 0.056993640495160425
+   },
+   {
+    "part": "reference_all",
+    "disagreement": 0.04761904761904767,
+    "low": 0.03741494460786532,
+    "high": 0.05763132425691164
+   }
+  ],
+  "seurat_map": [
+   {
+    "part": "reference_500000",
+    "disagreement": 0.03982920341593166,
+    "low": 0.030424679114037234,
+    "high": 0.048305913834274405
+   },
+   {
+    "part": "reference_1500000",
+    "disagreement": 0.03909921801563965,
+    "low": 0.030092200277906822,
+    "high": 0.0472698481597692
+   }
+  ],
+  "symphony": [
+   {
+    "part": "reference_500000",
+    "disagreement": 0.04507909841803159,
+    "low": 0.03318990562760371,
+    "high": 0.056159214772834476
+   },
+   {
+    "part": "reference_1500000",
+    "disagreement": 0.04392912141757166,
+    "low": 0.03239948861250552,
+    "high": 0.054912122895751314
+   }
+  ],
+  "celltypist_hvg": [
+   {
+    "part": "reference_500000",
+    "disagreement": 0.0791184176316474,
+    "low": 0.05941116366534893,
+    "high": 0.09766145932220727
+   },
+   {
+    "part": "reference_1500000",
+    "disagreement": 0.08112837743245138,
+    "low": 0.060323753237107036,
+    "high": 0.10076501097046309
+   },
+   {
+    "part": "reference_3000000",
+    "disagreement": 0.07891842163156737,
+    "low": 0.05939758656141103,
+    "high": 0.09799680805409516
+   },
+   {
+    "part": "reference_all",
+    "disagreement": 0.08187836243275137,
+    "low": 0.06214125010014915,
+    "high": 0.10094167553567468
+   }
+  ]
+ },
+ "outcomes": {
+  "unintegrated": [
+   {
+    "part": "reference_500000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_1500000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_3000000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_all",
+    "outcome": "pass"
+   }
+  ],
+  "seurat_map": [
+   {
+    "part": "reference_500000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_1500000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_3000000",
+    "outcome": "limit"
+   },
+   {
+    "part": "reference_all",
+    "outcome": "limit"
+   }
+  ],
+  "symphony": [
+   {
+    "part": "reference_500000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_1500000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_3000000",
+    "outcome": "limit"
+   },
+   {
+    "part": "reference_all",
+    "outcome": "limit"
+   }
+  ],
+  "celltypist_hvg": [
+   {
+    "part": "reference_500000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_1500000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_3000000",
+    "outcome": "pass"
+   },
+   {
+    "part": "reference_all",
+    "outcome": "pass"
+   }
+  ]
+ },
+ "source": [
+  ".build/derived/mapping/reference_ladder.json",
+  "experiments/mapping/records/reference_ladder.json"
+ ]
+}

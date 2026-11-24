@@ -1,0 +1,90 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "experiment": "grnboost2",
+    "inputs": {
+      "matrix": {
+        "url": "https://cf.10xgenomics.com/samples/cell-arc/2.0.0/pbmc_granulocyte_sorted_3k/pbmc_granulocyte_sorted_3k_filtered_feature_bc_matrix.h5",
+        "sha256": "5fbff5a4d85e0df345f6502e966ec787a8a4c429fd6b88a8772c43fd915cf3ff",
+        "bytes": 38844318
+      },
+      "transcriptionFactors": {
+        "url": "https://resources.aertslab.org/cistarget/tf_lists/allTFs_hg38.txt",
+        "sha256": "3953034f84112c60d3d8ef15b0e0c8ac5fce0b40d2c7c0824c2945c70cee2523",
+        "bytes": 11690
+      }
+    },
+    "settings": {
+      "minimumDetectedCells": 20,
+      "uniqueGeneNames": true,
+      "variableGenesOnly": true,
+      "seeds": [
+        777,
+        778,
+        779
+      ],
+      "maxMatchedImportanceError": 1e-10,
+      "referenceEarlyStopping": "consecutive",
+      "nativeDefaultEarlyStopping": "stage"
+    },
+    "cells": 2612,
+    "genes": 14211,
+    "transcriptionFactors": 1249,
+    "ambiguousGeneColumnsExcluded": 20,
+    "nativeRuns": [
+      {
+        "seed": 777,
+        "links": 3029340,
+        "seconds": 2123.538066435,
+        "earlyStopping": "stage"
+      },
+      {
+        "seed": 778,
+        "links": 3026393,
+        "seconds": 2107.063429461,
+        "earlyStopping": "stage"
+      },
+      {
+        "seed": 779,
+        "links": 3015920,
+        "seconds": 2112.6623322819996,
+        "earlyStopping": "stage"
+      }
+    ],
+    "referenceVersions": {
+      "pyscenic": "0.12.1",
+      "arboreto": "0.1.6",
+      "scikit-learn": "1.9.1"
+    },
+    "matchedNativeSeconds": 460.62142189300084,
+    "referenceSeconds": 523.9657279820003,
+    "matchedStopping": {
+      "linksInUnion": 1179424,
+      "linksOnlyNative": 0,
+      "linksOnlyReference": 0,
+      "pearson": 1.0,
+      "maxImportanceAbsoluteDifference": 0.0,
+      "topLinkJaccard": {
+        "1000": 1.0,
+        "10000": 1.0,
+        "100000": 1.0
+      },
+      "meetsTolerance": true
+    },
+    "defaultStopping": {
+      "linksInUnion": 3040643,
+      "linksOnlyNative": 1861219,
+      "linksOnlyReference": 11303,
+      "pearson": 0.6258225247680558,
+      "maxImportanceAbsoluteDifference": 123.28864946880215,
+      "topLinkJaccard": {
+        "1000": 0.15606936416184972,
+        "10000": 0.20627261761158022,
+        "100000": 0.32241896877768816
+      }
+    },
+    "comparisonKind": "Actual arboreto GRNBoost2 used by pySCENIC, with matched modern scikit-learn stopping and the shipped CyteArc stopping rule reported separately",
+    "performanceClaim": false
+  }
+}

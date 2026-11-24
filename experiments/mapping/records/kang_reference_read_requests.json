@@ -1,0 +1,775 @@
+{
+  "description": "Reference-store keys requested by each mapping step on the local Kang stores, grouped by artifact, with bytes read and how many times each stored artifact was read.",
+  "inputs": {
+    "kang_15K_pbmc_rnaseq": {
+      "catalogue": "cytearc_docs",
+      "dataset": "kang_15K_pbmc_rnaseq",
+      "files": {
+        "barcodes.tsv.gz": {
+          "bytes": 52875,
+          "sha256": "a4711c121443d9cb37e33e6ac57449f539ff46e0a50e4a34695861cbba666c54"
+        },
+        "features.tsv.gz": {
+          "bytes": 276960,
+          "sha256": "86f9914714bc554b3b8149681986521b3881c22a934a99e1b45401c3dd08aef4"
+        },
+        "matrix.mtx.gz": {
+          "bytes": 28537003,
+          "sha256": "8c5d623aa57bbf7e1187a643524792003cc103375ad3449e603cf6e9ccfff61d"
+        }
+      }
+    },
+    "kang_14K_ifnb-pbmc_rnaseq": {
+      "catalogue": "cytearc_docs",
+      "dataset": "kang_14K_ifnb-pbmc_rnaseq",
+      "files": {
+        "barcodes.tsv.gz": {
+          "bytes": 52332,
+          "sha256": "3864ea5bf7fa6ff8c88a93bf316bd5bea43bafc4b827b63fe64f1a5c691abe5e"
+        },
+        "features.tsv.gz": {
+          "bytes": 276960,
+          "sha256": "86f9914714bc554b3b8149681986521b3881c22a934a99e1b45401c3dd08aef4"
+        },
+        "matrix.mtx.gz": {
+          "bytes": 29043500,
+          "sha256": "a695c2cdab408ce14cb8922d42f7f2d2e28fbaa7a7cd2b29354f94af09334bd4"
+        }
+      }
+    }
+  },
+  "labels": {
+    "kang_15K_pbmc_rnaseq": {
+      "source": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96583/suppl/GSE96583_batch2.total.tsne.df.tsv.gz",
+        "bytes": 756342,
+        "sha256": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+      },
+      "condition": "ctrl",
+      "labels": "the authors' cell type of each demuxlet singlet; other barcodes unlabelled",
+      "barcodes": 14619,
+      "singlets": 12315,
+      "singletsWithoutCellType": 0,
+      "cellsPerLabel": {
+        "B cells": 1307,
+        "CD14+ Monocytes": 2785,
+        "CD4 T cells": 5161,
+        "CD8 T cells": 1082,
+        "Dendritic cells": 203,
+        "FCGR3A+ Monocytes": 739,
+        "Megakaryocytes": 122,
+        "NK cells": 916
+      }
+    },
+    "kang_14K_ifnb-pbmc_rnaseq": {
+      "source": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96583/suppl/GSE96583_batch2.total.tsne.df.tsv.gz",
+        "bytes": 756342,
+        "sha256": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+      },
+      "condition": "stim",
+      "labels": "the authors' cell type of each demuxlet singlet; other barcodes unlabelled",
+      "barcodes": 14446,
+      "singlets": 12358,
+      "singletsWithoutCellType": 6,
+      "cellsPerLabel": {
+        "B cells": 1266,
+        "CD14+ Monocytes": 2600,
+        "CD4 T cells": 5228,
+        "CD8 T cells": 960,
+        "Dendritic cells": 229,
+        "FCGR3A+ Monocytes": 860,
+        "Megakaryocytes": 138,
+        "NK cells": 1077
+      }
+    }
+  },
+  "analysis": {
+    "cytearcVersion": "1.3.0",
+    "filtering": {
+      "enabled": true,
+      "method": "mad",
+      "attrs": [
+        "RNA_nCounts",
+        "RNA_nFeatures",
+        "RNA_percentMito",
+        "RNA_percentRibo"
+      ],
+      "minP": 0.01,
+      "maxP": 0.99,
+      "sampleColumn": null,
+      "nMads": 3.0,
+      "minCellsPerSample": 20
+    },
+    "hvgCount": 1000,
+    "pcaDims": 21,
+    "neighborsK": 11,
+    "leiden": {
+      "partitions": [
+        0.5,
+        0.75,
+        1.0,
+        1.25
+      ],
+      "selected": null
+    },
+    "annIndex": {
+      "ann_metric": "l2",
+      "ann_m": 24,
+      "ann_ef": 200,
+      "ann_efc": 200,
+      "rand_state": 4466,
+      "ann_parallel": false
+    },
+    "analysisCells": 11944
+  },
+  "reference": "kang_15K_pbmc_rnaseq",
+  "query": "kang_14K_ifnb-pbmc_rnaseq",
+  "queryCells": 12358,
+  "saveK": 11,
+  "threshold": 0.6,
+  "assignedFraction": 0.8475481469493445,
+  "countArrayGroups": [
+    "counts",
+    "countsT"
+  ],
+  "steps": {
+    "buildReference": {
+      "requests": 296,
+      "bytesRead": 10946797,
+      "requestsUnderCountArrays": 2,
+      "groups": {
+        "RNA/artifacts/ann_index": {
+          "requests": 15,
+          "distinctKeys": 3,
+          "bytesRead": 4868562,
+          "storedBytes": 2430301,
+          "timesRead": 2.0
+        },
+        "RNA/artifacts/neighbors": {
+          "requests": 19,
+          "distinctKeys": 5,
+          "bytesRead": 2106771,
+          "storedBytes": 642428,
+          "timesRead": 3.28
+        },
+        "RNA/artifacts/reduction": {
+          "requests": 32,
+          "distinctKeys": 6,
+          "bytesRead": 1120698,
+          "storedBytes": 1108838,
+          "timesRead": 1.01
+        },
+        "RNA/artifacts/mapping_reference": {
+          "requests": 115,
+          "distinctKeys": 21,
+          "bytesRead": 1017360,
+          "storedBytes": 199801,
+          "timesRead": 5.09
+        },
+        "RNA/featureData": {
+          "requests": 16,
+          "distinctKeys": 5,
+          "bytesRead": 507463,
+          "storedBytes": 734105,
+          "timesRead": 0.69
+        },
+        "RNA/artifacts/metadata_snapshot": {
+          "requests": 5,
+          "distinctKeys": 3,
+          "bytesRead": 475254,
+          "storedBytes": 473746,
+          "timesRead": 1.0
+        },
+        "RNA/artifacts/feature_summary": {
+          "requests": 8,
+          "distinctKeys": 7,
+          "bytesRead": 405288,
+          "storedBytes": 404212,
+          "timesRead": 1.0
+        },
+        "RNA/artifacts/feature_selection": {
+          "requests": 11,
+          "distinctKeys": 5,
+          "bytesRead": 184321,
+          "storedBytes": 171488,
+          "timesRead": 1.07
+        },
+        "RNA/artifacts/feature_scaling": {
+          "requests": 24,
+          "distinctKeys": 5,
+          "bytesRead": 106285,
+          "storedBytes": 16367,
+          "timesRead": 6.49
+        },
+        "cellData/ids": {
+          "requests": 3,
+          "distinctKeys": 2,
+          "bytesRead": 96168,
+          "storedBytes": 95379,
+          "timesRead": 1.01
+        },
+        "artifacts/cell_selection": {
+          "requests": 6,
+          "distinctKeys": 3,
+          "bytesRead": 21473,
+          "storedBytes": 14472,
+          "timesRead": 1.48
+        },
+        "RNA/zarr.json": {
+          "requests": 12,
+          "distinctKeys": 1,
+          "bytesRead": 19380,
+          "storedBytes": 0,
+          "timesRead": null
+        },
+        "RNA/artifacts/normalized": {
+          "requests": 6,
+          "distinctKeys": 1,
+          "bytesRead": 7806,
+          "storedBytes": 15990585,
+          "timesRead": 0.0
+        },
+        "RNA/counts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2533,
+          "storedBytes": 41299892,
+          "timesRead": 0.0
+        },
+        "RNA/countsT": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2532,
+          "storedBytes": 22658761,
+          "timesRead": 0.0
+        },
+        "zarr.json": {
+          "requests": 8,
+          "distinctKeys": 1,
+          "bytesRead": 1128,
+          "storedBytes": 0,
+          "timesRead": null
+        },
+        "cellData/RNA_percentMito": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 812,
+          "timesRead": 1.0
+        },
+        "cellData/RNA_percentRibo": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 106304,
+          "timesRead": 0.01
+        },
+        "cellData/RNA_nCounts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28403,
+          "timesRead": 0.02
+        },
+        "cellData/RNA_nFeatures": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28789,
+          "timesRead": 0.02
+        },
+        "RNA/artifacts/zarr.json": {
+          "requests": 9,
+          "distinctKeys": 1,
+          "bytesRead": 594,
+          "storedBytes": 0,
+          "timesRead": null
+        },
+        "cellData/zarr.json": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 147,
+          "storedBytes": 0,
+          "timesRead": null
+        }
+      }
+    },
+    "loadReference": {
+      "requests": 163,
+      "bytesRead": 6212883,
+      "requestsUnderCountArrays": 2,
+      "groups": {
+        "RNA/artifacts/ann_index": {
+          "requests": 7,
+          "distinctKeys": 3,
+          "bytesRead": 2433827,
+          "storedBytes": 2430301,
+          "timesRead": 1.0
+        },
+        "RNA/artifacts/neighbors": {
+          "requests": 9,
+          "distinctKeys": 5,
+          "bytesRead": 1052827,
+          "storedBytes": 642428,
+          "timesRead": 1.64
+        },
+        "RNA/artifacts/mapping_reference": {
+          "requests": 72,
+          "distinctKeys": 15,
+          "bytesRead": 803266,
+          "storedBytes": 199801,
+          "timesRead": 4.02
+        },
+        "RNA/artifacts/metadata_snapshot": {
+          "requests": 5,
+          "distinctKeys": 3,
+          "bytesRead": 475254,
+          "storedBytes": 473746,
+          "timesRead": 1.0
+        },
+        "RNA/artifacts/feature_summary": {
+          "requests": 8,
+          "distinctKeys": 7,
+          "bytesRead": 405288,
+          "storedBytes": 404212,
+          "timesRead": 1.0
+        },
+        "RNA/featureData": {
+          "requests": 14,
+          "distinctKeys": 5,
+          "bytesRead": 381589,
+          "storedBytes": 734105,
+          "timesRead": 0.52
+        },
+        "RNA/artifacts/reduction": {
+          "requests": 11,
+          "distinctKeys": 6,
+          "bytesRead": 321835,
+          "storedBytes": 1108838,
+          "timesRead": 0.29
+        },
+        "RNA/artifacts/feature_selection": {
+          "requests": 9,
+          "distinctKeys": 5,
+          "bytesRead": 177715,
+          "storedBytes": 171488,
+          "timesRead": 1.04
+        },
+        "cellData/ids": {
+          "requests": 3,
+          "distinctKeys": 2,
+          "bytesRead": 96168,
+          "storedBytes": 95379,
+          "timesRead": 1.01
+        },
+        "RNA/artifacts/feature_scaling": {
+          "requests": 8,
+          "distinctKeys": 5,
+          "bytesRead": 31198,
+          "storedBytes": 16367,
+          "timesRead": 1.91
+        },
+        "artifacts/cell_selection": {
+          "requests": 5,
+          "distinctKeys": 3,
+          "bytesRead": 17909,
+          "storedBytes": 14472,
+          "timesRead": 1.24
+        },
+        "RNA/zarr.json": {
+          "requests": 4,
+          "distinctKeys": 1,
+          "bytesRead": 6460,
+          "storedBytes": 0,
+          "timesRead": null
+        },
+        "RNA/counts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2533,
+          "storedBytes": 41299892,
+          "timesRead": 0.0
+        },
+        "RNA/countsT": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2532,
+          "storedBytes": 22658761,
+          "timesRead": 0.0
+        },
+        "RNA/artifacts/normalized": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 1301,
+          "storedBytes": 15990585,
+          "timesRead": 0.0
+        },
+        "cellData/RNA_percentMito": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 812,
+          "timesRead": 1.0
+        },
+        "cellData/RNA_percentRibo": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 106304,
+          "timesRead": 0.01
+        },
+        "cellData/RNA_nCounts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28403,
+          "timesRead": 0.02
+        },
+        "cellData/RNA_nFeatures": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28789,
+          "timesRead": 0.02
+        },
+        "cellData/zarr.json": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 147,
+          "storedBytes": 0,
+          "timesRead": null
+        }
+      }
+    },
+    "runMapping": {
+      "requests": 66,
+      "bytesRead": 3880241,
+      "requestsUnderCountArrays": 2,
+      "groups": {
+        "RNA/artifacts/ann_index": {
+          "requests": 8,
+          "distinctKeys": 3,
+          "bytesRead": 2434695,
+          "storedBytes": 2430301,
+          "timesRead": 1.0
+        },
+        "RNA/artifacts/metadata_snapshot": {
+          "requests": 5,
+          "distinctKeys": 3,
+          "bytesRead": 475254,
+          "storedBytes": 473746,
+          "timesRead": 1.0
+        },
+        "RNA/artifacts/feature_summary": {
+          "requests": 8,
+          "distinctKeys": 7,
+          "bytesRead": 405288,
+          "storedBytes": 404212,
+          "timesRead": 1.0
+        },
+        "RNA/featureData": {
+          "requests": 12,
+          "distinctKeys": 5,
+          "bytesRead": 255715,
+          "storedBytes": 734105,
+          "timesRead": 0.35
+        },
+        "RNA/artifacts/feature_selection": {
+          "requests": 7,
+          "distinctKeys": 5,
+          "bytesRead": 171109,
+          "storedBytes": 171488,
+          "timesRead": 1.0
+        },
+        "cellData/ids": {
+          "requests": 3,
+          "distinctKeys": 2,
+          "bytesRead": 96168,
+          "storedBytes": 95379,
+          "timesRead": 1.01
+        },
+        "artifacts/cell_selection": {
+          "requests": 4,
+          "distinctKeys": 3,
+          "bytesRead": 14345,
+          "storedBytes": 14472,
+          "timesRead": 0.99
+        },
+        "RNA/artifacts/mapping_reference": {
+          "requests": 3,
+          "distinctKeys": 1,
+          "bytesRead": 6909,
+          "storedBytes": 199801,
+          "timesRead": 0.03
+        },
+        "RNA/zarr.json": {
+          "requests": 4,
+          "distinctKeys": 1,
+          "bytesRead": 6460,
+          "storedBytes": 0,
+          "timesRead": null
+        },
+        "RNA/artifacts/neighbors": {
+          "requests": 4,
+          "distinctKeys": 3,
+          "bytesRead": 4731,
+          "storedBytes": 642428,
+          "timesRead": 0.01
+        },
+        "RNA/counts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2533,
+          "storedBytes": 41299892,
+          "timesRead": 0.0
+        },
+        "RNA/countsT": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2532,
+          "storedBytes": 22658761,
+          "timesRead": 0.0
+        },
+        "RNA/artifacts/reduction": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 1321,
+          "storedBytes": 1108838,
+          "timesRead": 0.0
+        },
+        "cellData/RNA_percentMito": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 812,
+          "timesRead": 1.0
+        },
+        "cellData/RNA_percentRibo": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 106304,
+          "timesRead": 0.01
+        },
+        "cellData/RNA_nCounts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28403,
+          "timesRead": 0.02
+        },
+        "cellData/RNA_nFeatures": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28789,
+          "timesRead": 0.02
+        },
+        "cellData/zarr.json": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 147,
+          "storedBytes": 0,
+          "timesRead": null
+        }
+      }
+    },
+    "labelTransferCall1": {
+      "requests": 26,
+      "bytesRead": 212329,
+      "requestsUnderCountArrays": 2,
+      "groups": {
+        "cellData/ids": {
+          "requests": 3,
+          "distinctKeys": 2,
+          "bytesRead": 96168,
+          "storedBytes": 95379,
+          "timesRead": 1.01
+        },
+        "cellData/geo_cell_type": {
+          "requests": 4,
+          "distinctKeys": 2,
+          "bytesRead": 80466,
+          "storedBytes": 78888,
+          "timesRead": 1.02
+        },
+        "artifacts/cell_selection": {
+          "requests": 4,
+          "distinctKeys": 3,
+          "bytesRead": 17356,
+          "storedBytes": 14472,
+          "timesRead": 1.2
+        },
+        "RNA/artifacts/mapping_reference": {
+          "requests": 2,
+          "distinctKeys": 1,
+          "bytesRead": 4606,
+          "storedBytes": 199801,
+          "timesRead": 0.02
+        },
+        "RNA/zarr.json": {
+          "requests": 2,
+          "distinctKeys": 1,
+          "bytesRead": 3230,
+          "storedBytes": 0,
+          "timesRead": null
+        },
+        "RNA/counts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2533,
+          "storedBytes": 41299892,
+          "timesRead": 0.0
+        },
+        "RNA/countsT": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2532,
+          "storedBytes": 22658761,
+          "timesRead": 0.0
+        },
+        "RNA/featureData": {
+          "requests": 4,
+          "distinctKeys": 4,
+          "bytesRead": 2257,
+          "storedBytes": 734105,
+          "timesRead": 0.0
+        },
+        "cellData/RNA_percentMito": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 812,
+          "timesRead": 1.0
+        },
+        "cellData/RNA_percentRibo": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 106304,
+          "timesRead": 0.01
+        },
+        "cellData/RNA_nCounts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28403,
+          "timesRead": 0.02
+        },
+        "cellData/RNA_nFeatures": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28789,
+          "timesRead": 0.02
+        },
+        "cellData/zarr.json": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 147,
+          "storedBytes": 0,
+          "timesRead": null
+        }
+      }
+    },
+    "labelTransferCall2": {
+      "requests": 26,
+      "bytesRead": 212329,
+      "requestsUnderCountArrays": 2,
+      "groups": {
+        "cellData/ids": {
+          "requests": 3,
+          "distinctKeys": 2,
+          "bytesRead": 96168,
+          "storedBytes": 95379,
+          "timesRead": 1.01
+        },
+        "cellData/geo_cell_type": {
+          "requests": 4,
+          "distinctKeys": 2,
+          "bytesRead": 80466,
+          "storedBytes": 78888,
+          "timesRead": 1.02
+        },
+        "artifacts/cell_selection": {
+          "requests": 4,
+          "distinctKeys": 3,
+          "bytesRead": 17356,
+          "storedBytes": 14472,
+          "timesRead": 1.2
+        },
+        "RNA/artifacts/mapping_reference": {
+          "requests": 2,
+          "distinctKeys": 1,
+          "bytesRead": 4606,
+          "storedBytes": 199801,
+          "timesRead": 0.02
+        },
+        "RNA/zarr.json": {
+          "requests": 2,
+          "distinctKeys": 1,
+          "bytesRead": 3230,
+          "storedBytes": 0,
+          "timesRead": null
+        },
+        "RNA/counts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2533,
+          "storedBytes": 41299892,
+          "timesRead": 0.0
+        },
+        "RNA/countsT": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 2532,
+          "storedBytes": 22658761,
+          "timesRead": 0.0
+        },
+        "RNA/featureData": {
+          "requests": 4,
+          "distinctKeys": 4,
+          "bytesRead": 2257,
+          "storedBytes": 734105,
+          "timesRead": 0.0
+        },
+        "cellData/RNA_percentMito": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 812,
+          "timesRead": 1.0
+        },
+        "cellData/RNA_percentRibo": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 812,
+          "storedBytes": 106304,
+          "timesRead": 0.01
+        },
+        "cellData/RNA_nCounts": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28403,
+          "timesRead": 0.02
+        },
+        "cellData/RNA_nFeatures": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 705,
+          "storedBytes": 28789,
+          "timesRead": 0.02
+        },
+        "cellData/zarr.json": {
+          "requests": 1,
+          "distinctKeys": 1,
+          "bytesRead": 147,
+          "storedBytes": 0,
+          "timesRead": null
+        }
+      }
+    }
+  }
+}

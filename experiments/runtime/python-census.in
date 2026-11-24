@@ -1,0 +1,10 @@
+# Python environment for the CELLxGENE Census arm (Census query, then the Scanpy workflow).
+# Compile the lock with:
+#   uv pip compile python-census.in --python-version 3.12 \
+#     --python-platform x86_64-manylinux_2_28 -o python-census.txt
+cellxgene-census==1.18.0
+scanpy==1.12.4
+igraph
+leidenalg
+h5py
+boto3

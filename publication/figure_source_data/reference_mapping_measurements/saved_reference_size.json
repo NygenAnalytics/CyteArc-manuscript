@@ -1,0 +1,169 @@
+{
+ "tissues": [
+  "blood",
+  "kidney",
+  "lung"
+ ],
+ "heldOut": {
+  "blood": {
+   "seurat_map": 27368115523,
+   "symphony": 691042011,
+   "celltypist": 153707,
+   "unintegrated": 530128,
+   "integrated": 601862,
+   "seuratRdsBytes": 26996215907
+  },
+  "kidney": {
+   "seurat_map": 22384723262,
+   "symphony": 555862899,
+   "celltypist": 310959,
+   "unintegrated": 531985,
+   "integrated": 608535,
+   "seuratRdsBytes": 22092471774
+  },
+  "lung": {
+   "seurat_map": 35768646963,
+   "symphony": 775359910,
+   "celltypist": 455138,
+   "unintegrated": 531716,
+   "integrated": 584763,
+   "seuratRdsBytes": 35358116139
+  }
+ },
+ "parts": {
+  "blood": {
+   "referenceCells": 497905,
+   "queryCells": 102920
+  },
+  "kidney": {
+   "referenceCells": 388878,
+   "queryCells": 46957
+  },
+  "lung": {
+   "referenceCells": 546358,
+   "queryCells": 35300
+  }
+ },
+ "sizes": [
+  {
+   "part": "reference_500000",
+   "cells": 500003,
+   "nonzeros": 689239787,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_1500000",
+   "cells": 1499999,
+   "nonzeros": 2068765663,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_3000000",
+   "cells": 2999999,
+   "nonzeros": 4137339630,
+   "overRLimit": true
+  },
+  {
+   "part": "reference_all",
+   "cells": 4292870,
+   "nonzeros": 5920720691,
+   "overRLimit": true
+  }
+ ],
+ "ladder": {
+  "seurat_map": [
+   {
+    "part": "reference_500000",
+    "bytes": 25507300469
+   },
+   {
+    "part": "reference_1500000",
+    "bytes": 76516696955
+   }
+  ],
+  "symphony": [
+   {
+    "part": "reference_500000",
+    "bytes": 700964384
+   },
+   {
+    "part": "reference_1500000",
+    "bytes": 2101756996
+   }
+  ],
+  "celltypist_hvg": [
+   {
+    "part": "reference_500000",
+    "bytes": 82507
+   },
+   {
+    "part": "reference_1500000",
+    "bytes": 81025
+   },
+   {
+    "part": "reference_3000000",
+    "bytes": 80635
+   },
+   {
+    "part": "reference_all",
+    "bytes": 80713
+   }
+  ],
+  "celltypist": [
+   {
+    "part": "reference_500000",
+    "bytes": 128215
+   }
+  ],
+  "unintegrated": [
+   {
+    "part": "reference_500000",
+    "bytes": 530614
+   },
+   {
+    "part": "reference_1500000",
+    "bytes": 532242
+   },
+   {
+    "part": "reference_3000000",
+    "bytes": 532416
+   },
+   {
+    "part": "reference_all",
+    "bytes": 532913
+   }
+  ],
+  "integrated": [
+   {
+    "part": "reference_500000",
+    "bytes": 597975
+   },
+   {
+    "part": "reference_1500000",
+    "bytes": 605189
+   },
+   {
+    "part": "reference_3000000",
+    "bytes": 605067
+   },
+   {
+    "part": "reference_all",
+    "bytes": 604488
+   }
+  ]
+ },
+ "definition": "CyteArc: bytes written while registering the mapping reference from existing analysis artifacts; CellTypist: saved model files; Seurat and Symphony: uncompressed RDS plus Seurat's saved neighbor index",
+ "source": [
+  "experiments/mapping/records/reference_ladder.json",
+  "experiments/mapping/records/cross_study/evaluation.json",
+  "experiments/mapping/records/cross_study/blood/seurat_map.json",
+  "experiments/mapping/records/cross_study/blood/symphony.json",
+  "experiments/mapping/records/cross_study/blood/celltypist.json",
+  "experiments/mapping/records/cross_study/kidney/seurat_map.json",
+  "experiments/mapping/records/cross_study/kidney/symphony.json",
+  "experiments/mapping/records/cross_study/kidney/celltypist.json",
+  "experiments/mapping/records/cross_study/lung/seurat_map.json",
+  "experiments/mapping/records/cross_study/lung/symphony.json",
+  "experiments/mapping/records/cross_study/lung/celltypist.json"
+ ]
+}

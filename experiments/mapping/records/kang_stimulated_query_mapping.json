@@ -1,0 +1,422 @@
+{
+  "description": "Kang control PBMC reference mapped by the stimulated sample. Bytes are from a recording wrapper around the reference store, split by phase.",
+  "inputs": {
+    "kang_15K_pbmc_rnaseq": {
+      "catalogue": "cytearc_docs",
+      "dataset": "kang_15K_pbmc_rnaseq",
+      "files": {
+        "barcodes.tsv.gz": {
+          "bytes": 52875,
+          "sha256": "a4711c121443d9cb37e33e6ac57449f539ff46e0a50e4a34695861cbba666c54"
+        },
+        "features.tsv.gz": {
+          "bytes": 276960,
+          "sha256": "86f9914714bc554b3b8149681986521b3881c22a934a99e1b45401c3dd08aef4"
+        },
+        "matrix.mtx.gz": {
+          "bytes": 28537003,
+          "sha256": "8c5d623aa57bbf7e1187a643524792003cc103375ad3449e603cf6e9ccfff61d"
+        }
+      }
+    },
+    "kang_14K_ifnb-pbmc_rnaseq": {
+      "catalogue": "cytearc_docs",
+      "dataset": "kang_14K_ifnb-pbmc_rnaseq",
+      "files": {
+        "barcodes.tsv.gz": {
+          "bytes": 52332,
+          "sha256": "3864ea5bf7fa6ff8c88a93bf316bd5bea43bafc4b827b63fe64f1a5c691abe5e"
+        },
+        "features.tsv.gz": {
+          "bytes": 276960,
+          "sha256": "86f9914714bc554b3b8149681986521b3881c22a934a99e1b45401c3dd08aef4"
+        },
+        "matrix.mtx.gz": {
+          "bytes": 29043500,
+          "sha256": "a695c2cdab408ce14cb8922d42f7f2d2e28fbaa7a7cd2b29354f94af09334bd4"
+        }
+      }
+    }
+  },
+  "labels": {
+    "kang_15K_pbmc_rnaseq": {
+      "source": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96583/suppl/GSE96583_batch2.total.tsne.df.tsv.gz",
+        "bytes": 756342,
+        "sha256": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+      },
+      "condition": "ctrl",
+      "labels": "the authors' cell type of each demuxlet singlet; other barcodes unlabelled",
+      "barcodes": 14619,
+      "singlets": 12315,
+      "singletsWithoutCellType": 0,
+      "cellsPerLabel": {
+        "B cells": 1307,
+        "CD14+ Monocytes": 2785,
+        "CD4 T cells": 5161,
+        "CD8 T cells": 1082,
+        "Dendritic cells": 203,
+        "FCGR3A+ Monocytes": 739,
+        "Megakaryocytes": 122,
+        "NK cells": 916
+      }
+    },
+    "kang_14K_ifnb-pbmc_rnaseq": {
+      "source": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96583/suppl/GSE96583_batch2.total.tsne.df.tsv.gz",
+        "bytes": 756342,
+        "sha256": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+      },
+      "condition": "stim",
+      "labels": "the authors' cell type of each demuxlet singlet; other barcodes unlabelled",
+      "barcodes": 14446,
+      "singlets": 12358,
+      "singletsWithoutCellType": 6,
+      "cellsPerLabel": {
+        "B cells": 1266,
+        "CD14+ Monocytes": 2600,
+        "CD4 T cells": 5228,
+        "CD8 T cells": 960,
+        "Dendritic cells": 229,
+        "FCGR3A+ Monocytes": 860,
+        "Megakaryocytes": 138,
+        "NK cells": 1077
+      }
+    }
+  },
+  "analysis": {
+    "cytearcVersion": "1.3.0",
+    "filtering": {
+      "enabled": true,
+      "method": "mad",
+      "attrs": [
+        "RNA_nCounts",
+        "RNA_nFeatures",
+        "RNA_percentMito",
+        "RNA_percentRibo"
+      ],
+      "minP": 0.01,
+      "maxP": 0.99,
+      "sampleColumn": null,
+      "nMads": 3.0,
+      "minCellsPerSample": 20
+    },
+    "hvgCount": 1000,
+    "pcaDims": 21,
+    "neighborsK": 11,
+    "leiden": {
+      "partitions": [
+        0.5,
+        0.75,
+        1.0,
+        1.25
+      ],
+      "selected": null
+    },
+    "annIndex": {
+      "ann_metric": "l2",
+      "ann_m": 24,
+      "ann_ef": 200,
+      "ann_efc": 200,
+      "rand_state": 4466,
+      "ann_parallel": false
+    },
+    "analysisCells": 11944
+  },
+  "reference": {
+    "dataset": "kang_15K_pbmc_rnaseq",
+    "cellsSelected": 11944,
+    "cellsTotal": 14619,
+    "genesTotal": 35635,
+    "panelGenes": 1000,
+    "dims": 21,
+    "method": "pca",
+    "referenceArtifactBytes": 199735,
+    "annIndexBytes": 2430235,
+    "reductionArtifactBytes": 1108772,
+    "countStoreBytes": 63958653,
+    "wholeStoreBytes": 87950643,
+    "denseLogicalCountBytes": 2083792260,
+    "referencePlusIndexOverCounts": 0.04111984659839537,
+    "eq5": {
+      "panelTerm": 84000,
+      "indexLinkBytesPerCell": 119.46910582719357,
+      "predictedReadBytes": 2514235.0
+    }
+  },
+  "query": {
+    "dataset": "kang_14K_ifnb-pbmc_rnaseq",
+    "cells": 12358,
+    "saveK": 11,
+    "diagnostics": {
+      "featureCoverage": 1.0,
+      "queryBatchCount": 1,
+      "algorithmVariant": "scaled_pca",
+      "uninformativeCellCount": 0,
+      "queryScaledDispersion": 1.9478025202860165
+    },
+    "correctionMethod": "none"
+  },
+  "seconds": {
+    "buildReference": 0.3232700819999934,
+    "loadReference": 0.17288252699999873,
+    "runMapping": 3.9999052790000036
+  },
+  "referenceStoreOperations": {
+    "buildReference": {
+      "gets": 350,
+      "sets": 57,
+      "deletes": 0,
+      "deleteDirs": 7,
+      "sizeQueries": 0,
+      "rangeGets": 0,
+      "partialGets": 0,
+      "requestedBytes": 208498,
+      "transferredBytes": 11237033,
+      "readRequestedBytes": 11028535,
+      "readTransferredBytes": 11028535,
+      "writeTransferredBytes": 208498,
+      "countReadRequests": 0,
+      "countReadBytes": 0,
+      "maxInFlight": 9
+    },
+    "loadReference": {
+      "gets": 163,
+      "sets": 0,
+      "deletes": 0,
+      "deleteDirs": 0,
+      "sizeQueries": 0,
+      "rangeGets": 0,
+      "partialGets": 0,
+      "requestedBytes": 0,
+      "transferredBytes": 6212883,
+      "readRequestedBytes": 6212883,
+      "readTransferredBytes": 6212883,
+      "writeTransferredBytes": 0,
+      "countReadRequests": 0,
+      "countReadBytes": 0,
+      "maxInFlight": 7
+    },
+    "runMapping": {
+      "gets": 66,
+      "sets": 0,
+      "deletes": 0,
+      "deleteDirs": 0,
+      "sizeQueries": 0,
+      "rangeGets": 0,
+      "partialGets": 0,
+      "requestedBytes": 0,
+      "transferredBytes": 3880241,
+      "readRequestedBytes": 3880241,
+      "readTransferredBytes": 3880241,
+      "writeTransferredBytes": 0,
+      "countReadRequests": 0,
+      "countReadBytes": 0,
+      "maxInFlight": 3
+    },
+    "labelTransfer": {
+      "gets": 151,
+      "sets": 0,
+      "deletes": 0,
+      "deleteDirs": 0,
+      "sizeQueries": 0,
+      "rangeGets": 0,
+      "partialGets": 0,
+      "requestedBytes": 0,
+      "transferredBytes": 1186933,
+      "readRequestedBytes": 1186933,
+      "readTransferredBytes": 1186933,
+      "writeTransferredBytes": 0,
+      "countReadRequests": 0,
+      "countReadBytes": 0,
+      "maxInFlight": 1
+    }
+  },
+  "thresholds": [
+    {
+      "threshold": 0.5,
+      "queryCells": 12358,
+      "accepted": 12000,
+      "abstained": 358,
+      "abstainedFraction": 0.028969088849328372,
+      "agreementAccepted": 0.8505,
+      "agreementAllCells": 0.8258617899336462,
+      "transferSeconds": 0.3518769269999922
+    },
+    {
+      "threshold": 0.6,
+      "queryCells": 12358,
+      "accepted": 10474,
+      "abstained": 1884,
+      "abstainedFraction": 0.15245185305065545,
+      "agreementAccepted": 0.8913500095474508,
+      "agreementAllCells": 0.7554620488752225,
+      "transferSeconds": 0.33621105000000284
+    },
+    {
+      "threshold": 0.7,
+      "queryCells": 12358,
+      "accepted": 8395,
+      "abstained": 3963,
+      "abstainedFraction": 0.3206829584075093,
+      "agreementAccepted": 0.9338892197736748,
+      "agreementAllCells": 0.6344068619517721,
+      "transferSeconds": 0.3356971209999955
+    },
+    {
+      "threshold": 0.8,
+      "queryCells": 12358,
+      "accepted": 6384,
+      "abstained": 5974,
+      "abstainedFraction": 0.4834115552678427,
+      "agreementAccepted": 0.9631892230576441,
+      "agreementAllCells": 0.4975724227221233,
+      "transferSeconds": 0.3341570739999895
+    },
+    {
+      "threshold": 0.9,
+      "queryCells": 12358,
+      "accepted": 4998,
+      "abstained": 7360,
+      "abstainedFraction": 0.5955656255057452,
+      "agreementAccepted": 0.9809923969587835,
+      "agreementAllCells": 0.39674704644764525,
+      "transferSeconds": 0.3298581670000118
+    }
+  ],
+  "perLabelAt0p6": [
+    {
+      "authorLabel": "B cells",
+      "queryCells": 1266,
+      "accepted": 802,
+      "abstainedFraction": 0.36650868878357035,
+      "agreementAccepted": 0.5448877805486284,
+      "majorityTransferredLabel": "B cells"
+    },
+    {
+      "authorLabel": "CD14+ Monocytes",
+      "queryCells": 2600,
+      "accepted": 2135,
+      "abstainedFraction": 0.17884615384615388,
+      "agreementAccepted": 0.9929742388758782,
+      "majorityTransferredLabel": "CD14+ Monocytes"
+    },
+    {
+      "authorLabel": "CD4 T cells",
+      "queryCells": 5228,
+      "accepted": 5062,
+      "abstainedFraction": 0.03175210405508799,
+      "agreementAccepted": 0.9919004346108258,
+      "majorityTransferredLabel": "CD4 T cells"
+    },
+    {
+      "authorLabel": "CD8 T cells",
+      "queryCells": 960,
+      "accepted": 778,
+      "abstainedFraction": 0.18958333333333333,
+      "agreementAccepted": 0.9113110539845758,
+      "majorityTransferredLabel": "CD8 T cells"
+    },
+    {
+      "authorLabel": "Dendritic cells",
+      "queryCells": 229,
+      "accepted": 187,
+      "abstainedFraction": 0.1834061135371179,
+      "agreementAccepted": 0.10160427807486631,
+      "majorityTransferredLabel": "CD14+ Monocytes"
+    },
+    {
+      "authorLabel": "FCGR3A+ Monocytes",
+      "queryCells": 860,
+      "accepted": 572,
+      "abstainedFraction": 0.33488372093023255,
+      "agreementAccepted": 0.6905594405594405,
+      "majorityTransferredLabel": "FCGR3A+ Monocytes"
+    },
+    {
+      "authorLabel": "Megakaryocytes",
+      "queryCells": 138,
+      "accepted": 98,
+      "abstainedFraction": 0.28985507246376807,
+      "agreementAccepted": 0.42857142857142855,
+      "majorityTransferredLabel": "CD4 T cells"
+    },
+    {
+      "authorLabel": "NK cells",
+      "queryCells": 1077,
+      "accepted": 840,
+      "abstainedFraction": 0.2200557103064067,
+      "agreementAccepted": 0.705952380952381,
+      "majorityTransferredLabel": "NK cells"
+    }
+  ],
+  "evidenceMediansByAuthorLabel": {
+    "B cells": {
+      "voteFraction": 0.6555487876903361,
+      "topTwoMargin": 0.43647904555072786,
+      "voteEntropy": 0.687133839079046,
+      "nearestDistance": 9.562203407287598,
+      "referenceDistancePercentile": 0.996050905742595
+    },
+    "CD14+ Monocytes": {
+      "voteFraction": 0.6926746767464594,
+      "topTwoMargin": 0.3863204248047667,
+      "voteEntropy": 0.6169438545428588,
+      "nearestDistance": 8.409899234771729,
+      "referenceDistancePercentile": 0.9923692511064579
+    },
+    "CD4 T cells": {
+      "voteFraction": 0.9999999999999999,
+      "topTwoMargin": 0.9999999999999999,
+      "voteEntropy": 0.0,
+      "nearestDistance": 6.044250726699829,
+      "referenceDistancePercentile": 0.9587700933189397
+    },
+    "CD8 T cells": {
+      "voteFraction": 0.7444917086915479,
+      "topTwoMargin": 0.5568401827585663,
+      "voteEntropy": 0.5833875714696901,
+      "nearestDistance": 5.901117324829102,
+      "referenceDistancePercentile": 0.9541008550386081
+    },
+    "Dendritic cells": {
+      "voteFraction": 0.6947077608372794,
+      "topTwoMargin": 0.3952714906338386,
+      "voteEntropy": 0.6215868297430542,
+      "nearestDistance": 12.257568359375,
+      "referenceDistancePercentile": 0.9990084434972527
+    },
+    "FCGR3A+ Monocytes": {
+      "voteFraction": 0.681094086241615,
+      "topTwoMargin": 0.371745696123851,
+      "voteEntropy": 0.627862091152654,
+      "nearestDistance": 7.333379030227661,
+      "referenceDistancePercentile": 0.9837902359770507
+    },
+    "Megakaryocytes": {
+      "voteFraction": 0.6663371213128463,
+      "topTwoMargin": 0.46630524370348925,
+      "voteEntropy": 0.7082847684609758,
+      "nearestDistance": 10.785194873809814,
+      "referenceDistancePercentile": 0.9980889876683419
+    },
+    "NK cells": {
+      "voteFraction": 0.7455221824455142,
+      "topTwoMargin": 0.5067162474382401,
+      "voteEntropy": 0.5722638623258428,
+      "nearestDistance": 7.01612663269043,
+      "referenceDistancePercentile": 0.9794806370469488
+    }
+  },
+  "evidenceColumns": [
+    "label",
+    "candidateLabel",
+    "voteFraction",
+    "topTwoMargin",
+    "voteEntropy",
+    "nearestDistance",
+    "referenceDistancePercentile",
+    "abstained",
+    "abstentionReason"
+  ]
+}

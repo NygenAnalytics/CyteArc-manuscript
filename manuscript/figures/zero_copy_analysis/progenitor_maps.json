@@ -1,0 +1,71 @@
+{
+ "raster": "manuscript/figures/zero_copy_analysis/progenitor_raster.npz",
+ "states": [
+  {
+   "state": "HSC/MPP",
+   "cells": 39616,
+   "row": 69.0,
+   "column": 100.0
+  },
+  {
+   "state": "erythroid",
+   "cells": 11866,
+   "row": 55.0,
+   "column": 134.0
+  },
+  {
+   "state": "lymphoid-primed",
+   "cells": 11332,
+   "row": 88.0,
+   "column": 38.0
+  },
+  {
+   "state": "cycling",
+   "cells": 3778,
+   "row": 35.0,
+   "column": 143.0
+  },
+  {
+   "state": "myeloid",
+   "cells": 3752,
+   "row": 52.0,
+   "column": 74.0
+  },
+  {
+   "state": "megakaryocyte",
+   "cells": 2810,
+   "row": 20.0,
+   "column": 104.0
+  },
+  {
+   "state": "basophil/mast",
+   "cells": 2801,
+   "row": 17.0,
+   "column": 133.0
+  },
+  {
+   "state": "dendritic",
+   "cells": 2326,
+   "row": 61.0,
+   "column": 27.0
+  },
+  {
+   "state": "B-lymphoid",
+   "cells": 193,
+   "row": 65.0,
+   "column": 41.0
+  },
+  {
+   "state": "mature",
+   "cells": 4612,
+   "row": 28.0,
+   "column": 45.0
+  }
+ ],
+ "cells": 83086,
+ "referenceCells": 50000,
+ "source": [
+  "experiments/reuse/records/blood_progenitors/progenitor_cell_table.parquet",
+  ".build/derived/reuse/blood_progenitors.json"
+ ]
+}

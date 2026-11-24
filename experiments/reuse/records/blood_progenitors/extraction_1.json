@@ -1,0 +1,1971 @@
+{
+  "module": "reuse.blood_progenitors",
+  "function": "extract",
+  "region": "us-east",
+  "status": "completed",
+  "result": {
+    "stores": {
+      "marteau_2026_single_cell_colorectal_cancer_atlas_core_atlas_05a8c945": {
+        "cells": 178,
+        "opening": {
+          "elapsedSeconds": 211.404774977,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 410,
+              "gets": 410,
+              "rangedGets": 0,
+              "responseBytes": 767559
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 210,
+              "302": 200
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 475430912,
+            "operationPeakBytes": 623562752,
+            "operationIncrementalPeakBytes": 148131840,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 493510656,
+            "processTreeRssPeakBytes": 664977408,
+            "processTreeRssIncrementalPeakBytes": 171466752,
+            "processTreeRssAfterBytes": 663732224,
+            "cgroupMemoryCurrentBaselineBytes": 475430912,
+            "cgroupMemoryCurrentPeakBytes": 623562752,
+            "cgroupMemoryCurrentAfterBytes": 623562752,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "creation": {
+          "elapsedSeconds": 366.953759182,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 6523,
+              "gets": 6523,
+              "rangedGets": 6476,
+              "responseBytes": 1328692687
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 24,
+              "302": 3261,
+              "206": 3238
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 623566848,
+            "operationPeakBytes": 3046666240,
+            "operationIncrementalPeakBytes": 2423099392,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 663748608,
+            "processTreeRssPeakBytes": 3192446976,
+            "processTreeRssIncrementalPeakBytes": 2528698368,
+            "processTreeRssAfterBytes": 2092605440,
+            "cgroupMemoryCurrentBaselineBytes": 623566848,
+            "cgroupMemoryCurrentPeakBytes": 3046666240,
+            "cgroupMemoryCurrentAfterBytes": 2045681664,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "export": {
+          "elapsedSeconds": 21.979814946000033,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 0,
+              "gets": 0,
+              "rangedGets": 0,
+              "responseBytes": 0
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {},
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2045685760,
+            "operationPeakBytes": 2228482048,
+            "operationIncrementalPeakBytes": 182796288,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2092621824,
+            "processTreeRssPeakBytes": 2300444672,
+            "processTreeRssIncrementalPeakBytes": 207822848,
+            "processTreeRssAfterBytes": 2132267008,
+            "cgroupMemoryCurrentBaselineBytes": 2045685760,
+            "cgroupMemoryCurrentPeakBytes": 2228482048,
+            "cgroupMemoryCurrentAfterBytes": 2076008448,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "h5adBytes": 19092629,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 6931,
+            "gets": 6931,
+            "rangedGets": 6476,
+            "responseBytes": 1329457655
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 232,
+            "302": 3461,
+            "206": 3238
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 9,
+            "status200": 232,
+            "resolvers": 3461,
+            "status302": 3461,
+            "cdn": 3461,
+            "status206": 3238
+          },
+          "quotaWaitSeconds": 887.789461199
+        }
+      },
+      "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff": {
+        "cells": 3645,
+        "opening": {
+          "elapsedSeconds": 209.09165314300003,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 164,
+              "gets": 164,
+              "rangedGets": 0,
+              "responseBytes": 219355
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 83,
+              "302": 81
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2080522240,
+            "operationPeakBytes": 2082942976,
+            "operationIncrementalPeakBytes": 2420736,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2137108480,
+            "processTreeRssPeakBytes": 2139648000,
+            "processTreeRssIncrementalPeakBytes": 2539520,
+            "processTreeRssAfterBytes": 2139648000,
+            "cgroupMemoryCurrentBaselineBytes": 2080522240,
+            "cgroupMemoryCurrentPeakBytes": 2082942976,
+            "cgroupMemoryCurrentAfterBytes": 2082942976,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "creation": {
+          "elapsedSeconds": 69.35977359399999,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 1197,
+              "gets": 1197,
+              "rangedGets": 1182,
+              "responseBytes": 2526055659
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 8,
+              "302": 598,
+              "206": 591
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2082947072,
+            "operationPeakBytes": 3226726400,
+            "operationIncrementalPeakBytes": 1143779328,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2139664384,
+            "processTreeRssPeakBytes": 3295129600,
+            "processTreeRssIncrementalPeakBytes": 1155465216,
+            "processTreeRssAfterBytes": 2147868672,
+            "cgroupMemoryCurrentBaselineBytes": 2082947072,
+            "cgroupMemoryCurrentPeakBytes": 3226726400,
+            "cgroupMemoryCurrentAfterBytes": 2090213376,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "export": {
+          "elapsedSeconds": 68.51924677400007,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 156,
+              "gets": 156,
+              "rangedGets": 156,
+              "responseBytes": 1481666250
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "302": 78,
+              "206": 78
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2090217472,
+            "operationPeakBytes": 2569285632,
+            "operationIncrementalPeakBytes": 479068160,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2147885056,
+            "processTreeRssPeakBytes": 2628886528,
+            "processTreeRssIncrementalPeakBytes": 481001472,
+            "processTreeRssAfterBytes": 2196951040,
+            "cgroupMemoryCurrentBaselineBytes": 2090217472,
+            "cgroupMemoryCurrentPeakBytes": 2569285632,
+            "cgroupMemoryCurrentAfterBytes": 2139328512,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "h5adBytes": 33570926,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 1517,
+            "gets": 1517,
+            "rangedGets": 1338,
+            "responseBytes": 4007941264
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 91,
+            "302": 757,
+            "206": 669
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 91,
+            "resolvers": 757,
+            "status302": 757,
+            "cdn": 757,
+            "status206": 669
+          },
+          "quotaWaitSeconds": 623.873085269
+        }
+      },
+      "arutyunyan_2023_all_donors_all_cell_states_vivo_74cff64f": {
+        "cells": 2,
+        "opening": {
+          "elapsedSeconds": 0.85560710499999,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 110,
+              "gets": 110,
+              "rangedGets": 0,
+              "responseBytes": 131236
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 56,
+              "302": 54
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2142842880,
+            "operationPeakBytes": 2142859264,
+            "operationIncrementalPeakBytes": 16384,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2200461312,
+            "processTreeRssPeakBytes": 2200461312,
+            "processTreeRssIncrementalPeakBytes": 0,
+            "processTreeRssAfterBytes": 2200444928,
+            "cgroupMemoryCurrentBaselineBytes": 2142842880,
+            "cgroupMemoryCurrentPeakBytes": 2142859264,
+            "cgroupMemoryCurrentAfterBytes": 2142859264,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "creation": {
+          "elapsedSeconds": 25.23804041799997,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 251,
+              "gets": 251,
+              "rangedGets": 236,
+              "responseBytes": 72954876
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 8,
+              "302": 125,
+              "206": 118
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2142863360,
+            "operationPeakBytes": 2363334656,
+            "operationIncrementalPeakBytes": 220471296,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2200461312,
+            "processTreeRssPeakBytes": 2478489600,
+            "processTreeRssIncrementalPeakBytes": 278028288,
+            "processTreeRssAfterBytes": 2239492096,
+            "cgroupMemoryCurrentBaselineBytes": 2142863360,
+            "cgroupMemoryCurrentPeakBytes": 2363334656,
+            "cgroupMemoryCurrentAfterBytes": 2178285568,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "export": {
+          "elapsedSeconds": 9.54978656000003,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 0,
+              "gets": 0,
+              "rangedGets": 0,
+              "responseBytes": 0
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {},
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2178289664,
+            "operationPeakBytes": 2277912576,
+            "operationIncrementalPeakBytes": 99622912,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2239508480,
+            "processTreeRssPeakBytes": 2330062848,
+            "processTreeRssIncrementalPeakBytes": 90554368,
+            "processTreeRssAfterBytes": 2238447616,
+            "cgroupMemoryCurrentBaselineBytes": 2178289664,
+            "cgroupMemoryCurrentPeakBytes": 2277912576,
+            "cgroupMemoryCurrentAfterBytes": 2177241088,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "h5adBytes": 8759666,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 361,
+            "gets": 361,
+            "rangedGets": 236,
+            "responseBytes": 73086112
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 64,
+            "302": 179,
+            "206": 118
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 64,
+            "resolvers": 179,
+            "status302": 179,
+            "cdn": 179,
+            "status206": 118
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      "knight_2026_integrated_global_cells_612b7bff": {
+        "cells": 2,
+        "opening": {
+          "elapsedSeconds": 122.05046847200003,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 116,
+              "gets": 116,
+              "rangedGets": 0,
+              "responseBytes": 130234
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 59,
+              "302": 57
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2180759552,
+            "operationPeakBytes": 2180759552,
+            "operationIncrementalPeakBytes": 0,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2241859584,
+            "processTreeRssPeakBytes": 2241859584,
+            "processTreeRssIncrementalPeakBytes": 0,
+            "processTreeRssAfterBytes": 2241843200,
+            "cgroupMemoryCurrentBaselineBytes": 2180759552,
+            "cgroupMemoryCurrentPeakBytes": 2180759552,
+            "cgroupMemoryCurrentAfterBytes": 2180755456,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "creation": {
+          "elapsedSeconds": 19.155801130999862,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 203,
+              "gets": 203,
+              "rangedGets": 186,
+              "responseBytes": 96166493
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 9,
+              "302": 101,
+              "206": 93
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2180759552,
+            "operationPeakBytes": 3001491456,
+            "operationIncrementalPeakBytes": 820731904,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2241859584,
+            "processTreeRssPeakBytes": 2960822272,
+            "processTreeRssIncrementalPeakBytes": 718962688,
+            "processTreeRssAfterBytes": 2274840576,
+            "cgroupMemoryCurrentBaselineBytes": 2180759552,
+            "cgroupMemoryCurrentPeakBytes": 3001491456,
+            "cgroupMemoryCurrentAfterBytes": 2212581376,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "export": {
+          "elapsedSeconds": 7.585577432000036,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 0,
+              "gets": 0,
+              "rangedGets": 0,
+              "responseBytes": 0
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {},
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2212585472,
+            "operationPeakBytes": 2358378496,
+            "operationIncrementalPeakBytes": 145793024,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2274856960,
+            "processTreeRssPeakBytes": 2403012608,
+            "processTreeRssIncrementalPeakBytes": 128155648,
+            "processTreeRssAfterBytes": 2274840576,
+            "cgroupMemoryCurrentBaselineBytes": 2212585472,
+            "cgroupMemoryCurrentPeakBytes": 2358378496,
+            "cgroupMemoryCurrentAfterBytes": 2212581376,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "h5adBytes": 7382749,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 319,
+            "gets": 319,
+            "rangedGets": 186,
+            "responseBytes": 96296727
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 68,
+            "302": 158,
+            "206": 93
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 68,
+            "resolvers": 158,
+            "status302": 158,
+            "cdn": 158,
+            "status206": 93
+          },
+          "quotaWaitSeconds": 362.90534742399984
+        }
+      },
+      "xu_2026_myeloid_cells_3d8d8c97": {
+        "cells": 2,
+        "opening": {
+          "elapsedSeconds": 1.0354489730000296,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 140,
+              "gets": 140,
+              "rangedGets": 0,
+              "responseBytes": 150508
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 71,
+              "302": 69
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2216001536,
+            "operationPeakBytes": 2216001536,
+            "operationIncrementalPeakBytes": 0,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2278256640,
+            "processTreeRssPeakBytes": 2278256640,
+            "processTreeRssIncrementalPeakBytes": 0,
+            "processTreeRssAfterBytes": 2278240256,
+            "cgroupMemoryCurrentBaselineBytes": 2216001536,
+            "cgroupMemoryCurrentPeakBytes": 2216001536,
+            "cgroupMemoryCurrentAfterBytes": 2215997440,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "creation": {
+          "elapsedSeconds": 22.5942857,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 167,
+              "gets": 167,
+              "rangedGets": 152,
+              "responseBytes": 38196572
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 8,
+              "302": 83,
+              "206": 76
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2216001536,
+            "operationPeakBytes": 2697555968,
+            "operationIncrementalPeakBytes": 481554432,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2278256640,
+            "processTreeRssPeakBytes": 2854199296,
+            "processTreeRssIncrementalPeakBytes": 575942656,
+            "processTreeRssAfterBytes": 2291691520,
+            "cgroupMemoryCurrentBaselineBytes": 2216001536,
+            "cgroupMemoryCurrentPeakBytes": 2697555968,
+            "cgroupMemoryCurrentAfterBytes": 2225876992,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "export": {
+          "elapsedSeconds": 8.43888754700015,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 0,
+              "gets": 0,
+              "rangedGets": 0,
+              "responseBytes": 0
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {},
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2225881088,
+            "operationPeakBytes": 2279215104,
+            "operationIncrementalPeakBytes": 53334016,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2291707904,
+            "processTreeRssPeakBytes": 2341355520,
+            "processTreeRssIncrementalPeakBytes": 49647616,
+            "processTreeRssAfterBytes": 2291691520,
+            "cgroupMemoryCurrentBaselineBytes": 2225881088,
+            "cgroupMemoryCurrentPeakBytes": 2279215104,
+            "cgroupMemoryCurrentAfterBytes": 2226778112,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "h5adBytes": 7663459,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 307,
+            "gets": 307,
+            "rangedGets": 152,
+            "responseBytes": 38347080
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 79,
+            "302": 152,
+            "206": 76
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 79,
+            "resolvers": 152,
+            "status302": 152,
+            "cdn": 152,
+            "status206": 76
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      "rodriguezubreva_2022_activated_pbmcs_expanded_cohort_cite_seq_3c75a463": {
+        "cells": 106,
+        "opening": {
+          "elapsedSeconds": 1.0682640909999463,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 146,
+              "gets": 146,
+              "rangedGets": 0,
+              "responseBytes": 153157
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 74,
+              "302": 72
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2226782208,
+            "operationPeakBytes": 2226782208,
+            "operationIncrementalPeakBytes": 0,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2291707904,
+            "processTreeRssPeakBytes": 2291707904,
+            "processTreeRssIncrementalPeakBytes": 0,
+            "processTreeRssAfterBytes": 2291691520,
+            "cgroupMemoryCurrentBaselineBytes": 2226782208,
+            "cgroupMemoryCurrentPeakBytes": 2226782208,
+            "cgroupMemoryCurrentAfterBytes": 2226778112,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "creation": {
+          "elapsedSeconds": 7.155707779000068,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 123,
+              "gets": 123,
+              "rangedGets": 110,
+              "responseBytes": 265799946
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 7,
+              "302": 61,
+              "206": 55
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2226782208,
+            "operationPeakBytes": 3033763840,
+            "operationIncrementalPeakBytes": 806981632,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2291707904,
+            "processTreeRssPeakBytes": 3149139968,
+            "processTreeRssIncrementalPeakBytes": 857432064,
+            "processTreeRssAfterBytes": 2334027776,
+            "cgroupMemoryCurrentBaselineBytes": 2226782208,
+            "cgroupMemoryCurrentPeakBytes": 3033763840,
+            "cgroupMemoryCurrentAfterBytes": 2268721152,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "export": {
+          "elapsedSeconds": 4.402373367000109,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 0,
+              "gets": 0,
+              "rangedGets": 0,
+              "responseBytes": 0
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {},
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2268725248,
+            "operationPeakBytes": 2427490304,
+            "operationIncrementalPeakBytes": 158765056,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2334044160,
+            "processTreeRssPeakBytes": 2494676992,
+            "processTreeRssIncrementalPeakBytes": 160632832,
+            "processTreeRssAfterBytes": 2334027776,
+            "cgroupMemoryCurrentBaselineBytes": 2268725248,
+            "cgroupMemoryCurrentPeakBytes": 2427490304,
+            "cgroupMemoryCurrentAfterBytes": 2268721152,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "h5adBytes": 5950200,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 269,
+            "gets": 269,
+            "rangedGets": 110,
+            "responseBytes": 265953103
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 81,
+            "302": 133,
+            "206": 55
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 81,
+            "resolvers": 133,
+            "status302": 133,
+            "cdn": 133,
+            "status206": 55
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      "knight_2026_dendritic_cells_a1058181": {
+        "cells": 3,
+        "opening": {
+          "elapsedSeconds": 0.9228349630000139,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 116,
+              "gets": 116,
+              "rangedGets": 0,
+              "responseBytes": 121352
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 59,
+              "302": 57
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2272178176,
+            "operationPeakBytes": 2272178176,
+            "operationIncrementalPeakBytes": 0,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2337435648,
+            "processTreeRssPeakBytes": 2337435648,
+            "processTreeRssIncrementalPeakBytes": 0,
+            "processTreeRssAfterBytes": 2337419264,
+            "cgroupMemoryCurrentBaselineBytes": 2272178176,
+            "cgroupMemoryCurrentPeakBytes": 2272178176,
+            "cgroupMemoryCurrentAfterBytes": 2272174080,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "creation": {
+          "elapsedSeconds": 17.33162050100009,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 87,
+              "gets": 87,
+              "rangedGets": 70,
+              "responseBytes": 79711612
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 9,
+              "302": 43,
+              "206": 35
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2272178176,
+            "operationPeakBytes": 2733834240,
+            "operationIncrementalPeakBytes": 461656064,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2337435648,
+            "processTreeRssPeakBytes": 2771251200,
+            "processTreeRssIncrementalPeakBytes": 433815552,
+            "processTreeRssAfterBytes": 2341142528,
+            "cgroupMemoryCurrentBaselineBytes": 2272178176,
+            "cgroupMemoryCurrentPeakBytes": 2733834240,
+            "cgroupMemoryCurrentAfterBytes": 2275753984,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "export": {
+          "elapsedSeconds": 5.766009883000152,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 12,
+              "gets": 12,
+              "rangedGets": 12,
+              "responseBytes": 20064006
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "302": 6,
+              "206": 6
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2275758080,
+            "operationPeakBytes": 2332385280,
+            "operationIncrementalPeakBytes": 56627200,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2341158912,
+            "processTreeRssPeakBytes": 2441150464,
+            "processTreeRssIncrementalPeakBytes": 99991552,
+            "processTreeRssAfterBytes": 2341142528,
+            "cgroupMemoryCurrentBaselineBytes": 2275758080,
+            "cgroupMemoryCurrentPeakBytes": 2332385280,
+            "cgroupMemoryCurrentAfterBytes": 2275753984,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "h5adBytes": 7410253,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 215,
+            "gets": 215,
+            "rangedGets": 82,
+            "responseBytes": 99896970
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 68,
+            "302": 106,
+            "206": 41
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 68,
+            "resolvers": 106,
+            "status302": 106,
+            "cdn": 106,
+            "status206": 41
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      "szabo_2021_49_years_old_male_fresh_pbmcs_3_days_post_intubation_eeacb0c1": {
+        "cells": 35,
+        "opening": {
+          "elapsedSeconds": 1.0010733799999798,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 92,
+              "gets": 92,
+              "rangedGets": 0,
+              "responseBytes": 96950
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 47,
+              "302": 45
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2275770368,
+            "operationPeakBytes": 2275774464,
+            "operationIncrementalPeakBytes": 4096,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2341171200,
+            "processTreeRssPeakBytes": 2341171200,
+            "processTreeRssIncrementalPeakBytes": 0,
+            "processTreeRssAfterBytes": 2341154816,
+            "cgroupMemoryCurrentBaselineBytes": 2275770368,
+            "cgroupMemoryCurrentPeakBytes": 2275774464,
+            "cgroupMemoryCurrentAfterBytes": 2275774464,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "creation": {
+          "elapsedSeconds": 3.0565684870000496,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 63,
+              "gets": 63,
+              "rangedGets": 48,
+              "responseBytes": 44859276
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 8,
+              "302": 31,
+              "206": 24
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2275778560,
+            "operationPeakBytes": 2805297152,
+            "operationIncrementalPeakBytes": 529518592,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2341171200,
+            "processTreeRssPeakBytes": 2917117952,
+            "processTreeRssIncrementalPeakBytes": 575946752,
+            "processTreeRssAfterBytes": 2343251968,
+            "cgroupMemoryCurrentBaselineBytes": 2275778560,
+            "cgroupMemoryCurrentPeakBytes": 2805297152,
+            "cgroupMemoryCurrentAfterBytes": 2277965824,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "export": {
+          "elapsedSeconds": 1.49355776099992,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 0,
+              "gets": 0,
+              "rangedGets": 0,
+              "responseBytes": 0
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {},
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2277969920,
+            "operationPeakBytes": 2460504064,
+            "operationIncrementalPeakBytes": 182534144,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2343268352,
+            "processTreeRssPeakBytes": 2534191104,
+            "processTreeRssIncrementalPeakBytes": 190922752,
+            "processTreeRssAfterBytes": 2343251968,
+            "cgroupMemoryCurrentBaselineBytes": 2277969920,
+            "cgroupMemoryCurrentPeakBytes": 2460504064,
+            "cgroupMemoryCurrentAfterBytes": 2277965824,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "h5adBytes": 9823894,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 155,
+            "gets": 155,
+            "rangedGets": 48,
+            "responseBytes": 44956226
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 55,
+            "302": 76,
+            "206": 24
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 55,
+            "resolvers": 76,
+            "status302": 76,
+            "cdn": 76,
+            "status206": 24
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      },
+      "szabo_2021_49_years_old_male_fresh_pbmcs_1_day_post_intubation_c874f155": {
+        "cells": 9,
+        "opening": {
+          "elapsedSeconds": 0.7439756960000068,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 92,
+              "gets": 92,
+              "rangedGets": 0,
+              "responseBytes": 96723
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 47,
+              "302": 45
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2278125568,
+            "operationPeakBytes": 2278141952,
+            "operationIncrementalPeakBytes": 16384,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2343297024,
+            "processTreeRssPeakBytes": 2343297024,
+            "processTreeRssIncrementalPeakBytes": 0,
+            "processTreeRssAfterBytes": 2343280640,
+            "cgroupMemoryCurrentBaselineBytes": 2278125568,
+            "cgroupMemoryCurrentPeakBytes": 2278141952,
+            "cgroupMemoryCurrentAfterBytes": 2278137856,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "creation": {
+          "elapsedSeconds": 6.612671271999943,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 65,
+              "gets": 65,
+              "rangedGets": 50,
+              "responseBytes": 20115086
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {
+              "200": 8,
+              "302": 32,
+              "206": 25
+            },
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2278141952,
+            "operationPeakBytes": 2312421376,
+            "operationIncrementalPeakBytes": 34279424,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2343297024,
+            "processTreeRssPeakBytes": 2439999488,
+            "processTreeRssIncrementalPeakBytes": 96702464,
+            "processTreeRssAfterBytes": 2343284736,
+            "cgroupMemoryCurrentBaselineBytes": 2278141952,
+            "cgroupMemoryCurrentPeakBytes": 2312421376,
+            "cgroupMemoryCurrentAfterBytes": 2278146048,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "export": {
+          "elapsedSeconds": 2.8420795360000284,
+          "io": {
+            "readBytes": 0,
+            "readMB": 0.0,
+            "requests": 0,
+            "raw": {
+              "gets": 0,
+              "sets": 0,
+              "deletes": 0,
+              "deleteDirs": 0,
+              "sizeQueries": 0,
+              "rangeGets": 0,
+              "partialGets": 0,
+              "requestedBytes": 0,
+              "transferredBytes": 0,
+              "readRequestedBytes": 0,
+              "readTransferredBytes": 0,
+              "writeTransferredBytes": 0,
+              "countReadRequests": 0,
+              "countReadBytes": 0,
+              "maxInFlight": 0
+            },
+            "http": {
+              "requests": 0,
+              "gets": 0,
+              "rangedGets": 0,
+              "responseBytes": 0
+            },
+            "httpClient": "httpx2",
+            "httpResponseStatusCounts": {},
+            "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+          },
+          "resources": {
+            "operationBaselineBytes": 2278150144,
+            "operationPeakBytes": 2364026880,
+            "operationIncrementalPeakBytes": 85876736,
+            "operationPeakSource": "cgroupMemoryCurrent",
+            "processTreeRssBaselineBytes": 2343301120,
+            "processTreeRssPeakBytes": 2414297088,
+            "processTreeRssIncrementalPeakBytes": 70995968,
+            "processTreeRssAfterBytes": 2343288832,
+            "cgroupMemoryCurrentBaselineBytes": 2278150144,
+            "cgroupMemoryCurrentPeakBytes": 2364026880,
+            "cgroupMemoryCurrentAfterBytes": 2278150144,
+            "cgroupMemoryPeakBytes": null,
+            "cgroupMemoryPeakScope": "unavailable",
+            "memoryMaxBytes": 68719476736,
+            "memoryEventsDelta": null,
+            "cpuQuotaCores": null
+          }
+        },
+        "h5adBytes": 9592955,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 157,
+            "gets": 157,
+            "rangedGets": 50,
+            "responseBytes": 20211809
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 55,
+            "302": 77,
+            "206": 25
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes",
+          "requestsByKind": {
+            "api": 3,
+            "status200": 55,
+            "resolvers": 77,
+            "status302": 77,
+            "cdn": 77,
+            "status206": 25
+          },
+          "quotaWaitSeconds": 0.0
+        }
+      }
+    },
+    "wallSeconds": 1229.741311662,
+    "traffic": {
+      "requestsByKind": {
+        "api": 35,
+        "status200": 795,
+        "resolvers": 5099,
+        "status302": 5099,
+        "cdn": 5099,
+        "status206": 4339
+      },
+      "unattributedRequestsByKind": {
+        "api": 2,
+        "status200": 2
+      },
+      "quotaWaits": {
+        "resolvers": {
+          "waits": 10,
+          "seconds": 1874.567893892
+        }
+      },
+      "quotaPolicies": [
+        "\"fixed window\";\"api\";q=1000;w=300",
+        "\"fixed window\";\"api\";q=500;w=300",
+        "\"fixed window\";\"resolvers\";q=5000;w=300"
+      ]
+    },
+    "settings": {
+      "requireToken": true,
+      "sources": {
+        "marteau_2026_single_cell_colorectal_cancer_atlas_core_atlas_05a8c945": "hf://buckets/Nygen/cytebase-2610/datasets/marteau_2026_single_cell_colorectal_cancer_atlas_core_atlas_05a8c945/data.zarr",
+        "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff": "hf://buckets/Nygen/cytebase-2610/datasets/ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff/data.zarr",
+        "arutyunyan_2023_all_donors_all_cell_states_vivo_74cff64f": "hf://buckets/Nygen/cytebase-2610/datasets/arutyunyan_2023_all_donors_all_cell_states_vivo_74cff64f/data.zarr",
+        "knight_2026_integrated_global_cells_612b7bff": "hf://buckets/Nygen/cytebase-2610/datasets/knight_2026_integrated_global_cells_612b7bff/data.zarr",
+        "xu_2026_myeloid_cells_3d8d8c97": "hf://buckets/Nygen/cytebase-2610/datasets/xu_2026_myeloid_cells_3d8d8c97/data.zarr",
+        "rodriguezubreva_2022_activated_pbmcs_expanded_cohort_cite_seq_3c75a463": "hf://buckets/Nygen/cytebase-2610/datasets/rodriguezubreva_2022_activated_pbmcs_expanded_cohort_cite_seq_3c75a463/data.zarr",
+        "knight_2026_dendritic_cells_a1058181": "hf://buckets/Nygen/cytebase-2610/datasets/knight_2026_dendritic_cells_a1058181/data.zarr",
+        "szabo_2021_49_years_old_male_fresh_pbmcs_3_days_post_intubation_eeacb0c1": "hf://buckets/Nygen/cytebase-2610/datasets/szabo_2021_49_years_old_male_fresh_pbmcs_3_days_post_intubation_eeacb0c1/data.zarr",
+        "szabo_2021_49_years_old_male_fresh_pbmcs_1_day_post_intubation_c874f155": "hf://buckets/Nygen/cytebase-2610/datasets/szabo_2021_49_years_old_male_fresh_pbmcs_1_day_post_intubation_c874f155/data.zarr"
+      },
+      "collections": {
+        "marteau_2026_single_cell_colorectal_cancer_atlas_core_atlas_05a8c945": "3a844375-60ea-474b-adf1-98e76928baee",
+        "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff": "8f126edf-5405-4731-8374-b5ce11f53e82",
+        "arutyunyan_2023_all_donors_all_cell_states_vivo_74cff64f": "e2c257e7-6f79-487c-b81c-39451cd4ab3c",
+        "knight_2026_integrated_global_cells_612b7bff": "10eb236d-d42d-45b8-8363-c2dcf865f388",
+        "xu_2026_myeloid_cells_3d8d8c97": "6c147b03-08e4-4bb7-afb7-2bcc0a814b65",
+        "rodriguezubreva_2022_activated_pbmcs_expanded_cohort_cite_seq_3c75a463": "bf325905-5e8e-42e3-933d-9a9053e9af80",
+        "knight_2026_dendritic_cells_a1058181": "10eb236d-d42d-45b8-8363-c2dcf865f388",
+        "szabo_2021_49_years_old_male_fresh_pbmcs_3_days_post_intubation_eeacb0c1": "29f92179-ca10-4309-a32b-d383d80347c1",
+        "szabo_2021_49_years_old_male_fresh_pbmcs_1_day_post_intubation_c874f155": "29f92179-ca10-4309-a32b-d383d80347c1"
+      },
+      "memBudget": "16G",
+      "nthreads": 16,
+      "sourceCacheBytes": "96G",
+      "quotaReserve": 200
+    }
+  },
+  "elapsedSeconds": 1230.1034605503082
+}

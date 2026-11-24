@@ -1,0 +1,36 @@
+{
+ "cells": 1457527,
+ "rasters": {
+  "RNA": "experiments/integration/records/graph_umaps_harmony/raster_RNA.npz",
+  "ADT": "experiments/integration/records/graph_umaps_harmony/raster_ADT.npz",
+  "WNN": "experiments/integration/records/graph_umaps_harmony/raster_WNN.npz"
+ },
+ "cellsPerLabel": {
+  "": 95798,
+  "B memory": 21044,
+  "B naive": 65415,
+  "CD14 Mono": 328042,
+  "CD16 Mono": 53938,
+  "CD4 Memory": 205817,
+  "CD4 Naive": 181420,
+  "CD8 Memory": 139775,
+  "CD8 Naive": 56270,
+  "HSPC": 5165,
+  "MAIT": 15261,
+  "NK": 141153,
+  "NK_CD56bright": 16956,
+  "Plasmablast": 20106,
+  "Platelet": 17410,
+  "Proliferating lymphocyte": 21097,
+  "Treg": 27463,
+  "cDC": 13552,
+  "gdT": 24860,
+  "pDC": 6985
+ },
+ "source": [
+  "experiments/integration/records/graph_umaps_harmony/summary.json",
+  "experiments/integration/records/graph_umaps_harmony/raster_RNA.npz",
+  "experiments/integration/records/graph_umaps_harmony/raster_ADT.npz",
+  "experiments/integration/records/graph_umaps_harmony/raster_WNN.npz"
+ ]
+}

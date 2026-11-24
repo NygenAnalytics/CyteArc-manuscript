@@ -1,0 +1,61 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "dataset": "hao_pbmc_citeseq",
+    "requestedCellCounts": [
+      10000,
+      50000,
+      100000,
+      161764
+    ],
+    "inputs": [
+      {
+        "cells": 10000,
+        "cellSelectionSha256": "bacfcd37a7865cf01694a0e6d3acc14f9f96389526e528e29d1dba1e9f74c982",
+        "inputsSha256": "71ab7d9b85834498c79d3e4116c16536a90a521c6db0d791ced8b69e5ff638a2",
+        "archiveBytes": 75705310
+      },
+      {
+        "cells": 50000,
+        "cellSelectionSha256": "cae1e1a3e83692c9762bc30f92e0b62ed5550debe438e9636ac7d6e3383c0b56",
+        "inputsSha256": "31aff56c047633cf64de364ed57cb67654fdd5ce063b8314a1f7a864d9327f4f",
+        "archiveBytes": 381082326
+      },
+      {
+        "cells": 100000,
+        "cellSelectionSha256": "6bfec2cbdccd71766e1408726c857e0eb842ea8fc01eb09011fe5030270f2202",
+        "inputsSha256": "35b1b8712b05377b3c181bee947141444bae0775aa8774c290da016550ba4f3c",
+        "archiveBytes": 762291803
+      },
+      {
+        "cells": 161764,
+        "cellSelectionSha256": "28aec45f9849f41fd9ec70c2e739384fcd3dc88763812461d060f4b0dd5ca3cc",
+        "inputsSha256": "a9c78598142766faceaa9e66f943849ff83d23772e58371565b77980f6cafdf4",
+        "archiveBytes": 1230122113
+      }
+    ],
+    "settings": {
+      "neighborCount": 20,
+      "seuratCandidateBreadths": [
+        50,
+        200
+      ],
+      "hvgCount": 2000,
+      "rnaDimensions": 30,
+      "adtDimensions": 15,
+      "atacDimensions": 30,
+      "peakCount": 25000,
+      "resolution": 1.0,
+      "seed": 4466,
+      "l2Normalize": true,
+      "annParallel": false,
+      "tolerances": {
+        "matchedKernelMaxAbs": 1e-06,
+        "candidateWeightMaxAbs": 1e-12,
+        "candidateMeanNeighborOverlapMin": 0.9,
+        "candidateBiologicalAriDecreaseMax": 0.05
+      }
+    }
+  }
+}

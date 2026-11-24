@@ -1,0 +1,171 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "comparator_stopped",
+    "dataset": "combat_stephenson_pbmc_citeseq",
+    "cells": 600000,
+    "cellSelectionSha256": "a155f1ab1f4c86ce3b46c52175d2765ce9685bb72b08071a9d4806ecf9637e24",
+    "outcome": "time_limit",
+    "stages": [
+      {
+        "stage": "seurat.workflow.process",
+        "wallSeconds": 28801.26442035,
+        "operationPeakBytes": 94105468928,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 137438953472
+      }
+    ],
+    "stageWindows": [
+      {
+        "stage": "input_setup",
+        "wallSeconds": 367.66999983787537,
+        "sampledPeakBytes": 36598833152
+      },
+      {
+        "stage": "initial:RNA.normalization",
+        "wallSeconds": 31.575000047683716,
+        "sampledPeakBytes": 57672503296
+      },
+      {
+        "stage": "initial:RNA.features",
+        "wallSeconds": 29.89199995994568,
+        "sampledPeakBytes": 49689231360
+      },
+      {
+        "stage": "initial:RNA.scaling",
+        "wallSeconds": 24.71500015258789,
+        "sampledPeakBytes": 51403784192
+      },
+      {
+        "stage": "initial:RNA.reduction",
+        "wallSeconds": 87.07299995422363,
+        "sampledPeakBytes": 74410323968
+      },
+      {
+        "stage": "initial:RNA.neighbors",
+        "wallSeconds": 251.83599996566772,
+        "sampledPeakBytes": 51850293248
+      },
+      {
+        "stage": "initial:RNA.clustering",
+        "wallSeconds": 266.8269999027252,
+        "sampledPeakBytes": 47127916544
+      },
+      {
+        "stage": "initial:ADT.normalization",
+        "wallSeconds": 16.79200005531311,
+        "sampledPeakBytes": 56320278528
+      },
+      {
+        "stage": "initial:ADT.scaling",
+        "wallSeconds": 7.858999967575073,
+        "sampledPeakBytes": 67063656448
+      },
+      {
+        "stage": "initial:ADT.reduction",
+        "wallSeconds": 7.269000053405762,
+        "sampledPeakBytes": 71868866560
+      },
+      {
+        "stage": "initial:ADT.neighbors",
+        "wallSeconds": 177.760999917984,
+        "sampledPeakBytes": 57074249728
+      },
+      {
+        "stage": "initial:ADT.clustering",
+        "wallSeconds": 191.01699995994568,
+        "sampledPeakBytes": 57094967296
+      },
+      {
+        "stage": "initial:WNN.integration",
+        "wallSeconds": 2109.2590000629425,
+        "sampledPeakBytes": 63273701376
+      },
+      {
+        "stage": "initial:WNN.clustering",
+        "wallSeconds": 10319.466000080109,
+        "sampledPeakBytes": 75719880704
+      },
+      {
+        "stage": "export_graphs",
+        "wallSeconds": 0.38699984550476074,
+        "sampledPeakBytes": null
+      },
+      {
+        "stage": "reuse_revision:WNN.clustering",
+        "wallSeconds": 11019.84400010109,
+        "sampledPeakBytes": 76106199040
+      },
+      {
+        "stage": "fresh_revision:RNA.normalization",
+        "wallSeconds": 30.51099991798401,
+        "sampledPeakBytes": 73720430592
+      },
+      {
+        "stage": "fresh_revision:RNA.features",
+        "wallSeconds": 31.43499994277954,
+        "sampledPeakBytes": 89419329536
+      },
+      {
+        "stage": "fresh_revision:RNA.scaling",
+        "wallSeconds": 23.26800012588501,
+        "sampledPeakBytes": 70856273920
+      },
+      {
+        "stage": "fresh_revision:RNA.reduction",
+        "wallSeconds": 81.83699989318848,
+        "sampledPeakBytes": 94105468928
+      },
+      {
+        "stage": "fresh_revision:RNA.neighbors",
+        "wallSeconds": 197.35599994659424,
+        "sampledPeakBytes": 74905473024
+      },
+      {
+        "stage": "fresh_revision:RNA.clustering",
+        "wallSeconds": 222.3880000114441,
+        "sampledPeakBytes": 65998581760
+      },
+      {
+        "stage": "fresh_revision:ADT.normalization",
+        "wallSeconds": 17.746000051498413,
+        "sampledPeakBytes": 73821122560
+      },
+      {
+        "stage": "fresh_revision:ADT.scaling",
+        "wallSeconds": 7.033999919891357,
+        "sampledPeakBytes": 75636932608
+      },
+      {
+        "stage": "fresh_revision:ADT.reduction",
+        "wallSeconds": 7.031999826431274,
+        "sampledPeakBytes": 78346067968
+      },
+      {
+        "stage": "fresh_revision:ADT.neighbors",
+        "wallSeconds": 184.59899997711182,
+        "sampledPeakBytes": 78346067968
+      },
+      {
+        "stage": "fresh_revision:ADT.clustering",
+        "wallSeconds": 211.32299995422363,
+        "sampledPeakBytes": 72179232768
+      },
+      {
+        "stage": "fresh_revision:WNN.integration",
+        "wallSeconds": 2567.125,
+        "sampledPeakBytes": 72179236864
+      },
+      {
+        "stage": "fresh_revision:WNN.clustering",
+        "wallSeconds": null,
+        "sampledPeakBytes": 73148518400,
+        "unfinished": true
+      }
+    ],
+    "containerMemoryLimitBytes": 137438953472,
+    "memoryLimitGiB": 120,
+    "timeLimitSeconds": 28800,
+    "lastStage": "fresh_revision:WNN.clustering"
+  }
+}

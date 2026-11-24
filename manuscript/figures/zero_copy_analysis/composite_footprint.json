@@ -1,0 +1,273 @@
+{
+ "cells": 4714857,
+ "genes": 18446,
+ "sources": [
+  {
+   "study": "aida",
+   "cells": 1265624
+  },
+  {
+   "study": "yazar",
+   "cells": 1248980
+  },
+  {
+   "study": "combat",
+   "cells": 836148
+  },
+  {
+   "study": "covid_atlas",
+   "cells": 647366
+  },
+  {
+   "study": "ivanova",
+   "cells": 189902
+  },
+  {
+   "study": "hao",
+   "cells": 161764
+  },
+  {
+   "study": "arthritis",
+   "cells": 108717
+  },
+  {
+   "study": "jdm",
+   "cells": 105827
+  },
+  {
+   "study": "schulte_schrepping",
+   "cells": 90957
+  },
+  {
+   "study": "lee",
+   "cells": 59572
+  }
+ ],
+ "routes": [
+  {
+   "key": "composite",
+   "label": "CyteArc composite",
+   "entity": "cytearc",
+   "disk": [
+    {
+     "label": "composite store",
+     "GiB": 1.0156846037134528
+    }
+   ],
+   "memoryGiB": {
+    "mean": 12.177144368489584,
+    "low": 12.09588623046875,
+    "high": 12.272712707519531,
+    "n": 3,
+    "values": [
+     12.162834167480469,
+     12.09588623046875,
+     12.272712707519531
+    ]
+   },
+   "memoryStep": "analysis through Leiden"
+  },
+  {
+   "key": "in_memory",
+   "label": "AnnData, in memory",
+   "entity": "anndata",
+   "disk": [
+    {
+     "label": "H5AD files",
+     "GiB": 27.100425062701106
+    }
+   ],
+   "memoryGiB": {
+    "mean": 166.77253595987955,
+    "low": 166.74551391601562,
+    "high": 166.79738235473633,
+    "n": 3,
+    "values": [
+     166.77471160888672,
+     166.79738235473633,
+     166.74551391601562
+    ]
+   },
+   "memoryStep": "concatenation, no analysis"
+  },
+  {
+   "key": "on_disk",
+   "label": "AnnData on disk, Scanpy (Dask)",
+   "entity": "scanpy",
+   "disk": [
+    {
+     "label": "H5AD files",
+     "GiB": 27.100425062701106
+    },
+    {
+     "label": "written by concatenation",
+     "GiB": 83.18099717702717
+    }
+   ],
+   "memoryGiB": {
+    "mean": 68.23863220214844,
+    "low": 67.40850830078125,
+    "high": 69.1927261352539,
+    "n": 3,
+    "values": [
+     67.40850830078125,
+     69.1927261352539,
+     68.11466217041016
+    ]
+   },
+   "memoryStep": "Scanpy (Dask) analysis",
+   "concatenationMemoryGiB": {
+    "mean": 21.931758880615234,
+    "low": 21.331729888916016,
+    "high": 22.23626708984375,
+    "n": 3,
+    "values": [
+     21.331729888916016,
+     22.23626708984375,
+     22.227279663085938
+    ]
+   }
+  },
+  {
+   "key": "bpcells",
+   "label": "BPCells",
+   "entity": "bpcells",
+   "disk": [
+    {
+     "label": "H5AD files",
+     "GiB": 27.100425062701106
+    },
+    {
+     "label": "written by BPCells",
+     "GiB": 97.86332402316232
+    }
+   ],
+   "diskRuns": 3,
+   "memoryGiB": {
+    "mean": 29.761179606119793,
+    "low": 29.682525634765625,
+    "high": 29.801864624023438,
+    "n": 3,
+    "values": [
+     29.799148559570312,
+     29.682525634765625,
+     29.801864624023438
+    ]
+   },
+   "memoryStep": "BPCells analysis through Leiden"
+  }
+ ],
+ "checks": [
+  {
+   "countsCompared": 4538247350,
+   "exactCounts": true,
+   "copiedCountChunkBytes": 0,
+   "clusterAri": 1.0,
+   "exactClusterLabels": true,
+   "pcaSubspaceDegrees": 6.515545101137832e-05,
+   "pcaSubspaceToleranceDegrees": 0.05,
+   "cells": 233870,
+   "studies": 4
+  },
+  {
+   "countsCompared": 4538247350,
+   "exactCounts": true,
+   "copiedCountChunkBytes": 0,
+   "clusterAri": 1.0,
+   "exactClusterLabels": true,
+   "pcaSubspaceDegrees": 6.515545101137832e-05,
+   "pcaSubspaceToleranceDegrees": 0.05,
+   "cells": 233870,
+   "studies": 4
+  },
+  {
+   "countsCompared": 4538247350,
+   "exactCounts": true,
+   "copiedCountChunkBytes": 0,
+   "clusterAri": 1.0,
+   "exactClusterLabels": true,
+   "pcaSubspaceDegrees": 6.515545101137832e-05,
+   "pcaSubspaceToleranceDegrees": 0.05,
+   "cells": 233870,
+   "studies": 4
+  }
+ ],
+ "umap": {
+  "raster": "experiments/reuse/records/blood_composite_umap_raster.npz",
+  "studies": [
+   {
+    "study": "aida",
+    "cells": 1265624
+   },
+   {
+    "study": "arthritis",
+    "cells": 108717
+   },
+   {
+    "study": "combat",
+    "cells": 836148
+   },
+   {
+    "study": "covid_atlas",
+    "cells": 647366
+   },
+   {
+    "study": "hao",
+    "cells": 161764
+   },
+   {
+    "study": "ivanova",
+    "cells": 189902
+   },
+   {
+    "study": "jdm",
+    "cells": 105827
+   },
+   {
+    "study": "lee",
+    "cells": 59572
+   },
+   {
+    "study": "schulte_schrepping",
+    "cells": 90957
+   },
+   {
+    "study": "yazar",
+    "cells": 1248980
+   }
+  ]
+ },
+ "integration": {
+  "unintegrated": {
+   "studyMixing": 0.18235801941193333,
+   "sameType": 0.970205795627459
+  },
+  "integrated": {
+   "studyMixing": 0.5329379514632006,
+   "sameType": 0.9652854819845537
+  }
+ },
+ "source": [
+  "experiments/reuse/records/composite_and_remote/blood_composite/replicate_2.json",
+  "experiments/reuse/records/composite_and_remote/blood_composite/replicate_3.json",
+  "experiments/reuse/records/composite_and_remote/blood_composite/replicate_4.json",
+  "experiments/reuse/records/composite_and_remote/blood_concatenation/replicate_1.json",
+  "experiments/reuse/records/composite_and_remote/blood_concatenation/replicate_2.json",
+  "experiments/reuse/records/composite_and_remote/blood_concatenation/replicate_3.json",
+  "experiments/reuse/records/blood_on_disk_concatenation/replicate_1.json",
+  "experiments/reuse/records/blood_on_disk_concatenation/replicate_2.json",
+  "experiments/reuse/records/blood_on_disk_concatenation/replicate_3.json",
+  "experiments/reuse/records/blood_scanpy_dask/replicate_1.json",
+  "experiments/reuse/records/blood_scanpy_dask/replicate_2.json",
+  "experiments/reuse/records/blood_scanpy_dask/replicate_3.json",
+  "experiments/reuse/records/blood_bpcells/replicate_1.json",
+  "experiments/reuse/records/blood_bpcells/replicate_2.json",
+  "experiments/reuse/records/blood_bpcells/replicate_3.json",
+  "experiments/reuse/records/composite_and_remote/composite_integration/replicate_1.json",
+  "experiments/reuse/records/composite_and_remote/composite_integration/replicate_2.json",
+  "experiments/reuse/records/composite_and_remote/composite_integration/replicate_3.json",
+  "experiments/reuse/records/blood_cohort_analysis.json",
+  "experiments/reuse/records/blood_cohort_mixing.json",
+  "experiments/reuse/records/blood_composite_umap_raster.npz"
+ ]
+}

@@ -1,0 +1,266 @@
+{
+  "description": "Sparse iterative fate solver against dense direct solutions on toy and real graphs; pancreas example.",
+  "beta": 10.0,
+  "controlledGraphs": [
+    {
+      "graph": "test-suite Y graph",
+      "nodes": 5,
+      "edges": 8,
+      "sinks": 2,
+      "validFraction": 1.0,
+      "maxAbsError": 1.2722477293891643e-08,
+      "meanAbsError": 2.5744199682632697e-09,
+      "maxRowSumError": 0.0,
+      "denseSeconds": 0.0002683400000003111,
+      "sparseSeconds": 0.7594384560000003,
+      "outputDtype": "float32"
+    },
+    {
+      "graph": "test-suite three-branch graph",
+      "nodes": 7,
+      "edges": 12,
+      "sinks": 3,
+      "validFraction": 1.0,
+      "maxAbsError": 9.934107481068821e-09,
+      "meanAbsError": 1.8499947823245017e-09,
+      "maxRowSumError": 5.960464477539063e-08,
+      "denseSeconds": 0.00010743000000035252,
+      "sparseSeconds": 0.0016275600000001944,
+      "outputDtype": "float32"
+    },
+    {
+      "graph": "bastidas-ponce_4K_pancreas-d15_rnaseq connectivity map",
+      "nodes": 3546,
+      "edges": 56466,
+      "sinks": 2,
+      "validFraction": 1.0,
+      "maxAbsError": 2.862654971957923e-07,
+      "meanAbsError": 2.3279503145106426e-08,
+      "maxRowSumError": 0.0,
+      "denseSeconds": 0.29162974399999797,
+      "sparseSeconds": 0.02550096899999943,
+      "outputDtype": "float32"
+    },
+    {
+      "graph": "kang_15K_pbmc_rnaseq connectivity map",
+      "nodes": 11944,
+      "edges": 210538,
+      "sinks": 2,
+      "validFraction": 1.0,
+      "maxAbsError": 1.7887548631190242e-07,
+      "meanAbsError": 9.30053799903346e-09,
+      "maxRowSumError": 0.0,
+      "denseSeconds": 6.386045537000001,
+      "sparseSeconds": 0.07303740999999775,
+      "outputDtype": "float32"
+    }
+  ],
+  "pancreas": {
+    "dataset": "bastidas-ponce_4K_pancreas-d15_rnaseq",
+    "cells": 3546,
+    "sinkClusters": [
+      "7",
+      "2"
+    ],
+    "sinkClusterMajorityAnnotation": {
+      "7": {
+        "annotation": "Beta",
+        "fraction": 0.9937888198757764,
+        "cells": 322
+      },
+      "2": {
+        "annotation": "Alpha",
+        "fraction": 0.6862068965517242,
+        "cells": 580
+      }
+    },
+    "clusterMeanPseudotime": {
+      "1": 0.9222499334124029,
+      "10": 0.9444327994726781,
+      "11": 0.42809756320078113,
+      "2": 0.9505324288025794,
+      "3": 0.026109848396468717,
+      "4": 0.5648562084353246,
+      "5": 0.017583911421209093,
+      "6": 0.7781647873458715,
+      "7": 0.9828280980927051,
+      "8": 0.15130190578515912,
+      "9": 0.019180898187287243
+    },
+    "validFraction": 1.0,
+    "maxRowSumError": 0.0,
+    "meanProbabilityByAnnotation": {
+      "Alpha": {
+        "7": 0.01404658891260624,
+        "2": 0.9859534502029419
+      },
+      "Beta": {
+        "7": 0.7861320972442627,
+        "2": 0.2138679325580597
+      },
+      "Delta": {
+        "7": 0.3365400731563568,
+        "2": 0.6634598970413208
+      },
+      "Ductal": {
+        "7": 0.2299281656742096,
+        "2": 0.770071804523468
+      },
+      "Epsilon": {
+        "7": 0.0018302631797268987,
+        "2": 0.9981697201728821
+      },
+      "Ngn3 high EP": {
+        "7": 0.23030364513397217,
+        "2": 0.7696963548660278
+      },
+      "Ngn3 low EP": {
+        "7": 0.22990846633911133,
+        "2": 0.7700915336608887
+      },
+      "Pre-endocrine": {
+        "7": 0.25642967224121094,
+        "2": 0.7435703277587891
+      }
+    },
+    "argmaxAgreementInSinkClusters": {
+      "7": 1.0,
+      "2": 1.0
+    },
+    "seconds": 0.14930508800000553
+  },
+  "analyses": {
+    "bastidas-ponce_4K_pancreas-d15_rnaseq": {
+      "input": {
+        "catalogue": "cytearc_docs",
+        "dataset": "bastidas-ponce_4K_pancreas-d15_rnaseq",
+        "files": {
+          "data.h5ad": {
+            "bytes": 52477898,
+            "sha256": "9e3e459eca00ba06b496ec80def32941b5b2889918720e3e7aa6ffb811fbe7c6"
+          }
+        }
+      },
+      "analysis": {
+        "cytearcVersion": "1.3.0",
+        "filtering": {
+          "enabled": true,
+          "method": "mad",
+          "attrs": [
+            "RNA_nCounts",
+            "RNA_nFeatures",
+            "RNA_percentMito",
+            "RNA_percentRibo"
+          ],
+          "minP": 0.01,
+          "maxP": 0.99,
+          "sampleColumn": null,
+          "nMads": 3.0,
+          "minCellsPerSample": 20
+        },
+        "hvgCount": 1000,
+        "pcaDims": 21,
+        "neighborsK": 11,
+        "leiden": {
+          "partitions": [
+            0.5,
+            0.75,
+            1.0,
+            1.25
+          ],
+          "selected": null
+        },
+        "annIndex": {
+          "ann_metric": "l2",
+          "ann_m": 24,
+          "ann_ef": 200,
+          "ann_efc": 200,
+          "rand_state": 4466,
+          "ann_parallel": false
+        },
+        "analysisCells": 3546
+      }
+    },
+    "kang_15K_pbmc_rnaseq": {
+      "input": {
+        "catalogue": "cytearc_docs",
+        "dataset": "kang_15K_pbmc_rnaseq",
+        "files": {
+          "barcodes.tsv.gz": {
+            "bytes": 52875,
+            "sha256": "a4711c121443d9cb37e33e6ac57449f539ff46e0a50e4a34695861cbba666c54"
+          },
+          "features.tsv.gz": {
+            "bytes": 276960,
+            "sha256": "86f9914714bc554b3b8149681986521b3881c22a934a99e1b45401c3dd08aef4"
+          },
+          "matrix.mtx.gz": {
+            "bytes": 28537003,
+            "sha256": "8c5d623aa57bbf7e1187a643524792003cc103375ad3449e603cf6e9ccfff61d"
+          }
+        }
+      },
+      "labels": {
+        "source": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96583/suppl/GSE96583_batch2.total.tsne.df.tsv.gz",
+          "bytes": 756342,
+          "sha256": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        "condition": "ctrl",
+        "labels": "the authors' cell type of each demuxlet singlet; other barcodes unlabelled",
+        "barcodes": 14619,
+        "singlets": 12315,
+        "singletsWithoutCellType": 0,
+        "cellsPerLabel": {
+          "B cells": 1307,
+          "CD14+ Monocytes": 2785,
+          "CD4 T cells": 5161,
+          "CD8 T cells": 1082,
+          "Dendritic cells": 203,
+          "FCGR3A+ Monocytes": 739,
+          "Megakaryocytes": 122,
+          "NK cells": 916
+        }
+      },
+      "analysis": {
+        "cytearcVersion": "1.3.0",
+        "filtering": {
+          "enabled": true,
+          "method": "mad",
+          "attrs": [
+            "RNA_nCounts",
+            "RNA_nFeatures",
+            "RNA_percentMito",
+            "RNA_percentRibo"
+          ],
+          "minP": 0.01,
+          "maxP": 0.99,
+          "sampleColumn": null,
+          "nMads": 3.0,
+          "minCellsPerSample": 20
+        },
+        "hvgCount": 1000,
+        "pcaDims": 21,
+        "neighborsK": 11,
+        "leiden": {
+          "partitions": [
+            0.5,
+            0.75,
+            1.0,
+            1.25
+          ],
+          "selected": null
+        },
+        "annIndex": {
+          "ann_metric": "l2",
+          "ann_m": 24,
+          "ann_ef": 200,
+          "ann_efc": 200,
+          "rand_state": 4466,
+          "ann_parallel": false
+        },
+        "analysisCells": 11944
+      }
+    }
+  }
+}

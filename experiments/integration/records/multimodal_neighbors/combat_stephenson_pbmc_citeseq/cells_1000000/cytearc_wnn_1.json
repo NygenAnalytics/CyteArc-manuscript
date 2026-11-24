@@ -1,0 +1,409 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "dataset": "combat_stephenson_pbmc_citeseq",
+    "jointMethod": "wnn",
+    "cells": 1000000,
+    "cellSelectionSha256": "21191887fab843520f4f4cac19cbede71b3afb12ff3174bba9d2306a5fa46461",
+    "biologicalAgreement": {
+      "RNA": {
+        "ari": 0.36214979988236196,
+        "nmi": 0.6234723253580845,
+        "clusters": 35,
+        "annotatedCells": 934294,
+        "unannotatedCells": 65706
+      },
+      "ADT": {
+        "ari": 0.21902491610243816,
+        "nmi": 0.4555060307892372,
+        "clusters": 42,
+        "annotatedCells": 934294,
+        "unannotatedCells": 65706
+      },
+      "wnn": {
+        "ari": 0.43432935497127195,
+        "nmi": 0.6053868154964404,
+        "clusters": 25,
+        "annotatedCells": 934294,
+        "unannotatedCells": 65706
+      },
+      "snn": {
+        "ari": 0.4264932939852042,
+        "nmi": 0.5827055897788529,
+        "clusters": 21,
+        "annotatedCells": 934294,
+        "unannotatedCells": 65706
+      }
+    },
+    "stages": [
+      {
+        "stage": "RNA.features",
+        "wallSeconds": 9.131402350999991,
+        "operationPeakBytes": 10591682560,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.normalization",
+        "wallSeconds": 23.465428610000004,
+        "operationPeakBytes": 7110111232,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.reduction",
+        "wallSeconds": 63.23022642400002,
+        "operationPeakBytes": 7291318272,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.index",
+        "wallSeconds": 195.777098874,
+        "operationPeakBytes": 4694355968,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.neighbors",
+        "wallSeconds": 17.365344589000017,
+        "operationPeakBytes": 5136879616,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.connectivity",
+        "wallSeconds": 1.2287083100000018,
+        "operationPeakBytes": 4664999936,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.clustering",
+        "wallSeconds": 11.325510502999975,
+        "operationPeakBytes": 5147017216,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.features",
+        "wallSeconds": 0.038237690000016755,
+        "operationPeakBytes": 4320808960,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.normalization",
+        "wallSeconds": 8.540068203999965,
+        "operationPeakBytes": 6426038272,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.reduction",
+        "wallSeconds": 6.492461900000023,
+        "operationPeakBytes": 5929406464,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.index",
+        "wallSeconds": 133.14210818300006,
+        "operationPeakBytes": 4849008640,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.neighbors",
+        "wallSeconds": 12.488340065999978,
+        "operationPeakBytes": 5368250368,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.connectivity",
+        "wallSeconds": 1.2649332610000101,
+        "operationPeakBytes": 4915453952,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.clustering",
+        "wallSeconds": 11.54242320800006,
+        "operationPeakBytes": 5251297280,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "wnn.integration",
+        "wallSeconds": 7.533696651000014,
+        "operationPeakBytes": 5137432576,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "wnn.clustering",
+        "wallSeconds": 14.172075383999982,
+        "operationPeakBytes": 5398650880,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "snn.integration",
+        "wallSeconds": 6.276537888000007,
+        "operationPeakBytes": 5510930432,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "snn.clustering",
+        "wallSeconds": 10.276633786999923,
+        "operationPeakBytes": 5518327808,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      }
+    ],
+    "reuseStages": [
+      {
+        "stage": "RNA.features",
+        "wallSeconds": 0.16225425499999346,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.normalization",
+        "wallSeconds": 0.10478302100000292,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.reduction",
+        "wallSeconds": 0.13096481399998083,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.index",
+        "wallSeconds": 0.12290771600009975,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.neighbors",
+        "wallSeconds": 0.11245703899999171,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.connectivity",
+        "wallSeconds": 0.10238161199993101,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.clustering",
+        "wallSeconds": 0.09869536300004711,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.features",
+        "wallSeconds": 0.02470867400006682,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.normalization",
+        "wallSeconds": 0.08110605800004578,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.reduction",
+        "wallSeconds": 0.11074055100004898,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.index",
+        "wallSeconds": 0.09559951599999295,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.neighbors",
+        "wallSeconds": 0.08918895700003304,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.connectivity",
+        "wallSeconds": 0.08386095800005933,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.clustering",
+        "wallSeconds": 0.0811771090000093,
+        "operationPeakBytes": 4542947328,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "wnn.integration",
+        "wallSeconds": 0.7791693259999874,
+        "operationPeakBytes": 4783923200,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "wnn.revised_clustering",
+        "wallSeconds": 13.985876092000012,
+        "operationPeakBytes": 5420535808,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      }
+    ],
+    "freshRevisionStages": [
+      {
+        "stage": "RNA.features",
+        "wallSeconds": 9.011220900000012,
+        "operationPeakBytes": 10316541952,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.normalization",
+        "wallSeconds": 25.334643359999973,
+        "operationPeakBytes": 7786188800,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.reduction",
+        "wallSeconds": 69.44786806700006,
+        "operationPeakBytes": 7836200960,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.index",
+        "wallSeconds": 196.74651459199993,
+        "operationPeakBytes": 5376286720,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.neighbors",
+        "wallSeconds": 17.639204586999995,
+        "operationPeakBytes": 5913751552,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.connectivity",
+        "wallSeconds": 1.358930596999926,
+        "operationPeakBytes": 5518663680,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "RNA.clustering",
+        "wallSeconds": 11.433332146000112,
+        "operationPeakBytes": 5788499968,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.features",
+        "wallSeconds": 0.03915491999987353,
+        "operationPeakBytes": 4961443840,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.normalization",
+        "wallSeconds": 9.215883315000156,
+        "operationPeakBytes": 7225290752,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.reduction",
+        "wallSeconds": 6.986801323000009,
+        "operationPeakBytes": 6516170752,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.index",
+        "wallSeconds": 135.488313566,
+        "operationPeakBytes": 5331673088,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.neighbors",
+        "wallSeconds": 12.330571827000085,
+        "operationPeakBytes": 5783678976,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.connectivity",
+        "wallSeconds": 1.3430092109999805,
+        "operationPeakBytes": 5495541760,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "ADT.clustering",
+        "wallSeconds": 10.839940536000086,
+        "operationPeakBytes": 5657600000,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "wnn.integration",
+        "wallSeconds": 7.383486600999959,
+        "operationPeakBytes": 5526294528,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      },
+      {
+        "stage": "wnn.clustering",
+        "wallSeconds": 13.948010196000041,
+        "operationPeakBytes": 5828665344,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "memoryMaxBytes": 68719476736
+      }
+    ],
+    "reuseValidation": {
+      "clusterLabelsIdentical": true,
+      "clusterAri": 1.0,
+      "graphEdgesIdentical": true,
+      "graphWeightsMaxAbs": 0.0,
+      "modalityWeightsMaxAbs": 0.0
+    },
+    "initialWnnSeconds": 516.7380642080001,
+    "initialSnnSeconds": 511.585463848,
+    "revisedWnnSeconds": 16.165871061000303,
+    "freshRevisedWnnSeconds": 528.5468857440002,
+    "compilationWarmupWallSeconds": 69.986807698,
+    "graphsSha256": "9c3d2acf2d7c9ffd6db3ef8b70b160a7dba6c2fd8abf5854d0c61a0e52a4e2a3"
+  }
+}

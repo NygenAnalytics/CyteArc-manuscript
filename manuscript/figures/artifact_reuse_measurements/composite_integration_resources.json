@@ -1,0 +1,87 @@
+{
+ "arms": [
+  {
+   "arm": "unintegrated",
+   "name": "unintegrated",
+   "readBytes": {
+    "mean": 2563158250.0,
+    "low": 2563158250.0,
+    "high": 2563158250.0,
+    "n": 3,
+    "values": [
+     2563158250.0,
+     2563158250.0,
+     2563158250.0
+    ]
+   },
+   "peakGiB": {
+    "mean": 6.424191792805989,
+    "low": 6.389839172363281,
+    "high": 6.456871032714844,
+    "n": 3,
+    "values": [
+     6.425865173339844,
+     6.456871032714844,
+     6.389839172363281
+    ]
+   }
+  },
+  {
+   "arm": "integrationFresh",
+   "name": "Harmony, fresh",
+   "readBytes": {
+    "mean": 2563158250.0,
+    "low": 2563158250.0,
+    "high": 2563158250.0,
+    "n": 3,
+    "values": [
+     2563158250.0,
+     2563158250.0,
+     2563158250.0
+    ]
+   },
+   "peakGiB": {
+    "mean": 7.538102467854817,
+    "low": 7.460700988769531,
+    "high": 7.607013702392578,
+    "n": 3,
+    "values": [
+     7.546592712402344,
+     7.460700988769531,
+     7.607013702392578
+    ]
+   }
+  },
+  {
+   "arm": "integrationReusingUpstream",
+   "name": "Harmony, reuse",
+   "readBytes": {
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "n": 3,
+    "values": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "peakGiB": {
+    "mean": 2.442432403564453,
+    "low": 2.4381942749023438,
+    "high": 2.449859619140625,
+    "n": 3,
+    "values": [
+     2.449859619140625,
+     2.4392433166503906,
+     2.4381942749023438
+    ]
+   }
+  }
+ ],
+ "source": [
+  "experiments/reuse/records/composite_and_remote/composite_integration/replicate_1.json",
+  "experiments/reuse/records/composite_and_remote/composite_integration/replicate_2.json",
+  "experiments/reuse/records/composite_and_remote/composite_integration/replicate_3.json"
+ ]
+}

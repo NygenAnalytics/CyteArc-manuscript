@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+% Build the Supplementary Information from the repository root with make.
+\providecommand{\target}{biorxiv}
+\input{manuscript/preamble}
+\renewcommand{\shorttitle}{CyteArc Supplementary Information}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\theequation}{\arabic{equation}}
+\captionsetup[table]{name=Supplementary Table}
+\captionsetup[figure]{name=Supplementary Fig.}
+\hypersetup{pdftitle={CyteArc: in-place analysis and reuse of remote atlases at 100-million-cell scale. Supplementary Information},
+  pdfauthor={Gautam Ahuja, Saatvik Viniak, Yi Su, Parashar Dhapola}}
+% Figures, tables and Extended Data figures of the main text, referenced through xr.
+\usepackage{xr}
+\externaldocument[MS-]{.build/main}
+\newcommand{\mref}[1]{\ref*{MS-#1}}
+% A supplementary note's heading; its number comes from the order of the notes.
+\newcounter{suppnote}
+\newcommand{\suppnote}[1]{\refstepcounter{suppnote}\subsection*{Supplementary Note~\thesuppnote. #1}}
+% A figure whose legend continues on the next page, labeled "Supplementary Fig. N (continued)".
+\DeclareCaptionLabelFormat{continued}{#1~#2 (continued)}
+% The number of notes and of figures, for the main text's description of the Supplementary Information.
+\makeatletter
+\AtEndDocument{\if@filesw
+  \immediate\write\@auxout{\string\newlabel{supplement:notes}{{\the\c@suppnote}{}{}{}{}}}%
+  \immediate\write\@auxout{\string\newlabel{supplement:figures}{{\the\c@figure}{}{}{}{}}}%
+\fi}
+\makeatother
+
+\begin{document}
+
+{\setstretch{1.15}\sffamily\color{ink}
+\noindent{\small\color{black!62}\bfseries Supplementary Information}\par\vspace{0.3em}
+\noindent{\raggedright\bfseries\fontsize{16}{20}\selectfont CyteArc: in-place analysis and reuse of remote atlases at 100-million-cell scale\par}\vspace{0.5em}
+\noindent{\normalsize Gautam Ahuja, Saatvik Viniak, Yi Su and Parashar Dhapola}\par}
+\vspace{0.6em}\noindent{\color{rulegrey}\rule{\textwidth}{0.45pt}}
+\vspace{0.35em}
+
+{\setstretch{1.15}
+\noindent{\sffamily\small\bfseries\color{ink} Contents}\par
+{\small
+\begin{list}{\textbullet}{\setlength{\topsep}{2pt}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}%
+  \setlength{\leftmargin}{1.1em}\setlength{\labelwidth}{0.7em}\setlength{\labelsep}{0.4em}}
+  \item Supplementary Note~\ref{note:Overlay mounts and remote benchmarks}. Overlay mounts and remote benchmarks
+  \item Supplementary Note~\ref{note:CyteBase release and remote queries}. CyteBase release and remote queries
+  \item Supplementary Note~\ref{note:Blood archive interferon screen}. Blood archive interferon screen
+  \item Supplementary Note~\ref{note:Virtual composites and baselines}. Virtual composites and baselines
+  \item Supplementary Note~\ref{note:Blood composite and copying baselines}. Blood composite and copying baselines
+  \item Supplementary Note~\ref{note:Circulating progenitor screen and integration}. Circulating progenitor screen and integration
+  \item Supplementary Note~\ref{note:Progenitor disease and severity models}. Progenitor disease and severity models
+  \item Supplementary Note~\ref{note:Count layouts and read requests}. Count layouts and read requests
+  \item Supplementary Note~\ref{note:Benchmark datasets and comparator runs}. Benchmark datasets and comparator runs
+  \item Supplementary Note~\ref{note:Comparator workflow parameters}. Comparator workflow parameters
+  \item Supplementary Note~\ref{note:Stage profiling and cloud resource trace}. Stage profiling and cloud resource trace
+  \item Supplementary Note~\ref{note:Tahoe-100M runs}. Tahoe-100M runs
+  \item Supplementary Note~\ref{note:Memory budget compliance}. Memory budget compliance
+  \item Supplementary Note~\ref{note:Artifact reuse and reference revision}. Artifact reuse and reference revision
+  \item Supplementary Note~\ref{note:Reference mapping benchmarks}. Reference mapping benchmarks
+  \item Supplementary Note~\ref{note:Tissue, corpus, and perturbation mapping}. Tissue, corpus, and perturbation mapping
+  \item Supplementary Note~\ref{note:Multimodal WNN benchmarks}. Multimodal WNN benchmarks
+  \item Supplementary Note~\ref{note:Multimodal T-cell reference}. Multimodal T-cell reference
+  \item Supplementary Note~\ref{note:Documented non-equivalences}. Documented non-equivalences
+  \item Supplementary Note~\ref{note:Reduction, clustering and marker checks}. Reduction, clustering and marker checks
+  \item Supplementary Note~\ref{note:Cluster agreement across toolkits}. Cluster agreement across toolkits
+  \item Supplementary Note~\ref{note:Evaluation against experimental data}. Evaluation against experimental data
+  \item Supplementary Note~\ref{note:Integration and mapping agreement}. Integration and mapping agreement
+  \item Supplementary Note~\ref{note:Droplet, hashtag and regulatory agreement}. Droplet, hashtag and regulatory agreement
+  \item Supplementary Note~\ref{note:Scoring, imputation and fate agreement}. Scoring, imputation and fate agreement
+  \item Supplementary Figs.~\ref{fig:in_place_access} to~\ref{fig:multimodal_graph_agreement}
+\end{list}}}
+
+\manuscriptlinenumbers
+\section*{Supplementary notes}
+
+\input{manuscript/supplementary_notes/results_notes}
+\input{manuscript/supplementary_notes/discussion_notes}
+
+\clearpage
+\bibliographystyle{manuscript/unsrtnat-short}
+\bibliography{manuscript/references}
+
+\end{document}

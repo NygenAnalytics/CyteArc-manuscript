@@ -1,0 +1,129 @@
+{
+ "rows": [
+  {
+   "name": "mount a fresh store",
+   "update": [],
+   "rerun": [
+    32.3433
+   ],
+   "updateAddedBytes": 0.0,
+   "rerunAddedBytes": 38381838.0,
+   "updateKind": "new"
+  },
+  {
+   "name": "select cells",
+   "update": [
+    5.34378
+   ],
+   "rerun": [
+    9.68641
+   ],
+   "updateAddedBytes": 0.0,
+   "rerunAddedBytes": 2796.0,
+   "updateKind": "stored"
+  },
+  {
+   "name": "load reference v1",
+   "update": [
+    26.409229999999997
+   ],
+   "rerun": [
+    25.95063
+   ],
+   "updateAddedBytes": 0.0,
+   "rerunAddedBytes": 0.0,
+   "updateKind": "new"
+  },
+  {
+   "name": "v1 projection",
+   "update": [
+    22.0107
+   ],
+   "rerun": [
+    171.049
+   ],
+   "updateAddedBytes": 0.0,
+   "rerunAddedBytes": 30156200.0,
+   "updateKind": "stored"
+  },
+  {
+   "name": "v1 labels, 3 levels",
+   "update": [
+    23.4698,
+    22.9041,
+    21.5704
+   ],
+   "rerun": [
+    122.219,
+    122.839,
+    125.647
+   ],
+   "updateAddedBytes": 0.0,
+   "rerunAddedBytes": 27701360.0,
+   "updateKind": "stored"
+  },
+  {
+   "name": "load reference v2",
+   "update": [
+    32.88502
+   ],
+   "rerun": [
+    33.661390000000004
+   ],
+   "updateAddedBytes": 0.0,
+   "rerunAddedBytes": 0.0,
+   "updateKind": "new"
+  },
+  {
+   "name": "v2 projection",
+   "update": [
+    167.885
+   ],
+   "rerun": [
+    184.84
+   ],
+   "updateAddedBytes": 30175500.0,
+   "rerunAddedBytes": 30175500.0,
+   "updateKind": "new"
+  },
+  {
+   "name": "v2 labels, 3 levels",
+   "update": [
+    135.59,
+    147.525,
+    133.244
+   ],
+   "rerun": [
+    122.718,
+    128.165,
+    123.61
+   ],
+   "updateAddedBytes": 30794720.0,
+   "rerunAddedBytes": 30794720.0,
+   "updateKind": "new"
+  },
+  {
+   "name": "recover v1 results",
+   "update": [
+    30.6582
+   ],
+   "rerun": [],
+   "updateAddedBytes": 0.0,
+   "rerunAddedBytes": 0.0,
+   "updateKind": "recovered"
+  }
+ ],
+ "update": {
+  "seconds": 738.8378670419999,
+  "addedBytes": 60970118.0
+ },
+ "rerun": {
+  "seconds": 1202.728278576,
+  "addedBytes": 157212342.0
+ },
+ "cells": 322457,
+ "source": [
+  "experiments/lung/records/lung_reference_update_summary.json",
+  "experiments/lung/records/lung_reference_update_costs.csv"
+ ]
+}

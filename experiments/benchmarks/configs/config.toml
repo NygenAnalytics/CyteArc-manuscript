@@ -1,0 +1,26 @@
+modalEnvironmentName = "cytearc_profiling"
+modalAppName = "cytearc-experiments"
+modalSecretName = "cytearc-r2"
+datasetPrefix = "experiments/datasets"
+resultsPrefix = "experiments"
+runTag = "embryo_rna_10000_cells"
+targetSizes = [10000]
+samplingSeed = 0
+
+[countMatrix]
+unitBytes = 1000000000
+chunkBytes = 100000000
+
+[workflow]
+assayName = "RNA"
+leidenBackend = "cytearc"
+
+[fixedResources]
+modalMemoryRequestMb = 32768
+modalMemoryLimitMb = 32768
+modalCpuRequest = 8.0
+modalCpuLimit = 8.0
+cytearcMemoryBudget = 25769803776
+workers = 8
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288

@@ -1,0 +1,231 @@
+{
+ "dataset": "embryo_10000000",
+ "cells": 10000000,
+ "tools": {
+  "cytearc": {
+   "containerGiB": 32.0,
+   "cpu": 16,
+   "n": 3,
+   "unshownMinutes": {
+    "mean": 0.10434657467736137,
+    "low": 0.0987994352976481,
+    "high": 0.108550230662028,
+    "n": 3,
+    "values": [
+     0.10569005807240804,
+     0.0987994352976481,
+     0.108550230662028
+    ]
+   }
+  },
+  "bpcells_cached": {
+   "containerGiB": 64.0,
+   "cpu": 16,
+   "n": 3,
+   "unshownMinutes": null
+  }
+ },
+ "stages": [
+  {
+   "stage": "filter\u2013PCA",
+   "steps": {
+    "cytearc": [
+     "filterCells",
+     "markHvgs",
+     "runNormalization",
+     "runPca"
+    ],
+    "bpcells_cached": [
+     "filterCells",
+     "runNormalization",
+     "markHvgs",
+     "runPca"
+    ]
+   },
+   "cytearc": {
+    "mean": 16.075416062937844,
+    "low": 14.343991462389628,
+    "high": 17.136810795466104,
+    "n": 3,
+    "values": [
+     16.745445930957793,
+     14.343991462389628,
+     17.136810795466104
+    ]
+   },
+   "bpcells_cached": {
+    "mean": 11.707122943136428,
+    "low": 10.173462001482646,
+    "high": 12.573148163159688,
+    "n": 3,
+    "values": [
+     12.573148163159688,
+     12.374758664766947,
+     10.173462001482646
+    ]
+   },
+   "ratio": 0.7282625157135065
+  },
+  {
+   "stage": "neighbors",
+   "steps": {
+    "cytearc": [
+     "buildAnnIndex",
+     "queryNeighbors",
+     "buildConnectivityMap"
+    ],
+    "bpcells_cached": [
+     "queryNeighbors"
+    ]
+   },
+   "cytearc": {
+    "mean": 3.474611156516605,
+    "low": 2.783902680873871,
+    "high": 4.144450426101685,
+    "n": 3,
+    "values": [
+     2.783902680873871,
+     4.144450426101685,
+     3.4954803625742596
+    ]
+   },
+   "bpcells_cached": {
+    "mean": 8.362465000152588,
+    "low": 7.704168999195099,
+    "high": 8.891477000713348,
+    "n": 3,
+    "values": [
+     8.891477000713348,
+     8.491749000549316,
+     7.704168999195099
+    ]
+   },
+   "ratio": 2.4067340555413956
+  },
+  {
+   "stage": "UMAP",
+   "steps": {
+    "cytearc": [
+     "buildEmbeddingInitialization",
+     "runUmap"
+    ],
+    "bpcells_cached": [
+     "runUmap"
+    ]
+   },
+   "cytearc": {
+    "mean": 21.163634855217406,
+    "low": 16.73060970703761,
+    "high": 25.166661489009858,
+    "n": 3,
+    "values": [
+     16.73060970703761,
+     25.166661489009858,
+     21.593633369604746
+    ]
+   },
+   "bpcells_cached": {
+    "mean": 57.426882165008124,
+    "low": 44.12901033163071,
+    "high": 74.50282266537349,
+    "n": 3,
+    "values": [
+     74.50282266537349,
+     53.648813498020175,
+     44.12901033163071
+    ]
+   },
+   "ratio": 2.713469711506143
+  },
+  {
+   "stage": "Leiden",
+   "steps": {
+    "cytearc": [
+     "runLeiden"
+    ],
+    "bpcells_cached": [
+     "runLeiden"
+    ]
+   },
+   "cytearc": {
+    "mean": 1.291274154186249,
+    "low": 1.2086206833521524,
+    "high": 1.4395661036173502,
+    "n": 3,
+    "values": [
+     1.2086206833521524,
+     1.4395661036173502,
+     1.2256356755892435
+    ]
+   },
+   "bpcells_cached": {
+    "mean": 34.138091834386195,
+    "low": 30.570293502012888,
+    "high": 37.08939400116603,
+    "n": 3,
+    "values": [
+     37.08939400116603,
+     34.754587999979655,
+     30.570293502012888
+    ]
+   },
+   "ratio": 26.437524303969173
+  },
+  {
+   "stage": "markers",
+   "steps": {
+    "cytearc": [
+     "findMarkers"
+    ],
+    "bpcells_cached": [
+     "findMarkers"
+    ]
+   },
+   "cytearc": {
+    "mean": 5.890081673198277,
+    "low": 5.856632355848948,
+    "high": 5.93476806084315,
+    "n": 3,
+    "values": [
+     5.856632355848948,
+     5.87884460290273,
+     5.93476806084315
+    ]
+   },
+   "bpcells_cached": {
+    "mean": 25.440115167035,
+    "low": 23.302021499474844,
+    "high": 27.32221783399582,
+    "n": 3,
+    "values": [
+     27.32221783399582,
+     25.69610616763433,
+     23.302021499474844
+    ]
+   },
+   "ratio": 4.319144721336467
+  }
+ ],
+ "otherTools10M": {
+  "scanpy_dask_covariance_csc": {
+   "filter\u2013PCA": 75.60388147632281,
+   "UMAP": 212.9945115029812,
+   "Leiden": 9.29293958346049,
+   "neighbors": 4.178343778848648,
+   "markers": null,
+   "failedAt": "markers (out of time: Modal's 24-hour limit at 336 GiB)"
+  },
+  "seurat_bpcells": {
+   "filter\u2013PCA": 287.6506053328514,
+   "UMAP": 244.10743483304978,
+   "Leiden": null,
+   "neighbors": 24.753341166178384,
+   "markers": null,
+   "failedAt": "Leiden (24-hour call limit)"
+  }
+ },
+ "source": [
+  ".build/derived/benchmarks/toolkit_comparisons.json",
+  ".build/derived/benchmarks/toolkit_step_measurements.csv"
+ ]
+}

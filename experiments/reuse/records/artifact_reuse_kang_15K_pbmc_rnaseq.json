@@ -1,0 +1,334 @@
+{
+  "description": "Reuse of upstream artifacts, cost of a neighbour-count fork, lineage export, and store composition.",
+  "input": {
+    "catalogue": "cytearc_docs",
+    "dataset": "kang_15K_pbmc_rnaseq",
+    "files": {
+      "barcodes.tsv.gz": {
+        "bytes": 52875,
+        "sha256": "a4711c121443d9cb37e33e6ac57449f539ff46e0a50e4a34695861cbba666c54"
+      },
+      "features.tsv.gz": {
+        "bytes": 276960,
+        "sha256": "86f9914714bc554b3b8149681986521b3881c22a934a99e1b45401c3dd08aef4"
+      },
+      "matrix.mtx.gz": {
+        "bytes": 28537003,
+        "sha256": "8c5d623aa57bbf7e1187a643524792003cc103375ad3449e603cf6e9ccfff61d"
+      }
+    }
+  },
+  "analysis": {
+    "cytearcVersion": "1.3.0",
+    "filtering": {
+      "enabled": true,
+      "method": "mad",
+      "attrs": [
+        "RNA_nCounts",
+        "RNA_nFeatures",
+        "RNA_percentMito",
+        "RNA_percentRibo"
+      ],
+      "minP": 0.01,
+      "maxP": 0.99,
+      "sampleColumn": null,
+      "nMads": 3.0,
+      "minCellsPerSample": 20
+    },
+    "hvgCount": 1000,
+    "pcaDims": 21,
+    "neighborsK": 11,
+    "leiden": {
+      "partitions": [
+        0.5,
+        0.75,
+        1.0,
+        1.25
+      ],
+      "selected": null
+    },
+    "annIndex": {
+      "ann_metric": "l2",
+      "ann_m": 24,
+      "ann_ef": 200,
+      "ann_efc": 200,
+      "rand_state": 4466,
+      "ann_parallel": false
+    },
+    "analysisCells": 14371
+  },
+  "store": {
+    "cells": 14619,
+    "genes": 35635,
+    "totalBytes": 143441099,
+    "countBytes": 63958653,
+    "analysisBytes": 79482446
+  },
+  "reuse": {
+    "normalization": {
+      "reused": true,
+      "seconds": 0.061115115999996306
+    },
+    "pca": {
+      "reused": true,
+      "seconds": 0.06524255300000448
+    },
+    "annIndex": {
+      "reused": true,
+      "parameters": {
+        "ann_metric": "l2",
+        "ann_efc": 200,
+        "ann_ef": 200,
+        "ann_m": 24,
+        "rand_state": 4466,
+        "ann_parallel": false
+      },
+      "seconds": 0.0749244779999998
+    }
+  },
+  "fork": {
+    "kOriginal": 11,
+    "kNew": 15,
+    "stageSeconds": {
+      "queryNeighbors": 0.4472317240000052,
+      "buildConnectivityMap": 0.09938633500000549,
+      "runUmap": 11.200007373999995,
+      "runLeiden": 0.1947733619999923,
+      "findMarkers": 1.1825163790000062
+    },
+    "totalSeconds": 13.123915174000004,
+    "newArtifacts": 6,
+    "refs": {
+      "neighbors": {
+        "type": "artifact",
+        "scope": "assay",
+        "kind": "neighbors",
+        "artifact_id": "d1a609d5dc159f1adcc2235a4f10763f2bd6b23b1c837afac3605e35996959e9",
+        "assay": "RNA"
+      },
+      "graph": {
+        "type": "artifact",
+        "scope": "assay",
+        "kind": "connectivity_map",
+        "artifact_id": "cbce40e69077d978b8f22f9e36bdf4fb50d7289dae76cc0bdc261de8f15afa10",
+        "assay": "RNA"
+      },
+      "umap": {
+        "type": "artifact",
+        "scope": "assay",
+        "kind": "embedding",
+        "artifact_id": "0389b29e7ce95fd363dabf949c4d26de0487acadd9c9f0d29dc6949d4575108a",
+        "assay": "RNA"
+      },
+      "clusters": {
+        "type": "artifact",
+        "scope": "assay",
+        "kind": "cluster_labels",
+        "artifact_id": "d49f76b26d95b0a3efefe5e007d3424edf17c5cf849a1e3f254d8958b0d57836",
+        "assay": "RNA"
+      },
+      "markers": {
+        "type": "artifact",
+        "scope": "assay",
+        "kind": "marker_table",
+        "artifact_id": "412c29463478f4b17f78b295f3a0daedd89b7297fc450738ff61a8d6a237aa4c",
+        "assay": "RNA"
+      }
+    }
+  },
+  "fullRunStageSeconds": {
+    "input_snapshot": 0.290994758,
+    "filtering": 0.049470078,
+    "cell_cycle": 1.407891165,
+    "highly_variable_features": 1.276063922,
+    "normalization": 0.807870209,
+    "pca": 0.838749972,
+    "harmony": 0.009747026,
+    "ann_index": 1.202122274,
+    "neighbors": 0.367649028,
+    "connectivity": 14.538070918,
+    "embedding_initialization": 0.507476375,
+    "umap": 10.601705318,
+    "leiden_0.5": 26.754645537,
+    "leiden_0.75": 0.13231611,
+    "leiden_1.0": 0.130053568,
+    "leiden_1.25": 0.136555025,
+    "paris": 7.482549376,
+    "cluster_selection": 2.40340626,
+    "membership_strength": 0.011068772,
+    "tsne": 0.010361034,
+    "doublets": 7.435718789,
+    "markers": 8.246867067
+  },
+  "fullRunTotalSeconds": 84.64135258099999,
+  "lineage": {
+    "nodes": [
+      {
+        "id": "412c29463478f4b17f78b295f3a0daedd89b7297fc450738ff61a8d6a237aa4c",
+        "kind": "marker_table",
+        "recomputedInFork": true
+      },
+      {
+        "id": "862a5feb93bacb3a2dd2c8ab86f67c4c7a5054f341ffdacc7848478f083b6ce2",
+        "kind": "cell_selection",
+        "recomputedInFork": false
+      },
+      {
+        "id": "d49f76b26d95b0a3efefe5e007d3424edf17c5cf849a1e3f254d8958b0d57836",
+        "kind": "cluster_labels",
+        "recomputedInFork": true
+      },
+      {
+        "id": "d1c145fef213f4966be85f62ba4356b23867ca5a9441a970025f42813a467ce4",
+        "kind": "feature_selection",
+        "recomputedInFork": true
+      },
+      {
+        "id": "e9cf8b11a65dc30d1cc4ea1eaeccda4c9870eae8a886a26144a5a7bc68b9203c",
+        "kind": "feature_selection",
+        "recomputedInFork": false
+      },
+      {
+        "id": "cbce40e69077d978b8f22f9e36bdf4fb50d7289dae76cc0bdc261de8f15afa10",
+        "kind": "connectivity_map",
+        "recomputedInFork": true
+      },
+      {
+        "id": "d1a609d5dc159f1adcc2235a4f10763f2bd6b23b1c837afac3605e35996959e9",
+        "kind": "neighbors",
+        "recomputedInFork": true
+      },
+      {
+        "id": "f57271f2a319918087b15608ee1b9df6e9a05eae3ad56c9990a5866d561ff898",
+        "kind": "ann_index",
+        "recomputedInFork": false
+      },
+      {
+        "id": "b1efeaf9b4cee033f54944ad9b6a8b666cdcbb1e554eb3e93d11e7d4c0c4ddf4",
+        "kind": "reduction",
+        "recomputedInFork": false
+      },
+      {
+        "id": "4f670c74a3f6a456fc0cd25f12ae2dc82774c99e6f825caa64cecd4cc1737da4",
+        "kind": "feature_scaling",
+        "recomputedInFork": false
+      },
+      {
+        "id": "d8b493c14661d32d8b913d7825c5b0526f3d78f2ea8dd0697ed9c454eed70f3b",
+        "kind": "normalized",
+        "recomputedInFork": false
+      },
+      {
+        "id": "0b448201faca2e7e9502319e01fc0e2a0ac48fed421f77439e6c44b493e0bf37",
+        "kind": "metadata_snapshot",
+        "recomputedInFork": false
+      },
+      {
+        "id": "5ad795b4be904f4eef3861136e400c9245e09835b55fb3793f39094c991543d5",
+        "kind": "cell_selection",
+        "recomputedInFork": false
+      },
+      {
+        "id": "81b4ac87c3670c669789170cbdfbdafed14752f77eb8e34c04c20bcb41711f93",
+        "kind": "feature_selection",
+        "recomputedInFork": false
+      },
+      {
+        "id": "f6cd78e60f7cb65ba43b01a5fd54df8270799cabf4838b9e88052f45560d2bc9",
+        "kind": "metadata_snapshot",
+        "recomputedInFork": false
+      },
+      {
+        "id": "8bc5b7860d7cb84b7c733ce2f6e36b7b36ad107b93d307d4700e513d0c1fe8a9",
+        "kind": "feature_summary",
+        "recomputedInFork": false
+      }
+    ],
+    "edges": [
+      {
+        "source": "862a5feb93bacb3a2dd2c8ab86f67c4c7a5054f341ffdacc7848478f083b6ce2",
+        "target": "412c29463478f4b17f78b295f3a0daedd89b7297fc450738ff61a8d6a237aa4c"
+      },
+      {
+        "source": "862a5feb93bacb3a2dd2c8ab86f67c4c7a5054f341ffdacc7848478f083b6ce2",
+        "target": "d49f76b26d95b0a3efefe5e007d3424edf17c5cf849a1e3f254d8958b0d57836"
+      },
+      {
+        "source": "862a5feb93bacb3a2dd2c8ab86f67c4c7a5054f341ffdacc7848478f083b6ce2",
+        "target": "b1efeaf9b4cee033f54944ad9b6a8b666cdcbb1e554eb3e93d11e7d4c0c4ddf4"
+      },
+      {
+        "source": "862a5feb93bacb3a2dd2c8ab86f67c4c7a5054f341ffdacc7848478f083b6ce2",
+        "target": "d8b493c14661d32d8b913d7825c5b0526f3d78f2ea8dd0697ed9c454eed70f3b"
+      },
+      {
+        "source": "862a5feb93bacb3a2dd2c8ab86f67c4c7a5054f341ffdacc7848478f083b6ce2",
+        "target": "8bc5b7860d7cb84b7c733ce2f6e36b7b36ad107b93d307d4700e513d0c1fe8a9"
+      },
+      {
+        "source": "d49f76b26d95b0a3efefe5e007d3424edf17c5cf849a1e3f254d8958b0d57836",
+        "target": "412c29463478f4b17f78b295f3a0daedd89b7297fc450738ff61a8d6a237aa4c"
+      },
+      {
+        "source": "d1c145fef213f4966be85f62ba4356b23867ca5a9441a970025f42813a467ce4",
+        "target": "412c29463478f4b17f78b295f3a0daedd89b7297fc450738ff61a8d6a237aa4c"
+      },
+      {
+        "source": "e9cf8b11a65dc30d1cc4ea1eaeccda4c9870eae8a886a26144a5a7bc68b9203c",
+        "target": "d1c145fef213f4966be85f62ba4356b23867ca5a9441a970025f42813a467ce4"
+      },
+      {
+        "source": "cbce40e69077d978b8f22f9e36bdf4fb50d7289dae76cc0bdc261de8f15afa10",
+        "target": "d49f76b26d95b0a3efefe5e007d3424edf17c5cf849a1e3f254d8958b0d57836"
+      },
+      {
+        "source": "d1a609d5dc159f1adcc2235a4f10763f2bd6b23b1c837afac3605e35996959e9",
+        "target": "cbce40e69077d978b8f22f9e36bdf4fb50d7289dae76cc0bdc261de8f15afa10"
+      },
+      {
+        "source": "f57271f2a319918087b15608ee1b9df6e9a05eae3ad56c9990a5866d561ff898",
+        "target": "d1a609d5dc159f1adcc2235a4f10763f2bd6b23b1c837afac3605e35996959e9"
+      },
+      {
+        "source": "b1efeaf9b4cee033f54944ad9b6a8b666cdcbb1e554eb3e93d11e7d4c0c4ddf4",
+        "target": "d1a609d5dc159f1adcc2235a4f10763f2bd6b23b1c837afac3605e35996959e9"
+      },
+      {
+        "source": "b1efeaf9b4cee033f54944ad9b6a8b666cdcbb1e554eb3e93d11e7d4c0c4ddf4",
+        "target": "f57271f2a319918087b15608ee1b9df6e9a05eae3ad56c9990a5866d561ff898"
+      },
+      {
+        "source": "4f670c74a3f6a456fc0cd25f12ae2dc82774c99e6f825caa64cecd4cc1737da4",
+        "target": "b1efeaf9b4cee033f54944ad9b6a8b666cdcbb1e554eb3e93d11e7d4c0c4ddf4"
+      },
+      {
+        "source": "d8b493c14661d32d8b913d7825c5b0526f3d78f2ea8dd0697ed9c454eed70f3b",
+        "target": "b1efeaf9b4cee033f54944ad9b6a8b666cdcbb1e554eb3e93d11e7d4c0c4ddf4"
+      },
+      {
+        "source": "d8b493c14661d32d8b913d7825c5b0526f3d78f2ea8dd0697ed9c454eed70f3b",
+        "target": "4f670c74a3f6a456fc0cd25f12ae2dc82774c99e6f825caa64cecd4cc1737da4"
+      },
+      {
+        "source": "0b448201faca2e7e9502319e01fc0e2a0ac48fed421f77439e6c44b493e0bf37",
+        "target": "862a5feb93bacb3a2dd2c8ab86f67c4c7a5054f341ffdacc7848478f083b6ce2"
+      },
+      {
+        "source": "5ad795b4be904f4eef3861136e400c9245e09835b55fb3793f39094c991543d5",
+        "target": "862a5feb93bacb3a2dd2c8ab86f67c4c7a5054f341ffdacc7848478f083b6ce2"
+      },
+      {
+        "source": "81b4ac87c3670c669789170cbdfbdafed14752f77eb8e34c04c20bcb41711f93",
+        "target": "d8b493c14661d32d8b913d7825c5b0526f3d78f2ea8dd0697ed9c454eed70f3b"
+      },
+      {
+        "source": "f6cd78e60f7cb65ba43b01a5fd54df8270799cabf4838b9e88052f45560d2bc9",
+        "target": "81b4ac87c3670c669789170cbdfbdafed14752f77eb8e34c04c20bcb41711f93"
+      },
+      {
+        "source": "8bc5b7860d7cb84b7c733ce2f6e36b7b36ad107b93d307d4700e513d0c1fe8a9",
+        "target": "81b4ac87c3670c669789170cbdfbdafed14752f77eb8e34c04c20bcb41711f93"
+      }
+    ]
+  }
+}

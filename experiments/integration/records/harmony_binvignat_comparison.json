@@ -1,0 +1,95 @@
+{
+  "description": "Uncorrected versus Harmony-corrected neighbour graphs on a balanced RA PBMC subset, with harmonypy as the reference implementation.",
+  "dataset": {
+    "source": "/workspace/downloads/integration/binvignat/data.zarr",
+    "cellsTotal": 108717,
+    "cellsSelected": 9000,
+    "batches": [
+      "1",
+      "2",
+      "3"
+    ],
+    "cellTypes": 15
+  },
+  "parameters": {
+    "hvg": 2000,
+    "dims": 30,
+    "k": 15,
+    "seed": 42,
+    "cellsPerGroup": 1500,
+    "pcaSeconds": 1.3604344330000018
+  },
+  "uncorrected": {
+    "iLISI": 0.10930849969518353,
+    "cLISI": 0.9493682071290189
+  },
+  "cytearcHarmony": {
+    "iLISI": 0.36672661854240773,
+    "cLISI": 0.9481478880007195,
+    "seconds": 10.038166945
+  },
+  "harmonypy": {
+    "available": true,
+    "harmonypyVersion": "2.0.2",
+    "settings": {
+      "theta": 2.0,
+      "sigma": 0.1,
+      "tau": 0.0,
+      "alpha": 0.2,
+      "batch_prop_cutoff": 1e-05,
+      "block_size": 0.05,
+      "max_iter_kmeans": 200,
+      "max_iter_harmony": 40,
+      "epsilon_cluster": 1e-05,
+      "epsilon_harmony": 0.0001,
+      "nclust": 100,
+      "lamb": null,
+      "ncores": 1,
+      "verbose": false,
+      "random_state": 0
+    },
+    "seconds": 7.181348202999999,
+    "iLISI": 0.37147434102995824,
+    "cLISI": 0.9477701491715173,
+    "cytearcCorrectedRecomputed": {
+      "iLISI": 0.36692315872473613,
+      "cLISI": 0.9481255557923134
+    },
+    "perDimensionPearsonMedian": 0.9979825559782995,
+    "perDimensionPearsonMin": 0.9964751758404728,
+    "perDimensionPearson": [
+      0.9976483466702274,
+      0.9996442275379157,
+      0.9997676106140833,
+      0.9985994831409799,
+      0.9985220909149922,
+      0.9979117232804845,
+      0.9974415965413359,
+      0.9974495071599836,
+      0.9971283396170709,
+      0.9967857585934413,
+      0.9964751758404728,
+      0.9971746860326934,
+      0.9967690226518633,
+      0.9981948895679135,
+      0.9981844719965173,
+      0.9971562010172753,
+      0.998189930589029,
+      0.9978883119469214,
+      0.9976203332388591,
+      0.9982766141061807,
+      0.9981581403434979,
+      0.9982859959753081,
+      0.9976916594774239,
+      0.9984673950306927,
+      0.9976936014344739,
+      0.998353098104465,
+      0.9980533886761145,
+      0.9982679234592403,
+      0.9982875309568361,
+      0.99785923636692
+    ],
+    "knnOverlapK15": 0.8875555555555555,
+    "rmseOverStd": 0.06046093229625917
+  }
+}

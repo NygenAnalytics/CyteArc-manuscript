@@ -1,0 +1,1755 @@
+{
+  "status": "completed",
+  "result": {
+    "status": "ok",
+    "dataset": "hao_pbmc_citeseq",
+    "jointMethod": "snn",
+    "cells": 161764,
+    "cellSelectionSha256": "28aec45f9849f41fd9ec70c2e739384fcd3dc88763812461d060f4b0dd5ca3cc",
+    "settings": {
+      "neighborCount": 20,
+      "seuratCandidateBreadths": [
+        50,
+        200
+      ],
+      "hvgCount": 2000,
+      "rnaDimensions": 30,
+      "adtDimensions": 15,
+      "atacDimensions": 30,
+      "peakCount": 25000,
+      "resolution": 1.0,
+      "seed": 4466,
+      "l2Normalize": true,
+      "annParallel": false,
+      "tolerances": {
+        "matchedKernelMaxAbs": 1e-06,
+        "candidateWeightMaxAbs": 1e-12,
+        "candidateMeanNeighborOverlapMin": 0.9,
+        "candidateBiologicalAriDecreaseMax": 0.05
+      }
+    },
+    "labelColumn": "celltype.l2",
+    "modalities": [
+      "RNA",
+      "ADT"
+    ],
+    "modalityDimensions": {
+      "RNA": 30,
+      "ADT": 15
+    },
+    "normalization": {
+      "RNA": {
+        "normalization_method": {
+          "external_hook": true,
+          "module": "cytearc.assay",
+          "qualname": "norm_lib_size"
+        },
+        "size_factor": 1000.0,
+        "log_transform": true,
+        "renormalize_subset": true
+      },
+      "ADT": {
+        "normalization_method": {
+          "external_hook": true,
+          "identity": "cytearc.assay.norm_clr:feature-axis"
+        },
+        "size_factor": null,
+        "log_transform": false,
+        "renormalize_subset": false
+      }
+    },
+    "modalityWeightMean": {
+      "RNA": 0.3684269189834595,
+      "ADT": 0.6315762996673584
+    },
+    "biologicalAgreement": {
+      "RNA": {
+        "ari": 0.4782098174447128,
+        "nmi": 0.7476239807245804,
+        "clusters": 30,
+        "annotatedCells": 161764,
+        "unannotatedCells": 0
+      },
+      "ADT": {
+        "ari": 0.4196044642266788,
+        "nmi": 0.6859952084215443,
+        "clusters": 32,
+        "annotatedCells": 161764,
+        "unannotatedCells": 0
+      },
+      "wnn": {
+        "ari": 0.485888944440647,
+        "nmi": 0.7493120214074765,
+        "clusters": 27,
+        "annotatedCells": 161764,
+        "unannotatedCells": 0
+      },
+      "snn": {
+        "ari": 0.6271760411752718,
+        "nmi": 0.7813426994908804,
+        "clusters": 16,
+        "annotatedCells": 161764,
+        "unannotatedCells": 0
+      }
+    },
+    "stages": [
+      {
+        "stage": "RNA.features",
+        "wallSeconds": 4.339433765999999,
+        "operationBaselineBytes": 751505408,
+        "operationPeakBytes": 7346688000,
+        "operationIncrementalPeakBytes": 6595182592,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 775487488,
+        "processTreeRssPeakBytes": 7363244032,
+        "processTreeRssIncrementalPeakBytes": 6587756544,
+        "processTreeRssAfterBytes": 1115541504,
+        "cgroupMemoryCurrentBaselineBytes": 751505408,
+        "cgroupMemoryCurrentPeakBytes": 7346688000,
+        "cgroupMemoryCurrentAfterBytes": 1058435072,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "snapshot_run_metadata",
+            "kind": "metadata_snapshot",
+            "assay": "RNA",
+            "artifactId": "d88405f14f8376d8231b719f3607884c7052ad2b03a7e1a4fe1a3dd6d4b34a1e",
+            "disposition": "created",
+            "existedBeforePhase": false
+          },
+          {
+            "operation": "summarize_rna_features",
+            "kind": "feature_summary",
+            "assay": "RNA",
+            "artifactId": "ce664afb3c7e33e1f0c34d8324fa94d292dde826d1dca6909168b30adf561a45",
+            "disposition": "created",
+            "existedBeforePhase": false
+          },
+          {
+            "operation": "select_hvgs",
+            "kind": "feature_selection",
+            "assay": "RNA",
+            "artifactId": "fb4ac2493f6ffcf2384bc2c496c118d2d3a417e3589b48ccea5ed0c2432a0a3f",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.normalization",
+        "wallSeconds": 4.367708716999999,
+        "operationBaselineBytes": 1058439168,
+        "operationPeakBytes": 2470473728,
+        "operationIncrementalPeakBytes": 1412034560,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 1115557888,
+        "processTreeRssPeakBytes": 2510581760,
+        "processTreeRssIncrementalPeakBytes": 1395023872,
+        "processTreeRssAfterBytes": 1638264832,
+        "cgroupMemoryCurrentBaselineBytes": 1058439168,
+        "cgroupMemoryCurrentPeakBytes": 2470473728,
+        "cgroupMemoryCurrentAfterBytes": 1582223360,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_normalization",
+            "kind": "normalized",
+            "assay": "RNA",
+            "artifactId": "e0815474b9c9c34d411174caaac8c9769c6826b0aebb7174cecab6b968fe4ae6",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.reduction",
+        "wallSeconds": 8.526990931,
+        "operationBaselineBytes": 1582227456,
+        "operationPeakBytes": 3337809920,
+        "operationIncrementalPeakBytes": 1755582464,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 1638281216,
+        "processTreeRssPeakBytes": 3382550528,
+        "processTreeRssIncrementalPeakBytes": 1744269312,
+        "processTreeRssAfterBytes": 1693102080,
+        "cgroupMemoryCurrentBaselineBytes": 1582227456,
+        "cgroupMemoryCurrentPeakBytes": 3337809920,
+        "cgroupMemoryCurrentAfterBytes": 1632956416,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "calculate_feature_scaling",
+            "kind": "feature_scaling",
+            "assay": "RNA",
+            "artifactId": "1f85c3ba5aaa7f37a117f5da83e7e81cb26cb7299deda7c4cd560668e73e0b3b",
+            "disposition": "created",
+            "existedBeforePhase": false
+          },
+          {
+            "operation": "run_pca",
+            "kind": "reduction",
+            "assay": "RNA",
+            "artifactId": "e55f83cf3ae407dd1210f974788c4af175d6240e81f029850138a473662755b1",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.index",
+        "wallSeconds": 20.772263430000002,
+        "operationBaselineBytes": 1632960512,
+        "operationPeakBytes": 1742270464,
+        "operationIncrementalPeakBytes": 109309952,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 1693118464,
+        "processTreeRssPeakBytes": 1802272768,
+        "processTreeRssIncrementalPeakBytes": 109154304,
+        "processTreeRssAfterBytes": 1773359104,
+        "cgroupMemoryCurrentBaselineBytes": 1632960512,
+        "cgroupMemoryCurrentPeakBytes": 1742270464,
+        "cgroupMemoryCurrentAfterBytes": 1710100480,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_ann_index",
+            "kind": "ann_index",
+            "assay": "RNA",
+            "artifactId": "aa1e25b2d76277cfc36b928c6a0b47d6ba53760e5eca86fb84a594bbc7a61eda",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.neighbors",
+        "wallSeconds": 3.6590494410000005,
+        "operationBaselineBytes": 1710104576,
+        "operationPeakBytes": 1880670208,
+        "operationIncrementalPeakBytes": 170565632,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 1773375488,
+        "processTreeRssPeakBytes": 1940709376,
+        "processTreeRssIncrementalPeakBytes": 167333888,
+        "processTreeRssAfterBytes": 1804808192,
+        "cgroupMemoryCurrentBaselineBytes": 1710104576,
+        "cgroupMemoryCurrentPeakBytes": 1880670208,
+        "cgroupMemoryCurrentAfterBytes": 1744879616,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "query_neighbors",
+            "kind": "neighbors",
+            "assay": "RNA",
+            "artifactId": "8ea277330a427c7c82cb975bd6262d14c3438e53e332751c784969bd9e619b92",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.connectivity",
+        "wallSeconds": 14.684228988000001,
+        "operationBaselineBytes": 1744883712,
+        "operationPeakBytes": 2019151872,
+        "operationIncrementalPeakBytes": 274268160,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 1804824576,
+        "processTreeRssPeakBytes": 2079760384,
+        "processTreeRssIncrementalPeakBytes": 274935808,
+        "processTreeRssAfterBytes": 2079760384,
+        "cgroupMemoryCurrentBaselineBytes": 1744883712,
+        "cgroupMemoryCurrentPeakBytes": 2019151872,
+        "cgroupMemoryCurrentAfterBytes": 2019151872,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_connectivity_map",
+            "kind": "connectivity_map",
+            "assay": "RNA",
+            "artifactId": "567e9275f6497237330352f2b678cabdb1a8315450dffb3a66d8cac5944bfade",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.clustering",
+        "wallSeconds": 28.716157714999994,
+        "operationBaselineBytes": 2019155968,
+        "operationPeakBytes": 2411646976,
+        "operationIncrementalPeakBytes": 392491008,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2079776768,
+        "processTreeRssPeakBytes": 2481770496,
+        "processTreeRssIncrementalPeakBytes": 401993728,
+        "processTreeRssAfterBytes": 2403491840,
+        "cgroupMemoryCurrentBaselineBytes": 2019155968,
+        "cgroupMemoryCurrentPeakBytes": 2411646976,
+        "cgroupMemoryCurrentAfterBytes": 2335207424,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": "RNA",
+            "artifactId": "07d1cad989731f14ba8bba5f9719dfc478142ae4420c0db5677edb02406722b4",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.features",
+        "wallSeconds": 0.05512041100000431,
+        "operationBaselineBytes": 2335211520,
+        "operationPeakBytes": 2335211520,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2403508224,
+        "processTreeRssPeakBytes": 2403508224,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2403491840,
+        "cgroupMemoryCurrentBaselineBytes": 2335211520,
+        "cgroupMemoryCurrentPeakBytes": 2335211520,
+        "cgroupMemoryCurrentAfterBytes": 2335207424,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "create_all_features",
+            "kind": "feature_selection",
+            "assay": "ADT",
+            "artifactId": "220d8eb87d2e14dbdd0d280b55792f3a471695d2583b3eb9836e170373ad4429",
+            "disposition": "created",
+            "existedBeforePhase": false
+          },
+          {
+            "operation": "set_feature_selection",
+            "kind": "feature_selection",
+            "assay": "ADT",
+            "artifactId": "0729b2a7d345a2d026152179724087cbf7ee54fbf24ef8501667e530f7f9fcf6",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.normalization",
+        "wallSeconds": 0.7514534259999976,
+        "operationBaselineBytes": 2335215616,
+        "operationPeakBytes": 2793594880,
+        "operationIncrementalPeakBytes": 458379264,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2403508224,
+        "processTreeRssPeakBytes": 2843942912,
+        "processTreeRssIncrementalPeakBytes": 440434688,
+        "processTreeRssAfterBytes": 2453823488,
+        "cgroupMemoryCurrentBaselineBytes": 2335215616,
+        "cgroupMemoryCurrentPeakBytes": 2793594880,
+        "cgroupMemoryCurrentAfterBytes": 2388824064,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_normalization",
+            "kind": "normalized",
+            "assay": "ADT",
+            "artifactId": "ce6e0076de60d8d6504bc54b4babc34c9efd1bf35088e5a8918eefa54db15585",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.reduction",
+        "wallSeconds": 0.9917666829999945,
+        "operationBaselineBytes": 2388828160,
+        "operationPeakBytes": 3043602432,
+        "operationIncrementalPeakBytes": 654774272,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2453839872,
+        "processTreeRssPeakBytes": 3095969792,
+        "processTreeRssIncrementalPeakBytes": 642129920,
+        "processTreeRssAfterBytes": 2556985344,
+        "cgroupMemoryCurrentBaselineBytes": 2388828160,
+        "cgroupMemoryCurrentPeakBytes": 3043602432,
+        "cgroupMemoryCurrentAfterBytes": 2492092416,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "calculate_feature_scaling",
+            "kind": "feature_scaling",
+            "assay": "ADT",
+            "artifactId": "3b61bd81a3527e491c8a825ed51190d4670101945e7784ce50257505c3427611",
+            "disposition": "created",
+            "existedBeforePhase": false
+          },
+          {
+            "operation": "run_pca",
+            "kind": "reduction",
+            "assay": "ADT",
+            "artifactId": "2f482327aeabdb41c5051c0255e51883483974c61751fc942dd2d15d0b7d17a7",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.index",
+        "wallSeconds": 15.437690039999993,
+        "operationBaselineBytes": 2492096512,
+        "operationPeakBytes": 2578894848,
+        "operationIncrementalPeakBytes": 86798336,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2557001728,
+        "processTreeRssPeakBytes": 2643763200,
+        "processTreeRssIncrementalPeakBytes": 86761472,
+        "processTreeRssAfterBytes": 2556985344,
+        "cgroupMemoryCurrentBaselineBytes": 2492096512,
+        "cgroupMemoryCurrentPeakBytes": 2578894848,
+        "cgroupMemoryCurrentAfterBytes": 2492129280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_ann_index",
+            "kind": "ann_index",
+            "assay": "ADT",
+            "artifactId": "7cc61fa3a1d14faa5a96b60c34b4afad96b6b87476b06a5b1e4a2d012d029623",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.neighbors",
+        "wallSeconds": 2.6503987099999904,
+        "operationBaselineBytes": 2492133376,
+        "operationPeakBytes": 2539651072,
+        "operationIncrementalPeakBytes": 47517696,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2557001728,
+        "processTreeRssPeakBytes": 2606231552,
+        "processTreeRssIncrementalPeakBytes": 49229824,
+        "processTreeRssAfterBytes": 2592694272,
+        "cgroupMemoryCurrentBaselineBytes": 2492133376,
+        "cgroupMemoryCurrentPeakBytes": 2539651072,
+        "cgroupMemoryCurrentAfterBytes": 2526134272,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "query_neighbors",
+            "kind": "neighbors",
+            "assay": "ADT",
+            "artifactId": "6bfa3db8f2f89646056e51badadef4f83104432b41a77edc251b9000ffa9c33d",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.connectivity",
+        "wallSeconds": 0.22276750600001094,
+        "operationBaselineBytes": 2526138368,
+        "operationPeakBytes": 2545029120,
+        "operationIncrementalPeakBytes": 18890752,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2592710656,
+        "processTreeRssPeakBytes": 2611585024,
+        "processTreeRssIncrementalPeakBytes": 18874368,
+        "processTreeRssAfterBytes": 2611568640,
+        "cgroupMemoryCurrentBaselineBytes": 2526138368,
+        "cgroupMemoryCurrentPeakBytes": 2545029120,
+        "cgroupMemoryCurrentAfterBytes": 2545025024,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_connectivity_map",
+            "kind": "connectivity_map",
+            "assay": "ADT",
+            "artifactId": "c3e1869ef51f5c2b5ad2271a3bb3a76bbd73b49ce4da5eccef77c13ddd106a53",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.clustering",
+        "wallSeconds": 2.738518412000005,
+        "operationBaselineBytes": 2545029120,
+        "operationPeakBytes": 2621689856,
+        "operationIncrementalPeakBytes": 76660736,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2611585024,
+        "processTreeRssPeakBytes": 2688245760,
+        "processTreeRssIncrementalPeakBytes": 76660736,
+        "processTreeRssAfterBytes": 2649563136,
+        "cgroupMemoryCurrentBaselineBytes": 2545029120,
+        "cgroupMemoryCurrentPeakBytes": 2621689856,
+        "cgroupMemoryCurrentAfterBytes": 2583019520,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": "ADT",
+            "artifactId": "7cc01a850ef3e16ffd9e99e82b4fb63db7e294444c5543ebb334857e4b3d4cd2",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "snn.integration",
+        "wallSeconds": 1.7298003549999947,
+        "operationBaselineBytes": 2583023616,
+        "operationPeakBytes": 2706145280,
+        "operationIncrementalPeakBytes": 123121664,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2649579520,
+        "processTreeRssPeakBytes": 2773659648,
+        "processTreeRssIncrementalPeakBytes": 124080128,
+        "processTreeRssAfterBytes": 2773643264,
+        "cgroupMemoryCurrentBaselineBytes": 2583023616,
+        "cgroupMemoryCurrentPeakBytes": 2706145280,
+        "cgroupMemoryCurrentAfterBytes": 2706145280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "integrate_assays",
+            "kind": "integrated_graph",
+            "assay": null,
+            "artifactId": "f28c34900c14cadf4559d9d5160eef88cb53f6ba2f4f032378ffac017aefd7ce",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "snn.clustering",
+        "wallSeconds": 2.368425861999981,
+        "operationBaselineBytes": 2706149376,
+        "operationPeakBytes": 2855542784,
+        "operationIncrementalPeakBytes": 149393408,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2773659648,
+        "processTreeRssPeakBytes": 2922995712,
+        "processTreeRssIncrementalPeakBytes": 149336064,
+        "processTreeRssAfterBytes": 2773643264,
+        "cgroupMemoryCurrentBaselineBytes": 2706149376,
+        "cgroupMemoryCurrentPeakBytes": 2855542784,
+        "cgroupMemoryCurrentAfterBytes": 2706341888,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": null,
+            "artifactId": "7144ef2039c42ed628354f9d5bbc4fc03ed12336a1ec99cca6c5f22439448c98",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "wnn.integration",
+        "wallSeconds": 5.996460120999984,
+        "operationBaselineBytes": 2706345984,
+        "operationPeakBytes": 2764550144,
+        "operationIncrementalPeakBytes": 58204160,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2773659648,
+        "processTreeRssPeakBytes": 2831548416,
+        "processTreeRssIncrementalPeakBytes": 57888768,
+        "processTreeRssAfterBytes": 2831532032,
+        "cgroupMemoryCurrentBaselineBytes": 2706345984,
+        "cgroupMemoryCurrentPeakBytes": 2764550144,
+        "cgroupMemoryCurrentAfterBytes": 2764546048,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "integrate_assays",
+            "kind": "integrated_graph",
+            "assay": null,
+            "artifactId": "2a7b9fd1211e80fcf35cc214728985da89d41726bb68d2b6417690cbc73f0fec",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "wnn.clustering",
+        "wallSeconds": 3.2005954949999875,
+        "operationBaselineBytes": 2764550144,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 4063232,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2831548416,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 4194304,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2764550144,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": null,
+            "artifactId": "3cde4f0e5237a246b9ac940a38fb8a0613302fb3d7696d10168945d9546b9d64",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      }
+    ],
+    "reuseStages": [
+      {
+        "stage": "RNA.features",
+        "wallSeconds": 0.1308573889999991,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "snapshot_run_metadata",
+            "kind": "metadata_snapshot",
+            "assay": "RNA",
+            "artifactId": "d88405f14f8376d8231b719f3607884c7052ad2b03a7e1a4fe1a3dd6d4b34a1e",
+            "disposition": "reused"
+          },
+          {
+            "operation": "summarize_rna_features",
+            "kind": "feature_summary",
+            "assay": "RNA",
+            "artifactId": "ce664afb3c7e33e1f0c34d8324fa94d292dde826d1dca6909168b30adf561a45",
+            "disposition": "reused"
+          },
+          {
+            "operation": "select_hvgs",
+            "kind": "feature_selection",
+            "assay": "RNA",
+            "artifactId": "fb4ac2493f6ffcf2384bc2c496c118d2d3a417e3589b48ccea5ed0c2432a0a3f",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "RNA.normalization",
+        "wallSeconds": 0.06156509199999505,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_normalization",
+            "kind": "normalized",
+            "assay": "RNA",
+            "artifactId": "e0815474b9c9c34d411174caaac8c9769c6826b0aebb7174cecab6b968fe4ae6",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "RNA.reduction",
+        "wallSeconds": 0.06948071700000469,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "calculate_feature_scaling",
+            "kind": "feature_scaling",
+            "assay": "RNA",
+            "artifactId": "1f85c3ba5aaa7f37a117f5da83e7e81cb26cb7299deda7c4cd560668e73e0b3b",
+            "disposition": "reused"
+          },
+          {
+            "operation": "run_pca",
+            "kind": "reduction",
+            "assay": "RNA",
+            "artifactId": "e55f83cf3ae407dd1210f974788c4af175d6240e81f029850138a473662755b1",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "RNA.index",
+        "wallSeconds": 0.07391066399998181,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_ann_index",
+            "kind": "ann_index",
+            "assay": "RNA",
+            "artifactId": "aa1e25b2d76277cfc36b928c6a0b47d6ba53760e5eca86fb84a594bbc7a61eda",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "RNA.neighbors",
+        "wallSeconds": 0.06650769600000217,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "query_neighbors",
+            "kind": "neighbors",
+            "assay": "RNA",
+            "artifactId": "8ea277330a427c7c82cb975bd6262d14c3438e53e332751c784969bd9e619b92",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "RNA.connectivity",
+        "wallSeconds": 0.06176450099999897,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_connectivity_map",
+            "kind": "connectivity_map",
+            "assay": "RNA",
+            "artifactId": "567e9275f6497237330352f2b678cabdb1a8315450dffb3a66d8cac5944bfade",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "RNA.clustering",
+        "wallSeconds": 0.05897732900001529,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": "RNA",
+            "artifactId": "07d1cad989731f14ba8bba5f9719dfc478142ae4420c0db5677edb02406722b4",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "ADT.features",
+        "wallSeconds": 0.023544677999979058,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "create_all_features",
+            "kind": "feature_selection",
+            "assay": "ADT",
+            "artifactId": "220d8eb87d2e14dbdd0d280b55792f3a471695d2583b3eb9836e170373ad4429",
+            "disposition": "reused"
+          },
+          {
+            "operation": "set_feature_selection",
+            "kind": "feature_selection",
+            "assay": "ADT",
+            "artifactId": "0729b2a7d345a2d026152179724087cbf7ee54fbf24ef8501667e530f7f9fcf6",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "ADT.normalization",
+        "wallSeconds": 0.03699955700000146,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_normalization",
+            "kind": "normalized",
+            "assay": "ADT",
+            "artifactId": "ce6e0076de60d8d6504bc54b4babc34c9efd1bf35088e5a8918eefa54db15585",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "ADT.reduction",
+        "wallSeconds": 0.04244800000000737,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "calculate_feature_scaling",
+            "kind": "feature_scaling",
+            "assay": "ADT",
+            "artifactId": "3b61bd81a3527e491c8a825ed51190d4670101945e7784ce50257505c3427611",
+            "disposition": "reused"
+          },
+          {
+            "operation": "run_pca",
+            "kind": "reduction",
+            "assay": "ADT",
+            "artifactId": "2f482327aeabdb41c5051c0255e51883483974c61751fc942dd2d15d0b7d17a7",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "ADT.index",
+        "wallSeconds": 0.04499565200001143,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_ann_index",
+            "kind": "ann_index",
+            "assay": "ADT",
+            "artifactId": "7cc61fa3a1d14faa5a96b60c34b4afad96b6b87476b06a5b1e4a2d012d029623",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "ADT.neighbors",
+        "wallSeconds": 0.04209603099999981,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "query_neighbors",
+            "kind": "neighbors",
+            "assay": "ADT",
+            "artifactId": "6bfa3db8f2f89646056e51badadef4f83104432b41a77edc251b9000ffa9c33d",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "ADT.connectivity",
+        "wallSeconds": 0.03606081999998878,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_connectivity_map",
+            "kind": "connectivity_map",
+            "assay": "ADT",
+            "artifactId": "c3e1869ef51f5c2b5ad2271a3bb3a76bbd73b49ce4da5eccef77c13ddd106a53",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "ADT.clustering",
+        "wallSeconds": 0.033500918000015645,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2768613376,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2835742720,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2835726336,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2768613376,
+        "cgroupMemoryCurrentAfterBytes": 2768609280,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": "ADT",
+            "artifactId": "7cc01a850ef3e16ffd9e99e82b4fb63db7e294444c5543ebb334857e4b3d4cd2",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "snn.integration",
+        "wallSeconds": 0.1697911200000135,
+        "operationBaselineBytes": 2768613376,
+        "operationPeakBytes": 2777001984,
+        "operationIncrementalPeakBytes": 8388608,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2835742720,
+        "processTreeRssPeakBytes": 2844131328,
+        "processTreeRssIncrementalPeakBytes": 8388608,
+        "processTreeRssAfterBytes": 2844114944,
+        "cgroupMemoryCurrentBaselineBytes": 2768613376,
+        "cgroupMemoryCurrentPeakBytes": 2777001984,
+        "cgroupMemoryCurrentAfterBytes": 2776997888,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "integrate_assays",
+            "kind": "integrated_graph",
+            "assay": null,
+            "artifactId": "f28c34900c14cadf4559d9d5160eef88cb53f6ba2f4f032378ffac017aefd7ce",
+            "disposition": "reused"
+          }
+        ]
+      },
+      {
+        "stage": "snn.revised_clustering",
+        "wallSeconds": 2.85444773399999,
+        "operationBaselineBytes": 2777001984,
+        "operationPeakBytes": 2777104384,
+        "operationIncrementalPeakBytes": 102400,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2844131328,
+        "processTreeRssPeakBytes": 2844131328,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 2844114944,
+        "cgroupMemoryCurrentBaselineBytes": 2777001984,
+        "cgroupMemoryCurrentPeakBytes": 2777104384,
+        "cgroupMemoryCurrentAfterBytes": 2777100288,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": null,
+            "artifactId": "261b55f4693d74acb127beef3c086a628eb02cc23002352eff17f0736e25fd76",
+            "disposition": "created"
+          }
+        ]
+      }
+    ],
+    "freshRevisionStages": [
+      {
+        "stage": "RNA.features",
+        "wallSeconds": 3.962964161000002,
+        "operationBaselineBytes": 2777104384,
+        "operationPeakBytes": 7838748672,
+        "operationIncrementalPeakBytes": 5061644288,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2844131328,
+        "processTreeRssPeakBytes": 7892783104,
+        "processTreeRssIncrementalPeakBytes": 5048651776,
+        "processTreeRssAfterBytes": 2973642752,
+        "cgroupMemoryCurrentBaselineBytes": 2777104384,
+        "cgroupMemoryCurrentPeakBytes": 7838748672,
+        "cgroupMemoryCurrentAfterBytes": 2906628096,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "snapshot_run_metadata",
+            "kind": "metadata_snapshot",
+            "assay": "RNA",
+            "artifactId": "d88405f14f8376d8231b719f3607884c7052ad2b03a7e1a4fe1a3dd6d4b34a1e",
+            "disposition": "reused",
+            "existedBeforePhase": true
+          },
+          {
+            "operation": "summarize_rna_features",
+            "kind": "feature_summary",
+            "assay": "RNA",
+            "artifactId": "62e1c287e678e61a5bcb517981ccdd94eb7d1d7b17f603f390b03ed8b3df1c54",
+            "disposition": "created",
+            "existedBeforePhase": false
+          },
+          {
+            "operation": "select_hvgs",
+            "kind": "feature_selection",
+            "assay": "RNA",
+            "artifactId": "218fb8abf4c425bce42f1afc1263e9d4960e8f09c5d7a418264c380178a18941",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.normalization",
+        "wallSeconds": 3.8188036640000007,
+        "operationBaselineBytes": 2906632192,
+        "operationPeakBytes": 3866296320,
+        "operationIncrementalPeakBytes": 959664128,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 2973659136,
+        "processTreeRssPeakBytes": 3989241856,
+        "processTreeRssIncrementalPeakBytes": 1015582720,
+        "processTreeRssAfterBytes": 3252051968,
+        "cgroupMemoryCurrentBaselineBytes": 2906632192,
+        "cgroupMemoryCurrentPeakBytes": 3866296320,
+        "cgroupMemoryCurrentAfterBytes": 3186786304,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_normalization",
+            "kind": "normalized",
+            "assay": "RNA",
+            "artifactId": "4b52c17b4cc3cb60394b2e15fd9c482f9db55d46a3940368add4790ea2a48920",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.reduction",
+        "wallSeconds": 8.542277109999986,
+        "operationBaselineBytes": 3186790400,
+        "operationPeakBytes": 4766597120,
+        "operationIncrementalPeakBytes": 1579806720,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3252068352,
+        "processTreeRssPeakBytes": 4999237632,
+        "processTreeRssIncrementalPeakBytes": 1747169280,
+        "processTreeRssAfterBytes": 3252051968,
+        "cgroupMemoryCurrentBaselineBytes": 3186790400,
+        "cgroupMemoryCurrentPeakBytes": 4766597120,
+        "cgroupMemoryCurrentAfterBytes": 3186786304,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "calculate_feature_scaling",
+            "kind": "feature_scaling",
+            "assay": "RNA",
+            "artifactId": "4bcbe594353fc7f786091e695a587843c29f8f8391a5aecd35a45e95d665c918",
+            "disposition": "created",
+            "existedBeforePhase": false
+          },
+          {
+            "operation": "run_pca",
+            "kind": "reduction",
+            "assay": "RNA",
+            "artifactId": "290a119b73a668aae39b7a5182a41fd5b6b29fa0a4d947fbb94a00626ced8ab9",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.index",
+        "wallSeconds": 21.03090901599998,
+        "operationBaselineBytes": 3186790400,
+        "operationPeakBytes": 3186790400,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3252068352,
+        "processTreeRssPeakBytes": 3252068352,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3252051968,
+        "cgroupMemoryCurrentBaselineBytes": 3186790400,
+        "cgroupMemoryCurrentPeakBytes": 3186790400,
+        "cgroupMemoryCurrentAfterBytes": 3186786304,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_ann_index",
+            "kind": "ann_index",
+            "assay": "RNA",
+            "artifactId": "f0a56f671782e9ba0f63ce41e69e9b86d9deb8250c8164e8057734727a07efa8",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.neighbors",
+        "wallSeconds": 3.5962829569999997,
+        "operationBaselineBytes": 3186790400,
+        "operationPeakBytes": 3186790400,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3252068352,
+        "processTreeRssPeakBytes": 3252068352,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3252051968,
+        "cgroupMemoryCurrentBaselineBytes": 3186790400,
+        "cgroupMemoryCurrentPeakBytes": 3186790400,
+        "cgroupMemoryCurrentAfterBytes": 3186786304,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "query_neighbors",
+            "kind": "neighbors",
+            "assay": "RNA",
+            "artifactId": "cc73998e7193ae8d73d14172ea338c190adb3efc50e36e6048f4413ea1500ec9",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.connectivity",
+        "wallSeconds": 0.2521308389999888,
+        "operationBaselineBytes": 3186790400,
+        "operationPeakBytes": 3186790400,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3252068352,
+        "processTreeRssPeakBytes": 3252068352,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3252051968,
+        "cgroupMemoryCurrentBaselineBytes": 3186790400,
+        "cgroupMemoryCurrentPeakBytes": 3186790400,
+        "cgroupMemoryCurrentAfterBytes": 3186786304,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_connectivity_map",
+            "kind": "connectivity_map",
+            "assay": "RNA",
+            "artifactId": "5839135be2cf33cff4d11e563b416b7e846e620cca989fda6da7b9147bda40b4",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "RNA.clustering",
+        "wallSeconds": 3.2647352710000064,
+        "operationBaselineBytes": 3186790400,
+        "operationPeakBytes": 3186966528,
+        "operationIncrementalPeakBytes": 176128,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3252068352,
+        "processTreeRssPeakBytes": 3252068352,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3252051968,
+        "cgroupMemoryCurrentBaselineBytes": 3186790400,
+        "cgroupMemoryCurrentPeakBytes": 3186966528,
+        "cgroupMemoryCurrentAfterBytes": 3186962432,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": "RNA",
+            "artifactId": "535ed6b2f49dca0507bb77c7884f68206bc1dd73e29fb464e6c0a053b7f73280",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.features",
+        "wallSeconds": 0.038246213000007856,
+        "operationBaselineBytes": 3186966528,
+        "operationPeakBytes": 3186966528,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3252068352,
+        "processTreeRssPeakBytes": 3252068352,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3252051968,
+        "cgroupMemoryCurrentBaselineBytes": 3186966528,
+        "cgroupMemoryCurrentPeakBytes": 3186966528,
+        "cgroupMemoryCurrentAfterBytes": 3186962432,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "create_all_features",
+            "kind": "feature_selection",
+            "assay": "ADT",
+            "artifactId": "220d8eb87d2e14dbdd0d280b55792f3a471695d2583b3eb9836e170373ad4429",
+            "disposition": "reused",
+            "existedBeforePhase": true
+          },
+          {
+            "operation": "set_feature_selection",
+            "kind": "feature_selection",
+            "assay": "ADT",
+            "artifactId": "2a2a84d8913db0629973aaf4b4477b9129d9e0e8ec88c4acc7fc82b1138f446d",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.normalization",
+        "wallSeconds": 0.7480149330000074,
+        "operationBaselineBytes": 3186966528,
+        "operationPeakBytes": 3618463744,
+        "operationIncrementalPeakBytes": 431497216,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3252068352,
+        "processTreeRssPeakBytes": 3679387648,
+        "processTreeRssIncrementalPeakBytes": 427319296,
+        "processTreeRssAfterBytes": 3257810944,
+        "cgroupMemoryCurrentBaselineBytes": 3186966528,
+        "cgroupMemoryCurrentPeakBytes": 3618463744,
+        "cgroupMemoryCurrentAfterBytes": 3192721408,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_normalization",
+            "kind": "normalized",
+            "assay": "ADT",
+            "artifactId": "5abc8effef2a34f9d3e4d6de0349edd3e7af92dad520a94ea4b6372e50fb4a5b",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.reduction",
+        "wallSeconds": 1.0329430719999948,
+        "operationBaselineBytes": 3192725504,
+        "operationPeakBytes": 3817684992,
+        "operationIncrementalPeakBytes": 624959488,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3257827328,
+        "processTreeRssPeakBytes": 3876519936,
+        "processTreeRssIncrementalPeakBytes": 618692608,
+        "processTreeRssAfterBytes": 3257810944,
+        "cgroupMemoryCurrentBaselineBytes": 3192725504,
+        "cgroupMemoryCurrentPeakBytes": 3817684992,
+        "cgroupMemoryCurrentAfterBytes": 3192721408,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "calculate_feature_scaling",
+            "kind": "feature_scaling",
+            "assay": "ADT",
+            "artifactId": "207257c97f214599e6a9d49371e09f1e5341297eef2b156b0a2e98185c1c599d",
+            "disposition": "created",
+            "existedBeforePhase": false
+          },
+          {
+            "operation": "run_pca",
+            "kind": "reduction",
+            "assay": "ADT",
+            "artifactId": "5c8080f73056aa76e099b4ed9f5a8c7b09116a55b9834ee05f18386b4df93ab7",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.index",
+        "wallSeconds": 15.845819874,
+        "operationBaselineBytes": 3192725504,
+        "operationPeakBytes": 3192725504,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3257827328,
+        "processTreeRssPeakBytes": 3257827328,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3257810944,
+        "cgroupMemoryCurrentBaselineBytes": 3192725504,
+        "cgroupMemoryCurrentPeakBytes": 3192725504,
+        "cgroupMemoryCurrentAfterBytes": 3192721408,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_ann_index",
+            "kind": "ann_index",
+            "assay": "ADT",
+            "artifactId": "7429bfff59ab08937e5b23a35b9c969583e4c83a891d244f54c540565b546241",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.neighbors",
+        "wallSeconds": 2.678159303000001,
+        "operationBaselineBytes": 3192725504,
+        "operationPeakBytes": 3192725504,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3257827328,
+        "processTreeRssPeakBytes": 3257827328,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3257810944,
+        "cgroupMemoryCurrentBaselineBytes": 3192725504,
+        "cgroupMemoryCurrentPeakBytes": 3192725504,
+        "cgroupMemoryCurrentAfterBytes": 3192721408,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "query_neighbors",
+            "kind": "neighbors",
+            "assay": "ADT",
+            "artifactId": "fcb01e4fe33ac8c124fc5c9269af377852316ec6856bd838a916c9c57600087d",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.connectivity",
+        "wallSeconds": 0.22176753299999064,
+        "operationBaselineBytes": 3192725504,
+        "operationPeakBytes": 3192725504,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3257827328,
+        "processTreeRssPeakBytes": 3257827328,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3257810944,
+        "cgroupMemoryCurrentBaselineBytes": 3192725504,
+        "cgroupMemoryCurrentPeakBytes": 3192725504,
+        "cgroupMemoryCurrentAfterBytes": 3192721408,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "build_connectivity_map",
+            "kind": "connectivity_map",
+            "assay": "ADT",
+            "artifactId": "deb99bcb3a2de6dfdda67fceca1da903537ffaa884b857cdcd692a631fa295e7",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "ADT.clustering",
+        "wallSeconds": 2.806548971000012,
+        "operationBaselineBytes": 3192725504,
+        "operationPeakBytes": 3192725504,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3257827328,
+        "processTreeRssPeakBytes": 3257827328,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3257810944,
+        "cgroupMemoryCurrentBaselineBytes": 3192725504,
+        "cgroupMemoryCurrentPeakBytes": 3192725504,
+        "cgroupMemoryCurrentAfterBytes": 3192721408,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": "ADT",
+            "artifactId": "c3654381691e98ae474638242fa77c71988e38290e5915643d8839e55ef65a7e",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "snn.integration",
+        "wallSeconds": 0.8598767530000089,
+        "operationBaselineBytes": 3192725504,
+        "operationPeakBytes": 3200692224,
+        "operationIncrementalPeakBytes": 7966720,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3257827328,
+        "processTreeRssPeakBytes": 3265794048,
+        "processTreeRssIncrementalPeakBytes": 7966720,
+        "processTreeRssAfterBytes": 3265777664,
+        "cgroupMemoryCurrentBaselineBytes": 3192725504,
+        "cgroupMemoryCurrentPeakBytes": 3200692224,
+        "cgroupMemoryCurrentAfterBytes": 3200688128,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "integrate_assays",
+            "kind": "integrated_graph",
+            "assay": null,
+            "artifactId": "67574a637f8743c3e865becdbeea2263368198591bda80d05d0765a723bbc944",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      },
+      {
+        "stage": "snn.clustering",
+        "wallSeconds": 2.7378956370000083,
+        "operationBaselineBytes": 3200692224,
+        "operationPeakBytes": 3200692224,
+        "operationIncrementalPeakBytes": 0,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 3265794048,
+        "processTreeRssPeakBytes": 3265794048,
+        "processTreeRssIncrementalPeakBytes": 0,
+        "processTreeRssAfterBytes": 3265777664,
+        "cgroupMemoryCurrentBaselineBytes": 3200692224,
+        "cgroupMemoryCurrentPeakBytes": 3200692224,
+        "cgroupMemoryCurrentAfterBytes": 3200688128,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 34359738368,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null,
+        "artifactPlans": [
+          {
+            "operation": "run_leiden_clustering",
+            "kind": "cluster_labels",
+            "assay": null,
+            "artifactId": "2cb7322b8cbfa9039f4d5d8db103f61c4a73a6314950c811d081a1cee088453b",
+            "disposition": "created",
+            "existedBeforePhase": false
+          }
+        ]
+      }
+    ],
+    "reuseValidation": {
+      "clusterLabelsIdentical": true,
+      "clusterAri": 1.0,
+      "graphEdgesIdentical": true,
+      "graphWeightsMaxAbs": 0.0
+    },
+    "publishedArtifactCount": 0,
+    "artifactFreshness": {
+      "initial": {
+        "createdComputations": 20,
+        "reusedComputationsWithinPhase": 0,
+        "reusedPreexistingComputations": 0
+      },
+      "freshRevision": {
+        "createdComputations": 18,
+        "reusedComputationsWithinPhase": 0,
+        "reusedPreexistingComputations": 0
+      }
+    },
+    "initialWnnSeconds": 117.11060379199996,
+    "initialSnnSeconds": 112.01177439299997,
+    "revisedSnnSeconds": 3.806947898000004,
+    "freshRevisedSnnSeconds": 71.437375307,
+    "initialBranchWallSeconds": 112.16045738899999,
+    "reusedBranchWallSeconds": 3.9662249790000033,
+    "freshBranchWallSeconds": 71.59906109099998,
+    "timingInterpretation": {
+      "initial": "Direct wall time covers the selected jointMethod from preprocessing through clustering; method-specific stage totals sum the common upstream stages and each observed joint branch.",
+      "revision": "Reused artifacts versus fresh recomputation at resolution 1.2, after initial analysis has warmed compiled kernels and source files"
+    },
+    "labelInterpretation": "Agreement with author annotations, which are not independent experimental ground truth",
+    "reusedArtifacts": {
+      "RNA": {
+        "features": true,
+        "normalized": true,
+        "reduction": true,
+        "index": true,
+        "neighbors": true,
+        "graph": true,
+        "clusters": true
+      },
+      "ADT": {
+        "features": true,
+        "normalized": true,
+        "reduction": true,
+        "index": true,
+        "neighbors": true,
+        "graph": true,
+        "clusters": true
+      }
+    },
+    "candidateBreadthInterpretation": "CyteArc's modality width, bandwidth and final degree are coupled at 20. Pure candidate breadth is varied only in Seurat with final k.nn fixed at 20.",
+    "sourceArchiveSha256": "27d0c611fcacfd2d2d5886b217f56ee2008f68b32051757288279e3b92241008",
+    "inputsSha256": "8b90996c2f1e0b8d91c00ca7ad7f97469d7093de25e39b6e99fdd3cde0c48c26"
+  }
+}

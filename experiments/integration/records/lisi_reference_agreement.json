@@ -1,0 +1,800 @@
+{
+  "description": "iLISI and cLISI of binvignat and kang recomputed with scib-metrics and harmonypy on the same embeddings: identical HNSW neighbour arrays, exact Euclidean neighbours, and harmonypy's own search at perplexity 5 and 30.",
+  "reference": {
+    "scibMetricsVersion": "0.6.1",
+    "jaxVersion": "0.11.2",
+    "jaxX64": true,
+    "harmonypyVersion": "0.0.10",
+    "scikitLearnVersion": "1.9.1"
+  },
+  "parameters": {
+    "k": 15,
+    "perplexity": 5.0,
+    "perplexityRule": "CyteArc default floor(k / 3)",
+    "harmonypyDefaultPerplexity": 30.0,
+    "summary": "median per-cell LISI, iLISI scaled (m - 1) / (B - 1), cLISI scaled (L - m) / (L - 1)",
+    "harmonypyRerun": {
+      "sigma": 0.1,
+      "maxIterHarmony": 50,
+      "randomState": 0
+    }
+  },
+  "datasets": {
+    "binvignat_pbmc": {
+      "store": {
+        "origin": "rebuilt with the binvignat recipe",
+        "selectionKey": "manuscript_ra_balanced",
+        "batchColumn": "batch",
+        "labelColumn": "cell_type",
+        "reported": "harmony_binvignat_comparison.json"
+      },
+      "cells": 9000,
+      "artifactsBeforeRecipe": 1,
+      "artifactsAfterRecipe": 14,
+      "recipeSeconds": 13.290609141000004,
+      "embeddings": {
+        "uncorrected": {
+          "embedding": "uncorrected PCA",
+          "cells": 9000,
+          "reported": {
+            "iLISI": 0.10930849969518353,
+            "cLISI": 0.9493682071290189
+          },
+          "hnswGraph": {
+            "comparisonKind": "exact parity: identical neighbour arrays and perplexity",
+            "cytearc": {
+              "iLISI": 0.10930849969518353,
+              "cLISI": 0.9493682071290189
+            },
+            "scibMetrics": {
+              "iLISI": 0.10930849969518364,
+              "cLISI": 0.9493682071290189
+            },
+            "absDiffILISI": 1.1102230246251565e-16,
+            "absDiffCLISI": 0.0,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 9000,
+              "pearson": 0.9999999999999999,
+              "maxAbsDiff": 3.3306690738754696e-15,
+              "meanAbsDiff": 3.8613556796462947e-16
+            },
+            "perCellLabelLisiCyteArcVersusScib": {
+              "n": 9000,
+              "pearson": 1.0,
+              "maxAbsDiff": 3.9968028886505635e-15,
+              "meanAbsDiff": 5.112206954057304e-16
+            },
+            "recallAgainstExactKnn": 0.9994222222222223,
+            "cytearcEqualsReported": true
+          },
+          "exactKnn": {
+            "comparisonKind": "exact parity on exact Euclidean neighbours",
+            "cytearc": {
+              "iLISI": 0.10941526364628085,
+              "cLISI": 0.9492907706005108
+            },
+            "scibMetrics": {
+              "iLISI": 0.10941526364628062,
+              "cLISI": 0.9492907706005108
+            },
+            "absDiffILISI": 2.220446049250313e-16,
+            "absDiffCLISI": 0.0,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 9000,
+              "pearson": 0.9999999999999999,
+              "maxAbsDiff": 8.215650382226158e-15,
+              "meanAbsDiff": 5.325616491013029e-16
+            },
+            "cellsDifferingByMoreThan1e-6": 0
+          },
+          "harmonypy": {
+            "matchedPerplexity5": {
+              "comparisonKind": "perplexity 5: harmonypy's exact kd-tree search, 14 neighbours after dropping the cell, against 15 for CyteArc",
+              "perplexity": 5.0,
+              "neighbours": 15,
+              "iLISI": 0.11108469870169113,
+              "cLISI": 0.9485702968753659,
+              "medianBatchLisi": 1.2221693974033823,
+              "medianLabelLisi": 1.7200158437448794,
+              "seconds": 6.9654962560000016,
+              "perCellBatchLisiVersusCyteArcExactKnn": {
+                "n": 9000,
+                "pearson": 0.9997956301482194,
+                "maxAbsDiff": 0.06357349704297577,
+                "meanAbsDiff": 0.004412417831569199
+              },
+              "cellsDifferingByMoreThan1e-6": 6283,
+              "cellsWithHarmonypyFailureValueZero": 0,
+              "maxAbsDiffOtherCells": 0.06357349704297577,
+              "differingCells": [
+                {
+                  "row": 0,
+                  "cytearcBatchLisi": 1.193178315975381,
+                  "harmonypyBatchLisi": 1.203796023966694,
+                  "scibBatchLisi": 1.1931783159753806,
+                  "nearestDistance": 4.566071472596072,
+                  "farthestDistance": 5.696497139922357
+                },
+                {
+                  "row": 1,
+                  "cytearcBatchLisi": 1.3336471316616296,
+                  "harmonypyBatchLisi": 1.3608367302329045,
+                  "scibBatchLisi": 1.3336471316616298,
+                  "nearestDistance": 4.916367902016969,
+                  "farthestDistance": 5.877175954935191
+                },
+                {
+                  "row": 2,
+                  "cytearcBatchLisi": 1.1509697067288696,
+                  "harmonypyBatchLisi": 1.1508702598844898,
+                  "scibBatchLisi": 1.150969706728869,
+                  "nearestDistance": 3.188749378815436,
+                  "farthestDistance": 4.001215843365139
+                },
+                {
+                  "row": 3,
+                  "cytearcBatchLisi": 1.6371878740909822,
+                  "harmonypyBatchLisi": 1.6385021050464295,
+                  "scibBatchLisi": 1.6371878740909807,
+                  "nearestDistance": 5.866664774979279,
+                  "farthestDistance": 6.409083330472688
+                },
+                {
+                  "row": 4,
+                  "cytearcBatchLisi": 1.4827036140610286,
+                  "harmonypyBatchLisi": 1.4816311791818928,
+                  "scibBatchLisi": 1.4827036140610284,
+                  "nearestDistance": 4.24059689652879,
+                  "farthestDistance": 4.6483672894331685
+                }
+              ]
+            },
+            "defaultPerplexity30": {
+              "comparisonKind": "harmonypy default perplexity 30 (89 neighbours after dropping the cell)",
+              "perplexity": 30.0,
+              "neighbours": 90,
+              "iLISI": 0.2888261840166857,
+              "cLISI": 0.9036356855447691,
+              "medianBatchLisi": 1.5776523680333714,
+              "medianLabelLisi": 2.3491004023732325,
+              "seconds": 7.404812784000001
+            }
+          },
+          "categories": {
+            "batches": 3,
+            "labels": 15
+          }
+        },
+        "cytearcHarmony": {
+          "embedding": "CyteArc Harmony",
+          "cells": 9000,
+          "reported": {
+            "iLISI": 0.36672661854240773,
+            "cLISI": 0.9481478880007195
+          },
+          "hnswGraph": {
+            "comparisonKind": "exact parity: identical neighbour arrays and perplexity",
+            "cytearc": {
+              "iLISI": 0.36672661854240773,
+              "cLISI": 0.9481478880007195
+            },
+            "scibMetrics": {
+              "iLISI": 0.3667266185424074,
+              "cLISI": 0.9481478880007195
+            },
+            "absDiffILISI": 3.3306690738754696e-16,
+            "absDiffCLISI": 0.0,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 9000,
+              "pearson": 1.0,
+              "maxAbsDiff": 3.552713678800501e-15,
+              "meanAbsDiff": 5.062616992290713e-16
+            },
+            "perCellLabelLisiCyteArcVersusScib": {
+              "n": 9000,
+              "pearson": 1.0,
+              "maxAbsDiff": 3.9968028886505635e-15,
+              "meanAbsDiff": 5.166731240377784e-16
+            },
+            "recallAgainstExactKnn": 0.9991925925925926,
+            "cytearcEqualsReported": true
+          },
+          "exactKnn": {
+            "comparisonKind": "exact parity on exact Euclidean neighbours",
+            "cytearc": {
+              "iLISI": 0.36692315872473613,
+              "cLISI": 0.9481255557923134
+            },
+            "scibMetrics": {
+              "iLISI": 0.3669231587247347,
+              "cLISI": 0.9481255557923134
+            },
+            "absDiffILISI": 1.4432899320127035e-15,
+            "absDiffCLISI": 0.0,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 9000,
+              "pearson": 1.0,
+              "maxAbsDiff": 1.509903313490213e-14,
+              "meanAbsDiff": 8.782850989695766e-16
+            },
+            "cellsDifferingByMoreThan1e-6": 0
+          },
+          "harmonypy": {
+            "matchedPerplexity5": {
+              "comparisonKind": "perplexity 5: harmonypy's exact kd-tree search, 14 neighbours after dropping the cell, against 15 for CyteArc",
+              "perplexity": 5.0,
+              "neighbours": 15,
+              "iLISI": 0.3711871518174339,
+              "cLISI": 0.9472865496896162,
+              "medianBatchLisi": 1.7423743036348678,
+              "medianLabelLisi": 1.7379883043453739,
+              "seconds": 7.0324673860000075,
+              "perCellBatchLisiVersusCyteArcExactKnn": {
+                "n": 9000,
+                "pearson": 0.9995611857523994,
+                "maxAbsDiff": 0.08652253314129199,
+                "meanAbsDiff": 0.009846999726816612
+              },
+              "cellsDifferingByMoreThan1e-6": 8981,
+              "cellsWithHarmonypyFailureValueZero": 0,
+              "maxAbsDiffOtherCells": 0.08652253314129199,
+              "differingCells": [
+                {
+                  "row": 0,
+                  "cytearcBatchLisi": 2.109171088184664,
+                  "harmonypyBatchLisi": 2.12270012201007,
+                  "scibBatchLisi": 2.1091710881846653,
+                  "nearestDistance": 5.021224209296232,
+                  "farthestDistance": 5.749087700608135
+                },
+                {
+                  "row": 1,
+                  "cytearcBatchLisi": 2.018521392590494,
+                  "harmonypyBatchLisi": 2.0262233647074996,
+                  "scibBatchLisi": 2.018521392590493,
+                  "nearestDistance": 4.985593969739543,
+                  "farthestDistance": 5.7600901551087
+                },
+                {
+                  "row": 2,
+                  "cytearcBatchLisi": 1.8781998011210228,
+                  "harmonypyBatchLisi": 1.8781420530406667,
+                  "scibBatchLisi": 1.8781998011210235,
+                  "nearestDistance": 3.18928017063346,
+                  "farthestDistance": 3.8058015456679777
+                },
+                {
+                  "row": 3,
+                  "cytearcBatchLisi": 1.5341539920680571,
+                  "harmonypyBatchLisi": 1.552545553887743,
+                  "scibBatchLisi": 1.5341539920680571,
+                  "nearestDistance": 6.548655771852373,
+                  "farthestDistance": 7.449077921266399
+                },
+                {
+                  "row": 4,
+                  "cytearcBatchLisi": 2.058986941006354,
+                  "harmonypyBatchLisi": 2.06513777573211,
+                  "scibBatchLisi": 2.0589869410063533,
+                  "nearestDistance": 4.008958770431282,
+                  "farthestDistance": 4.557388220814808
+                }
+              ]
+            },
+            "defaultPerplexity30": {
+              "comparisonKind": "harmonypy default perplexity 30 (89 neighbours after dropping the cell)",
+              "perplexity": 30.0,
+              "neighbours": 90,
+              "iLISI": 0.6647136647592227,
+              "cLISI": 0.8989151017832191,
+              "medianBatchLisi": 2.3294273295184453,
+              "medianLabelLisi": 2.4151885750349313,
+              "seconds": 7.613479919999989
+            }
+          },
+          "categories": {
+            "batches": 3,
+            "labels": 15
+          }
+        },
+        "harmonypyCorrected": {
+          "embedding": "harmonypy Harmony (recomputed)",
+          "cells": 9000,
+          "reported": {
+            "iLISI": 0.37147434102995824,
+            "cLISI": 0.9477701491715173
+          },
+          "exactKnn": {
+            "comparisonKind": "exact parity on exact Euclidean neighbours",
+            "cytearc": {
+              "iLISI": 0.34715214926305404,
+              "cLISI": 0.9492205833760089
+            },
+            "scibMetrics": {
+              "iLISI": 0.3471521492630537,
+              "cLISI": 0.9492205833760087
+            },
+            "absDiffILISI": 3.3306690738754696e-16,
+            "absDiffCLISI": 2.220446049250313e-16,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 9000,
+              "pearson": 1.0,
+              "maxAbsDiff": 1.4654943925052066e-14,
+              "meanAbsDiff": 8.677256444242529e-16
+            },
+            "cellsDifferingByMoreThan1e-6": 0
+          },
+          "harmonypy": {
+            "matchedPerplexity5": {
+              "comparisonKind": "perplexity 5: harmonypy's exact kd-tree search, 14 neighbours after dropping the cell, against 15 for CyteArc",
+              "perplexity": 5.0,
+              "neighbours": 15,
+              "iLISI": 0.35292292590924623,
+              "cLISI": 0.9486777116564099,
+              "medianBatchLisi": 1.7058458518184925,
+              "medianLabelLisi": 1.7185120368102613,
+              "seconds": 7.061875459000007,
+              "perCellBatchLisiVersusCyteArcExactKnn": {
+                "n": 9000,
+                "pearson": 0.9995917908701206,
+                "maxAbsDiff": 0.08851600654147229,
+                "meanAbsDiff": 0.009700944722081904
+              },
+              "cellsDifferingByMoreThan1e-6": 8977,
+              "cellsWithHarmonypyFailureValueZero": 0,
+              "maxAbsDiffOtherCells": 0.08851600654147229,
+              "differingCells": [
+                {
+                  "row": 0,
+                  "cytearcBatchLisi": 2.1513690468394757,
+                  "harmonypyBatchLisi": 2.168831755883465,
+                  "scibBatchLisi": 2.151369046839479,
+                  "nearestDistance": 5.130318216357375,
+                  "farthestDistance": 5.892876628295117
+                },
+                {
+                  "row": 1,
+                  "cytearcBatchLisi": 1.8138027125698044,
+                  "harmonypyBatchLisi": 1.8106999935748271,
+                  "scibBatchLisi": 1.813802712569804,
+                  "nearestDistance": 4.840831434754892,
+                  "farthestDistance": 5.658570960374244
+                },
+                {
+                  "row": 2,
+                  "cytearcBatchLisi": 1.9926866230659688,
+                  "harmonypyBatchLisi": 1.9950953695950697,
+                  "scibBatchLisi": 1.9926866230659697,
+                  "nearestDistance": 3.19085809484319,
+                  "farthestDistance": 3.7637504855064927
+                },
+                {
+                  "row": 3,
+                  "cytearcBatchLisi": 2.1143859543591117,
+                  "harmonypyBatchLisi": 2.110763692611091,
+                  "scibBatchLisi": 2.1143859543591113,
+                  "nearestDistance": 6.997177883995294,
+                  "farthestDistance": 7.9614170753092806
+                },
+                {
+                  "row": 4,
+                  "cytearcBatchLisi": 1.9314105777264556,
+                  "harmonypyBatchLisi": 1.9566109338511224,
+                  "scibBatchLisi": 1.9314105777264554,
+                  "nearestDistance": 3.9742740083705357,
+                  "farthestDistance": 4.589239715353441
+                }
+              ]
+            },
+            "defaultPerplexity30": {
+              "comparisonKind": "harmonypy default perplexity 30 (89 neighbours after dropping the cell)",
+              "perplexity": 30.0,
+              "neighbours": 90,
+              "iLISI": 0.6374941559515546,
+              "cLISI": 0.9004952794149963,
+              "medianBatchLisi": 2.274988311903109,
+              "medianLabelLisi": 2.3930660881900523,
+              "seconds": 7.501991477999994
+            }
+          },
+          "categories": {
+            "batches": 3,
+            "labels": 15
+          }
+        }
+      }
+    },
+    "kang_pbmc": {
+      "store": {
+        "origin": "rebuilt from the catalogue store with the kang recipe",
+        "selectionKey": "I",
+        "batchColumn": "sample_id",
+        "labelColumn": "orig_cluster_labels",
+        "reported": "harmony_kang_comparison.json"
+      },
+      "cells": 18597,
+      "artifactsBeforeRecipe": 17,
+      "artifactsAfterRecipe": 29,
+      "recipeSeconds": 16.24338515699999,
+      "embeddings": {
+        "uncorrected": {
+          "embedding": "uncorrected PCA",
+          "cells": 18597,
+          "reported": {
+            "iLISI": 0.0,
+            "cLISI": 1.0
+          },
+          "hnswGraph": {
+            "comparisonKind": "exact parity: identical neighbour arrays and perplexity",
+            "cytearc": {
+              "iLISI": 0.0,
+              "cLISI": 1.0
+            },
+            "scibMetrics": {
+              "iLISI": 0.0,
+              "cLISI": 1.0
+            },
+            "absDiffILISI": 0.0,
+            "absDiffCLISI": 0.0,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 18597,
+              "pearson": 0.9999999999999998,
+              "maxAbsDiff": 2.220446049250313e-15,
+              "meanAbsDiff": 2.72394774251743e-16
+            },
+            "perCellLabelLisiCyteArcVersusScib": {
+              "n": 18597,
+              "pearson": 0.9999999999999994,
+              "maxAbsDiff": 3.552713678800501e-15,
+              "meanAbsDiff": 3.241896603174948e-16
+            },
+            "recallAgainstExactKnn": 0.9998530228889966,
+            "cytearcEqualsReported": true
+          },
+          "exactKnn": {
+            "comparisonKind": "exact parity on exact Euclidean neighbours",
+            "cytearc": {
+              "iLISI": 0.0,
+              "cLISI": 1.0
+            },
+            "scibMetrics": {
+              "iLISI": 0.0,
+              "cLISI": 1.0
+            },
+            "absDiffILISI": 0.0,
+            "absDiffCLISI": 0.0,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 18597,
+              "pearson": 1.0,
+              "maxAbsDiff": 3.774758283725532e-15,
+              "meanAbsDiff": 2.9516398765132543e-16
+            },
+            "cellsDifferingByMoreThan1e-6": 0
+          },
+          "harmonypy": {
+            "matchedPerplexity5": {
+              "comparisonKind": "perplexity 5: harmonypy's exact kd-tree search, 14 neighbours after dropping the cell, against 15 for CyteArc",
+              "perplexity": 5.0,
+              "neighbours": 15,
+              "iLISI": 0.0,
+              "cLISI": 1.0,
+              "medianBatchLisi": 1.0,
+              "medianLabelLisi": 1.0000000000000004,
+              "seconds": 14.661962576000008,
+              "perCellBatchLisiVersusCyteArcExactKnn": {
+                "n": 18597,
+                "pearson": 0.9998644160152428,
+                "maxAbsDiff": 0.04657632387874178,
+                "meanAbsDiff": 0.00045495429531154993
+              },
+              "cellsDifferingByMoreThan1e-6": 2191,
+              "cellsWithHarmonypyFailureValueZero": 0,
+              "maxAbsDiffOtherCells": 0.04657632387874178,
+              "differingCells": [
+                {
+                  "row": 18,
+                  "cytearcBatchLisi": 1.028868062490592,
+                  "harmonypyBatchLisi": 1.0296981945936778,
+                  "scibBatchLisi": 1.0288680624905922,
+                  "nearestDistance": 6.088151416364475,
+                  "farthestDistance": 7.18920147003149
+                },
+                {
+                  "row": 21,
+                  "cytearcBatchLisi": 1.9148513519988315,
+                  "harmonypyBatchLisi": 1.9136797081903318,
+                  "scibBatchLisi": 1.9148513519988293,
+                  "nearestDistance": 9.057044010798075,
+                  "farthestDistance": 10.081688503819688
+                },
+                {
+                  "row": 27,
+                  "cytearcBatchLisi": 1.0771870649098334,
+                  "harmonypyBatchLisi": 1.0721897763631802,
+                  "scibBatchLisi": 1.0771870649098338,
+                  "nearestDistance": 10.726413531274654,
+                  "farthestDistance": 13.23665804367913
+                },
+                {
+                  "row": 42,
+                  "cytearcBatchLisi": 1.03497076374508,
+                  "harmonypyBatchLisi": 1.0367869248906236,
+                  "scibBatchLisi": 1.0349707637450802,
+                  "nearestDistance": 9.112910412250145,
+                  "farthestDistance": 12.204055536665928
+                },
+                {
+                  "row": 49,
+                  "cytearcBatchLisi": 1.9990189416877433,
+                  "harmonypyBatchLisi": 1.9989015145717484,
+                  "scibBatchLisi": 1.9990189416877437,
+                  "nearestDistance": 7.045268632349797,
+                  "farthestDistance": 9.62993579338462
+                }
+              ]
+            },
+            "defaultPerplexity30": {
+              "comparisonKind": "harmonypy default perplexity 30 (89 neighbours after dropping the cell)",
+              "perplexity": 30.0,
+              "neighbours": 90,
+              "iLISI": 2.220446049250313e-16,
+              "cLISI": 0.9953376035207434,
+              "medianBatchLisi": 1.0000000000000002,
+              "medianLabelLisi": 1.0559487577510782,
+              "seconds": 16.156310391000005
+            }
+          },
+          "categories": {
+            "batches": 2,
+            "labels": 13
+          }
+        },
+        "cytearcHarmony": {
+          "embedding": "CyteArc Harmony",
+          "cells": 18597,
+          "reported": {
+            "iLISI": 0.30277294857666526,
+            "cLISI": 1.0
+          },
+          "hnswGraph": {
+            "comparisonKind": "exact parity: identical neighbour arrays and perplexity",
+            "cytearc": {
+              "iLISI": 0.30277294857666526,
+              "cLISI": 1.0
+            },
+            "scibMetrics": {
+              "iLISI": 0.3027729485766646,
+              "cLISI": 1.0
+            },
+            "absDiffILISI": 6.661338147750939e-16,
+            "absDiffCLISI": 0.0,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 18597,
+              "pearson": 0.9999999999999999,
+              "maxAbsDiff": 2.6645352591003757e-15,
+              "meanAbsDiff": 3.98753759782829e-16
+            },
+            "perCellLabelLisiCyteArcVersusScib": {
+              "n": 18597,
+              "pearson": 0.9999999999999998,
+              "maxAbsDiff": 3.1086244689504383e-15,
+              "meanAbsDiff": 3.2604033052039735e-16
+            },
+            "recallAgainstExactKnn": 0.999953397501389,
+            "cytearcEqualsReported": true
+          },
+          "exactKnn": {
+            "comparisonKind": "exact parity on exact Euclidean neighbours",
+            "cytearc": {
+              "iLISI": 0.30276891441818776,
+              "cLISI": 1.0
+            },
+            "scibMetrics": {
+              "iLISI": 0.3027689144181869,
+              "cLISI": 1.0
+            },
+            "absDiffILISI": 8.881784197001252e-16,
+            "absDiffCLISI": 0.0,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 18597,
+              "pearson": 1.0,
+              "maxAbsDiff": 8.43769498715119e-15,
+              "meanAbsDiff": 5.221277933737495e-16
+            },
+            "cellsDifferingByMoreThan1e-6": 0
+          },
+          "harmonypy": {
+            "matchedPerplexity5": {
+              "comparisonKind": "perplexity 5: harmonypy's exact kd-tree search, 14 neighbours after dropping the cell, against 15 for CyteArc",
+              "perplexity": 5.0,
+              "neighbours": 15,
+              "iLISI": 0.3066132098256473,
+              "cLISI": 1.0,
+              "medianBatchLisi": 1.3066132098256473,
+              "medianLabelLisi": 1.0000000000000004,
+              "seconds": 15.131955295000012,
+              "perCellBatchLisiVersusCyteArcExactKnn": {
+                "n": 18597,
+                "pearson": 0.9997560743946617,
+                "maxAbsDiff": 0.05196848169389412,
+                "meanAbsDiff": 0.005032205413562752
+              },
+              "cellsDifferingByMoreThan1e-6": 16445,
+              "cellsWithHarmonypyFailureValueZero": 0,
+              "maxAbsDiffOtherCells": 0.05196848169389412,
+              "differingCells": [
+                {
+                  "row": 1,
+                  "cytearcBatchLisi": 1.0334940701522515,
+                  "harmonypyBatchLisi": 1.035848562931676,
+                  "scibBatchLisi": 1.0334940701522517,
+                  "nearestDistance": 4.518631236409961,
+                  "farthestDistance": 5.622458896876093
+                },
+                {
+                  "row": 2,
+                  "cytearcBatchLisi": 1.693243851497878,
+                  "harmonypyBatchLisi": 1.7090477545013365,
+                  "scibBatchLisi": 1.6932438514978774,
+                  "nearestDistance": 3.7778608706979364,
+                  "farthestDistance": 4.2842316088958725
+                },
+                {
+                  "row": 4,
+                  "cytearcBatchLisi": 1.056993185279687,
+                  "harmonypyBatchLisi": 1.0395131411553507,
+                  "scibBatchLisi": 1.0569931852796877,
+                  "nearestDistance": 4.828325370566651,
+                  "farthestDistance": 6.709335780384733
+                },
+                {
+                  "row": 5,
+                  "cytearcBatchLisi": 1.0414404461482292,
+                  "harmonypyBatchLisi": 1.0415804788645122,
+                  "scibBatchLisi": 1.0414404461482292,
+                  "nearestDistance": 5.545647093277394,
+                  "farthestDistance": 6.565197358923256
+                },
+                {
+                  "row": 6,
+                  "cytearcBatchLisi": 1.430693800412352,
+                  "harmonypyBatchLisi": 1.4339450315776616,
+                  "scibBatchLisi": 1.4306938004123528,
+                  "nearestDistance": 5.8367429875264865,
+                  "farthestDistance": 8.258339387259229
+                }
+              ]
+            },
+            "defaultPerplexity30": {
+              "comparisonKind": "harmonypy default perplexity 30 (89 neighbours after dropping the cell)",
+              "perplexity": 30.0,
+              "neighbours": 90,
+              "iLISI": 0.6666819926554393,
+              "cLISI": 0.9956484839157992,
+              "medianBatchLisi": 1.6666819926554393,
+              "medianLabelLisi": 1.052218193010409,
+              "seconds": 16.432478013999997
+            }
+          },
+          "categories": {
+            "batches": 2,
+            "labels": 13
+          }
+        },
+        "harmonypyCorrected": {
+          "embedding": "harmonypy Harmony (recomputed)",
+          "cells": 18597,
+          "reported": {
+            "iLISI": 0.29990305416126395,
+            "cLISI": 1.0
+          },
+          "exactKnn": {
+            "comparisonKind": "exact parity on exact Euclidean neighbours",
+            "cytearc": {
+              "iLISI": 0.37717146297893556,
+              "cLISI": 1.0
+            },
+            "scibMetrics": {
+              "iLISI": 0.3771714629789342,
+              "cLISI": 1.0
+            },
+            "absDiffILISI": 1.3322676295501878e-15,
+            "absDiffCLISI": 0.0,
+            "perCellBatchLisiCyteArcVersusScib": {
+              "n": 18597,
+              "pearson": 1.0,
+              "maxAbsDiff": 6.439293542825908e-15,
+              "meanAbsDiff": 5.526817614332836e-16
+            },
+            "cellsDifferingByMoreThan1e-6": 0
+          },
+          "harmonypy": {
+            "matchedPerplexity5": {
+              "comparisonKind": "perplexity 5: harmonypy's exact kd-tree search, 14 neighbours after dropping the cell, against 15 for CyteArc",
+              "perplexity": 5.0,
+              "neighbours": 15,
+              "iLISI": 0.38224299959681063,
+              "cLISI": 1.0,
+              "medianBatchLisi": 1.3822429995968106,
+              "medianLabelLisi": 1.0000000000000004,
+              "seconds": 15.209048787,
+              "perCellBatchLisiVersusCyteArcExactKnn": {
+                "n": 18597,
+                "pearson": 0.9997091072444019,
+                "maxAbsDiff": 0.04880691629621192,
+                "meanAbsDiff": 0.005659864445086962
+              },
+              "cellsDifferingByMoreThan1e-6": 17768,
+              "cellsWithHarmonypyFailureValueZero": 0,
+              "maxAbsDiffOtherCells": 0.04880691629621192,
+              "differingCells": [
+                {
+                  "row": 0,
+                  "cytearcBatchLisi": 1.0054189532534457,
+                  "harmonypyBatchLisi": 1.0056851767808919,
+                  "scibBatchLisi": 1.0054189532534459,
+                  "nearestDistance": 3.797494883155791,
+                  "farthestDistance": 4.22346003041097
+                },
+                {
+                  "row": 1,
+                  "cytearcBatchLisi": 1.0953818853190247,
+                  "harmonypyBatchLisi": 1.0842455885880826,
+                  "scibBatchLisi": 1.0953818853190247,
+                  "nearestDistance": 4.519966224956392,
+                  "farthestDistance": 5.592319143202407
+                },
+                {
+                  "row": 2,
+                  "cytearcBatchLisi": 1.1450338580912423,
+                  "harmonypyBatchLisi": 1.151640306626116,
+                  "scibBatchLisi": 1.1450338580912405,
+                  "nearestDistance": 3.7910343510953908,
+                  "farthestDistance": 4.399160163444319
+                },
+                {
+                  "row": 4,
+                  "cytearcBatchLisi": 1.1545985131640897,
+                  "harmonypyBatchLisi": 1.136668585609324,
+                  "scibBatchLisi": 1.1545985131640897,
+                  "nearestDistance": 4.836408652893991,
+                  "farthestDistance": 6.552731064246377
+                },
+                {
+                  "row": 5,
+                  "cytearcBatchLisi": 1.982276707605661,
+                  "harmonypyBatchLisi": 1.9816731679877262,
+                  "scibBatchLisi": 1.982276707605662,
+                  "nearestDistance": 5.440895629202095,
+                  "farthestDistance": 6.507436437675157
+                }
+              ]
+            },
+            "defaultPerplexity30": {
+              "comparisonKind": "harmonypy default perplexity 30 (89 neighbours after dropping the cell)",
+              "perplexity": 30.0,
+              "neighbours": 90,
+              "iLISI": 0.7394972719782846,
+              "cLISI": 0.9956868394159658,
+              "medianBatchLisi": 1.7394972719782846,
+              "medianLabelLisi": 1.0517579270084105,
+              "seconds": 16.63671712500002
+            }
+          },
+          "categories": {
+            "batches": 2,
+            "labels": 13
+          }
+        }
+      }
+    }
+  },
+  "notes": [
+    "scib-metrics lisi_knn masks self edges and uses distances as given; CyteArc subtracts each row's minimum distance before the Gaussian kernel, which leaves the normalised probabilities and entropies unchanged.",
+    "harmonypy 0.0.10 computes LISI with scikit-learn's exact kd-tree search of 3 x perplexity neighbours, the first of which is the cell itself and is dropped, so at perplexity 5 it uses 14 neighbours where CyteArc and scib-metrics use 15.",
+    "harmonypy and scib-metrics evaluate exp(-d * beta) without subtracting the row minimum. For an isolated cell whose neighbours are all far away and nearly equidistant, the perplexity search drives beta up until the kernel underflows: harmonypy then returns its failure value 0 and scib-metrics loses precision. differingCells lists such cells; CyteArc's centred kernel does not underflow.",
+    "The Kang uncorrected graph separates the two conditions completely for most cells, so the median batch LISI is exactly 1 and the scaled iLISI 0.",
+    "The Kang store holds 18,598 cells; the kang recipe and this record use the 18,597 cells of its I selection."
+  ],
+  "runtimeSeconds": 194.93348270200002
+}

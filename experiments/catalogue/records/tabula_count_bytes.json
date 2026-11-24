@@ -1,0 +1,14 @@
+{
+  "storeUri": "hf://buckets/Nygen/cytebase/cytearc_docs/tabula_sapiens/data.zarr",
+  "orientations": {
+    "counts": {
+      "bytes": 6875013851,
+      "objects": 276
+    },
+    "countsT": {
+      "bytes": 5323441024,
+      "objects": 308
+    }
+  },
+  "countChunkBytes": 12198454875
+}

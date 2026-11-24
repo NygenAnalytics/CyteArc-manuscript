@@ -1,0 +1,66 @@
+{
+ "runTag": "embryo_rna_scaling_10000000_cells_resource_trace_replicate_1",
+ "cells": 10000000,
+ "stages": {
+  "createStore": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "writeCountsT": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "initializeStore": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "reopenStore": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "filterCells": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "markHvgs": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "runNormalization": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "runPca": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "buildEmbeddingInitialization": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "buildAnnIndex": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "queryNeighbors": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "buildConnectivityMap": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "runUmap": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "runLeiden": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  },
+  "findMarkers": {
+   "memoryBudgetBytes": 51539607552,
+   "cpuLimit": 16.0
+  }
+ }
+}

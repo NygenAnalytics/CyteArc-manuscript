@@ -1,0 +1,531 @@
+{
+ "discovery": {
+  "stores": 82,
+  "cellsRead": 32896001,
+  "labelledProgenitors": 828260,
+  "candidates": 1560089,
+  "wallSeconds": 483.890271749,
+  "responseBytes": 5962226500
+ },
+ "extraction": {
+  "jobs": 8,
+  "stores": 72,
+  "cells": 83138,
+  "longestJobSeconds": 2076.8235579449997,
+  "responseBytes": 113454951548
+ },
+ "analysis": {
+  "stores": 64,
+  "cells": 83086,
+  "genes": 12677,
+  "studies": 41,
+  "donors": 2376,
+  "seconds": 450.520773097,
+  "peakBytes": 7503704064,
+  "clusters": 21,
+  "matureClusters": 3,
+  "progenitorClusters": 18
+ },
+ "progenitorCells": 78474,
+ "sources": {
+  "blood": {
+   "stores": 80,
+   "cellsRead": 31884117,
+   "candidates": 756180,
+   "selected": 33138,
+   "extracted": 33138,
+   "analysed": 33086,
+   "progenitors": 29758,
+   "extractedNotAnalysed": 52,
+   "candidateShare": 0.02371651063756917,
+   "selectedShare": 0.0010393262576473422
+  },
+  "enriched": {
+   "stores": 2,
+   "cellsRead": 1011884,
+   "candidates": 803909,
+   "selected": 790157,
+   "extracted": 50000,
+   "analysed": 50000,
+   "progenitors": 48716,
+   "extractedNotAnalysed": 0,
+   "candidateShare": 0.7944675476635662,
+   "selectedShare": 0.7808770570539706
+  }
+ },
+ "markerGenes": [
+  "CD34",
+  "SPINK2",
+  "PROM1",
+  "CRHBP"
+ ],
+ "donors": 2051,
+ "covid": [
+  {
+   "stores": [
+    "liu_2021_time_resolved_systems_fatal_covid_19_adaptive_cells_21d3e683",
+    "liu_2021_time_resolved_systems_fatal_covid_19_innate_cells_30cd5311"
+   ],
+   "healthyDonors": 11,
+   "covidDonors": 23,
+   "healthyPer10k": 5.641343303393655,
+   "covidPer10k": 4.8970568688218385,
+   "ratio": 0.8680011028579758,
+   "low": 0.3833548716787988,
+   "high": 1.9653484805429435
+  },
+  {
+   "stores": [
+    "jin_2021_individual_single_cell_rna_seq_data_schulte_schrepping_et_al_5e717147"
+   ],
+   "healthyDonors": 7,
+   "covidDonors": 7,
+   "healthyPer10k": 0.3777005589968273,
+   "covidPer10k": 0.5026893882270145,
+   "ratio": 1.330937060124544,
+   "low": 0.12623431963053727,
+   "high": 14.032582131368713
+  },
+  {
+   "stores": [
+    "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c"
+   ],
+   "healthyDonors": 20,
+   "covidDonors": 120,
+   "healthyPer10k": 1.261839604413284,
+   "covidPer10k": 1.8638842602429762,
+   "ratio": 1.4772055725614923,
+   "low": 0.5226511080920522,
+   "high": 4.175129966858114
+  },
+  {
+   "stores": [
+    "yoshida_2022_pbmc_2a498ace"
+   ],
+   "healthyDonors": 30,
+   "covidDonors": 11,
+   "healthyPer10k": 24.706052081079132,
+   "covidPer10k": 38.25935019355616,
+   "ratio": 1.550689007609406,
+   "low": 0.17665042701747494,
+   "high": 13.612400710940642
+  },
+  {
+   "stores": [
+    "jin_2021_individual_single_cell_rna_seq_pbmc_data_arunachalam_et_al_59b69042"
+   ],
+   "healthyDonors": 5,
+   "covidDonors": 5,
+   "healthyPer10k": 102.87431609771134,
+   "covidPer10k": 181.71015497351092,
+   "ratio": 1.7805143343891225,
+   "low": 0.9369348577037,
+   "high": 3.3836197563776693
+  },
+  {
+   "stores": [
+    "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff"
+   ],
+   "healthyDonors": 10,
+   "covidDonors": 74,
+   "healthyPer10k": 14.207472479800444,
+   "covidPer10k": 34.57796418663747,
+   "ratio": 2.43876211276243,
+   "low": 1.0441430585129574,
+   "high": 5.696116632826004
+  },
+  {
+   "stores": [
+    "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7"
+   ],
+   "healthyDonors": 10,
+   "covidDonors": 39,
+   "healthyPer10k": 6.815631913934297,
+   "covidPer10k": 20.042940662190215,
+   "ratio": 2.9446286970057782,
+   "low": 0.609216832457188,
+   "high": 14.232761967947232
+  },
+  {
+   "stores": [
+    "cambridge_2021_single_cell_multi_omics_immune_response_covid_19_c7775e88"
+   ],
+   "healthyDonors": 17,
+   "covidDonors": 70,
+   "healthyPer10k": 14.039125431530495,
+   "covidPer10k": 56.923945550625035,
+   "ratio": 4.072152550639544,
+   "low": 0.747419480523253,
+   "high": 22.186237886215007
+  }
+ ],
+ "selections": {
+  "default": {
+   "ratio": 1.6859595560993101,
+   "low": 1.1668207051228856,
+   "high": 2.436072322270991,
+   "p": 0.0054099073482453556,
+   "studies": 8,
+   "tau2": 0.0
+  },
+  "progenitorStates": {
+   "ratio": 1.6902255696504513,
+   "low": 1.1466760512181793,
+   "high": 2.491429443621138,
+   "p": 0.008017006696009445,
+   "studies": 7,
+   "tau2": 0.0
+  },
+  "stemAndMultipotent": {
+   "ratio": 1.787966471472908,
+   "low": 1.20790124092358,
+   "high": 2.6465939389771136,
+   "p": 0.003685460792769501,
+   "studies": 7,
+   "tau2": 0.0
+  },
+  "withoutMegakaryocytic": {
+   "ratio": 1.6985925559723303,
+   "low": 1.1520378370735382,
+   "high": 2.504446102685116,
+   "p": 0.00748596061838385,
+   "studies": 7,
+   "tau2": 0.0
+  },
+  "labelsOnly": {
+   "ratio": 2.088972066564212,
+   "low": 1.2866018406208062,
+   "high": 3.391728627389456,
+   "p": 0.002891400821578356,
+   "studies": 4,
+   "tau2": 0.0
+  },
+  "markersOnly": {
+   "ratio": 1.6264901216852128,
+   "low": 1.118842738096621,
+   "high": 2.3644700241251604,
+   "p": 0.010826587367854912,
+   "studies": 8,
+   "tau2": 0.0
+  }
+ },
+ "diseases": [
+  {
+   "disease": "sepsis",
+   "studies": 1,
+   "cases": 22,
+   "healthy": 10,
+   "ratio": 5.117783751587077,
+   "low": 1.131149883854822,
+   "high": 23.154942507486737,
+   "p": 0.03400809161644854
+  },
+  {
+   "disease": "respiratory system disorder",
+   "studies": 1,
+   "cases": 11,
+   "healthy": 10,
+   "ratio": 1.8842886004236143,
+   "low": 0.43833494161064523,
+   "high": 8.100069587516899,
+   "p": 0.3945013970988667
+  },
+  {
+   "disease": "COVID-19",
+   "studies": 8,
+   "cases": 349,
+   "healthy": 110,
+   "ratio": 1.6859595560993101,
+   "low": 1.1668207051228856,
+   "high": 2.436072322270991,
+   "p": 0.0054099073482453556
+  },
+  {
+   "disease": "clonal hematopoiesis",
+   "studies": 1,
+   "cases": 12,
+   "healthy": 5,
+   "ratio": 1.6230573765192176,
+   "low": 0.3166212967354408,
+   "high": 8.320082302216706,
+   "p": 0.5613765761167798
+  },
+  {
+   "disease": "juvenile dermatomyositis",
+   "studies": 1,
+   "cases": 9,
+   "healthy": 5,
+   "ratio": 1.061007728741915,
+   "low": 0.2221933448480008,
+   "high": 5.066476681469364,
+   "p": 0.9408201271134833
+  },
+  {
+   "disease": "cytomegalovirus infection",
+   "studies": 3,
+   "cases": 209,
+   "healthy": 198,
+   "ratio": 0.8855145492079134,
+   "low": 0.7754020776702553,
+   "high": 1.0112637552054033,
+   "p": 0.07271136374570211
+  },
+  {
+   "disease": "systemic lupus erythematosus",
+   "studies": 1,
+   "cases": 158,
+   "healthy": 93,
+   "ratio": 0.806364860234134,
+   "low": 0.5966734239462529,
+   "high": 1.0897490347734766,
+   "p": 0.16132599955805926
+  },
+  {
+   "disease": "post-COVID-19 disorder",
+   "studies": 1,
+   "cases": 16,
+   "healthy": 30,
+   "ratio": 0.7507853723345863,
+   "low": 0.07375045045264257,
+   "high": 7.643053999697792,
+   "p": 0.8086965286884819
+  },
+  {
+   "disease": "rheumatoid arthritis",
+   "studies": 2,
+   "cases": 24,
+   "healthy": 61,
+   "ratio": 0.7217048010906526,
+   "low": 0.468937871436053,
+   "high": 1.110718181754543,
+   "p": 0.13817828009099048
+  }
+ ],
+ "diseaseStudies": 15,
+ "cohorts": {
+  "cohorts": [
+   {
+    "cohort": "healthy",
+    "donorsPer10k": [
+     4.909180166912126,
+     10.087000378262514,
+     10.177541558294696,
+     10.24152940172399,
+     10.567101091933779,
+     12.164393083673648,
+     15.664160401002505,
+     18.81821603312006,
+     19.904898816764348,
+     25.484663693455904
+    ],
+    "per10k": 14.207472479800444
+   },
+   {
+    "cohort": "mild",
+    "donorsPer10k": [
+     0.0,
+     2.1208907741251326,
+     4.9146086742843105,
+     5.694760820045558,
+     6.676681689200468,
+     8.406893652795292,
+     8.574858514834505,
+     9.317493594223155,
+     10.111223458038424,
+     10.583254938852305,
+     13.408420488066506,
+     13.955652039075826,
+     14.418455623197692,
+     15.010917030567686,
+     15.513496742165685,
+     18.6219739292365,
+     20.0133422281521,
+     20.99370188943317,
+     21.25224783390551,
+     21.391899600684543,
+     22.915564956812975,
+     23.37886058816291,
+     23.722916337181715,
+     24.43494196701283,
+     27.198549410698096,
+     31.265031265031265,
+     33.11258278145695,
+     36.89469638739431,
+     44.51982192071232
+    ],
+    "per10k": 16.609786142692705
+   },
+   {
+    "cohort": "severe",
+    "donorsPer10k": [
+     5.925925925925926,
+     6.656681644200367,
+     8.425782895660722,
+     8.536793580331228,
+     9.697753353806368,
+     11.398176291793312,
+     15.310028068384792,
+     18.653552653891808,
+     19.518542615484712,
+     19.743336623889437,
+     19.76284584980237,
+     20.087655222790357,
+     20.856730306433498,
+     22.218695445167434,
+     23.161551823972204,
+     24.5861334207507,
+     26.88516195109461,
+     28.78653675819309,
+     29.356259173830992,
+     29.915692140331792,
+     35.97122302158274,
+     36.56016531553012,
+     40.066777963272116,
+     45.83283078036425,
+     46.7968371792803,
+     57.126933259021875,
+     58.927519151443725,
+     77.42389582966743,
+     80.8942491542874,
+     104.21962379257754,
+     107.16300056401579,
+     113.08752503239486
+    ],
+    "per10k": 37.40948107490911
+   },
+   {
+    "cohort": "critical",
+    "donorsPer10k": [
+     20.397062822953494,
+     21.332069210713442,
+     38.57280617164899,
+     57.4088440651668,
+     57.6169624337405,
+     83.26724821570183,
+     88.39779005524862,
+     99.84468604393166,
+     117.31701096659015,
+     122.40868706811452,
+     147.9795105293113,
+     169.4915254237288,
+     242.2360248447205
+    ],
+    "per10k": 86.95500034991952
+   },
+   {
+    "cohort": "sepsis",
+    "donorsPer10k": [
+     6.975585450921773,
+     10.375237765865469,
+     18.111567254286406,
+     22.342802425789976,
+     30.545323870272213,
+     30.989272943980932,
+     35.02155172413793,
+     35.36829155774258,
+     37.0522848909016,
+     39.174719247845395,
+     43.17656129529684,
+     44.747081712062254,
+     55.02063273727648,
+     58.06614491290078,
+     67.2520082196899,
+     77.98440311937613,
+     108.34515671353024,
+     132.92910447761193,
+     137.84653086230662,
+     181.4753711996229,
+     426.5791632485644,
+     510.064043915828
+    ],
+    "per10k": 72.28786395397181
+   }
+  ],
+  "trend": {
+   "ratio": 2.050903288443856,
+   "low": 1.6938634329706883,
+   "high": 2.4832015478207734,
+   "p": 1.83417293763138e-13
+  },
+  "sepsis": {
+   "ratio": 5.117783751587077,
+   "low": 1.131149883854822,
+   "high": 23.154942507486737,
+   "p": 0.03400809161644854
+  },
+  "tooFewDonors": [
+   {
+    "cohort": "influenza",
+    "donors": 3
+   }
+  ]
+ },
+ "cohortRecords": {
+  "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff": {
+   "relabelled": {
+    "sepsis": {
+     "samples": 25,
+     "donors": 23
+    }
+   },
+   "excluded": {
+    "samples": 2,
+    "donors": 2
+   }
+  }
+ },
+ "sourceStudies": {
+  "marteau_2026_single_cell_colorectal_cancer_atlas_core_atlas_05a8c945": {
+   "Che_2021_Cell_Discov": {
+    "samples": 3,
+    "donors": 3
+   },
+   "Chen_2024_Cancer_Cell": {
+    "samples": 53,
+    "donors": 20
+   },
+   "MUI_Innsbruck": {
+    "samples": 12,
+    "donors": 12
+   },
+   "Sathe_2023_Clin_Cancer_Res": {
+    "samples": 2,
+    "donors": 2
+   },
+   "Zheng_2022_Signal_Transduct_Target_Ther": {
+    "samples": 1,
+    "donors": 1
+   }
+  }
+ },
+ "stateShares": {
+  "blood": {
+   "HSC/MPP": 0.4831305867329794,
+   "lymphoid-primed": 0.13670273539888433,
+   "B-lymphoid": 0.003125210027555615,
+   "myeloid": 0.04129981853619195,
+   "erythroid": 0.15320250016802203,
+   "megakaryocyte": 0.05312857046844546,
+   "basophil/mast": 0.038409839370925465,
+   "dendritic": 0.037099267423886015,
+   "cycling": 0.05390147187310975
+  },
+  "enriched": {
+   "HSC/MPP": 0.5180844075868298,
+   "lymphoid-primed": 0.14910912225962722,
+   "B-lymphoid": 0.002052713687494868,
+   "myeloid": 0.05178996633549553,
+   "erythroid": 0.14999178914525002,
+   "megakaryocyte": 0.02522785121931193,
+   "basophil/mast": 0.034033992938664916,
+   "dendritic": 0.02508416126118729,
+   "cycling": 0.044625995566138436
+  }
+ },
+ "source": [
+  ".build/derived/reuse/blood_progenitors.json",
+  "experiments/reuse/records/blood_progenitors/progenitor_cells.parquet",
+  "experiments/reuse/records/blood_progenitors/severity.json",
+  "experiments/reuse/records/blood_progenitors/source_studies.json"
+ ]
+}

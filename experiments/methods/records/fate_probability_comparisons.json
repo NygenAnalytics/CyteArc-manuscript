@@ -1,0 +1,149 @@
+{
+  "results": {
+    "pancreas_larry_fate_prediction": {
+      "result": {
+        "experiment": "cellrank",
+        "larry": {
+          "bytes": 1525906928,
+          "cellrank": {
+            "auroc": 0.7632665968982391,
+            "aurocCi": [
+              0.72602278364514,
+              0.8003808959462644
+            ],
+            "bootstrapUnit": "clone",
+            "cells": 1110,
+            "clonesEvaluated": 725,
+            "negatives": 519,
+            "pearson": 0.4324063520255566,
+            "positives": 591,
+            "spearman": 0.478370787849798,
+            "spearmanCi": [
+              0.4129008668188945,
+              0.5391587685827304
+            ]
+          },
+          "cells": 130887,
+          "cellsWithClone": 49302,
+          "cloneKey": "Clone",
+          "clones": 5864,
+          "cytearc": {
+            "auroc": 0.7632665968982391,
+            "aurocCi": [
+              0.7274789865399681,
+              0.7989434528113978
+            ],
+            "bootstrapUnit": "clone",
+            "cells": 1110,
+            "clonesEvaluated": 725,
+            "negatives": 519,
+            "pearson": 0.4324059126763649,
+            "positives": 591,
+            "spearman": 0.478370787849798,
+            "spearmanCi": [
+              0.41046225061646635,
+              0.5407889778687506
+            ]
+          },
+          "cytearcVsCellrankPearson": 0.9999999999465047,
+          "earliestTime": "2.0",
+          "evaluatedProgenitors": 1110,
+          "hasRaw": false,
+          "inspection": {
+            "integerLike": false,
+            "matrixKey": "X",
+            "nCells": 130887,
+            "nFeatures": 25289
+          },
+          "layers": [],
+          "normalization": "identity: X is log-normalised",
+          "obsColumns": [
+            "Cell type annotation",
+            "Cell type annotation short",
+            "Clone",
+            "Library",
+            "Starting population",
+            "Time point",
+            "Well",
+            "_index"
+          ],
+          "obsmKeys": [
+            "X_pca",
+            "X_pca_harmony",
+            "X_spring",
+            "X_tsne",
+            "X_umap"
+          ],
+          "sourceStates": [
+            "Baso",
+            "Ccr7_DC",
+            "Eos",
+            "Erythroid",
+            "Lymphoid",
+            "Mast",
+            "Meg",
+            "Monocyte",
+            "Neutrophil",
+            "Undifferentiated",
+            "pDC"
+          ],
+          "stateColumn": "Cell type annotation",
+          "terminalClusters": {
+            "12": "Neutrophil",
+            "9": "Monocyte"
+          },
+          "timeColumn": "Time point"
+        },
+        "pancreas": {
+          "cellrankDefaults": {
+            "agreement": {
+              "Alpha": {
+                "cells": 3696,
+                "maxAbsDiff": 0.22384197439289255,
+                "meanAbsDiff": 0.03967372107886551,
+                "pearson": 0.9849548908817067
+              },
+              "Beta": {
+                "cells": 3696,
+                "maxAbsDiff": 0.22384189744089084,
+                "meanAbsDiff": 0.03967350614609996,
+                "pearson": 0.9849549187690824
+              }
+            },
+            "b": 10.0,
+            "normalizedPseudotime": false,
+            "nu": 0.5,
+            "seconds": 1.365274629
+          },
+          "cells": 3696,
+          "matchedCyteArc": {
+            "agreement": {
+              "Alpha": {
+                "cells": 3696,
+                "maxAbsDiff": 4.3132057472305974e-05,
+                "meanAbsDiff": 1.2826934638044107e-05,
+                "pearson": 0.9999999979323224
+              },
+              "Beta": {
+                "cells": 3696,
+                "maxAbsDiff": 3.6461362942163955e-05,
+                "meanAbsDiff": 1.153276614408274e-05,
+                "pearson": 0.999999998515902
+              }
+            },
+            "b": 10.0,
+            "normalizedPseudotime": true,
+            "nu": 1.0,
+            "seconds": 3.2455308810000005
+          },
+          "implementationSeconds": 2.5202994850000007,
+          "terminalClusters": {
+            "11": "Beta",
+            "3": "Alpha"
+          }
+        },
+        "wallSeconds": 411.07352483299996
+      }
+    }
+  }
+}

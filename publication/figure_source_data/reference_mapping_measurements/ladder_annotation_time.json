@@ -1,0 +1,165 @@
+{
+ "sizes": [
+  {
+   "part": "reference_500000",
+   "cells": 500003,
+   "nonzeros": 689239787,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_1500000",
+   "cells": 1499999,
+   "nonzeros": 2068765663,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_3000000",
+   "cells": 2999999,
+   "nonzeros": 4137339630,
+   "overRLimit": true
+  },
+  {
+   "part": "reference_all",
+   "cells": 4292870,
+   "nonzeros": 5920720691,
+   "overRLimit": true
+  }
+ ],
+ "methods": {
+  "seurat_map": [
+   {
+    "part": "reference_500000",
+    "buildSeconds": 504.0840799808502,
+    "storedSeconds": 405.5988004207611,
+    "registrationSeconds": null,
+    "annotationSeconds": 378.69981026649475
+   },
+   {
+    "part": "reference_1500000",
+    "buildSeconds": 1364.9821195602417,
+    "storedSeconds": 771.0065002441406,
+    "registrationSeconds": null,
+    "annotationSeconds": 707.1229801177979
+   }
+  ],
+  "symphony": [
+   {
+    "part": "reference_500000",
+    "buildSeconds": 209.81028985977173,
+    "storedSeconds": 909.111120223999,
+    "registrationSeconds": null,
+    "annotationSeconds": 907.7227201461792
+   },
+   {
+    "part": "reference_1500000",
+    "buildSeconds": 616.7424297332764,
+    "storedSeconds": 2750.8603899478912,
+    "registrationSeconds": null,
+    "annotationSeconds": 2745.4588899612427
+   }
+  ],
+  "celltypist_hvg": [
+   {
+    "part": "reference_500000",
+    "buildSeconds": 440.22970151901245,
+    "storedSeconds": 1.6798443794250488,
+    "registrationSeconds": null,
+    "annotationSeconds": 1.6795246601104736
+   },
+   {
+    "part": "reference_1500000",
+    "buildSeconds": 2444.4646520614624,
+    "storedSeconds": 4.330483675003052,
+    "registrationSeconds": null,
+    "annotationSeconds": 4.329578161239624
+   },
+   {
+    "part": "reference_3000000",
+    "buildSeconds": 4552.605549097061,
+    "storedSeconds": 2.1692326068878174,
+    "registrationSeconds": null,
+    "annotationSeconds": 2.1688432693481445
+   },
+   {
+    "part": "reference_all",
+    "buildSeconds": 6708.25680232048,
+    "storedSeconds": 2.208904504776001,
+    "registrationSeconds": null,
+    "annotationSeconds": 2.208528995513916
+   }
+  ],
+  "celltypist": [
+   {
+    "part": "reference_500000",
+    "buildSeconds": 489.3224632740021,
+    "storedSeconds": 1.8777334690093994,
+    "registrationSeconds": null,
+    "annotationSeconds": 1.8772742748260498
+   }
+  ],
+  "unintegrated": [
+   {
+    "part": "reference_500000",
+    "buildSeconds": 175.267007829,
+    "storedSeconds": 31.002610594000004,
+    "registrationSeconds": 2.757164388999996,
+    "annotationSeconds": 28.245446205000007
+   },
+   {
+    "part": "reference_1500000",
+    "buildSeconds": 511.02830851500005,
+    "storedSeconds": 34.896877667000126,
+    "registrationSeconds": 5.689969344000019,
+    "annotationSeconds": 29.206908323000107
+   },
+   {
+    "part": "reference_3000000",
+    "buildSeconds": 1552.936467256,
+    "storedSeconds": 68.45114507199969,
+    "registrationSeconds": 16.69786842099984,
+    "annotationSeconds": 51.75327665099985
+   },
+   {
+    "part": "reference_all",
+    "buildSeconds": 1691.703802139,
+    "storedSeconds": 65.5501787570006,
+    "registrationSeconds": 15.081534033000025,
+    "annotationSeconds": 50.46864472400057
+   }
+  ],
+  "integrated": [
+   {
+    "part": "reference_500000",
+    "buildSeconds": 369.048626727,
+    "storedSeconds": 20.472434853999914,
+    "registrationSeconds": 2.191279346999977,
+    "annotationSeconds": 18.281155506999937
+   },
+   {
+    "part": "reference_1500000",
+    "buildSeconds": 1322.936891666,
+    "storedSeconds": 36.87448544499989,
+    "registrationSeconds": 5.689511363999827,
+    "annotationSeconds": 31.184974081000064
+   },
+   {
+    "part": "reference_3000000",
+    "buildSeconds": 3602.088386078,
+    "storedSeconds": 62.80608424899947,
+    "registrationSeconds": 15.346543827999994,
+    "annotationSeconds": 47.459540420999474
+   },
+   {
+    "part": "reference_all",
+    "buildSeconds": 6130.846588210001,
+    "storedSeconds": 74.05111933499938,
+    "registrationSeconds": 22.50036811999962,
+    "annotationSeconds": 51.550751214999764
+   }
+  ]
+ },
+ "source": [
+  "experiments/mapping/records/reference_ladder.json",
+  ".build/derived/mapping/reference_ladder.json"
+ ]
+}

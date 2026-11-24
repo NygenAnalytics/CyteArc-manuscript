@@ -1,0 +1,749 @@
+{
+ "cells": 95624334,
+ "cellsKept": 83881526,
+ "leidenClusters": 43,
+ "cellLines": 50,
+ "medianPurity": 0.9588559968072989,
+ "analysisHours": 8.097776168826666,
+ "peakAnalysisGiB": 77.88248062133789,
+ "raster": "experiments/benchmarks/records/tahoe_umap_raster.npz",
+ "clusters": [
+  {
+   "cellLines": 50,
+   "cells": 5388450,
+   "cluster": 1,
+   "commonestCellLine": "CVCL_0459",
+   "commonestCellLineFraction": 0.9736105930276796,
+   "composition": [
+    {
+     "cellLine": 19,
+     "share": 0.9736105930276796
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 5204620,
+   "cluster": 2,
+   "commonestCellLine": "CVCL_1119",
+   "commonestCellLineFraction": 0.4083562296574966,
+   "composition": [
+    {
+     "cellLine": 28,
+     "share": 0.4083562296574966
+    },
+    {
+     "cellLine": 38,
+     "share": 0.293866026722412
+    },
+    {
+     "cellLine": 41,
+     "share": 0.27780990735154537
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 4288248,
+   "cluster": 3,
+   "commonestCellLine": "CVCL_1666",
+   "commonestCellLineFraction": 0.35506551859873775,
+   "composition": [
+    {
+     "cellLine": 42,
+     "share": 0.35506551859873775
+    },
+    {
+     "cellLine": 11,
+     "share": 0.3498347110521593
+    },
+    {
+     "cellLine": 30,
+     "share": 0.22080579294854216
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 4226436,
+   "cluster": 4,
+   "commonestCellLine": "CVCL_1717",
+   "commonestCellLineFraction": 0.3388202258356686,
+   "composition": [
+    {
+     "cellLine": 46,
+     "share": 0.3388202258356686
+    },
+    {
+     "cellLine": 8,
+     "share": 0.3179461371235717
+    },
+    {
+     "cellLine": 47,
+     "share": 0.17865004935600587
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 4042852,
+   "cluster": 5,
+   "commonestCellLine": "CVCL_0546",
+   "commonestCellLineFraction": 0.9698875942033001,
+   "composition": [
+    {
+     "cellLine": 22,
+     "share": 0.9698875942033001
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 3603123,
+   "cluster": 6,
+   "commonestCellLine": "CVCL_0399",
+   "commonestCellLineFraction": 0.5696155807059599,
+   "composition": [
+    {
+     "cellLine": 17,
+     "share": 0.5696155807059599
+    },
+    {
+     "cellLine": 16,
+     "share": 0.39035497816755077
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 3368052,
+   "cluster": 7,
+   "commonestCellLine": "CVCL_0480",
+   "commonestCellLineFraction": 0.9907139200938703,
+   "composition": [
+    {
+     "cellLine": 20,
+     "share": 0.9907139200938703
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 3054467,
+   "cluster": 8,
+   "commonestCellLine": "CVCL_1285",
+   "commonestCellLineFraction": 0.9588559968072989,
+   "composition": [
+    {
+     "cellLine": 31,
+     "share": 0.9588559968072989
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 2284747,
+   "cluster": 9,
+   "commonestCellLine": "CVCL_0023",
+   "commonestCellLineFraction": 0.9757426095755898,
+   "composition": [
+    {
+     "cellLine": 0,
+     "share": 0.9757426095755898
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 2245331,
+   "cluster": 10,
+   "commonestCellLine": "CVCL_1056",
+   "commonestCellLineFraction": 0.99110554301348,
+   "composition": [
+    {
+     "cellLine": 24,
+     "share": 0.99110554301348
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 2202976,
+   "cluster": 11,
+   "commonestCellLine": "CVCL_0428",
+   "commonestCellLineFraction": 0.9931610693897709,
+   "composition": [
+    {
+     "cellLine": 18,
+     "share": 0.9931610693897709
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 2176494,
+   "cluster": 12,
+   "commonestCellLine": "CVCL_0359",
+   "commonestCellLineFraction": 0.9763417679993605,
+   "composition": [
+    {
+     "cellLine": 13,
+     "share": 0.9763417679993605
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 2173020,
+   "cluster": 13,
+   "commonestCellLine": "CVCL_1693",
+   "commonestCellLineFraction": 0.9339821998877139,
+   "composition": [
+    {
+     "cellLine": 43,
+     "share": 0.9339821998877139
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 2158727,
+   "cluster": 14,
+   "commonestCellLine": "CVCL_0131",
+   "commonestCellLineFraction": 0.9904610448657936,
+   "composition": [
+    {
+     "cellLine": 4,
+     "share": 0.9904610448657936
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 2016459,
+   "cluster": 15,
+   "commonestCellLine": "CVCL_1097",
+   "commonestCellLineFraction": 0.9523079814665213,
+   "composition": [
+    {
+     "cellLine": 26,
+     "share": 0.9523079814665213
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1992380,
+   "cluster": 16,
+   "commonestCellLine": "CVCL_0371",
+   "commonestCellLineFraction": 0.980143346148827,
+   "composition": [
+    {
+     "cellLine": 15,
+     "share": 0.980143346148827
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1988812,
+   "cluster": 17,
+   "commonestCellLine": "CVCL_0152",
+   "commonestCellLineFraction": 0.973823569045239,
+   "composition": [
+    {
+     "cellLine": 5,
+     "share": 0.973823569045239
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1929514,
+   "cluster": 18,
+   "commonestCellLine": "CVCL_0504",
+   "commonestCellLineFraction": 0.9862110355250079,
+   "composition": [
+    {
+     "cellLine": 21,
+     "share": 0.9862110355250079
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1929300,
+   "cluster": 19,
+   "commonestCellLine": "CVCL_0293",
+   "commonestCellLineFraction": 0.9453698232519566,
+   "composition": [
+    {
+     "cellLine": 9,
+     "share": 0.9453698232519566
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1881412,
+   "cluster": 20,
+   "commonestCellLine": "CVCL_0334",
+   "commonestCellLineFraction": 0.9827182988096175,
+   "composition": [
+    {
+     "cellLine": 12,
+     "share": 0.9827182988096175
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1795631,
+   "cluster": 21,
+   "commonestCellLine": "CVCL_1381",
+   "commonestCellLineFraction": 0.9752087149308516,
+   "composition": [
+    {
+     "cellLine": 32,
+     "share": 0.9752087149308516
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1778532,
+   "cluster": 22,
+   "commonestCellLine": "CVCL_1547",
+   "commonestCellLineFraction": 0.8466465601968365,
+   "composition": [
+    {
+     "cellLine": 37,
+     "share": 0.8466465601968365
+    },
+    {
+     "cellLine": 45,
+     "share": 0.0828278602802761
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1725434,
+   "cluster": 23,
+   "commonestCellLine": "CVCL_1731",
+   "commonestCellLineFraction": 0.8202214631217422,
+   "composition": [
+    {
+     "cellLine": 48,
+     "share": 0.8202214631217422
+    },
+    {
+     "cellLine": 34,
+     "share": 0.09594977263691339
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1704209,
+   "cluster": 24,
+   "commonestCellLine": "CVCL_1478",
+   "commonestCellLineFraction": 0.9375070780637821,
+   "composition": [
+    {
+     "cellLine": 33,
+     "share": 0.9375070780637821
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1698438,
+   "cluster": 25,
+   "commonestCellLine": "CVCL_0320",
+   "commonestCellLineFraction": 0.9629424212129026,
+   "composition": [
+    {
+     "cellLine": 10,
+     "share": 0.9629424212129026
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1602752,
+   "cluster": 26,
+   "commonestCellLine": "CVCL_0546",
+   "commonestCellLineFraction": 0.9213090983508365,
+   "composition": [
+    {
+     "cellLine": 22,
+     "share": 0.9213090983508365
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1512844,
+   "cluster": 27,
+   "commonestCellLine": "CVCL_1495",
+   "commonestCellLineFraction": 0.9749524736192231,
+   "composition": [
+    {
+     "cellLine": 34,
+     "share": 0.9749524736192231
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1492934,
+   "cluster": 28,
+   "commonestCellLine": "CVCL_C466",
+   "commonestCellLineFraction": 0.9402813520222595,
+   "composition": [
+    {
+     "cellLine": 49,
+     "share": 0.9402813520222595
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1448569,
+   "cluster": 29,
+   "commonestCellLine": "CVCL_1094",
+   "commonestCellLineFraction": 0.9498539593212336,
+   "composition": [
+    {
+     "cellLine": 25,
+     "share": 0.9498539593212336
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1414466,
+   "cluster": 30,
+   "commonestCellLine": "CVCL_0069",
+   "commonestCellLineFraction": 0.9723118123730086,
+   "composition": [
+    {
+     "cellLine": 2,
+     "share": 0.9723118123730086
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1409374,
+   "cluster": 31,
+   "commonestCellLine": "CVCL_1517",
+   "commonestCellLineFraction": 0.9750286297320654,
+   "composition": [
+    {
+     "cellLine": 35,
+     "share": 0.9750286297320654
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1318654,
+   "cluster": 32,
+   "commonestCellLine": "CVCL_0218",
+   "commonestCellLineFraction": 0.958268052119813,
+   "composition": [
+    {
+     "cellLine": 7,
+     "share": 0.958268052119813
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1254360,
+   "cluster": 33,
+   "commonestCellLine": "CVCL_0366",
+   "commonestCellLineFraction": 0.9135256226282726,
+   "composition": [
+    {
+     "cellLine": 14,
+     "share": 0.9135256226282726
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1128151,
+   "cluster": 34,
+   "commonestCellLine": "CVCL_1098",
+   "commonestCellLineFraction": 0.9182290313973928,
+   "composition": [
+    {
+     "cellLine": 27,
+     "share": 0.9182290313973928
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1106278,
+   "cluster": 35,
+   "commonestCellLine": "CVCL_1055",
+   "commonestCellLineFraction": 0.9874091322434325,
+   "composition": [
+    {
+     "cellLine": 23,
+     "share": 0.9874091322434325
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 1041392,
+   "cluster": 36,
+   "commonestCellLine": "CVCL_0099",
+   "commonestCellLineFraction": 0.9632559113186965,
+   "composition": [
+    {
+     "cellLine": 3,
+     "share": 0.9632559113186965
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 998537,
+   "cluster": 37,
+   "commonestCellLine": "CVCL_0179",
+   "commonestCellLineFraction": 0.9714201877346558,
+   "composition": [
+    {
+     "cellLine": 6,
+     "share": 0.9714201877346558
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 535858,
+   "cluster": 38,
+   "commonestCellLine": "CVCL_1125",
+   "commonestCellLineFraction": 0.9109876123898496,
+   "composition": [
+    {
+     "cellLine": 29,
+     "share": 0.9109876123898496
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 487381,
+   "cluster": 39,
+   "commonestCellLine": "CVCL_0028",
+   "commonestCellLineFraction": 0.9448090918603721,
+   "composition": [
+    {
+     "cellLine": 1,
+     "share": 0.9448090918603721
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 125397,
+   "cluster": 40,
+   "commonestCellLine": "CVCL_0459",
+   "commonestCellLineFraction": 0.24810003429109148,
+   "composition": [
+    {
+     "cellLine": 19,
+     "share": 0.24810003429109148
+    },
+    {
+     "cellLine": 22,
+     "share": 0.06275269743295295
+    },
+    {
+     "cellLine": 31,
+     "share": 0.061915356826718344
+    },
+    {
+     "cellLine": 10,
+     "share": 0.0597701699402697
+    },
+    {
+     "cellLine": 20,
+     "share": 0.052728534175458745
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 73056,
+   "cluster": 41,
+   "commonestCellLine": "CVCL_1285",
+   "commonestCellLineFraction": 0.2135621988611476,
+   "composition": [
+    {
+     "cellLine": 31,
+     "share": 0.2135621988611476
+    },
+    {
+     "cellLine": 14,
+     "share": 0.12575284713096802
+    },
+    {
+     "cellLine": 49,
+     "share": 0.08201927288655278
+    },
+    {
+     "cellLine": 11,
+     "share": 0.07833716600963644
+    },
+    {
+     "cellLine": 22,
+     "share": 0.07417597459483136
+    },
+    {
+     "cellLine": 10,
+     "share": 0.06505968024529128
+    }
+   ]
+  },
+  {
+   "cellLines": 50,
+   "cells": 70919,
+   "cluster": 42,
+   "commonestCellLine": "CVCL_1577",
+   "commonestCellLineFraction": 0.9867877437640125,
+   "composition": [
+    {
+     "cellLine": 40,
+     "share": 0.9867877437640125
+    }
+   ]
+  },
+  {
+   "cellLines": 27,
+   "cells": 2940,
+   "cluster": 43,
+   "commonestCellLine": "CVCL_0428",
+   "commonestCellLineFraction": 0.9078231292517007,
+   "composition": [
+    {
+     "cellLine": 18,
+     "share": 0.9078231292517007
+    },
+    {
+     "cellLine": 19,
+     "share": 0.0653061224489796
+    }
+   ]
+  }
+ ],
+ "labels": [
+  {
+   "cellLine": "CVCL_0546",
+   "name": "SW480",
+   "organ": "Bowel",
+   "cells": 5575821,
+   "row": 1507.0,
+   "column": 1182.0
+  },
+  {
+   "cellLine": "CVCL_0459",
+   "name": "NCI-H460",
+   "organ": "Lung",
+   "cells": 5320976,
+   "row": 611.0,
+   "column": 1590.0
+  },
+  {
+   "cellLine": "CVCL_0480",
+   "name": "PANC-1",
+   "organ": "Pancreas",
+   "cells": 3415833,
+   "row": 1072.0,
+   "column": 1076.0
+  },
+  {
+   "cellLine": "CVCL_1285",
+   "name": "HOP62",
+   "organ": "Lung",
+   "cells": 3151396,
+   "row": 331.0,
+   "column": 904.0
+  },
+  {
+   "cellLine": "CVCL_0023",
+   "name": "A549",
+   "organ": "Lung",
+   "cells": 2295054,
+   "row": 707.0,
+   "column": 560.0
+  },
+  {
+   "cellLine": "CVCL_1056",
+   "name": "A498",
+   "organ": "Kidney",
+   "cells": 2264192,
+   "row": 474.0,
+   "column": 516.0
+  }
+ ],
+ "stages": {
+  "filterCells": {
+   "minutes": 4.0546433677166664,
+   "peakGiB": 7.806804656982422
+  },
+  "markHvgs": {
+   "minutes": 43.428388549716665,
+   "peakGiB": 14.064743041992188
+  },
+  "runNormalization": {
+   "minutes": 29.567889379316668,
+   "peakGiB": 16.386756896972656
+  },
+  "runPca": {
+   "minutes": 30.26808976801667,
+   "peakGiB": 5.068386077880859
+  },
+  "buildEmbeddingInitialization": {
+   "minutes": 29.836918976216666,
+   "peakGiB": 3.042011260986328
+  },
+  "buildAnnIndex": {
+   "minutes": 59.06242200613334,
+   "peakGiB": 34.247562408447266
+  },
+  "queryNeighbors": {
+   "minutes": 63.64457184903333,
+   "peakGiB": 41.52388381958008
+  },
+  "buildConnectivityMap": {
+   "minutes": 5.162006308566666,
+   "peakGiB": 30.89962387084961
+  },
+  "runUmap": {
+   "minutes": 152.1447252331,
+   "peakGiB": 77.88248062133789
+  },
+  "runLeiden": {
+   "minutes": 14.598125666416667,
+   "peakGiB": 52.976444244384766
+  },
+  "findMarkers": {
+   "minutes": 54.03916956953333,
+   "peakGiB": 55.720741271972656
+  }
+ },
+ "source": [
+  "experiments/benchmarks/records/tahoe_rna_scaling_results.json",
+  "experiments/benchmarks/records/tahoe_umap_raster.npz",
+  "experiments/benchmarks/records/tahoe_cell_lines.csv",
+  "experiments/benchmarks/records/tahoe_cluster_cell_lines.csv"
+ ]
+}

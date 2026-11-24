@@ -1,0 +1,127 @@
+{
+  "experiment": "hto_demultiplexing",
+  "datasets": {
+    "stoeckius": {
+      "status": "completed",
+      "result": {
+        "status": "ok",
+        "experiment": "hto_demultiplexing",
+        "dataset": "stoeckius",
+        "inputs": {
+          "hto": {
+            "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2895nnn/GSM2895283/suppl/GSM2895283_Hashtag-HTO-count.csv.gz",
+            "sha256": "68ab6cd853964026a79f5c3da58a901808eab18c25684b3eecd41ebb71b9bce2"
+          },
+          "rna": {
+            "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2895nnn/GSM2895282/suppl/GSM2895282_Hashtag-RNA.umi.txt.gz",
+            "sha256": "98a2be289ce79c2a2104eeaff3e39528ea25dfa0b3f3c1faf7246843f65ce3d9"
+          }
+        },
+        "cells": 21522,
+        "hashtags": 8,
+        "selection": "All shared barcodes with at least 200 RNA UMIs; sequencing-summary rows excluded",
+        "parameters": {
+          "method": {
+            "normalization": "clr_per_hto",
+            "clustering": {
+              "method": "kmeans",
+              "init": "random",
+              "n_starts": 100,
+              "cluster_count": "n_htos_plus_one"
+            },
+            "background": "raw_mean",
+            "cutoff": {
+              "distribution": "negative_binomial_nb2",
+              "quantile": 0.99,
+              "location": 0,
+              "comparison": "strictly_greater"
+            },
+            "singlet_assignment": "clr_argmax"
+          },
+          "random_seed": 0
+        },
+        "referenceVersions": {
+          "R": "R version 4.6.1 (2026-06-24)",
+          "Seurat": "5.5.1",
+          "SeuratObject": "5.4.0",
+          "fitdistrplus": "1.2.6"
+        },
+        "settings": {
+          "normalization": "CLR per hashtag",
+          "kmeansStarts": 100,
+          "clusters": 9,
+          "positiveQuantile": 0.99,
+          "seed": 0,
+          "globalAgreementTarget": 0.99
+        },
+        "identityAgreement": 0.9999535359167364,
+        "globalClassAgreement": 1.0,
+        "globalClassKappa": 1.0,
+        "maxIdAgreement": 1.0,
+        "marginMaxAbsoluteDifference": 7.105427357601002e-15,
+        "meetsGlobalAgreementTarget": true,
+        "comparisonKind": "Reference implementation agreement, not donor ground truth",
+        "singletRule": "CyteArc assigns the sole positive tag; Seurat assigns the maximum-CLR tag"
+      }
+    },
+    "gse245108": {
+      "status": "completed",
+      "result": {
+        "status": "ok",
+        "experiment": "hto_demultiplexing",
+        "dataset": "gse245108",
+        "inputs": {
+          "counts": {
+            "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE245nnn/GSE245108/suppl/GSE245108_TNC-1-2-1_filtered_feature_bc_matrix.h5",
+            "sha256": "22d64482c0fb04a7685e641d762efdd95a6498156ac22e7b0264925b0907b589"
+          }
+        },
+        "cells": 8438,
+        "hashtags": 10,
+        "selection": "Every barcode in the published filtered matrix and all ten prespecified hashtags",
+        "parameters": {
+          "method": {
+            "normalization": "clr_per_hto",
+            "clustering": {
+              "method": "kmeans",
+              "init": "random",
+              "n_starts": 100,
+              "cluster_count": "n_htos_plus_one"
+            },
+            "background": "raw_mean",
+            "cutoff": {
+              "distribution": "negative_binomial_nb2",
+              "quantile": 0.99,
+              "location": 0,
+              "comparison": "strictly_greater"
+            },
+            "singlet_assignment": "clr_argmax"
+          },
+          "random_seed": 0
+        },
+        "referenceVersions": {
+          "R": "R version 4.6.1 (2026-06-24)",
+          "Seurat": "5.5.1",
+          "SeuratObject": "5.4.0",
+          "fitdistrplus": "1.2.6"
+        },
+        "settings": {
+          "normalization": "CLR per hashtag",
+          "kmeansStarts": 100,
+          "clusters": 11,
+          "positiveQuantile": 0.99,
+          "seed": 0,
+          "globalAgreementTarget": 0.99
+        },
+        "identityAgreement": 1.0,
+        "globalClassAgreement": 1.0,
+        "globalClassKappa": 1.0,
+        "maxIdAgreement": 1.0,
+        "marginMaxAbsoluteDifference": 5.995204332975845e-15,
+        "meetsGlobalAgreementTarget": true,
+        "comparisonKind": "Reference implementation agreement, not donor ground truth",
+        "singletRule": "CyteArc assigns the sole positive tag; Seurat assigns the maximum-CLR tag"
+      }
+    }
+  }
+}

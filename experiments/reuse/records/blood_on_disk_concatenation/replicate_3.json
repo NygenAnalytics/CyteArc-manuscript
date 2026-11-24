@@ -1,0 +1,370 @@
+{
+  "module": "reuse.composite_and_remote",
+  "function": "run",
+  "status": "completed",
+  "result": {
+    "onDiskConcatenation": {
+      "function": "anndata.experimental.concat_on_disk",
+      "anndataVersion": "0.13.4",
+      "join": "inner",
+      "merge": "first",
+      "maxLoadedElems": 100000000,
+      "inputs": [
+        {
+          "name": "combat",
+          "cells": 836148,
+          "bytes": 5091502693
+        },
+        {
+          "name": "yazar",
+          "cells": 1248980,
+          "bytes": 5795999087
+        },
+        {
+          "name": "aida",
+          "cells": 1265624,
+          "bytes": 9786931777
+        },
+        {
+          "name": "covid_atlas",
+          "cells": 647366,
+          "bytes": 3864048274
+        },
+        {
+          "name": "hao",
+          "cells": 161764,
+          "bytes": 1216656962
+        },
+        {
+          "name": "jdm",
+          "cells": 105827,
+          "bytes": 636710827
+        },
+        {
+          "name": "arthritis",
+          "cells": 108717,
+          "bytes": 387892794
+        },
+        {
+          "name": "lee",
+          "cells": 59572,
+          "bytes": 461382868
+        },
+        {
+          "name": "schulte_schrepping",
+          "cells": 90957,
+          "bytes": 612721159
+        },
+        {
+          "name": "ivanova",
+          "cells": 189902,
+          "bytes": 1245013397
+        }
+      ],
+      "timingBoundary": "concatenation: concat_on_disk from the local input copies to one local H5AD; staging, input preparation, validation, the feature-name column and upload are measured separately",
+      "staging": {
+        "bytes": 29098859838
+      },
+      "asExportedAttempt": {
+        "status": "failed",
+        "elapsedSeconds": 126.718253756,
+        "processIoBytes": {
+          "rchar": 14937595221,
+          "wchar": 1227678062
+        },
+        "resources": {
+          "operationBaselineBytes": 552882176,
+          "operationPeakBytes": 22335418368,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "memoryMaxBytes": 68719476736
+        },
+        "errorType": "TypeError",
+        "error": "Can't implicitly convert non-string objects to strings Error raised while writing key 'orig_Age' of <class 'h5py._hl.group.Group'> to /obs"
+      },
+      "inputPreparation": {
+        "addedEmptyMappings": {
+          "combat": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ],
+          "yazar": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ],
+          "aida": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ],
+          "covid_atlas": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ],
+          "hao": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ],
+          "jdm": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ],
+          "arthritis": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ],
+          "lee": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ],
+          "schulte_schrepping": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ],
+          "ivanova": [
+            "layers",
+            "obsp",
+            "varm",
+            "varp"
+          ]
+        },
+        "obsColumnsChecked": 283,
+        "obsColumnsStoredAsStringCategories": [
+          "orig_Age",
+          "orig_Annotation_Level1",
+          "orig_Annotation_Level2",
+          "orig_Annotation_Level3",
+          "orig_Annotation_Level4",
+          "orig_BCR.top10",
+          "orig_BCR_IGH.C.1",
+          "orig_BCR_IGH.CDR3.1",
+          "orig_BCR_IGH.D.1",
+          "orig_BCR_IGH.J.1",
+          "orig_BCR_IGH.V.1",
+          "orig_BCR_IGH.clonotype.1",
+          "orig_BCR_IGK.C.1",
+          "orig_BCR_IGK.CDR3.1",
+          "orig_BCR_IGK.J.1",
+          "orig_BCR_IGK.V.1",
+          "orig_BCR_IGK.clonotype.1",
+          "orig_BCR_IGL.C.1",
+          "orig_BCR_IGL.CDR3.1",
+          "orig_BCR_IGL.J.1",
+          "orig_BCR_IGL.V.1",
+          "orig_BCR_IGL.clonotype.1",
+          "orig_BMI",
+          "orig_C-reactive protein (mg per dL)",
+          "orig_COVID-19 Condition",
+          "orig_COVID.19.related_medication_and_anti.microbials",
+          "orig_Cell.class_reannotated",
+          "orig_Cell.group",
+          "orig_Celltype",
+          "orig_Chest X-ray",
+          "orig_Cohort",
+          "orig_Collection_Day",
+          "orig_Comorbidity",
+          "orig_Consciousness",
+          "orig_Country",
+          "orig_Dataset",
+          "orig_Day",
+          "orig_DayFactor",
+          "orig_Days_from_onset",
+          "orig_Disease group",
+          "orig_GEX_region",
+          "orig_Heart rate (BPM)",
+          "orig_Hospital day",
+          "orig_Institute",
+          "orig_Lane",
+          "orig_Lineage",
+          "orig_Lymphocyte per microL (%)",
+          "orig_Monocyte prt microL (%)",
+          "orig_NEWS score",
+          "orig_Neutrophil per microL (%)",
+          "orig_O2 saturation",
+          "orig_O2 supplement",
+          "orig_Outcome",
+          "orig_Phase",
+          "orig_Resample",
+          "orig_Respiratory rate (BPM)",
+          "orig_SARSCoV2PCR",
+          "orig_Sample ID",
+          "orig_Severity",
+          "orig_Site",
+          "orig_Smoker",
+          "orig_Smoking",
+          "orig_Source",
+          "orig_Status",
+          "orig_Status_on_day_collection",
+          "orig_Status_on_day_collection_summary",
+          "orig_Swab_result",
+          "orig_Systolic BP",
+          "orig_TCRab.top10",
+          "orig_TCRab_TRA.C.1",
+          "orig_TCRab_TRA.CDR3.1",
+          "orig_TCRab_TRA.J.1",
+          "orig_TCRab_TRA.V.1",
+          "orig_TCRab_TRA.clonotype.1",
+          "orig_TCRab_TRB.C.1",
+          "orig_TCRab_TRB.CDR3.1",
+          "orig_TCRab_TRB.D.1",
+          "orig_TCRab_TRB.J.1",
+          "orig_TCRab_TRB.V.1",
+          "orig_TCRab_TRB.clonotype.1",
+          "orig_TCRgd_TRD.C.1",
+          "orig_TCRgd_TRD.CDR3.1",
+          "orig_TCRgd_TRD.J.1",
+          "orig_TCRgd_TRD.V.1",
+          "orig_TCRgd_TRG.C.1",
+          "orig_TCRgd_TRG.CDR3.1",
+          "orig_TCRgd_TRG.J.1",
+          "orig_TCRgd_TRG.V.1",
+          "orig_Temperature",
+          "orig_Treatment",
+          "orig_WBC per microL",
+          "orig_Worst_Clinical_Status",
+          "orig_activity_python_binary_crp",
+          "orig_activity_python_binary_esr",
+          "orig_activity_python_crp",
+          "orig_activity_python_esr",
+          "orig_age",
+          "orig_age_group",
+          "orig_alignment_software",
+          "orig_author_cell_type",
+          "orig_batch",
+          "orig_case_control",
+          "orig_cell_number_loaded",
+          "orig_cell_type_original",
+          "orig_cell_type_source",
+          "orig_celltype.broad_clustering_annot",
+          "orig_celltype.final",
+          "orig_celltype.l1",
+          "orig_celltype.l2",
+          "orig_celltype.l3",
+          "orig_cluster",
+          "orig_cluster_label",
+          "orig_cluster_labels_res.0.4",
+          "orig_cluster_source",
+          "orig_cv19_vax_boost_or_HC_status",
+          "orig_demux_doublet_call",
+          "orig_developmental_stage_ontology_term_id",
+          "orig_disease_general",
+          "orig_disease_group",
+          "orig_disease_original",
+          "orig_donor_living_at_sample_collection",
+          "orig_fine_annot",
+          "orig_gene_annotation_version",
+          "orig_initial_clustering",
+          "orig_institute",
+          "orig_intronic_reads_counted",
+          "orig_lane",
+          "orig_leiden_r3.0",
+          "orig_library_id",
+          "orig_library_prep_batch",
+          "orig_major_subset",
+          "orig_major_subset_source",
+          "orig_minor_subset",
+          "orig_minor_subset_source",
+          "orig_myositis_specific_antibody",
+          "orig_on_meds",
+          "orig_orig.ident",
+          "orig_phase",
+          "orig_pool_number",
+          "orig_predicted.celltype.l2",
+          "orig_reference_genome",
+          "orig_rough_annot",
+          "orig_sample",
+          "orig_sampleName_with_day",
+          "orig_sample_collection_method",
+          "orig_sample_id",
+          "orig_sample_preservation_method",
+          "orig_scRNASeq_sample_ID",
+          "orig_sequenced_fragment",
+          "orig_suspension_derivation_process",
+          "orig_suspension_enriched_cell_types",
+          "orig_suspension_uuid",
+          "orig_time",
+          "orig_time_after_LPS",
+          "orig_tissue_original",
+          "orig_visit"
+        ]
+      },
+      "inputPreparationMeasurement": {
+        "status": "completed",
+        "elapsedSeconds": 378.4815225919999,
+        "processIoBytes": {
+          "rchar": 30324818588,
+          "wchar": 10694650988
+        },
+        "resources": {
+          "operationBaselineBytes": 19428806656,
+          "operationPeakBytes": 21274628096,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "memoryMaxBytes": 68719476736
+        }
+      },
+      "concatenation": {
+        "status": "completed",
+        "elapsedSeconds": 396.9688403619999,
+        "processIoBytes": {
+          "rchar": 26413883175,
+          "wchar": 89314915631
+        },
+        "resources": {
+          "operationBaselineBytes": 3516616704,
+          "operationPeakBytes": 23866359808,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "memoryMaxBytes": 68719476736
+        }
+      },
+      "outputBytes": 87715335479,
+      "validation": {
+        "cells": 4714857,
+        "genes": 18446,
+        "nonzeroCounts": 6535468092,
+        "dtypes": {
+          "data": "float32",
+          "indices": "int64",
+          "indptr": "int64"
+        },
+        "compression": {
+          "data": null,
+          "indices": null,
+          "indptr": null
+        },
+        "chunks": {
+          "data": [
+            67126
+          ],
+          "indices": [
+            33563
+          ],
+          "indptr": [
+            3267
+          ]
+        },
+        "obsColumns": 283,
+        "varColumns": 23,
+        "exactCountValuesAndStructure": true,
+        "validatedSourceSegments": 10,
+        "resultCellIdSha256": "0e333177d466b2c0de1d39dabfc2836ac44ee47524bcc3e295d0b25fe2acdffb",
+        "resultFeatureIdSha256": "304721a6460f53f207b612bace047c78adb8494f9f4ccd68394592adbb7d907e"
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+% Shared typography for the manuscript and its Supplementary Information.
+%
+% biorxiv (default): single-column preprint, 11 pt, dark clickable links.
+% naturemethods: 1.5 line spacing and continuous line numbers for peer review.
+% Text is TeX Gyre Termes; headings, tables and captions are TeX Gyre Heros,
+% the Helvetica design that the figures use, so figure and caption type match.
+\providecommand{\target}{biorxiv}
+
+\usepackage[a4paper,top=2.4cm,bottom=2.6cm,left=2.5cm,right=2.5cm,headsep=0.8cm,footskip=1.0cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{tgtermes}
+\usepackage[scale=0.92]{tgheros}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage[british]{babel}
+\usepackage{setspace}
+\usepackage{ifthen}
+\usepackage{lineno}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{xcolor}
+\usepackage{colortbl}  % shaded rows of Tables 1-3
+\colorlet{tableband}{black!6}         % group headings of the main tables
+\colorlet{tablezebra}{black!4}        % alternate configurations of Extended Data Table 1
+\definecolor{cytearc}{HTML}{E5F0F7}   % CyteArc rows: a pale tint of the figures' CyteArc blue
+\definecolor{ink}{HTML}{141414}
+\colorlet{rulegrey}{black!28}
+\renewcommand{\linenumberfont}{\normalfont\scriptsize\sffamily\color{black!45}}
+\setlength{\linenumbersep}{0.85em}
+\usepackage[font={footnotesize,sf,stretch=1.05},labelfont={bf,sf},labelsep=period,skip=6pt,justification=justified,singlelinecheck=false]{caption}
+\usepackage{titlesec}
+\usepackage[numbers,square,comma,sort&compress]{natbib}
+\usepackage{placeins}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.8}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{4}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{12pt plus 1fil}
+\g@addto@macro\normalsize{%
+  \setlength{\abovedisplayskip}{0.55em plus 0.15em minus 0.1em}%
+  \setlength{\belowdisplayskip}{0.55em plus 0.15em minus 0.1em}%
+  \setlength{\abovedisplayshortskip}{0.3em plus 0.1em}%
+  \setlength{\belowdisplayshortskip}{0.45em plus 0.15em minus 0.1em}%
+}
+\makeatother
+\widowpenalty=10000
+\clubpenalty=10000
+\setlength{\parindent}{1.4em}
+\setlength{\parskip}{0pt plus 1pt}
+
+\ifthenelse{\equal{\target}{naturemethods}}{%
+  \setstretch{1.5}%
+  \newcommand{\manuscriptlinenumbers}{\linenumbers}%
+}{%
+  \ifthenelse{\equal{\target}{biorxiv}}{%
+    \setstretch{1.18}%
+    \newcommand{\manuscriptlinenumbers}{}%
+  }{%
+    \PackageError{manuscript}{Unknown target: \target}{Set \protect\target\space to biorxiv or naturemethods.}%
+  }%
+}
+
+\titleformat{\section}{\sffamily\fontsize{13}{16}\selectfont\bfseries\color{ink}\raggedright}{\thesection}{0.55em}{}
+\titleformat{name=\section,numberless}{\sffamily\fontsize{13}{16}\selectfont\bfseries\color{ink}\raggedright}{}{0pt}{}
+\titleformat{\subsection}{\sffamily\normalsize\bfseries\color{ink}\raggedright}{\thesubsection}{0.5em}{}
+\titleformat{name=\subsection,numberless}{\sffamily\normalsize\bfseries\color{ink}\raggedright}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.55em plus 0.25em minus 0.15em}{0.45em}
+\titlespacing*{\subsection}{0pt}{1.05em plus 0.2em minus 0.1em}{0.28em}
+
+\newcommand{\shorttitle}{}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\sffamily\footnotesize\color{black!55}\shorttitle}
+\fancyhead[R]{\sffamily\footnotesize\color{black!55}Ahuja \emph{et al.}}
+\fancyfoot[C]{\sffamily\footnotesize\color{black!55}\thepage\ of \pageref*{LastPage}}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\sffamily\footnotesize\color{black!55}\thepage\ of \pageref*{LastPage}}}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\urlstyle{same}
+\setlength{\bibsep}{0.3\baselineskip}
+\raggedbottom
+
+% The software release described in the article; Methods identifies the measured commit.
+\newcommand{\cytearcversion}{1.3.0}

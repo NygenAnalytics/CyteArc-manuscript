@@ -1,0 +1,57 @@
+{
+ "resolution": 0.5,
+ "rows": [
+  {
+   "subtype": "CD4 naive",
+   "haoCells": 17479,
+   "wnn": 0.973854339493106,
+   "rna": 0.9434750271754677
+  },
+  {
+   "subtype": "CD4 memory",
+   "haoCells": 19171,
+   "wnn": 0.8750717229148193,
+   "rna": 0.47425799384486983
+  },
+  {
+   "subtype": "Treg",
+   "haoCells": 2507,
+   "wnn": 0.3083366573593937,
+   "rna": 0.33625847626645394
+  },
+  {
+   "subtype": "CD8 naive",
+   "haoCells": 10768,
+   "wnn": 0.6358655274888558,
+   "rna": 0.6027117384843982
+  },
+  {
+   "subtype": "CD8 effector",
+   "haoCells": 11727,
+   "wnn": 0.9247889485801996,
+   "rna": 0.7950029845655325
+  },
+  {
+   "subtype": "MAIT",
+   "haoCells": 2784,
+   "wnn": 0.9216954022988506,
+   "rna": 0.9202586206896551
+  },
+  {
+   "subtype": "\u03b3\u03b4 T",
+   "haoCells": 3649,
+   "wnn": 0.5420663195395999,
+   "rna": 0.46259249109345024
+  }
+ ],
+ "overall": {
+  "haoCells": 68085,
+  "wnn": 0.8343541161783066,
+  "rna": 0.6828082543878975
+ },
+ "source": [
+  "experiments/integration/records/t_cell_subtypes_cell_clr/combat/t_cell_subtypes_authors.csv",
+  "experiments/integration/records/t_cell_subtypes_cell_clr/combat/t_cell_subtypes.npz",
+  "experiments/integration/records/t_cell_subtypes_cell_clr/combat/result.json"
+ ]
+}

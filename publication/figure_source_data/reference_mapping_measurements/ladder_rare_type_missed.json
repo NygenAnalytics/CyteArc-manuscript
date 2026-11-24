@@ -1,0 +1,228 @@
+{
+ "sizes": [
+  {
+   "part": "reference_500000",
+   "cells": 500003,
+   "nonzeros": 689239787,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_1500000",
+   "cells": 1499999,
+   "nonzeros": 2068765663,
+   "overRLimit": false
+  },
+  {
+   "part": "reference_3000000",
+   "cells": 2999999,
+   "nonzeros": 4137339630,
+   "overRLimit": true
+  },
+  {
+   "part": "reference_all",
+   "cells": 4292870,
+   "nonzeros": 5920720691,
+   "overRLimit": true
+  }
+ ],
+ "types": [
+  "Erythroid",
+  "Plasma cells",
+  "Platelets",
+  "Progenitors"
+ ],
+ "frequencies": {
+  "Erythroid": 0.0006776352416914558,
+  "Plasma cells": 0.0064502302655333145,
+  "Platelets": 0.008106930794550033,
+  "Progenitors": 0.0020850852692953664
+ },
+ "methods": {
+  "seurat_map": [
+   {
+    "part": "reference_500000",
+    "value": 0.5836603360931604,
+    "recall": {
+     "Erythroid": 0.5835820895522388,
+     "Plasma cells": 0.8363636363636363,
+     "Platelets": 0.9146956184567662,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_1500000",
+    "value": 0.588096156918534,
+    "recall": {
+     "Erythroid": 0.5940298507462687,
+     "Plasma cells": 0.8393939393939394,
+     "Platelets": 0.9189608375339279,
+     "Progenitors": 0.0
+    }
+   }
+  ],
+  "symphony": [
+   {
+    "part": "reference_500000",
+    "value": 0.4580043927144215,
+    "recall": {
+     "Erythroid": 0.07761194029850746,
+     "Plasma cells": 0.8424242424242424,
+     "Platelets": 0.911981388134936,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_1500000",
+    "value": 0.4617503488584782,
+    "recall": {
+     "Erythroid": 0.09104477611940298,
+     "Plasma cells": 0.8424242424242424,
+     "Platelets": 0.9135323768902676,
+     "Progenitors": 0.0
+    }
+   }
+  ],
+  "celltypist_hvg": [
+   {
+    "part": "reference_500000",
+    "value": 0.5000271738701536,
+    "recall": {
+     "Erythroid": 0.5029850746268657,
+     "Plasma cells": 0.7363636363636363,
+     "Platelets": 0.7607599844901124,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_1500000",
+    "value": 0.5199103358739454,
+    "recall": {
+     "Erythroid": 0.5432835820895522,
+     "Plasma cells": 0.7333333333333333,
+     "Platelets": 0.8030244280728964,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_3000000",
+    "value": 0.528628636752085,
+    "recall": {
+     "Erythroid": 0.5582089552238806,
+     "Plasma cells": 0.7424242424242424,
+     "Platelets": 0.8138813493602172,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_all",
+    "value": 0.5256441627738497,
+    "recall": {
+     "Erythroid": 0.564179104477612,
+     "Plasma cells": 0.7454545454545455,
+     "Platelets": 0.7929430011632416,
+     "Progenitors": 0.0
+    }
+   }
+  ],
+  "celltypist": [
+   {
+    "part": "reference_500000",
+    "value": 0.5243547586891936,
+    "recall": {
+     "Erythroid": 0.5671641791044776,
+     "Plasma cells": 0.7454545454545455,
+     "Platelets": 0.7848003101977511,
+     "Progenitors": 0.0
+    }
+   }
+  ],
+  "unintegrated": [
+   {
+    "part": "reference_500000",
+    "value": 0.6131485974898324,
+    "recall": {
+     "Erythroid": 0.7029850746268657,
+     "Plasma cells": 0.8484848484848485,
+     "Platelets": 0.9011244668476154,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_1500000",
+    "value": 0.6097823871933645,
+    "recall": {
+     "Erythroid": 0.6940298507462687,
+     "Plasma cells": 0.8424242424242424,
+     "Platelets": 0.9026754556029469,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_3000000",
+    "value": 0.6152909541842021,
+    "recall": {
+     "Erythroid": 0.6955223880597015,
+     "Plasma cells": 0.8454545454545455,
+     "Platelets": 0.9131446297014346,
+     "Progenitors": 0.007042253521126761
+    }
+   },
+   {
+    "part": "reference_all",
+    "value": 0.6083575609561905,
+    "recall": {
+     "Erythroid": 0.691044776119403,
+     "Plasma cells": 0.8424242424242424,
+     "Platelets": 0.8999612252811167,
+     "Progenitors": 0.0
+    }
+   }
+  ],
+  "integrated": [
+   {
+    "part": "reference_500000",
+    "value": 0.5548915202267768,
+    "recall": {
+     "Erythroid": 0.5417910447761194,
+     "Plasma cells": 0.8363636363636363,
+     "Platelets": 0.8414113997673517,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_1500000",
+    "value": 0.5709023750436019,
+    "recall": {
+     "Erythroid": 0.6149253731343284,
+     "Plasma cells": 0.8272727272727273,
+     "Platelets": 0.8414113997673517,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_3000000",
+    "value": 0.5588686340232989,
+    "recall": {
+     "Erythroid": 0.5253731343283582,
+     "Plasma cells": 0.8303030303030303,
+     "Platelets": 0.879798371461807,
+     "Progenitors": 0.0
+    }
+   },
+   {
+    "part": "reference_all",
+    "value": 0.5803437297281088,
+    "recall": {
+     "Erythroid": 0.6208955223880597,
+     "Plasma cells": 0.8272727272727273,
+     "Platelets": 0.8732066692516479,
+     "Progenitors": 0.0
+    }
+   }
+  ]
+ },
+ "source": [
+  ".build/derived/mapping/reference_ladder.json",
+  "experiments/mapping/records/reference_ladder.json"
+ ]
+}

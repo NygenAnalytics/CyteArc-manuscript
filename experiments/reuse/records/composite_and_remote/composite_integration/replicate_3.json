@@ -1,0 +1,905 @@
+{
+  "module": "internal.reuse.composite_and_remote",
+  "function": "run",
+  "region": "us-central",
+  "startedAt": 1793166777.6272879,
+  "status": "completed",
+  "result": {
+    "composite": {
+      "settings": {
+        "mode": "composite",
+        "memBudget": "16G",
+        "nthreads": 8,
+        "hvgCount": 2000,
+        "pcaDims": 30,
+        "replicate": 3
+      },
+      "sourceCacheBytes": 0,
+      "timingBoundary": "Pipeline from fixed primary cells through native Leiden; UMAP, doublets, markers, cell cycle and Paris disabled",
+      "countCreationPolicy": "Counts streamed for selected-gene QC and fingerprint; count chunks not copied",
+      "tolerances": {
+        "pcaSubspaceDegrees": 0.05,
+        "explainedVarianceMaxAbsError": 1e-06,
+        "clusterAriMin": 0.999
+      },
+      "sourceOpeningAndSelection": {
+        "elapsedSeconds": 11.906510957000002,
+        "io": {
+          "readBytes": 317290,
+          "readMB": 0.317,
+          "requests": 346,
+          "raw": {
+            "gets": 346,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 317290,
+            "readRequestedBytes": 317290,
+            "readTransferredBytes": 317290,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 10
+          },
+          "http": {
+            "requests": 774,
+            "gets": 774,
+            "rangedGets": 0,
+            "responseBytes": 675952
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 524,
+            "302": 250
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 488370176,
+          "operationPeakBytes": 615456768,
+          "operationIncrementalPeakBytes": 127086592,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 502001664,
+          "processTreeRssPeakBytes": 644927488,
+          "processTreeRssIncrementalPeakBytes": 142925824,
+          "processTreeRssAfterBytes": 644927488,
+          "cgroupMemoryCurrentBaselineBytes": 488370176,
+          "cgroupMemoryCurrentPeakBytes": 615456768,
+          "cgroupMemoryCurrentAfterBytes": 615456768,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 34359738368,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        }
+      },
+      "creation": {
+        "elapsedSeconds": 155.167213099,
+        "io": {
+          "readBytes": 876592882,
+          "readMB": 876.593,
+          "requests": 2116,
+          "raw": {
+            "gets": 1931,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 185,
+            "partialGets": 0,
+            "requestedBytes": 787925917,
+            "transferredBytes": 876592882,
+            "readRequestedBytes": 876592882,
+            "readTransferredBytes": 876592882,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 370,
+            "countReadBytes": 787925917,
+            "maxInFlight": 8
+          },
+          "http": {
+            "requests": 2768,
+            "gets": 2768,
+            "rangedGets": 740,
+            "responseBytes": 877213749
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 1167,
+            "302": 1231,
+            "206": 370
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 615460864,
+          "operationPeakBytes": 2410520576,
+          "operationIncrementalPeakBytes": 1795059712,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 644943872,
+          "processTreeRssPeakBytes": 2445029376,
+          "processTreeRssIncrementalPeakBytes": 1800085504,
+          "processTreeRssAfterBytes": 1052155904,
+          "cgroupMemoryCurrentBaselineBytes": 615460864,
+          "cgroupMemoryCurrentPeakBytes": 2410520576,
+          "cgroupMemoryCurrentAfterBytes": 1019768832,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 34359738368,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        }
+      },
+      "cellsTotalSelected": 233870,
+      "genesShared": 19405,
+      "sourceCellCounts": {
+        "blood_wilk": 44721,
+        "blood_lee": 49053,
+        "blood_arunachalam": 49139,
+        "blood_schulte_schrepping": 90957
+      },
+      "localStoreAfterCreateBytes": 49089112,
+      "nonzeroCounts": 379499118,
+      "logicalDenseCountBytes": 9076494700,
+      "copiedCountChunkBytes": 0,
+      "unintegrated": {
+        "elapsedSeconds": 161.31280353600002,
+        "io": {
+          "readBytes": 2563158250,
+          "readMB": 2563.158,
+          "requests": 1120,
+          "raw": {
+            "gets": 560,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 560,
+            "partialGets": 0,
+            "requestedBytes": 2563158250,
+            "transferredBytes": 2563158250,
+            "readRequestedBytes": 2563158250,
+            "readTransferredBytes": 2563158250,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 1120,
+            "countReadBytes": 2563158250,
+            "maxInFlight": 20
+          },
+          "http": {
+            "requests": 2248,
+            "gets": 2248,
+            "rangedGets": 2240,
+            "responseBytes": 2564248707
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "302": 1120,
+            "206": 1120,
+            "200": 8
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 1019772928,
+          "operationPeakBytes": 6861037568,
+          "operationIncrementalPeakBytes": 5841264640,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 1052172288,
+          "processTreeRssPeakBytes": 7173308416,
+          "processTreeRssIncrementalPeakBytes": 6121136128,
+          "processTreeRssAfterBytes": 2328846336,
+          "cgroupMemoryCurrentBaselineBytes": 1019772928,
+          "cgroupMemoryCurrentPeakBytes": 6861037568,
+          "cgroupMemoryCurrentAfterBytes": 2263605248,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 34359738368,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        },
+        "summary": {
+          "wallSeconds": 160.894996232,
+          "peakRssMb": 7058.2265625,
+          "artifactsReused": 0,
+          "artifactsCreated": 13,
+          "stages": {
+            "input_snapshot": {
+              "seconds": 1.2243591600000059,
+              "peakRssMb": 1058.296875,
+              "reused": 0,
+              "created": 4
+            },
+            "highly_variable_features": {
+              "seconds": 30.719626936999987,
+              "peakRssMb": 7058.2265625,
+              "reused": 0,
+              "created": 2
+            },
+            "normalization": {
+              "seconds": 27.46002312600001,
+              "peakRssMb": 3755.8984375,
+              "reused": 0,
+              "created": 1
+            },
+            "pca": {
+              "seconds": 23.326502352000006,
+              "peakRssMb": 3252.9375,
+              "reused": 0,
+              "created": 2
+            },
+            "ann_index": {
+              "seconds": 26.808332739000036,
+              "peakRssMb": 1704.49609375,
+              "reused": 0,
+              "created": 1
+            },
+            "neighbors": {
+              "seconds": 4.834631962000003,
+              "peakRssMb": 1905.57421875,
+              "reused": 0,
+              "created": 1
+            },
+            "connectivity": {
+              "seconds": 15.441012831000023,
+              "peakRssMb": 1993.01171875,
+              "reused": 0,
+              "created": 1
+            },
+            "leiden_1.0": {
+              "seconds": 30.765767420999964,
+              "peakRssMb": 2338.59375,
+              "reused": 0,
+              "created": 1
+            }
+          }
+        },
+        "iLisiStudyScaled": 2.9605947323337506e-16,
+        "cLisiPublishedLabelsScaled": 0.9994778266469788,
+        "harmonizedLabelMetrics": {
+          "annotatedCellFraction": 0.9892333347586266,
+          "sameTypeNeighborFraction": 0.9591429874439971,
+          "sharedTypes": {
+            "B cells": {
+              "cells": 21793,
+              "evaluatedCells": 21616,
+              "cellsByStudy": {
+                "blood_arunachalam": 3214,
+                "blood_lee": 5938,
+                "blood_schulte_schrepping": 7619,
+                "blood_wilk": 5022
+              },
+              "sameTypeNeighborFraction": 0.9609016972097034,
+              "normalizedStudyEntropy": 0.2536436285604876
+            },
+            "Dendritic cells": {
+              "cells": 7758,
+              "evaluatedCells": 7548,
+              "cellsByStudy": {
+                "blood_arunachalam": 5094,
+                "blood_lee": 611,
+                "blood_schulte_schrepping": 1363,
+                "blood_wilk": 690
+              },
+              "sameTypeNeighborFraction": 0.9200048972759678,
+              "normalizedStudyEntropy": 0.22206366331423225
+            },
+            "Monocytes": {
+              "cells": 68672,
+              "evaluatedCells": 68480,
+              "cellsByStudy": {
+                "blood_arunachalam": 11274,
+                "blood_lee": 15420,
+                "blood_schulte_schrepping": 30291,
+                "blood_wilk": 11687
+              },
+              "sameTypeNeighborFraction": 0.9859391716239964,
+              "normalizedStudyEntropy": 0.14834991698197236
+            },
+            "NK and ILC": {
+              "cells": 29488,
+              "evaluatedCells": 29081,
+              "cellsByStudy": {
+                "blood_arunachalam": 6542,
+                "blood_lee": 7920,
+                "blood_schulte_schrepping": 8169,
+                "blood_wilk": 6857
+              },
+              "sameTypeNeighborFraction": 0.9232332053468452,
+              "normalizedStudyEntropy": 0.16679744605138275
+            },
+            "Platelets": {
+              "cells": 9570,
+              "evaluatedCells": 9331,
+              "cellsByStudy": {
+                "blood_arunachalam": 4348,
+                "blood_lee": 3534,
+                "blood_schulte_schrepping": 1161,
+                "blood_wilk": 527
+              },
+              "sameTypeNeighborFraction": 0.9378072526885037,
+              "normalizedStudyEntropy": 0.49856026293155203
+            },
+            "T cells": {
+              "cells": 82376,
+              "evaluatedCells": 81870,
+              "cellsByStudy": {
+                "blood_arunachalam": 15840,
+                "blood_lee": 13589,
+                "blood_schulte_schrepping": 37340,
+                "blood_wilk": 15607
+              },
+              "sameTypeNeighborFraction": 0.9671568971268335,
+              "normalizedStudyEntropy": 0.16523818860558978
+            }
+          },
+          "macroStudyMixing": 0.24244218440753615,
+          "definition": "Within-type neighbor study entropy divided by that type's global study entropy, clipped to [0, 1]; shared types require 20 cells per study and evaluated cells require 5 same-type neighbors"
+        }
+      },
+      "integrationReusingUpstream": {
+        "elapsedSeconds": 137.45770230200003,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 0,
+            "gets": 0,
+            "rangedGets": 0,
+            "responseBytes": 0
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {},
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 2263609344,
+          "operationPeakBytes": 2617991168,
+          "operationIncrementalPeakBytes": 354381824,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 2328862720,
+          "processTreeRssPeakBytes": 2692636672,
+          "processTreeRssIncrementalPeakBytes": 363773952,
+          "processTreeRssAfterBytes": 2417123328,
+          "cgroupMemoryCurrentBaselineBytes": 2263609344,
+          "cgroupMemoryCurrentPeakBytes": 2617991168,
+          "cgroupMemoryCurrentAfterBytes": 2341683200,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 34359738368,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        },
+        "summary": {
+          "wallSeconds": 136.977775461,
+          "peakRssMb": 2567.8984375,
+          "artifactsReused": 8,
+          "artifactsCreated": 6,
+          "stages": {
+            "input_snapshot": {
+              "seconds": 1.2621175070000277,
+              "peakRssMb": 2223.89453125,
+              "reused": 3,
+              "created": 1
+            },
+            "highly_variable_features": {
+              "seconds": 0.15506234299999733,
+              "peakRssMb": 2223.89453125,
+              "reused": 2,
+              "created": 0
+            },
+            "normalization": {
+              "seconds": 0.07192361700003858,
+              "peakRssMb": 2223.87890625,
+              "reused": 1,
+              "created": 0
+            },
+            "pca": {
+              "seconds": 0.030560529000013048,
+              "peakRssMb": 2223.87890625,
+              "reused": 2,
+              "created": 0
+            },
+            "harmony": {
+              "seconds": 93.12258567100002,
+              "peakRssMb": 2567.8984375,
+              "reused": 0,
+              "created": 1
+            },
+            "ann_index": {
+              "seconds": 31.534684577999997,
+              "peakRssMb": 2354.671875,
+              "reused": 0,
+              "created": 1
+            },
+            "neighbors": {
+              "seconds": 5.517597332999969,
+              "peakRssMb": 2411.1328125,
+              "reused": 0,
+              "created": 1
+            },
+            "connectivity": {
+              "seconds": 0.45343605799996567,
+              "peakRssMb": 2407.3984375,
+              "reused": 0,
+              "created": 1
+            },
+            "leiden_1.0": {
+              "seconds": 4.516567597999995,
+              "peakRssMb": 2473.21484375,
+              "reused": 0,
+              "created": 1
+            }
+          }
+        },
+        "iLisiStudyScaled": 0.1436931039088294,
+        "cLisiPublishedLabelsScaled": 0.9961244486929905,
+        "harmonizedLabelMetrics": {
+          "annotatedCellFraction": 0.9892333347586266,
+          "sameTypeNeighborFraction": 0.9546137520235485,
+          "sharedTypes": {
+            "B cells": {
+              "cells": 21793,
+              "evaluatedCells": 21388,
+              "cellsByStudy": {
+                "blood_arunachalam": 3214,
+                "blood_lee": 5938,
+                "blood_schulte_schrepping": 7619,
+                "blood_wilk": 5022
+              },
+              "sameTypeNeighborFraction": 0.9482894924369736,
+              "normalizedStudyEntropy": 0.5322485288180525
+            },
+            "Dendritic cells": {
+              "cells": 7758,
+              "evaluatedCells": 7571,
+              "cellsByStudy": {
+                "blood_arunachalam": 5094,
+                "blood_lee": 611,
+                "blood_schulte_schrepping": 1363,
+                "blood_wilk": 690
+              },
+              "sameTypeNeighborFraction": 0.9274978811943991,
+              "normalizedStudyEntropy": 0.357441156554216
+            },
+            "Monocytes": {
+              "cells": 68672,
+              "evaluatedCells": 68401,
+              "cellsByStudy": {
+                "blood_arunachalam": 11274,
+                "blood_lee": 15420,
+                "blood_schulte_schrepping": 30291,
+                "blood_wilk": 11687
+              },
+              "sameTypeNeighborFraction": 0.9830410782493012,
+              "normalizedStudyEntropy": 0.40397180770941515
+            },
+            "NK and ILC": {
+              "cells": 29488,
+              "evaluatedCells": 28883,
+              "cellsByStudy": {
+                "blood_arunachalam": 6542,
+                "blood_lee": 7920,
+                "blood_schulte_schrepping": 8169,
+                "blood_wilk": 6857
+              },
+              "sameTypeNeighborFraction": 0.9179099844619985,
+              "normalizedStudyEntropy": 0.5606649245215132
+            },
+            "Platelets": {
+              "cells": 9570,
+              "evaluatedCells": 9305,
+              "cellsByStudy": {
+                "blood_arunachalam": 4348,
+                "blood_lee": 3534,
+                "blood_schulte_schrepping": 1161,
+                "blood_wilk": 527
+              },
+              "sameTypeNeighborFraction": 0.9314600176591242,
+              "normalizedStudyEntropy": 0.6498849571556148
+            },
+            "T cells": {
+              "cells": 82376,
+              "evaluatedCells": 81656,
+              "cellsByStudy": {
+                "blood_arunachalam": 15840,
+                "blood_lee": 13589,
+                "blood_schulte_schrepping": 37340,
+                "blood_wilk": 15607
+              },
+              "sameTypeNeighborFraction": 0.9654159710443416,
+              "normalizedStudyEntropy": 0.5820049678313501
+            }
+          },
+          "macroStudyMixing": 0.5143693904316936,
+          "definition": "Within-type neighbor study entropy divided by that type's global study entropy, clipped to [0, 1]; shared types require 20 cells per study and evaluated cells require 5 same-type neighbors"
+        }
+      },
+      "sharedUpstreamArtifacts": {
+        "analysis_cell_selection": true,
+        "highly_variable_features": true,
+        "normalized": true,
+        "pca": true
+      },
+      "cellTypeHarmonization": {
+        "B cell": "B cells",
+        "CD14-positive monocyte": "Monocytes",
+        "CD16-negative, CD56-bright natural killer cell, human": "NK and ILC",
+        "CD4-positive helper T cell": "T cells",
+        "CD4-positive, alpha-beta T cell": "T cells",
+        "CD4-positive, alpha-beta cytotoxic T cell": "T cells",
+        "CD4-positive, alpha-beta memory T cell": "T cells",
+        "CD8-positive, alpha-beta T cell": "T cells",
+        "CD8-positive, alpha-beta memory T cell": "T cells",
+        "IgA plasmablast": "Plasma cells",
+        "IgG memory B cell": "B cells",
+        "IgG plasmablast": "Plasma cells",
+        "IgG-negative class switched memory B cell": "B cells",
+        "activated CD4-positive, alpha-beta T cell, human": "T cells",
+        "activated CD8-positive, alpha-beta T cell, human": "T cells",
+        "blood cell": null,
+        "central memory CD4-positive, alpha-beta T cell": "T cells",
+        "class switched memory B cell": "B cells",
+        "classical monocyte": "Monocytes",
+        "conventional dendritic cell": "Dendritic cells",
+        "dendritic cell": "Dendritic cells",
+        "double negative thymocyte": "T cells",
+        "effector CD4-positive, alpha-beta T cell": "T cells",
+        "effector CD8-positive, alpha-beta T cell": "T cells",
+        "effector memory CD8-positive, alpha-beta T cell": "T cells",
+        "erythrocyte": "Erythroid",
+        "gamma-delta T cell": "T cells",
+        "granulocyte": "Granulocytes",
+        "hematopoietic stem cell": "Progenitors",
+        "immature neutrophil": "Granulocytes",
+        "intermediate monocyte": "Monocytes",
+        "lymphocyte": null,
+        "memory B cell": "B cells",
+        "monocyte": "Monocytes",
+        "mucosal-associated invariant T cell": "T cells",
+        "naive B cell": "B cells",
+        "naive T cell": "T cells",
+        "naive thymus-derived CD4-positive, alpha-beta T cell": "T cells",
+        "naive thymus-derived CD8-positive, alpha-beta T cell": "T cells",
+        "natural killer cell": "NK and ILC",
+        "neutrophil": "Granulocytes",
+        "non-classical monocyte": "Monocytes",
+        "plasmablast": "Plasma cells",
+        "plasmacytoid dendritic cell": "Dendritic cells",
+        "plasmacytoid dendritic cell, human": "Dendritic cells",
+        "platelet": "Platelets",
+        "regulatory T cell": "T cells",
+        "transitional stage B cell": "B cells"
+      },
+      "integrationFresh": {
+        "elapsedSeconds": 206.82043255999997,
+        "io": {
+          "readBytes": 2563158250,
+          "readMB": 2563.158,
+          "requests": 1120,
+          "raw": {
+            "gets": 560,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 560,
+            "partialGets": 0,
+            "requestedBytes": 2563158250,
+            "transferredBytes": 2563158250,
+            "readRequestedBytes": 2563158250,
+            "readTransferredBytes": 2563158250,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 1120,
+            "countReadBytes": 2563158250,
+            "maxInFlight": 20
+          },
+          "http": {
+            "requests": 2240,
+            "gets": 2240,
+            "rangedGets": 2240,
+            "responseBytes": 2564243598
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "302": 1120,
+            "206": 1120
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 2356559872,
+          "operationPeakBytes": 8167968768,
+          "operationIncrementalPeakBytes": 5811408896,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 2436624384,
+          "processTreeRssPeakBytes": 8239349760,
+          "processTreeRssIncrementalPeakBytes": 5802725376,
+          "processTreeRssAfterBytes": 3290652672,
+          "cgroupMemoryCurrentBaselineBytes": 2356559872,
+          "cgroupMemoryCurrentPeakBytes": 8167968768,
+          "cgroupMemoryCurrentAfterBytes": 3212750848,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 34359738368,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        },
+        "summary": {
+          "wallSeconds": 206.256430351,
+          "peakRssMb": 7808.15234375,
+          "artifactsReused": 0,
+          "artifactsCreated": 14,
+          "stages": {
+            "input_snapshot": {
+              "seconds": 1.2398256809999566,
+              "peakRssMb": 2323.76171875,
+              "reused": 0,
+              "created": 4
+            },
+            "highly_variable_features": {
+              "seconds": 25.180469603000006,
+              "peakRssMb": 7808.15234375,
+              "reused": 0,
+              "created": 2
+            },
+            "normalization": {
+              "seconds": 24.529676318000043,
+              "peakRssMb": 4501.5625,
+              "reused": 0,
+              "created": 1
+            },
+            "pca": {
+              "seconds": 20.40222480500006,
+              "peakRssMb": 4246.48046875,
+              "reused": 0,
+              "created": 2
+            },
+            "harmony": {
+              "seconds": 92.01239336799995,
+              "peakRssMb": 2796.66796875,
+              "reused": 0,
+              "created": 1
+            },
+            "ann_index": {
+              "seconds": 31.888771580000025,
+              "peakRssMb": 2932.9375,
+              "reused": 0,
+              "created": 1
+            },
+            "neighbors": {
+              "seconds": 5.760555766000039,
+              "peakRssMb": 3055.9609375,
+              "reused": 0,
+              "created": 1
+            },
+            "connectivity": {
+              "seconds": 0.48617605799995545,
+              "peakRssMb": 3112.26953125,
+              "reused": 0,
+              "created": 1
+            },
+            "leiden_1.0": {
+              "seconds": 4.454156213000033,
+              "peakRssMb": 3267.25390625,
+              "reused": 0,
+              "created": 1
+            }
+          }
+        }
+      },
+      "freshVersusReused": {
+        "pcaMaximumSubspaceDegrees": 6.515545101137832e-05,
+        "explainedVarianceMaxAbsError": 0.0,
+        "clusterAri": 1.0,
+        "exactClusterLabels": true,
+        "correctedCoordinateMaxAbsError": 0.0
+      },
+      "sourceAlignment": {
+        "countsCompared": 4538247350,
+        "exactCounts": true,
+        "exactSourceRows": true,
+        "exactMetadata": true,
+        "exactFeatureIntersection": true,
+        "copiedCountChunkBytes": 0
+      },
+      "sourceAlignmentMeasurement": {
+        "elapsedSeconds": 540.92184904,
+        "io": {
+          "readBytes": 8326147958,
+          "readMB": 8326.148,
+          "requests": 2317,
+          "raw": {
+            "gets": 1290,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 1027,
+            "partialGets": 0,
+            "requestedBytes": 3144624591,
+            "transferredBytes": 8326147958,
+            "readRequestedBytes": 8326147958,
+            "readTransferredBytes": 8326147958,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 2154,
+            "countReadBytes": 8322650067,
+            "maxInFlight": 2
+          },
+          "http": {
+            "requests": 4366,
+            "gets": 4366,
+            "rangedGets": 4108,
+            "responseBytes": 8327968132
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "302": 2178,
+            "200": 134,
+            "206": 2054
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 3263217664,
+          "operationPeakBytes": 4531400704,
+          "operationIncrementalPeakBytes": 1268183040,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 3341000704,
+          "processTreeRssPeakBytes": 4609593344,
+          "processTreeRssIncrementalPeakBytes": 1268592640,
+          "processTreeRssAfterBytes": 3543072768,
+          "cgroupMemoryCurrentBaselineBytes": 3263217664,
+          "cgroupMemoryCurrentPeakBytes": 4531400704,
+          "cgroupMemoryCurrentAfterBytes": 3463905280,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 34359738368,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        }
+      },
+      "materialization": {
+        "elapsedSeconds": 160.32954753400008,
+        "io": {
+          "readBytes": 1281579125,
+          "readMB": 1281.579,
+          "requests": 560,
+          "raw": {
+            "gets": 280,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 280,
+            "partialGets": 0,
+            "requestedBytes": 1281579125,
+            "transferredBytes": 1281579125,
+            "readRequestedBytes": 1281579125,
+            "readTransferredBytes": 1281579125,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 560,
+            "countReadBytes": 1281579125,
+            "maxInFlight": 8
+          },
+          "http": {
+            "requests": 1120,
+            "gets": 1120,
+            "rangedGets": 1120,
+            "responseBytes": 1282121841
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "302": 560,
+            "206": 560
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 3463909376,
+          "operationPeakBytes": 12865646592,
+          "operationIncrementalPeakBytes": 9401737216,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 3543089152,
+          "processTreeRssPeakBytes": 266107842560,
+          "processTreeRssIncrementalPeakBytes": 262564753408,
+          "processTreeRssAfterBytes": 3794812928,
+          "cgroupMemoryCurrentBaselineBytes": 3463909376,
+          "cgroupMemoryCurrentPeakBytes": 12865646592,
+          "cgroupMemoryCurrentAfterBytes": 3715903488,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 34359738368,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        }
+      },
+      "materializedAnalysis": {
+        "elapsedSeconds": 69.41927907500008,
+        "io": {
+          "readBytes": 0,
+          "readMB": 0.0,
+          "requests": 0,
+          "raw": {
+            "gets": 0,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 0,
+            "readRequestedBytes": 0,
+            "readTransferredBytes": 0,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 0
+          },
+          "http": {
+            "requests": 0,
+            "gets": 0,
+            "rangedGets": 0,
+            "responseBytes": 0
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {},
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 3715907584,
+          "operationPeakBytes": 7132729344,
+          "operationIncrementalPeakBytes": 3416821760,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 3794829312,
+          "processTreeRssPeakBytes": 7179882496,
+          "processTreeRssIncrementalPeakBytes": 3385053184,
+          "processTreeRssAfterBytes": 4288032768,
+          "cgroupMemoryCurrentBaselineBytes": 3715907584,
+          "cgroupMemoryCurrentPeakBytes": 7132729344,
+          "cgroupMemoryCurrentAfterBytes": 4208869376,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 34359738368,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        }
+      },
+      "materializedAgreement": {
+        "pcaMaximumSubspaceDegrees": 6.515545101137832e-05,
+        "explainedVarianceMaxAbsError": 0.0,
+        "clusterAri": 1.0,
+        "exactClusterLabels": true
+      },
+      "materializedH5adBytes": 1232525698,
+      "materializedStoreBytes": 2464589256,
+      "localStoreAfterAnalysisBytes": 1227400579
+    },
+    "sourceStorageOptions": {
+      "token": false,
+      "block_size": 1
+    }
+  },
+  "elapsedSeconds": 1618.3333764076233
+}

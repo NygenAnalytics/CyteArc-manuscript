@@ -1,0 +1,26 @@
+{
+ "pass": "markHvgs",
+ "rows": [
+  {
+   "cells": 5000000,
+   "layout": "fixed",
+   "rangeReads": 20976
+  },
+  {
+   "cells": 5000000,
+   "layout": "scaled",
+   "rangeReads": 5336
+  },
+  {
+   "cells": 10000000,
+   "layout": "fixed",
+   "rangeReads": 83812
+  },
+  {
+   "cells": 10000000,
+   "layout": "scaled",
+   "rangeReads": 10695
+  }
+ ],
+ "source": "experiments/benchmarks/records/count_requests.json"
+}

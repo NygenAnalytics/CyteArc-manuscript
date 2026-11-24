@@ -1,0 +1,307 @@
+{
+  "module": "internal.reuse.composite_and_remote",
+  "function": "run",
+  "region": "us-east",
+  "startedAt": 1793190884.3712647,
+  "status": "completed",
+  "result": {
+    "composite": {
+      "settings": {
+        "mode": "composite",
+        "sources": {
+          "combat": "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff",
+          "yazar": "yazar_2022_single_cell_eqtl_mapping_control_autoimmune_disease_3faad104",
+          "aida": "kock_2025_aida_phase_1_data_freeze_v2_south_korea_thailand_india_c838aec3",
+          "covid_atlas": "cambridge_2021_single_cell_multi_omics_immune_response_covid_19_c7775e88",
+          "hao": "hao_2021_nygc_multimodal_pbmc_ed5d841d",
+          "jdm": "rabadam_2024_citeseq_jdm_pbmcs_a199ca73",
+          "arthritis": "binvignat_2024_single_cell_rna_seq_arthritis_disease_activity_d18736c3",
+          "lee": "lee_2020_immunophenotyping_covid_19_development_severe_covid_19_de2c780c",
+          "schulte_schrepping": "jin_2021_individual_single_cell_rna_seq_data_schulte_schrepping_et_al_5e717147",
+          "ivanova": "ivanova_2023_circulating_immune_cells_cv19_infection_vaccination_hc_242c6e7f"
+        },
+        "conditions": [],
+        "scaleOnly": true,
+        "minimumSources": 10,
+        "minimumCells": 4000000,
+        "memBudget": "24G",
+        "nthreads": 16,
+        "hvgCount": 2000,
+        "pcaDims": 30,
+        "replicate": 4
+      },
+      "sourceCacheBytes": 0,
+      "timingBoundary": "Pipeline from fixed primary cells through native Leiden; UMAP, doublets, markers, cell cycle and Paris disabled",
+      "countCreationPolicy": "Counts streamed for selected-gene QC and fingerprint; count chunks not copied",
+      "tolerances": {
+        "pcaSubspaceDegrees": 0.05,
+        "explainedVarianceMaxAbsError": 1e-06,
+        "clusterAriMin": 0.999
+      },
+      "uniqueSourceCellIds": 4714857,
+      "distinctObservationJoinids": 4714325,
+      "crossSourceObservationJoinidCollisions": {
+        "combat": 0,
+        "yazar": 0,
+        "aida": 0,
+        "covid_atlas": 0,
+        "hao": 0,
+        "jdm": 35,
+        "arthritis": 265,
+        "lee": 232,
+        "schulte_schrepping": 0,
+        "ivanova": 0
+      },
+      "sourceCellIdentityScope": "Source store URI plus observation_joinid; CELLxGENE hashes only obs.index, so cross-store identifier matches can reflect reused barcode strings. Primary flags and source-study provenance define the biological eligibility.",
+      "sourceOpeningAndSelection": {
+        "elapsedSeconds": 235.85492372500002,
+        "io": {
+          "readBytes": 53845481,
+          "readMB": 53.845,
+          "requests": 1074,
+          "raw": {
+            "gets": 1074,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 0,
+            "partialGets": 0,
+            "requestedBytes": 0,
+            "transferredBytes": 53845481,
+            "readRequestedBytes": 53845481,
+            "readTransferredBytes": 53845481,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 0,
+            "countReadBytes": 0,
+            "maxInFlight": 10
+          },
+          "http": {
+            "requests": 2548,
+            "gets": 2548,
+            "rangedGets": 0,
+            "responseBytes": 55076481
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 1704,
+            "302": 834,
+            "429": 10
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 488468480,
+          "operationPeakBytes": 1400254464,
+          "operationIncrementalPeakBytes": 911785984,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 504074240,
+          "processTreeRssPeakBytes": 1443192832,
+          "processTreeRssIncrementalPeakBytes": 939118592,
+          "processTreeRssAfterBytes": 904347648,
+          "cgroupMemoryCurrentBaselineBytes": 488468480,
+          "cgroupMemoryCurrentPeakBytes": 1400254464,
+          "cgroupMemoryCurrentAfterBytes": 1379246080,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 68719476736,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        }
+      },
+      "creation": {
+        "elapsedSeconds": 4272.746120934999,
+        "io": {
+          "readBytes": 16338487406,
+          "readMB": 16338.487,
+          "requests": 30135,
+          "raw": {
+            "gets": 26716,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 3419,
+            "partialGets": 0,
+            "requestedBytes": 13340197807,
+            "transferredBytes": 16338487406,
+            "readRequestedBytes": 16338487406,
+            "readTransferredBytes": 16338487406,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 6838,
+            "countReadBytes": 13340197807,
+            "maxInFlight": 14
+          },
+          "http": {
+            "requests": 58812,
+            "gets": 58812,
+            "rangedGets": 13676,
+            "responseBytes": 16364486787
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "200": 24544,
+            "302": 27393,
+            "429": 37,
+            "206": 6838
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 1367715840,
+          "operationPeakBytes": 3363356672,
+          "operationIncrementalPeakBytes": 1995640832,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 904364032,
+          "processTreeRssPeakBytes": 3459469312,
+          "processTreeRssIncrementalPeakBytes": 2555105280,
+          "processTreeRssAfterBytes": 1848127488,
+          "cgroupMemoryCurrentBaselineBytes": 1367715840,
+          "cgroupMemoryCurrentPeakBytes": 3363356672,
+          "cgroupMemoryCurrentAfterBytes": 1803882496,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 68719476736,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        }
+      },
+      "cellsTotalSelected": 4714857,
+      "genesShared": 18446,
+      "sourceCellCounts": {
+        "combat": 836148,
+        "yazar": 1248980,
+        "aida": 1265624,
+        "covid_atlas": 647366,
+        "hao": 161764,
+        "jdm": 105827,
+        "arthritis": 108717,
+        "lee": 59572,
+        "schulte_schrepping": 90957,
+        "ivanova": 189902
+      },
+      "localStoreAfterCreateBytes": 1090583039,
+      "nonzeroCounts": 6535468092,
+      "logicalDenseCountBytes": 173940504444,
+      "copiedCountChunkBytes": 0,
+      "unintegrated": {
+        "elapsedSeconds": 3489.632990344,
+        "io": {
+          "readBytes": 28216036826,
+          "readMB": 28216.037,
+          "requests": 14420,
+          "raw": {
+            "gets": 7210,
+            "sets": 0,
+            "deletes": 0,
+            "deleteDirs": 0,
+            "sizeQueries": 0,
+            "rangeGets": 7210,
+            "partialGets": 0,
+            "requestedBytes": 28216036826,
+            "transferredBytes": 28216036826,
+            "readRequestedBytes": 28216036826,
+            "readTransferredBytes": 28216036826,
+            "writeTransferredBytes": 0,
+            "countReadRequests": 14420,
+            "countReadBytes": 28216036826,
+            "maxInFlight": 8
+          },
+          "http": {
+            "requests": 28856,
+            "gets": 28856,
+            "rangedGets": 28856,
+            "responseBytes": 28230850354
+          },
+          "httpClient": "httpx2",
+          "httpResponseStatusCounts": {
+            "302": 14420,
+            "206": 14420,
+            "429": 16
+          },
+          "counterDefinition": "Zarr calls and returned bytes are separate from physical HTTP requests and encoded response-body bytes"
+        },
+        "resources": {
+          "operationBaselineBytes": 1803886592,
+          "operationPeakBytes": 13177724928,
+          "operationIncrementalPeakBytes": 11373838336,
+          "operationPeakSource": "cgroupMemoryCurrent",
+          "processTreeRssBaselineBytes": 1848143872,
+          "processTreeRssPeakBytes": 13262368768,
+          "processTreeRssIncrementalPeakBytes": 11414224896,
+          "processTreeRssAfterBytes": 3698339840,
+          "cgroupMemoryCurrentBaselineBytes": 1803886592,
+          "cgroupMemoryCurrentPeakBytes": 13177724928,
+          "cgroupMemoryCurrentAfterBytes": 3622199296,
+          "cgroupMemoryPeakBytes": null,
+          "cgroupMemoryPeakScope": "unavailable",
+          "memoryMaxBytes": 68719476736,
+          "memoryEventsDelta": null,
+          "cpuQuotaCores": null
+        },
+        "summary": {
+          "wallSeconds": 3488.161381945,
+          "peakRssMb": 12715.98046875,
+          "artifactsReused": 0,
+          "artifactsCreated": 13,
+          "stages": {
+            "input_snapshot": {
+              "seconds": 29.964987342000313,
+              "peakRssMb": 1828.49609375,
+              "reused": 0,
+              "created": 4
+            },
+            "highly_variable_features": {
+              "seconds": 1198.1265700890008,
+              "peakRssMb": 12312.4453125,
+              "reused": 0,
+              "created": 2
+            },
+            "normalization": {
+              "seconds": 590.0647901330003,
+              "peakRssMb": 12715.98046875,
+              "reused": 0,
+              "created": 1
+            },
+            "pca": {
+              "seconds": 294.7619237539993,
+              "peakRssMb": 5481.7578125,
+              "reused": 0,
+              "created": 2
+            },
+            "ann_index": {
+              "seconds": 1176.2517931039993,
+              "peakRssMb": 4843.91015625,
+              "reused": 0,
+              "created": 1
+            },
+            "neighbors": {
+              "seconds": 96.96862758400039,
+              "peakRssMb": 8260.51171875,
+              "reused": 0,
+              "created": 1
+            },
+            "connectivity": {
+              "seconds": 20.78073913499975,
+              "peakRssMb": 8949.14453125,
+              "reused": 0,
+              "created": 1
+            },
+            "leiden_1.0": {
+              "seconds": 80.60493962100009,
+              "peakRssMb": 12109.49609375,
+              "reused": 0,
+              "created": 1
+            }
+          }
+        }
+      },
+      "localStoreAfterAnalysisBytes": 15248230600
+    },
+    "sourceStorageOptions": {
+      "token": false,
+      "block_size": 1
+    }
+  },
+  "elapsedSeconds": 8000.230081796646
+}

@@ -1,0 +1,780 @@
+{
+ "stores": [
+  {
+   "store": "he_2025_altra_all_samples_789ad837",
+   "job": "other_blood_stores",
+   "cells": 2029864,
+   "countBytes": 10774415301,
+   "responseBytes": 242695230,
+   "seconds": 37.426583683,
+   "rateLimited": false
+  },
+  {
+   "store": "alegbe_2026_ibdverse_multitissue_atlasing_cohort_0e5c75da",
+   "job": "other_blood_stores",
+   "cells": 1852681,
+   "countBytes": 21289219516,
+   "responseBytes": 76798877,
+   "seconds": 27.519629366,
+   "rateLimited": false
+  },
+  {
+   "store": "kock_2025_aida_phase_1_data_freeze_v2_south_korea_thailand_india_c838aec3",
+   "job": "other_blood_stores",
+   "cells": 1265624,
+   "countBytes": 7423021882,
+   "responseBytes": 443710080,
+   "seconds": 35.541155423000006,
+   "rateLimited": false
+  },
+  {
+   "store": "ahern_2022_combat_project_single_cell_19_sepsis_flu_patient_pbmcs_ebc2e1ff",
+   "job": "other_blood_stores",
+   "cells": 836148,
+   "countBytes": 3923199923,
+   "responseBytes": 219912757,
+   "seconds": 20.080222355000018,
+   "rateLimited": false
+  },
+  {
+   "store": "unpub_0000_scalebio_single_cell_rna_sequencing_human_pbmcs_2c820d53",
+   "job": "other_blood_stores",
+   "cells": 685024,
+   "countBytes": 3962907177,
+   "responseBytes": 235304350,
+   "seconds": 27.17005984299999,
+   "rateLimited": false
+  },
+  {
+   "store": "cambridge_2021_single_cell_multi_omics_immune_response_covid_19_c7775e88",
+   "job": "other_blood_stores",
+   "cells": 647366,
+   "countBytes": 2807123646,
+   "responseBytes": 280495074,
+   "seconds": 14.80452891500002,
+   "rateLimited": false
+  },
+  {
+   "store": "han_2020_construction_human_cell_landscape_at_single_cell_level_2adb1f8a",
+   "job": "other_blood_stores",
+   "cells": 599926,
+   "countBytes": 1128423216,
+   "responseBytes": 32751232,
+   "seconds": 10.567199653000017,
+   "rateLimited": false
+  },
+  {
+   "store": "furer_2025_human_chspcs_ultima_4a5b00e0",
+   "job": "other_blood_stores",
+   "cells": 516121,
+   "countBytes": 2372379824,
+   "responseBytes": 251920375,
+   "seconds": 17.957135537000028,
+   "rateLimited": false
+  },
+  {
+   "store": "furer_2025_human_chspcs_illumina_d9f3a82c",
+   "job": "other_blood_stores",
+   "cells": 495763,
+   "countBytes": 1977113381,
+   "responseBytes": 213589991,
+   "seconds": 15.845795278000026,
+   "rateLimited": false
+  },
+  {
+   "store": "arutyunyan_2023_all_donors_all_cell_states_vivo_74cff64f",
+   "job": "other_blood_stores",
+   "cells": 325665,
+   "countBytes": 2424711992,
+   "responseBytes": 26057310,
+   "seconds": 8.472446492000017,
+   "rateLimited": false
+  },
+  {
+   "store": "li_2022_single_cell_transcriptomic_renal_cell_carcinoma_patients_5af90777",
+   "job": "other_blood_stores",
+   "cells": 270855,
+   "countBytes": 1016937255,
+   "responseBytes": 273081001,
+   "seconds": 10.281109665999907,
+   "rateLimited": false
+  },
+  {
+   "store": "liu_2021_time_resolved_systems_fatal_covid_19_adaptive_cells_21d3e683",
+   "job": "other_blood_stores",
+   "cells": 246964,
+   "countBytes": 1194733693,
+   "responseBytes": 159686775,
+   "seconds": 18.767751849000092,
+   "rateLimited": false
+  },
+  {
+   "store": "knight_2026_integrated_global_cells_612b7bff",
+   "job": "other_blood_stores",
+   "cells": 226157,
+   "countBytes": 1407940484,
+   "responseBytes": 349899850,
+   "seconds": 21.105459910000036,
+   "rateLimited": false
+  },
+  {
+   "store": "unpub_0000_human_pbmc_glaucoma_atlas_30c2a6fd",
+   "job": "other_blood_stores",
+   "cells": 207952,
+   "countBytes": 768455571,
+   "responseBytes": 275936774,
+   "seconds": 19.935756991999938,
+   "rateLimited": false
+  },
+  {
+   "store": "ivanova_2023_circulating_immune_cells_cv19_infection_vaccination_hc_242c6e7f",
+   "job": "other_blood_stores",
+   "cells": 189902,
+   "countBytes": 733040568,
+   "responseBytes": 208060667,
+   "seconds": 11.23568694100004,
+   "rateLimited": false
+  },
+  {
+   "store": "krishna_2021_single_cell_sequencing_links_topology_therapy_efficacy_bd65a70f",
+   "job": "other_blood_stores",
+   "cells": 167283,
+   "countBytes": 748589978,
+   "responseBytes": 107078844,
+   "seconds": 19.442068853000023,
+   "rateLimited": false
+  },
+  {
+   "store": "xu_2026_myeloid_cells_3d8d8c97",
+   "job": "other_blood_stores",
+   "cells": 167156,
+   "countBytes": 721806132,
+   "responseBytes": 313719715,
+   "seconds": 24.12176759099998,
+   "rateLimited": false
+  },
+  {
+   "store": "hao_2021_nygc_multimodal_pbmc_ed5d841d",
+   "job": "other_blood_stores",
+   "cells": 161764,
+   "countBytes": 1010425914,
+   "responseBytes": 306909615,
+   "seconds": 10.380919911999968,
+   "rateLimited": false
+  },
+  {
+   "store": "chen_2022_global_dataset_infant_kmt2ar_b_all_cf83c98a",
+   "job": "other_blood_stores",
+   "cells": 128588,
+   "countBytes": 796622993,
+   "responseBytes": 298627364,
+   "seconds": 10.55401099200003,
+   "rateLimited": false
+  },
+  {
+   "store": "liu_2021_time_resolved_systems_fatal_covid_19_innate_cells_30cd5311",
+   "job": "other_blood_stores",
+   "cells": 125117,
+   "countBytes": 665715242,
+   "responseBytes": 251412642,
+   "seconds": 16.89548788000002,
+   "rateLimited": false
+  },
+  {
+   "store": "xu_2026_t_cells_f2b69d9b",
+   "job": "other_blood_stores",
+   "cells": 112040,
+   "countBytes": 660928152,
+   "responseBytes": 262865211,
+   "seconds": 25.90375007500006,
+   "rateLimited": false
+  },
+  {
+   "store": "binvignat_2024_single_cell_rna_seq_arthritis_disease_activity_d18736c3",
+   "job": "other_blood_stores",
+   "cells": 108717,
+   "countBytes": 143037061,
+   "responseBytes": 44356324,
+   "seconds": 11.111259749999931,
+   "rateLimited": false
+  },
+  {
+   "store": "rabadam_2024_citeseq_jdm_pbmcs_a199ca73",
+   "job": "other_blood_stores",
+   "cells": 105827,
+   "countBytes": 537414802,
+   "responseBytes": 200022392,
+   "seconds": 11.830361348999986,
+   "rateLimited": false
+  },
+  {
+   "store": "chan_2020_autoimmunity_pbmcs_c2a461b1",
+   "job": "other_blood_stores",
+   "cells": 97499,
+   "countBytes": 466943219,
+   "responseBytes": 141297127,
+   "seconds": 17.514353193000034,
+   "rateLimited": false
+  },
+  {
+   "store": "rodriguezubreva_2022_activated_pbmcs_expanded_cohort_cite_seq_3c75a463",
+   "job": "other_blood_stores",
+   "cells": 95064,
+   "countBytes": 456423349,
+   "responseBytes": 125456842,
+   "seconds": 9.658477572000038,
+   "rateLimited": false
+  },
+  {
+   "store": "heimlich_2024_single_cell_sequencing_human_indeterminant_potential_19e46756",
+   "job": "other_blood_stores",
+   "cells": 66985,
+   "countBytes": 264796550,
+   "responseBytes": 97081553,
+   "seconds": 7.18721550600003,
+   "rateLimited": false
+  },
+  {
+   "store": "lee_2020_immunophenotyping_covid_19_development_severe_covid_19_de2c780c",
+   "job": "other_blood_stores",
+   "cells": 59572,
+   "countBytes": 360351797,
+   "responseBytes": 161293196,
+   "seconds": 6.7433302860000595,
+   "rateLimited": false
+  },
+  {
+   "store": "chan_2020_pbmcs_fa8605cf",
+   "job": "other_blood_stores",
+   "cells": 59506,
+   "countBytes": 270178944,
+   "responseBytes": 93364942,
+   "seconds": 7.346351708000043,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2019_single_cell_transcriptomics_signatures_health_disease_01209dce",
+   "job": "other_blood_stores",
+   "cells": 51876,
+   "countBytes": 233895626,
+   "responseBytes": 25711594,
+   "seconds": 11.813985770000045,
+   "rateLimited": false
+  },
+  {
+   "store": "jin_2021_individual_single_cell_rna_seq_pbmc_data_arunachalam_et_al_59b69042",
+   "job": "other_blood_stores",
+   "cells": 49139,
+   "countBytes": 324664299,
+   "responseBytes": 137936927,
+   "seconds": 13.816796817000068,
+   "rateLimited": false
+  },
+  {
+   "store": "nose_2026_t_cells_gastric_cancer_patients_ca140407",
+   "job": "other_blood_stores",
+   "cells": 45698,
+   "countBytes": 273461875,
+   "responseBytes": 121456280,
+   "seconds": 28.697727279000105,
+   "rateLimited": false
+  },
+  {
+   "store": "wilk_2020_single_cell_atlas_peripheral_sars_cov_2_infection_456e8b9b",
+   "job": "other_blood_stores",
+   "cells": 44721,
+   "countBytes": 152519303,
+   "responseBytes": 56547261,
+   "seconds": 4.9644602240000495,
+   "rateLimited": false
+  },
+  {
+   "store": "guerreromurillo_2024_cd19_carpos_carneg_t_cells_460dfe21",
+   "job": "other_blood_stores",
+   "cells": 37100,
+   "countBytes": 131497505,
+   "responseBytes": 29709338,
+   "seconds": 12.791664321999974,
+   "rateLimited": false
+  },
+  {
+   "store": "jardine_2021_cd34_fetal_bone_marrow_fetal_liver_cord_blood_cite_seq_471647b3",
+   "job": "other_blood_stores",
+   "cells": 27998,
+   "countBytes": 247972869,
+   "responseBytes": 37641112,
+   "seconds": 5.235553457999913,
+   "rateLimited": false
+  },
+  {
+   "store": "de_vrij_2024_cross_sectional_3241c34f",
+   "job": "other_blood_stores",
+   "cells": 17308,
+   "countBytes": 95984823,
+   "responseBytes": 35919237,
+   "seconds": 7.92249063099996,
+   "rateLimited": false
+  },
+  {
+   "store": "rodriguezubreva_2022_activated_pbmcs_twins_scrna_d7d7e89c",
+   "job": "other_blood_stores",
+   "cells": 16901,
+   "countBytes": 90470680,
+   "responseBytes": 41575088,
+   "seconds": 5.605309140000031,
+   "rateLimited": false
+  },
+  {
+   "store": "triana_2021_blood_bone_marrow_healthy_young_donor_d3566d6a",
+   "job": "other_blood_stores",
+   "cells": 15502,
+   "countBytes": 5102879,
+   "responseBytes": 3116506,
+   "seconds": 8.750665588999937,
+   "rateLimited": false
+  },
+  {
+   "store": "knight_2026_dendritic_cells_a1058181",
+   "job": "other_blood_stores",
+   "cells": 15063,
+   "countBytes": 144514337,
+   "responseBytes": 38093693,
+   "seconds": 12.009604573000047,
+   "rateLimited": false
+  },
+  {
+   "store": "de_vrij_2024_longitudinal_5b25a46f",
+   "job": "other_blood_stores",
+   "cells": 12822,
+   "countBytes": 70317272,
+   "responseBytes": 24298751,
+   "seconds": 7.4369054349999715,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_49_years_old_male_fresh_pbmcs_2_days_post_intubation_db59611b",
+   "job": "other_blood_stores",
+   "cells": 11574,
+   "countBytes": 79061046,
+   "responseBytes": 40344276,
+   "seconds": 9.582182620000026,
+   "rateLimited": false
+  },
+  {
+   "store": "travaglini_2020_krasnow_lab_human_lung_cell_atlas_smart_seq2_e04daea4",
+   "job": "other_blood_stores",
+   "cells": 9409,
+   "countBytes": 142238481,
+   "responseBytes": 13930841,
+   "seconds": 13.294757409999988,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_49_years_old_male_fresh_pbmcs_3_days_post_intubation_eeacb0c1",
+   "job": "other_blood_stores",
+   "cells": 9337,
+   "countBytes": 77329923,
+   "responseBytes": 33533106,
+   "seconds": 9.655911056999912,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_66_years_old_female_fresh_pbmcs_2_days_post_intubation_881fe679",
+   "job": "other_blood_stores",
+   "cells": 7097,
+   "countBytes": 45143278,
+   "responseBytes": 22138711,
+   "seconds": 4.666491267999959,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_66_years_old_female_fresh_pbmcs_4_days_post_intubation_ed9e9f96",
+   "job": "other_blood_stores",
+   "cells": 5696,
+   "countBytes": 38110222,
+   "responseBytes": 20042140,
+   "seconds": 10.45305367900005,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_74_years_old_female_fresh_pbmcs_3_days_post_intubation_84230ea4",
+   "job": "other_blood_stores",
+   "cells": 5608,
+   "countBytes": 34545514,
+   "responseBytes": 18678451,
+   "seconds": 4.634041263000086,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_74_years_old_female_fresh_pbmcs_4_days_post_intubation_cab0bc48",
+   "job": "other_blood_stores",
+   "cells": 5080,
+   "countBytes": 29485731,
+   "responseBytes": 15052904,
+   "seconds": 6.653357931000073,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_74_years_old_female_fresh_pbmcs_7_days_post_intubation_79ef1959",
+   "job": "other_blood_stores",
+   "cells": 4846,
+   "countBytes": 34165472,
+   "responseBytes": 17717807,
+   "seconds": 5.103714063999973,
+   "rateLimited": false
+  },
+  {
+   "store": "xu_2026_b_cells_ee782eb7",
+   "job": "other_blood_stores",
+   "cells": 4829,
+   "countBytes": 35231880,
+   "responseBytes": 15659497,
+   "seconds": 9.081377520000046,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_66_years_old_female_fresh_pbmcs_3_days_post_intubation_ea786a06",
+   "job": "other_blood_stores",
+   "cells": 4792,
+   "countBytes": 19564483,
+   "responseBytes": 10271451,
+   "seconds": 5.2560294610000255,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_74_years_old_female_fresh_pbmcs_8_days_post_intubation_50eb1e23",
+   "job": "other_blood_stores",
+   "cells": 4755,
+   "countBytes": 29696763,
+   "responseBytes": 15273778,
+   "seconds": 4.899262547000035,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_49_years_old_male_fresh_pbmcs_1_day_post_intubation_c874f155",
+   "job": "other_blood_stores",
+   "cells": 4603,
+   "countBytes": 34097974,
+   "responseBytes": 17712247,
+   "seconds": 5.075453101999983,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_82_years_old_female_fresh_pbmcs_1_day_post_intubation_8a554710",
+   "job": "other_blood_stores",
+   "cells": 4232,
+   "countBytes": 16752971,
+   "responseBytes": 8796230,
+   "seconds": 5.603413025999998,
+   "rateLimited": false
+  },
+  {
+   "store": "szabo_2021_66_years_old_female_fresh_pbmcs_7_days_post_intubation_01c93cf6",
+   "job": "other_blood_stores",
+   "cells": 3726,
+   "countBytes": 31325795,
+   "responseBytes": 16731681,
+   "seconds": 5.467194307,
+   "rateLimited": false
+  },
+  {
+   "store": "rodriguezubreva_2022_steady_state_b_cells_scrna_a5d95a42",
+   "job": "other_blood_stores",
+   "cells": 1324,
+   "countBytes": 11196190,
+   "responseBytes": 6032899,
+   "seconds": 4.80585931600001,
+   "rateLimited": false
+  },
+  {
+   "store": "ng_2026_t_cells_small_cell_lung_cancer_biopsies_b9735320",
+   "job": "other_blood_stores",
+   "cells": 450,
+   "countBytes": 1380449,
+   "responseBytes": 958590,
+   "seconds": 4.558147873000053,
+   "rateLimited": false
+  },
+  {
+   "store": "gong_2025_all_cells_ff4235bb",
+   "job": "immune_cohorts",
+   "cells": 3758514,
+   "countBytes": 23646343333,
+   "responseBytes": 519173503,
+   "seconds": 44.83285748,
+   "rateLimited": false
+  },
+  {
+   "store": "gong_2025_sound_life_young_adult_females_cmv_negative_46104f0b",
+   "job": "immune_cohorts",
+   "cells": 2616824,
+   "countBytes": 13502331530,
+   "responseBytes": 249869708,
+   "seconds": 34.222979278000004,
+   "rateLimited": false
+  },
+  {
+   "store": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+   "job": "immune_cohorts",
+   "cells": 2596111,
+   "countBytes": 13393393537,
+   "responseBytes": 248118678,
+   "seconds": 39.131192286,
+   "rateLimited": false
+  },
+  {
+   "store": "gong_2025_human_immune_health_atlas_e522d2cd",
+   "job": "immune_cohorts",
+   "cells": 1821725,
+   "countBytes": 9731146078,
+   "responseBytes": 45397979,
+   "seconds": 21.628350613000002,
+   "rateLimited": false
+  },
+  {
+   "store": "gong_2025_sound_life_older_adult_males_cmv_negative_47e00f43",
+   "job": "immune_cohorts",
+   "cells": 1750565,
+   "countBytes": 9279726092,
+   "responseBytes": 256253698,
+   "seconds": 29.732822373,
+   "rateLimited": false
+  },
+  {
+   "store": "gong_2025_sound_life_older_adult_females_cmv_negative_3cb646ab",
+   "job": "immune_cohorts",
+   "cells": 1350748,
+   "countBytes": 6946276225,
+   "responseBytes": 211395352,
+   "seconds": 36.749522670999994,
+   "rateLimited": false
+  },
+  {
+   "store": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+   "job": "immune_cohorts",
+   "cells": 1322061,
+   "countBytes": 6901600835,
+   "responseBytes": 210007655,
+   "seconds": 26.40959855,
+   "rateLimited": false
+  },
+  {
+   "store": "wells_2025_immune_aging_project_all_cells_1b350d0a",
+   "job": "immune_cohorts",
+   "cells": 1281499,
+   "countBytes": 8510817701,
+   "responseBytes": 186520678,
+   "seconds": 23.885250555000027,
+   "rateLimited": false
+  },
+  {
+   "store": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+   "job": "immune_cohorts",
+   "cells": 1234234,
+   "countBytes": 6450243417,
+   "responseBytes": 248894327,
+   "seconds": 25.815138509999997,
+   "rateLimited": false
+  },
+  {
+   "store": "van_der_wijst_2021_type_i_interferon_patients_covid_19_01ad3cd7",
+   "job": "immune_cohorts",
+   "cells": 600929,
+   "countBytes": 2462180393,
+   "responseBytes": 375324199,
+   "seconds": 19.39935954499998,
+   "rateLimited": false
+  },
+  {
+   "store": "yoshida_2022_pbmc_2a498ace",
+   "job": "immune_cohorts",
+   "cells": 422220,
+   "countBytes": 1892452579,
+   "responseBytes": 200755528,
+   "seconds": 13.326934513000026,
+   "rateLimited": false
+  }
+ ],
+ "rateLimitedStores": [
+  {
+   "store": "marteau_2026_single_cell_colorectal_cancer_atlas_core_atlas_05a8c945",
+   "job": "other_blood_stores",
+   "cells": 3790266,
+   "countBytes": 21662579595,
+   "responseBytes": 93443533,
+   "seconds": 221.354644001,
+   "rateLimited": true
+  },
+  {
+   "store": "yazar_2022_single_cell_eqtl_mapping_control_autoimmune_disease_3faad104",
+   "job": "other_blood_stores",
+   "cells": 1248980,
+   "countBytes": 4263783825,
+   "responseBytes": 146734042,
+   "seconds": 197.39300401900002,
+   "rateLimited": true
+  },
+  {
+   "store": "tabula_2022_tabula_sapiens_all_cells_53d208b0",
+   "job": "other_blood_stores",
+   "cells": 1136218,
+   "countBytes": 12198454875,
+   "responseBytes": 283685447,
+   "seconds": 198.433795544,
+   "rateLimited": true
+  },
+  {
+   "store": "kock_2025_aida_phase_1_data_freeze_v1_japan_singapore_south_korea_b0e547f0",
+   "job": "other_blood_stores",
+   "cells": 1058909,
+   "countBytes": 6722873417,
+   "responseBytes": 96785373,
+   "seconds": 190.389166192,
+   "rateLimited": true
+  },
+  {
+   "store": "fachrul_2026_all_cells_human_pbmc_samples_collected_indonesia_ca7d95ac",
+   "job": "other_blood_stores",
+   "cells": 462034,
+   "countBytes": 2299393432,
+   "responseBytes": 364621052,
+   "seconds": 276.894166719,
+   "rateLimited": true
+  },
+  {
+   "store": "guimaraes_2024_multi_tissue_single_cell_tumor_microenvironment_atlas_b617ee1b",
+   "job": "other_blood_stores",
+   "cells": 391963,
+   "countBytes": 1858655941,
+   "responseBytes": 15128238,
+   "seconds": 267.684260778,
+   "rateLimited": true
+  },
+  {
+   "store": "lim_2025_normal_malignant_cells_t_all_patients_extension_cohort_edb69e37",
+   "job": "other_blood_stores",
+   "cells": 333487,
+   "countBytes": 2239926310,
+   "responseBytes": 118893556,
+   "seconds": 268.58766413700005,
+   "rateLimited": true
+  },
+  {
+   "store": "dominguez_conde_2022_global_1b9d8702",
+   "job": "other_blood_stores",
+   "cells": 329762,
+   "countBytes": 2245357134,
+   "responseBytes": 50566531,
+   "seconds": 267.068471793,
+   "rateLimited": true
+  },
+  {
+   "store": "jin_2021_individual_single_cell_rna_seq_data_schulte_schrepping_et_al_5e717147",
+   "job": "other_blood_stores",
+   "cells": 90957,
+   "countBytes": 499206744,
+   "responseBytes": 201956342,
+   "seconds": 247.687734514,
+   "rateLimited": true
+  },
+  {
+   "store": "ventotormo_2018_pregnant_uterus_all_5bc42b88",
+   "job": "other_blood_stores",
+   "cells": 70325,
+   "countBytes": 560593041,
+   "responseBytes": 180918702,
+   "seconds": 236.74119411200002,
+   "rateLimited": true
+  },
+  {
+   "store": "travaglini_2020_krasnow_lab_human_lung_cell_atlas_10x_8c42cfd0",
+   "job": "other_blood_stores",
+   "cells": 65662,
+   "countBytes": 387514318,
+   "responseBytes": 84642762,
+   "seconds": 242.52084306799998,
+   "rateLimited": true
+  },
+  {
+   "store": "knight_2026_innate_lymphocytes_4057e00c",
+   "job": "other_blood_stores",
+   "cells": 64793,
+   "countBytes": 368444762,
+   "responseBytes": 134722710,
+   "seconds": 244.46921292600007,
+   "rateLimited": true
+  },
+  {
+   "store": "gong_2025_sound_life_young_adult_males_cmv_negative_420d0f5d",
+   "job": "immune_cohorts",
+   "cells": 1712244,
+   "countBytes": 9100110804,
+   "responseBytes": 256462731,
+   "seconds": 200.85955598600003,
+   "rateLimited": true
+  },
+  {
+   "store": "ren_2021_large_scale_single_cell_covid_19_patients_9dbab10c",
+   "job": "immune_cohorts",
+   "cells": 1462702,
+   "countBytes": 7618633109,
+   "responseBytes": 391156737,
+   "seconds": 199.034868753,
+   "rateLimited": true
+  },
+  {
+   "store": "perez_2022_multiplexed_scrna_1_2_million_pbmcs_adult_lupus_samples_218acb0f",
+   "job": "immune_cohorts",
+   "cells": 1263676,
+   "countBytes": 3669448941,
+   "responseBytes": 157573077,
+   "seconds": 195.282872704,
+   "rateLimited": true
+  },
+  {
+   "store": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+   "job": "immune_cohorts",
+   "cells": 1206761,
+   "countBytes": 6461993824,
+   "responseBytes": 248913099,
+   "seconds": 195.693842928,
+   "rateLimited": true
+  }
+ ],
+ "downloads": [
+  {
+   "dataset": "hbca_neurons",
+   "cells": 2480956,
+   "bytes": 32875537618,
+   "seconds": 216.14155530929565
+  },
+  {
+   "dataset": "mssm_cohort",
+   "cells": 4140453,
+   "bytes": 36092176654,
+   "seconds": 465.8619558811188
+  },
+  {
+   "dataset": "tabula_sapiens",
+   "cells": 1136218,
+   "bytes": 45013733785,
+   "seconds": 222.18956232070923
+  }
+ ],
+ "totals": {
+  "stores": 82,
+  "cells": 45716785,
+  "donors": 3896,
+  "wallSeconds": 1178.491986935,
+  "responseBytes": 12096181743,
+  "countBytes": 257610066994,
+  "share": 0.04695539224902159
+ },
+ "source": [
+  "experiments/catalogue/records/blood_store_screen.json",
+  ".build/derived/catalogue/blood_store_screen.json",
+  "experiments/catalogue/records/blood_store_screen/other_blood_stores.json",
+  "experiments/catalogue/records/blood_store_screen/immune_cohorts.json",
+  "experiments/benchmarks/records/rna_workflow_runs.json"
+ ]
+}

@@ -1,0 +1,1088 @@
+{
+  "description": "Tahoe-100M RNA workflow: every stage on 16 CPUs and 256 GiB (Modal, US), CyteArc memory limit 192 GiB, 16 workers, count units of 2 GB with 25.5 MB chunks, the workflow and seeds of the ten-million-cell scaling runs, one stage per Modal call. Seconds are each stage's own operation; peaks are the container's memory. Replicates 2 and 3 repeat the full run on stores of their own. The fixed-layout run imports the same atlas with count units of 2 GB with 200 MB chunks and repeats the count passes.",
+  "revision": "2dc57900b7981cfcf5e211527169a0b006546a95",
+  "runs": {
+    "test": {
+      "nRows": 6011925
+    },
+    "full": {
+      "nRows": 95624334
+    }
+  },
+  "dataset": {
+    "dataFiles": 3388,
+    "cells": 95624334,
+    "storedValues": 139624620192,
+    "largestCount": 4797,
+    "explicitZerosDropped": 28,
+    "dataBytes": 337644770670
+  },
+  "stages": {
+    "createStore": {
+      "full": {
+        "status": "ok",
+        "seconds": 9811.712653594,
+        "peakCgroupGiB": 129.60165405273438,
+        "rangeGets": null,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-east"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 1023.2938412929999,
+        "peakCgroupGiB": 102.51506423950195,
+        "rangeGets": null,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "ap"
+        }
+      },
+      "fullOverTestSeconds": 9.588362851081218
+    },
+    "writeCountsT": {
+      "full": {
+        "status": "ok",
+        "seconds": 3523.507680312,
+        "peakCgroupGiB": 78.23162078857422,
+        "rangeGets": 479760,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-east"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 265.88306527,
+        "peakCgroupGiB": 65.30310821533203,
+        "rangeGets": 29862,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "eu-west"
+        }
+      },
+      "fullOverTestSeconds": 13.252095152182537
+    },
+    "initializeStore": {
+      "full": {
+        "status": "ok",
+        "seconds": 410.748159196,
+        "peakCgroupGiB": 5.963268280029297,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_AZURE",
+          "region": "us-east"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 59.09213708,
+        "peakCgroupGiB": 1.1045341491699219,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "fullOverTestSeconds": 6.950978243347702
+    },
+    "reopenStore": {
+      "full": {
+        "status": "ok",
+        "seconds": 3.57716735,
+        "peakCgroupGiB": 1.2647018432617188,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-east"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 3.632139360000001,
+        "peakCgroupGiB": 0.5971145629882812,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "fullOverTestSeconds": 0.9848651154178178
+    },
+    "filterCells": {
+      "full": {
+        "status": "ok",
+        "seconds": 243.278602063,
+        "peakCgroupGiB": 7.806804656982422,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-east"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 27.777198176,
+        "peakCgroupGiB": 1.0594596862792969,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "fullOverTestSeconds": 8.7582124201856
+    },
+    "markHvgs": {
+      "full": {
+        "status": "ok",
+        "seconds": 2605.7033129829997,
+        "peakCgroupGiB": 14.064743041992188,
+        "rangeGets": 476596,
+        "getRequests": 957166,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 195.900051618,
+        "peakCgroupGiB": 9.867080688476562,
+        "rangeGets": 32785,
+        "getRequests": 65957,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "fullOverTestSeconds": 13.301187475254235
+    },
+    "runNormalization": {
+      "full": {
+        "status": "ok",
+        "seconds": 1774.073362759,
+        "peakCgroupGiB": 16.386756896972656,
+        "rangeGets": 64828,
+        "getRequests": 132612,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 222.283378425,
+        "peakCgroupGiB": 2.8732452392578125,
+        "rangeGets": 22825,
+        "getRequests": 45918,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-east"
+        }
+      },
+      "fullOverTestSeconds": 7.981133701175885
+    },
+    "runPca": {
+      "full": {
+        "status": "ok",
+        "seconds": 1816.085386081,
+        "peakCgroupGiB": 5.068386077880859,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-east"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 183.233882243,
+        "peakCgroupGiB": 3.6005325317382812,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "fullOverTestSeconds": 9.911296774646486
+    },
+    "buildEmbeddingInitialization": {
+      "full": {
+        "status": "ok",
+        "seconds": 1790.2151385729999,
+        "peakCgroupGiB": 3.042011260986328,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-east"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 87.034135543,
+        "peakCgroupGiB": 1.2858467102050781,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "fullOverTestSeconds": 20.569114950174093
+    },
+    "buildAnnIndex": {
+      "full": {
+        "status": "ok",
+        "seconds": 3543.745320368,
+        "peakCgroupGiB": 34.247562408447266,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-west"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 165.24496628100002,
+        "peakCgroupGiB": 2.9736671447753906,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "fullOverTestSeconds": 21.445405570429546
+    },
+    "queryNeighbors": {
+      "full": {
+        "status": "ok",
+        "seconds": 3818.674310942,
+        "peakCgroupGiB": 41.52388381958008,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-west"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 281.602440776,
+        "peakCgroupGiB": 3.638141632080078,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_AZURE",
+          "region": "us-east"
+        }
+      },
+      "fullOverTestSeconds": 13.560515670315358
+    },
+    "buildConnectivityMap": {
+      "full": {
+        "status": "ok",
+        "seconds": 309.720378514,
+        "peakCgroupGiB": 30.89962387084961,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 55.890397807999996,
+        "peakCgroupGiB": 2.1946945190429688,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "eu-west"
+        }
+      },
+      "fullOverTestSeconds": 5.541566899881101
+    },
+    "runUmap": {
+      "full": {
+        "status": "ok",
+        "seconds": 9128.683513986,
+        "peakCgroupGiB": 77.88248062133789,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-east"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 837.392642045,
+        "peakCgroupGiB": 5.676258087158203,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "eu-west"
+        }
+      },
+      "fullOverTestSeconds": 10.901318038444671
+    },
+    "runLeiden": {
+      "full": {
+        "status": "ok",
+        "seconds": 875.887539985,
+        "peakCgroupGiB": 52.976444244384766,
+        "rangeGets": null,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 118.183456988,
+        "peakCgroupGiB": 3.7726707458496094,
+        "rangeGets": null,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "ap-northeast"
+        }
+      },
+      "fullOverTestSeconds": 7.411253337037984
+    },
+    "findMarkers": {
+      "full": {
+        "status": "ok",
+        "seconds": 3242.3501741719997,
+        "peakCgroupGiB": 55.720741271972656,
+        "rangeGets": 476596,
+        "getRequests": 958728,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-west"
+        }
+      },
+      "test": {
+        "status": "ok",
+        "seconds": 232.82239252099998,
+        "peakCgroupGiB": 39.02590560913086,
+        "rangeGets": 32785,
+        "getRequests": 66784,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "eu-west"
+        }
+      },
+      "fullOverTestSeconds": 13.926281484628023
+    }
+  },
+  "totals": {
+    "test": {
+      "preparationHours": 0.3745191787897222,
+      "analysisHours": 0.6697214116066667,
+      "downloadSeconds": 149.102815644
+    },
+    "full": {
+      "preparationHours": 3.8183245814172224,
+      "analysisHours": 8.097776168826666,
+      "downloadSeconds": 1511.583101852
+    }
+  },
+  "fullReplicates": [
+    {
+      "replicate": 1,
+      "preparationHours": 3.8183245814172224,
+      "analysisHours": 8.097776168826666,
+      "stages": {
+        "createStore": {
+          "seconds": 9811.712653594,
+          "peakCgroupGiB": 129.60165405273438
+        },
+        "writeCountsT": {
+          "seconds": 3523.507680312,
+          "peakCgroupGiB": 78.23162078857422
+        },
+        "initializeStore": {
+          "seconds": 410.748159196,
+          "peakCgroupGiB": 5.963268280029297
+        },
+        "reopenStore": {
+          "seconds": 3.57716735,
+          "peakCgroupGiB": 1.2647018432617188
+        },
+        "filterCells": {
+          "seconds": 243.278602063,
+          "peakCgroupGiB": 7.806804656982422
+        },
+        "markHvgs": {
+          "seconds": 2605.7033129829997,
+          "peakCgroupGiB": 14.064743041992188
+        },
+        "runNormalization": {
+          "seconds": 1774.073362759,
+          "peakCgroupGiB": 16.386756896972656
+        },
+        "runPca": {
+          "seconds": 1816.085386081,
+          "peakCgroupGiB": 5.068386077880859
+        },
+        "buildEmbeddingInitialization": {
+          "seconds": 1790.2151385729999,
+          "peakCgroupGiB": 3.042011260986328
+        },
+        "buildAnnIndex": {
+          "seconds": 3543.745320368,
+          "peakCgroupGiB": 34.247562408447266
+        },
+        "queryNeighbors": {
+          "seconds": 3818.674310942,
+          "peakCgroupGiB": 41.52388381958008
+        },
+        "buildConnectivityMap": {
+          "seconds": 309.720378514,
+          "peakCgroupGiB": 30.89962387084961
+        },
+        "runUmap": {
+          "seconds": 9128.683513986,
+          "peakCgroupGiB": 77.88248062133789
+        },
+        "runLeiden": {
+          "seconds": 875.887539985,
+          "peakCgroupGiB": 52.976444244384766
+        },
+        "findMarkers": {
+          "seconds": 3242.3501741719997,
+          "peakCgroupGiB": 55.720741271972656
+        }
+      }
+    },
+    {
+      "replicate": 2,
+      "preparationHours": 4.242157023285278,
+      "analysisHours": 9.580597128918333,
+      "stages": {
+        "createStore": {
+          "seconds": 10898.282773789,
+          "peakCgroupGiB": 128.65959548950195
+        },
+        "writeCountsT": {
+          "seconds": 3987.331254633,
+          "peakCgroupGiB": 74.97334289550781
+        },
+        "initializeStore": {
+          "seconds": 386.15125540500003,
+          "peakCgroupGiB": 5.9901123046875
+        },
+        "reopenStore": {
+          "seconds": 4.174194124,
+          "peakCgroupGiB": 1.2646026611328125
+        },
+        "filterCells": {
+          "seconds": 215.634267921,
+          "peakCgroupGiB": 7.527259826660156
+        },
+        "markHvgs": {
+          "seconds": 2163.440949507,
+          "peakCgroupGiB": 14.09134292602539
+        },
+        "runNormalization": {
+          "seconds": 2057.4118813669998,
+          "peakCgroupGiB": 16.43136978149414
+        },
+        "runPca": {
+          "seconds": 1648.439646927,
+          "peakCgroupGiB": 4.839054107666016
+        },
+        "buildEmbeddingInitialization": {
+          "seconds": 1399.040397845,
+          "peakCgroupGiB": 3.291797637939453
+        },
+        "buildAnnIndex": {
+          "seconds": 3255.1393870660004,
+          "peakCgroupGiB": 34.25253677368164
+        },
+        "queryNeighbors": {
+          "seconds": 4116.316134397,
+          "peakCgroupGiB": 41.497528076171875
+        },
+        "buildConnectivityMap": {
+          "seconds": 162.378736717,
+          "peakCgroupGiB": 30.911144256591797
+        },
+        "runUmap": {
+          "seconds": 15681.902036364001,
+          "peakCgroupGiB": 78.3730583190918
+        },
+        "runLeiden": {
+          "seconds": 1005.94685409,
+          "peakCgroupGiB": 53.01003646850586
+        },
+        "findMarkers": {
+          "seconds": 2780.325177781,
+          "peakCgroupGiB": 54.71025085449219
+        }
+      }
+    },
+    {
+      "replicate": 3,
+      "preparationHours": 3.9169441533922225,
+      "analysisHours": 10.651182773725834,
+      "stages": {
+        "createStore": {
+          "seconds": 10095.724616883,
+          "peakCgroupGiB": 128.4848289489746
+        },
+        "writeCountsT": {
+          "seconds": 3653.0813762410003,
+          "peakCgroupGiB": 67.6974983215332
+        },
+        "initializeStore": {
+          "seconds": 352.192959088,
+          "peakCgroupGiB": 5.972740173339844
+        },
+        "reopenStore": {
+          "seconds": 3.002510464,
+          "peakCgroupGiB": 1.2647590637207031
+        },
+        "filterCells": {
+          "seconds": 196.740505788,
+          "peakCgroupGiB": 7.432468414306641
+        },
+        "markHvgs": {
+          "seconds": 2411.341199673,
+          "peakCgroupGiB": 13.046344757080078
+        },
+        "runNormalization": {
+          "seconds": 2016.2435119890001,
+          "peakCgroupGiB": 16.510318756103516
+        },
+        "runPca": {
+          "seconds": 3290.1507968799997,
+          "peakCgroupGiB": 4.969371795654297
+        },
+        "buildEmbeddingInitialization": {
+          "seconds": 1539.0066223370002,
+          "peakCgroupGiB": 3.0991592407226562
+        },
+        "buildAnnIndex": {
+          "seconds": 2373.2333967860004,
+          "peakCgroupGiB": 34.251827239990234
+        },
+        "queryNeighbors": {
+          "seconds": 3274.4197184279997,
+          "peakCgroupGiB": 41.55017852783203
+        },
+        "buildConnectivityMap": {
+          "seconds": 183.559903759,
+          "peakCgroupGiB": 25.969711303710938
+        },
+        "runUmap": {
+          "seconds": 17698.025416559,
+          "peakCgroupGiB": 78.52122116088867
+        },
+        "runLeiden": {
+          "seconds": 869.613477666,
+          "peakCgroupGiB": 52.984649658203125
+        },
+        "findMarkers": {
+          "seconds": 4488.9209250839995,
+          "peakCgroupGiB": 56.33846664428711
+        }
+      }
+    }
+  ],
+  "fullStore": {
+    "cellsKept": 83881526,
+    "cellsKeptFraction": 0.8771985381879889,
+    "leidenClusters": 43,
+    "cellLines": 50,
+    "medianCommonestCellLineFraction": 0.9588559968072989,
+    "cellsInClustersWithOneLineAbove90Percent": 62856680,
+    "clusters": [
+      {
+        "cellLines": 50,
+        "cells": 5388450,
+        "cluster": 1,
+        "commonestCellLine": "CVCL_0459",
+        "commonestCellLineFraction": 0.9736105930276796
+      },
+      {
+        "cellLines": 50,
+        "cells": 5204620,
+        "cluster": 2,
+        "commonestCellLine": "CVCL_1119",
+        "commonestCellLineFraction": 0.4083562296574966
+      },
+      {
+        "cellLines": 50,
+        "cells": 4288248,
+        "cluster": 3,
+        "commonestCellLine": "CVCL_1666",
+        "commonestCellLineFraction": 0.35506551859873775
+      },
+      {
+        "cellLines": 50,
+        "cells": 4226436,
+        "cluster": 4,
+        "commonestCellLine": "CVCL_1717",
+        "commonestCellLineFraction": 0.3388202258356686
+      },
+      {
+        "cellLines": 50,
+        "cells": 4042852,
+        "cluster": 5,
+        "commonestCellLine": "CVCL_0546",
+        "commonestCellLineFraction": 0.9698875942033001
+      },
+      {
+        "cellLines": 50,
+        "cells": 3603123,
+        "cluster": 6,
+        "commonestCellLine": "CVCL_0399",
+        "commonestCellLineFraction": 0.5696155807059599
+      },
+      {
+        "cellLines": 50,
+        "cells": 3368052,
+        "cluster": 7,
+        "commonestCellLine": "CVCL_0480",
+        "commonestCellLineFraction": 0.9907139200938703
+      },
+      {
+        "cellLines": 50,
+        "cells": 3054467,
+        "cluster": 8,
+        "commonestCellLine": "CVCL_1285",
+        "commonestCellLineFraction": 0.9588559968072989
+      },
+      {
+        "cellLines": 50,
+        "cells": 2284747,
+        "cluster": 9,
+        "commonestCellLine": "CVCL_0023",
+        "commonestCellLineFraction": 0.9757426095755898
+      },
+      {
+        "cellLines": 50,
+        "cells": 2245331,
+        "cluster": 10,
+        "commonestCellLine": "CVCL_1056",
+        "commonestCellLineFraction": 0.99110554301348
+      },
+      {
+        "cellLines": 50,
+        "cells": 2202976,
+        "cluster": 11,
+        "commonestCellLine": "CVCL_0428",
+        "commonestCellLineFraction": 0.9931610693897709
+      },
+      {
+        "cellLines": 50,
+        "cells": 2176494,
+        "cluster": 12,
+        "commonestCellLine": "CVCL_0359",
+        "commonestCellLineFraction": 0.9763417679993605
+      },
+      {
+        "cellLines": 50,
+        "cells": 2173020,
+        "cluster": 13,
+        "commonestCellLine": "CVCL_1693",
+        "commonestCellLineFraction": 0.9339821998877139
+      },
+      {
+        "cellLines": 50,
+        "cells": 2158727,
+        "cluster": 14,
+        "commonestCellLine": "CVCL_0131",
+        "commonestCellLineFraction": 0.9904610448657936
+      },
+      {
+        "cellLines": 50,
+        "cells": 2016459,
+        "cluster": 15,
+        "commonestCellLine": "CVCL_1097",
+        "commonestCellLineFraction": 0.9523079814665213
+      },
+      {
+        "cellLines": 50,
+        "cells": 1992380,
+        "cluster": 16,
+        "commonestCellLine": "CVCL_0371",
+        "commonestCellLineFraction": 0.980143346148827
+      },
+      {
+        "cellLines": 50,
+        "cells": 1988812,
+        "cluster": 17,
+        "commonestCellLine": "CVCL_0152",
+        "commonestCellLineFraction": 0.973823569045239
+      },
+      {
+        "cellLines": 50,
+        "cells": 1929514,
+        "cluster": 18,
+        "commonestCellLine": "CVCL_0504",
+        "commonestCellLineFraction": 0.9862110355250079
+      },
+      {
+        "cellLines": 50,
+        "cells": 1929300,
+        "cluster": 19,
+        "commonestCellLine": "CVCL_0293",
+        "commonestCellLineFraction": 0.9453698232519566
+      },
+      {
+        "cellLines": 50,
+        "cells": 1881412,
+        "cluster": 20,
+        "commonestCellLine": "CVCL_0334",
+        "commonestCellLineFraction": 0.9827182988096175
+      },
+      {
+        "cellLines": 50,
+        "cells": 1795631,
+        "cluster": 21,
+        "commonestCellLine": "CVCL_1381",
+        "commonestCellLineFraction": 0.9752087149308516
+      },
+      {
+        "cellLines": 50,
+        "cells": 1778532,
+        "cluster": 22,
+        "commonestCellLine": "CVCL_1547",
+        "commonestCellLineFraction": 0.8466465601968365
+      },
+      {
+        "cellLines": 50,
+        "cells": 1725434,
+        "cluster": 23,
+        "commonestCellLine": "CVCL_1731",
+        "commonestCellLineFraction": 0.8202214631217422
+      },
+      {
+        "cellLines": 50,
+        "cells": 1704209,
+        "cluster": 24,
+        "commonestCellLine": "CVCL_1478",
+        "commonestCellLineFraction": 0.9375070780637821
+      },
+      {
+        "cellLines": 50,
+        "cells": 1698438,
+        "cluster": 25,
+        "commonestCellLine": "CVCL_0320",
+        "commonestCellLineFraction": 0.9629424212129026
+      },
+      {
+        "cellLines": 50,
+        "cells": 1602752,
+        "cluster": 26,
+        "commonestCellLine": "CVCL_0546",
+        "commonestCellLineFraction": 0.9213090983508365
+      },
+      {
+        "cellLines": 50,
+        "cells": 1512844,
+        "cluster": 27,
+        "commonestCellLine": "CVCL_1495",
+        "commonestCellLineFraction": 0.9749524736192231
+      },
+      {
+        "cellLines": 50,
+        "cells": 1492934,
+        "cluster": 28,
+        "commonestCellLine": "CVCL_C466",
+        "commonestCellLineFraction": 0.9402813520222595
+      },
+      {
+        "cellLines": 50,
+        "cells": 1448569,
+        "cluster": 29,
+        "commonestCellLine": "CVCL_1094",
+        "commonestCellLineFraction": 0.9498539593212336
+      },
+      {
+        "cellLines": 50,
+        "cells": 1414466,
+        "cluster": 30,
+        "commonestCellLine": "CVCL_0069",
+        "commonestCellLineFraction": 0.9723118123730086
+      },
+      {
+        "cellLines": 50,
+        "cells": 1409374,
+        "cluster": 31,
+        "commonestCellLine": "CVCL_1517",
+        "commonestCellLineFraction": 0.9750286297320654
+      },
+      {
+        "cellLines": 50,
+        "cells": 1318654,
+        "cluster": 32,
+        "commonestCellLine": "CVCL_0218",
+        "commonestCellLineFraction": 0.958268052119813
+      },
+      {
+        "cellLines": 50,
+        "cells": 1254360,
+        "cluster": 33,
+        "commonestCellLine": "CVCL_0366",
+        "commonestCellLineFraction": 0.9135256226282726
+      },
+      {
+        "cellLines": 50,
+        "cells": 1128151,
+        "cluster": 34,
+        "commonestCellLine": "CVCL_1098",
+        "commonestCellLineFraction": 0.9182290313973928
+      },
+      {
+        "cellLines": 50,
+        "cells": 1106278,
+        "cluster": 35,
+        "commonestCellLine": "CVCL_1055",
+        "commonestCellLineFraction": 0.9874091322434325
+      },
+      {
+        "cellLines": 50,
+        "cells": 1041392,
+        "cluster": 36,
+        "commonestCellLine": "CVCL_0099",
+        "commonestCellLineFraction": 0.9632559113186965
+      },
+      {
+        "cellLines": 50,
+        "cells": 998537,
+        "cluster": 37,
+        "commonestCellLine": "CVCL_0179",
+        "commonestCellLineFraction": 0.9714201877346558
+      },
+      {
+        "cellLines": 50,
+        "cells": 535858,
+        "cluster": 38,
+        "commonestCellLine": "CVCL_1125",
+        "commonestCellLineFraction": 0.9109876123898496
+      },
+      {
+        "cellLines": 50,
+        "cells": 487381,
+        "cluster": 39,
+        "commonestCellLine": "CVCL_0028",
+        "commonestCellLineFraction": 0.9448090918603721
+      },
+      {
+        "cellLines": 50,
+        "cells": 125397,
+        "cluster": 40,
+        "commonestCellLine": "CVCL_0459",
+        "commonestCellLineFraction": 0.24810003429109148
+      },
+      {
+        "cellLines": 50,
+        "cells": 73056,
+        "cluster": 41,
+        "commonestCellLine": "CVCL_1285",
+        "commonestCellLineFraction": 0.2135621988611476
+      },
+      {
+        "cellLines": 50,
+        "cells": 70919,
+        "cluster": 42,
+        "commonestCellLine": "CVCL_1577",
+        "commonestCellLineFraction": 0.9867877437640125
+      },
+      {
+        "cellLines": 27,
+        "cells": 2940,
+        "cluster": 43,
+        "commonestCellLine": "CVCL_0428",
+        "commonestCellLineFraction": 0.9078231292517007
+      }
+    ]
+  },
+  "fixedLayout": {
+    "stages": {
+      "createStore": {
+        "status": "ok",
+        "seconds": 10800.918969667,
+        "peakCgroupGiB": 98.16929626464844,
+        "rangeGets": null,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "writeCountsT": {
+        "status": "ok",
+        "seconds": 5742.5587547469995,
+        "peakCgroupGiB": 49.707820892333984,
+        "rangeGets": 65967,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-west"
+        }
+      },
+      "initializeStore": {
+        "status": "ok",
+        "seconds": 389.893374425,
+        "peakCgroupGiB": 5.983753204345703,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "reopenStore": {
+        "status": "ok",
+        "seconds": 3.2508194150000005,
+        "peakCgroupGiB": 1.2644882202148438,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-east"
+        }
+      },
+      "filterCells": {
+        "status": "ok",
+        "seconds": 251.301838455,
+        "peakCgroupGiB": 7.776981353759766,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_GCP",
+          "region": "us-east"
+        }
+      },
+      "markHvgs": {
+        "status": "ok",
+        "seconds": 11753.542364772,
+        "peakCgroupGiB": 9.193683624267578,
+        "rangeGets": 3762600,
+        "getRequests": 7529187,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "runNormalization": {
+        "status": "ok",
+        "seconds": 3381.2880205280003,
+        "peakCgroupGiB": 6.077281951904297,
+        "rangeGets": 511800,
+        "getRequests": 1026556,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-east"
+        }
+      },
+      "importClusters": {
+        "status": "ok",
+        "seconds": 775.378894809,
+        "peakCgroupGiB": 40.9859619140625,
+        "rangeGets": 0,
+        "getRequests": null,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      },
+      "findMarkers": {
+        "status": "ok",
+        "seconds": 10972.364277415,
+        "peakCgroupGiB": 43.75251007080078,
+        "rangeGets": 3762600,
+        "getRequests": 7530737,
+        "placement": {
+          "cloudProvider": "CLOUD_PROVIDER_UNSPECIFIED",
+          "region": "us-central"
+        }
+      }
+    },
+    "preparationHours": 4.703714194121945,
+    "countPasses": {
+      "markHvgs": {
+        "fixedOverScaledSeconds": 4.510698630273677,
+        "fixedOverScaledRangeGets": 7.894736842105263
+      },
+      "runNormalization": {
+        "fixedOverScaledSeconds": 1.9059459949669135,
+        "fixedOverScaledRangeGets": 7.894736842105263
+      },
+      "findMarkers": {
+        "fixedOverScaledSeconds": 3.3840775018130227,
+        "fixedOverScaledRangeGets": 7.894736842105263
+      }
+    },
+    "comparison": {
+      "filterCellsIdentical": true,
+      "markHvgsIdentical": true,
+      "markerGroupsAndFeaturesIdentical": true,
+      "markerStatistics": {
+        "auc": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        },
+        "fold_change": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        },
+        "frac_exp": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        },
+        "frac_exp_rest": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        },
+        "mean": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        },
+        "mean_rest": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        },
+        "neg_log10_p_value": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        },
+        "p_value": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        },
+        "p_value_adjusted": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        },
+        "score": {
+          "finitePatternIdentical": true,
+          "maxAbsoluteDifference": 0.0
+        }
+      }
+    }
+  }
+}

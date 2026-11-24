@@ -1,0 +1,115 @@
+{
+ "requests": [
+  {
+   "step": "reuse.list",
+   "name": "list stored results",
+   "kind": "stored",
+   "seconds": 2.8751290639997933,
+   "publishedStage": null,
+   "publishedSeconds": null,
+   "readBytes": 6361,
+   "graphReadBytes": 825,
+   "writtenBytes": 0
+  },
+  {
+   "step": "reuse.same.neighbors",
+   "name": "neighbors, k = 11",
+   "kind": "stored",
+   "seconds": 34.48498079199999,
+   "publishedStage": "queryNeighbors",
+   "publishedSeconds": 286.0139514279999,
+   "readBytes": 2641852,
+   "graphReadBytes": 0,
+   "writtenBytes": 0
+  },
+  {
+   "step": "reuse.same.clusters",
+   "name": "Leiden, resolution 1",
+   "kind": "stored",
+   "seconds": 19.282029995999892,
+   "publishedStage": "runLeiden",
+   "publishedSeconds": 111.368066473,
+   "readBytes": 2624683,
+   "graphReadBytes": 2475,
+   "writtenBytes": 0
+  },
+  {
+   "step": "reuse.leiden.r0.5",
+   "name": "Leiden, resolution 0.5",
+   "kind": "new",
+   "seconds": 199.01093588100002,
+   "publishedStage": "runLeiden",
+   "publishedSeconds": 111.368066473,
+   "readBytes": 646474064,
+   "graphReadBytes": 643852480,
+   "writtenBytes": 6031501
+  },
+  {
+   "step": "reuse.leiden.r2",
+   "name": "Leiden, resolution 2",
+   "kind": "new",
+   "seconds": 140.83956753899975,
+   "publishedStage": "runLeiden",
+   "publishedSeconds": 111.368066473,
+   "readBytes": 646474064,
+   "graphReadBytes": 643852480,
+   "writtenBytes": 7139562
+  },
+  {
+   "step": "reuse.neighbors.k21",
+   "name": "neighbors, k = 21",
+   "kind": "new",
+   "seconds": 538.7481702960004,
+   "publishedStage": "queryNeighbors",
+   "publishedSeconds": 286.0139514279999,
+   "readBytes": 2301531805,
+   "graphReadBytes": 0,
+   "writtenBytes": 1112110024
+  },
+  {
+   "step": "reuse.graph.k21",
+   "name": "graph, k = 21",
+   "kind": "new",
+   "seconds": 32.39862957000014,
+   "publishedStage": "buildConnectivityMap",
+   "publishedSeconds": 82.22751504300004,
+   "readBytes": 2621049,
+   "graphReadBytes": 825,
+   "writtenBytes": 1667924247
+  },
+  {
+   "step": "reuse.leiden.k21_r1",
+   "name": "Leiden on k = 21",
+   "kind": "new",
+   "seconds": 128.6612240229997,
+   "publishedStage": "runLeiden",
+   "publishedSeconds": 111.368066473,
+   "readBytes": 2620450,
+   "graphReadBytes": 0,
+   "writtenBytes": 6576756
+  },
+  {
+   "step": "reuse.markers.r2",
+   "name": "markers, resolution 2",
+   "kind": "new",
+   "seconds": 915.8648627130005,
+   "publishedStage": "findMarkers",
+   "publishedSeconds": 373.7513001309999,
+   "readBytes": 23301873343,
+   "graphReadBytes": 0,
+   "writtenBytes": 243776208
+  }
+ ],
+ "publishedAnalysisSeconds": 3500.2049755,
+ "publishedRunSeconds": 5035.1060749690005,
+ "cpus": {
+  "published": 16,
+  "requests": 8
+ },
+ "atlasCells": 10000000,
+ "clusteredCells": 8894085,
+ "source": [
+  "experiments/reuse/records/embryo_endothelial_reanalysis.json",
+  "experiments/benchmarks/records/raw/rna_scaling_runs.json"
+ ]
+}

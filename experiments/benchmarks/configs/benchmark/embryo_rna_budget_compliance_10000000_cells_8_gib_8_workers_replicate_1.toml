@@ -1,0 +1,52 @@
+modalEnvironmentName = "cytearc_profiling"
+modalAppName = "cytearc-experiments"
+modalSecretName = "cytearc-r2"
+datasetPrefix = "experiments/datasets/embryo"
+dataset = "embryo"
+resultsPrefix = "experiments"
+storeBackend = "modalLocalDisk"
+runTag = "embryo_rna_budget_compliance_10000000_cells_8_gib_8_workers_replicate_1"
+targetSizes = [10000000]
+samplingSeed = 0
+
+[countMatrix]
+unitBytes = 500000000
+chunkBytes = 50000000
+
+[workflow]
+assayName = "RNA"
+cellKey = "I"
+filterAttrs = [
+    "RNA_nCounts",
+    "RNA_nFeatures",
+    "RNA_percentMito",
+    "RNA_percentRibo",
+]
+filterMinQuantile = 0.01
+filterMaxQuantile = 0.99
+minFeaturesPerCell = 10
+h5adBatchSize = 1000
+topN = 1000
+hvgMinCells = 20
+k = 11
+dims = 21
+nCentroids = 1000
+graphSeed = 4466
+annParallel = true
+umapEpochs = 300
+umapSeed = 4444
+umapParallel = true
+leidenResolution = 1.0
+leidenBackend = "cytearc"
+leidenSeed = 4444
+graphLocalCache = "auto"
+
+[fixedResources]
+modalMemoryRequestMb = 49152
+modalMemoryLimitMb = 49152
+modalCpuRequest = 8.0
+modalCpuLimit = 8.0
+cytearcMemoryBudget = 8589934592
+workers = 8
+timeoutSeconds = 82800
+ephemeralDiskMb = 524288

@@ -1,0 +1,201 @@
+modalEnvironmentName = "cytearc_profiling"
+modalAppName = "cytearc-experiments"
+modalSecretName = "cytearc-r2"
+datasetPrefix = "experiments/datasets"
+dataset = "tahoe"
+resultsPrefix = "experiments"
+runTag = "tahoe_rna_6011925_cells_scaled_layout_replicate_1"
+targetSizes = [6011925]
+samplingSeed = 0
+
+[countMatrix]
+unitBytes = 2000000000
+chunkBytes = 25500000
+
+[objectReads]
+stages = ["markHvgs", "runNormalization", "findMarkers"]
+maximumAttempts = 8
+
+[workflow]
+assayName = "RNA"
+cellKey = "I"
+filterAttrs = [
+    "RNA_nCounts",
+    "RNA_nFeatures",
+    "RNA_percentMito",
+    "RNA_percentRibo",
+]
+filterMinQuantile = 0.01
+filterMaxQuantile = 0.99
+minFeaturesPerCell = 10
+h5adBatchSize = 1000
+topN = 1000
+hvgMinCells = 20
+k = 11
+dims = 21
+nCentroids = 1000
+graphSeed = 4466
+annParallel = true
+umapEpochs = 300
+umapSeed = 4444
+umapParallel = true
+leidenResolution = 1.0
+leidenBackend = "cytearc"
+leidenSeed = 4444
+graphLocalCache = "auto"
+
+[stageResources.createStore]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 7200
+ephemeralDiskMb = 524288
+
+[stageResources.writeCountsT]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.initializeStore]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.reopenStore]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.filterCells]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.markHvgs]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 7200
+ephemeralDiskMb = 524288
+
+[stageResources.runNormalization]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.runPca]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.buildEmbeddingInitialization]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.buildAnnIndex]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.queryNeighbors]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.buildConnectivityMap]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.runUmap]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 7200
+ephemeralDiskMb = 524288
+
+[stageResources.runLeiden]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 3600
+ephemeralDiskMb = 524288
+
+[stageResources.findMarkers]
+modalMemoryRequestMb = 262144
+modalMemoryLimitMb = 262144
+modalCpuRequest = 16.0
+modalCpuLimit = 16.0
+cytearcMemoryBudget = 206158430208
+workers = 16
+timeoutSeconds = 7200
+ephemeralDiskMb = 524288
+
+[tahoe]
+revision = "2dc57900b7981cfcf5e211527169a0b006546a95"
+fileCount = 213
+prefetchFiles = 4
+maxDownloadBytes = 483183820800

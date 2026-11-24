@@ -1,0 +1,85 @@
+{
+  "description": "CyteArc WNN replayed on the Seurat 5.5.1 golden fixtures.",
+  "twoModality": {
+    "fixtureProvenance": {
+      "package": "Seurat",
+      "packageVersion": "5.5.1",
+      "seuratObjectVersion": "5.4.0",
+      "rVersion": "4.4.3",
+      "sourceRepository": "https://github.com/satijalab/seurat",
+      "dataset": "tenx_8K_pbmc_citeseq",
+      "generator": "scripts/export_seurat_wnn_golden.py",
+      "nCells": 300,
+      "kNn": 20,
+      "cellSampleSeed": 20210601,
+      "l2Normalize": true,
+      "matchedFunctions": [
+        "Seurat:::L2Norm",
+        "Seurat:::PredictAssay",
+        "Seurat:::impute_dist",
+        "Seurat:::NNdist",
+        "Seurat::MinMax"
+      ],
+      "matchedNote": "Seurat routines evaluated on CyteArc's union candidate pool and k-th non-self bandwidth. The kernel, score and softmax expressions are copied from the body of FindModalityWeights.",
+      "defaultFunction": "Seurat::FindMultiModalNeighbors",
+      "defaultNote": "Shipped defaults, including the wider knn.range search and the SNN-far bandwidth. CyteArc does not reproduce these, so the comparison is statistical."
+    },
+    "cells": 300,
+    "k": 20,
+    "matchedPool": {
+      "neighborIndicesIdentical": true,
+      "modalityWeightsMaxAbs": 2.9779859467282677e-08,
+      "neighborAffinitiesMaxAbs": 2.978431179467833e-08,
+      "float32Resolution": 1.1920928955078125e-07
+    },
+    "seuratDefaults": {
+      "neighborOverlap": 0.8865000000000002,
+      "rnaWeightPearson": 0.7622728811642918,
+      "rnaWeightMeanCyteArc": 0.5194575662712552,
+      "rnaWeightMeanSeurat": 0.5035409761181133
+    }
+  },
+  "threeModality": {
+    "fixtureProvenance": {
+      "package": "Seurat",
+      "packageVersion": "5.5.1",
+      "seuratObjectVersion": "5.4.0",
+      "rVersion": "4.4.3",
+      "sourceRepository": "https://github.com/satijalab/seurat",
+      "dataset": "synthetic_three_modality",
+      "datasetSource": "scripts/export_seurat_wnn_golden.py",
+      "generator": "scripts/export_seurat_wnn_golden.py",
+      "nCells": 48,
+      "kNn": 8,
+      "cellSampleSeed": 20210601,
+      "modalityNames": [
+        "RNA",
+        "ATAC",
+        "ADT"
+      ],
+      "l2Normalize": true,
+      "matchedFunctions": [
+        "Seurat:::L2Norm",
+        "Seurat:::PredictAssay",
+        "Seurat:::impute_dist",
+        "Seurat:::NNdist",
+        "Seurat::MinMax"
+      ],
+      "matchedNote": "Seurat routines evaluated on CyteArc's union candidate pool and k-th non-self bandwidth. The kernel, score and softmax expressions are copied from the body of FindModalityWeights.",
+      "defaultFunction": "Seurat::FindMultiModalNeighbors",
+      "defaultNote": "Shipped defaults, including the wider knn.range search and the SNN-far bandwidth. CyteArc does not reproduce these, so the comparison is statistical."
+    },
+    "cells": 48,
+    "k": 8,
+    "modalities": [
+      "RNA",
+      "ATAC",
+      "ADT"
+    ],
+    "matchedPool": {
+      "neighborIndicesIdentical": true,
+      "modalityWeightsMaxAbs": 2.9713314586565787e-08,
+      "neighborAffinitiesMaxAbs": 2.9226347009192466e-08
+    }
+  }
+}

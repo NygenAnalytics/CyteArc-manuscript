@@ -1,0 +1,1399 @@
+{
+  "measurement": {
+    "module": "internal.mapping.hlca",
+    "function": "run",
+    "region": "us-central",
+    "startedAt": 1793150594.916725,
+    "status": "completed",
+    "result": {
+      "package": "symphony",
+      "version": "0.1.3",
+      "queryCells": 500,
+      "features": 2000,
+      "referenceClusters": 100,
+      "elapsedSeconds": 0.246,
+      "errors": {
+        "projectedMaxAbs": 4.2632564145606e-14,
+        "assignmentsMaxAbs": 7.02783264916462e-09,
+        "correctedMaxAbs": 8.03942903360166e-08
+      },
+      "tolerances": {
+        "projectedMaxAbs": 1e-08,
+        "assignmentsMaxAbs": 1e-06,
+        "correctedMaxAbs": 1e-05
+      },
+      "passed": true,
+      "comparison": "Shared unclipped reference PCA scaling followed by the compiled R Symphony soft-clustering and query-correction functions",
+      "scalingThreshold": "Inf",
+      "defaultMapQuery": {
+        "scalingThreshold": 10,
+        "projectedMaxAbsDifference": 9.44577894771099,
+        "correctedMaxAbsDifference": 4.71826598214586
+      }
+    },
+    "elapsedSeconds": 3.963996171951294
+  },
+  "referencePreparation": {
+    "module": "internal.mapping.hlca",
+    "function": "run",
+    "region": "us-east",
+    "startedAt": 1793139633.6918604,
+    "status": "completed",
+    "result": {
+      "evaluationPhase": "development",
+      "settings": {
+        "mode": "mapping",
+        "evaluationPhase": "development",
+        "queryStudy": "Krasnow_2020",
+        "referenceCellsPerStudy": 1000,
+        "queryCells": 500,
+        "hvgCount": 2000,
+        "pcaDims": 30,
+        "memBudget": "8G",
+        "nthreads": 4
+      },
+      "tolerances": {
+        "projectedMaxAbs": 1e-08,
+        "assignmentsMaxAbs": 1e-06,
+        "correctedMaxAbs": 1e-05
+      },
+      "dataset": {
+        "sourceUrl": "https://datasets.cellxgene.cziscience.com/688185ad-11c2-4172-a53a-f4f1f4076860.h5ad",
+        "matrixKey": "raw/X",
+        "referenceStudies": [
+          "Banovich_Kropski_2020",
+          "Barbry_Leroy_2020",
+          "Nawijn_2021"
+        ],
+        "queryStudy": "Krasnow_2020",
+        "referenceCells": 3000,
+        "queryCells": 500,
+        "referenceDonors": [
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D322",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D326",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D337",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D339",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D344",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D353",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D354",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D363",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D367",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747D372",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-01",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-02",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-03",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-04",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-06",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-07",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-08",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-09",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-10",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747GRO-11",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0001",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0005",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0006",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0007",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0008",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0009",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0010",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0012",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0014",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0015",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0017",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0019",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747THD0020",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD071",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD072",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD073",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD077",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD078",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD080",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD101",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD103",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD104",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD105",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD106",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD107",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD66",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD67",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD68",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD69",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD70",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD84",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD85",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD92",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD94",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD95",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747VUHD98"
+        ],
+        "queryDonors": [
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747donor 1",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747donor 2",
+          "homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747donor 3"
+        ],
+        "referenceQueryDonorOverlap": [],
+        "labelColumn": "ann_level_3",
+        "selectionSeed": 4444
+      },
+      "resources": {
+        "operationBaselineBytes": 1357840384,
+        "operationPeakBytes": 1589260288,
+        "operationIncrementalPeakBytes": 231419904,
+        "operationPeakSource": "cgroupMemoryCurrent",
+        "processTreeRssBaselineBytes": 1407553536,
+        "processTreeRssPeakBytes": 1625411584,
+        "processTreeRssIncrementalPeakBytes": 217858048,
+        "processTreeRssAfterBytes": 1294331904,
+        "cgroupMemoryCurrentBaselineBytes": 1357840384,
+        "cgroupMemoryCurrentPeakBytes": 1589260288,
+        "cgroupMemoryCurrentAfterBytes": 1242673152,
+        "cgroupMemoryPeakBytes": null,
+        "cgroupMemoryPeakScope": "unavailable",
+        "memoryMaxBytes": 17179869184,
+        "memoryEventsDelta": null,
+        "cpuQuotaCores": null
+      },
+      "annotation": {
+        "accuracy": 0.902,
+        "macroF1": 0.7637025591151376,
+        "perType": {
+          "AT1": {
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1-score": 0.875,
+            "support": 8.0
+          },
+          "AT2": {
+            "precision": 0.926829268292683,
+            "recall": 0.9743589743589743,
+            "f1-score": 0.95,
+            "support": 39.0
+          },
+          "B cell lineage": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1-score": 0.75,
+            "support": 5.0
+          },
+          "Basal": {
+            "precision": 0.5833333333333334,
+            "recall": 0.7777777777777778,
+            "f1-score": 0.6666666666666666,
+            "support": 9.0
+          },
+          "Dendritic cells": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 4.0
+          },
+          "EC arterial": {
+            "precision": 0.9090909090909091,
+            "recall": 0.625,
+            "f1-score": 0.7407407407407407,
+            "support": 16.0
+          },
+          "EC capillary": {
+            "precision": 0.9767441860465116,
+            "recall": 0.8155339805825242,
+            "f1-score": 0.8888888888888888,
+            "support": 103.0
+          },
+          "EC venous": {
+            "precision": 0.25806451612903225,
+            "recall": 1.0,
+            "f1-score": 0.41025641025641024,
+            "support": 8.0
+          },
+          "Fibroblasts": {
+            "precision": 0.9642857142857143,
+            "recall": 0.84375,
+            "f1-score": 0.9,
+            "support": 32.0
+          },
+          "Innate lymphoid cell NK": {
+            "precision": 0.9,
+            "recall": 0.9310344827586207,
+            "f1-score": 0.9152542372881356,
+            "support": 29.0
+          },
+          "Lymphatic EC mature": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 6.0
+          },
+          "Macrophages": {
+            "precision": 0.9921259842519685,
+            "recall": 0.984375,
+            "f1-score": 0.9882352941176471,
+            "support": 128.0
+          },
+          "Mast cells": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 13.0
+          },
+          "Monocytes": {
+            "precision": 0.9,
+            "recall": 1.0,
+            "f1-score": 0.9473684210526315,
+            "support": 18.0
+          },
+          "Multiciliated lineage": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 14.0
+          },
+          "Myofibroblasts": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "Rare": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "Secretory": {
+            "precision": 0.6153846153846154,
+            "recall": 0.7272727272727273,
+            "f1-score": 0.6666666666666666,
+            "support": 11.0
+          },
+          "T cell lineage": {
+            "precision": 0.9629629629629629,
+            "recall": 0.9454545454545454,
+            "f1-score": 0.9541284403669725,
+            "support": 55.0
+          },
+          "accuracy": 0.902,
+          "macro avg": {
+            "precision": 0.782306394198828,
+            "recall": 0.7815556572739562,
+            "f1-score": 0.7637025591151376,
+            "support": 500.0
+          },
+          "weighted avg": {
+            "precision": 0.9349848517485614,
+            "recall": 0.902,
+            "f1-score": 0.9112350995578181,
+            "support": 500.0
+          }
+        },
+        "assignmentCoverage": 1.0
+      },
+      "symphonyExcludedUninformativeCells": 0,
+      "symphonyInputBytes": 1767116,
+      "correctionMagnitudeMaxAbs": 7.90129092802333,
+      "correctionMethod": "symphony",
+      "steps": {
+        "prepareSelectedStores": {
+          "rssBeforeBytes": 597893120,
+          "seconds": 65.589385109,
+          "rssAfterBytes": 1407537152
+        },
+        "referenceHarmony2Pipeline": {
+          "rssBeforeBytes": 1407553536,
+          "seconds": 20.181662445,
+          "rssAfterBytes": 1234558976
+        },
+        "registerReference": {
+          "rssBeforeBytes": 1234558976,
+          "seconds": 0.6836862269999955,
+          "rssAfterBytes": 1235279872
+        },
+        "projectCorrectSearch": {
+          "rssBeforeBytes": 1237377024,
+          "seconds": 0.31858447000000467,
+          "rssAfterBytes": 1294348288
+        },
+        "transferLabels": {
+          "rssBeforeBytes": 1294348288,
+          "seconds": 0.2936341260000006,
+          "rssAfterBytes": 1294348288
+        }
+      },
+      "referencePipeline": {
+        "run": {
+          "runId": "72cb54456a2fae8ee208a1bd440218c10e07ff1734b94d22b3510443e4ba4400",
+          "recipe": "basic_rna_analysis",
+          "requestedLabel": null,
+          "label": null,
+          "assay": "RNA",
+          "startedAtNs": 1793139701991003312,
+          "finishedAtNs": 1793139722134303436,
+          "status": "completed",
+          "complete": true,
+          "config": {
+            "cellKey": "I",
+            "filtering": {
+              "enabled": false
+            },
+            "harmonyBatchColumns": [
+              "study"
+            ],
+            "hvgCount": 2000,
+            "pcaDims": 30,
+            "neighborsK": 30,
+            "umap": false,
+            "tsne": false,
+            "leiden": {
+              "partitions": [],
+              "selected": null
+            },
+            "cellCycle": false,
+            "paris": false,
+            "doublets": false,
+            "doubletSampleColumns": [],
+            "markers": false,
+            "snapshotColumns": [],
+            "membershipStrength": false,
+            "species": null,
+            "params": {
+              "harmony": {
+                "harmony_params": {
+                  "sigma": 0.1,
+                  "random_state": 4444
+                }
+              },
+              "ann_index": {
+                "ann_parallel": false
+              }
+            },
+            "shutdown": {
+              "signalGuardAvailable": true,
+              "unavailableReason": null
+            }
+          },
+          "stageOrder": [
+            "input_snapshot",
+            "filtering",
+            "cell_cycle",
+            "highly_variable_features",
+            "normalization",
+            "pca",
+            "harmony",
+            "ann_index",
+            "neighbors",
+            "connectivity",
+            "embedding_initialization",
+            "umap",
+            "paris",
+            "cluster_selection",
+            "membership_strength",
+            "tsne",
+            "doublets",
+            "markers"
+          ],
+          "outputs": [
+            {
+              "key": "input_cell_selection",
+              "artifact": {
+                "type": "artifact",
+                "scope": "datastore",
+                "kind": "cell_selection",
+                "artifact_id": "e1b45628eb05926a1709defc9ae17ed2ef6b79b5f3c5147d610726d7c74cb3f8"
+              }
+            },
+            {
+              "key": "analysis_cell_selection",
+              "artifact": {
+                "type": "artifact",
+                "scope": "datastore",
+                "kind": "cell_selection",
+                "artifact_id": "e1b45628eb05926a1709defc9ae17ed2ef6b79b5f3c5147d610726d7c74cb3f8"
+              }
+            },
+            {
+              "key": "feature_universe",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_selection",
+                "artifact_id": "8c0f0388184ed8f5d36054e22be706cb354d0768c4f73de50c0db493d740bd45",
+                "assay": "RNA"
+              }
+            },
+            {
+              "key": "highly_variable_features",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_selection",
+                "artifact_id": "42e5a0c421f43a5e8d6e5dd90f8021e6e1de1f0b7c131282bd5c3fdfc7f2c583",
+                "assay": "RNA"
+              }
+            },
+            {
+              "key": "normalized",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "normalized",
+                "artifact_id": "fd021bdb4f6b3fbf8cb9872a19a2d9ba195eb9e54c932c7275b9ab9476ced9e4",
+                "assay": "RNA"
+              }
+            },
+            {
+              "key": "pca",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "reduction",
+                "artifact_id": "6065ec1ee8e260ed9565a6cf66fb4ab3ef6861ed87a7f309801eb2bc61f37f25",
+                "assay": "RNA"
+              }
+            },
+            {
+              "key": "harmony",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "batch_correction",
+                "artifact_id": "4d4ad31e0a7299a50100d17475796e3d5531511f4d864a83cecded76fcd4f265",
+                "assay": "RNA"
+              }
+            },
+            {
+              "key": "ann_index",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "ann_index",
+                "artifact_id": "cb49a34bf798fd54dcd02075da0b54aefb2154853db42a26a6b2d739bb0035c7",
+                "assay": "RNA"
+              }
+            },
+            {
+              "key": "neighbors",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "neighbors",
+                "artifact_id": "a35be670c99a655e5258612ddb9ee73f7440e7d672cfa30bd4da714b64edbb3d",
+                "assay": "RNA"
+              }
+            },
+            {
+              "key": "connectivity_map",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "connectivity_map",
+                "artifact_id": "b089fb92f950f2e247a9feb260364a7b6185295e074a863c7e5d600b2033f20f",
+                "assay": "RNA"
+              }
+            }
+          ],
+          "fields": [
+            {
+              "key": "I",
+              "axis": "cells",
+              "artifact": {
+                "type": "artifact",
+                "scope": "datastore",
+                "kind": "cell_selection",
+                "artifact_id": "e1b45628eb05926a1709defc9ae17ed2ef6b79b5f3c5147d610726d7c74cb3f8"
+              },
+              "sourceValue": "values",
+              "valueIndex": null,
+              "dtype": "|b1",
+              "fill": false,
+              "missingMask": null,
+              "display": null
+            },
+            {
+              "key": "ids",
+              "axis": "cells",
+              "artifact": {
+                "type": "artifact",
+                "scope": "datastore",
+                "kind": "metadata_snapshot",
+                "artifact_id": "36e040656c6a8b307e744d1467a4971a60d322d497d0ba96cbcfdac8908c082d"
+              },
+              "sourceValue": "ids",
+              "valueIndex": null,
+              "dtype": "<U36",
+              "fill": "",
+              "missingMask": null,
+              "display": null
+            },
+            {
+              "key": "names",
+              "axis": "cells",
+              "artifact": {
+                "type": "artifact",
+                "scope": "datastore",
+                "kind": "metadata_snapshot",
+                "artifact_id": "36e040656c6a8b307e744d1467a4971a60d322d497d0ba96cbcfdac8908c082d"
+              },
+              "sourceValue": "names",
+              "valueIndex": null,
+              "dtype": "<U36",
+              "fill": "",
+              "missingMask": null,
+              "display": null
+            },
+            {
+              "key": "I",
+              "axis": "features",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_selection",
+                "artifact_id": "8c0f0388184ed8f5d36054e22be706cb354d0768c4f73de50c0db493d740bd45",
+                "assay": "RNA"
+              },
+              "sourceValue": "values",
+              "valueIndex": null,
+              "dtype": "|b1",
+              "fill": false,
+              "missingMask": null,
+              "display": null
+            },
+            {
+              "key": "ids",
+              "axis": "features",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "metadata_snapshot",
+                "artifact_id": "e264a44e04f261edc9d57df333e2cfbbb7a740178a24b889495e56560050e16d",
+                "assay": "RNA"
+              },
+              "sourceValue": "ids",
+              "valueIndex": null,
+              "dtype": "<U15",
+              "fill": "",
+              "missingMask": null,
+              "display": null
+            },
+            {
+              "key": "names",
+              "axis": "features",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "metadata_snapshot",
+                "artifact_id": "e264a44e04f261edc9d57df333e2cfbbb7a740178a24b889495e56560050e16d",
+                "assay": "RNA"
+              },
+              "sourceValue": "names",
+              "valueIndex": null,
+              "dtype": "<U17",
+              "fill": "",
+              "missingMask": null,
+              "display": null
+            },
+            {
+              "key": "highly_variable_features",
+              "axis": "features",
+              "artifact": {
+                "type": "artifact",
+                "scope": "assay",
+                "kind": "feature_selection",
+                "artifact_id": "42e5a0c421f43a5e8d6e5dd90f8021e6e1de1f0b7c131282bd5c3fdfc7f2c583",
+                "assay": "RNA"
+              },
+              "sourceValue": "values",
+              "valueIndex": null,
+              "dtype": "|b1",
+              "fill": false,
+              "missingMask": null,
+              "display": null
+            }
+          ],
+          "error": null,
+          "interruption": null
+        },
+        "stages": [
+          {
+            "stage": "input_snapshot",
+            "ordinal": 0,
+            "startedAtNs": 1793139702005020693,
+            "finishedAtNs": 1793139702200857574,
+            "status": "completed",
+            "complete": true,
+            "outputs": [
+              {
+                "outputKey": "input_cell_selection",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "cell_selection",
+                  "artifact_id": "e1b45628eb05926a1709defc9ae17ed2ef6b79b5f3c5147d610726d7c74cb3f8"
+                },
+                "reused": false
+              },
+              {
+                "outputKey": "cell_snapshot",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "36e040656c6a8b307e744d1467a4971a60d322d497d0ba96cbcfdac8908c082d"
+                },
+                "reused": false
+              },
+              {
+                "outputKey": "feature_snapshot",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "e264a44e04f261edc9d57df333e2cfbbb7a740178a24b889495e56560050e16d",
+                  "assay": "RNA"
+                },
+                "reused": false
+              },
+              {
+                "outputKey": "feature_universe",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "8c0f0388184ed8f5d36054e22be706cb354d0768c4f73de50c0db493d740bd45",
+                  "assay": "RNA"
+                },
+                "reused": false
+              }
+            ],
+            "plans": [
+              {
+                "operation": "snapshot_pipeline_input_selection",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "cell_selection",
+                  "artifact_id": "e1b45628eb05926a1709defc9ae17ed2ef6b79b5f3c5147d610726d7c74cb3f8"
+                },
+                "disposition": "created"
+              },
+              {
+                "operation": "snapshot_run_metadata",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "datastore",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "36e040656c6a8b307e744d1467a4971a60d322d497d0ba96cbcfdac8908c082d"
+                },
+                "disposition": "created"
+              },
+              {
+                "operation": "snapshot_run_metadata",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "metadata_snapshot",
+                  "artifact_id": "e264a44e04f261edc9d57df333e2cfbbb7a740178a24b889495e56560050e16d",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              },
+              {
+                "operation": "create_all_features",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "8c0f0388184ed8f5d36054e22be706cb354d0768c4f73de50c0db493d740bd45",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              }
+            ],
+            "metrics": {
+              "wallSeconds": 0.1940462700000012,
+              "rssBaselineBytes": 1408602112,
+              "rssPeakBytes": 1413529600,
+              "rssIncrementalPeakBytes": 4927488,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 3,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "filtering",
+            "ordinal": 1,
+            "startedAtNs": 1793139702206282525,
+            "finishedAtNs": 1793139702215015986,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.009686896000005163,
+              "rssBaselineBytes": 1413529600,
+              "rssPeakBytes": 1413529600,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "cell_cycle",
+            "ordinal": 2,
+            "startedAtNs": 1793139702220273376,
+            "finishedAtNs": 1793139702229309548,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.010469141000001514,
+              "rssBaselineBytes": 1413529600,
+              "rssPeakBytes": 1413529600,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "highly_variable_features",
+            "ordinal": 3,
+            "startedAtNs": 1793139702235117892,
+            "finishedAtNs": 1793139703626949361,
+            "status": "completed",
+            "complete": true,
+            "outputs": [
+              {
+                "outputKey": "highly_variable_features",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "42e5a0c421f43a5e8d6e5dd90f8021e6e1de1f0b7c131282bd5c3fdfc7f2c583",
+                  "assay": "RNA"
+                },
+                "reused": false
+              }
+            ],
+            "plans": [
+              {
+                "operation": "summarize_rna_features",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_summary",
+                  "artifact_id": "67219ff18e5a4fe3c7ef89d04301780048faaf96096e53d0b3c59aba50ce9ca0",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              },
+              {
+                "operation": "select_hvgs",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_selection",
+                  "artifact_id": "42e5a0c421f43a5e8d6e5dd90f8021e6e1de1f0b7c131282bd5c3fdfc7f2c583",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              }
+            ],
+            "metrics": {
+              "wallSeconds": 1.392717544000007,
+              "rssBaselineBytes": 1413529600,
+              "rssPeakBytes": 1599635456,
+              "rssIncrementalPeakBytes": 186105856,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 14,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "normalization",
+            "ordinal": 4,
+            "startedAtNs": 1793139703633248608,
+            "finishedAtNs": 1793139704204377296,
+            "status": "completed",
+            "complete": true,
+            "outputs": [
+              {
+                "outputKey": "normalized",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "normalized",
+                  "artifact_id": "fd021bdb4f6b3fbf8cb9872a19a2d9ba195eb9e54c932c7275b9ab9476ced9e4",
+                  "assay": "RNA"
+                },
+                "reused": false
+              }
+            ],
+            "plans": [
+              {
+                "operation": "run_normalization",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "normalized",
+                  "artifact_id": "fd021bdb4f6b3fbf8cb9872a19a2d9ba195eb9e54c932c7275b9ab9476ced9e4",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              }
+            ],
+            "metrics": {
+              "wallSeconds": 0.572623937000003,
+              "rssBaselineBytes": 1439170560,
+              "rssPeakBytes": 1553944576,
+              "rssIncrementalPeakBytes": 114774016,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 7,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "pca",
+            "ordinal": 5,
+            "startedAtNs": 1793139704210608132,
+            "finishedAtNs": 1793139704803311087,
+            "status": "completed",
+            "complete": true,
+            "outputs": [
+              {
+                "outputKey": "pca",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "reduction",
+                  "artifact_id": "6065ec1ee8e260ed9565a6cf66fb4ab3ef6861ed87a7f309801eb2bc61f37f25",
+                  "assay": "RNA"
+                },
+                "reused": false
+              }
+            ],
+            "plans": [
+              {
+                "operation": "calculate_feature_scaling",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "feature_scaling",
+                  "artifact_id": "beeed36de195ff0bef1eb5f5f68bb34f3080b11b9a85cf4cbf4a5023fc8aae63",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              },
+              {
+                "operation": "run_pca",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "reduction",
+                  "artifact_id": "6065ec1ee8e260ed9565a6cf66fb4ab3ef6861ed87a7f309801eb2bc61f37f25",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              }
+            ],
+            "metrics": {
+              "wallSeconds": 0.5945484249999993,
+              "rssBaselineBytes": 1489813504,
+              "rssPeakBytes": 1567277056,
+              "rssIncrementalPeakBytes": 77463552,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 6,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "harmony",
+            "ordinal": 6,
+            "startedAtNs": 1793139704809941315,
+            "finishedAtNs": 1793139707029228554,
+            "status": "completed",
+            "complete": true,
+            "outputs": [
+              {
+                "outputKey": "harmony",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "batch_correction",
+                  "artifact_id": "4d4ad31e0a7299a50100d17475796e3d5531511f4d864a83cecded76fcd4f265",
+                  "assay": "RNA"
+                },
+                "reused": false
+              }
+            ],
+            "plans": [
+              {
+                "operation": "run_harmony",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "batch_correction",
+                  "artifact_id": "4d4ad31e0a7299a50100d17475796e3d5531511f4d864a83cecded76fcd4f265",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              }
+            ],
+            "metrics": {
+              "wallSeconds": 2.221005789000003,
+              "rssBaselineBytes": 1567260672,
+              "rssPeakBytes": 1577873408,
+              "rssIncrementalPeakBytes": 10612736,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 22,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "ann_index",
+            "ordinal": 7,
+            "startedAtNs": 1793139707035873422,
+            "finishedAtNs": 1793139707284416737,
+            "status": "completed",
+            "complete": true,
+            "outputs": [
+              {
+                "outputKey": "ann_index",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "ann_index",
+                  "artifact_id": "cb49a34bf798fd54dcd02075da0b54aefb2154853db42a26a6b2d739bb0035c7",
+                  "assay": "RNA"
+                },
+                "reused": false
+              }
+            ],
+            "plans": [
+              {
+                "operation": "build_ann_index",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "ann_index",
+                  "artifact_id": "cb49a34bf798fd54dcd02075da0b54aefb2154853db42a26a6b2d739bb0035c7",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              }
+            ],
+            "metrics": {
+              "wallSeconds": 0.2506863179999925,
+              "rssBaselineBytes": 1577873408,
+              "rssPeakBytes": 1578336256,
+              "rssIncrementalPeakBytes": 462848,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 4,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "neighbors",
+            "ordinal": 8,
+            "startedAtNs": 1793139707291009415,
+            "finishedAtNs": 1793139707415154842,
+            "status": "completed",
+            "complete": true,
+            "outputs": [
+              {
+                "outputKey": "neighbors",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "neighbors",
+                  "artifact_id": "a35be670c99a655e5258612ddb9ee73f7440e7d672cfa30bd4da714b64edbb3d",
+                  "assay": "RNA"
+                },
+                "reused": false
+              }
+            ],
+            "plans": [
+              {
+                "operation": "query_neighbors",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "neighbors",
+                  "artifact_id": "a35be670c99a655e5258612ddb9ee73f7440e7d672cfa30bd4da714b64edbb3d",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              }
+            ],
+            "metrics": {
+              "wallSeconds": 0.12629791900000953,
+              "rssBaselineBytes": 1578319872,
+              "rssPeakBytes": 1578336256,
+              "rssIncrementalPeakBytes": 16384,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 3,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "connectivity",
+            "ordinal": 9,
+            "startedAtNs": 1793139707422503434,
+            "finishedAtNs": 1793139721975812200,
+            "status": "completed",
+            "complete": true,
+            "outputs": [
+              {
+                "outputKey": "connectivity_map",
+                "artifact": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "connectivity_map",
+                  "artifact_id": "b089fb92f950f2e247a9feb260364a7b6185295e074a863c7e5d600b2033f20f",
+                  "assay": "RNA"
+                },
+                "reused": false
+              }
+            ],
+            "plans": [
+              {
+                "operation": "build_connectivity_map",
+                "ref": {
+                  "type": "artifact",
+                  "scope": "assay",
+                  "kind": "connectivity_map",
+                  "artifact_id": "b089fb92f950f2e247a9feb260364a7b6185295e074a863c7e5d600b2033f20f",
+                  "assay": "RNA"
+                },
+                "disposition": "created"
+              }
+            ],
+            "metrics": {
+              "wallSeconds": 14.555904681000001,
+              "rssBaselineBytes": 1578319872,
+              "rssPeakBytes": 1585254400,
+              "rssIncrementalPeakBytes": 6934528,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 129,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "embedding_initialization",
+            "ordinal": 10,
+            "startedAtNs": 1793139721982925231,
+            "finishedAtNs": 1793139721991027288,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.011710417000003304,
+              "rssBaselineBytes": 1234558976,
+              "rssPeakBytes": 1234558976,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "umap",
+            "ordinal": 11,
+            "startedAtNs": 1793139721998533742,
+            "finishedAtNs": 1793139722006338357,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.011911318999992204,
+              "rssBaselineBytes": 1234558976,
+              "rssPeakBytes": 1234558976,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "paris",
+            "ordinal": 12,
+            "startedAtNs": 1793139722013522198,
+            "finishedAtNs": 1793139722021494374,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.011699508000006631,
+              "rssBaselineBytes": 1234558976,
+              "rssPeakBytes": 1234558976,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "cluster_selection",
+            "ordinal": 13,
+            "startedAtNs": 1793139722028910707,
+            "finishedAtNs": 1793139722036711362,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.011589597000011054,
+              "rssBaselineBytes": 1234558976,
+              "rssPeakBytes": 1234558976,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "membership_strength",
+            "ordinal": 14,
+            "startedAtNs": 1793139722045953505,
+            "finishedAtNs": 1793139722057068790,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.01648013499999479,
+              "rssBaselineBytes": 1234558976,
+              "rssPeakBytes": 1234558976,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "tsne",
+            "ordinal": 15,
+            "startedAtNs": 1793139722066124862,
+            "finishedAtNs": 1793139722074796672,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.013843149999999582,
+              "rssBaselineBytes": 1234558976,
+              "rssPeakBytes": 1234558976,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "doublets",
+            "ordinal": 16,
+            "startedAtNs": 1793139722083305751,
+            "finishedAtNs": 1793139722091700140,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.013141185999998584,
+              "rssBaselineBytes": 1234558976,
+              "rssPeakBytes": 1234558976,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          },
+          {
+            "stage": "markers",
+            "ordinal": 17,
+            "startedAtNs": 1793139722100627521,
+            "finishedAtNs": 1793139722109166391,
+            "status": "skipped",
+            "complete": true,
+            "outputs": [],
+            "plans": [],
+            "metrics": {
+              "wallSeconds": 0.013607118999999557,
+              "rssBaselineBytes": 1234558976,
+              "rssPeakBytes": 1234558976,
+              "rssIncrementalPeakBytes": 0,
+              "sampleIntervalSeconds": 0.1,
+              "sampleCount": 2,
+              "samplingErrorCount": 0,
+              "rssUnavailableReason": null
+            },
+            "error": null,
+            "interruption": null
+          }
+        ],
+        "summary": {
+          "createdArtifacts": [
+            {
+              "type": "artifact",
+              "scope": "datastore",
+              "kind": "cell_selection",
+              "artifact_id": "e1b45628eb05926a1709defc9ae17ed2ef6b79b5f3c5147d610726d7c74cb3f8"
+            },
+            {
+              "type": "artifact",
+              "scope": "datastore",
+              "kind": "metadata_snapshot",
+              "artifact_id": "36e040656c6a8b307e744d1467a4971a60d322d497d0ba96cbcfdac8908c082d"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "metadata_snapshot",
+              "artifact_id": "e264a44e04f261edc9d57df333e2cfbbb7a740178a24b889495e56560050e16d",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "feature_selection",
+              "artifact_id": "8c0f0388184ed8f5d36054e22be706cb354d0768c4f73de50c0db493d740bd45",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "feature_summary",
+              "artifact_id": "67219ff18e5a4fe3c7ef89d04301780048faaf96096e53d0b3c59aba50ce9ca0",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "feature_selection",
+              "artifact_id": "42e5a0c421f43a5e8d6e5dd90f8021e6e1de1f0b7c131282bd5c3fdfc7f2c583",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "normalized",
+              "artifact_id": "fd021bdb4f6b3fbf8cb9872a19a2d9ba195eb9e54c932c7275b9ab9476ced9e4",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "feature_scaling",
+              "artifact_id": "beeed36de195ff0bef1eb5f5f68bb34f3080b11b9a85cf4cbf4a5023fc8aae63",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "reduction",
+              "artifact_id": "6065ec1ee8e260ed9565a6cf66fb4ab3ef6861ed87a7f309801eb2bc61f37f25",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "batch_correction",
+              "artifact_id": "4d4ad31e0a7299a50100d17475796e3d5531511f4d864a83cecded76fcd4f265",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "ann_index",
+              "artifact_id": "cb49a34bf798fd54dcd02075da0b54aefb2154853db42a26a6b2d739bb0035c7",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "neighbors",
+              "artifact_id": "a35be670c99a655e5258612ddb9ee73f7440e7d672cfa30bd4da714b64edbb3d",
+              "assay": "RNA"
+            },
+            {
+              "type": "artifact",
+              "scope": "assay",
+              "kind": "connectivity_map",
+              "artifact_id": "b089fb92f950f2e247a9feb260364a7b6185295e074a863c7e5d600b2033f20f",
+              "assay": "RNA"
+            }
+          ],
+          "reusedArtifacts": [],
+          "uncleanIncomplete": false,
+          "signalProtection": {
+            "signalGuardAvailable": true,
+            "unavailableReason": null
+          }
+        }
+      }
+    },
+    "elapsedSeconds": 92.27275109291077
+  },
+  "inputArchive": {
+    "sha256VerifiedAfterRun": "3eada06bc85daf38f146fc4dfea7b0eee985e8e1d3b5f75e8d260498b84bcbe8"
+  },
+  "comparisonDefinition": "Shared unclipped reference PCA scaling; compiled R Symphony soft assignment and query correction",
+  "sourceScripts": [
+    "experiments/mapping/hlca.py",
+    "experiments/mapping/tools/symphony.R"
+  ]
+}

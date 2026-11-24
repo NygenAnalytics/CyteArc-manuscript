@@ -1,0 +1,26 @@
+{
+  "status": "ok",
+  "experiment": "gene_scores",
+  "settings": {
+    "genes": 256,
+    "seed": 4471,
+    "scale": 100000.0,
+    "relativeTolerance": 2e-06,
+    "absoluteTolerance": 1e-05
+  },
+  "sourceDataset": "swanson_7K_pbmc_teaseq",
+  "cells": 400,
+  "peaks": 240122,
+  "genes": 256,
+  "overlaps": 2568,
+  "genesWithoutOverlaps": 25,
+  "annotation": {
+    "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.basic.annotation.gtf.gz",
+    "sha256": "a61ab50fc8b5d63f76d50e1f89bc0f5bba0b64fb29d2ac8cfa1b1ef8d4ef0c91"
+  },
+  "maxAbsoluteError": 0.0,
+  "rootMeanSquaredError": 0.0,
+  "storedDtype": "float64",
+  "meetsTolerance": true,
+  "reference": "Independent half-open interval overlap and dense TF-IDF aggregation, normalized to 100000 per cell"
+}

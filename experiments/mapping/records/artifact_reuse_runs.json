@@ -1,0 +1,482 @@
+{
+  "results": {
+    "rerun_embryo_rna_scaling_10000000_cells_replicate_4": {
+      "result": {
+        "container": {
+          "budgetBytes": 51539607552,
+          "cpu": 16,
+          "cpuQuotaCores": null,
+          "memoryMaxBytes": 68719476736,
+          "memoryMb": 65536,
+          "numbaThreads": 16,
+          "visibleCpus": 16,
+          "workers": 16
+        },
+        "experiment": "rerun",
+        "forkSeconds": 2122.353116161,
+        "fullRunAnalysisSeconds": 2903.43956753,
+        "fullRunStagePeakRssBytes": {
+          "buildAnnIndex": 10484109312,
+          "buildConnectivityMap": 12147539968,
+          "buildEmbeddingInitialization": 10396606464,
+          "filterCells": 8529874944,
+          "findMarkers": 29218762752,
+          "markHvgs": 10458759168,
+          "queryNeighbors": 14200569856,
+          "runLeiden": 427546587136,
+          "runNormalization": 10157502464,
+          "runPca": 12346220544,
+          "runUmap": 15409745920
+        },
+        "fullRunStageSeconds": {
+          "buildAnnIndex": 221.8412554219999,
+          "buildConnectivityMap": 42.46458683600031,
+          "buildEmbeddingInitialization": 141.60060647799992,
+          "filterCells": 44.77984887599996,
+          "findMarkers": 397.5684756339997,
+          "markHvgs": 342.601621068,
+          "queryNeighbors": 215.52881528999978,
+          "runLeiden": 111.55103721700016,
+          "runNormalization": 281.9854407779999,
+          "runPca": 226.55699222400017,
+          "runUmap": 876.9608877070004
+        },
+        "fullRunWallSeconds": 4776.304094292,
+        "kNew": 15,
+        "kOriginal": 11,
+        "lineage": {
+          "edges": [
+            {
+              "source": "e3d3ec7b67d52e29ceab7d554be52892db31b1cc60f72ecfc3d75c7c93528f13",
+              "target": "a8dc402718aab276afb8978c606ec43d059a5de6a9317ddd58ac11dbae795719"
+            },
+            {
+              "source": "e3d3ec7b67d52e29ceab7d554be52892db31b1cc60f72ecfc3d75c7c93528f13",
+              "target": "cb3ae90b50b5010477c6a21d01a78adf296da107f3443a9bb81a2e94ba5b226b"
+            },
+            {
+              "source": "e3d3ec7b67d52e29ceab7d554be52892db31b1cc60f72ecfc3d75c7c93528f13",
+              "target": "eaf7f7563c3c44f5c91d44d9bf480fa90e10586558f32a657572ec39f5da15e0"
+            },
+            {
+              "source": "e3d3ec7b67d52e29ceab7d554be52892db31b1cc60f72ecfc3d75c7c93528f13",
+              "target": "8009ef173dc10d87d19b7bdd58954e52669e22d67d273ff6746f880511fae02b"
+            },
+            {
+              "source": "e3d3ec7b67d52e29ceab7d554be52892db31b1cc60f72ecfc3d75c7c93528f13",
+              "target": "437320b1227711a1bfe6191db71c427316692a37239aff1634910d44464ed297"
+            },
+            {
+              "source": "cb3ae90b50b5010477c6a21d01a78adf296da107f3443a9bb81a2e94ba5b226b",
+              "target": "a8dc402718aab276afb8978c606ec43d059a5de6a9317ddd58ac11dbae795719"
+            },
+            {
+              "source": "2a3dfd2d19448d988e601c0427d4084b4c1bf2ec8f190f423336d4947fc423d0",
+              "target": "a8dc402718aab276afb8978c606ec43d059a5de6a9317ddd58ac11dbae795719"
+            },
+            {
+              "source": "9b647be2b3416124e1af018b0af44aef42679d0194f0b13204048a9dbd6eacfb",
+              "target": "2a3dfd2d19448d988e601c0427d4084b4c1bf2ec8f190f423336d4947fc423d0"
+            },
+            {
+              "source": "789d0b7ab688d39e909cedda90d1dd4c36cf229004d6bb145df7ff75a4751869",
+              "target": "cb3ae90b50b5010477c6a21d01a78adf296da107f3443a9bb81a2e94ba5b226b"
+            },
+            {
+              "source": "353f51781a2a514cff2719438bbfcb101f46b8335c2b6db9bc2951dbf42799f3",
+              "target": "789d0b7ab688d39e909cedda90d1dd4c36cf229004d6bb145df7ff75a4751869"
+            },
+            {
+              "source": "d5c6775947d086f98741356d2255d926cd5636582f3ca62cd30a6ca4c866a35f",
+              "target": "353f51781a2a514cff2719438bbfcb101f46b8335c2b6db9bc2951dbf42799f3"
+            },
+            {
+              "source": "eaf7f7563c3c44f5c91d44d9bf480fa90e10586558f32a657572ec39f5da15e0",
+              "target": "353f51781a2a514cff2719438bbfcb101f46b8335c2b6db9bc2951dbf42799f3"
+            },
+            {
+              "source": "eaf7f7563c3c44f5c91d44d9bf480fa90e10586558f32a657572ec39f5da15e0",
+              "target": "d5c6775947d086f98741356d2255d926cd5636582f3ca62cd30a6ca4c866a35f"
+            },
+            {
+              "source": "9c254b1db86c2885a5c925e1c4bf0612ea2cf8974ac059a8f88f11fcffda760c",
+              "target": "eaf7f7563c3c44f5c91d44d9bf480fa90e10586558f32a657572ec39f5da15e0"
+            },
+            {
+              "source": "8009ef173dc10d87d19b7bdd58954e52669e22d67d273ff6746f880511fae02b",
+              "target": "eaf7f7563c3c44f5c91d44d9bf480fa90e10586558f32a657572ec39f5da15e0"
+            },
+            {
+              "source": "8009ef173dc10d87d19b7bdd58954e52669e22d67d273ff6746f880511fae02b",
+              "target": "9c254b1db86c2885a5c925e1c4bf0612ea2cf8974ac059a8f88f11fcffda760c"
+            },
+            {
+              "source": "4bca62d2b4b7d34aa943e85b660c89b2dcd9b1552e091c6e888d602756d5be43",
+              "target": "e3d3ec7b67d52e29ceab7d554be52892db31b1cc60f72ecfc3d75c7c93528f13"
+            },
+            {
+              "source": "68224e7fcfe5847aa6865176d0c5016358e128e2af140d4bc2f60fe64b284c3b",
+              "target": "8009ef173dc10d87d19b7bdd58954e52669e22d67d273ff6746f880511fae02b"
+            },
+            {
+              "source": "16034e3f0797078a8919a2c6ec9a6a1662e06dff536a6c5590a5bd76a0d7abeb",
+              "target": "68224e7fcfe5847aa6865176d0c5016358e128e2af140d4bc2f60fe64b284c3b"
+            },
+            {
+              "source": "437320b1227711a1bfe6191db71c427316692a37239aff1634910d44464ed297",
+              "target": "68224e7fcfe5847aa6865176d0c5016358e128e2af140d4bc2f60fe64b284c3b"
+            }
+          ],
+          "nodes": [
+            {
+              "id": "a8dc402718aab276afb8978c606ec43d059a5de6a9317ddd58ac11dbae795719",
+              "kind": "marker_table",
+              "operation": null,
+              "recomputedInFork": true
+            },
+            {
+              "id": "e3d3ec7b67d52e29ceab7d554be52892db31b1cc60f72ecfc3d75c7c93528f13",
+              "kind": "cell_selection",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "cb3ae90b50b5010477c6a21d01a78adf296da107f3443a9bb81a2e94ba5b226b",
+              "kind": "cluster_labels",
+              "operation": null,
+              "recomputedInFork": true
+            },
+            {
+              "id": "2a3dfd2d19448d988e601c0427d4084b4c1bf2ec8f190f423336d4947fc423d0",
+              "kind": "feature_selection",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "9b647be2b3416124e1af018b0af44aef42679d0194f0b13204048a9dbd6eacfb",
+              "kind": "feature_selection",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "789d0b7ab688d39e909cedda90d1dd4c36cf229004d6bb145df7ff75a4751869",
+              "kind": "connectivity_map",
+              "operation": null,
+              "recomputedInFork": true
+            },
+            {
+              "id": "353f51781a2a514cff2719438bbfcb101f46b8335c2b6db9bc2951dbf42799f3",
+              "kind": "neighbors",
+              "operation": null,
+              "recomputedInFork": true
+            },
+            {
+              "id": "d5c6775947d086f98741356d2255d926cd5636582f3ca62cd30a6ca4c866a35f",
+              "kind": "ann_index",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "eaf7f7563c3c44f5c91d44d9bf480fa90e10586558f32a657572ec39f5da15e0",
+              "kind": "reduction",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "9c254b1db86c2885a5c925e1c4bf0612ea2cf8974ac059a8f88f11fcffda760c",
+              "kind": "feature_scaling",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "8009ef173dc10d87d19b7bdd58954e52669e22d67d273ff6746f880511fae02b",
+              "kind": "normalized",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "4bca62d2b4b7d34aa943e85b660c89b2dcd9b1552e091c6e888d602756d5be43",
+              "kind": "cell_selection",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "68224e7fcfe5847aa6865176d0c5016358e128e2af140d4bc2f60fe64b284c3b",
+              "kind": "feature_selection",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "16034e3f0797078a8919a2c6ec9a6a1662e06dff536a6c5590a5bd76a0d7abeb",
+              "kind": "metadata_snapshot",
+              "operation": null,
+              "recomputedInFork": false
+            },
+            {
+              "id": "437320b1227711a1bfe6191db71c427316692a37239aff1634910d44464ed297",
+              "kind": "feature_summary",
+              "operation": null,
+              "recomputedInFork": false
+            }
+          ]
+        },
+        "newArtifacts": 5,
+        "referenceTag": "embryo_rna_scaling_10000000_cells_replicate_4",
+        "refs": {
+          "clusters": {
+            "artifact_id": "cb3ae90b50b5010477c6a21d01a78adf296da107f3443a9bb81a2e94ba5b226b",
+            "assay": "RNA",
+            "kind": "cluster_labels",
+            "scope": "assay",
+            "type": "artifact"
+          },
+          "graph": {
+            "artifact_id": "789d0b7ab688d39e909cedda90d1dd4c36cf229004d6bb145df7ff75a4751869",
+            "assay": "RNA",
+            "kind": "connectivity_map",
+            "scope": "assay",
+            "type": "artifact"
+          },
+          "markers": {
+            "artifact_id": "a8dc402718aab276afb8978c606ec43d059a5de6a9317ddd58ac11dbae795719",
+            "assay": "RNA",
+            "kind": "marker_table",
+            "scope": "assay",
+            "type": "artifact"
+          },
+          "neighbors": {
+            "artifact_id": "353f51781a2a514cff2719438bbfcb101f46b8335c2b6db9bc2951dbf42799f3",
+            "assay": "RNA",
+            "kind": "neighbors",
+            "scope": "assay",
+            "type": "artifact"
+          },
+          "umap": {
+            "artifact_id": "16141fc0b209a2e328d064378b148c68cbe4f1f46f8ebc10e25b94260241852e",
+            "assay": "RNA",
+            "kind": "embedding",
+            "scope": "assay",
+            "type": "artifact"
+          }
+        },
+        "reuse": {
+          "annIndex": true,
+          "normalization": true,
+          "pca": true
+        },
+        "stages": {
+          "fork.buildConnectivityMap": {
+            "peakRssBytes": 4799619072,
+            "seconds": 90.36716461399999,
+            "storeOperations": {
+              "countReadBytes": 0,
+              "countReadRequests": 0,
+              "deleteDirs": 2,
+              "deletes": 0,
+              "gets": 198,
+              "maxInFlight": 9,
+              "partialGets": 0,
+              "rangeGets": 0,
+              "readRequestedBytes": 1055804047,
+              "readTransferredBytes": 1055804047,
+              "requestedBytes": 875923336,
+              "sets": 38,
+              "sizeQueries": 0,
+              "transferredBytes": 1931727383,
+              "writeTransferredBytes": 875923336
+            }
+          },
+          "fork.findMarkers": {
+            "peakRssBytes": 22969405440,
+            "seconds": 412.04794197699994,
+            "storeOperations": {
+              "countReadBytes": 23298450185,
+              "countReadRequests": 167624,
+              "deleteDirs": 55,
+              "deletes": 0,
+              "gets": 85092,
+              "maxInFlight": 192,
+              "partialGets": 0,
+              "rangeGets": 83812,
+              "readRequestedBytes": 23615921893,
+              "readTransferredBytes": 23615921893,
+              "requestedBytes": 23433838248,
+              "sets": 765,
+              "sizeQueries": 0,
+              "transferredBytes": 23751309956,
+              "writeTransferredBytes": 135388063
+            }
+          },
+          "fork.queryNeighbors": {
+            "peakRssBytes": 6092206080,
+            "seconds": 247.79605962099998,
+            "storeOperations": {
+              "countReadBytes": 0,
+              "countReadRequests": 0,
+              "deleteDirs": 2,
+              "deletes": 0,
+              "gets": 513,
+              "maxInFlight": 9,
+              "partialGets": 0,
+              "rangeGets": 0,
+              "readRequestedBytes": 2450231466,
+              "readTransferredBytes": 2450231466,
+              "requestedBytes": 904497837,
+              "sets": 39,
+              "sizeQueries": 0,
+              "transferredBytes": 3354729303,
+              "writeTransferredBytes": 904497837
+            }
+          },
+          "fork.runLeiden": {
+            "peakRssBytes": 16499384320,
+            "seconds": 109.25516932400001,
+            "storeOperations": {
+              "countReadBytes": 0,
+              "countReadRequests": 0,
+              "deleteDirs": 1,
+              "deletes": 0,
+              "gets": 197,
+              "maxInFlight": 10,
+              "partialGets": 0,
+              "rangeGets": 0,
+              "readRequestedBytes": 1027233526,
+              "readTransferredBytes": 1027233526,
+              "requestedBytes": 4770388,
+              "sets": 101,
+              "sizeQueries": 0,
+              "transferredBytes": 1032003914,
+              "writeTransferredBytes": 4770388
+            }
+          },
+          "fork.runUmap": {
+            "peakRssBytes": 12753813504,
+            "seconds": 1262.886780625,
+            "storeOperations": {
+              "countReadBytes": 0,
+              "countReadRequests": 0,
+              "deleteDirs": 1,
+              "deletes": 0,
+              "gets": 305,
+              "maxInFlight": 10,
+              "partialGets": 0,
+              "rangeGets": 0,
+              "readRequestedBytes": 1040656661,
+              "readTransferredBytes": 1040656661,
+              "requestedBytes": 64828701,
+              "sets": 101,
+              "sizeQueries": 0,
+              "transferredBytes": 1105485362,
+              "writeTransferredBytes": 64828701
+            }
+          },
+          "reuse.annIndex": {
+            "peakRssBytes": 789585920,
+            "seconds": 18.986018837000003,
+            "storeOperations": {
+              "countReadBytes": 0,
+              "countReadRequests": 0,
+              "deleteDirs": 0,
+              "deletes": 0,
+              "gets": 177,
+              "maxInFlight": 8,
+              "partialGets": 0,
+              "rangeGets": 0,
+              "readRequestedBytes": 151327162,
+              "readTransferredBytes": 151327162,
+              "requestedBytes": 0,
+              "sets": 0,
+              "sizeQueries": 0,
+              "transferredBytes": 151327162,
+              "writeTransferredBytes": 0
+            }
+          },
+          "reuse.normalization": {
+            "peakRssBytes": 847134720,
+            "seconds": 40.502934232,
+            "storeOperations": {
+              "countReadBytes": 0,
+              "countReadRequests": 0,
+              "deleteDirs": 0,
+              "deletes": 0,
+              "gets": 364,
+              "maxInFlight": 8,
+              "partialGets": 0,
+              "rangeGets": 0,
+              "readRequestedBytes": 448153384,
+              "readTransferredBytes": 448153384,
+              "requestedBytes": 0,
+              "sets": 0,
+              "sizeQueries": 0,
+              "transferredBytes": 448153384,
+              "writeTransferredBytes": 0
+            }
+          },
+          "reuse.pca": {
+            "peakRssBytes": 789635072,
+            "seconds": 18.973824297,
+            "storeOperations": {
+              "countReadBytes": 0,
+              "countReadRequests": 0,
+              "deleteDirs": 0,
+              "deletes": 0,
+              "gets": 170,
+              "maxInFlight": 8,
+              "partialGets": 0,
+              "rangeGets": 0,
+              "readRequestedBytes": 152446094,
+              "readTransferredBytes": 152446094,
+              "requestedBytes": 0,
+              "sets": 0,
+              "sizeQueries": 0,
+              "transferredBytes": 152446094,
+              "writeTransferredBytes": 0
+            }
+          }
+        },
+        "store": {
+          "analysisBytes": 8412334847,
+          "countsBytes": 35227369000,
+          "countsTBytes": 23177564632,
+          "objects": 4412,
+          "totalBytes": 66817268479
+        },
+        "threadSettings": {
+          "annIndex": {
+            "stored": {
+              "layoutThreads": null,
+              "nthreads": 16,
+              "parallel": true
+            }
+          },
+          "neighbors": {
+            "fork": {
+              "layoutThreads": null,
+              "nthreads": 16,
+              "parallel": null
+            },
+            "same": true,
+            "stored": {
+              "layoutThreads": null,
+              "nthreads": 16,
+              "parallel": null
+            }
+          },
+          "umap": {
+            "fork": {
+              "layoutThreads": 16,
+              "nthreads": 16,
+              "parallel": true
+            },
+            "same": true,
+            "stored": {
+              "layoutThreads": 16,
+              "nthreads": 16,
+              "parallel": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "referenceStudies": [
+    "aida",
+    "yazar",
+    "combat",
+    "covid_atlas",
+    "hao",
+    "jdm",
+    "arthritis"
+  ],
+  "cellsPerType": {
+    "B cells": 362613,
+    "Dendritic cells": 56357,
+    "Erythroid": 2909,
+    "Monocytes": 755828,
+    "NK and ILC": 570095,
+    "Plasma cells": 27690,
+    "Platelets": 34802,
+    "Progenitors": 8951,
+    "T cells": 2475981
+  },
+  "cellsPerStudy": {
+    "aida": 1239604,
+    "yazar": 1248849,
+    "combat": 783704,
+    "covid_atlas": 647366,
+    "hao": 161159,
+    "jdm": 105827,
+    "arthritis": 108717
+  }
+}

@@ -1,0 +1,68 @@
+{
+ "study": "sound_life_cmv_positive",
+ "mappingRule": {
+  "savedNeighbors": 30,
+  "voteThreshold": 0.0,
+  "missingFeaturePolicy": "reference_mean"
+ },
+ "eligibility": "Primary cells (is_primary_data) with tissue 'blood' and a recorded donor",
+ "referenceOpening": {
+  "seconds": 116.575749345,
+  "countReadBytes": 0,
+  "transferredBytes": 2653757063,
+  "referenceCells": 4292870,
+  "referenceFeatures": 2000
+ },
+ "referenceReadsIncludingOpening": {
+  "countReadBytes": 0,
+  "transferredBytes": 8483335279
+ },
+ "peakContainerBytes": 12100698112,
+ "containerMemoryBytes": 68719476736,
+ "stores": [
+  {
+   "store": "gong_2025_sound_life_young_adult_females_cmv_positive_0a8e3443",
+   "storeCells": 1234234,
+   "eligibleCells": 1234234,
+   "donors": 10,
+   "referenceFeaturesMissing": [],
+   "mappingPeakContainerBytes": 5389213696,
+   "mappingSeconds": 428.212559936,
+   "typedCells": 1227232,
+   "agreeingCells": 1217022
+  },
+  {
+   "store": "gong_2025_sound_life_young_adult_males_cmv_positive_5fde5c9c",
+   "storeCells": 1206761,
+   "eligibleCells": 1206761,
+   "donors": 9,
+   "referenceFeaturesMissing": [],
+   "mappingPeakContainerBytes": 6096322560,
+   "mappingSeconds": 646.5651364070001,
+   "typedCells": 1198746,
+   "agreeingCells": 1185195
+  },
+  {
+   "store": "gong_2025_sound_life_older_adult_females_cmv_positive_aa32098f",
+   "storeCells": 2596111,
+   "eligibleCells": 2596111,
+   "donors": 17,
+   "referenceFeaturesMissing": [],
+   "mappingPeakContainerBytes": 6489088000,
+   "mappingSeconds": 977.4904483480002,
+   "typedCells": 2581254,
+   "agreeingCells": 2566243
+  },
+  {
+   "store": "gong_2025_sound_life_older_adult_males_cmv_positive_0c0c49a2",
+   "storeCells": 1322061,
+   "eligibleCells": 1322061,
+   "donors": 8,
+   "referenceFeaturesMissing": [],
+   "mappingPeakContainerBytes": 6936449024,
+   "mappingSeconds": 414.4077897500001,
+   "typedCells": 1312436,
+   "agreeingCells": 1301074
+  }
+ ]
+}

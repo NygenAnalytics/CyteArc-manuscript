@@ -1,0 +1,67 @@
+{
+ "rows": [
+  {
+   "reference": "blood",
+   "arm": "unintegrated",
+   "referenceCells": 497905,
+   "readBytes": 759720593,
+   "countReadBytes": 0,
+   "writtenBytes": 530128,
+   "seconds": 2.599719026999992
+  },
+  {
+   "reference": "blood",
+   "arm": "integrated",
+   "referenceCells": 497905,
+   "readBytes": 768438496,
+   "countReadBytes": 0,
+   "writtenBytes": 601862,
+   "seconds": 2.816047831999981
+  },
+  {
+   "reference": "kidney",
+   "arm": "unintegrated",
+   "referenceCells": 388878,
+   "readBytes": 574729969,
+   "countReadBytes": 0,
+   "writtenBytes": 531985,
+   "seconds": 1.9561939799999664
+  },
+  {
+   "reference": "kidney",
+   "arm": "integrated",
+   "referenceCells": 388878,
+   "readBytes": 578653468,
+   "countReadBytes": 0,
+   "writtenBytes": 608535,
+   "seconds": 2.2630298399999447
+  },
+  {
+   "reference": "lung",
+   "arm": "unintegrated",
+   "referenceCells": 546358,
+   "readBytes": 847792534,
+   "countReadBytes": 0,
+   "writtenBytes": 531716,
+   "seconds": 2.3239388019999865
+  },
+  {
+   "reference": "lung",
+   "arm": "integrated",
+   "referenceCells": 546358,
+   "readBytes": 855184223,
+   "countReadBytes": 0,
+   "writtenBytes": 584763,
+   "seconds": 2.94542242600005
+  }
+ ],
+ "source": [
+  "experiments/mapping/records/cross_study/evaluation.json",
+  "experiments/mapping/records/cross_study/blood/unintegrated.json",
+  "experiments/mapping/records/cross_study/blood/integrated.json",
+  "experiments/mapping/records/cross_study/kidney/unintegrated.json",
+  "experiments/mapping/records/cross_study/kidney/integrated.json",
+  "experiments/mapping/records/cross_study/lung/unintegrated.json",
+  "experiments/mapping/records/cross_study/lung/integrated.json"
+ ]
+}
