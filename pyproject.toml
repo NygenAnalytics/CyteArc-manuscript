@@ -36,7 +36,7 @@ experiment = [
     "rdata==1.1.0",
     "scanpy==1.12.4",
     "scikit-image==0.26.0",
-    "setuptools==80.9.0",
+    "setuptools==84.1.0",
 ]
 dev = ["ruff==0.16.9"]
 
